@@ -1,6 +1,6 @@
 //
 //  Tick.swift
-//  SwiftViz
+//
 //
 //  Created by Joseph Heck on 3/2/20.
 //

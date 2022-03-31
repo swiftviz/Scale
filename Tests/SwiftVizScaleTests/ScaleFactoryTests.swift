@@ -12,9 +12,9 @@ class ScaleFactoryTests: XCTestCase {
     func testIntScaleFactoryMethods() throws {
         let low = 6
         let high = 124
-        let scale1 = LinearScale.create(low, high)
-        let scale2 = LinearScale.create(low ... high)
-        let scale3 = LinearScale.create(high)
+        let scale1 = LinearScale<Int, CGFloat>(from: low, to: high)
+        let scale2 = LinearScale<Int, CGFloat>(low ... high)
+        let scale3 = LinearScale<Int, CGFloat>(high)
 
         XCTAssertEqual(scale1.domainLower, scale2.domainLower)
         XCTAssertEqual(scale1.domainExtent, scale2.domainExtent)
@@ -26,9 +26,9 @@ class ScaleFactoryTests: XCTestCase {
         let low: Float = 6
         let high: Float = 124
 
-        let scale1 = LinearScale.create(low, high)
-        let scale2 = LinearScale.create(low ... high)
-        let scale3 = LinearScale.create(high)
+        let scale1 = LinearScale<Float, CGFloat>(from: low, to: high)
+        let scale2 = LinearScale<Float, CGFloat>(low ... high)
+        let scale3 = LinearScale<Float, CGFloat>(high)
 
         XCTAssertEqual(scale1.domainLower, scale2.domainLower)
         XCTAssertEqual(scale1.domainExtent, scale2.domainExtent)
@@ -40,9 +40,9 @@ class ScaleFactoryTests: XCTestCase {
         let low: Double = 6
         let high: Double = 124
 
-        let scale1 = LinearScale.create(low, high)
-        let scale2 = LinearScale.create(low ... high)
-        let scale3 = LinearScale.create(high)
+        let scale1 = LinearScale<Double, CGFloat>(from: low, to: high)
+        let scale2 = LinearScale<Double, CGFloat>(low ... high)
+        let scale3 = LinearScale<Double, CGFloat>(high)
 
         XCTAssertEqual(scale1.domainLower, scale2.domainLower)
         XCTAssertEqual(scale1.domainExtent, scale2.domainExtent)
@@ -50,20 +50,8 @@ class ScaleFactoryTests: XCTestCase {
         XCTAssertEqual(scale3.domainLower, 0)
     }
 
-    func testDateScaleFactoryMethods() throws {
-        let low = Date(timeIntervalSince1970: 123_456_789)
-        let high: Date = low.addingTimeInterval(5 * 60)
-
-        let scale1 = LinearScale.create(low, high)
-        let scale2 = LinearScale.create(low ... high)
-
-        XCTAssertEqual(scale1.domainLower, scale2.domainLower)
-        XCTAssertEqual(scale1.domainExtent, scale2.domainExtent)
-        XCTAssertEqual(scale1.domainLower, low.timeIntervalSince1970)
-    }
-
     func testScaleConvenienceMethod() throws {
-        let lin = LinearScale.create(0, 100.0)
+        let lin = LinearScale<Double, CGFloat>(from: 0, to: 100.0)
         guard let result = lin.scale(5.0, to: 10.0) else {
             XCTFail()
             return
@@ -72,7 +60,7 @@ class ScaleFactoryTests: XCTestCase {
     }
 
     func testInvertConvenienceMethod() throws {
-        let lin = LinearScale.create(0, 100.0)
+        let lin = LinearScale<Double, CGFloat>(from: 0, to: 100.0)
         guard let result = lin.invert(5.0, to: 10.0) else {
             XCTFail()
             return

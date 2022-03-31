@@ -12,9 +12,12 @@ import Numerics
 #endif
 
 /// A type that can be converted into an approximate value that is easier to understand.
+///
+/// Types that can provide "nice" values derive from both the `Numeric` and `Comparable` protocol.
+/// This library provides extensions onto `Double`, `Float`, `CGFloat`, and `Int` that conform those types to `NiceValue`.
 public protocol NiceValue {
     /// A type that can be converted into a nice number.
-    associatedtype NumberType: Numeric, Comparable
+    associatedtype NumberType: ConvertibleWithDouble
     /// Returns a nice version of the number that's visually appealing for chart axis values.
     ///
     /// The approximation rounds the number to the nearest 1, 2, 5, or 10 multiplied by the exponent of the initial value.
