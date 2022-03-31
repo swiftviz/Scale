@@ -1,0 +1,581 @@
+{
+  "abstract" : [
+    {
+      "text" : "exp(x) - 1, computed in such a way as to maintain accuracy for small x.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/ComplexModule",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/ComplexModule\/Complex",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/ComplexModule\/Complex\/ElementaryFunctions-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/ComplexModule\/Complex\/expMinusOne(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "conformance" : {
+      "availabilityPrefix" : [
+        {
+          "text" : "Available when",
+          "type" : "text"
+        }
+      ],
+      "conformancePrefix" : [
+        {
+          "text" : "Conforms when",
+          "type" : "text"
+        }
+      ],
+      "constraints" : [
+        {
+          "code" : "RealType",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " conforms to ",
+          "type" : "text"
+        },
+        {
+          "code" : "Real",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : ".",
+          "type" : "text"
+        }
+      ]
+    },
+    "extendedModule" : "ComplexModule",
+    "externalID" : "s:13ComplexModule0A0V11expMinusOneyACyxGAEFZ",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "static"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "expMinusOne"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:13ComplexModule0A0V",
+        "text" : "Complex"
+      },
+      {
+        "kind" : "text",
+        "text" : ") -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:13ComplexModule0A0V",
+        "text" : "Complex"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ComplexModule"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Type Method",
+    "symbolKind" : "method",
+    "title" : "expMinusOne(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "static"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "expMinusOne"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "z"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/ComplexModule\/Complex",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13ComplexModule0A0V",
+              "text" : "Complex"
+            },
+            {
+              "kind" : "text",
+              "text" : ") -> "
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/ComplexModule\/Complex",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13ComplexModule0A0V",
+              "text" : "Complex"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "When ",
+              "type" : "text"
+            },
+            {
+              "code" : "x",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " is close to zero, the expression ",
+              "type" : "text"
+            },
+            {
+              "code" : ".exp(x) - 1",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " suffers from",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "catastrophic cancellation and the result will not have full accuracy.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "The ",
+              "type" : "text"
+            },
+            {
+              "code" : ".expMinusOne(x)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " function gives you a means to address this problem.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "As an example, consider the expression ",
+              "type" : "text"
+            },
+            {
+              "code" : "(x + 1)*exp(x) - 1",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".  When ",
+              "type" : "text"
+            },
+            {
+              "code" : "x",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "is smaller than ",
+              "type" : "text"
+            },
+            {
+              "code" : ".ulpOfOne",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", this expression evaluates to ",
+              "type" : "text"
+            },
+            {
+              "code" : "0.0",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", when it",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "should actually round to ",
+              "type" : "text"
+            },
+            {
+              "code" : "2*x",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". We can get a full-accuracy result by",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "using the following instead:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "let t = .expMinusOne(x)",
+            "return x*(t+1) + t       \/\/ x*exp(x) + (exp(x)-1) = (x+1)*exp(x) - 1"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "This re-written expression delivers an accurate result for all values",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "of ",
+              "type" : "text"
+            },
+            {
+              "code" : "x",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", not just for small values.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "See-also:",
+          "level" : 2,
+          "text" : "See also:",
+          "type" : "heading"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "exp()",
+                      "type" : "codeVoice"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "exp2()",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " (for types conforming to ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "RealFunctions",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : ")",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "exp10()",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " (for types conforming to ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "RealFunctions",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : ")",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/complexmodule\/complex\/expminusone(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/ComplexModule": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/ComplexModule",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ComplexModule",
+  "type" : "topic",
+  "url" : "\/documentation\/complexmodule"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/ComplexModule/Complex": {
+  "abstract" : [
+    {
+      "text" : "A complex number represented by real and imaginary parts.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Complex"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/ComplexModule\/Complex",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Complex"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Complex",
+  "type" : "topic",
+  "url" : "\/documentation\/complexmodule\/complex"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/ComplexModule/Complex/ElementaryFunctions-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/ComplexModule\/Complex\/ElementaryFunctions-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "ElementaryFunctions Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/complexmodule\/complex\/elementaryfunctions-implementations"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/ComplexModule/Complex/expMinusOne(_:)": {
+  "abstract" : [
+    {
+      "text" : "exp(x) - 1, computed in such a way as to maintain accuracy for small x.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "RealType",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "Real",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "expMinusOne"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13ComplexModule0A0V",
+      "text" : "Complex"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13ComplexModule0A0V",
+      "text" : "Complex"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/ComplexModule\/Complex\/expMinusOne(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "expMinusOne(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/complexmodule\/complex\/expminusone(_:)"
+}
+}
+}

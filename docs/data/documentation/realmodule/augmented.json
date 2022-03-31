@@ -1,0 +1,632 @@
+{
+  "abstract" : [
+    {
+      "text" : "A namespace for “augmented arithmetic” operations for types conforming to",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "code" : "Real",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule\/Augmented"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:10RealModule9AugmentedO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Augmented"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RealModule"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Augmented"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Augmented"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Augmented"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Augmented arithmetic refers to a family of algorithms that represent",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the results of floating-point computations using multiple values such that",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "either the error is minimized or the result is exact.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule\/Augmented\/fastTwoSum(_:_:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule\/Augmented\/product(_:_:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule\/Augmented\/sum(large:small:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule\/Augmented\/twoProdFMA(_:_:)"
+      ],
+      "title" : "Type Methods"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/realmodule\/augmented"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/RealModule": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RealModule",
+  "type" : "topic",
+  "url" : "\/documentation\/realmodule"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/RealModule/Augmented": {
+  "abstract" : [
+    {
+      "text" : "A namespace for “augmented arithmetic” operations for types conforming to",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "code" : "Real",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Augmented"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule\/Augmented",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Augmented"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Augmented",
+  "type" : "topic",
+  "url" : "\/documentation\/realmodule\/augmented"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/RealModule/Augmented/fastTwoSum(_:_:)": {
+  "abstract" : [
+
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "fastTwoSum"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10RealModule9AugmentedO10fastTwoSumyx4head_x4tailtx_xtAA0A0RzlFZ1TL_xmfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10RealModule9AugmentedO10fastTwoSumyx4head_x4tailtx_xtAA0A0RzlFZ1TL_xmfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> (head"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10RealModule9AugmentedO10fastTwoSumyx4head_x4tailtx_xtAA0A0RzlFZ1TL_xmfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ", tail"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10RealModule9AugmentedO10fastTwoSumyx4head_x4tailtx_xtAA0A0RzlFZ1TL_xmfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule\/Augmented\/fastTwoSum(_:_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "fastTwoSum(_:_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/realmodule\/augmented\/fasttwosum(_:_:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/RealModule/Augmented/product(_:_:)": {
+  "abstract" : [
+    {
+      "text" : "The product ",
+      "type" : "text"
+    },
+    {
+      "code" : "a * b",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " represented as an implicit sum ",
+      "type" : "text"
+    },
+    {
+      "code" : "head + tail",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "product"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10RealModule9AugmentedO7productyx4head_x4tailtx_xtAA0A0RzlFZ1TL_xmfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10RealModule9AugmentedO7productyx4head_x4tailtx_xtAA0A0RzlFZ1TL_xmfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> (head"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10RealModule9AugmentedO7productyx4head_x4tailtx_xtAA0A0RzlFZ1TL_xmfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ", tail"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10RealModule9AugmentedO7productyx4head_x4tailtx_xtAA0A0RzlFZ1TL_xmfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule\/Augmented\/product(_:_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "product(_:_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/realmodule\/augmented\/product(_:_:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/RealModule/Augmented/sum(large:small:)": {
+  "abstract" : [
+    {
+      "text" : "The sum ",
+      "type" : "text"
+    },
+    {
+      "code" : "a + b",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " represented as an implicit sum ",
+      "type" : "text"
+    },
+    {
+      "code" : "head + tail",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "sum"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "large"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10RealModule9AugmentedO3sum5large5smallx4head_x4tailtx_xtAA0A0RzlFZ1TL_xmfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "small"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10RealModule9AugmentedO3sum5large5smallx4head_x4tailtx_xtAA0A0RzlFZ1TL_xmfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> (head"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10RealModule9AugmentedO3sum5large5smallx4head_x4tailtx_xtAA0A0RzlFZ1TL_xmfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ", tail"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10RealModule9AugmentedO3sum5large5smallx4head_x4tailtx_xtAA0A0RzlFZ1TL_xmfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule\/Augmented\/sum(large:small:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "sum(large:small:)",
+  "type" : "topic",
+  "url" : "\/documentation\/realmodule\/augmented\/sum(large:small:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/RealModule/Augmented/twoProdFMA(_:_:)": {
+  "abstract" : [
+
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "twoProdFMA"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10RealModule9AugmentedO10twoProdFMAyx4head_x4tailtx_xtAA0A0RzlFZ1TL_xmfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10RealModule9AugmentedO10twoProdFMAyx4head_x4tailtx_xtAA0A0RzlFZ1TL_xmfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> (head"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10RealModule9AugmentedO10twoProdFMAyx4head_x4tailtx_xtAA0A0RzlFZ1TL_xmfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ", tail"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10RealModule9AugmentedO10twoProdFMAyx4head_x4tailtx_xtAA0A0RzlFZ1TL_xmfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule\/Augmented\/twoProdFMA(_:_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "twoProdFMA(_:_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/realmodule\/augmented\/twoprodfma(_:_:)"
+}
+}
+}

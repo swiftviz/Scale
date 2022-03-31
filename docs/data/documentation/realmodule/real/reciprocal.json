@@ -1,0 +1,611 @@
+{
+  "abstract" : [
+    {
+      "text" : "The (approximate) reciprocal (multiplicative inverse) of this number,",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "if it is representable.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule\/AlgebraicField",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule\/AlgebraicField\/reciprocal-156o3"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule\/Real\/reciprocal"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "RealModule",
+    "externalID" : "s:10RealModule0A0PAAE10reciprocalxSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "reciprocal"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Self"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "RealModule"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "reciprocal"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "reciprocal"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Self"
+            },
+            {
+              "kind" : "text",
+              "text" : "? { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If ",
+              "type" : "text"
+            },
+            {
+              "code" : "x",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " if finite and nonzero, and ",
+              "type" : "text"
+            },
+            {
+              "code" : "1\/x",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " overflows or underflows,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "then ",
+              "type" : "text"
+            },
+            {
+              "code" : "x.reciprocal",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " is ",
+              "type" : "text"
+            },
+            {
+              "code" : "nil",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". Otherwise, ",
+              "type" : "text"
+            },
+            {
+              "code" : "a.reciprocal",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " is ",
+              "type" : "text"
+            },
+            {
+              "code" : "1\/x",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If ",
+              "type" : "text"
+            },
+            {
+              "code" : "x.reciprocal",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " is non-nil, you may be able to replace division by ",
+              "type" : "text"
+            },
+            {
+              "code" : "x",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "with multiplication by this value. It is not advantageous to do this",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "for an isolated division unless it is a compile-time constant visible",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "to the compiler, but if you are dividing many values by a single",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "denominator, this will often be a significant performance win.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A typical use case looks something like this:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "func divide<T: Real>(data: [T], by divisor: T) -> [T] {",
+            "  \/\/ If divisor is well-scaled, multiply by reciprocal.",
+            "  if let recip = divisor.reciprocal {",
+            "    return data.map { $0 * recip }",
+            "  }",
+            "  \/\/ Fallback on using division.",
+            "  return data.map { $0 \/ divisor }",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Error Bounds:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Multiplying by the reciprocal instead of dividing will slightly",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "perturb results. For example ",
+              "type" : "text"
+            },
+            {
+              "code" : "5.0 \/ 3",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " is 1.6666666666666667, but",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "5.0 * 3.reciprocal!",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " is 1.6666666666666665.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The error of a normal division is bounded by half an ulp of the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "result; we can derive a quick error bound for multiplication by",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the real reciprocal (when it exists) as follows (I will use circle",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "operators to denote real-number arithmetic, and normal operators",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "for floating-point arithmetic):",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "  a * b.reciprocal! = a * (1\/b)",
+            "                    = a * (1 ⊘ b)(1 + δ₁)",
+            "                    = (a ⊘ b)(1 + δ₁)(1 + δ₂)",
+            "                    = (a ⊘ b)(1 + δ₁ + δ₂ + δ₁δ₂)"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "where ",
+              "type" : "text"
+            },
+            {
+              "code" : "0 < δᵢ <= ulpOfOne\/2",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". This gives a roughly 1-ulp error,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "about twice the error bound we get using division. For most",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "purposes this is an acceptable error, but if you need to match",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "results obtained using division, you should not use this.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/realmodule\/real\/reciprocal"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/RealModule": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "RealModule",
+  "type" : "topic",
+  "url" : "\/documentation\/realmodule"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/RealModule/AlgebraicField": {
+  "abstract" : [
+    {
+      "text" : "A type modeling an algebraic ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/en.wikipedia.org\/wiki\/Field_(mathematics)",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ". Refines the ",
+      "type" : "text"
+    },
+    {
+      "code" : "SignedNumeric",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " protocol,",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "adding division.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AlgebraicField"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule\/AlgebraicField",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AlgebraicField"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AlgebraicField",
+  "type" : "topic",
+  "url" : "\/documentation\/realmodule\/algebraicfield"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/RealModule/AlgebraicField/reciprocal-156o3": {
+  "abstract" : [
+    {
+      "text" : "The (approximate) reciprocal (multiplicative inverse) of this number,",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "if it is representable.",
+      "type" : "text"
+    }
+  ],
+  "defaultImplementations" : 2,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "reciprocal"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule\/AlgebraicField\/reciprocal-156o3",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "reciprocal",
+  "type" : "topic",
+  "url" : "\/documentation\/realmodule\/algebraicfield\/reciprocal-156o3"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/RealModule/Real/reciprocal": {
+  "abstract" : [
+    {
+      "text" : "The (approximate) reciprocal (multiplicative inverse) of this number,",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "if it is representable.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "reciprocal"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/RealModule\/Real\/reciprocal",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "reciprocal",
+  "type" : "topic",
+  "url" : "\/documentation\/realmodule\/real\/reciprocal"
+},
+"https://en.wikipedia.org/wiki/Field_(mathematics)": {
+  "identifier" : "https:\/\/en.wikipedia.org\/wiki\/Field_(mathematics)",
+  "title" : "field",
+  "titleInlineContent" : [
+    {
+      "text" : "field",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/en.wikipedia.org\/wiki\/Field_(mathematics)"
+}
+}
+}
