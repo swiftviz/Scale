@@ -59,4 +59,4 @@ sort all_identifiers.txt \
     | sed -e 's/^/- ``/g' \
     | sed -e 's/$/``/g' > all_symbols.txt
 
-echo "Page will be available at https://swiftviz.github.io/SwiftViz/documentation/scale/"
+echo "Page will be available at https://swiftviz.github.io/Scale/documentation/swiftvizscale/"
