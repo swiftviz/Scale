@@ -34,7 +34,7 @@ jobs:
       run: env
 
     - name: Prepare Code Coverage
-      run: xcrun llvm-cov export -format="lcov" .build/debug/SwiftVizPackageTests.xctest/Contents/MacOS/SwiftVizPackageTests -instr-profile .build/debug/codecov/default.profdata > info.lcov
+      run: xcrun llvm-cov export -format="lcov" .build/debug/SwiftVizScalePackageTests.xctest/Contents/MacOS/SwiftVizScalePackageTests -instr-profile .build/debug/codecov/default.profdata > info.lcov
 
     - name: Upload to CodeCov.io
       run: bash <(curl https://codecov.io/bash)
