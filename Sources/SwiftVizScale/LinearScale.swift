@@ -1,12 +1,11 @@
 import Foundation
 import Numerics
 #if canImport(CoreGraphics)
-import CoreGraphics
+    import CoreGraphics
 #endif
 
 /// A collection of linear scales.
 public enum LinearScale {
-    
     /// A linear scale is created using a continuous input of type double converting to an output of type float.
     public struct DoubleToFloatScale: TickScale {
         /// The type used for the scale's domain.
@@ -78,81 +77,80 @@ public enum LinearScale {
         }
     }
 
-#if canImport(CoreGraphics)
-    
-    /// A linear scale is created using a continuous input of type double converting to an output of type float.
-    public struct DoubleToCGFloatScale: TickScale {
+    #if canImport(CoreGraphics)
 
-        /// The type used for the scale's domain.
-        public typealias InputType = Double
-        /// The type used for the scale's range.
-        public typealias OutputType = CGFloat
+        /// A linear scale is created using a continuous input of type double converting to an output of type float.
+        public struct DoubleToCGFloatScale: TickScale {
+            /// The type used for the scale's domain.
+            public typealias InputType = Double
+            /// The type used for the scale's range.
+            public typealias OutputType = CGFloat
 
-        /// The lower bound of the input domain.
-        public let domainLower: InputType
-        /// The upper bound of the input domain.
-        public let domainHigher: InputType
-        /// The distance or length between the upper and lower bounds of the input domain.
-        public let domainExtent: InputType
+            /// The lower bound of the input domain.
+            public let domainLower: InputType
+            /// The upper bound of the input domain.
+            public let domainHigher: InputType
+            /// The distance or length between the upper and lower bounds of the input domain.
+            public let domainExtent: InputType
 
-        /// A boolean value that indicates whether the output vales are constrained to the min and max of the output range.
-        ///
-        /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
-        /// are constrained to the input domain.
-        public var transformType: DomainDataTransform
+            /// A boolean value that indicates whether the output vales are constrained to the min and max of the output range.
+            ///
+            /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
+            /// are constrained to the input domain.
+            public var transformType: DomainDataTransform
 
-        /// The number of ticks desired when creating the scale.
-        ///
-        /// This number may not match the number of ticks returned by ``TickScale/tickValues(_:from:to:)``
-        public let desiredTicks: Int
+            /// The number of ticks desired when creating the scale.
+            ///
+            /// This number may not match the number of ticks returned by ``TickScale/tickValues(_:from:to:)``
+            public let desiredTicks: Int
 
-        /// Creates a new linear scale for the upper and lower bounds of the domain you provide.
-        /// - Parameters:
-        ///   - lower: The lower bound of the scale's domain.
-        ///   - higher: The upper bound of the scale's domain.
-        ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
-        ///   - desiredTicks: The desired number of ticks when visually representing the scale.
-        public init(from lower: InputType, to higher: InputType, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
-            precondition(lower < higher)
-            transformType = transform
-            domainLower = lower
-            domainHigher = higher
-            domainExtent = higher - lower
-            self.desiredTicks = desiredTicks
-        }
-
-        // MARK: - Double
-
-        /// Transforms the input value using a linear function to the resulting value into the range you provide.
-        ///
-        /// - Parameter domainValue: A value in the domain of the scale.
-        /// - Parameter lower: The lower bound to the range to map to.
-        /// - Parameter higher: The upper bound of the range to map to.
-        /// - Returns: A value mapped to the range you provide.
-        public func scale(_ domainValue: Double, from lower: CGFloat, to higher: CGFloat) -> CGFloat? {
-            if let domainValue = transformAgainstDomain(domainValue) {
-                let normalizedInput = normalize(domainValue, lower: domainLower, higher: domainHigher)
-                let result: InputType = interpolate(normalizedInput, lower: CGFloat(lower), higher: CGFloat(higher))
-                return CGFloat(result)
+            /// Creates a new linear scale for the upper and lower bounds of the domain you provide.
+            /// - Parameters:
+            ///   - lower: The lower bound of the scale's domain.
+            ///   - higher: The upper bound of the scale's domain.
+            ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
+            ///   - desiredTicks: The desired number of ticks when visually representing the scale.
+            public init(from lower: InputType, to higher: InputType, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
+                precondition(lower < higher)
+                transformType = transform
+                domainLower = lower
+                domainHigher = higher
+                domainExtent = higher - lower
+                self.desiredTicks = desiredTicks
             }
-            return nil
+
+            // MARK: - Double
+
+            /// Transforms the input value using a linear function to the resulting value into the range you provide.
+            ///
+            /// - Parameter domainValue: A value in the domain of the scale.
+            /// - Parameter lower: The lower bound to the range to map to.
+            /// - Parameter higher: The upper bound of the range to map to.
+            /// - Returns: A value mapped to the range you provide.
+            public func scale(_ domainValue: Double, from lower: CGFloat, to higher: CGFloat) -> CGFloat? {
+                if let domainValue = transformAgainstDomain(domainValue) {
+                    let normalizedInput = normalize(domainValue, lower: domainLower, higher: domainHigher)
+                    let result: InputType = interpolate(normalizedInput, lower: CGFloat(lower), higher: CGFloat(higher))
+                    return CGFloat(result)
+                }
+                return nil
+            }
+
+            /// Transforms a value within the range into the associated domain value.
+            /// - Parameters:
+            ///   - rangeValue: A value in the range of the scale.
+            ///   - lower: The lower bound to the range to map from.
+            ///   - higher: The upper bound to the range to map from.
+            /// - Returns: A value linearly mapped from the range back into the domain.
+            public func invert(_ rangeValue: CGFloat, from lower: CGFloat, to higher: CGFloat) -> Double? {
+                // inverts the scale, taking a value in the output range and returning the relevant value from the input domain
+                let normalizedRangeValue = normalize(Double(rangeValue), lower: Double(lower), higher: Double(higher))
+                let mappedToDomain = interpolate(normalizedRangeValue, lower: domainLower, higher: domainHigher)
+                return transformAgainstDomain(mappedToDomain)
+            }
         }
 
-        /// Transforms a value within the range into the associated domain value.
-        /// - Parameters:
-        ///   - rangeValue: A value in the range of the scale.
-        ///   - lower: The lower bound to the range to map from.
-        ///   - higher: The upper bound to the range to map from.
-        /// - Returns: A value linearly mapped from the range back into the domain.
-        public func invert(_ rangeValue: CGFloat, from lower: CGFloat, to higher: CGFloat) -> Double? {
-            // inverts the scale, taking a value in the output range and returning the relevant value from the input domain
-            let normalizedRangeValue = normalize(Double(rangeValue), lower: Double(lower), higher: Double(higher))
-            let mappedToDomain = interpolate(normalizedRangeValue, lower: domainLower, higher: domainHigher)
-            return transformAgainstDomain(mappedToDomain)
-        }
-    }
-    
-#endif
+    #endif
 
     /// A linear scale is created using a continuous input of type double converting to an output of type double.
     public struct DoubletoDoubleScale: TickScale {
@@ -224,6 +222,7 @@ public enum LinearScale {
             return transformAgainstDomain(mappedToDomain)
         }
     }
+
     /// A linear scale is created using a continuous input of type float  converting to an output of type float.
     public struct FloatToFloatScale: TickScale {
         /// The type used for the scale's domain.
@@ -370,80 +369,81 @@ public enum LinearScale {
     }
 
     #if canImport(CoreGraphics)
-    /// A linear scale is created using a continuous input of type int  converting to an output of type float.
-    public struct IntToCGFloatScale: TickScale {
-        /// The type used for the scale's domain.
-        public typealias InputType = Int
-        /// The type used for the scale's range.
-        public typealias OutputType = CGFloat
+        /// A linear scale is created using a continuous input of type int  converting to an output of type float.
+        public struct IntToCGFloatScale: TickScale {
+            /// The type used for the scale's domain.
+            public typealias InputType = Int
+            /// The type used for the scale's range.
+            public typealias OutputType = CGFloat
 
-        /// The lower bound of the input domain.
-        public let domainLower: InputType
-        /// The upper bound of the input domain.
-        public let domainHigher: InputType
-        /// The distance or length between the upper and lower bounds of the input domain.
-        public let domainExtent: InputType
+            /// The lower bound of the input domain.
+            public let domainLower: InputType
+            /// The upper bound of the input domain.
+            public let domainHigher: InputType
+            /// The distance or length between the upper and lower bounds of the input domain.
+            public let domainExtent: InputType
 
-        /// A boolean value that indicates whether the output vales are constrained to the min and max of the output range.
-        ///
-        /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
-        /// are constrained to the input domain.
-        public var transformType: DomainDataTransform
+            /// A boolean value that indicates whether the output vales are constrained to the min and max of the output range.
+            ///
+            /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
+            /// are constrained to the input domain.
+            public var transformType: DomainDataTransform
 
-        /// The number of ticks desired when creating the scale.
-        ///
-        /// This number may not match the number of ticks returned by ``TickScale/tickValues(_:from:to:)``
-        public let desiredTicks: Int
+            /// The number of ticks desired when creating the scale.
+            ///
+            /// This number may not match the number of ticks returned by ``TickScale/tickValues(_:from:to:)``
+            public let desiredTicks: Int
 
-        /// Creates a new linear scale for the upper and lower bounds of the domain you provide.
-        /// - Parameters:
-        ///   - lower: The lower bound of the scale's domain.
-        ///   - higher: The upper bound of the scale's domain.
-        ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
-        ///   - desiredTicks: The desired number of ticks when visually representing the scale.
-        public init(from lower: InputType, to higher: InputType, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
-            precondition(lower < higher)
-            transformType = transform
-            domainLower = lower
-            domainHigher = higher
-            domainExtent = higher - lower
-            self.desiredTicks = desiredTicks
-        }
-
-        // MARK: - Int
-
-        /// Transforms the input value using a linear function to the resulting value into the range you provide.
-        ///
-        /// - Parameter domainValue: A value in the domain of the scale.
-        /// - Parameter lower: The lower bound to the range to map to.
-        /// - Parameter higher: The upper bound of the range to map to.
-        /// - Returns: A value mapped to the range you provide.
-        public func scale(_ domainValue: InputType, from lower: OutputType, to higher: OutputType) -> OutputType? {
-            if let domainValue = transformAgainstDomain(domainValue) {
-                let convertedDomain = Double(domainValue)
-                let convertedDomainLower = Double(Int(domainLower))
-                let convertedDomainHigher = Double(Int(domainHigher))
-                let normalizedInput = normalize(convertedDomain, lower: convertedDomainLower, higher: convertedDomainHigher)
-                let result = interpolate(normalizedInput, lower: CGFloat(lower), higher: CGFloat(higher))
-                return result
+            /// Creates a new linear scale for the upper and lower bounds of the domain you provide.
+            /// - Parameters:
+            ///   - lower: The lower bound of the scale's domain.
+            ///   - higher: The upper bound of the scale's domain.
+            ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
+            ///   - desiredTicks: The desired number of ticks when visually representing the scale.
+            public init(from lower: InputType, to higher: InputType, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
+                precondition(lower < higher)
+                transformType = transform
+                domainLower = lower
+                domainHigher = higher
+                domainExtent = higher - lower
+                self.desiredTicks = desiredTicks
             }
-            return nil
-        }
 
-        /// Transforms a value within the range into the associated domain value.
-        /// - Parameters:
-        ///   - rangeValue: A value in the range of the scale.
-        ///   - lower: The lower bound to the range to map from.
-        ///   - higher: The upper bound to the range to map from.
-        /// - Returns: A value linearly mapped from the range back into the domain.
-        public func invert(_ rangeValue: CGFloat, from lower: CGFloat, to higher: CGFloat) -> Int? {
-            // inverts the scale, taking a value in the output range and returning the relevant value from the input domain
-            let normalizedRangeValue = normalize(Double(rangeValue), lower: Double(lower), higher: Double(higher))
-            let mappedToDomain = interpolate(normalizedRangeValue, lower: Double(domainLower), higher: Double(domainHigher))
-            return transformAgainstDomain(Int(mappedToDomain))
+            // MARK: - Int
+
+            /// Transforms the input value using a linear function to the resulting value into the range you provide.
+            ///
+            /// - Parameter domainValue: A value in the domain of the scale.
+            /// - Parameter lower: The lower bound to the range to map to.
+            /// - Parameter higher: The upper bound of the range to map to.
+            /// - Returns: A value mapped to the range you provide.
+            public func scale(_ domainValue: InputType, from lower: OutputType, to higher: OutputType) -> OutputType? {
+                if let domainValue = transformAgainstDomain(domainValue) {
+                    let convertedDomain = Double(domainValue)
+                    let convertedDomainLower = Double(Int(domainLower))
+                    let convertedDomainHigher = Double(Int(domainHigher))
+                    let normalizedInput = normalize(convertedDomain, lower: convertedDomainLower, higher: convertedDomainHigher)
+                    let result = interpolate(normalizedInput, lower: CGFloat(lower), higher: CGFloat(higher))
+                    return result
+                }
+                return nil
+            }
+
+            /// Transforms a value within the range into the associated domain value.
+            /// - Parameters:
+            ///   - rangeValue: A value in the range of the scale.
+            ///   - lower: The lower bound to the range to map from.
+            ///   - higher: The upper bound to the range to map from.
+            /// - Returns: A value linearly mapped from the range back into the domain.
+            public func invert(_ rangeValue: CGFloat, from lower: CGFloat, to higher: CGFloat) -> Int? {
+                // inverts the scale, taking a value in the output range and returning the relevant value from the input domain
+                let normalizedRangeValue = normalize(Double(rangeValue), lower: Double(lower), higher: Double(higher))
+                let mappedToDomain = interpolate(normalizedRangeValue, lower: Double(domainLower), higher: Double(domainHigher))
+                return transformAgainstDomain(Int(mappedToDomain))
+            }
         }
-    }
-#endif
+    #endif
+
     // MARK: - Factory (convenience) Methods
 
     // Double
@@ -504,7 +504,6 @@ public enum LinearScale {
         LinearScale.FloatToFloatScale(from: 0, to: high)
     }
 
-    
     // Int
 
     /// Creates a linear scale that maps values between the lower and upper bounds you provide.
