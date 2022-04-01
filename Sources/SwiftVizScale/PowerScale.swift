@@ -26,7 +26,7 @@ public struct PowerScale<InputType: ConvertibleWithDouble & NiceValue, OutputTyp
     /// A Boolean value that indicates the scale was configured without an explicit domain.
     ///
     /// Use ``withDomain(lower:higher:)`` to create a new scale with an explicit domain while keeping the same ``transformType``.
-    public let defaultDomain: Bool
+    public var defaultDomain: Bool
 
     /// The number of ticks desired when creating the scale.
     ///
@@ -64,6 +64,7 @@ public struct PowerScale<InputType: ConvertibleWithDouble & NiceValue, OutputTyp
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init(exponent: Double = 1, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
         self.init(from: 0, to: 1, exponent: exponent, transform: transform, desiredTicks: desiredTicks)
+        defaultDomain = true
     }
 
     /// Creates a new power scale for the upper and lower bounds of the domain range you provide.
