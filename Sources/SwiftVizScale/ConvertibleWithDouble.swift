@@ -7,12 +7,10 @@
 
 import Foundation
 
-// defines explicitly how we're casting from one comparable, numeric type to another...
-// and which types are ultimately supported for scaling
-
 /// A type that can be consistently converted to and from a Double.
 ///
 /// The protocol is used to constrain the types used within a scale and provide consistent casting for generic scale methods.
+/// This library provides support for the types `Int`, `Float`, `CGFloat`, and `Double`.
 public protocol ConvertibleWithDouble: Numeric, Comparable {
     /// Converts a value of the type into an instance of `Double`
     /// - Returns: A double value matching the value you provided.
