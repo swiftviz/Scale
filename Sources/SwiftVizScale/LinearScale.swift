@@ -10,7 +10,7 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
     /// The distance or length between the upper and lower bounds of the input domain.
     public let domainExtent: InputType
 
-    /// A boolean value that indicates whether the output vales are constrained to the min and max of the output range.
+    /// A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///
     /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
     /// are constrained to the input domain.
@@ -23,8 +23,8 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
 
     /// Creates a new linear scale for the upper and lower bounds of the domain you provide.
     /// - Parameters:
-    ///   - lower: The lower bound of the scale's domain.
-    ///   - higher: The upper bound of the scale's domain.
+    ///   - lower: The lower bound for the scale's domain.
+    ///   - higher: The upper bound for the scale's domain.
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init(from lower: InputType, to higher: InputType, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
@@ -94,29 +94,7 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
 }
 
 //    // MARK: - Factory (convenience) Methods
-//
-//    // Double
-//
-//    /// Creates a linear scale that maps values between the lower and upper bounds you provide.
-//    /// - Parameters:
-//    ///   - low: The lower bounds of the domain.
-//    ///   - high: The upper bounds of the domain.
-//    public static func create(_ low: Double, _ high: Double) -> LinearScale.DoubleToFloatScale {
-//        LinearScale.DoubleToFloatScale(from: low, to: high)
-//    }
-//
-//    /// Creates a linear scale that maps values within the range you provide.
-//    /// - Parameter range: The range of the domain.
-//    public static func create(_ range: ClosedRange<Double>) -> LinearScale.DoubleToFloatScale {
-//        LinearScale.DoubleToFloatScale(from: range.lowerBound, to: range.upperBound)
-//    }
-//
-//    /// Creates a linear scale that maps values from 0 to the upper bound you provide.
-//    /// - Parameter high: The upper bounds of the domain.
-//    public static func create(_ high: Double) -> LinearScale.DoubleToFloatScale {
-//        LinearScale.DoubleToFloatScale(from: 0, to: high)
-//    }
-//
+
 //    /// Creates a linear scale for dates that maps values between the lower and upper bounds you provide.
 //    /// - Parameters:
 //    ///   - low: The lower bounds of the domain.

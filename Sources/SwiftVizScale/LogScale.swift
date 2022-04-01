@@ -15,7 +15,7 @@ public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType:
     /// The distance or length between the upper and lower bounds of the input domain.
     public let domainExtent: InputType
 
-    /// A boolean value that indicates whether the output vales are constrained to the min and max of the output range.
+    /// A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///
     /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
     /// are constrained to the input domain.
@@ -28,8 +28,8 @@ public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType:
 
     /// Creates a new logarithmic scale for the upper and lower bounds of the domain you provide.
     /// - Parameters:
-    ///   - lower: The lower bound of the scale's domain.
-    ///   - higher: The upper bound of the scale's domain.
+    ///   - lower: The lower bound for the scale's domain.
+    ///   - higher: The upper bound for the scale's domain.
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init(from lower: InputType, to higher: InputType, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
