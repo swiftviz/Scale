@@ -16,7 +16,7 @@ public protocol TickScale: Scale {
     var desiredTicks: Int { get }
 }
 
-public extension TickScale where OutputType: Real {
+public extension TickScale {
     /// Converts an array of values that matches the scale's input type to a list of ticks that are within the scale's domain.
     ///
     /// Used for manually specifying a series of ticks that you want to have displayed.
@@ -54,7 +54,7 @@ public extension TickScale where OutputType: Real {
     }
 }
 
-public extension TickScale where InputType == Int, OutputType: Real {
+public extension TickScale where InputType == Int {
     /// Returns an array of the locations within the output range to locate ticks for the scale.
     ///
     /// - Parameter range: a ClosedRange representing the representing the range we are mapping the values into with the scale
@@ -70,7 +70,7 @@ public extension TickScale where InputType == Int, OutputType: Real {
     }
 }
 
-public extension TickScale where InputType == Float, OutputType: Real {
+public extension TickScale where InputType == Float {
     /// Returns an array of the locations within the output range to locate ticks for the scale.
     ///
     /// - Parameter range: a ClosedRange representing the representing the range we are mapping the values into with the scale
@@ -86,7 +86,7 @@ public extension TickScale where InputType == Float, OutputType: Real {
     }
 }
 
-public extension TickScale where InputType == Double, OutputType: Real {
+public extension TickScale where InputType == Double {
     /// Returns an array of the locations within the output range to locate ticks for the scale.
     ///
     /// - Parameter range: a ClosedRange representing the representing the range we are mapping the values into with the scale

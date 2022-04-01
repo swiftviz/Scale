@@ -1,7 +1,7 @@
-# SwiftViz
+# SwiftVizScale
 
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fswiftviz%2FSwiftViz%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/swiftviz/SwiftViz)
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fswiftviz%2FSwiftViz%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/swiftviz/SwiftViz)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fswiftviz%2FScale%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/swiftviz/Scale)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fswiftviz%2FScale%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/swiftviz/Scale)
 
 [![codecov](https://codecov.io/gh/swiftviz/Scale/branch/master/graph/badge.svg?token=fbjd3ei11P)](https://codecov.io/gh/swiftviz/Scale)
 ![@heckj](https://img.shields.io/badge/twitter-@heckj-blue.svg?style=flat "Twitter: @heckj")

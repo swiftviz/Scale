@@ -76,17 +76,17 @@ final class TickTests: XCTestCase {
     }
 
     func testDefaultTicksInt() {
-        let scale = LinearScale.IntScale(from: 0, to: 10)
+        let scale = LinearScale<Int, CGFloat>(from: 0, to: 10)
         XCTAssertEqual(scale.ticks(rangeLower: 0, rangeHigher: 100).count, 10)
     }
 
     func testDefaultTicksFloat() {
-        let scale = LinearScale.FloatScale(from: 0, to: 10)
+        let scale = LinearScale<Float, CGFloat>(from: 0, to: 10)
         XCTAssertEqual(scale.ticks(rangeLower: 0, rangeHigher: 100).count, 6)
     }
 
     func testDefaultTicksDouble() {
-        let scale = LinearScale.DoubleScale(from: 0, to: 10)
+        let scale = LinearScale<Double, CGFloat>(from: 0, to: 10)
         XCTAssertEqual(scale.ticks(rangeLower: 0, rangeHigher: 100).count, 6)
     }
 }

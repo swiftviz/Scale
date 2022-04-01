@@ -4,20 +4,33 @@
 
 ### Creating Linear Scales
 
-- ``SwiftVizScale/LinearScale/create(_:)-1gmsc``
-- ``SwiftVizScale/LinearScale/create(_:)-1upnw``
-- ``SwiftVizScale/LinearScale/create(_:)-3584s``
-- ``SwiftVizScale/LinearScale/create(_:)-495gu``
-- ``SwiftVizScale/LinearScale/create(_:)-5zrli``
-- ``SwiftVizScale/LinearScale/create(_:)-6jvul``
-- ``SwiftVizScale/LinearScale/create(_:)-6vp7u``
-- ``SwiftVizScale/LinearScale/create(_:_:)-1psqb``
-- ``SwiftVizScale/LinearScale/create(_:_:)-38kj3``
-- ``SwiftVizScale/LinearScale/create(_:_:)-4id7v``
-- ``SwiftVizScale/LinearScale/create(_:_:)-k13q``
+- ``SwiftVizScale/LinearScale/init(_:transform:desiredTicks:)-5gvku``
+- ``SwiftVizScale/LinearScale/init(_:transform:desiredTicks:)-y8hg``
+- ``SwiftVizScale/LinearScale/init(from:to:transform:desiredTicks:)``
 
-### Types of Linear Scales
+### Inspecting Scales
 
-- ``SwiftVizScale/LinearScale/DoubleScale``
-- ``SwiftVizScale/LinearScale/FloatScale``
-- ``SwiftVizScale/LinearScale/IntScale``
+- ``SwiftVizScale/LinearScale/domainLower``
+- ``SwiftVizScale/LinearScale/domainHigher``
+- ``SwiftVizScale/LinearScale/domainExtent``
+- ``SwiftVizScale/LinearScale/transformType``
+- ``SwiftVizScale/LinearScale/desiredTicks``
+
+### Converting Values 
+
+- ``SwiftVizScale/LinearScale/scale(_:from:to:)``
+- ``SwiftVizScale/LinearScale/scale(_:to:)``
+- ``SwiftVizScale/LinearScale/invert(_:from:to:)``
+- ``SwiftVizScale/LinearScale/invert(_:to:)``
+
+### Comparing Values
+
+- ``SwiftVizScale/LinearScale/transformAgainstDomain(_:)``
+- ``SwiftVizScale/LinearScale/domainContains(_:)``
+
+### Creating Ticks
+
+- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:)-2i6ex``
+- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:)-3xaat``
+- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:)-9vifj``
+- ``SwiftVizScale/LinearScale/tickValues(_:from:to:)``
