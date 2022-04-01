@@ -27,7 +27,7 @@ public struct PowerScale<InputType: ConvertibleWithDouble & NiceValue, OutputTyp
     ///
     /// This number may not match the number of ticks returned by ``TickScale/tickValues(_:from:to:)``
     public let desiredTicks: Int
-    
+
     /// The exponent value of the scale.
     public let exponent: Double
 
