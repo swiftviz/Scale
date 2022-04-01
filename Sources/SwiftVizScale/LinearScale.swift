@@ -18,7 +18,7 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
 
     /// A Boolean value that indicates the scale was configured without an explicit domain.
     ///
-    /// Use `something` to create a new scale with an explicit domain while keeping the same ``transformType``.
+    /// Use ``withDomain(lower:higher:)`` to create a new scale with an explicit domain while keeping the same ``transformType``.
     public let defaultDomain: Bool
 
     /// The number of ticks desired when creating the scale.
