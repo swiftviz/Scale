@@ -28,7 +28,7 @@ import Numerics
 // - D3 has a time format (https://github.com/d3/d3-time-format), but we can probably use
 //   IOS/MacOS NSTime, NSDate formatters and calendrical mechanisms
 
-/// A collection of methods for dealing with data transformation when displaying against a scale.
+/// A value that represents how a scale handles data transformation that exceed the domain or range of the scale.
 public enum DomainDataTransform {
     /// Data processed against a scale isn't influenced by the scale's domain.
     case none
@@ -45,7 +45,7 @@ public protocol Scale {
     /// The type used for the scale's range.
     associatedtype OutputType: ConvertibleWithDouble
 
-    /// A boolean value that indicates whether the output vales are constrained to the min and max of the output range.
+    /// A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///
     /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
     /// are constrained to the input domain.
