@@ -115,13 +115,9 @@
     },
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/DoubleScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/FloatScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/IntScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/DoubleScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/FloatScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/IntScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/DoubleScale"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale"
       ],
       "kind" : "relationships",
       "title" : "Conforming Types",
@@ -140,10 +136,11 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/NiceValue",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/NiceValue",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ConvertibleWithDouble"
       ],
       "title" : "Scales"
     }
@@ -207,6 +204,40 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale"
 },
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ConvertibleWithDouble": {
+  "abstract" : [
+    {
+      "text" : "A type that can be consistently converted to and from a Double.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ConvertibleWithDouble"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ConvertibleWithDouble",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ConvertibleWithDouble"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ConvertibleWithDouble",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/convertiblewithdouble"
+},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform": {
   "abstract" : [
     {
@@ -244,14 +275,14 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale": {
   "abstract" : [
     {
-      "text" : "A collection of linear scales.",
+      "text" : "A linear scale for transforming and mapping continuous input values within a domain to output values you provide.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "enum"
+      "text" : "struct"
     },
     {
       "kind" : "text",
@@ -275,119 +306,17 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/linearscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/DoubleScale": {
-  "abstract" : [
-    {
-      "text" : "A linear scale is created using a continuous input of type double converting to an output of type float.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "DoubleScale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/DoubleScale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "DoubleScale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "LinearScale.DoubleScale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/linearscale\/doublescale"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/FloatScale": {
-  "abstract" : [
-    {
-      "text" : "A linear scale is created using a continuous input of type float  converting to an output of type float.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "FloatScale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/FloatScale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "FloatScale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "LinearScale.FloatScale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/linearscale\/floatscale"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/IntScale": {
-  "abstract" : [
-    {
-      "text" : "A linear scale is created using a continuous input of type int  converting to an output of type float.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "IntScale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/IntScale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "IntScale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "LinearScale.IntScale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/linearscale\/intscale"
-},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale": {
   "abstract" : [
     {
-      "text" : "A collection of logarithmic scales.",
+      "text" : "A logarithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "enum"
+      "text" : "struct"
     },
     {
       "kind" : "text",
@@ -410,102 +339,6 @@
   "title" : "LogScale",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/logscale"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/DoubleScale": {
-  "abstract" : [
-    {
-      "text" : "A logarithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "DoubleScale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/DoubleScale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "DoubleScale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "LogScale.DoubleScale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/logscale\/doublescale"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/FloatScale": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "FloatScale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/FloatScale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "FloatScale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "LogScale.FloatScale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/logscale\/floatscale"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/IntScale": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "IntScale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/IntScale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "IntScale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "LogScale.IntScale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/logscale\/intscale"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/NiceValue": {
   "abstract" : [
@@ -544,14 +377,14 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale": {
   "abstract" : [
     {
-      "text" : "A collection of power scales.",
+      "text" : "A power scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "enum"
+      "text" : "struct"
     },
     {
       "kind" : "text",
@@ -574,40 +407,6 @@
   "title" : "PowerScale",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/powerscale"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/DoubleScale": {
-  "abstract" : [
-    {
-      "text" : "A power scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "DoubleScale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/DoubleScale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "DoubleScale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "PowerScale.DoubleScale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/powerscale\/doublescale"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale": {
   "abstract" : [
@@ -695,17 +494,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SL",
-      "text" : "Comparable"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sj",
-      "text" : "Numeric"
+      "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
+      "text" : "ConvertibleWithDouble"
     },
     {
       "kind" : "text",
@@ -751,26 +541,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SL",
-      "text" : "Comparable"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sj",
-      "text" : "Numeric"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale9NiceValueP",
-      "text" : "NiceValue"
+      "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
+      "text" : "ConvertibleWithDouble"
     }
   ],
   "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType",

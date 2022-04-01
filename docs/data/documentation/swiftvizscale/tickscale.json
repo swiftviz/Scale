@@ -99,13 +99,9 @@
     },
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/DoubleScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/FloatScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/IntScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/DoubleScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/FloatScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/IntScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/DoubleScale"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale"
       ],
       "kind" : "relationships",
       "title" : "Conforming Types",
@@ -139,9 +135,9 @@
     {
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/tickValues(_:from:to:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-7wum5",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-9y0f6",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-kc40"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-15rnt",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-4ug0i",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-5hnpv"
       ],
       "title" : "Generating Ticks for a Scale"
     }
@@ -174,10 +170,10 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/DoubleScale": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale": {
   "abstract" : [
     {
-      "text" : "A linear scale is created using a continuous input of type double converting to an output of type float.",
+      "text" : "A linear scale for transforming and mapping continuous input values within a domain to output values you provide.",
       "type" : "text"
     }
   ],
@@ -192,91 +188,23 @@
     },
     {
       "kind" : "identifier",
-      "text" : "DoubleScale"
+      "text" : "LinearScale"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/DoubleScale",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "DoubleScale"
+      "text" : "LinearScale"
     }
   ],
   "role" : "symbol",
-  "title" : "LinearScale.DoubleScale",
+  "title" : "LinearScale",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/linearscale\/doublescale"
+  "url" : "\/documentation\/swiftvizscale\/linearscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/FloatScale": {
-  "abstract" : [
-    {
-      "text" : "A linear scale is created using a continuous input of type float  converting to an output of type float.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "FloatScale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/FloatScale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "FloatScale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "LinearScale.FloatScale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/linearscale\/floatscale"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/IntScale": {
-  "abstract" : [
-    {
-      "text" : "A linear scale is created using a continuous input of type int  converting to an output of type float.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "IntScale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/IntScale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "IntScale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "LinearScale.IntScale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/linearscale\/intscale"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/DoubleScale": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale": {
   "abstract" : [
     {
       "text" : "A logarithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
@@ -294,85 +222,23 @@
     },
     {
       "kind" : "identifier",
-      "text" : "DoubleScale"
+      "text" : "LogScale"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/DoubleScale",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "DoubleScale"
+      "text" : "LogScale"
     }
   ],
   "role" : "symbol",
-  "title" : "LogScale.DoubleScale",
+  "title" : "LogScale",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/logscale\/doublescale"
+  "url" : "\/documentation\/swiftvizscale\/logscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/FloatScale": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "FloatScale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/FloatScale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "FloatScale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "LogScale.FloatScale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/logscale\/floatscale"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/IntScale": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "IntScale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/IntScale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "IntScale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "LogScale.IntScale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/logscale\/intscale"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/DoubleScale": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale": {
   "abstract" : [
     {
       "text" : "A power scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
@@ -390,21 +256,21 @@
     },
     {
       "kind" : "identifier",
-      "text" : "DoubleScale"
+      "text" : "PowerScale"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/DoubleScale",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "DoubleScale"
+      "text" : "PowerScale"
     }
   ],
   "role" : "symbol",
-  "title" : "PowerScale.DoubleScale",
+  "title" : "PowerScale",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/powerscale\/doublescale"
+  "url" : "\/documentation\/swiftvizscale\/powerscale"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale": {
   "abstract" : [
@@ -579,38 +445,6 @@
       "type" : "text"
     }
   ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "OutputType",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "Real",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
   "fragments" : [
     {
       "kind" : "keyword",
@@ -706,148 +540,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/tickscale\/tickvalues(_:from:to:)"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-7wum5": {
-  "abstract" : [
-    {
-      "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
-      "type" : "text"
-    }
-  ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "InputType",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " is ",
-        "type" : "text"
-      },
-      {
-        "code" : "Float",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " and ",
-        "type" : "text"
-      },
-      {
-        "code" : "OutputType",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "Real",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "ticks"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "rangeLower"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "rangeHigher"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ") -> ["
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale4TickV",
-      "text" : "Tick"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ">]"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-7wum5",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "ticks(rangeLower:rangeHigher:)",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tickscale\/ticks(rangelower:rangehigher:)-7wum5"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-9y0f6": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-15rnt": {
   "abstract" : [
     {
       "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
@@ -881,22 +574,6 @@
         "type" : "codeVoice"
       },
       {
-        "text" : " and ",
-        "type" : "text"
-      },
-      {
-        "code" : "OutputType",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "Real",
-        "type" : "codeVoice"
-      },
-      {
         "text" : ".",
         "type" : "text"
       }
@@ -981,14 +658,14 @@
       "text" : ">]"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-9y0f6",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-15rnt",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "ticks(rangeLower:rangeHigher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tickscale\/ticks(rangelower:rangehigher:)-9y0f6"
+  "url" : "\/documentation\/swiftvizscale\/tickscale\/ticks(rangelower:rangehigher:)-15rnt"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-kc40": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-4ug0i": {
   "abstract" : [
     {
       "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
@@ -1022,19 +699,128 @@
         "type" : "codeVoice"
       },
       {
-        "text" : " and ",
+        "text" : ".",
         "type" : "text"
-      },
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ticks"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale4TickV",
+      "text" : "Tick"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">]"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-4ug0i",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ticks(rangeLower:rangeHigher:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/tickscale\/ticks(rangelower:rangehigher:)-4ug0i"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-5hnpv": {
+  "abstract" : [
+    {
+      "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
       {
-        "code" : "OutputType",
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "InputType",
         "type" : "codeVoice"
       },
       {
-        "text" : " conforms to ",
+        "text" : " is ",
         "type" : "text"
       },
       {
-        "code" : "Real",
+        "code" : "Float",
         "type" : "codeVoice"
       },
       {
@@ -1122,12 +908,12 @@
       "text" : ">]"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-kc40",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-5hnpv",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "ticks(rangeLower:rangeHigher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tickscale\/ticks(rangelower:rangehigher:)-kc40"
+  "url" : "\/documentation\/swiftvizscale\/tickscale\/ticks(rangelower:rangehigher:)-5hnpv"
 }
 }
 }

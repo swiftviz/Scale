@@ -9,9 +9,19 @@ import Foundation
 
 // defines explicitly how we're casting from one comparable, numeric type to another...
 // and which types are ultimately supported for scaling
+
+/// A type that can be consistently converted to and from a Double.
+///
+/// The protocol is used to constrain the types used within a scale and provide consistent casting for generic scale methods.
 public protocol ConvertibleWithDouble: Numeric, Comparable {
+    /// Converts a value of the type into an instance of `Double`
+    /// - Returns: A double value matching the value you provided.
     func toDouble() -> Double
-    static func fromDouble(_: Double) -> Self
+
+    /// Converts the value from the current type into a Double.
+    /// - Parameter value: A value of the current type
+    /// - Returns: A value of the current type converted from `Double`, rounded down if necessary.
+    static func fromDouble(_ value: Double) -> Self
 }
 
 extension Int: ConvertibleWithDouble {

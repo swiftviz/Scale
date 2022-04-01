@@ -15,11 +15,12 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 
 ### Scales
 
-- ``SwiftVizScale/Scale``
-- ``SwiftVizScale/NiceValue``
 - ``SwiftVizScale/LinearScale``
 - ``SwiftVizScale/LogScale``
 - ``SwiftVizScale/PowerScale``
+- ``SwiftVizScale/Scale``
+- ``SwiftVizScale/NiceValue``
+- ``SwiftVizScale/ConvertibleWithDouble``
 
 ### Ticks
 

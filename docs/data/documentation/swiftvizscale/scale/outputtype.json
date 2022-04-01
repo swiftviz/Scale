@@ -39,26 +39,8 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:SL",
-        "text" : "Comparable"
-      },
-      {
-        "kind" : "text",
-        "text" : ", "
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:Sj",
-        "text" : "Numeric"
-      },
-      {
-        "kind" : "text",
-        "text" : ", "
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale9NiceValueP",
-        "text" : "NiceValue"
+        "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
+        "text" : "ConvertibleWithDouble"
       }
     ],
     "modules" : [
@@ -100,28 +82,10 @@
               "text" : " : "
             },
             {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ConvertibleWithDouble",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:SL",
-              "text" : "Comparable"
-            },
-            {
-              "kind" : "text",
-              "text" : ", "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:Sj",
-              "text" : "Numeric"
-            },
-            {
-              "kind" : "text",
-              "text" : ", "
-            },
-            {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/NiceValue",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale9NiceValueP",
-              "text" : "NiceValue"
+              "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
+              "text" : "ConvertibleWithDouble"
             }
           ]
         }
@@ -179,6 +143,40 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale"
 },
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ConvertibleWithDouble": {
+  "abstract" : [
+    {
+      "text" : "A type that can be consistently converted to and from a Double.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ConvertibleWithDouble"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ConvertibleWithDouble",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ConvertibleWithDouble"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ConvertibleWithDouble",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/convertiblewithdouble"
+},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform": {
   "abstract" : [
     {
@@ -212,40 +210,6 @@
   "title" : "DomainDataTransform",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/domaindatatransform"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/NiceValue": {
-  "abstract" : [
-    {
-      "text" : "A type that can be converted into an approximate value that is easier to understand.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "protocol"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "NiceValue"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/NiceValue",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "NiceValue"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "NiceValue",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/nicevalue"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale": {
   "abstract" : [
@@ -333,17 +297,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SL",
-      "text" : "Comparable"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sj",
-      "text" : "Numeric"
+      "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
+      "text" : "ConvertibleWithDouble"
     },
     {
       "kind" : "text",
@@ -389,26 +344,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SL",
-      "text" : "Comparable"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sj",
-      "text" : "Numeric"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale9NiceValueP",
-      "text" : "NiceValue"
+      "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
+      "text" : "ConvertibleWithDouble"
     }
   ],
   "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType",
