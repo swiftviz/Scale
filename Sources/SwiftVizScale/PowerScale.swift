@@ -54,9 +54,22 @@ public struct PowerScale<InputType: ConvertibleWithDouble & NiceValue, OutputTyp
         defaultDomain = false
     }
 
+    /// Creates a new power scale with a default domain.
+    ///
+    /// The default domain for the scale is `0.0...1.0`.
+    /// Use this method to create a placeholder scale that you can refine to a fully configured scale with an updated domain using ``withDomain(lower:higher:)``.
+    /// - Parameters:
+    ///   - exponent: The exponent for the power transforming, defaulting to `1`.
+    ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
+    ///   - desiredTicks: The desired number of ticks when visually representing the scale.
+    public init(exponent: Double = 1, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
+        self.init(from: 0, to: 1, exponent: exponent, transform: transform, desiredTicks: desiredTicks)
+    }
+
     /// Creates a new power scale for the upper and lower bounds of the domain range you provide.
     /// - Parameters:
     ///   - range: The range of the scale's domain.
+    ///   - exponent: The exponent for the power transforming, defaulting to `1`.
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init(_ range: ClosedRange<InputType>, exponent: Double = 1, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
@@ -69,6 +82,7 @@ public struct PowerScale<InputType: ConvertibleWithDouble & NiceValue, OutputTyp
     /// If the value you provide is greater than `0`, the domain of the scale ranges from `0` to the value you provide.
     /// - Parameters:
     ///   - single: The upper, or lower, bound for the domain.
+    ///   - exponent: The exponent for the power transforming, defaulting to `1`.
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init(_ single: InputType, exponent: Double = 1, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
