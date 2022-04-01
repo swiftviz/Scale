@@ -2,18 +2,11 @@ import Foundation
 import Numerics
 
 // =============================================================
-//  Scale.swift
+//  ContinuousScale.swift
 
 // Inspired by D3's scale concept - maps input values (domain) to an output range (range)
 // - https://github.com/d3/d3-scale
 // - https://github.com/pshrmn/notes/blob/master/d3/scales.md
-
-// .ticks(5) - hint to return 5 ticks - note this is just a hint, not a guarantee, and the specific number
-// is determined by the scale's domain() values.
-// - e.g. domain with 3 discrete values would would return 2 or 3 ticks?)
-//
-// D3's scale also has a .nice() function that does some pleasant rounding of the domain,
-// extending it slightly so that it's nicer to view
 
 // import { scaleTime } from 'd3-scale';
 // const time = scaleTime()
@@ -39,7 +32,7 @@ public enum DomainDataTransform {
 }
 
 /// A type that maps values from an input _domain_ to an output _range_.
-public protocol Scale {
+public protocol ContinuousScale {
     /// The type used for the scale's domain.
     associatedtype InputType: ConvertibleWithDouble, NiceValue
     /// The type used for the scale's range.
@@ -97,7 +90,7 @@ public protocol Scale {
     func invert(_ rangeValue: OutputType, from: OutputType, to: OutputType) -> InputType?
 }
 
-public extension Scale {
+public extension ContinuousScale {
     /// Processes a value against the scale, potentially constraining or dropping the value.
     ///
     /// The value is transformed based on the scale's ``Scale/transformType`` setting.
