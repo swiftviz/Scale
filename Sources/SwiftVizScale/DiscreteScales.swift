@@ -22,21 +22,21 @@ import Foundation
 ///
 /// Band scales are useful for bar charts, calculating explicit bands with optional spacing to align with elements of a collection.
 /// If you mapping discrete data into a scatter plot, consider using the ``PointScale`` instead.
-public struct BandScale<CategoryType: Equatable, OutputType: ConvertibleWithDouble> {
+public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDouble> {
     public let from: OutputType?
     public let to: OutputType?
     public let round: Bool
     public let paddingInner: OutputType
     public let paddingOuter: OutputType
-    private let domain: [CategoryType]
+    public let domain: [CategoryType]
 
-    init(domain: [CategoryType] = [], paddingInner: OutputType = 0, paddingOuter: OutputType = 0, round: Bool = false, from: OutputType?, to: OutputType?) {
+    public init(domain: [CategoryType] = [], paddingInner: OutputType = 0, paddingOuter: OutputType = 0, round: Bool = false, from: OutputType?, to: OutputType?) {
         self.round = round
         self.paddingInner = paddingInner
         self.paddingOuter = paddingOuter
         self.domain = domain
         if let from = from, let to = to {
-            precondition(from < to)
+            precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
             self.from = from
             self.to = to
         } else {
@@ -45,33 +45,44 @@ public struct BandScale<CategoryType: Equatable, OutputType: ConvertibleWithDoub
         }
     }
 
+    // testing function only - verifies the scale is fully configured
+    internal func fullyConfigure() -> Bool {
+        from != nil && to != nil && domain.count > 0
+    }
+
     // - MARK: Modifier style update functions
 
     // effectively 'modifier' functions that return a new version of a scale
-    func domain(_ domain: [CategoryType]) -> Self {
+    public func domain(_ domain: [CategoryType]) -> Self {
         type(of: self).init(domain: domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, from: from, to: to)
     }
 
-    func round(_ newRound: Bool) -> Self {
+    public func round(_ newRound: Bool) -> Self {
         type(of: self).init(domain: domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: newRound, from: from, to: to)
     }
 
-    func paddingInner(_ newPaddingInner: OutputType) -> Self {
+    public func paddingInner(_ newPaddingInner: OutputType) -> Self {
         type(of: self).init(domain: domain, paddingInner: newPaddingInner, paddingOuter: paddingOuter, round: round, from: from, to: to)
     }
 
-    func paddingOuter(_ newPaddingOuter: OutputType) -> Self {
+    public func paddingOuter(_ newPaddingOuter: OutputType) -> Self {
         type(of: self).init(domain: domain, paddingInner: paddingInner, paddingOuter: newPaddingOuter, round: round, from: from, to: to)
     }
 
-    func range(from: OutputType, to: OutputType) -> Self {
-        precondition(from < to)
+    public func range(from: OutputType, to: OutputType) -> Self {
+        precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
         return type(of: self).init(domain: domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, from: from, to: to)
+    }
+
+    public func range(_ range: ClosedRange<OutputType>) -> Self {
+        precondition(range.lowerBound < range.upperBound, "attempting to set an inverted or empty range: \(range.lowerBound) to \(range.upperBound)")
+        return type(of: self).init(domain: domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, from: range.lowerBound, to: range.upperBound)
     }
 
     // attributes of the scale when fully configured
 
-    func width() -> Double? {
+    // NOTE(heckj): Does this method need to be public - is there value in the info?
+    public func width() -> Double? {
         guard let from = from, let to = to else {
             return nil
         }
@@ -86,7 +97,8 @@ public struct BandScale<CategoryType: Equatable, OutputType: ConvertibleWithDoub
         return internalWidth
     }
 
-    func step() -> Double? {
+    // NOTE(heckj): Does this method need to be public - is there value in the info?
+    public func step() -> Double? {
         guard let width = width() else {
             return nil
         }
@@ -97,20 +109,22 @@ public struct BandScale<CategoryType: Equatable, OutputType: ConvertibleWithDoub
     }
 
     // configure w/ range and get attributes
-    func width(from: OutputType, to: OutputType) -> Double? {
-        precondition(from < to)
+    // NOTE(heckj): Is this method even useful?
+    public func width(from: OutputType, to: OutputType) -> Double? {
+        precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
         let reconfiguredScale = type(of: self).init(domain: domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, from: from, to: to)
         return reconfiguredScale.width()
     }
 
-    func step(from: OutputType, to: OutputType) -> Double? {
-        precondition(from < to)
+    // NOTE(heckj): Is this method even useful?
+    public func step(from: OutputType, to: OutputType) -> Double? {
+        precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
         let reconfiguredScale = type(of: self).init(domain: domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, from: from, to: to)
         return reconfiguredScale.step()
     }
 
     // only functional when range is fully configured
-    func scale(_ value: CategoryType) -> Band<CategoryType, OutputType>? {
+    public func scale(_ value: CategoryType) -> Band<CategoryType, OutputType>? {
         if let x = domain.firstIndex(of: value), let step = step(), let width = width() {
             let doublePosition = Double(x)
             let startLocation = paddingInner.toDouble() + (doublePosition * step)
@@ -124,31 +138,36 @@ public struct BandScale<CategoryType: Equatable, OutputType: ConvertibleWithDoub
     }
 
     // configure with range and use new scale
-    func scale(_ value: CategoryType, from: OutputType, to: OutputType) -> Band<CategoryType, OutputType>? {
-        precondition(from < to)
+    public func scale(_ value: CategoryType, from: OutputType, to: OutputType) -> Band<CategoryType, OutputType>? {
+        precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
         let reconfiguredScale = type(of: self).init(domain: domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, from: from, to: to)
         return reconfiguredScale.scale(value)
     }
 
     // only functional when range is fully configured
-    func invert(at: OutputType) -> CategoryType? {
+    public func invert(at: OutputType) -> CategoryType? {
         guard let step = step(), let from = from else {
+            // insufficiently configured, dump and run
             return nil
         }
         if at < paddingOuter || at > from - paddingOuter {
+            // fast-fail for any location outside of bands
             return nil
         }
-        let x = (at.toDouble() - paddingOuter.toDouble()) / step
-        let closestIndex = Int(x.rounded())
-        if closestIndex < domain.count {
-            return domain[closestIndex]
+        // calculate the closest index
+        let closestIndex = Int(((at.toDouble() - paddingOuter.toDouble()) / step).rounded())
+        if let band = scale(domain[closestIndex]) {
+            // Get the band for the item at that index and check to see if `at` is within its bounds.
+            if at >= band.start, at <= band.stop {
+                return band.value
+            }
         }
         return nil
     }
 
     // configure with range and use new invert
-    func invert(at: OutputType, from: OutputType, to: OutputType) -> CategoryType? {
-        precondition(from < to)
+    public func invert(at: OutputType, from: OutputType, to: OutputType) -> CategoryType? {
+        precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
         let reconfiguredScale = type(of: self).init(domain: domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, from: from, to: to)
         return reconfiguredScale.invert(at: at)
     }
