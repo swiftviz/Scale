@@ -36,10 +36,23 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
         self.desiredTicks = desiredTicks
     }
 
+    /// Creates a new linear scale for the upper and lower bounds of the domain range you provide.
+    /// - Parameters:
+    ///   - range: A range that represents the scale's domain.
+    ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
+    ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init(_ range: ClosedRange<InputType>, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
         self.init(from: range.lowerBound, to: range.upperBound, transform: transform, desiredTicks: desiredTicks)
     }
 
+    /// Creates a new power scale for the domain of `0` to the value you provide.
+    ///
+    /// If the value you provide is less than `0`, the domain of the scale ranges from the value you provide to `0`.
+    /// If the value you provide is greater than `0`, the domain of the scale ranges from `0` to the value you provide.
+    /// - Parameters:
+    ///   - single: The upper, or lower, bound for the domain.
+    ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
+    ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init(_ single: InputType, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
         if single > 0 {
             self.init(from: 0, to: single, transform: transform, desiredTicks: desiredTicks)

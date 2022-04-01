@@ -42,6 +42,11 @@ public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType:
         self.desiredTicks = desiredTicks
     }
 
+    /// Creates a new logarithmic scale for the upper and lower bounds of the domain range you provide.
+    /// - Parameters:
+    ///   - range: The range of the scale's domain.
+    ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
+    ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init(_ range: ClosedRange<InputType>, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
         self.init(from: range.lowerBound, to: range.upperBound, transform: transform, desiredTicks: desiredTicks)
     }
