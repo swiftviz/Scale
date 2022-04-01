@@ -16,6 +16,11 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
     /// are constrained to the input domain.
     public var transformType: DomainDataTransform
 
+    /// A Boolean value that indicates the scale was configured without an explicit domain.
+    ///
+    /// Use `something` to create a new scale with an explicit domain while keeping the same ``transformType``.
+    public let defaultDomain: Bool
+
     /// The number of ticks desired when creating the scale.
     ///
     /// This number may not match the number of ticks returned by ``TickScale/tickValues(_:from:to:)``
@@ -34,6 +39,7 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
         domainHigher = higher
         domainExtent = higher - lower
         self.desiredTicks = desiredTicks
+        defaultDomain = false
     }
 
     /// Creates a new linear scale for the upper and lower bounds of the domain range you provide.
@@ -61,7 +67,14 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
         }
     }
 
-    // MARK: - Double
+    /// Returns a new scale with the domain set to the values you provide.
+    /// - Parameters:
+    ///   - lower: The lower bound for the scale's domain.
+    ///   - higher: The upper bound for the scale's domain.
+    /// - Returns: A replica of the scale, preserving ``transformType`` while applying new domain values.
+    public func withDomain(lower: InputType, higher: InputType) -> LinearScale<InputType, OutputType> {
+        type(of: self).init(from: lower, to: higher, transform: transformType, desiredTicks: desiredTicks)
+    }
 
     /// Transforms the input value using a linear function to the resulting value into the range you provide.
     ///
