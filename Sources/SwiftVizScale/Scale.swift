@@ -51,6 +51,11 @@ public protocol Scale {
     /// are constrained to the input domain.
     var transformType: DomainDataTransform { get }
 
+    /// A Boolean value that indicates the scale was configured without an explicit domain.
+    ///
+    /// Use `something` to create a new scale with an explicit domain while keeping the same ``transformType``.
+    var defaultDomain: Bool { get }
+
     /// The lower bound of the input domain.
     var domainLower: InputType { get }
     /// The upper bound of the input domain.
@@ -63,6 +68,13 @@ public protocol Scale {
     /// - Returns: `true` if the value is between the lower and upper domain values.
     func domainContains(_ value: InputType) -> Bool
 
+    /// Returns a new scale with the domain set to the values you provide.
+    /// - Parameters:
+    ///   - lower: The lower bound for the scale's domain.
+    ///   - higher: The upper bound for the scale's domain.
+    /// - Returns: A replica of the scale, preserving ``transformType`` while applying new domain values.
+    func withDomain(lower: InputType, higher: InputType) -> Self
+
     /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
     ///
     /// Before scaling the value, the scale may transform or drop the value based on the setting of ``Scale/transformType``.
@@ -70,7 +82,7 @@ public protocol Scale {
     /// - Parameter inputValue: The value to be scaled.
     /// - Parameter from: The lower bounding value of the range to transform to.
     /// - Parameter to: The higher bounding value of the range to transform to.
-    /// - Returns: a value within the bounds of the range values you provide, or `nil` if the value was dropped.
+    /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
     func scale(_ domainValue: InputType, from: OutputType, to: OutputType) -> OutputType?
 
     /// Converts back from the output _range_ to a value within the input _domain_.
@@ -81,7 +93,7 @@ public protocol Scale {
     /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
     /// - Parameter from: The lower bounding value of the range to transform from.
     /// - Parameter to: The higher bounding value of the range to transform from.
-    /// - Returns: a value within the bounds of the range values you provide, or `nil` if the value was dropped.
+    /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
     func invert(_ rangeValue: OutputType, from: OutputType, to: OutputType) -> InputType?
 }
 
