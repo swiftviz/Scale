@@ -42,6 +42,17 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
         defaultDomain = false
     }
 
+    /// Creates a new linear scale with a default domain.
+    ///
+    /// The default domain for the scale is `0.0...1.0`.
+    /// Use this method to create a placeholder scale that you can refine to a fully configured scale with an updated domain using ``withDomain(lower:higher:)``.
+    /// - Parameters:
+    ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
+    ///   - desiredTicks: The desired number of ticks when visually representing the scale.
+    public init(exponent: Double = 1, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
+        self.init(from: 0, to: 1, transform: transform, desiredTicks: desiredTicks)
+    }
+
     /// Creates a new linear scale for the upper and lower bounds of the domain range you provide.
     /// - Parameters:
     ///   - range: A range that represents the scale's domain.
