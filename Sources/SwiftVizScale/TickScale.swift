@@ -9,7 +9,7 @@ import Foundation
 import Numerics
 
 /// A type of scale that provides tick values from the domain it represents.
-public protocol TickScale: Scale {
+public protocol TickScale: ContinuousScale {
     /// The number of ticks desired when creating the scale.
     ///
     /// This number may not match the number of ticks returned by ``TickScale/tickValues(_:from:to:)``
