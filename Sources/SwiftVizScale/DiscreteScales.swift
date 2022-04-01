@@ -160,13 +160,13 @@ public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDoubl
             // insufficiently configured, dump and run
             return nil
         }
-        if (location < paddingOuter ) || (location > (upperRange - paddingOuter)) {
+        if (location < paddingOuter) || (location > (upperRange - paddingOuter)) {
             // fast-fail for any location outside of bands
             return nil
         }
         // calculate the closest index
         let rangeExtentWithoutOuterPadding = upperRange.toDouble() - lowerRange.toDouble() - 2 * paddingOuter.toDouble()
-        let unitRangeValue = (location.toDouble() - paddingOuter.toDouble())/rangeExtentWithoutOuterPadding
+        let unitRangeValue = (location.toDouble() - paddingOuter.toDouble()) / rangeExtentWithoutOuterPadding
         let rangeValueExpandedToCountDomain = unitRangeValue * Double(domain.count - 1)
 //        print(rangeValueExpandedToCountDomain.rounded())
         let closestIndex = Int(rangeValueExpandedToCountDomain.rounded())
