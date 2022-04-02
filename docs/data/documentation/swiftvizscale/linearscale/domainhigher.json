@@ -106,7 +106,9 @@
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/domainLower",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/domainExtent",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/transformType",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/desiredTicks"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/desiredTicks",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/rangeHigher",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/rangeLower"
       ],
       "title" : "Inspecting Scales"
     }
@@ -321,10 +323,92 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/linearscale\/domainlower"
 },
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/rangeHigher": {
+  "abstract" : [
+    {
+      "text" : "The upper bound of the input domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/rangeHigher",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "rangeHigher",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/linearscale\/rangehigher"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/rangeLower": {
+  "abstract" : [
+    {
+      "text" : "The lower bound of the input domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/rangeLower",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "rangeLower",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/linearscale\/rangelower"
+},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/transformType": {
   "abstract" : [
     {
-      "text" : "A boolean value that indicates whether the output vales are constrained to the min and max of the output range.",
+      "text" : "A transformation value that indicates whether the output vales are constrained to the min and max of the output range.",
       "type" : "text"
     }
   ],

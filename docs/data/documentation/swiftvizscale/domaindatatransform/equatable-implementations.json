@@ -9,7 +9,6 @@
     "paths" : [
       [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform"
       ]
     ]
@@ -76,7 +75,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform": {
   "abstract" : [
     {
-      "text" : "A collection of methods for dealing with data transformation when displaying against a scale.",
+      "text" : "A value that represents how a scale handles data transformation that exceed the domain or range of the scale.",
       "type" : "text"
     }
   ],
@@ -168,66 +167,6 @@
   "title" : "!=(_:_:)",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/domaindatatransform\/!=(_:_:)"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale": {
-  "abstract" : [
-    {
-      "text" : "A type that maps values from an input ",
-      "type" : "text"
-    },
-    {
-      "inlineContent" : [
-        {
-          "text" : "domain",
-          "type" : "text"
-        }
-      ],
-      "type" : "emphasis"
-    },
-    {
-      "text" : " to an output ",
-      "type" : "text"
-    },
-    {
-      "inlineContent" : [
-        {
-          "text" : "range",
-          "type" : "text"
-        }
-      ],
-      "type" : "emphasis"
-    },
-    {
-      "text" : ".",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "protocol"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "Scale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "Scale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "Scale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/scale"
 }
 }
 }

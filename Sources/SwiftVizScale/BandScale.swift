@@ -18,15 +18,15 @@ import Foundation
 // - https://github.com/d3/d3-scale#band-scales
 // - https://observablehq.com/@d3/d3-scaleband
 
-/// A type that maps values from a discrete _domain_ to a band within a continuous output _range_.
+/// A discrete scale that maps from a discrete value within a collection to a band within a continuous output _range_.
 ///
 /// Band scales are useful for bar charts, calculating explicit bands with optional spacing to align with elements of a collection.
 /// If you mapping discrete data into a scatter plot, consider using the ``PointScale`` instead.
 public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDouble> {
     /// The lower value of the range into which the discrete values map.
-    public let from: OutputType?
+    public let rangeLower: OutputType?
     /// The upper value of the range into which the discrete values map.
-    public let to: OutputType?
+    public let rangeHigher: OutputType?
     /// A Boolean value that indicates the scaled values are returned as rounded values.
     public let round: Bool
     /// The amount of padding between bands.
@@ -51,17 +51,17 @@ public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDoubl
         self.domain = domain
         if let from = from, let to = to {
             precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
-            self.from = from
-            self.to = to
+            rangeLower = from
+            rangeHigher = to
         } else {
-            self.from = nil
-            self.to = nil
+            rangeLower = nil
+            rangeHigher = nil
         }
     }
 
     // testing function only - verifies the scale is fully configured
     internal func fullyConfigured() -> Bool {
-        from != nil && to != nil && domain.count > 0
+        rangeLower != nil && rangeHigher != nil && domain.count > 0
     }
 
     // - MARK: Modifier style update functions
@@ -71,25 +71,25 @@ public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDoubl
     /// Returns a new scale with the domain set to the values you provide.
     /// - Parameter domain: An array of the types the scale maps into.
     public func domain(_ domain: [CategoryType]) -> Self {
-        type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, from: from, to: to)
+        type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, from: rangeLower, to: rangeHigher)
     }
 
     /// Returns a new scale with the rounding set to the value you provide.
     /// - Parameter newRound: A Boolean value that indicates the scaled values are returned as rounded values.
     public func round(_ newRound: Bool) -> Self {
-        type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: newRound, from: from, to: to)
+        type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: newRound, from: rangeLower, to: rangeHigher)
     }
 
     /// Returns a new scale with the inner padding set to the value you provide.
     /// - Parameter newPaddingInner: The amount of padding between bands.
     public func paddingInner(_ newPaddingInner: OutputType) -> Self {
-        type(of: self).init(domain, paddingInner: newPaddingInner, paddingOuter: paddingOuter, round: round, from: from, to: to)
+        type(of: self).init(domain, paddingInner: newPaddingInner, paddingOuter: paddingOuter, round: round, from: rangeLower, to: rangeHigher)
     }
 
     /// Returns a new scale with the outer padding set to the value you provide.
     /// - Parameter newPaddingOuter: The amount of padding outside of the bands.
     public func paddingOuter(_ newPaddingOuter: OutputType) -> Self {
-        type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: newPaddingOuter, round: round, from: from, to: to)
+        type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: newPaddingOuter, round: round, from: rangeLower, to: rangeHigher)
     }
 
     /// Returns a new scale with the range set to the values you provide.
@@ -111,7 +111,7 @@ public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDoubl
     // attributes of the scale when fully configured
 
     internal func width() -> Double? {
-        guard let from = from, let to = to else {
+        guard let from = rangeLower, let to = rangeHigher else {
             return nil
         }
         if domain.isEmpty {
@@ -180,7 +180,7 @@ public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDoubl
     /// - Parameter location: A value within the range of the scale.
     /// - Returns: The item that matches at that value, or nil if the point is within padding or outside the range of the scale.
     public func invert(from location: OutputType) -> CategoryType? {
-        guard let upperRange = to, let lowerRange = from else {
+        guard let upperRange = rangeHigher, let lowerRange = rangeLower else {
             // insufficiently configured, dump and run
             return nil
         }

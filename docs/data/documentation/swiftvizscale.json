@@ -57,16 +57,23 @@
               "type" : "text"
             },
             {
-              "text" : "The ",
+              "text" : "Continuous scales map from one continuous range to another, such as ",
               "type" : "text"
             },
             {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale",
-              "isActive" : true,
-              "type" : "reference"
+              "code" : "0...10",
+              "type" : "codeVoice"
             },
             {
-              "text" : " protocol defines the common set of functions required.",
+              "text" : " to ",
+              "type" : "text"
+            },
+            {
+              "code" : "5.0...36.0",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
               "type" : "text"
             },
             {
@@ -74,7 +81,15 @@
               "type" : "text"
             },
             {
-              "text" : "Concrete scales that map linearly and logrithmicly are provided, with convenience methods to create them on the enumerations that host the collections mapping to different underlying types.",
+              "text" : "The continuous scales include scales that support linear, logarithmic, and exponential visualization transforms.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Discrete scales map from a discrete range, defined by a collection, to a continuous range, as a point or as a band, with spacing considered in the scale’s range.",
               "type" : "text"
             }
           ],
@@ -112,11 +127,17 @@
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/NiceValue",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ConvertibleWithDouble"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale"
       ],
-      "title" : "Scales"
+      "title" : "Continuous Scales"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Band",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale"
+      ],
+      "title" : "Discrete Scales"
     },
     {
       "identifiers" : [
@@ -124,6 +145,14 @@
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale"
       ],
       "title" : "Ticks"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/NiceValue",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ConvertibleWithDouble"
+      ],
+      "title" : "Supporting Types"
     }
   ],
   "variants" : [
@@ -153,6 +182,147 @@
   "title" : "SwiftVizScale",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Band": {
+  "abstract" : [
+    {
+      "text" : "A type used to indicate the start and stop positions for a band associated with the provided value.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Band"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Band",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Band"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Band",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/band"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale": {
+  "abstract" : [
+    {
+      "text" : "A discrete scale that maps from a discrete value within a collection to a band within a continuous output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BandScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BandScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "BandScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/bandscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale": {
+  "abstract" : [
+    {
+      "text" : "A type that maps values from an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ContinuousScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ContinuousScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ContinuousScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ConvertibleWithDouble": {
   "abstract" : [
@@ -187,6 +357,40 @@
   "title" : "ConvertibleWithDouble",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/convertiblewithdouble"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform": {
+  "abstract" : [
+    {
+      "text" : "A value that represents how a scale handles data transformation that exceed the domain or range of the scale.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DomainDataTransform"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DomainDataTransform"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DomainDataTransform",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/domaindatatransform"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale": {
   "abstract" : [
@@ -290,6 +494,53 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/nicevalue"
 },
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale": {
+  "abstract" : [
+    {
+      "text" : "A discrete scale that maps from a discrete value within a collection to a point within a continuous output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PointScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PointScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PointScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale"
+},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale": {
   "abstract" : [
     {
@@ -323,66 +574,6 @@
   "title" : "PowerScale",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/powerscale"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale": {
-  "abstract" : [
-    {
-      "text" : "A type that maps values from an input ",
-      "type" : "text"
-    },
-    {
-      "inlineContent" : [
-        {
-          "text" : "domain",
-          "type" : "text"
-        }
-      ],
-      "type" : "emphasis"
-    },
-    {
-      "text" : " to an output ",
-      "type" : "text"
-    },
-    {
-      "inlineContent" : [
-        {
-          "text" : "range",
-          "type" : "text"
-        }
-      ],
-      "type" : "emphasis"
-    },
-    {
-      "text" : ".",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "protocol"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "Scale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "Scale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "Scale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/scale"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick": {
   "abstract" : [

@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "No overview available.",
+      "text" : "The exponent value of the scale.",
       "type" : "text"
     }
   ],
@@ -99,6 +99,21 @@
   "sections" : [
 
   ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/domainLower",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/domainHigher",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/domainExtent",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/transformType",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/desiredTicks",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/rangeHigher",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/rangeLower"
+      ],
+      "title" : "Inspecting Scales"
+    }
+  ],
   "variants" : [
     {
       "paths" : [
@@ -161,9 +176,160 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/powerscale"
 },
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/desiredTicks": {
+  "abstract" : [
+    {
+      "text" : "The number of ticks desired when creating the scale.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "desiredTicks"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/desiredTicks",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "desiredTicks",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/desiredticks"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/domainExtent": {
+  "abstract" : [
+    {
+      "text" : "The distance or length between the upper and lower bounds of the input domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domainExtent"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V9InputTypexmfp",
+      "text" : "InputType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/domainExtent",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domainExtent",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/domainextent"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/domainHigher": {
+  "abstract" : [
+    {
+      "text" : "The upper bound of the input domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domainHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V9InputTypexmfp",
+      "text" : "InputType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/domainHigher",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domainHigher",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/domainhigher"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/domainLower": {
+  "abstract" : [
+    {
+      "text" : "The lower bound of the input domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domainLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V9InputTypexmfp",
+      "text" : "InputType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/domainLower",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domainLower",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/domainlower"
+},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/exponent": {
   "abstract" : [
-
+    {
+      "text" : "The exponent value of the scale.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -194,6 +360,125 @@
   "title" : "exponent",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/powerscale\/exponent"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/rangeHigher": {
+  "abstract" : [
+    {
+      "text" : "The upper bound of the input domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/rangeHigher",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "rangeHigher",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/rangehigher"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/rangeLower": {
+  "abstract" : [
+    {
+      "text" : "The lower bound of the input domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/rangeLower",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "rangeLower",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/rangelower"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/transformType": {
+  "abstract" : [
+    {
+      "text" : "A transformation value that indicates whether the output vales are constrained to the min and max of the output range.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "transformType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale19DomainDataTransformO",
+      "text" : "DomainDataTransform"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/transformType",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "transformType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/transformtype"
 }
 }
 }

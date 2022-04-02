@@ -174,13 +174,10 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ConvertibleWithDouble"
       ],
-      "title" : "Scales"
+      "title" : "Supporting Types"
     }
   ],
   "topicSections" : [
@@ -262,17 +259,17 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/convertiblewithdouble"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform": {
   "abstract" : [
     {
-      "text" : "A linear scale for transforming and mapping continuous input values within a domain to output values you provide.",
+      "text" : "A value that represents how a scale handles data transformation that exceed the domain or range of the scale.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "struct"
+      "text" : "enum"
     },
     {
       "kind" : "text",
@@ -280,55 +277,21 @@
     },
     {
       "kind" : "identifier",
-      "text" : "LinearScale"
+      "text" : "DomainDataTransform"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "LinearScale"
+      "text" : "DomainDataTransform"
     }
   ],
   "role" : "symbol",
-  "title" : "LinearScale",
+  "title" : "DomainDataTransform",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/linearscale"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale": {
-  "abstract" : [
-    {
-      "text" : "A logarithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "LogScale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "LogScale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "LogScale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/logscale"
+  "url" : "\/documentation\/swiftvizscale\/domaindatatransform"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/NiceValue": {
   "abstract" : [
@@ -781,100 +744,6 @@
   "title" : "rangeOfNiceValues(min:max:ofSize:)",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/nicevalue\/rangeofnicevalues(min:max:ofsize:)"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale": {
-  "abstract" : [
-    {
-      "text" : "A power scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "PowerScale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "PowerScale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "PowerScale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/powerscale"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale": {
-  "abstract" : [
-    {
-      "text" : "A type that maps values from an input ",
-      "type" : "text"
-    },
-    {
-      "inlineContent" : [
-        {
-          "text" : "domain",
-          "type" : "text"
-        }
-      ],
-      "type" : "emphasis"
-    },
-    {
-      "text" : " to an output ",
-      "type" : "text"
-    },
-    {
-      "inlineContent" : [
-        {
-          "text" : "range",
-          "type" : "text"
-        }
-      ],
-      "type" : "emphasis"
-    },
-    {
-      "text" : ".",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "protocol"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "Scale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "Scale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "Scale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/scale"
 }
 }
 }

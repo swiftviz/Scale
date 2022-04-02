@@ -1,0 +1,707 @@
+{
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the range set to the values you provide.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/range(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:13SwiftVizScale06LinearC0V5rangeyACyxq_GSNyq_GF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V10OutputTypeq_mfp",
+        "text" : "OutputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V",
+        "text" : "LinearScale"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "OutputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ">"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SwiftVizScale"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "range(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "range"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "range"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SN",
+              "text" : "ClosedRange"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V10OutputTypeq_mfp",
+              "text" : "OutputType"
+            },
+            {
+              "kind" : "text",
+              "text" : ">) -> "
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V",
+              "text" : "LinearScale"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "InputType"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "OutputType"
+            },
+            {
+              "kind" : "text",
+              "text" : ">"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A copy of the scale with the range values you provide.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The range to apply as the scale’s range.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "range"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/domain(_:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/domain(lower:higher:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/transform(_:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/range(lower:higher:)"
+      ],
+      "title" : "Updating Scales"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/swiftvizscale\/linearscale\/range(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of components to provide structures that support data visualization.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SwiftVizScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale": {
+  "abstract" : [
+    {
+      "text" : "A linear scale for transforming and mapping continuous input values within a domain to output values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LinearScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LinearScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "LinearScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/linearscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/domain(_:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the domain set to the values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domain"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SN",
+      "text" : "ClosedRange"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V",
+      "text" : "LinearScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/domain(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domain(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/linearscale\/domain(_:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/domain(lower:higher:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the domain set to the values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domain"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "lower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "higher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V",
+      "text" : "LinearScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/domain(lower:higher:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domain(lower:higher:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/linearscale\/domain(lower:higher:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/range(_:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the range set to the values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "range"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SN",
+      "text" : "ClosedRange"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V",
+      "text" : "LinearScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/range(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "range(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/linearscale\/range(_:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/range(lower:higher:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the range set to the values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "range"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "lower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "higher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V",
+      "text" : "LinearScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/range(lower:higher:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "range(lower:higher:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/linearscale\/range(lower:higher:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/transform(_:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the transform set to the value you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "transform"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale19DomainDataTransformO",
+      "text" : "DomainDataTransform"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V",
+      "text" : "LinearScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/transform(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "transform(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/linearscale\/transform(_:)"
+}
+}
+}

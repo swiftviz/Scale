@@ -297,8 +297,10 @@
       "generated" : true,
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/scale(_:to:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/scale(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/invert(_:from:to:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/invert(_:to:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/invert(_:to:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/invert(_:)"
       ],
       "title" : "Converting Values"
     }
@@ -364,6 +366,56 @@
   "title" : "LogScale",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/logscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/invert(_:)": {
+  "abstract" : [
+    {
+      "text" : "Transforms a value within the range into the associated domain value.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "invert"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/invert(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "invert(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/logscale\/invert(_:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/invert(_:from:to:)": {
   "abstract" : [
@@ -475,7 +527,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -492,7 +544,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -501,7 +553,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -515,6 +567,56 @@
   "title" : "invert(_:to:)",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/logscale\/invert(_:to:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/scale(_:)": {
+  "abstract" : [
+    {
+      "text" : "Transforms the input value using a linear function to the resulting value into the range you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "scale"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/scale(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "scale(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/logscale\/scale(_:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/scale(_:from:to:)": {
   "abstract" : [
@@ -634,7 +736,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -651,7 +753,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -660,7 +762,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {

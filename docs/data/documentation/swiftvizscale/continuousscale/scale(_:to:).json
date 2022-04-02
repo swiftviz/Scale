@@ -1,0 +1,591 @@
+{
+  "abstract" : [
+    {
+      "text" : "Converts a value comparing it to the input domain, transforming the value, and mapping it into values between ",
+      "type" : "text"
+    },
+    {
+      "code" : "0",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " and to the upper bound you provide.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/scale(_:to:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "SwiftVizScale",
+    "externalID" : "s:13SwiftVizScale010ContinuousC0PAAE5scale_2to10OutputTypeQzSg05InputH0Qz_AGtF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "scale"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "to"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+        "text" : "OutputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ") -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+        "text" : "OutputType"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SwiftVizScale"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "scale(_:to:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "scale"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "domainValue"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/InputType",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+              "text" : "InputType"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "to"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "upper"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/OutputType",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+              "text" : "OutputType"
+            },
+            {
+              "kind" : "text",
+              "text" : ") -> "
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/OutputType",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+              "text" : "OutputType"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "a value within the bounds of the range values you provide, or ",
+              "type" : "text"
+            },
+            {
+              "code" : "nil",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " if the value was dropped.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The value to be scaled.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "inputValue"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The higher bounding value of the range to transform from.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "to"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "This method is a convenience method that sets the lower value of the range is ",
+              "type" : "text"
+            },
+            {
+              "code" : "0",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Before scaling the value, the scale may transform or drop the value based on the setting of ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/transformType",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/swiftvizscale\/continuousscale\/scale(_:to:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of components to provide structures that support data visualization.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SwiftVizScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale": {
+  "abstract" : [
+    {
+      "text" : "A type that maps values from an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ContinuousScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ContinuousScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ContinuousScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/InputType": {
+  "abstract" : [
+    {
+      "text" : "The type used for the scale’s domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "associatedtype"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : " : "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
+      "text" : "ConvertibleWithDouble"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale9NiceValueP",
+      "text" : "NiceValue"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/InputType",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "InputType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/inputtype"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/OutputType": {
+  "abstract" : [
+    {
+      "text" : "The type used for the scale’s range.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "associatedtype"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : " : "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
+      "text" : "ConvertibleWithDouble"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/OutputType",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "OutputType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/outputtype"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/scale(_:to:)": {
+  "abstract" : [
+    {
+      "text" : "Converts a value comparing it to the input domain, transforming the value, and mapping it into values between ",
+      "type" : "text"
+    },
+    {
+      "code" : "0",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " and to the upper bound you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "scale"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "to"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/scale(_:to:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "scale(_:to:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/scale(_:to:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/transformType": {
+  "abstract" : [
+    {
+      "text" : "A transformation value that indicates whether the output vales are constrained to the min and max of the output range.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "transformType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale19DomainDataTransformO",
+      "text" : "DomainDataTransform"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/transformType",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "transformType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/transformtype"
+}
+}
+}

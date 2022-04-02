@@ -80,7 +80,7 @@ public protocol ContinuousScale {
 
     /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
     ///
-    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``Scale/transformType``.
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
     ///
     /// - Parameter inputValue: The value to be scaled.
     /// - Parameter from: The lower bounding value of the range to transform to.
@@ -90,8 +90,8 @@ public protocol ContinuousScale {
 
     /// Converts back from the output _range_ to a value within the input _domain_.
     ///
-    /// The inverse of ``Scale/scale(_:from:to:)``.
-    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``Scale/transformType``.
+    /// The inverse of ``ContinuousScale/scale(_:from:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
     ///
     /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
     /// - Parameter from: The lower bounding value of the range to transform from.
@@ -103,8 +103,8 @@ public protocol ContinuousScale {
 public extension ContinuousScale {
     /// Processes a value against the scale, potentially constraining or dropping the value.
     ///
-    /// The value is transformed based on the scale's ``Scale/transformType`` setting.
-    /// | ``Scale/transformType`` | transform effect |
+    /// The value is transformed based on the scale's ``ContinuousScale/transformType`` setting.
+    /// | ``ContinuousScale/transformType`` | transform effect |
     /// | ------------------------ | --------- |
     /// | ``DomainDataTransform/none`` | The method doesn't adjusted or drop the value. |
     /// | ``DomainDataTransform/drop`` | Values outside the scale's domain are dropped. |
@@ -142,7 +142,7 @@ public extension ContinuousScale {
     /// Converts a value comparing it to the input domain, transforming the value, and mapping it into values between `0` and to the upper bound you provide.
     ///
     /// This method is a convenience method that sets the lower value of the range is `0`.
-    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``Scale/transformType``.
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
     ///
     /// - Parameter inputValue: The value to be scaled.
     /// - Parameter to: The higher bounding value of the range to transform from.
@@ -154,8 +154,8 @@ public extension ContinuousScale {
     /// Converts a value comparing it to the upper value of a range, mapping it to the input domain, and inverting scale's transform.
     ///
     /// This method is a convenience method that sets the lower value of the range is `0`.
-    /// The inverse of ``Scale/scale(_:to:)``.
-    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``Scale/transformType``.
+    /// The inverse of ``ContinuousScale/scale(_:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
     ///
     /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
     /// - Parameter to: The higher bounding value of the range to transform from.

@@ -22,11 +22,11 @@ public extension TickScale {
     /// Used for manually specifying a series of ticks that you want to have displayed.
     ///
     /// Values presented for display that are *not* within the domain of the scale are dropped.
-    /// Values that scale outside of the range you provide are adjusted based on the setting of ``Scale/transformType``.
+    /// Values that scale outside of the range you provide are adjusted based on the setting of ``ContinuousScale/transformType``.
     /// - Parameter inputValues: an array of values of the Scale's InputType
     /// - Parameter lower: The lower value of the range the scale maps to.
     /// - Parameter higher: The higher value of the range the scale maps to.
-    /// - Returns: A list of tick values validated against the domain, and range based on the setting of ``Scale/transformType``
+    /// - Returns: A list of tick values validated against the domain, and range based on the setting of ``ContinuousScale/transformType``
     func tickValues(_ inputValues: [InputType], from lower: OutputType, to higher: OutputType) -> [Tick<InputType, OutputType>] {
         inputValues.compactMap { inputValue in
             if domainContains(inputValue),

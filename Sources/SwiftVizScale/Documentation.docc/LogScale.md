@@ -2,10 +2,18 @@
 
 ## Topics
 
-### Creating Logrithmic Scales
+### Creating Logarithmic Scales
 
-- ``SwiftVizScale/LogScale/init(from:to:transform:desiredTicks:)``
-- ``SwiftVizScale/LogScale/init(_:transform:desiredTicks:)``
+- ``SwiftVizScale/LogScale/init(from:to:transform:desiredTicks:rangeLower:rangeHigher:)``
+- ``SwiftVizScale/LogScale/init(_:transform:desiredTicks:rangeLower:rangeHigher:)``
+
+### Updating Scales
+
+- ``SwiftVizScale/LogScale/domain(_:)``
+- ``SwiftVizScale/LogScale/domain(lower:higher:)``
+- ``SwiftVizScale/LogScale/transform(_:)``
+- ``SwiftVizScale/LogScale/range(_:)``
+- ``SwiftVizScale/LogScale/range(lower:higher:)``
 
 ### Inspecting Scales
 
@@ -14,13 +22,17 @@
 - ``SwiftVizScale/LogScale/domainExtent``
 - ``SwiftVizScale/LogScale/transformType``
 - ``SwiftVizScale/LogScale/desiredTicks``
+- ``SwiftVizScale/LogScale/rangeHigher``
+- ``SwiftVizScale/LogScale/rangeLower``
 
 ### Converting Values 
 
 - ``SwiftVizScale/LogScale/scale(_:from:to:)``
 - ``SwiftVizScale/LogScale/scale(_:to:)``
+- ``SwiftVizScale/LogScale/scale(_:)``
 - ``SwiftVizScale/LogScale/invert(_:from:to:)``
 - ``SwiftVizScale/LogScale/invert(_:to:)``
+- ``SwiftVizScale/LogScale/invert(_:)``
 
 ### Comparing Values
 

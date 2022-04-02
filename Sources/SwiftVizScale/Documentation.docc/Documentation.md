@@ -6,23 +6,35 @@ A collection of components to provide structures that support data visualization
 
 SwiftViz includes components useful to creating visualizations of data.
 Many such visualizations require mapping from an abstract set of input values to another output value.
-The ``SwiftVizScale/Scale`` protocol defines the common set of functions required. 
-Concrete scales that map linearly and logrithmicly are provided, with convenience methods to create them on the enumerations that host the collections mapping to different underlying types.
+Continuous scales map from one continuous range to another, such as `0...10` to `5.0...36.0`. 
+The continuous scales include scales that support linear, logarithmic, and exponential visualization transforms.
+Discrete scales map from a discrete range, defined by a collection, to a continuous range, as a point or as a band, with spacing considered in the scale's range.
 
 Loosely based on the APIs and the visualization constructs created by Mike Bostock and contributors to [D3.js](https://d3js.org)
 
 ## Topics
 
-### Scales
+### Continuous Scales
 
 - ``SwiftVizScale/LinearScale``
 - ``SwiftVizScale/LogScale``
 - ``SwiftVizScale/PowerScale``
-- ``SwiftVizScale/Scale``
-- ``SwiftVizScale/NiceValue``
-- ``SwiftVizScale/ConvertibleWithDouble``
+- ``SwiftVizScale/ContinuousScale``
+
+### Discrete Scales
+
+- ``SwiftVizScale/BandScale``
+- ``SwiftVizScale/Band``
+- ``SwiftVizScale/PointScale``
 
 ### Ticks
 
 - ``SwiftVizScale/Tick``
 - ``SwiftVizScale/TickScale``
+
+### Supporting Types
+
+- ``SwiftVizScale/DomainDataTransform``
+- ``SwiftVizScale/NiceValue``
+- ``SwiftVizScale/ConvertibleWithDouble``
+
