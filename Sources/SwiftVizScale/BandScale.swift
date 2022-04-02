@@ -23,11 +23,17 @@ import Foundation
 /// Band scales are useful for bar charts, calculating explicit bands with optional spacing to align with elements of a collection.
 /// If you mapping discrete data into a scatter plot, consider using the ``PointScale`` instead.
 public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDouble> {
+    /// The lower value of the range into which the discrete values map.
     public let from: OutputType?
+    /// The upper value of the range into which the discrete values map.
     public let to: OutputType?
+    /// A Boolean value that indicates the scaled values are returned as rounded values.
     public let round: Bool
+    /// The amount of padding between bands.
     public let paddingInner: OutputType
+    /// The amount of padding outside of the bands.
     public let paddingOuter: OutputType
+    /// An array of the types the scale maps into.
     public let domain: [CategoryType]
 
     /// Creates a new band scale.
@@ -142,20 +148,20 @@ public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDoubl
     /// - Parameter value: A discrete item from the list provided as the domain for the scale.
     /// - Returns: A band that wraps the category found in the domain with start and end values for the range of the band, or `nil` if the value isn't contained by the domain.
     public func scale(_ value: CategoryType) -> Band<CategoryType, OutputType>? {
-        if let x = domain.firstIndex(of: value), let step = step(), let width = width() {
-            if width <= 0 {
-                // when there's more padding than available space for the categories
-                return nil
-            }
-            let doublePosition = Double(x) // 1
-            let startLocation = paddingOuter.toDouble() + (doublePosition * step)
-            let stopLocation = startLocation + width
-            if round {
-                return Band(lower: OutputType.fromDouble(startLocation.rounded()), higher: OutputType.fromDouble(stopLocation.rounded()), value: value)
-            }
-            return Band(lower: OutputType.fromDouble(startLocation), higher: OutputType.fromDouble(stopLocation), value: value)
+        guard let index = domain.firstIndex(of: value), let step = step(), let width = width() else {
+            return nil
         }
-        return nil
+        if width <= 0 {
+            // when there's more padding than available space for the categories
+            return nil
+        }
+        let doublePosition = Double(index) // 1
+        let startLocation = paddingOuter.toDouble() + (doublePosition * step)
+        let stopLocation = startLocation + width
+        if round {
+            return Band(lower: OutputType.fromDouble(startLocation.rounded()), higher: OutputType.fromDouble(stopLocation.rounded()), value: value)
+        }
+        return Band(lower: OutputType.fromDouble(startLocation), higher: OutputType.fromDouble(stopLocation), value: value)
     }
 
     /// Maps the discrete item into a band with the range values you provide..
@@ -173,7 +179,7 @@ public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDoubl
     /// Maps the value from the range back to the discrete value that it matches.
     /// - Parameter location: A value within the range of the scale.
     /// - Returns: The item that matches at that value, or nil if the point is within padding or outside the range of the scale.
-    public func invert(at location: OutputType) -> CategoryType? {
+    public func invert(from location: OutputType) -> CategoryType? {
         guard let upperRange = to, let lowerRange = from else {
             // insufficiently configured, dump and run
             return nil
@@ -207,10 +213,10 @@ public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDoubl
     ///   - from: The lower value of the range into which the discrete values map.
     ///   - to: The upper value of the range into which the discrete values map.
     /// - Returns: The item that matches at that value, or nil if the point is within padding or outside the range of the scale.
-    public func invert(at: OutputType, from: OutputType, to: OutputType) -> CategoryType? {
+    public func invert(from location: OutputType, from: OutputType, to: OutputType) -> CategoryType? {
         precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
         let reconfiguredScale = type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, from: from, to: to)
-        return reconfiguredScale.invert(at: at)
+        return reconfiguredScale.invert(from: location)
     }
 }
 
@@ -219,38 +225,4 @@ public struct Band<EnclosedType, RangeType> {
     public let lower: RangeType
     public let higher: RangeType
     public let value: EnclosedType
-}
-
-// - https://github.com/d3/d3-scale#point-scales
-// - https://github.com/pshrmn/notes/blob/master/d3/scales.md#point-scales
-// - https://observablehq.com/@d3/d3-scalepoint
-
-/// A type that maps values from a discrete _domain_ to a point within a continuous output _range_.
-///
-/// Point scales are useful for mapping discrete data from a collection to a collection of specific points.
-/// If you are rendering a bar chart, consider using the ``BandScale`` instead.
-public protocol PointScale {
-    /// The type used for the scale's domain.
-    associatedtype InputType: Collection
-    /// The type used for the scale's range.
-    associatedtype OutputType: ConvertibleWithDouble
-
-    var round: Bool { get }
-    var padding: OutputType { get }
-    // effectively 'modifier' functions that return a new version of a scale
-    func round(_: Bool) -> Self
-    func padding(_: OutputType) -> Self
-
-    var range: ClosedRange<OutputType>? { get }
-    func range(from: OutputType, to: OutputType) -> Self //  -> something with step and width?
-
-    func step() -> OutputType?
-    func step(from: OutputType, to: OutputType) -> OutputType
-    // return a step
-    // configure with a `paddingOuter` (no `paddingInner`)
-    // configure with `round` (rounds range value to nearest integer)
-
-    func scale(_: InputType.Element, from: OutputType, to: OutputType) -> OutputType
-    func scale(_: InputType.Element) -> OutputType?
-    func invert(from: OutputType) -> InputType.Element?
 }
