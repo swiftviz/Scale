@@ -224,4 +224,58 @@ class LogScaleTests: XCTestCase {
         XCTAssertEqual(scale.invert(-50, from: testRange.lowerBound, to: testRange.upperBound), 0.1)
         XCTAssertEqual(clampedScale.invert(-50, from: testRange.lowerBound, to: testRange.upperBound), 1.0)
     }
+
+    func testDomainModifier() {
+        let scale = LogScale<Double, Float>()
+        XCTAssertEqual(1, scale.domainLower)
+        XCTAssertEqual(10, scale.domainHigher)
+        XCTAssertNil(scale.rangeLower)
+        XCTAssertNil(scale.rangeHigher)
+
+        let updated = scale.domain(lower: 10, higher: 100)
+        XCTAssertEqual(10, updated.domainLower)
+        XCTAssertEqual(100, updated.domainHigher)
+    }
+
+    func testDomain2Modifier() {
+        let scale = LogScale<Double, Float>()
+        XCTAssertEqual(1, scale.domainLower)
+        XCTAssertEqual(10, scale.domainHigher)
+        XCTAssertNil(scale.rangeLower)
+        XCTAssertNil(scale.rangeHigher)
+
+        let updated = scale.domain(10 ... 100)
+        XCTAssertEqual(10, updated.domainLower)
+        XCTAssertEqual(100, updated.domainHigher)
+    }
+
+    func testRangeModifier() {
+        let scale = LogScale<Double, Float>()
+        XCTAssertNil(scale.rangeLower)
+        XCTAssertNil(scale.rangeHigher)
+
+        let updated = scale.range(10 ... 100)
+        XCTAssertEqual(10, updated.rangeLower)
+        XCTAssertEqual(100, updated.rangeHigher)
+        XCTAssertTrue(updated.fullyConfigured())
+    }
+
+    func testRange2Modifier() {
+        let scale = LogScale<Double, Float>()
+        XCTAssertNil(scale.rangeLower)
+        XCTAssertNil(scale.rangeHigher)
+
+        let updated = scale.range(lower: 10, higher: 100)
+        XCTAssertEqual(10, updated.rangeLower)
+        XCTAssertEqual(100, updated.rangeHigher)
+        XCTAssertTrue(updated.fullyConfigured())
+    }
+
+    func testTransformModifier() {
+        let scale = LogScale<Double, Float>()
+        XCTAssertEqual(scale.transformType, DomainDataTransform.none)
+
+        let updated = scale.transform(.clamp)
+        XCTAssertEqual(updated.transformType, DomainDataTransform.clamp)
+    }
 }
