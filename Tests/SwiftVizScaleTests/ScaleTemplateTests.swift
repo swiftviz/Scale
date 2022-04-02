@@ -6,40 +6,40 @@
 //
 
 import Foundation
-import SwiftVizScale
+@testable import SwiftVizScale
 import XCTest
 
 class ScaleTemplateTests: XCTestCase {
     func testDefaultInitializers() throws {
         let linear = LinearScale<Double, CGFloat>()
-        XCTAssertEqual(linear.defaultDomain, true)
+        XCTAssertFalse(linear.fullyConfigured())
 
         let log = LogScale<Double, CGFloat>()
-        XCTAssertEqual(log.defaultDomain, true)
+        XCTAssertFalse(log.fullyConfigured())
 
         let power = PowerScale<Double, CGFloat>()
-        XCTAssertEqual(power.defaultDomain, true)
+        XCTAssertFalse(power.fullyConfigured())
     }
 
     func testFullyConfiguratedInitializers() throws {
         let linear = LinearScale<Double, CGFloat>(from: 0, to: 1)
-        XCTAssertEqual(linear.defaultDomain, false)
+        XCTAssertFalse(linear.fullyConfigured())
 
         let log = LogScale<Double, CGFloat>(from: 1, to: 10)
-        XCTAssertEqual(log.defaultDomain, false)
+        XCTAssertFalse(log.fullyConfigured())
 
         let power = PowerScale<Double, CGFloat>(from: 0, to: 1)
-        XCTAssertEqual(power.defaultDomain, false)
+        XCTAssertFalse(power.fullyConfigured())
     }
 
     func testRefineScaleTemplate() throws {
-        let linear = LinearScale<Double, CGFloat>().withDomain(lower: 0, higher: 1)
-        XCTAssertEqual(linear.defaultDomain, false)
+        let linear = LinearScale<Double, CGFloat>().range(lower: 0, higher: 1)
+        XCTAssertTrue(linear.fullyConfigured())
 
-        let log = LogScale<Double, CGFloat>().withDomain(lower: 1, higher: 10)
-        XCTAssertEqual(log.defaultDomain, false)
+        let log = LogScale<Double, CGFloat>().range(lower: 1, higher: 10)
+        XCTAssertTrue(log.fullyConfigured())
 
-        let power = PowerScale<Double, CGFloat>().withDomain(lower: 0, higher: 1)
-        XCTAssertEqual(power.defaultDomain, false)
+        let power = PowerScale<Double, CGFloat>().range(lower: 0, higher: 1)
+        XCTAssertTrue(power.fullyConfigured())
     }
 }

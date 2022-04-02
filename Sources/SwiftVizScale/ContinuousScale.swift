@@ -44,11 +44,6 @@ public protocol ContinuousScale {
     /// are constrained to the input domain.
     var transformType: DomainDataTransform { get }
 
-    /// A Boolean value that indicates the scale was configured without an explicit domain.
-    ///
-    /// Use `something` to create a new scale with an explicit domain while keeping the same ``transformType``.
-    var defaultDomain: Bool { get }
-
     /// The lower bound of the input domain.
     var domainLower: InputType { get }
     /// The upper bound of the input domain.
@@ -61,12 +56,27 @@ public protocol ContinuousScale {
     /// - Returns: `true` if the value is between the lower and upper domain values.
     func domainContains(_ value: InputType) -> Bool
 
+    // modifier functions
+
     /// Returns a new scale with the domain set to the values you provide.
     /// - Parameters:
     ///   - lower: The lower bound for the scale's domain.
     ///   - higher: The upper bound for the scale's domain.
-    /// - Returns: A replica of the scale, preserving ``transformType`` while applying new domain values.
-    func withDomain(lower: InputType, higher: InputType) -> Self
+    /// - Returns: A replica of the scale, with new domain values.
+    func domain(lower: InputType, higher: InputType) -> Self
+
+    /// Returns a new scale with the range set to the values you provide.
+    /// - Parameters:
+    ///   - lower: The lower bound for the scale's range.
+    ///   - higher: The upper bound for the scale's range.
+    /// - Returns: A replica of the scale, with new range values.
+    func range(lower: OutputType, higher: OutputType) -> Self
+
+    /// Returns a new scale with the transform set to the value you provide.
+    /// - Parameters:
+    ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
+    /// - Returns: A replica of the scale, updating the ``transformType``.
+    func transform(_ transform: DomainDataTransform) -> Self
 
     /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
     ///
