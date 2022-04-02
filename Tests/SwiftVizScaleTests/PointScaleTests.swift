@@ -135,7 +135,7 @@ class PointScaleTests: XCTestCase {
         let initial = PointScale<String, CGFloat>(["1", "2", "3"], from: 0, to: 100)
         XCTAssertTrue(initial.fullyConfigured())
 
-        let value = initial.invert(from: 15)
+        let value = initial.invert(15)
         XCTAssertNotNil(value)
         XCTAssertEqual(value, "1")
     }
@@ -144,7 +144,7 @@ class PointScaleTests: XCTestCase {
         let initial = PointScale<String, CGFloat>(["1", "2"])
         XCTAssertFalse(initial.fullyConfigured())
 
-        let value = initial.invert(from: 25)
+        let value = initial.invert(25)
         XCTAssertNil(value)
     }
 
@@ -152,7 +152,7 @@ class PointScaleTests: XCTestCase {
         let initial = PointScale<String, CGFloat>(["1", "2"], from: 0, to: 100)
         XCTAssertTrue(initial.fullyConfigured())
 
-        let value = initial.invert(from: -25)
+        let value = initial.invert(-25)
         XCTAssertNil(value)
     }
 

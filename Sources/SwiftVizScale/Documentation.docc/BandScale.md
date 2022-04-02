@@ -26,7 +26,8 @@
 
 ### Converting Values
 
-- ``SwiftVizScale/BandScale/invert(from:)``
-- ``SwiftVizScale/BandScale/invert(from:from:to:)``
+- ``SwiftVizScale/BandScale/invert(_:)-63wv8``
+- ``SwiftVizScale/BandScale/invert(_:)-9z1xu``
+- ``SwiftVizScale/BandScale/invert(_:from:to:)``
 - ``SwiftVizScale/BandScale/scale(_:)``
 - ``SwiftVizScale/BandScale/scale(_:from:to:)``

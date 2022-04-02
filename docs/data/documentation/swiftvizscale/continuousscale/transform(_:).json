@@ -212,7 +212,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale": {
   "abstract" : [
     {
-      "text" : "A type that maps values from an input ",
+      "text" : "A type that maps continuous values from an input ",
       "type" : "text"
     },
     {

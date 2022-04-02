@@ -229,8 +229,9 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/invert(from:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/invert(from:from:to:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/invert(_:)-63wv8",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/invert(_:)-9z1xu",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/invert(_:from:to:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/scale(_:from:to:)"
       ],
       "title" : "Converting Values"
@@ -345,7 +346,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/bandscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/invert(from:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/invert(_:)-63wv8": {
   "abstract" : [
     {
       "text" : "Maps the value from the range back to the discrete value that it matches.",
@@ -370,14 +371,6 @@
       "text" : "("
     },
     {
-      "kind" : "externalParam",
-      "text" : "from"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
       "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:13SwiftVizScale04BandC0V10OutputTypeq_mfp",
       "text" : "OutputType"
@@ -396,14 +389,82 @@
       "text" : "?"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/invert(from:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/invert(_:)-63wv8",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "invert(from:)",
+  "title" : "invert(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/bandscale\/invert(from:)"
+  "url" : "\/documentation\/swiftvizscale\/bandscale\/invert(_:)-63wv8"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/invert(from:from:to:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/invert(_:)-9z1xu": {
+  "abstract" : [
+    {
+      "text" : "Maps a band back to the category it matches.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "invert"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale4BandV",
+      "text" : "Band"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale04BandC0V12CategoryTypexmfp",
+      "text" : "CategoryType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale04BandC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale04BandC0V12CategoryTypexmfp",
+      "text" : "CategoryType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/invert(_:)-9z1xu",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "invert(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/bandscale\/invert(_:)-9z1xu"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/invert(_:from:to:)": {
   "abstract" : [
     {
       "text" : "Maps the value from the range values you provide back to the discrete value that it matches.",
@@ -426,14 +487,6 @@
     {
       "kind" : "text",
       "text" : "("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "from"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
     },
     {
       "kind" : "typeIdentifier",
@@ -488,12 +541,12 @@
       "text" : "?"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/invert(from:from:to:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/invert(_:from:to:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "invert(from:from:to:)",
+  "title" : "invert(_:from:to:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/bandscale\/invert(from:from:to:)"
+  "url" : "\/documentation\/swiftvizscale\/bandscale\/invert(_:from:to:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/scale(_:)": {
   "abstract" : [

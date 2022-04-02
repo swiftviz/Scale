@@ -22,7 +22,7 @@ import Foundation
 ///
 /// Band scales are useful for bar charts, calculating explicit bands with optional spacing to align with elements of a collection.
 /// If you mapping discrete data into a scatter plot, consider using the ``PointScale`` instead.
-public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDouble> {
+public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDouble>: Scale {
     /// The lower value of the range into which the discrete values map.
     public let rangeLower: OutputType?
     /// The upper value of the range into which the discrete values map.
@@ -179,7 +179,7 @@ public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDoubl
     /// Maps the value from the range back to the discrete value that it matches.
     /// - Parameter location: A value within the range of the scale.
     /// - Returns: The item that matches at that value, or nil if the point is within padding or outside the range of the scale.
-    public func invert(from location: OutputType) -> CategoryType? {
+    public func invert(_ location: OutputType) -> CategoryType? {
         guard let upperRange = rangeHigher, let lowerRange = rangeLower else {
             // insufficiently configured, dump and run
             return nil
@@ -207,16 +207,24 @@ public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDoubl
         return nil
     }
 
+    /// Maps a band back to the category it matches.
+    /// - Parameter rangeValue: a band providing a pair of range values.
+    /// - Returns: The category that matches the midpoint of the band values.
+    public func invert(_ rangeValue: Band<CategoryType, OutputType>) -> CategoryType? {
+        let middlePoint = (rangeValue.higher.toDouble() + rangeValue.lower.toDouble()) / 2.0
+        return invert(OutputType.fromDouble(middlePoint))
+    }
+
     /// Maps the value from the range values you provide back to the discrete value that it matches.
     /// - Parameters:
     ///   - at: A value within the range of the scale.
     ///   - from: The lower value of the range into which the discrete values map.
     ///   - to: The upper value of the range into which the discrete values map.
     /// - Returns: The item that matches at that value, or nil if the point is within padding or outside the range of the scale.
-    public func invert(from location: OutputType, from: OutputType, to: OutputType) -> CategoryType? {
+    public func invert(_ location: OutputType, from: OutputType, to: OutputType) -> CategoryType? {
         precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
         let reconfiguredScale = type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, from: from, to: to)
-        return reconfiguredScale.invert(from: location)
+        return reconfiguredScale.invert(location)
     }
 }
 

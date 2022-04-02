@@ -160,6 +160,7 @@
     {
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale"
       ],
       "kind" : "relationships",
@@ -181,7 +182,8 @@
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform"
       ],
       "title" : "Continuous Scales"
     }
@@ -283,7 +285,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale": {
   "abstract" : [
     {
-      "text" : "A type that maps values from an input ",
+      "text" : "A type that maps continuous values from an input ",
       "type" : "text"
     },
     {
@@ -373,6 +375,40 @@
   "title" : "ConvertibleWithDouble",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/convertiblewithdouble"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform": {
+  "abstract" : [
+    {
+      "text" : "A value that represents how a scale handles data transformation that exceed the domain or range of the scale.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DomainDataTransform"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DomainDataTransform"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DomainDataTransform",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/domaindatatransform"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale": {
   "abstract" : [
@@ -693,7 +729,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -1220,7 +1256,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -1237,7 +1273,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -1246,7 +1282,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -1677,7 +1713,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -1694,7 +1730,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -1703,7 +1739,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -1744,7 +1780,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -1761,7 +1797,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -1778,7 +1814,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -1796,7 +1832,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -1805,7 +1841,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -1886,7 +1922,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -1903,7 +1939,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -1921,7 +1957,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -1930,7 +1966,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -2011,7 +2047,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -2028,7 +2064,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -2046,7 +2082,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -2055,7 +2091,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -2136,7 +2172,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -2153,7 +2189,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -2171,7 +2207,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -2180,7 +2216,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -2287,7 +2323,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -2296,7 +2332,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -2415,6 +2451,66 @@
   "title" : "PowerScale",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/powerscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale": {
+  "abstract" : [
+    {
+      "text" : "A type that maps values from an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Scale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Scale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Scale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/scale"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/TickScale": {
   "abstract" : [

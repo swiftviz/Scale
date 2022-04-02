@@ -24,7 +24,7 @@
 
 ### Converting Values
 
-- ``SwiftVizScale/PointScale/invert(from:)``
-- ``SwiftVizScale/PointScale/invert(from:from:to:)``
+- ``SwiftVizScale/PointScale/invert(_:)``
+- ``SwiftVizScale/PointScale/invert(_:from:to:)``
 - ``SwiftVizScale/PointScale/scale(_:)``
 - ``SwiftVizScale/PointScale/scale(_:from:to:)``

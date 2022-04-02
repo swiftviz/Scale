@@ -9,6 +9,10 @@
     "paths" : [
       [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale"
+      ],
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale"
       ]
     ]
   },
@@ -101,10 +105,12 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/NiceValue",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ConvertibleWithDouble"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale"
       ],
-      "title" : "Supporting Types"
+      "title" : "Continuous Scales"
     }
   ],
   "topicSections" : [
@@ -168,10 +174,36 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ConvertibleWithDouble": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale": {
   "abstract" : [
     {
-      "text" : "A type that can be consistently converted to and from a Double.",
+      "text" : "A type that maps continuous values from an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
       "type" : "text"
     }
   ],
@@ -186,21 +218,21 @@
     },
     {
       "kind" : "identifier",
-      "text" : "ConvertibleWithDouble"
+      "text" : "ContinuousScale"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ConvertibleWithDouble",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "ConvertibleWithDouble"
+      "text" : "ContinuousScale"
     }
   ],
   "role" : "symbol",
-  "title" : "ConvertibleWithDouble",
+  "title" : "ContinuousScale",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/convertiblewithdouble"
+  "url" : "\/documentation\/swiftvizscale\/continuousscale"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform": {
   "abstract" : [
@@ -393,17 +425,17 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/domaindatatransform\/none"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/NiceValue": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale": {
   "abstract" : [
     {
-      "text" : "A type that can be converted into an approximate value that is easier to understand.",
+      "text" : "A linear scale for transforming and mapping continuous input values within a domain to output values you provide.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "protocol"
+      "text" : "struct"
     },
     {
       "kind" : "text",
@@ -411,21 +443,89 @@
     },
     {
       "kind" : "identifier",
-      "text" : "NiceValue"
+      "text" : "LinearScale"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/NiceValue",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "NiceValue"
+      "text" : "LinearScale"
     }
   ],
   "role" : "symbol",
-  "title" : "NiceValue",
+  "title" : "LinearScale",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/nicevalue"
+  "url" : "\/documentation\/swiftvizscale\/linearscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale": {
+  "abstract" : [
+    {
+      "text" : "A logarithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LogScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LogScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "LogScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/logscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale": {
+  "abstract" : [
+    {
+      "text" : "A power scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PowerScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PowerScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PowerScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/powerscale"
 }
 }
 }

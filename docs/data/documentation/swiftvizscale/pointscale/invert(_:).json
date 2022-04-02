@@ -15,11 +15,11 @@
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/invert(from:from:to:)"
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/invert(_:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:13SwiftVizScale05PointC0V6invert4fromAE2toxSgq__q_q_tF",
+    "externalID" : "s:13SwiftVizScale05PointC0V6invertyxSgq_F",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -36,48 +36,6 @@
       {
         "kind" : "text",
         "text" : "("
-      },
-      {
-        "kind" : "externalParam",
-        "text" : "from"
-      },
-      {
-        "kind" : "text",
-        "text" : ": "
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
-        "text" : "OutputType"
-      },
-      {
-        "kind" : "text",
-        "text" : ", "
-      },
-      {
-        "kind" : "externalParam",
-        "text" : "from"
-      },
-      {
-        "kind" : "text",
-        "text" : ": "
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
-        "text" : "OutputType"
-      },
-      {
-        "kind" : "text",
-        "text" : ", "
-      },
-      {
-        "kind" : "externalParam",
-        "text" : "to"
-      },
-      {
-        "kind" : "text",
-        "text" : ": "
       },
       {
         "kind" : "typeIdentifier",
@@ -106,7 +64,7 @@
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",
-    "title" : "invert(from:from:to:)"
+    "title" : "invert(_:)"
   },
   "primaryContentSections" : [
     {
@@ -137,7 +95,7 @@
             },
             {
               "kind" : "externalParam",
-              "text" : "from"
+              "text" : "_"
             },
             {
               "kind" : "text",
@@ -146,40 +104,6 @@
             {
               "kind" : "internalParam",
               "text" : "location"
-            },
-            {
-              "kind" : "text",
-              "text" : ": "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
-              "text" : "OutputType"
-            },
-            {
-              "kind" : "text",
-              "text" : ", "
-            },
-            {
-              "kind" : "externalParam",
-              "text" : "from"
-            },
-            {
-              "kind" : "text",
-              "text" : ": "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
-              "text" : "OutputType"
-            },
-            {
-              "kind" : "text",
-              "text" : ", "
-            },
-            {
-              "kind" : "externalParam",
-              "text" : "to"
             },
             {
               "kind" : "text",
@@ -244,34 +168,6 @@
             }
           ],
           "name" : "location"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The lower value of the range into which the discrete values map.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "from"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The upper value of the range into which the discrete values map.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "to"
         }
       ]
     }
@@ -288,7 +184,7 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/invert(from:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/invert(_:from:to:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/scale(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/scale(_:from:to:)"
       ],
@@ -298,7 +194,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/swiftvizscale\/pointscale\/invert(from:from:to:)"
+        "\/documentation\/swiftvizscale\/pointscale\/invert(_:)"
       ],
       "traits" : [
         {
@@ -370,7 +266,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/pointscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/invert(from:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/invert(_:)": {
   "abstract" : [
     {
       "text" : "Maps the value from the range back to the discrete value that it matches.",
@@ -393,14 +289,6 @@
     {
       "kind" : "text",
       "text" : "("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "from"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
     },
     {
       "kind" : "typeIdentifier",
@@ -421,14 +309,14 @@
       "text" : "?"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/invert(from:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/invert(_:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "invert(from:)",
+  "title" : "invert(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/pointscale\/invert(from:)"
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/invert(_:)"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/invert(from:from:to:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/invert(_:from:to:)": {
   "abstract" : [
     {
       "text" : "Maps the value from the range back to the discrete value that it matches.",
@@ -451,14 +339,6 @@
     {
       "kind" : "text",
       "text" : "("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "from"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
     },
     {
       "kind" : "typeIdentifier",
@@ -513,12 +393,12 @@
       "text" : "?"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/invert(from:from:to:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/invert(_:from:to:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "invert(from:from:to:)",
+  "title" : "invert(_:from:to:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/pointscale\/invert(from:from:to:)"
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/invert(_:from:to:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/scale(_:)": {
   "abstract" : [

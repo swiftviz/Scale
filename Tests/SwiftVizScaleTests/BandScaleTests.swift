@@ -162,7 +162,7 @@ class BandScaleTests: XCTestCase {
         let initial = BandScale<String, CGFloat>(["1", "2"], from: 0, to: 100)
         XCTAssertTrue(initial.fullyConfigured())
 
-        let value = initial.invert(from: 25)
+        let value = initial.invert(25)
         XCTAssertNotNil(value)
         XCTAssertEqual(value, "1")
     }
@@ -171,7 +171,7 @@ class BandScaleTests: XCTestCase {
         let initial = BandScale<String, CGFloat>(["1", "2"])
         XCTAssertFalse(initial.fullyConfigured())
 
-        let value = initial.invert(from: 25)
+        let value = initial.invert(25)
         XCTAssertNil(value)
     }
 
@@ -179,7 +179,7 @@ class BandScaleTests: XCTestCase {
         let initial = BandScale<String, CGFloat>(["1", "2"], from: 0, to: 100)
         XCTAssertTrue(initial.fullyConfigured())
 
-        let value = initial.invert(from: -25)
+        let value = initial.invert(-25)
         XCTAssertNil(value)
     }
 
@@ -187,9 +187,9 @@ class BandScaleTests: XCTestCase {
         let initial = BandScale<String, CGFloat>(["1", "2"], paddingInner: 10, paddingOuter: 10)
         XCTAssertFalse(initial.fullyConfigured())
 
-        XCTAssertNil(initial.invert(from: 5, from: 0, to: 100))
+        XCTAssertNil(initial.invert(5, from: 0, to: 100))
 
-        XCTAssertNil(initial.invert(from: 25, from: 0, to: 50))
+        XCTAssertNil(initial.invert(25, from: 0, to: 50))
     }
 
     func testScaleWithExcessivePadding() throws {

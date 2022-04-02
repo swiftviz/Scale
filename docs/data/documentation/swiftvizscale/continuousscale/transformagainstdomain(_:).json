@@ -40,7 +40,7 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+        "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
         "text" : "InputType"
       },
       {
@@ -49,7 +49,7 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+        "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
         "text" : "InputType"
       },
       {
@@ -111,9 +111,9 @@
               "text" : ": "
             },
             {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/InputType",
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+              "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
               "text" : "InputType"
             },
             {
@@ -121,9 +121,9 @@
               "text" : ") -> "
             },
             {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/InputType",
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+              "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
               "text" : "InputType"
             },
             {
@@ -326,6 +326,16 @@
   "sections" : [
 
   ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domainContains(_:)-7ghgo",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domainContains(_:)-8vn1a"
+      ],
+      "title" : "Comparing Values"
+    }
+  ],
   "variants" : [
     {
       "paths" : [
@@ -357,7 +367,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale": {
   "abstract" : [
     {
-      "text" : "A type that maps values from an input ",
+      "text" : "A type that maps continuous values from an input ",
       "type" : "text"
     },
     {
@@ -414,17 +424,17 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/continuousscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/InputType": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/domainContains(_:)-7ghgo": {
   "abstract" : [
     {
-      "text" : "The type used for the scale’s domain.",
+      "text" : "Returns a Boolean value that indicates whether the value you provided is within the scale’s domain.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "associatedtype"
+      "text" : "func"
     },
     {
       "kind" : "text",
@@ -432,34 +442,81 @@
     },
     {
       "kind" : "identifier",
+      "text" : "domainContains"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
       "text" : "InputType"
     },
     {
       "kind" : "text",
-      "text" : " : "
+      "text" : ") -> "
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
-      "text" : "ConvertibleWithDouble"
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domainContains(_:)-7ghgo",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domainContains(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/domaincontains(_:)-7ghgo"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/domainContains(_:)-8vn1a": {
+  "abstract" : [
+    {
+      "text" : "Returns a Boolean value that indicates whether the value you provided is within the scale’s domain.",
+      "type" : "text"
+    }
+  ],
+  "defaultImplementations" : 1,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domainContains"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale9NiceValueP",
-      "text" : "NiceValue"
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/InputType",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domainContains(_:)-8vn1a",
   "kind" : "symbol",
   "required" : true,
   "role" : "symbol",
-  "title" : "InputType",
+  "title" : "domainContains(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/continuousscale\/inputtype"
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/domaincontains(_:)-8vn1a"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/transformAgainstDomain(_:)": {
   "abstract" : [
@@ -487,7 +544,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -496,7 +553,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -632,6 +689,35 @@
   "title" : "DomainDataTransform.none",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/domaindatatransform\/none"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/InputType": {
+  "abstract" : [
+    {
+      "text" : "The type used for the scale’s domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "associatedtype"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "InputType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "InputType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/scale\/inputtype"
 }
 }
 }

@@ -15,7 +15,7 @@ import Foundation
 ///
 /// Point scales are useful for mapping discrete data from a collection to a collection of specific points.
 /// If you are rendering a bar chart, consider using the ``BandScale`` instead.
-public struct PointScale<CategoryType: Hashable, OutputType: ConvertibleWithDouble> {
+public struct PointScale<CategoryType: Hashable, OutputType: ConvertibleWithDouble>: Scale {
     /// The lower value of the range into which the discrete values map.
     public let rangeLower: OutputType?
     /// The upper value of the range into which the discrete values map.
@@ -144,16 +144,16 @@ public struct PointScale<CategoryType: Hashable, OutputType: ConvertibleWithDoub
     ///   - from: The lower value of the range into which the discrete values map.
     ///   - to: The upper value of the range into which the discrete values map.
     /// - Returns: The item that matches at that value, or nil if the point is within padding or outside the range of the scale.
-    public func invert(from location: OutputType, from: OutputType, to: OutputType) -> CategoryType? {
+    public func invert(_ location: OutputType, from: OutputType, to: OutputType) -> CategoryType? {
         precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
         let reconfiguredScale = type(of: self).init(domain, padding: padding, round: round, from: from, to: to)
-        return reconfiguredScale.invert(from: location)
+        return reconfiguredScale.invert(location)
     }
 
     /// Maps the value from the range back to the discrete value that it matches.
     /// - Parameter location: A value within the range of the scale.
     /// - Returns: The item that matches at that value, or nil if the point is within padding or outside the range of the scale.
-    public func invert(from location: OutputType) -> CategoryType? {
+    public func invert(_ location: OutputType) -> CategoryType? {
         guard let upperRange = rangeHigher, let lowerRange = rangeLower else {
             // insufficiently configured, dump and run
             return nil
