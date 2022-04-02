@@ -78,26 +78,26 @@ class BandScaleTests: XCTestCase {
 
     func testRangeModifier() throws {
         let initial = BandScale<String, CGFloat>(["1", "2"])
-        XCTAssertNil(initial.from)
-        XCTAssertNil(initial.to)
+        XCTAssertNil(initial.rangeLower)
+        XCTAssertNil(initial.rangeHigher)
         XCTAssertFalse(initial.fullyConfigured())
 
         let updated = initial.range(from: 0, to: 100)
         XCTAssertTrue(updated.fullyConfigured())
-        XCTAssertEqual(updated.from, 0)
-        XCTAssertEqual(updated.to, 100)
+        XCTAssertEqual(updated.rangeLower, 0)
+        XCTAssertEqual(updated.rangeHigher, 100)
     }
 
     func testRangeModifierWithRange() throws {
         let initial = BandScale<String, CGFloat>(["1", "2"])
-        XCTAssertNil(initial.from)
-        XCTAssertNil(initial.to)
+        XCTAssertNil(initial.rangeLower)
+        XCTAssertNil(initial.rangeHigher)
         XCTAssertFalse(initial.fullyConfigured())
 
         let updated = initial.range(CGFloat(0.0) ... CGFloat(100.0))
         XCTAssertTrue(updated.fullyConfigured())
-        XCTAssertEqual(updated.from, 0)
-        XCTAssertEqual(updated.to, 100)
+        XCTAssertEqual(updated.rangeLower, 0)
+        XCTAssertEqual(updated.rangeHigher, 100)
     }
 
     func testWidth() throws {

@@ -1,15 +1,14 @@
 {
   "abstract" : [
     {
-      "text" : "A collection of methods for dealing with data transformation when displaying against a scale.",
+      "text" : "A value that represents how a scale handles data transformation that exceed the domain or range of the scale.",
       "type" : "text"
     }
   ],
   "hierarchy" : {
     "paths" : [
       [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale"
       ]
     ]
   },
@@ -102,14 +101,10 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/domainLower",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/domainHigher",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/domainExtent",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/transformType"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/NiceValue",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ConvertibleWithDouble"
       ],
-      "title" : "Inspecting Scales"
+      "title" : "Supporting Types"
     }
   ],
   "topicSections" : [
@@ -173,10 +168,44 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale"
 },
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ConvertibleWithDouble": {
+  "abstract" : [
+    {
+      "text" : "A type that can be consistently converted to and from a Double.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ConvertibleWithDouble"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ConvertibleWithDouble",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ConvertibleWithDouble"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ConvertibleWithDouble",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/convertiblewithdouble"
+},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform": {
   "abstract" : [
     {
-      "text" : "A collection of methods for dealing with data transformation when displaying against a scale.",
+      "text" : "A value that represents how a scale handles data transformation that exceed the domain or range of the scale.",
       "type" : "text"
     }
   ],
@@ -364,36 +393,10 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/domaindatatransform\/none"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/NiceValue": {
   "abstract" : [
     {
-      "text" : "A type that maps values from an input ",
-      "type" : "text"
-    },
-    {
-      "inlineContent" : [
-        {
-          "text" : "domain",
-          "type" : "text"
-        }
-      ],
-      "type" : "emphasis"
-    },
-    {
-      "text" : " to an output ",
-      "type" : "text"
-    },
-    {
-      "inlineContent" : [
-        {
-          "text" : "range",
-          "type" : "text"
-        }
-      ],
-      "type" : "emphasis"
-    },
-    {
-      "text" : ".",
+      "text" : "A type that can be converted into an approximate value that is easier to understand.",
       "type" : "text"
     }
   ],
@@ -408,258 +411,21 @@
     },
     {
       "kind" : "identifier",
-      "text" : "Scale"
+      "text" : "NiceValue"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/NiceValue",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "Scale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "Scale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/scale"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/InputType": {
-  "abstract" : [
-    {
-      "text" : "The type used for the scale’s domain.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "associatedtype"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : " : "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
-      "text" : "ConvertibleWithDouble"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale9NiceValueP",
       "text" : "NiceValue"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType",
-  "kind" : "symbol",
-  "required" : true,
   "role" : "symbol",
-  "title" : "InputType",
+  "title" : "NiceValue",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/scale\/inputtype"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/OutputType": {
-  "abstract" : [
-    {
-      "text" : "The type used for the scale’s range.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "associatedtype"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : " : "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
-      "text" : "ConvertibleWithDouble"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType",
-  "kind" : "symbol",
-  "required" : true,
-  "role" : "symbol",
-  "title" : "OutputType",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/scale\/outputtype"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/domainExtent": {
-  "abstract" : [
-    {
-      "text" : "The distance or length between the upper and lower bounds of the input domain.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "var"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "domainExtent"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
-      "text" : "InputType"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/domainExtent",
-  "kind" : "symbol",
-  "required" : true,
-  "role" : "symbol",
-  "title" : "domainExtent",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/scale\/domainextent"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/domainHigher": {
-  "abstract" : [
-    {
-      "text" : "The upper bound of the input domain.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "var"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "domainHigher"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
-      "text" : "InputType"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/domainHigher",
-  "kind" : "symbol",
-  "required" : true,
-  "role" : "symbol",
-  "title" : "domainHigher",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/scale\/domainhigher"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/domainLower": {
-  "abstract" : [
-    {
-      "text" : "The lower bound of the input domain.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "var"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "domainLower"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
-      "text" : "InputType"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/domainLower",
-  "kind" : "symbol",
-  "required" : true,
-  "role" : "symbol",
-  "title" : "domainLower",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/scale\/domainlower"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/transformType": {
-  "abstract" : [
-    {
-      "text" : "A boolean value that indicates whether the output vales are constrained to the min and max of the output range.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "var"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "transformType"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale19DomainDataTransformO",
-      "text" : "DomainDataTransform"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/transformType",
-  "kind" : "symbol",
-  "required" : true,
-  "role" : "symbol",
-  "title" : "transformType",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/scale\/transformtype"
+  "url" : "\/documentation\/swiftvizscale\/nicevalue"
 }
 }
 }

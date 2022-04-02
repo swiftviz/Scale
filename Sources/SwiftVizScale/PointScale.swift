@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  PointScale.swift
 //
 //
 //  Created by Joseph Heck on 4/1/22.
@@ -11,15 +11,15 @@ import Foundation
 // - https://github.com/pshrmn/notes/blob/master/d3/scales.md#point-scales
 // - https://observablehq.com/@d3/d3-scalepoint
 
-/// A type that maps values from a discrete _domain_ to a point within a continuous output _range_.
+/// A discrete scale that maps from a discrete value within a collection to a point within a continuous output _range_.
 ///
 /// Point scales are useful for mapping discrete data from a collection to a collection of specific points.
 /// If you are rendering a bar chart, consider using the ``BandScale`` instead.
 public struct PointScale<CategoryType: Hashable, OutputType: ConvertibleWithDouble> {
     /// The lower value of the range into which the discrete values map.
-    public let from: OutputType?
+    public let rangeLower: OutputType?
     /// The upper value of the range into which the discrete values map.
-    public let to: OutputType?
+    public let rangeHigher: OutputType?
     /// A Boolean value that indicates the scaled values are returned as rounded values.
     public let round: Bool
     /// The amount of padding between bands.
@@ -41,17 +41,17 @@ public struct PointScale<CategoryType: Hashable, OutputType: ConvertibleWithDoub
         self.domain = domain
         if let from = from, let to = to {
             precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
-            self.from = from
-            self.to = to
+            rangeLower = from
+            rangeHigher = to
         } else {
-            self.from = nil
-            self.to = nil
+            rangeLower = nil
+            rangeHigher = nil
         }
     }
 
     // testing function only - verifies the scale is fully configured
     internal func fullyConfigured() -> Bool {
-        from != nil && to != nil && domain.count > 0
+        rangeLower != nil && rangeHigher != nil && domain.count > 0
     }
 
     // MARK: - modifier functions
@@ -59,19 +59,19 @@ public struct PointScale<CategoryType: Hashable, OutputType: ConvertibleWithDoub
     /// Returns a new scale with the domain set to the values you provide.
     /// - Parameter domain: An array of the types the scale maps into.
     public func domain(_ domain: [CategoryType]) -> Self {
-        type(of: self).init(domain, padding: padding, round: round, from: from, to: to)
+        type(of: self).init(domain, padding: padding, round: round, from: rangeLower, to: rangeHigher)
     }
 
     /// Returns a new scale with the rounding set to the value you provide.
     /// - Parameter newRound: A Boolean value that indicates the scaled values are returned as rounded values.
     public func round(_ newRound: Bool) -> Self {
-        type(of: self).init(domain, padding: padding, round: newRound, from: from, to: to)
+        type(of: self).init(domain, padding: padding, round: newRound, from: rangeLower, to: rangeHigher)
     }
 
     /// Returns a new scale with the inner padding set to the value you provide.
     /// - Parameter newPaddingInner: The amount of padding between bands.
     public func padding(_ newPadding: OutputType) -> Self {
-        type(of: self).init(domain, padding: newPadding, round: round, from: from, to: to)
+        type(of: self).init(domain, padding: newPadding, round: round, from: rangeLower, to: rangeHigher)
     }
 
     /// Returns a new scale with the range set to the values you provide.
@@ -91,7 +91,7 @@ public struct PointScale<CategoryType: Hashable, OutputType: ConvertibleWithDoub
     }
 
     internal func step() -> Double? {
-        guard let from = from, let to = to else {
+        guard let from = rangeLower, let to = rangeHigher else {
             return nil
         }
         if domain.isEmpty {
@@ -154,7 +154,7 @@ public struct PointScale<CategoryType: Hashable, OutputType: ConvertibleWithDoub
     /// - Parameter location: A value within the range of the scale.
     /// - Returns: The item that matches at that value, or nil if the point is within padding or outside the range of the scale.
     public func invert(from location: OutputType) -> CategoryType? {
-        guard let upperRange = to, let lowerRange = from else {
+        guard let upperRange = rangeHigher, let lowerRange = rangeLower else {
             // insufficiently configured, dump and run
             return nil
         }

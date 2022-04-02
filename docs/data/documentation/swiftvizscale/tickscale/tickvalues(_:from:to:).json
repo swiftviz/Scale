@@ -40,7 +40,7 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+        "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
         "text" : "InputType"
       },
       {
@@ -57,7 +57,7 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+        "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
         "text" : "OutputType"
       },
       {
@@ -74,7 +74,7 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+        "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
         "text" : "OutputType"
       },
       {
@@ -92,7 +92,7 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+        "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
         "text" : "InputType"
       },
       {
@@ -101,7 +101,7 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+        "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
         "text" : "OutputType"
       },
       {
@@ -163,9 +163,9 @@
               "text" : ": ["
             },
             {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType",
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/InputType",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+              "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
               "text" : "InputType"
             },
             {
@@ -189,9 +189,9 @@
               "text" : ": "
             },
             {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType",
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/OutputType",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+              "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
               "text" : "OutputType"
             },
             {
@@ -215,9 +215,9 @@
               "text" : ": "
             },
             {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType",
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/OutputType",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+              "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
               "text" : "OutputType"
             },
             {
@@ -235,9 +235,9 @@
               "text" : "<"
             },
             {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType",
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/InputType",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+              "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
               "text" : "InputType"
             },
             {
@@ -245,9 +245,9 @@
               "text" : ", "
             },
             {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType",
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/OutputType",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+              "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
               "text" : "OutputType"
             },
             {
@@ -274,7 +274,7 @@
               "type" : "text"
             },
             {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/transformType",
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/transformType",
               "isActive" : true,
               "type" : "reference"
             }
@@ -376,7 +376,7 @@
               "type" : "text"
             },
             {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/transformType",
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/transformType",
               "isActive" : true,
               "type" : "reference"
             },
@@ -438,7 +438,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/InputType": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/InputType": {
   "abstract" : [
     {
       "text" : "The type used for the scale’s domain.",
@@ -477,15 +477,15 @@
       "text" : "NiceValue"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/InputType",
   "kind" : "symbol",
   "required" : true,
   "role" : "symbol",
   "title" : "InputType",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/scale\/inputtype"
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/inputtype"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/OutputType": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/OutputType": {
   "abstract" : [
     {
       "text" : "The type used for the scale’s range.",
@@ -515,18 +515,18 @@
       "text" : "ConvertibleWithDouble"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/OutputType",
   "kind" : "symbol",
   "required" : true,
   "role" : "symbol",
   "title" : "OutputType",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/scale\/outputtype"
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/outputtype"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/transformType": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/transformType": {
   "abstract" : [
     {
-      "text" : "A boolean value that indicates whether the output vales are constrained to the min and max of the output range.",
+      "text" : "A transformation value that indicates whether the output vales are constrained to the min and max of the output range.",
       "type" : "text"
     }
   ],
@@ -553,13 +553,13 @@
       "text" : "DomainDataTransform"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/transformType",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/transformType",
   "kind" : "symbol",
   "required" : true,
   "role" : "symbol",
   "title" : "transformType",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/scale\/transformtype"
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/transformtype"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick": {
   "abstract" : [
@@ -655,7 +655,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -672,7 +672,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -689,7 +689,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -707,7 +707,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -716,7 +716,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -797,7 +797,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -814,7 +814,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -832,7 +832,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -841,7 +841,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -922,7 +922,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -939,7 +939,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -957,7 +957,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -966,7 +966,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -1047,7 +1047,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -1064,7 +1064,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -1082,7 +1082,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -1091,7 +1091,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {

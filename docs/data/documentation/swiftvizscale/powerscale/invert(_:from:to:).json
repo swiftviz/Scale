@@ -19,7 +19,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:13SwiftVizScale05PowerC0V6invert_4from2toxSgSf_S2ftF",
+    "externalID" : "s:13SwiftVizScale05PowerC0V6invert_4from2toxSgq__q_q_tF",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -39,8 +39,8 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:Sf",
-        "text" : "Float"
+        "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
+        "text" : "OutputType"
       },
       {
         "kind" : "text",
@@ -56,8 +56,8 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:Sf",
-        "text" : "Float"
+        "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
+        "text" : "OutputType"
       },
       {
         "kind" : "text",
@@ -73,8 +73,8 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:Sf",
-        "text" : "Float"
+        "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
+        "text" : "OutputType"
       },
       {
         "kind" : "text",
@@ -145,8 +145,8 @@
             },
             {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:Sf",
-              "text" : "Float"
+              "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
+              "text" : "OutputType"
             },
             {
               "kind" : "text",
@@ -170,8 +170,8 @@
             },
             {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:Sf",
-              "text" : "Float"
+              "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
+              "text" : "OutputType"
             },
             {
               "kind" : "text",
@@ -195,8 +195,8 @@
             },
             {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:Sf",
-              "text" : "Float"
+              "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
+              "text" : "OutputType"
             },
             {
               "kind" : "text",
@@ -298,7 +298,9 @@
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/scale(_:from:to:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/scale(_:to:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/invert(_:to:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/scale(_:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/invert(_:to:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/invert(_:)"
       ],
       "title" : "Converting Values"
     }
@@ -365,6 +367,56 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/powerscale"
 },
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/invert(_:)": {
+  "abstract" : [
+    {
+      "text" : "Transforms a value within the range into the associated domain value.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "invert"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/invert(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "invert(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/invert(_:)"
+},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/invert(_:from:to:)": {
   "abstract" : [
     {
@@ -391,8 +443,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sf",
-      "text" : "Float"
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
     },
     {
       "kind" : "text",
@@ -408,8 +460,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sf",
-      "text" : "Float"
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
     },
     {
       "kind" : "text",
@@ -425,8 +477,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sf",
-      "text" : "Float"
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
     },
     {
       "kind" : "text",
@@ -475,7 +527,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -492,7 +544,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -501,7 +553,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -515,6 +567,56 @@
   "title" : "invert(_:to:)",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/powerscale\/invert(_:to:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/scale(_:)": {
+  "abstract" : [
+    {
+      "text" : "Transforms the input value using a power function and maps the resulting value into the range you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "scale"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/scale(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "scale(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/scale(_:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/scale(_:from:to:)": {
   "abstract" : [
@@ -559,8 +661,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sf",
-      "text" : "Float"
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
     },
     {
       "kind" : "text",
@@ -576,8 +678,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sf",
-      "text" : "Float"
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
     },
     {
       "kind" : "text",
@@ -585,8 +687,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sf",
-      "text" : "Float"
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
     },
     {
       "kind" : "text",
@@ -634,7 +736,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P9InputTypeQa",
       "text" : "InputType"
     },
     {
@@ -651,7 +753,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
@@ -660,7 +762,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0P10OutputTypeQa",
       "text" : "OutputType"
     },
     {
