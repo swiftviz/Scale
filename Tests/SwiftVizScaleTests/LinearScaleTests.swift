@@ -214,4 +214,62 @@ final class LinearScaleTests: XCTestCase {
         XCTAssertEqual(clampedScale.invert(-10, from: testRange.lowerBound, to: testRange.upperBound), 0)
         XCTAssertNil(dropScale.invert(-10, from: testRange.lowerBound, to: testRange.upperBound))
     }
+
+    func testLinearScaleDomainModifier() {
+        let scale = LinearScale<Double, Float>()
+        XCTAssertEqual(0, scale.domainLower)
+        XCTAssertEqual(1, scale.domainHigher)
+        XCTAssertNil(scale.rangeLower)
+        XCTAssertNil(scale.rangeHigher)
+
+        let updated = scale.domain(lower: 10, higher: 100)
+        XCTAssertEqual(10, updated.domainLower)
+        XCTAssertEqual(100, updated.domainHigher)
+    }
+
+    func testLinearScaleDomain2Modifier() {
+        let scale = LinearScale<Double, Float>()
+        XCTAssertEqual(0, scale.domainLower)
+        XCTAssertEqual(1, scale.domainHigher)
+        XCTAssertNil(scale.rangeLower)
+        XCTAssertNil(scale.rangeHigher)
+
+        let updated = scale.domain(10 ... 100)
+        XCTAssertEqual(10, updated.domainLower)
+        XCTAssertEqual(100, updated.domainHigher)
+    }
+
+    func testLinearScaleRangeModifier() {
+        let scale = LinearScale<Double, Float>()
+        XCTAssertEqual(0, scale.domainLower)
+        XCTAssertEqual(1, scale.domainHigher)
+        XCTAssertNil(scale.rangeLower)
+        XCTAssertNil(scale.rangeHigher)
+
+        let updated = scale.range(10 ... 100)
+        XCTAssertEqual(10, updated.rangeLower)
+        XCTAssertEqual(100, updated.rangeHigher)
+        XCTAssertTrue(updated.fullyConfigured())
+    }
+
+    func testLinearScaleRange2Modifier() {
+        let scale = LinearScale<Double, Float>()
+        XCTAssertEqual(0, scale.domainLower)
+        XCTAssertEqual(1, scale.domainHigher)
+        XCTAssertNil(scale.rangeLower)
+        XCTAssertNil(scale.rangeHigher)
+
+        let updated = scale.range(lower: 10, higher: 100)
+        XCTAssertEqual(10, updated.rangeLower)
+        XCTAssertEqual(100, updated.rangeHigher)
+        XCTAssertTrue(updated.fullyConfigured())
+    }
+
+    func testLinearScaleTransformModifier() {
+        let scale = LinearScale<Double, Float>()
+        XCTAssertEqual(scale.transformType, DomainDataTransform.none)
+
+        let updated = scale.transform(.clamp)
+        XCTAssertEqual(updated.transformType, DomainDataTransform.clamp)
+    }
 }
