@@ -24,6 +24,7 @@
 - ``SwiftVizScale/LogScale/desiredTicks``
 - ``SwiftVizScale/LogScale/rangeHigher``
 - ``SwiftVizScale/LogScale/rangeLower``
+- ``SwiftVizScale/LogScale/scaleType``
 
 ### Converting Values 
 

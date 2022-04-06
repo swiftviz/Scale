@@ -26,6 +26,7 @@
 - ``SwiftVizScale/PowerScale/desiredTicks``
 - ``SwiftVizScale/PowerScale/rangeHigher``
 - ``SwiftVizScale/PowerScale/rangeLower``
+- ``SwiftVizScale/PowerScale/scaleType``
 
 ### Converting Values 
 
