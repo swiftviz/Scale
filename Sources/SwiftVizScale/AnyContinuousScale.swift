@@ -181,7 +181,7 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
     OutputType: ConvertibleWithDouble>: ContinuousScale
 {
     private let _box: _AnyContinuousScale<InputType, OutputType>
-        
+
     /// Creates a type-erased continuous scale.
     /// - Parameter base: The continuous scale to wrap.
     public init<WrappedScale: ContinuousScale>(_ base: WrappedScale) where WrappedScale.InputType == InputType, WrappedScale.OutputType == OutputType {
