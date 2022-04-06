@@ -21,7 +21,7 @@ public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType:
     public let rangeHigher: OutputType?
 
     /// The type of continuous scale.
-    public let scaleType: ContinuousScaleTypes = .log
+    public let scaleType: ContinuousScaleType = .log
 
     /// A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///

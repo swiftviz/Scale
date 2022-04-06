@@ -40,7 +40,7 @@ public protocol ContinuousScale: Scale where InputType: ConvertibleWithDouble & 
     var transformType: DomainDataTransform { get }
 
     /// The type of continuous scale.
-    var scaleType: ContinuousScaleTypes { get }
+    var scaleType: ContinuousScaleType { get }
 
     /// The lower bound of the input domain.
     var domainLower: InputType { get }

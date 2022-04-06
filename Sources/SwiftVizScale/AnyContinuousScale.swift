@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum ContinuousScaleTypes: Equatable {
+public enum ContinuousScaleType: Equatable {
     case linear
     case log
     case power(Double)
@@ -29,7 +29,7 @@ internal class _AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
 {
     // ContinuousScale protocol conformance
 
-    var scaleType: ContinuousScaleTypes {
+    var scaleType: ContinuousScaleType {
         _abstract()
     }
 
@@ -95,16 +95,16 @@ internal class _AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
 // the "Any" class to hold a reference to a specific type, and forward invocations from
 // the (partially) type-erased class into the concrete, specific class that it holds
 // (which is how we achieve type-erasure)
-internal final class _ContinuousScale<ContinuousScaleType: ContinuousScale>: _AnyContinuousScale<ContinuousScaleType.InputType, ContinuousScaleType.OutputType> {
-    private var _base: ContinuousScaleType
+internal final class _ContinuousScale<WrappedContinuousScale: ContinuousScale>: _AnyContinuousScale<WrappedContinuousScale.InputType, WrappedContinuousScale.OutputType> {
+    private var _base: WrappedContinuousScale
 
-    init(_ base: ContinuousScaleType) {
+    init(_ base: WrappedContinuousScale) {
         _base = base
     }
 
     // ContinuousScale Overrides
 
-    override public var scaleType: ContinuousScaleTypes {
+    override public var scaleType: ContinuousScaleType {
         _base.scaleType
     }
 
@@ -185,7 +185,7 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
         _box.transformType
     }
 
-    public var scaleType: ContinuousScaleTypes {
+    public var scaleType: ContinuousScaleType {
         _box.scaleType
     }
 
@@ -251,7 +251,7 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
 
     // Transformation types (converting between enclosed scale types)
 
-    public func scaleType(_ type: ContinuousScaleTypes) -> Self {
+    public func scaleType(_ type: ContinuousScaleType) -> Self {
         switch type {
         case .linear:
             return AnyContinuousScale(

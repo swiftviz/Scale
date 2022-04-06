@@ -16,11 +16,15 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 
 ### Continuous Scales
 
+
 - ``SwiftVizScale/LinearScale``
 - ``SwiftVizScale/LogScale``
 - ``SwiftVizScale/PowerScale``
+- ``SwiftVizScale/RadialScale``
 - ``SwiftVizScale/ContinuousScale``
 - ``SwiftVizScale/DomainDataTransform``
+- ``SwiftVizScale/AnyContinuousScale``
+- ``SwiftVizScale/ContinuousScaleType``
 
 ### Discrete Scales
 

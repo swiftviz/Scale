@@ -108,7 +108,10 @@
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/AnyContinuousScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScaleType"
       ],
       "title" : "Continuous Scales"
     }
@@ -174,6 +177,37 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale"
 },
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/AnyContinuousScale": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AnyContinuousScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/AnyContinuousScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AnyContinuousScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AnyContinuousScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/anycontinuousscale"
+},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale": {
   "abstract" : [
     {
@@ -233,6 +267,37 @@
   "title" : "ContinuousScale",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/continuousscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScaleType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ContinuousScaleType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScaleType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ContinuousScaleType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ContinuousScaleType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscaletype"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform": {
   "abstract" : [
@@ -526,6 +591,40 @@
   "title" : "PowerScale",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/powerscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/RadialScale": {
+  "abstract" : [
+    {
+      "text" : "A linear scale for transforming and mapping continuous input values within a domain to output values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RadialScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RadialScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RadialScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/radialscale"
 }
 }
 }

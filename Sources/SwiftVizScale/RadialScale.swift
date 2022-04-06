@@ -23,7 +23,7 @@ public struct RadialScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
     public let rangeHigher: OutputType?
 
     /// The type of continuous scale.
-    public let scaleType: ContinuousScaleTypes = .radial
+    public let scaleType: ContinuousScaleType = .radial
 
     /// A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///

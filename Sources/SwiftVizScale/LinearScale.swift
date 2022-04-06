@@ -16,7 +16,7 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
     public let rangeHigher: OutputType?
 
     /// The type of continuous scale.
-    public let scaleType: ContinuousScaleTypes = .linear
+    public let scaleType: ContinuousScaleType = .linear
 
     /// A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///
