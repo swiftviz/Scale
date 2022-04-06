@@ -49,6 +49,11 @@ public protocol ContinuousScale: Scale where InputType: ConvertibleWithDouble & 
     /// The distance or length between the upper and lower bounds of the input domain.
     var domainExtent: InputType { get }
 
+    /// The lower bound of the input domain.
+    var rangeLower: OutputType? { get }
+    /// The upper bound of the input domain.
+    var rangeHigher: OutputType? { get }
+
     /// The number of requested tick marks for the scale.
     var desiredTicks: Int { get }
 
