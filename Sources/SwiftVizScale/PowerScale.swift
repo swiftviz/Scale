@@ -22,6 +22,11 @@ public struct PowerScale<InputType: ConvertibleWithDouble & NiceValue, OutputTyp
     /// The upper bound of the input domain.
     public let rangeHigher: OutputType?
 
+    /// The type of continuous scale.
+    public var scaleType: ContinuousScaleTypes {
+        .power(self.exponent)
+    }
+
     /// A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///
     /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale

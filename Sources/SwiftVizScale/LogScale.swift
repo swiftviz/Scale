@@ -20,6 +20,9 @@ public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType:
     /// The upper bound of the input domain.
     public let rangeHigher: OutputType?
 
+    /// The type of continuous scale.
+    public let scaleType: ContinuousScaleTypes = .log
+
     /// A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///
     /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
