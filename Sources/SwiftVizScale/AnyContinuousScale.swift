@@ -76,6 +76,10 @@ internal class _AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
         _abstract()
     }
 
+    func range(_: ClosedRange<OutputType>) -> Self {
+        _abstract()
+    }
+
     func transform(_: DomainDataTransform) -> Self {
         _abstract()
     }
@@ -149,6 +153,10 @@ internal final class _ContinuousScale<WrappedContinuousScale: ContinuousScale>: 
 
     override public func range(lower: OutputType, higher: OutputType) -> Self {
         Self(_base.range(lower: lower, higher: higher))
+    }
+
+    override public func range(_ range: ClosedRange<OutputType>) -> Self {
+        Self(_base.range(range))
     }
 
     override public func transform(_ transform: DomainDataTransform) -> Self {
@@ -231,6 +239,12 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
     public func range(lower: OutputType, higher: OutputType) -> Self {
         AnyContinuousScale(
             _box.range(lower: lower, higher: higher)
+        )
+    }
+
+    public func range(_ range: ClosedRange<OutputType>) -> Self {
+        AnyContinuousScale(
+            _box.range(range)
         )
     }
 

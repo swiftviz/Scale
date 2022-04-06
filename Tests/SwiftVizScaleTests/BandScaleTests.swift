@@ -21,19 +21,17 @@ class BandScaleTests: XCTestCase {
     }
 
     func testPartialConfiguration() throws {
-        func testInitializers() throws {
-            let x = BandScale<String, CGFloat>(["1", "2"])
-            XCTAssertNotNil(x)
-            XCTAssertFalse(x.fullyConfigured())
+        let x = BandScale<String, CGFloat>(["1", "2"])
+        XCTAssertNotNil(x)
+        XCTAssertFalse(x.fullyConfigured())
 
-            XCTAssertEqual(x.round, false)
-            XCTAssertEqual(x.paddingOuter, 0)
-            XCTAssertEqual(x.paddingInner, 0)
-            XCTAssertEqual(x.domain.count, 2)
+        XCTAssertEqual(x.round, false)
+        XCTAssertEqual(x.paddingOuter, 0)
+        XCTAssertEqual(x.paddingInner, 0)
+        XCTAssertEqual(x.domain.count, 2)
 
-            let updated = x.range(from: 0, to: 100)
-            XCTAssertTrue(updated.fullyConfigured())
-        }
+        let updated = x.range(lower: 0, higher: 100)
+        XCTAssertTrue(updated.fullyConfigured())
     }
 
     func testInitialFullConfig() throws {
@@ -82,7 +80,7 @@ class BandScaleTests: XCTestCase {
         XCTAssertNil(initial.rangeHigher)
         XCTAssertFalse(initial.fullyConfigured())
 
-        let updated = initial.range(from: 0, to: 100)
+        let updated = initial.range(lower: 0, higher: 100)
         XCTAssertTrue(updated.fullyConfigured())
         XCTAssertEqual(updated.rangeLower, 0)
         XCTAssertEqual(updated.rangeHigher, 100)
