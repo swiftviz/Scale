@@ -7,10 +7,17 @@
 
 import Foundation
 
+/// The type of continuous scale.
+///
+/// Exponential scales (``PowerScale``) require an additional value for the exponent of the scale.
 public enum ContinuousScaleType: Equatable {
+    /// A linear continuous scale.
     case linear
+    /// A logarithmic continuous scale.
     case log
+    /// An exponential continuous scale.
     case power(Double)
+    /// A linear continuous scale that squares the result.
     case radial
 }
 
@@ -167,15 +174,17 @@ internal final class _ContinuousScale<WrappedContinuousScale: ContinuousScale>: 
     }
 }
 
-// Partially type erased visual channel, with internals (including the type of property that
-// it maps) hidden.
-// A partially type-erased visual channel that maps properties from data into a mark.
+/// A type-erased continuous scale.
+///
+/// Encapsulates a scale that conforms to the``ContinuousScale`` protocol, identified by ``ContinuousScaleType``.
 public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
     OutputType: ConvertibleWithDouble>: ContinuousScale
 {
     private let _box: _AnyContinuousScale<InputType, OutputType>
-
-    public init<CS: ContinuousScale>(_ base: CS) where CS.InputType == InputType, CS.OutputType == OutputType {
+        
+    /// Creates a type-erased continuous scale.
+    /// - Parameter base: The continuous scale to wrap.
+    public init<WrappedScale: ContinuousScale>(_ base: WrappedScale) where WrappedScale.InputType == InputType, WrappedScale.OutputType == OutputType {
         _box = _ContinuousScale(base)
     }
 
