@@ -23,7 +23,7 @@ public struct PowerScale<InputType: ConvertibleWithDouble & NiceValue, OutputTyp
     public let rangeHigher: OutputType?
 
     /// The type of continuous scale.
-    public var scaleType: ContinuousScaleTypes {
+    public var scaleType: ContinuousScaleType {
         .power(exponent)
     }
 

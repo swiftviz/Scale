@@ -23,7 +23,7 @@ class RadialScaleTests: XCTestCase {
     }
 
     func testRadialScaleRangeInitializer() {
-        let myScale = RadialScale(0.0...10.0, rangeLower: CGFloat(0), rangeHigher: CGFloat(10))
+        let myScale = RadialScale(0.0 ... 10.0, rangeLower: CGFloat(0), rangeHigher: CGFloat(10))
         XCTAssertEqual(myScale.transformType, .none)
         XCTAssertEqual(myScale.scaleType, .radial)
         XCTAssertEqual(myScale.desiredTicks, 10)
