@@ -32,7 +32,7 @@ public enum DomainDataTransform {
 }
 
 /// A type that maps continuous values from an input _domain_ to an output _range_.
-public protocol ContinuousScale: Scale where InputType: ConvertibleWithDouble & NiceValue, OutputType: ConvertibleWithDouble {
+public protocol ContinuousScale: Scale where InputType: ConvertibleWithDouble & NiceValue, RangeType == OutputType {
     /// A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///
     /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
@@ -76,7 +76,7 @@ public protocol ContinuousScale: Scale where InputType: ConvertibleWithDouble & 
     ///   - lower: The lower bound for the scale's range.
     ///   - higher: The upper bound for the scale's range.
     /// - Returns: A replica of the scale, with new range values.
-    func range(lower: OutputType, higher: OutputType) -> Self
+    func range(lower: RangeType, higher: RangeType) -> Self
 
     /// Returns a new scale with the transform set to the value you provide.
     /// - Parameters:

@@ -28,7 +28,7 @@ class PointScaleTests: XCTestCase {
         XCTAssertEqual(x.padding, 0)
         XCTAssertEqual(x.domain.count, 2)
 
-        let updated = x.range(from: 0, to: 100)
+        let updated = x.range(lower: 0, higher: 100)
         XCTAssertTrue(updated.fullyConfigured())
     }
 
@@ -69,7 +69,7 @@ class PointScaleTests: XCTestCase {
         XCTAssertNil(initial.rangeHigher)
         XCTAssertFalse(initial.fullyConfigured())
 
-        let updated = initial.range(from: 0, to: 100)
+        let updated = initial.range(lower: 0, higher: 100)
         XCTAssertTrue(updated.fullyConfigured())
         XCTAssertEqual(updated.rangeLower, 0)
         XCTAssertEqual(updated.rangeHigher, 100)

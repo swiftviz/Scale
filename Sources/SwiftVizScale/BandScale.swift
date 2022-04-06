@@ -22,7 +22,7 @@ import Foundation
 ///
 /// Band scales are useful for bar charts, calculating explicit bands with optional spacing to align with elements of a collection.
 /// If you mapping discrete data into a scatter plot, consider using the ``PointScale`` instead.
-public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDouble>: Scale {
+public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDouble>: Scale {
     /// The lower value of the range into which the discrete values map.
     public let rangeLower: OutputType?
     /// The upper value of the range into which the discrete values map.
@@ -94,11 +94,11 @@ public struct BandScale<CategoryType: Hashable, OutputType: ConvertibleWithDoubl
 
     /// Returns a new scale with the range set to the values you provide.
     /// - Parameters:
-    ///   - from: The lower value of the range into which the discrete values map.
-    ///   - to: The upper value of the range into which the discrete values map.
-    public func range(from: OutputType, to: OutputType) -> Self {
-        precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
-        return type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, from: from, to: to)
+    ///   - lower: The lower value of the range into which the discrete values map.
+    ///   - higher: The upper value of the range into which the discrete values map.
+    public func range(lower: OutputType, higher: OutputType) -> Self {
+        precondition(lower < higher, "attempting to set an inverted or empty range: \(lower) to \(higher)")
+        return type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, from: lower, to: higher)
     }
 
     /// Returns a new scale with the range set to the range you provide.
