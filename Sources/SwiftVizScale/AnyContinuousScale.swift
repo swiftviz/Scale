@@ -27,13 +27,12 @@ internal func _abstract(
 internal class _AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
     OutputType: ConvertibleWithDouble>: ContinuousScale
 {
-    
     // ContinuousScale protocol conformance
 
     var scaleType: ContinuousScaleTypes {
         _abstract()
     }
-    
+
     var transformType: DomainDataTransform {
         _abstract()
     }
@@ -100,7 +99,7 @@ internal final class _ContinuousScale<ContinuousScaleType: ContinuousScale>: _An
     override public var scaleType: ContinuousScaleTypes {
         _base.scaleType
     }
-    
+
     override public var transformType: DomainDataTransform {
         _base.transformType
     }
@@ -189,7 +188,7 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
     public var desiredTicks: Int {
         _box.desiredTicks
     }
-    
+
     public func domain(lower: InputType, higher: InputType) -> Self {
         AnyContinuousScale(
             _box.domain(lower: lower, higher: higher)
@@ -225,28 +224,27 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
     public func scale(_ domainValue: InputType) -> OutputType? {
         _box.scale(domainValue)
     }
-    
+
     // Transformation types (converting between enclosed scale types)
-    
+
     public func scaleType(_ type: ContinuousScaleTypes) -> Self {
         switch type {
         case .linear:
             return AnyContinuousScale(
                 LinearScale(from: _box.domainLower, to: _box.domainHigher, transform: _box.transformType, desiredTicks: _box.desiredTicks, rangeLower: nil, rangeHigher: nil)
-                )
+            )
         case .log:
             return AnyContinuousScale(
                 LogScale(from: _box.domainLower, to: _box.domainHigher, transform: _box.transformType, desiredTicks: _box.desiredTicks, rangeLower: nil, rangeHigher: nil)
-                )
-        case .power(let exponent):
+            )
+        case let .power(exponent):
             return AnyContinuousScale(
                 PowerScale(from: _box.domainLower, to: _box.domainHigher, exponent: exponent, transform: _box.transformType, desiredTicks: _box.desiredTicks, rangeLower: nil, rangeHigher: nil)
-                )
+            )
         case .radial:
             return AnyContinuousScale(
                 LinearScale(from: _box.domainLower, to: _box.domainHigher, transform: _box.transformType, desiredTicks: _box.desiredTicks, rangeLower: nil, rangeHigher: nil)
-                )
+            )
         }
-        
     }
 }

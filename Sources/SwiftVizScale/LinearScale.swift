@@ -14,7 +14,7 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
     public let rangeLower: OutputType?
     /// The upper bound of the input domain.
     public let rangeHigher: OutputType?
-    
+
     /// The type of continuous scale.
     public let scaleType: ContinuousScaleTypes = .linear
 

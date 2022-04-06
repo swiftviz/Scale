@@ -38,7 +38,7 @@ public protocol ContinuousScale: Scale where InputType: ConvertibleWithDouble & 
     /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
     /// are constrained to the input domain.
     var transformType: DomainDataTransform { get }
-    
+
     /// The type of continuous scale.
     var scaleType: ContinuousScaleTypes { get }
 
@@ -48,10 +48,10 @@ public protocol ContinuousScale: Scale where InputType: ConvertibleWithDouble & 
     var domainHigher: InputType { get }
     /// The distance or length between the upper and lower bounds of the input domain.
     var domainExtent: InputType { get }
-    
+
     /// The number of requested tick marks for the scale.
     var desiredTicks: Int { get }
-    
+
     /// Returns a Boolean value that indicates whether the value you provided is within the scale's domain.
     /// - Parameter value: The value to compare.
     /// - Returns: `true` if the value is between the lower and upper domain values.

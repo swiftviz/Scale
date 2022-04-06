@@ -24,7 +24,7 @@ public struct PowerScale<InputType: ConvertibleWithDouble & NiceValue, OutputTyp
 
     /// The type of continuous scale.
     public var scaleType: ContinuousScaleTypes {
-        .power(self.exponent)
+        .power(exponent)
     }
 
     /// A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
