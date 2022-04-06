@@ -25,6 +25,7 @@
 - ``SwiftVizScale/LinearScale/desiredTicks``
 - ``SwiftVizScale/LinearScale/rangeHigher``
 - ``SwiftVizScale/LinearScale/rangeLower``
+- ``SwiftVizScale/LinearScale/scaleType``
 
 ### Converting Values
 

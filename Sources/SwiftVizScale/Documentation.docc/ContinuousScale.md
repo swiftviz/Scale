@@ -9,6 +9,8 @@
 - ``SwiftVizScale/ContinuousScale/domainExtent``
 - ``SwiftVizScale/ContinuousScale/transformType``
 - ``SwiftVizScale/DomainDataTransform``
+- ``SwiftVizScale/ContinuousScale/scaleType``
+
 
 ### Converting Values 
 
