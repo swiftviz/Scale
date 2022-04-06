@@ -1,8 +1,15 @@
+//
+//  RadialScale.swift
+//
+//
+//  Created by Joseph Heck on 4/6/22.
+//
+
 import Foundation
 import Numerics
 
 /// A linear scale for transforming and mapping continuous input values within a domain to output values you provide.
-public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputType: ConvertibleWithDouble>: TickScale {
+public struct RadialScale<InputType: ConvertibleWithDouble & NiceValue, OutputType: ConvertibleWithDouble>: TickScale {
     /// The lower bound of the input domain.
     public let domainLower: InputType
     /// The upper bound of the input domain.
@@ -16,7 +23,7 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
     public let rangeHigher: OutputType?
 
     /// The type of continuous scale.
-    public let scaleType: ContinuousScaleTypes = .linear
+    public let scaleType: ContinuousScaleTypes = .radial
 
     /// A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///
@@ -125,7 +132,7 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
 
     // MARK: - scale functions
 
-    /// Transforms the input value using a linear function to the resulting value into the range you provide.
+    /// Transforms the input value using a linear function to the square of the resulting value in the range you provide.
     ///
     /// - Parameter domainValue: A value in the domain of the scale.
     /// - Returns: A value mapped to the range you provide.
@@ -135,10 +142,10 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
         }
         let normalizedInput = normalize(domainValue.toDouble(), lower: domainLower.toDouble(), higher: domainHigher.toDouble())
         let result: Double = interpolate(normalizedInput, lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
-        return OutputType.fromDouble(result)
+        return OutputType.fromDouble(result * result)
     }
 
-    /// Transforms the input value using a linear function to the resulting value into the range you provide.
+    /// Transforms the input value using a linear function to the square of the resulting value in the range you provide.
     ///
     /// - Parameter domainValue: A value in the domain of the scale.
     /// - Parameter lower: The lower bound to the range to map to.
@@ -149,7 +156,7 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
         return reconfigScale.scale(domainValue)
     }
 
-    /// Transforms a value within the range into the associated domain value.
+    /// Transforms the square root of the value within the range into the associated domain value.
     /// - Parameters:
     ///   - rangeValue: A value in the range of the scale.
     ///   - lower: The lower bound to the range to map from.
@@ -160,7 +167,7 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
             return nil
         }
         // inverts the scale, taking a value in the output range and returning the relevant value from the input domain
-        let normalizedRangeValue = normalize(rangeValue.toDouble(), lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
+        let normalizedRangeValue = normalize(sqrt(rangeValue.toDouble()), lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
         let mappedToDomain = interpolate(normalizedRangeValue, lower: domainLower.toDouble(), higher: domainHigher.toDouble())
         let castToInputType = InputType.fromDouble(mappedToDomain)
         return transformAgainstDomain(castToInputType)
