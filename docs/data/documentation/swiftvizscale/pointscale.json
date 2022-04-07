@@ -123,8 +123,8 @@
             },
             {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:SH",
-              "text" : "Hashable"
+              "preciseIdentifier" : "s:SL",
+              "text" : "Comparable"
             },
             {
               "kind" : "text",
@@ -228,7 +228,7 @@
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/round(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/padding(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/range(_:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/range(from:to:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/range(lower:higher:)"
       ],
       "title" : "Updating Scales"
     },
@@ -962,7 +962,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/pointscale\/range(_:)"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/range(from:to:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/range(lower:higher:)": {
   "abstract" : [
     {
       "text" : "Returns a new scale with the range set to the values you provide.",
@@ -988,7 +988,7 @@
     },
     {
       "kind" : "externalParam",
-      "text" : "from"
+      "text" : "lower"
     },
     {
       "kind" : "text",
@@ -1005,7 +1005,7 @@
     },
     {
       "kind" : "externalParam",
-      "text" : "to"
+      "text" : "higher"
     },
     {
       "kind" : "text",
@@ -1046,12 +1046,12 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/range(from:to:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/range(lower:higher:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "range(from:to:)",
+  "title" : "range(lower:higher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/pointscale\/range(from:to:)"
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/range(lower:higher:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/rangeHigher": {
   "abstract" : [

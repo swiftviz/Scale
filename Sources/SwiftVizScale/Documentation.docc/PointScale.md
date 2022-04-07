@@ -12,7 +12,7 @@
 - ``SwiftVizScale/PointScale/round(_:)``
 - ``SwiftVizScale/PointScale/padding(_:)``
 - ``SwiftVizScale/PointScale/range(_:)``
-- ``SwiftVizScale/PointScale/range(from:to:)``
+- ``SwiftVizScale/PointScale/range(lower:higher:)``
 
 ### Inspecting Scales
 

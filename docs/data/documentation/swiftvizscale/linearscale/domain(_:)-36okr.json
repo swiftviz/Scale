@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Returns a new scale with the range set to the values you provide.",
+      "text" : "Returns a new scale with the domain set to span the values you provide.",
       "type" : "text"
     }
   ],
@@ -9,17 +9,17 @@
     "paths" : [
       [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/range(from:to:)"
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/domain(_:)-36okr"
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:13SwiftVizScale05PointC0V5range4from2toACyxq_Gq__q_tF",
+    "externalID" : "s:13SwiftVizScale06LinearC0V6domainyACyxq_GSayxGF",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -31,50 +31,25 @@
       },
       {
         "kind" : "identifier",
-        "text" : "range"
+        "text" : "domain"
       },
       {
         "kind" : "text",
-        "text" : "("
-      },
-      {
-        "kind" : "externalParam",
-        "text" : "from"
-      },
-      {
-        "kind" : "text",
-        "text" : ": "
+        "text" : "(["
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
-        "text" : "OutputType"
+        "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V9InputTypexmfp",
+        "text" : "InputType"
       },
       {
         "kind" : "text",
-        "text" : ", "
-      },
-      {
-        "kind" : "externalParam",
-        "text" : "to"
-      },
-      {
-        "kind" : "text",
-        "text" : ": "
+        "text" : "]) -> "
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
-        "text" : "OutputType"
-      },
-      {
-        "kind" : "text",
-        "text" : ") -> "
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale05PointC0V",
-        "text" : "PointScale"
+        "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V",
+        "text" : "LinearScale"
       },
       {
         "kind" : "text",
@@ -82,7 +57,7 @@
       },
       {
         "kind" : "typeIdentifier",
-        "text" : "CategoryType"
+        "text" : "InputType"
       },
       {
         "kind" : "text",
@@ -105,7 +80,7 @@
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",
-    "title" : "range(from:to:)"
+    "title" : "domain(_:)"
   },
   "primaryContentSections" : [
     {
@@ -128,7 +103,7 @@
             },
             {
               "kind" : "identifier",
-              "text" : "range"
+              "text" : "domain"
             },
             {
               "kind" : "text",
@@ -136,43 +111,34 @@
             },
             {
               "kind" : "externalParam",
-              "text" : "from"
+              "text" : "_"
             },
             {
               "kind" : "text",
-              "text" : ": "
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "values"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
             },
             {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
-              "text" : "OutputType"
+              "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V9InputTypexmfp",
+              "text" : "InputType"
             },
             {
               "kind" : "text",
-              "text" : ", "
+              "text" : "]) -> "
             },
             {
-              "kind" : "externalParam",
-              "text" : "to"
-            },
-            {
-              "kind" : "text",
-              "text" : ": "
-            },
-            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
-              "text" : "OutputType"
-            },
-            {
-              "kind" : "text",
-              "text" : ") -> "
-            },
-            {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale05PointC0V",
-              "text" : "PointScale"
+              "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V",
+              "text" : "LinearScale"
             },
             {
               "kind" : "text",
@@ -180,7 +146,7 @@
             },
             {
               "kind" : "typeIdentifier",
-              "text" : "CategoryType"
+              "text" : "InputType"
             },
             {
               "kind" : "text",
@@ -207,28 +173,14 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The lower value of the range into which the discrete values map.",
+                  "text" : "An array of input values.",
                   "type" : "text"
                 }
               ],
               "type" : "paragraph"
             }
           ],
-          "name" : "from"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The upper value of the range into which the discrete values map.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "to"
+          "name" : "values"
         }
       ]
     }
@@ -245,10 +197,11 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/domain(_:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/round(_:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/padding(_:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/range(_:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/domain(lower:higher:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/domain(_:)-9tccc",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/transform(_:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/range(_:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/range(lower:higher:)"
       ],
       "title" : "Updating Scales"
     }
@@ -256,7 +209,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/swiftvizscale\/pointscale\/range(from:to:)"
+        "\/documentation\/swiftvizscale\/linearscale\/domain(_:)-36okr"
       ],
       "traits" : [
         {
@@ -281,23 +234,10 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale": {
   "abstract" : [
     {
-      "text" : "A discrete scale that maps from a discrete value within a collection to a point within a continuous output ",
-      "type" : "text"
-    },
-    {
-      "inlineContent" : [
-        {
-          "text" : "range",
-          "type" : "text"
-        }
-      ],
-      "type" : "emphasis"
-    },
-    {
-      "text" : ".",
+      "text" : "A linear scale for transforming and mapping continuous input values within a domain to output values you provide.",
       "type" : "text"
     }
   ],
@@ -312,26 +252,26 @@
     },
     {
       "kind" : "identifier",
-      "text" : "PointScale"
+      "text" : "LinearScale"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "PointScale"
+      "text" : "LinearScale"
     }
   ],
   "role" : "symbol",
-  "title" : "PointScale",
+  "title" : "LinearScale",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/pointscale"
+  "url" : "\/documentation\/swiftvizscale\/linearscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/domain(_:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/domain(_:)-36okr": {
   "abstract" : [
     {
-      "text" : "Returns a new scale with the domain set to the values you provide.",
+      "text" : "Returns a new scale with the domain set to span the values you provide.",
       "type" : "text"
     }
   ],
@@ -354,8 +294,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V12CategoryTypexmfp",
-      "text" : "CategoryType"
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V9InputTypexmfp",
+      "text" : "InputType"
     },
     {
       "kind" : "text",
@@ -363,8 +303,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V",
-      "text" : "PointScale"
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V",
+      "text" : "LinearScale"
     },
     {
       "kind" : "text",
@@ -372,7 +312,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "CategoryType"
+      "text" : "InputType"
     },
     {
       "kind" : "text",
@@ -387,17 +327,17 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/domain(_:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/domain(_:)-36okr",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "domain(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/pointscale\/domain(_:)"
+  "url" : "\/documentation\/swiftvizscale\/linearscale\/domain(_:)-36okr"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/padding(_:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/domain(_:)-9tccc": {
   "abstract" : [
     {
-      "text" : "Returns a new scale with the inner padding set to the value you provide.",
+      "text" : "Returns a new scale with the domain set to the values you provide.",
       "type" : "text"
     }
   ],
@@ -412,7 +352,7 @@
     },
     {
       "kind" : "identifier",
-      "text" : "padding"
+      "text" : "domain"
     },
     {
       "kind" : "text",
@@ -420,17 +360,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ") -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V",
-      "text" : "PointScale"
+      "preciseIdentifier" : "s:SN",
+      "text" : "ClosedRange"
     },
     {
       "kind" : "text",
@@ -438,7 +369,25 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "CategoryType"
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V",
+      "text" : "LinearScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "InputType"
     },
     {
       "kind" : "text",
@@ -453,17 +402,108 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/padding(_:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/domain(_:)-9tccc",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "padding(_:)",
+  "title" : "domain(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/pointscale\/padding(_:)"
+  "url" : "\/documentation\/swiftvizscale\/linearscale\/domain(_:)-9tccc"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/range(_:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/domain(lower:higher:)": {
   "abstract" : [
     {
-      "text" : "Returns a new scale with the range set to the range you provide.",
+      "text" : "Returns a new scale with the domain set to the values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domain"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "lower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "higher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V",
+      "text" : "LinearScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/domain(lower:higher:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domain(lower:higher:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/linearscale\/domain(lower:higher:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/range(_:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the range set to the values you provide.",
       "type" : "text"
     }
   ],
@@ -495,7 +535,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V10OutputTypeq_mfp",
       "text" : "OutputType"
     },
     {
@@ -504,8 +544,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V",
-      "text" : "PointScale"
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V",
+      "text" : "LinearScale"
     },
     {
       "kind" : "text",
@@ -513,7 +553,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "CategoryType"
+      "text" : "InputType"
     },
     {
       "kind" : "text",
@@ -528,14 +568,14 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/range(_:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/range(_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "range(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/pointscale\/range(_:)"
+  "url" : "\/documentation\/swiftvizscale\/linearscale\/range(_:)"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/range(from:to:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/range(lower:higher:)": {
   "abstract" : [
     {
       "text" : "Returns a new scale with the range set to the values you provide.",
@@ -561,7 +601,7 @@
     },
     {
       "kind" : "externalParam",
-      "text" : "from"
+      "text" : "lower"
     },
     {
       "kind" : "text",
@@ -569,7 +609,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V10OutputTypeq_mfp",
       "text" : "OutputType"
     },
     {
@@ -578,7 +618,7 @@
     },
     {
       "kind" : "externalParam",
-      "text" : "to"
+      "text" : "higher"
     },
     {
       "kind" : "text",
@@ -586,7 +626,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V10OutputTypeq_mfp",
       "text" : "OutputType"
     },
     {
@@ -595,8 +635,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V",
-      "text" : "PointScale"
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V",
+      "text" : "LinearScale"
     },
     {
       "kind" : "text",
@@ -604,7 +644,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "CategoryType"
+      "text" : "InputType"
     },
     {
       "kind" : "text",
@@ -619,17 +659,17 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/range(from:to:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/range(lower:higher:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "range(from:to:)",
+  "title" : "range(lower:higher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/pointscale\/range(from:to:)"
+  "url" : "\/documentation\/swiftvizscale\/linearscale\/range(lower:higher:)"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/round(_:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LinearScale/transform(_:)": {
   "abstract" : [
     {
-      "text" : "Returns a new scale with the rounding set to the value you provide.",
+      "text" : "Returns a new scale with the transform set to the value you provide.",
       "type" : "text"
     }
   ],
@@ -644,7 +684,7 @@
     },
     {
       "kind" : "identifier",
-      "text" : "round"
+      "text" : "transform"
     },
     {
       "kind" : "text",
@@ -652,8 +692,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sb",
-      "text" : "Bool"
+      "preciseIdentifier" : "s:13SwiftVizScale19DomainDataTransformO",
+      "text" : "DomainDataTransform"
     },
     {
       "kind" : "text",
@@ -661,8 +701,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V",
-      "text" : "PointScale"
+      "preciseIdentifier" : "s:13SwiftVizScale06LinearC0V",
+      "text" : "LinearScale"
     },
     {
       "kind" : "text",
@@ -670,7 +710,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "CategoryType"
+      "text" : "InputType"
     },
     {
       "kind" : "text",
@@ -685,12 +725,12 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/round(_:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale\/transform(_:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "round(_:)",
+  "title" : "transform(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/pointscale\/round(_:)"
+  "url" : "\/documentation\/swiftvizscale\/linearscale\/transform(_:)"
 }
 }
 }

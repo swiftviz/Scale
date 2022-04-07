@@ -10,8 +10,11 @@
 
 - ``SwiftVizScale/AnyContinuousScale/scaleType(_:)``
 - ``SwiftVizScale/AnyContinuousScale/domain(lower:higher:)``
-- ``SwiftVizScale/AnyContinuousScale/transform(_:)``
+- ``SwiftVizScale/AnyContinuousScale/domain(_:)-2c2ej``
+- ``SwiftVizScale/AnyContinuousScale/domain(_:)-esgw``
 - ``SwiftVizScale/AnyContinuousScale/range(lower:higher:)``
+- ``SwiftVizScale/AnyContinuousScale/range(_:)``
+- ``SwiftVizScale/AnyContinuousScale/transform(_:)``
 
 ### Inspecting Scales
 

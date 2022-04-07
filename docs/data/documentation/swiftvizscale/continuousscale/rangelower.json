@@ -250,7 +250,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/OutputType": {
   "abstract" : [
     {
-      "text" : "The type used for the scale’s range.",
+      "text" : "The type used for the scale’s output.",
       "type" : "text"
     }
   ],

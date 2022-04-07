@@ -10,8 +10,9 @@
 
 ### Updating Scales
 
-- ``SwiftVizScale/PowerScale/domain(_:)``
 - ``SwiftVizScale/PowerScale/domain(lower:higher:)``
+- ``SwiftVizScale/PowerScale/domain(_:)-6gsv``
+- ``SwiftVizScale/PowerScale/domain(_:)-6w4dt``
 - ``SwiftVizScale/PowerScale/transform(_:)``
 - ``SwiftVizScale/PowerScale/range(_:)``
 - ``SwiftVizScale/PowerScale/range(lower:higher:)``

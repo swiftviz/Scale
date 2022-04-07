@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "No overview available.",
+      "text" : "The type of continuous scale.",
       "type" : "text"
     }
   ],
@@ -76,6 +76,35 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Exponential scales (",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ") require an additional value for the exponent of the scale.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     }
   ],
   "relationshipsSections" : [
@@ -164,7 +193,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/AnyContinuousScale": {
   "abstract" : [
-
+    {
+      "text" : "A type-erased continuous scale.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -255,7 +287,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScaleType": {
   "abstract" : [
-
+    {
+      "text" : "The type of continuous scale.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -297,7 +332,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScaleType/linear": {
   "abstract" : [
-
+    {
+      "text" : "A linear continuous scale.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -322,7 +360,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScaleType/log": {
   "abstract" : [
-
+    {
+      "text" : "A logarithmic continuous scale.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -347,7 +388,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScaleType/power(_:)": {
   "abstract" : [
-
+    {
+      "text" : "An exponential continuous scale.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -385,7 +429,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScaleType/radial": {
   "abstract" : [
-
+    {
+      "text" : "A linear continuous scale that squares the result.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

@@ -9,17 +9,17 @@
     "paths" : [
       [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/domain(_:)"
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/domain(_:)-6w4dt"
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:13SwiftVizScale03LogC0V6domainyACyxq_GSNyxGF",
+    "externalID" : "s:13SwiftVizScale05PowerC0V6domainyACyxq_GSNyxGF",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -48,7 +48,7 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale03LogC0V9InputTypexmfp",
+        "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V9InputTypexmfp",
         "text" : "InputType"
       },
       {
@@ -57,8 +57,8 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale03LogC0V",
-        "text" : "LogScale"
+        "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V",
+        "text" : "PowerScale"
       },
       {
         "kind" : "text",
@@ -145,7 +145,7 @@
             },
             {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale03LogC0V9InputTypexmfp",
+              "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V9InputTypexmfp",
               "text" : "InputType"
             },
             {
@@ -153,10 +153,10 @@
               "text" : ">) -> "
             },
             {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale",
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale03LogC0V",
-              "text" : "LogScale"
+              "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V",
+              "text" : "PowerScale"
             },
             {
               "kind" : "text",
@@ -235,10 +235,11 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/domain(lower:higher:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/transform(_:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/range(_:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/range(lower:higher:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/domain(lower:higher:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/domain(_:)-6gsv",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/transform(_:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/range(_:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/range(lower:higher:)"
       ],
       "title" : "Updating Scales"
     }
@@ -246,7 +247,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/swiftvizscale\/logscale\/domain(_:)"
+        "\/documentation\/swiftvizscale\/powerscale\/domain(_:)-6w4dt"
       ],
       "traits" : [
         {
@@ -271,10 +272,10 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale": {
   "abstract" : [
     {
-      "text" : "A logarithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
+      "text" : "A power scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
       "type" : "text"
     }
   ],
@@ -289,26 +290,26 @@
     },
     {
       "kind" : "identifier",
-      "text" : "LogScale"
+      "text" : "PowerScale"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "LogScale"
+      "text" : "PowerScale"
     }
   ],
   "role" : "symbol",
-  "title" : "LogScale",
+  "title" : "PowerScale",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/logscale"
+  "url" : "\/documentation\/swiftvizscale\/powerscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/domain(_:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/domain(_:)-6gsv": {
   "abstract" : [
     {
-      "text" : "Returns a new scale with the domain set to the values you provide.",
+      "text" : "Returns a new scale with the domain set to span the values you provide.",
       "type" : "text"
     }
   ],
@@ -327,30 +328,21 @@
     },
     {
       "kind" : "text",
-      "text" : "("
+      "text" : "(["
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SN",
-      "text" : "ClosedRange"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V9InputTypexmfp",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V9InputTypexmfp",
       "text" : "InputType"
     },
     {
       "kind" : "text",
-      "text" : ">) -> "
+      "text" : "]) -> "
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V",
-      "text" : "LogScale"
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V",
+      "text" : "PowerScale"
     },
     {
       "kind" : "text",
@@ -373,14 +365,89 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/domain(_:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/domain(_:)-6gsv",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "domain(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/logscale\/domain(_:)"
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/domain(_:)-6gsv"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/domain(lower:higher:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/domain(_:)-6w4dt": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the domain set to the values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domain"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SN",
+      "text" : "ClosedRange"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V",
+      "text" : "PowerScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/domain(_:)-6w4dt",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domain(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/domain(_:)-6w4dt"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/domain(lower:higher:)": {
   "abstract" : [
     {
       "text" : "Returns a new scale with the domain set to the values you provide.",
@@ -414,7 +481,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V9InputTypexmfp",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V9InputTypexmfp",
       "text" : "InputType"
     },
     {
@@ -431,7 +498,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V9InputTypexmfp",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V9InputTypexmfp",
       "text" : "InputType"
     },
     {
@@ -440,8 +507,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V",
-      "text" : "LogScale"
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V",
+      "text" : "PowerScale"
     },
     {
       "kind" : "text",
@@ -464,14 +531,14 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/domain(lower:higher:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/domain(lower:higher:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "domain(lower:higher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/logscale\/domain(lower:higher:)"
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/domain(lower:higher:)"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/range(_:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/range(_:)": {
   "abstract" : [
     {
       "text" : "Returns a new scale with the range set to the values you provide.",
@@ -506,7 +573,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V10OutputTypeq_mfp",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
       "text" : "OutputType"
     },
     {
@@ -515,8 +582,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V",
-      "text" : "LogScale"
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V",
+      "text" : "PowerScale"
     },
     {
       "kind" : "text",
@@ -539,14 +606,14 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/range(_:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/range(_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "range(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/logscale\/range(_:)"
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/range(_:)"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/range(lower:higher:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/range(lower:higher:)": {
   "abstract" : [
     {
       "text" : "Returns a new scale with the range set to the values you provide.",
@@ -580,7 +647,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V10OutputTypeq_mfp",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
       "text" : "OutputType"
     },
     {
@@ -597,7 +664,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V10OutputTypeq_mfp",
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V10OutputTypeq_mfp",
       "text" : "OutputType"
     },
     {
@@ -606,8 +673,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V",
-      "text" : "LogScale"
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V",
+      "text" : "PowerScale"
     },
     {
       "kind" : "text",
@@ -630,14 +697,14 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/range(lower:higher:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/range(lower:higher:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "range(lower:higher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/logscale\/range(lower:higher:)"
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/range(lower:higher:)"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/transform(_:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/transform(_:)": {
   "abstract" : [
     {
       "text" : "Returns a new scale with the transform set to the value you provide.",
@@ -672,8 +739,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V",
-      "text" : "LogScale"
+      "preciseIdentifier" : "s:13SwiftVizScale05PowerC0V",
+      "text" : "PowerScale"
     },
     {
       "kind" : "text",
@@ -696,12 +763,12 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/transform(_:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/transform(_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "transform(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/logscale\/transform(_:)"
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/transform(_:)"
 }
 }
 }

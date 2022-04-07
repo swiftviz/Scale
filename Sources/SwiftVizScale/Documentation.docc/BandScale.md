@@ -13,7 +13,7 @@
 - ``SwiftVizScale/BandScale/paddingInner(_:)``
 - ``SwiftVizScale/BandScale/paddingOuter(_:)``
 - ``SwiftVizScale/BandScale/range(_:)``
-- ``SwiftVizScale/BandScale/range(from:to:)``
+- ``SwiftVizScale/BandScale/range(lower:higher:)``
 
 ### Inspecting Scales
 
