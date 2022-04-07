@@ -105,6 +105,15 @@ public struct RadialScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
         type(of: self).init(from: range.lowerBound, to: range.upperBound, transform: transformType, desiredTicks: desiredTicks, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
+    /// Returns a new scale with the domain set to span the values you provide.
+    /// - Parameter values: An array of input values.
+    public func domain(_ values: [InputType]) -> Self {
+        guard let min = values.min(), let max = values.max() else {
+            return self
+        }
+        return domain(lower: min, higher: max)
+    }
+
     /// Returns a new scale with the range set to the values you provide.
     /// - Parameters:
     ///   - lower: The lower bound for the scale's range.

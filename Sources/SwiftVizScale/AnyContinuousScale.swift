@@ -72,6 +72,14 @@ internal class _AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
         _abstract()
     }
 
+    func domain(_: ClosedRange<InputType>) -> Self {
+        _abstract()
+    }
+
+    func domain(_: [InputType]) -> Self {
+        _abstract()
+    }
+
     func range(lower _: OutputType, higher _: OutputType) -> Self {
         _abstract()
     }
@@ -149,6 +157,14 @@ internal final class _ContinuousScale<WrappedContinuousScale: ContinuousScale>: 
 
     override public func domain(lower: InputType, higher: InputType) -> Self {
         Self(_base.domain(lower: lower, higher: higher))
+    }
+
+    override public func domain(_ domain: ClosedRange<InputType>) -> Self {
+        Self(_base.domain(domain))
+    }
+
+    override public func domain(_ values: [InputType]) -> Self {
+        Self(_base.domain(values))
     }
 
     override public func range(lower: OutputType, higher: OutputType) -> Self {
@@ -233,6 +249,18 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
     public func domain(lower: InputType, higher: InputType) -> Self {
         AnyContinuousScale(
             _box.domain(lower: lower, higher: higher)
+        )
+    }
+
+    public func domain(_ range: ClosedRange<InputType>) -> AnyContinuousScale<InputType, OutputType> {
+        AnyContinuousScale(
+            _box.domain(range)
+        )
+    }
+
+    public func domain(_ values: [InputType]) -> AnyContinuousScale<InputType, OutputType> {
+        AnyContinuousScale(
+            _box.domain(values)
         )
     }
 

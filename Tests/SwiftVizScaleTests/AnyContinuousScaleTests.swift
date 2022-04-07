@@ -63,4 +63,13 @@ class AnyContinuousScaleTests: XCTestCase {
         let power = linearScale.scaleType(.power(2))
         XCTAssertEqual(power.scaleType, .power(2))
     }
+
+    func testArrayDomainModifier() {
+        let myScale = AnyContinuousScale(LinearScale<Double, CGFloat>(1.0 ... 50.0))
+        XCTAssertEqual(myScale.scaleType, .linear)
+
+        let updated = myScale.domain([0.0, 15.0, 5.0])
+        XCTAssertEqual(updated.domainLower, 0.0)
+        XCTAssertEqual(updated.domainHigher, 15.0)
+    }
 }

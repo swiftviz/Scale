@@ -8,7 +8,7 @@
 /// A type that maps values from an input _domain_ to an output _range_.
 public protocol Scale {
     /// The type used for the scale's domain.
-    associatedtype InputType
+    associatedtype InputType: Comparable
     /// The type used for the scale's range.
     associatedtype RangeType: ConvertibleWithDouble
     /// The type used for the scale's output.
@@ -31,6 +31,8 @@ public protocol Scale {
     /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
     func invert(_ rangeValue: OutputType) -> InputType?
 
+    // MARK: - modifier functions
+
     /// Returns a new scale with the range set to the values you provide.
     /// - Parameters:
     ///   - from: The lower value of the range into which the discrete values map.
@@ -40,4 +42,8 @@ public protocol Scale {
     /// Returns a new scale with the range set to the range you provide.
     /// - Parameter range: The range of the values into which the discrete values map.
     func range(_ range: ClosedRange<RangeType>) -> Self
+
+    /// Returns a new scale with the domain set to span the values you provide.
+    /// - Parameter values: An array of input values.
+    func domain(_ values: [InputType]) -> Self
 }

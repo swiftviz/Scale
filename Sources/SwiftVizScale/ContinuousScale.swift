@@ -71,12 +71,24 @@ public protocol ContinuousScale: Scale where InputType: ConvertibleWithDouble & 
     /// - Returns: A replica of the scale, with new domain values.
     func domain(lower: InputType, higher: InputType) -> Self
 
+    /// Returns a new scale with the domain set to the values you provide.
+    /// - Parameters:
+    ///   - range: The range to apply as the scale's domain
+    /// - Returns: A copy of the scale with the domain values you provide.
+    func domain(_ range: ClosedRange<InputType>) -> Self
+
     /// Returns a new scale with the range set to the values you provide.
     /// - Parameters:
     ///   - lower: The lower bound for the scale's range.
     ///   - higher: The upper bound for the scale's range.
     /// - Returns: A replica of the scale, with new range values.
     func range(lower: RangeType, higher: RangeType) -> Self
+
+    /// Returns a new scale with the range set to the values you provide.
+    /// - Parameters:
+    ///   - range: The range to apply as the scale's range.
+    /// - Returns: A copy of the scale with the range values you provide.
+    func range(_ range: ClosedRange<OutputType>) -> Self
 
     /// Returns a new scale with the transform set to the value you provide.
     /// - Parameters:
