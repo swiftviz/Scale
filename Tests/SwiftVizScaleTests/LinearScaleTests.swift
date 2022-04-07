@@ -37,6 +37,15 @@ final class LinearScaleTests: XCTestCase {
         }
     }
 
+    func testArrayDomainModifier() {
+        let myScale = LinearScale<Double, Float>(from: 0.0, to: 1.0)
+        XCTAssertEqual(myScale.transformType, .none)
+
+        let updated = myScale.domain([0.0, 10.0, 5.0])
+        XCTAssertEqual(updated.domainLower, 0.0)
+        XCTAssertEqual(updated.domainHigher, 10.0)
+    }
+
     func testFloatLinearScaleTicks() {
         let myScale = LinearScale<Float, Float>(from: 0.0, to: 1.0)
         XCTAssertEqual(myScale.transformType, .none)

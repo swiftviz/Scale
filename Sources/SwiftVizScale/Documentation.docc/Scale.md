@@ -7,6 +7,11 @@
 - ``SwiftVizScale/Scale/InputType``
 - ``SwiftVizScale/Scale/OutputType``
 
+### Updating Scales
+
+- ``SwiftVizScale/Scale/range(lower:higher:)``
+- ``SwiftVizScale/Scale/range(_:)``
+
 ### Converting Values 
 
 - ``SwiftVizScale/Scale/scale(_:)``
