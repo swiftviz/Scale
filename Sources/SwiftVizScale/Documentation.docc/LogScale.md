@@ -9,8 +9,9 @@
 
 ### Updating Scales
 
-- ``SwiftVizScale/LogScale/domain(_:)``
 - ``SwiftVizScale/LogScale/domain(lower:higher:)``
+- ``SwiftVizScale/LogScale/domain(_:)-1itfq``
+- ``SwiftVizScale/LogScale/domain(_:)-3xqw2``
 - ``SwiftVizScale/LogScale/transform(_:)``
 - ``SwiftVizScale/LogScale/range(_:)``
 - ``SwiftVizScale/LogScale/range(lower:higher:)``

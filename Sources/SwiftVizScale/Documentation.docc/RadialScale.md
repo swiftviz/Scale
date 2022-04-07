@@ -10,8 +10,9 @@
 
 ### Updating Scales
 
-- ``SwiftVizScale/RadialScale/domain(_:)``
 - ``SwiftVizScale/RadialScale/domain(lower:higher:)``
+- ``SwiftVizScale/RadialScale/domain(_:)-84a8n``
+- ``SwiftVizScale/RadialScale/domain(_:)-8golr``
 - ``SwiftVizScale/RadialScale/transform(_:)``
 - ``SwiftVizScale/RadialScale/range(_:)``
 - ``SwiftVizScale/RadialScale/range(lower:higher:)``

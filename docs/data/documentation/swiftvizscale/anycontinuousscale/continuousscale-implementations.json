@@ -77,7 +77,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/AnyContinuousScale": {
   "abstract" : [
-
+    {
+      "text" : "A type-erased continuous scale.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

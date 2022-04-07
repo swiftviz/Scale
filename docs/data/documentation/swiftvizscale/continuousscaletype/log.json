@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "No overview available.",
+      "text" : "A logarithmic continuous scale.",
       "type" : "text"
     }
   ],
@@ -111,7 +111,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScaleType": {
   "abstract" : [
-
+    {
+      "text" : "The type of continuous scale.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -142,7 +145,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScaleType/log": {
   "abstract" : [
-
+    {
+      "text" : "A logarithmic continuous scale.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

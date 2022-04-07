@@ -10,8 +10,9 @@
 
 ### Updating Scales
 
-- ``SwiftVizScale/LinearScale/domain(_:)``
 - ``SwiftVizScale/LinearScale/domain(lower:higher:)``
+- ``SwiftVizScale/LinearScale/domain(_:)-36okr``
+- ``SwiftVizScale/LinearScale/domain(_:)-9tccc``
 - ``SwiftVizScale/LinearScale/transform(_:)``
 - ``SwiftVizScale/LinearScale/range(_:)``
 - ``SwiftVizScale/LinearScale/range(lower:higher:)``

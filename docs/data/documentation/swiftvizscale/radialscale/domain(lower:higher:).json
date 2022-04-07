@@ -265,7 +265,8 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/domain(_:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/domain(_:)-84a8n",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/domain(_:)-8golr",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/transform(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/range(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/range(lower:higher:)"
@@ -335,7 +336,73 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/radialscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/RadialScale/domain(_:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/RadialScale/domain(_:)-84a8n": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the domain set to span the values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domain"
+    },
+    {
+      "kind" : "text",
+      "text" : "(["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06RadialC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "]) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale06RadialC0V",
+      "text" : "RadialScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/domain(_:)-84a8n",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domain(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/radialscale\/domain(_:)-84a8n"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/RadialScale/domain(_:)-8golr": {
   "abstract" : [
     {
       "text" : "Returns a new scale with the domain set to the values you provide.",
@@ -403,12 +470,12 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/domain(_:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/domain(_:)-8golr",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "domain(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/radialscale\/domain(_:)"
+  "url" : "\/documentation\/swiftvizscale\/radialscale\/domain(_:)-8golr"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/RadialScale/domain(lower:higher:)": {
   "abstract" : [

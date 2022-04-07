@@ -9,6 +9,7 @@
 
 ### Updating Scales
 
+- ``SwiftVizScale/Scale/domain(_:)``
 - ``SwiftVizScale/Scale/range(lower:higher:)``
 - ``SwiftVizScale/Scale/range(_:)``
 

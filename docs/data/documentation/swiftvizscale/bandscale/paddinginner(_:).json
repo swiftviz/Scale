@@ -201,7 +201,7 @@
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/round(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/paddingOuter(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/range(_:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/range(from:to:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/range(lower:higher:)"
       ],
       "title" : "Updating Scales"
     }
@@ -554,7 +554,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/bandscale\/range(_:)"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/range(from:to:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/range(lower:higher:)": {
   "abstract" : [
     {
       "text" : "Returns a new scale with the range set to the values you provide.",
@@ -580,7 +580,7 @@
     },
     {
       "kind" : "externalParam",
-      "text" : "from"
+      "text" : "lower"
     },
     {
       "kind" : "text",
@@ -597,7 +597,7 @@
     },
     {
       "kind" : "externalParam",
-      "text" : "to"
+      "text" : "higher"
     },
     {
       "kind" : "text",
@@ -638,12 +638,12 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/range(from:to:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/range(lower:higher:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "range(from:to:)",
+  "title" : "range(lower:higher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/bandscale\/range(from:to:)"
+  "url" : "\/documentation\/swiftvizscale\/bandscale\/range(lower:higher:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/round(_:)": {
   "abstract" : [

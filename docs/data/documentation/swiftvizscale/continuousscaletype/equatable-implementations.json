@@ -74,7 +74,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScaleType": {
   "abstract" : [
-
+    {
+      "text" : "The type of continuous scale.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

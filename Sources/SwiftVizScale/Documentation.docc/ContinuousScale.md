@@ -11,6 +11,13 @@
 - ``SwiftVizScale/DomainDataTransform``
 - ``SwiftVizScale/ContinuousScale/scaleType``
 
+### Updating Scales
+
+- ``SwiftVizScale/ContinuousScale/domain(_:)``
+- ``SwiftVizScale/ContinuousScale/domain(lower:higher:)``
+- ``SwiftVizScale/ContinuousScale/range(_:)``
+- ``SwiftVizScale/ContinuousScale/range(lower:higher:)``
+- ``SwiftVizScale/ContinuousScale/transform(_:)``
 
 ### Converting Values 
 

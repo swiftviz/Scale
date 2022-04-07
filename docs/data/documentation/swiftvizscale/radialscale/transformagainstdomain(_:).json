@@ -650,6 +650,15 @@
     {
       "kind" : "identifier",
       "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : " : "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SL",
+      "text" : "Comparable"
     }
   ],
   "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType",

@@ -265,8 +265,9 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/domain(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/domain(lower:higher:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/domain(_:)-1itfq",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/domain(_:)-3xqw2",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/transform(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/range(_:)"
       ],
@@ -335,7 +336,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/logscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/domain(_:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/domain(_:)-1itfq": {
   "abstract" : [
     {
       "text" : "Returns a new scale with the domain set to the values you provide.",
@@ -403,12 +404,78 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/domain(_:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/domain(_:)-1itfq",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "domain(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/logscale\/domain(_:)"
+  "url" : "\/documentation\/swiftvizscale\/logscale\/domain(_:)-1itfq"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/domain(_:)-3xqw2": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the domain set to span the values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domain"
+    },
+    {
+      "kind" : "text",
+      "text" : "(["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "]) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V",
+      "text" : "LogScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/domain(_:)-3xqw2",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domain(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/logscale\/domain(_:)-3xqw2"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/domain(lower:higher:)": {
   "abstract" : [

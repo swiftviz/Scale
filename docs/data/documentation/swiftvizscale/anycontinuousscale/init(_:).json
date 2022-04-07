@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "No overview available.",
+      "text" : "Creates a type-erased continuous scale.",
       "type" : "text"
     }
   ],
@@ -31,7 +31,7 @@
       },
       {
         "kind" : "genericParameter",
-        "text" : "CS"
+        "text" : "WrappedScale"
       },
       {
         "kind" : "text",
@@ -39,8 +39,8 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale013AnyContinuousC0VyACyxq_Gqd__c9InputTypeQyd__Rsz06OutputG0Qyd__Rs_AA0eC0Rd__lufc2CSL_qd__mfp",
-        "text" : "CS"
+        "preciseIdentifier" : "s:13SwiftVizScale013AnyContinuousC0VyACyxq_Gqd__c9InputTypeQyd__Rsz06OutputG0Qyd__Rs_AA0eC0Rd__lufc07WrappedC0L_qd__mfp",
+        "text" : "WrappedScale"
       },
       {
         "kind" : "text",
@@ -78,7 +78,7 @@
             },
             {
               "kind" : "genericParameter",
-              "text" : "CS"
+              "text" : "WrappedScale"
             },
             {
               "kind" : "text",
@@ -102,8 +102,8 @@
             },
             {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale013AnyContinuousC0VyACyxq_Gqd__c9InputTypeQyd__Rsz06OutputG0Qyd__Rs_AA0eC0Rd__lufc2CSL_qd__mfp",
-              "text" : "CS"
+              "preciseIdentifier" : "s:13SwiftVizScale013AnyContinuousC0VyACyxq_Gqd__c9InputTypeQyd__Rsz06OutputG0Qyd__Rs_AA0eC0Rd__lufc07WrappedC0L_qd__mfp",
+              "text" : "WrappedScale"
             },
             {
               "kind" : "text",
@@ -127,7 +127,7 @@
             },
             {
               "kind" : "typeIdentifier",
-              "text" : "CS"
+              "text" : "WrappedScale"
             },
             {
               "kind" : "text",
@@ -151,7 +151,7 @@
             },
             {
               "kind" : "typeIdentifier",
-              "text" : "CS"
+              "text" : "WrappedScale"
             },
             {
               "kind" : "text",
@@ -167,7 +167,7 @@
             },
             {
               "kind" : "typeIdentifier",
-              "text" : "CS"
+              "text" : "WrappedScale"
             },
             {
               "kind" : "text",
@@ -183,6 +183,25 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The continuous scale to wrap.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "base"
+        }
+      ]
     }
   ],
   "schemaVersion" : {
@@ -223,7 +242,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/AnyContinuousScale": {
   "abstract" : [
-
+    {
+      "text" : "A type-erased continuous scale.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -254,7 +276,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/AnyContinuousScale/init(_:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates a type-erased continuous scale.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -267,7 +292,7 @@
     },
     {
       "kind" : "genericParameter",
-      "text" : "CS"
+      "text" : "WrappedScale"
     },
     {
       "kind" : "text",
@@ -275,8 +300,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale013AnyContinuousC0VyACyxq_Gqd__c9InputTypeQyd__Rsz06OutputG0Qyd__Rs_AA0eC0Rd__lufc2CSL_qd__mfp",
-      "text" : "CS"
+      "preciseIdentifier" : "s:13SwiftVizScale013AnyContinuousC0VyACyxq_Gqd__c9InputTypeQyd__Rsz06OutputG0Qyd__Rs_AA0eC0Rd__lufc07WrappedC0L_qd__mfp",
+      "text" : "WrappedScale"
     },
     {
       "kind" : "text",

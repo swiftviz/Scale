@@ -32,6 +32,15 @@
       {
         "kind" : "identifier",
         "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : " : "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SL",
+        "text" : "Comparable"
       }
     ],
     "modules" : [
@@ -67,6 +76,15 @@
             {
               "kind" : "identifier",
               "text" : "InputType"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SL",
+              "text" : "Comparable"
             }
           ]
         }
@@ -198,6 +216,15 @@
     {
       "kind" : "identifier",
       "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : " : "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SL",
+      "text" : "Comparable"
     }
   ],
   "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType",
@@ -211,7 +238,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/OutputType": {
   "abstract" : [
     {
-      "text" : "The type used for the scale’s range.",
+      "text" : "The type used for the scale’s output.",
       "type" : "text"
     }
   ],
