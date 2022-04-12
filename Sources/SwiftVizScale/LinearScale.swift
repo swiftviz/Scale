@@ -101,10 +101,25 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
     /// Returns a new scale with the domain set to span the values you provide.
     /// - Parameter values: An array of input values.
     public func domain(_ values: [InputType]) -> Self {
+        domain(values, nice: true)
+    }
+
+    /// Returns a new scale with the domain inferred from the list of values you provide.
+    /// - Parameters:
+    ///   - values: The list of values to use to determine the scale's domain.
+    ///   - nice: A Boolean value that indicates whether to expand the domain to visually nice values.
+    /// - Returns: A copy of the scale with the domain values you provide.
+    public func domain(_ values: [InputType], nice: Bool) -> LinearScale<InputType, OutputType> {
         guard let min = values.min(), let max = values.max() else {
             return self
         }
-        return domain(lower: min, higher: max)
+        if nice {
+            let bottom = Double.niceMinimumValueForRange(min: min.toDouble(), max: max.toDouble())
+            let top = Double.niceVersion(for: max.toDouble(), min: false)
+            return domain(lower: InputType.fromDouble(bottom), higher: InputType.fromDouble(top))
+        } else {
+            return domain(lower: min, higher: max)
+        }
     }
 
     /// Returns a new scale with the range set to the values you provide.

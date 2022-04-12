@@ -80,6 +80,10 @@ internal class _AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
         _abstract()
     }
 
+    func domain(_: [InputType], nice _: Bool) -> Self {
+        _abstract()
+    }
+
     func range(lower _: OutputType, higher _: OutputType) -> Self {
         _abstract()
     }
@@ -167,6 +171,10 @@ internal final class _ContinuousScale<WrappedContinuousScale: ContinuousScale>: 
         Self(_base.domain(values))
     }
 
+    override func domain(_ values: [InputType], nice: Bool) -> Self {
+        Self(_base.domain(values, nice: nice))
+    }
+
     override public func range(lower: OutputType, higher: OutputType) -> Self {
         Self(_base.range(lower: lower, higher: higher))
     }
@@ -214,62 +222,101 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
 
     // ContinuousScale Conformance
 
+    /// A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
+    ///
+    /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
+    /// are constrained to the input domain.
     public var transformType: DomainDataTransform {
         _box.transformType
     }
 
+    /// The type of continuous scale.
     public var scaleType: ContinuousScaleType {
         _box.scaleType
     }
 
+    /// The lower bound of the input domain.
     public var domainLower: InputType {
         _box.domainLower
     }
 
+    /// The upper bound of the input domain.
     public var domainHigher: InputType {
         _box.domainHigher
     }
 
+    /// The distance or length between the upper and lower bounds of the input domain.
     public var domainExtent: InputType {
         _box.domainExtent
     }
 
+    /// The number of requested tick marks for the scale.
     public var desiredTicks: Int {
         _box.desiredTicks
     }
 
+    /// The lower bound of the input domain.
     public var rangeLower: OutputType? {
         _box.rangeLower
     }
 
+    /// The upper bound of the input domain.
     public var rangeHigher: OutputType? {
         _box.rangeHigher
     }
 
+    /// Returns a new scale with the domain set to the values you provide.
+    /// - Parameters:
+    ///   - lower: The lower bound for the scale's domain.
+    ///   - higher: The upper bound for the scale's domain.
+    /// - Returns: A replica of the scale, with new domain values.
     public func domain(lower: InputType, higher: InputType) -> Self {
         AnyContinuousScale(
             _box.domain(lower: lower, higher: higher)
         )
     }
 
+    /// Returns a new scale with the domain set to the values you provide.
+    /// - Parameters:
+    ///   - range: The range to apply as the scale's domain
+    /// - Returns: A copy of the scale with the domain values you provide.
     public func domain(_ range: ClosedRange<InputType>) -> AnyContinuousScale<InputType, OutputType> {
         AnyContinuousScale(
             _box.domain(range)
         )
     }
 
+    /// Returns a new scale with the domain set to span the values you provide.
+    /// - Parameter values: An array of input values.
     public func domain(_ values: [InputType]) -> AnyContinuousScale<InputType, OutputType> {
         AnyContinuousScale(
             _box.domain(values)
         )
     }
 
+    /// Returns a new scale with the domain inferred from the list of values you provide.
+    /// - Parameters:
+    ///   - values: The list of values to use to determine the scale's domain.
+    ///   - nice: A Boolean value that indicates whether to expand the domain to visually nice values.
+    /// - Returns: A copy of the scale with the domain values you provide.
+    public func domain(_ values: [InputType], nice: Bool) -> AnyContinuousScale<InputType, OutputType> {
+        AnyContinuousScale(
+            _box.domain(values, nice: nice)
+        )
+    }
+
+    /// Returns a new scale with the range set to the values you provide.
+    /// - Parameters:
+    ///   - from: The lower value of the range into which the discrete values map.
+    ///   - to: The upper value of the range into which the discrete values map.
     public func range(lower: OutputType, higher: OutputType) -> Self {
         AnyContinuousScale(
             _box.range(lower: lower, higher: higher)
         )
     }
 
+    /// Returns a new scale with the range set to the range you provide.
+    /// - Parameter range: The range of the values into which the discrete values map.
     public func range(_ range: ClosedRange<OutputType>) -> Self {
         AnyContinuousScale(
             _box.range(range)
@@ -282,20 +329,50 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
         )
     }
 
+    /// Converts back from the output _range_ to a value within the input _domain_.
+    ///
+    /// The inverse of ``ContinuousScale/scale(_:from:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    ///
+    /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
+    /// - Parameter from: The lower bounding value of the range to transform from.
+    /// - Parameter to: The higher bounding value of the range to transform from.
+    /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
     public func invert(_ rangeValue: OutputType, from: OutputType, to: OutputType) -> InputType? {
         _box.invert(rangeValue, from: from, to: to)
     }
 
+    /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
+    ///
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    ///
+    /// - Parameter inputValue: The value to be scaled.
+    /// - Parameter from: The lower bounding value of the range to transform to.
+    /// - Parameter to: The higher bounding value of the range to transform to.
+    /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
     public func scale(_ domainValue: InputType, from: OutputType, to: OutputType) -> OutputType? {
         _box.scale(domainValue, from: from, to: to)
     }
 
     // Scale Conformance
 
+    /// Converts back from the output _range_ to a value within the input _domain_.
+    ///
+    /// The inverse of ``ContinuousScale/scale(_:from:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    ///
+    /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
+    /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
     public func invert(_ rangeValue: OutputType) -> InputType? {
         _box.invert(rangeValue)
     }
 
+    /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
+    ///
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    ///
+    /// - Parameter inputValue: The value to be scaled.
+    /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
     public func scale(_ domainValue: InputType) -> OutputType? {
         _box.scale(domainValue)
     }

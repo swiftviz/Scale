@@ -113,7 +113,7 @@ class PowerScaleTests: XCTestCase {
         XCTAssertEqual(myScale.transformType, .none)
 
         let updated = myScale.domain([1.0, 15.0, 5.0])
-        XCTAssertEqual(updated.domainLower, 1.0)
-        XCTAssertEqual(updated.domainHigher, 15.0)
+        XCTAssertEqual(updated.domainLower, 0.0)
+        XCTAssertEqual(updated.domainHigher, 20.0)
     }
 }
