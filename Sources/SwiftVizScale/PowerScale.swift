@@ -49,7 +49,7 @@ public struct PowerScale<InputType: ConvertibleWithDouble & NiceValue, OutputTyp
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init(from lower: InputType = 0, to higher: InputType = 1, exponent: Double = 1, transform: DomainDataTransform = .none, desiredTicks: Int = 10, rangeLower: OutputType? = nil, rangeHigher: OutputType? = nil) {
-        precondition(lower < higher, "attempting to set an inverted or empty domain: \(lower) to \(higher)")
+        precondition(lower <= higher, "attempting to set an inverted domain: \(lower) to \(higher)")
         transformType = transform
         domainLower = lower
         domainHigher = higher

@@ -41,7 +41,7 @@ public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType:
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init(from lower: InputType = 1, to higher: InputType = 10, transform: DomainDataTransform = .none, desiredTicks: Int = 10, rangeLower: OutputType? = nil, rangeHigher: OutputType? = nil) {
-        precondition(lower < higher, "attempting to set an inverted or empty domain: \(lower) to \(higher)")
+        precondition(lower <= higher, "attempting to set an inverted domain: \(lower) to \(higher)")
         precondition(lower.toDouble() > 0.0, "attempting to set a log scale to start at 0.0")
         transformType = transform
         domainLower = lower
