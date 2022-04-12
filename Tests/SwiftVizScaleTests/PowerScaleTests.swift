@@ -116,4 +116,13 @@ class PowerScaleTests: XCTestCase {
         XCTAssertEqual(updated.domainLower, 0.0)
         XCTAssertEqual(updated.domainHigher, 20.0)
     }
+
+    func testArrayDomainModifierWithoutNice() {
+        let myScale = PowerScale<Double, Float>(from: 1.0, to: 10.0)
+        XCTAssertEqual(myScale.transformType, .none)
+
+        let updated = myScale.domain([1.0, 15.0, 5.0], nice: false)
+        XCTAssertEqual(updated.domainLower, 1.0)
+        XCTAssertEqual(updated.domainHigher, 15.0)
+    }
 }
