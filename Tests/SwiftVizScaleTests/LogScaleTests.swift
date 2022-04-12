@@ -296,10 +296,10 @@ class LogScaleTests: XCTestCase {
         XCTAssertEqual(updated.domainLower, 10.0)
         XCTAssertEqual(updated.domainHigher, 51.0)
     }
-    
+
     func testScaleDomainOfOneValue() {
         let scale = LogScale<Double, CGFloat>()
-        
+
         let updated = scale.domain([5.0])
         XCTAssertEqual(updated.domainLower, 5)
         XCTAssertEqual(updated.domainHigher, 5)
@@ -307,10 +307,9 @@ class LogScaleTests: XCTestCase {
 
     func testScaleDomainOfOneValueNiced() {
         let scale = LogScale<Double, CGFloat>()
-        
+
         let updated = scale.domain([5.0], nice: true)
         XCTAssertEqual(updated.domainLower, 5)
         XCTAssertEqual(updated.domainHigher, 5)
     }
-
 }
