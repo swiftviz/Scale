@@ -142,6 +142,6 @@ class RadialScaleTests: XCTestCase {
 
         let updated = myScale.domain([0.0, 15.0, 5.0])
         XCTAssertEqual(updated.domainLower, 0.0)
-        XCTAssertEqual(updated.domainHigher, 15.0)
+        XCTAssertEqual(updated.domainHigher, 20.0)
     }
 }
