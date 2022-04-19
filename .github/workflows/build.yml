@@ -1,11 +1,15 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
 
-    runs-on: macOS-latest
+    runs-on: macos-latest
 
     steps:
     - name: Checkout Project
@@ -27,11 +31,13 @@ jobs:
     - name: build and test
       run: swift test --enable-code-coverage -v
 
+    - name: Xcode iOS build
+      run: xcodebuild clean test -scheme SwiftVizScale -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 8' -showBuildTimingSummary 
         #- name: check against API breaking changes
         #  run: swift package diagnose-api-breaking-changes 0.5.0
 
-    - name: env review
-      run: env
+    # - name: env review
+    #   run: env
 
     - name: Prepare Code Coverage
       run: xcrun llvm-cov export -format="lcov" .build/debug/SwiftVizScalePackageTests.xctest/Contents/MacOS/SwiftVizScalePackageTests -instr-profile .build/debug/codecov/default.profdata > info.lcov

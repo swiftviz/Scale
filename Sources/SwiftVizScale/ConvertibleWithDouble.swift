@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if canImport(CoreGraphics)
+    import CoreGraphics
+#endif
 
 /// A type that can be consistently converted to and from a Double.
 ///
@@ -42,15 +45,17 @@ extension Float: ConvertibleWithDouble {
     }
 }
 
-extension CGFloat: ConvertibleWithDouble {
-    public func toDouble() -> Double {
-        Double(self)
-    }
+#if canImport(CoreGraphics)
+    extension CGFloat: ConvertibleWithDouble {
+        public func toDouble() -> Double {
+            Double(self)
+        }
 
-    public static func fromDouble(_ x: Double) -> CGFloat {
-        CGFloat(x)
+        public static func fromDouble(_ x: Double) -> CGFloat {
+            CGFloat(x)
+        }
     }
-}
+#endif
 
 extension Double: ConvertibleWithDouble {
     public func toDouble() -> Double {
