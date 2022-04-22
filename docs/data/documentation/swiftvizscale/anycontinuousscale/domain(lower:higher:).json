@@ -576,7 +576,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/AnyContinuousScale/range(_:)": {
   "abstract" : [
     {
-      "text" : "Returns a new scale with the range set to the values you provide.",
+      "text" : "Returns a new scale with the range set to the range you provide.",
       "type" : "text"
     }
   ],

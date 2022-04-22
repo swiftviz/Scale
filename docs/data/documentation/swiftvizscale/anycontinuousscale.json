@@ -279,6 +279,12 @@
       "title" : "Comparing Values"
     },
     {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/AnyContinuousScale\/domain(_:nice:)"
+      ],
+      "title" : "Instance Methods"
+    },
+    {
       "generated" : true,
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/AnyContinuousScale\/ContinuousScale-Implementations"
@@ -540,6 +546,91 @@
   "title" : "domain(_:)",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/anycontinuousscale\/domain(_:)-esgw"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/AnyContinuousScale/domain(_:nice:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the domain inferred from the list of values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domain"
+    },
+    {
+      "kind" : "text",
+      "text" : "(["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale013AnyContinuousC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "], "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "nice"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale013AnyContinuousC0V",
+      "text" : "AnyContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale013AnyContinuousC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale013AnyContinuousC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/AnyContinuousScale\/domain(_:nice:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domain(_:nice:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/anycontinuousscale\/domain(_:nice:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/AnyContinuousScale/domain(lower:higher:)": {
   "abstract" : [
@@ -1086,7 +1177,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/AnyContinuousScale/range(_:)": {
   "abstract" : [
     {
-      "text" : "Returns a new scale with the range set to the values you provide.",
+      "text" : "Returns a new scale with the range set to the range you provide.",
       "type" : "text"
     }
   ],

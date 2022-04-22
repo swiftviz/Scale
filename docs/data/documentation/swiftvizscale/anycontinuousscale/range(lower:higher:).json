@@ -200,26 +200,6 @@
       "kind" : "declarations"
     },
     {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A replica of the scale, with new range values.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
       "kind" : "parameters",
       "parameters" : [
         {
@@ -227,28 +207,28 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The lower bound for the scale’s range.",
+                  "text" : "The lower value of the range into which the discrete values map.",
                   "type" : "text"
                 }
               ],
               "type" : "paragraph"
             }
           ],
-          "name" : "lower"
+          "name" : "from"
         },
         {
           "content" : [
             {
               "inlineContent" : [
                 {
-                  "text" : "The upper bound for the scale’s range.",
+                  "text" : "The upper value of the range into which the discrete values map.",
                   "type" : "text"
                 }
               ],
               "type" : "paragraph"
             }
           ],
-          "name" : "higher"
+          "name" : "to"
         }
       ]
     }
@@ -576,7 +556,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/AnyContinuousScale/range(_:)": {
   "abstract" : [
     {
-      "text" : "Returns a new scale with the range set to the values you provide.",
+      "text" : "Returns a new scale with the range set to the range you provide.",
       "type" : "text"
     }
   ],
