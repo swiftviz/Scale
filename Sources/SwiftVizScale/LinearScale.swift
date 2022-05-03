@@ -43,7 +43,7 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
         domainExtent = higher - lower
         self.desiredTicks = desiredTicks
         if let rangeLower = rangeLower, let rangeHigher = rangeHigher {
-            precondition(lower < higher, "attempting to set an inverted or empty range: \(rangeLower) to \(rangeHigher)")
+            precondition(rangeLower < rangeHigher, "attempting to set an inverted or empty range: \(rangeLower) to \(rangeHigher)")
         }
         self.rangeLower = rangeLower
         self.rangeHigher = rangeHigher
