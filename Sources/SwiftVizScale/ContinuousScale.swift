@@ -29,10 +29,21 @@ public enum DomainDataTransform {
     case drop
     /// Data processed against a scale is clamped to the upper and lower values of the scale's domain.
     case clamp
+
+    var description: String {
+        switch self {
+        case .none:
+            return "none"
+        case .drop:
+            return "drop"
+        case .clamp:
+            return "clamp"
+        }
+    }
 }
 
 /// A type that maps continuous values from an input _domain_ to an output _range_.
-public protocol ContinuousScale: Scale where InputType: ConvertibleWithDouble & NiceValue, RangeType == OutputType {
+public protocol ContinuousScale: Scale, CustomStringConvertible where InputType: ConvertibleWithDouble & NiceValue, RangeType == OutputType {
     /// A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///
     /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
@@ -143,6 +154,10 @@ public protocol ContinuousScale: Scale where InputType: ConvertibleWithDouble & 
 }
 
 public extension ContinuousScale {
+    var description: String {
+        "\(scaleType)(xform:\(transformType))[\(domainLower):\(domainHigher)]->[\(String(describing: rangeLower)):\(String(describing: rangeHigher))]"
+    }
+
     /// Processes a value against the scale, potentially constraining or dropping the value.
     ///
     /// The value is transformed based on the scale's ``ContinuousScale/transformType`` setting.

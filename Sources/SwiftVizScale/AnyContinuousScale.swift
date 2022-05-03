@@ -19,6 +19,19 @@ public enum ContinuousScaleType: Equatable {
     case power(Double)
     /// A linear continuous scale that squares the result.
     case radial
+
+    var description: String {
+        switch self {
+        case .linear:
+            return "linear"
+        case .log:
+            return "log"
+        case .power:
+            return "power"
+        case .radial:
+            return "radial"
+        }
+    }
 }
 
 // fatal error function (with line numbers to debug) that shows when you've accidentally

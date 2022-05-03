@@ -81,4 +81,12 @@ class AnyContinuousScaleTests: XCTestCase {
         XCTAssertEqual(updated.domainLower, 0.0)
         XCTAssertEqual(updated.domainHigher, 15.0)
     }
+
+    func testScaleDescription() {
+        let myScale = AnyContinuousScale(LinearScale<Double, CGFloat>(1.0 ... 50.0))
+        XCTAssertEqual(String(describing: myScale), "linear(xform:none)[1.0:50.0]->[nil:nil]")
+
+        let secondScale = LogScale<Int, CGFloat>(1 ... 100).range(lower: 0, higher: 300)
+        XCTAssertEqual(String(describing: secondScale), "log(xform:none)[1:100]->[Optional(0.0):Optional(300.0)]")
+    }
 }

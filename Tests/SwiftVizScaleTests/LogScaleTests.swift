@@ -284,8 +284,8 @@ class LogScaleTests: XCTestCase {
         XCTAssertEqual(myScale.transformType, .none)
 
         let updated = myScale.domain([1.0, 15.0, 5.0])
-        XCTAssertEqual(updated.domainLower, 1.0)
-        XCTAssertEqual(updated.domainHigher, 15.0)
+        XCTAssertEqual(updated.domainLower, Double.leastNonzeroMagnitude)
+        XCTAssertEqual(updated.domainHigher, 20.0)
     }
 
     func testArrayDomainModifierWithoutNice() {
@@ -294,7 +294,7 @@ class LogScaleTests: XCTestCase {
 
         let updated = myScale.domain([10.0, 15.0, 51.0])
         XCTAssertEqual(updated.domainLower, 10.0)
-        XCTAssertEqual(updated.domainHigher, 51.0)
+        XCTAssertEqual(updated.domainHigher, 100.0)
     }
 
     func testScaleDomainOfOneValue() {

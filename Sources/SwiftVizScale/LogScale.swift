@@ -92,7 +92,7 @@ public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType:
     /// Returns a new scale with the domain set to span the values you provide.
     /// - Parameter values: An array of input values.
     public func domain(_ values: [InputType]) -> Self {
-        domain(values, nice: false)
+        domain(values, nice: true)
     }
 
     /// Returns a new scale with the domain inferred from the list of values you provide.
@@ -114,8 +114,11 @@ public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType:
             }
         } else {
             if nice {
-                let bottom = Double.niceMinimumValueForRange(min: min.toDouble(), max: max.toDouble())
+                var bottom = Double.niceMinimumValueForRange(min: min.toDouble(), max: max.toDouble())
                 let top = Double.niceVersion(for: max.toDouble(), min: false)
+                if bottom == 0 {
+                    bottom = Double.leastNonzeroMagnitude
+                }
                 return domain(lower: InputType.fromDouble(bottom), higher: InputType.fromDouble(top))
             } else {
                 return domain(lower: min, higher: max)
