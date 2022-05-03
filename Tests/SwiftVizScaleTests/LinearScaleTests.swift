@@ -286,7 +286,7 @@ final class LinearScaleTests: XCTestCase {
         let scale = LinearScale<Double, CGFloat>()
 
         let updated = scale.domain([5.0])
-        XCTAssertEqual(updated.domainLower, 5)
+        XCTAssertEqual(updated.domainLower, 0)
         XCTAssertEqual(updated.domainHigher, 5)
     }
 
@@ -294,7 +294,7 @@ final class LinearScaleTests: XCTestCase {
         let scale = LinearScale<Double, CGFloat>()
 
         let updated = scale.domain([5.0], nice: true)
-        XCTAssertEqual(updated.domainLower, 5)
+        XCTAssertEqual(updated.domainLower, 0)
         XCTAssertEqual(updated.domainHigher, 5)
     }
 }

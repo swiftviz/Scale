@@ -42,6 +42,7 @@ public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType:
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init(from lower: InputType = 1, to higher: InputType = 10, transform: DomainDataTransform = .none, desiredTicks: Int = 10, rangeLower: OutputType? = nil, rangeHigher: OutputType? = nil) {
         precondition(lower <= higher, "attempting to set an inverted domain: \(lower) to \(higher)")
+        precondition(lower != higher, "attempting to set an empty domain: \(lower) to \(higher)")
         precondition(lower.toDouble() > 0.0, "attempting to set a log scale to start at 0.0")
         transformType = transform
         domainLower = lower
@@ -103,12 +104,22 @@ public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType:
         guard let min = values.min(), let max = values.max() else {
             return self
         }
-        if nice {
-            let bottom = Double.niceMinimumValueForRange(min: min.toDouble(), max: max.toDouble())
-            let top = Double.niceVersion(for: max.toDouble(), min: false)
-            return domain(lower: InputType.fromDouble(bottom), higher: InputType.fromDouble(top))
+        if values.count == 1 || min == max {
+            if nice {
+                let bottom = Double.leastNonzeroMagnitude
+                let top = Double.niceVersion(for: max.toDouble(), min: false)
+                return domain(lower: InputType.fromDouble(bottom), higher: InputType.fromDouble(top))
+            } else {
+                return domain(lower: InputType.fromDouble(Double.leastNonzeroMagnitude), higher: max)
+            }
         } else {
-            return domain(lower: min, higher: max)
+            if nice {
+                let bottom = Double.niceMinimumValueForRange(min: min.toDouble(), max: max.toDouble())
+                let top = Double.niceVersion(for: max.toDouble(), min: false)
+                return domain(lower: InputType.fromDouble(bottom), higher: InputType.fromDouble(top))
+            } else {
+                return domain(lower: min, higher: max)
+            }
         }
     }
 

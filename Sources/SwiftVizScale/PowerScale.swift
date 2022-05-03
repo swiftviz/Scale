@@ -50,6 +50,7 @@ public struct PowerScale<InputType: ConvertibleWithDouble & NiceValue, OutputTyp
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init(from lower: InputType = 0, to higher: InputType = 1, exponent: Double = 1, transform: DomainDataTransform = .none, desiredTicks: Int = 10, rangeLower: OutputType? = nil, rangeHigher: OutputType? = nil) {
         precondition(lower <= higher, "attempting to set an inverted domain: \(lower) to \(higher)")
+        precondition(lower != higher, "attempting to set an empty domain: \(lower) to \(higher)")
         transformType = transform
         domainLower = lower
         domainHigher = higher
@@ -129,12 +130,22 @@ public struct PowerScale<InputType: ConvertibleWithDouble & NiceValue, OutputTyp
         guard let min = values.min(), let max = values.max() else {
             return self
         }
-        if nice {
-            let bottom = Double.niceMinimumValueForRange(min: min.toDouble(), max: max.toDouble())
-            let top = Double.niceVersion(for: max.toDouble(), min: false)
-            return domain(lower: InputType.fromDouble(bottom), higher: InputType.fromDouble(top))
+        if values.count == 1 || min == max {
+            if nice {
+                let bottom: Double = 0
+                let top = Double.niceVersion(for: max.toDouble(), min: false)
+                return domain(lower: InputType.fromDouble(bottom), higher: InputType.fromDouble(top))
+            } else {
+                return domain(lower: 0, higher: max)
+            }
         } else {
-            return domain(lower: min, higher: max)
+            if nice {
+                let bottom = Double.niceMinimumValueForRange(min: min.toDouble(), max: max.toDouble())
+                let top = Double.niceVersion(for: max.toDouble(), min: false)
+                return domain(lower: InputType.fromDouble(bottom), higher: InputType.fromDouble(top))
+            } else {
+                return domain(lower: min, higher: max)
+            }
         }
     }
 

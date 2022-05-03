@@ -130,7 +130,7 @@ class PowerScaleTests: XCTestCase {
         let scale = PowerScale<Double, CGFloat>()
 
         let updated = scale.domain([5.0])
-        XCTAssertEqual(updated.domainLower, 5)
+        XCTAssertEqual(updated.domainLower, 0)
         XCTAssertEqual(updated.domainHigher, 5)
     }
 
@@ -138,7 +138,7 @@ class PowerScaleTests: XCTestCase {
         let scale = PowerScale<Double, CGFloat>()
 
         let updated = scale.domain([5.0], nice: true)
-        XCTAssertEqual(updated.domainLower, 5)
+        XCTAssertEqual(updated.domainLower, 0)
         XCTAssertEqual(updated.domainHigher, 5)
     }
 }
