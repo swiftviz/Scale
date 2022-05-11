@@ -9,13 +9,13 @@
     "paths" : [
       [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/Identifiable-Implementations"
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/CustomStringConvertible-Implementations"
   },
   "kind" : "article",
   "metadata" : {
@@ -25,7 +25,7 @@
       }
     ],
     "role" : "collectionGroup",
-    "title" : "Identifiable Implementations"
+    "title" : "CustomStringConvertible Implementations"
   },
   "schemaVersion" : {
     "major" : 0,
@@ -39,7 +39,7 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/id-40sis"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/description"
       ],
       "title" : "Instance Properties"
     }
@@ -47,7 +47,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/swiftvizscale\/tick\/identifiable-implementations"
+        "\/documentation\/swiftvizscale\/powerscale\/customstringconvertible-implementations"
       ],
       "traits" : [
         {
@@ -72,10 +72,10 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale": {
   "abstract" : [
     {
-      "text" : "A  visual representation of a point along an axis.",
+      "text" : "A power scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
       "type" : "text"
     }
   ],
@@ -90,23 +90,23 @@
     },
     {
       "kind" : "identifier",
-      "text" : "Tick"
+      "text" : "PowerScale"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "Tick"
+      "text" : "PowerScale"
     }
   ],
   "role" : "symbol",
-  "title" : "Tick",
+  "title" : "PowerScale",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick"
+  "url" : "\/documentation\/swiftvizscale\/powerscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/id-40sis": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/description": {
   "abstract" : [
 
   ],
@@ -121,7 +121,7 @@
     },
     {
       "kind" : "identifier",
-      "text" : "id"
+      "text" : "description"
     },
     {
       "kind" : "text",
@@ -129,16 +129,16 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SO",
-      "text" : "ObjectIdentifier"
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/id-40sis",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/description",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "id",
+  "title" : "description",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick\/id-40sis"
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/description"
 }
 }
 }

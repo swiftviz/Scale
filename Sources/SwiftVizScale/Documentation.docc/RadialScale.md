@@ -44,7 +44,7 @@
 
 ### Creating Ticks
 
-- ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:)-1jqvw``
-- ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:)-6o3sr``
-- ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:)-8uzv5``
+- ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:)-1avr``
+- ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:)-2yzm0``
+- ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:)-8b7la``
 - ``SwiftVizScale/RadialScale/tickValues(_:from:to:)``

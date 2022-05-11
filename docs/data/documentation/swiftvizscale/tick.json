@@ -78,14 +78,6 @@
             },
             {
               "kind" : "genericParameter",
-              "text" : "InputType"
-            },
-            {
-              "kind" : "text",
-              "text" : ", "
-            },
-            {
-              "kind" : "genericParameter",
               "text" : "OutputType"
             },
             {
@@ -99,23 +91,6 @@
             {
               "kind" : "text",
               "text" : " "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "text" : "OutputType"
-            },
-            {
-              "kind" : "text",
-              "text" : " : "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:SL",
-              "text" : "Comparable"
-            },
-            {
-              "kind" : "text",
-              "text" : ", "
             },
             {
               "kind" : "typeIdentifier",
@@ -172,16 +147,6 @@
       "kind" : "content"
     }
   ],
-  "relationshipsSections" : [
-    {
-      "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/s12IdentifiableP"
-      ],
-      "kind" : "relationships",
-      "title" : "Conforms To",
-      "type" : "conformsTo"
-    }
-  ],
   "schemaVersion" : {
     "major" : 0,
     "minor" : 2,
@@ -202,33 +167,17 @@
   "topicSections" : [
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/init(value:location:formatter:)-200s1",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/init(value:location:formatter:)-cjxk"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/init(value:location:formatter:)-62lbu",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/init(value:location:formatter:)-8v5fg"
       ],
       "title" : "Creating Ticks"
     },
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/id-13dv3",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/id-40sis",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/rangeLocation",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/value"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/label",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/rangeLocation"
       ],
       "title" : "Inspecting Ticks"
-    },
-    {
-      "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/formatter",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/label"
-      ],
-      "title" : "Instance Properties"
-    },
-    {
-      "generated" : true,
-      "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/Identifiable-Implementations"
-      ],
-      "title" : "Default Implementations"
     }
   ],
   "variants" : [
@@ -293,202 +242,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/tick"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/Identifiable-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/Identifiable-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "Identifiable Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick\/identifiable-implementations"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/formatter": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "let"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "formatter"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "c:objc(cs)NSFormatter",
-      "text" : "Formatter"
-    },
-    {
-      "kind" : "text",
-      "text" : "?"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/formatter",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "formatter",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick\/formatter"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/id-13dv3": {
-  "abstract" : [
-    {
-      "text" : "A unique identifier for the tick instance.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "var"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "id"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:10Foundation4UUIDV",
-      "text" : "UUID"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/id-13dv3",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "id",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick\/id-13dv3"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/id-40sis": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "var"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "id"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SO",
-      "text" : "ObjectIdentifier"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/id-40sis",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "id",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick\/id-40sis"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/init(value:location:formatter:)-200s1": {
-  "abstract" : [
-    {
-      "text" : "Creates a new tick.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "identifier",
-      "text" : "init"
-    },
-    {
-      "kind" : "text",
-      "text" : "?("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "value"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale4TickV9InputTypexmfp",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "location"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale4TickV10OutputTypeq_mfp",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "formatter"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "c:objc(cs)NSFormatter",
-      "text" : "Formatter"
-    },
-    {
-      "kind" : "text",
-      "text" : "?)"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/init(value:location:formatter:)-200s1",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "init(value:location:formatter:)",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick\/init(value:location:formatter:)-200s1"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/init(value:location:formatter:)-cjxk": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/init(value:location:formatter:)-62lbu": {
   "abstract" : [
     {
       "text" : "Creates a new tick",
@@ -502,7 +256,15 @@
     },
     {
       "kind" : "text",
-      "text" : "("
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
     },
     {
       "kind" : "externalParam",
@@ -514,8 +276,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale4TickV9InputTypexmfp",
-      "text" : "InputType"
+      "preciseIdentifier" : "s:13SwiftVizScale4TickV5value8location9formatterACyxGqd___xSo11NSFormatterCSgtclufc1TL_qd__mfp",
+      "text" : "T"
     },
     {
       "kind" : "text",
@@ -531,7 +293,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale4TickV10OutputTypeq_mfp",
+      "preciseIdentifier" : "s:13SwiftVizScale4TickV10OutputTypexmfp",
       "text" : "OutputType"
     },
     {
@@ -556,21 +318,107 @@
       "text" : "?)"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/init(value:location:formatter:)-cjxk",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/init(value:location:formatter:)-62lbu",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(value:location:formatter:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick\/init(value:location:formatter:)-cjxk"
+  "url" : "\/documentation\/swiftvizscale\/tick\/init(value:location:formatter:)-62lbu"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/init(value:location:formatter:)-8v5fg": {
+  "abstract" : [
+    {
+      "text" : "Creates a new tick.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "value"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale4TickV5value8location9formatterACyxGSgqd___xSo11NSFormatterCSgtc10RealModule0I0Rzlufc1TL_qd__mfp",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "location"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale4TickV10OutputTypexmfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/init(value:location:formatter:)-8v5fg",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(value:location:formatter:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/tick\/init(value:location:formatter:)-8v5fg"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/label": {
   "abstract" : [
-
+    {
+      "text" : "The string value for the tick.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "var"
+      "text" : "let"
     },
     {
       "kind" : "text",
@@ -623,7 +471,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale4TickV10OutputTypeq_mfp",
+      "preciseIdentifier" : "s:13SwiftVizScale4TickV10OutputTypexmfp",
       "text" : "OutputType"
     }
   ],
@@ -633,43 +481,6 @@
   "title" : "rangeLocation",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/tick\/rangelocation"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/value": {
-  "abstract" : [
-    {
-      "text" : "The value of the tick.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "let"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "value"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale4TickV9InputTypexmfp",
-      "text" : "InputType"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/value",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "value",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick\/value"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/TickScale": {
   "abstract" : [
@@ -704,11 +515,6 @@
   "title" : "TickScale",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/tickscale"
-},
-"doc://com.github.swiftviz.SwiftVizScale/s12IdentifiableP": {
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/s12IdentifiableP",
-  "title" : "Swift.Identifiable",
-  "type" : "unresolvable"
 }
 }
 }

@@ -1,7 +1,15 @@
 {
   "abstract" : [
     {
-      "text" : "The string value for the tick.",
+      "text" : "Inherited from ",
+      "type" : "text"
+    },
+    {
+      "code" : "CustomStringConvertible.description",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
       "type" : "text"
     }
   ],
@@ -9,21 +17,23 @@
     "paths" : [
       [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/CustomStringConvertible-Implementations"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/label"
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/description"
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:13SwiftVizScale4TickV5labelSSvp",
+    "extendedModule" : "SwiftVizScale",
+    "externalID" : "s:13SwiftVizScale010ContinuousC0PAAE11descriptionSSvp",
     "fragments" : [
       {
         "kind" : "keyword",
-        "text" : "let"
+        "text" : "var"
       },
       {
         "kind" : "text",
@@ -31,7 +41,7 @@
       },
       {
         "kind" : "identifier",
-        "text" : "label"
+        "text" : "description"
       },
       {
         "kind" : "text",
@@ -51,7 +61,7 @@
     "role" : "symbol",
     "roleHeading" : "Instance Property",
     "symbolKind" : "property",
-    "title" : "label"
+    "title" : "description"
   },
   "primaryContentSections" : [
     {
@@ -66,7 +76,7 @@
           "tokens" : [
             {
               "kind" : "keyword",
-              "text" : "let"
+              "text" : "var"
             },
             {
               "kind" : "text",
@@ -74,7 +84,7 @@
             },
             {
               "kind" : "identifier",
-              "text" : "label"
+              "text" : "description"
             },
             {
               "kind" : "text",
@@ -84,6 +94,18 @@
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:SS",
               "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : " { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
             }
           ]
         }
@@ -99,19 +121,10 @@
   "sections" : [
 
   ],
-  "seeAlsoSections" : [
-    {
-      "generated" : true,
-      "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/rangeLocation"
-      ],
-      "title" : "Inspecting Ticks"
-    }
-  ],
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/swiftvizscale\/tick\/label"
+        "\/documentation\/swiftvizscale\/continuousscale\/description"
       ],
       "traits" : [
         {
@@ -136,17 +149,43 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale": {
   "abstract" : [
     {
-      "text" : "A  visual representation of a point along an axis.",
+      "text" : "A type that maps continuous values from an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "struct"
+      "text" : "protocol"
     },
     {
       "kind" : "text",
@@ -154,33 +193,41 @@
     },
     {
       "kind" : "identifier",
-      "text" : "Tick"
+      "text" : "ContinuousScale"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "Tick"
+      "text" : "ContinuousScale"
     }
   ],
   "role" : "symbol",
-  "title" : "Tick",
+  "title" : "ContinuousScale",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick"
+  "url" : "\/documentation\/swiftvizscale\/continuousscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/label": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/CustomStringConvertible-Implementations": {
   "abstract" : [
-    {
-      "text" : "The string value for the tick.",
-      "type" : "text"
-    }
+
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/CustomStringConvertible-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CustomStringConvertible Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/customstringconvertible-implementations"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/description": {
+  "abstract" : [
+
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "let"
+      "text" : "var"
     },
     {
       "kind" : "text",
@@ -188,7 +235,7 @@
     },
     {
       "kind" : "identifier",
-      "text" : "label"
+      "text" : "description"
     },
     {
       "kind" : "text",
@@ -200,49 +247,12 @@
       "text" : "String"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/label",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/description",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "label",
+  "title" : "description",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick\/label"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/rangeLocation": {
-  "abstract" : [
-    {
-      "text" : "The location where the tick should be placed within a chart’s range.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "let"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "rangeLocation"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale4TickV10OutputTypexmfp",
-      "text" : "OutputType"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/rangeLocation",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "rangeLocation",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick\/rangelocation"
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/description"
 }
 }
 }

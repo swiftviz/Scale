@@ -8,7 +8,7 @@
 
 ### Generating Ticks for a Scale
 
+- ``SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-11uxe``
+- ``SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-224d8``
+- ``SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-68c4d``
 - ``SwiftVizScale/TickScale/tickValues(_:from:to:)``
-- ``SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-15rnt``
-- ``SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-4ug0i``
-- ``SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-5hnpv``

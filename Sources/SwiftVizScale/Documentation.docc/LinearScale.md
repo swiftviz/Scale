@@ -44,7 +44,7 @@
 
 ### Creating Ticks
 
-- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:)-2i6ex``
-- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:)-3xaat``
-- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:)-9vifj``
+- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:)-27usp``
+- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:)-8gkz5``
+- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:)-94hgn``
 - ``SwiftVizScale/LinearScale/tickValues(_:from:to:)``

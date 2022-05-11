@@ -4,12 +4,10 @@
 
 ### Creating Ticks
 
-- ``SwiftVizScale/Tick/init(value:location:formatter:)-200s1``
-- ``SwiftVizScale/Tick/init(value:location:formatter:)-cjxk``
+- ``SwiftVizScale/Tick/init(value:location:formatter:)-62lbu``
+- ``SwiftVizScale/Tick/init(value:location:formatter:)-8v5fg``
 
 ### Inspecting Ticks
 
-- ``SwiftVizScale/Tick/id-13dv3``
-- ``SwiftVizScale/Tick/id-40sis``
+- ``SwiftVizScale/Tick/label``
 - ``SwiftVizScale/Tick/rangeLocation``
-- ``SwiftVizScale/Tick/value``
