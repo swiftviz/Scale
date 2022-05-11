@@ -28,6 +28,7 @@ public extension TickScale {
     /// - Parameter higher: The higher value of the range the scale maps to.
     /// - Returns: A list of tick values validated against the domain, and range based on the setting of ``ContinuousScale/transformType``
     func tickValues(_ inputValues: [InputType], from lower: OutputType, to higher: OutputType) -> [Tick<OutputType>] {
+        // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
         inputValues.compactMap { inputValue in
             if domainContains(inputValue),
                let rangeValue = scale(inputValue, from: lower, to: higher)
@@ -61,6 +62,7 @@ public extension TickScale where InputType == Int {
     /// - Returns: an Array of the values within the ClosedRange of range
     func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<OutputType>] {
         let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
         return tickValues.compactMap { tickValue in
             if let tickRangeLocation = scale(tickValue, from: rangeLower, to: rangeHigher) {
                 return Tick(value: tickValue, location: tickRangeLocation)
@@ -77,6 +79,7 @@ public extension TickScale where InputType == Float {
     /// - Returns: an Array of the values within the ClosedRange of range
     func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<OutputType>] {
         let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
         return tickValues.compactMap { tickValue in
             if let tickRangeLocation = scale(tickValue, from: rangeLower, to: rangeHigher) {
                 return Tick(value: tickValue, location: tickRangeLocation)
@@ -93,6 +96,7 @@ public extension TickScale where InputType == Double {
     /// - Returns: an Array of the values within the ClosedRange of range
     func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<OutputType>] {
         let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
         return tickValues.compactMap { tickValue in
             if let tickRangeLocation = scale(tickValue, from: rangeLower, to: rangeHigher),
                tickRangeLocation <= rangeHigher

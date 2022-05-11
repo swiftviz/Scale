@@ -223,7 +223,7 @@ internal final class _ContinuousScale<WrappedContinuousScale: ContinuousScale>: 
 ///
 /// Encapsulates a scale that conforms to the``ContinuousScale`` protocol, identified by ``ContinuousScaleType``.
 public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
-    OutputType: ConvertibleWithDouble>: ContinuousScale
+    OutputType: ConvertibleWithDouble>: ContinuousScale, TickScale
 {
     private let _box: _AnyContinuousScale<InputType, OutputType>
 
