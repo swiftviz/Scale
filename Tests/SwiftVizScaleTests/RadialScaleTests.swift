@@ -73,8 +73,8 @@ class RadialScaleTests: XCTestCase {
             print(tick)
             // every tick should be from within the scale's domain (input) range
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
-            XCTAssertTrue(tick.value >= myScale.domainLower)
-            XCTAssertTrue(tick.value <= myScale.domainHigher)
+            XCTAssertTrue(tick.value! >= myScale.domainLower)
+            XCTAssertTrue(tick.value! <= myScale.domainHigher)
         }
     }
 

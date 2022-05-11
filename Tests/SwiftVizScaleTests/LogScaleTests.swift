@@ -41,29 +41,6 @@ class LogScaleTests: XCTestCase {
         XCTAssertEqual(10, result, accuracy: 0.01)
     }
 
-//
-//    func testLogScale_Floatscale() {
-//        let myScale = LogScale<Double, Float>(from: 1.0, to: 100.0, transform: .none)
-//        XCTAssertEqual(myScale.transformType, .none)
-//        let testRange = Float(0) ... Float(100.0)
-//        guard let scaledValue = myScale.scale(10.0, from: testRange.lowerBound, to: testRange.upperBound) else {
-//            XCTFail("scaling dropped value")
-//            return
-//        }
-//        XCTAssertEqual(50.0, scaledValue, accuracy: 0.01)
-//    }
-//
-//    func testLogScale_Floatinvert() {
-//        let myScale = LogScale<Double, Float>(from: 1.0, to: 100.0, transform: .none)
-//        XCTAssertEqual(myScale.transformType, .none)
-//        let testRange = Float(0) ... Float(100.0)
-//        guard let result = myScale.invert(50.0, from: testRange.lowerBound, to: testRange.upperBound) else {
-//            XCTFail("invert dropped value")
-//            return
-//        }
-//        XCTAssertEqual(10, result, accuracy: 0.01)
-//    }
-
     func testLogScale_Intscale() {
         let myScale = LogScale<Int, Float>(from: 1, to: 100, transform: .none)
         XCTAssertEqual(myScale.transformType, .none)
@@ -110,8 +87,8 @@ class LogScaleTests: XCTestCase {
             // every tick should be from within the scale's range (output area)
             print(tick)
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
-            XCTAssertTrue(myScale.domainLower <= tick.value)
-            XCTAssertTrue(myScale.domainHigher >= tick.value)
+            XCTAssertTrue(myScale.domainLower <= tick.value!)
+            XCTAssertTrue(myScale.domainHigher >= tick.value!)
         }
     }
 
@@ -127,8 +104,8 @@ class LogScaleTests: XCTestCase {
         for tick in manualTicks {
             // every tick should be from within the scale's domain (input) range
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
-            XCTAssertTrue(myScale.domainLower <= tick.value)
-            XCTAssertTrue(myScale.domainHigher >= tick.value)
+            XCTAssertTrue(myScale.domainLower <= tick.value!)
+            XCTAssertTrue(myScale.domainHigher >= tick.value!)
         }
     }
 
@@ -145,8 +122,8 @@ class LogScaleTests: XCTestCase {
             print(tick)
             // every tick should be from within the scale's range (output area)
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
-            XCTAssertTrue(myScale.domainLower <= tick.value)
-            XCTAssertTrue(myScale.domainHigher >= tick.value)
+            XCTAssertTrue(myScale.domainLower <= tick.value!)
+            XCTAssertTrue(myScale.domainHigher >= tick.value!)
         }
     }
 
@@ -162,8 +139,8 @@ class LogScaleTests: XCTestCase {
         for tick in manualTicks {
             // every tick should be from within the scale's range (output area)
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
-            XCTAssertTrue(myScale.domainLower <= tick.value)
-            XCTAssertTrue(myScale.domainHigher >= tick.value)
+            XCTAssertTrue(myScale.domainLower <= tick.value!)
+            XCTAssertTrue(myScale.domainHigher >= tick.value!)
         }
     }
 
