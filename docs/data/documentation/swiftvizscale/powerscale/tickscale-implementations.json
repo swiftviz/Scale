@@ -40,9 +40,9 @@
       "generated" : true,
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/tickValues(_:from:to:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticks(rangeLower:rangeHigher:)-5zjwj",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticks(rangeLower:rangeHigher:)-8w4by",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticks(rangeLower:rangeHigher:)-9y5mw"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticks(rangeLower:rangeHigher:)-2rzfa",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticks(rangeLower:rangeHigher:)-3ayzj",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticks(rangeLower:rangeHigher:)-92fac"
       ],
       "title" : "Instance Methods"
     }
@@ -187,15 +187,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
@@ -211,7 +202,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/powerscale\/tickvalues(_:from:to:)"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-5zjwj": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-2rzfa": {
   "abstract" : [
     {
       "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
@@ -312,15 +303,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
@@ -329,14 +311,14 @@
       "text" : ">]"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticks(rangeLower:rangeHigher:)-5zjwj",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticks(rangeLower:rangeHigher:)-2rzfa",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "ticks(rangeLower:rangeHigher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/powerscale\/ticks(rangelower:rangehigher:)-5zjwj"
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/ticks(rangelower:rangehigher:)-2rzfa"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-8w4by": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-3ayzj": {
   "abstract" : [
     {
       "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
@@ -437,15 +419,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
@@ -454,14 +427,14 @@
       "text" : ">]"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticks(rangeLower:rangeHigher:)-8w4by",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticks(rangeLower:rangeHigher:)-3ayzj",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "ticks(rangeLower:rangeHigher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/powerscale\/ticks(rangelower:rangehigher:)-8w4by"
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/ticks(rangelower:rangehigher:)-3ayzj"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-9y5mw": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-92fac": {
   "abstract" : [
     {
       "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
@@ -562,15 +535,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
@@ -579,12 +543,12 @@
       "text" : ">]"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticks(rangeLower:rangeHigher:)-9y5mw",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticks(rangeLower:rangeHigher:)-92fac",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "ticks(rangeLower:rangeHigher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/powerscale\/ticks(rangelower:rangehigher:)-9y5mw"
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/ticks(rangelower:rangehigher:)-92fac"
 }
 }
 }

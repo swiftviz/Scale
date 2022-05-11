@@ -1,7 +1,15 @@
 {
   "abstract" : [
     {
-      "text" : "The location where the tick should be placed within a chart’s range.",
+      "text" : "Inherited from ",
+      "type" : "text"
+    },
+    {
+      "code" : "CustomStringConvertible.description",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
       "type" : "text"
     }
   ],
@@ -9,21 +17,23 @@
     "paths" : [
       [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/CustomStringConvertible-Implementations"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/rangeLocation"
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/description"
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:13SwiftVizScale4TickV13rangeLocationxvp",
+    "extendedModule" : "SwiftVizScale",
+    "externalID" : "s:13SwiftVizScale010ContinuousC0PAAE11descriptionSSvp::SYNTHESIZED::s:13SwiftVizScale06RadialC0V",
     "fragments" : [
       {
         "kind" : "keyword",
-        "text" : "let"
+        "text" : "var"
       },
       {
         "kind" : "text",
@@ -31,7 +41,7 @@
       },
       {
         "kind" : "identifier",
-        "text" : "rangeLocation"
+        "text" : "description"
       },
       {
         "kind" : "text",
@@ -39,8 +49,8 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale4TickV10OutputTypexmfp",
-        "text" : "OutputType"
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
       }
     ],
     "modules" : [
@@ -51,7 +61,7 @@
     "role" : "symbol",
     "roleHeading" : "Instance Property",
     "symbolKind" : "property",
-    "title" : "rangeLocation"
+    "title" : "description"
   },
   "primaryContentSections" : [
     {
@@ -66,7 +76,7 @@
           "tokens" : [
             {
               "kind" : "keyword",
-              "text" : "let"
+              "text" : "var"
             },
             {
               "kind" : "text",
@@ -74,7 +84,7 @@
             },
             {
               "kind" : "identifier",
-              "text" : "rangeLocation"
+              "text" : "description"
             },
             {
               "kind" : "text",
@@ -82,8 +92,20 @@
             },
             {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale4TickV10OutputTypexmfp",
-              "text" : "OutputType"
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : " { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
             }
           ]
         }
@@ -99,19 +121,10 @@
   "sections" : [
 
   ],
-  "seeAlsoSections" : [
-    {
-      "generated" : true,
-      "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/label"
-      ],
-      "title" : "Inspecting Ticks"
-    }
-  ],
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/swiftvizscale\/tick\/rangelocation"
+        "\/documentation\/swiftvizscale\/radialscale\/description"
       ],
       "traits" : [
         {
@@ -136,10 +149,10 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/RadialScale": {
   "abstract" : [
     {
-      "text" : "A  visual representation of a point along an axis.",
+      "text" : "A linear scale for transforming and mapping continuous input values within a domain to output values you provide.",
       "type" : "text"
     }
   ],
@@ -154,33 +167,41 @@
     },
     {
       "kind" : "identifier",
-      "text" : "Tick"
+      "text" : "RadialScale"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "Tick"
+      "text" : "RadialScale"
     }
   ],
   "role" : "symbol",
-  "title" : "Tick",
+  "title" : "RadialScale",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick"
+  "url" : "\/documentation\/swiftvizscale\/radialscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/label": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/RadialScale/CustomStringConvertible-Implementations": {
   "abstract" : [
-    {
-      "text" : "The string value for the tick.",
-      "type" : "text"
-    }
+
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/CustomStringConvertible-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CustomStringConvertible Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/radialscale\/customstringconvertible-implementations"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/RadialScale/description": {
+  "abstract" : [
+
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "let"
+      "text" : "var"
     },
     {
       "kind" : "text",
@@ -188,7 +209,7 @@
     },
     {
       "kind" : "identifier",
-      "text" : "label"
+      "text" : "description"
     },
     {
       "kind" : "text",
@@ -200,49 +221,12 @@
       "text" : "String"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/label",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/description",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "label",
+  "title" : "description",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick\/label"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/rangeLocation": {
-  "abstract" : [
-    {
-      "text" : "The location where the tick should be placed within a chart’s range.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "let"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "rangeLocation"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale4TickV10OutputTypexmfp",
-      "text" : "OutputType"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/rangeLocation",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "rangeLocation",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick\/rangelocation"
+  "url" : "\/documentation\/swiftvizscale\/radialscale\/description"
 }
 }
 }

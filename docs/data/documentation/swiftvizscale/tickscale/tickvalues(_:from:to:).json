@@ -20,7 +20,7 @@
   "kind" : "symbol",
   "metadata" : {
     "extendedModule" : "SwiftVizScale",
-    "externalID" : "s:13SwiftVizScale04TickC0PAAE10tickValues_4from2toSayAA0D0Vy9InputTypeQz06OutputJ0QzGGSayAJG_A2LtF",
+    "externalID" : "s:13SwiftVizScale04TickC0PAAE10tickValues_4from2toSayAA0D0Vy10OutputTypeQzGGSay05InputJ0QzG_A2JtF",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -89,15 +89,6 @@
       {
         "kind" : "text",
         "text" : "<"
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
-        "text" : "InputType"
-      },
-      {
-        "kind" : "text",
-        "text" : ", "
       },
       {
         "kind" : "typeIdentifier",
@@ -233,16 +224,6 @@
             {
               "kind" : "text",
               "text" : "<"
-            },
-            {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
-              "text" : "InputType"
-            },
-            {
-              "kind" : "text",
-              "text" : ", "
             },
             {
               "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType",
@@ -403,9 +384,9 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-15rnt",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-4ug0i",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-5hnpv"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-11uxe",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-224d8",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-68c4d"
       ],
       "title" : "Generating Ticks for a Scale"
     }
@@ -689,15 +670,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
@@ -713,7 +685,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/tickscale\/tickvalues(_:from:to:)"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-15rnt": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-11uxe": {
   "abstract" : [
     {
       "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
@@ -814,15 +786,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
@@ -831,14 +794,14 @@
       "text" : ">]"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-15rnt",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-11uxe",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "ticks(rangeLower:rangeHigher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tickscale\/ticks(rangelower:rangehigher:)-15rnt"
+  "url" : "\/documentation\/swiftvizscale\/tickscale\/ticks(rangelower:rangehigher:)-11uxe"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-4ug0i": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-224d8": {
   "abstract" : [
     {
       "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
@@ -939,15 +902,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
@@ -956,14 +910,14 @@
       "text" : ">]"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-4ug0i",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-224d8",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "ticks(rangeLower:rangeHigher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tickscale\/ticks(rangelower:rangehigher:)-4ug0i"
+  "url" : "\/documentation\/swiftvizscale\/tickscale\/ticks(rangelower:rangehigher:)-224d8"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-5hnpv": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/TickScale/ticks(rangeLower:rangeHigher:)-68c4d": {
   "abstract" : [
     {
       "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
@@ -1064,15 +1018,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
       "text" : "OutputType"
     },
@@ -1081,12 +1026,12 @@
       "text" : ">]"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-5hnpv",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale\/ticks(rangeLower:rangeHigher:)-68c4d",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "ticks(rangeLower:rangeHigher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tickscale\/ticks(rangelower:rangehigher:)-5hnpv"
+  "url" : "\/documentation\/swiftvizscale\/tickscale\/ticks(rangelower:rangehigher:)-68c4d"
 }
 }
 }

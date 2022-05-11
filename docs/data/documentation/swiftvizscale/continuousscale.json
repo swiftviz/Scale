@@ -103,6 +103,15 @@
               "text" : " : "
             },
             {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s23CustomStringConvertibleP",
+              "text" : "CustomStringConvertible"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
               "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:13SwiftVizScale0C0P",
@@ -209,7 +218,8 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/s23CustomStringConvertibleP"
       ],
       "kind" : "relationships",
       "title" : "Inherits From",
@@ -313,6 +323,13 @@
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/scale(_:)"
       ],
       "title" : "Instance Methods"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/CustomStringConvertible-Implementations"
+      ],
+      "title" : "Default Implementations"
     }
   ],
   "variants" : [
@@ -436,6 +453,17 @@
   "title" : "ContinuousScale",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/continuousscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/CustomStringConvertible-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/CustomStringConvertible-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CustomStringConvertible Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/customstringconvertible-implementations"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/desiredTicks": {
   "abstract" : [
@@ -2085,6 +2113,11 @@
   "title" : "TickScale",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/tickscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/s23CustomStringConvertibleP": {
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/s23CustomStringConvertibleP",
+  "title" : "Swift.CustomStringConvertible",
+  "type" : "unresolvable"
 }
 }
 }

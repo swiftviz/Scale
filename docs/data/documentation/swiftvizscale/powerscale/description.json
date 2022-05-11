@@ -1,7 +1,15 @@
 {
   "abstract" : [
     {
-      "text" : "No overview available.",
+      "text" : "Inherited from ",
+      "type" : "text"
+    },
+    {
+      "code" : "CustomStringConvertible.description",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
       "type" : "text"
     }
   ],
@@ -9,21 +17,23 @@
     "paths" : [
       [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/CustomStringConvertible-Implementations"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/formatter"
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/description"
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:13SwiftVizScale4TickV9formatterSo11NSFormatterCSgvp",
+    "extendedModule" : "SwiftVizScale",
+    "externalID" : "s:13SwiftVizScale010ContinuousC0PAAE11descriptionSSvp::SYNTHESIZED::s:13SwiftVizScale05PowerC0V",
     "fragments" : [
       {
         "kind" : "keyword",
-        "text" : "let"
+        "text" : "var"
       },
       {
         "kind" : "text",
@@ -31,7 +41,7 @@
       },
       {
         "kind" : "identifier",
-        "text" : "formatter"
+        "text" : "description"
       },
       {
         "kind" : "text",
@@ -39,12 +49,8 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "c:objc(cs)NSFormatter",
-        "text" : "Formatter"
-      },
-      {
-        "kind" : "text",
-        "text" : "?"
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
       }
     ],
     "modules" : [
@@ -55,7 +61,7 @@
     "role" : "symbol",
     "roleHeading" : "Instance Property",
     "symbolKind" : "property",
-    "title" : "formatter"
+    "title" : "description"
   },
   "primaryContentSections" : [
     {
@@ -70,7 +76,7 @@
           "tokens" : [
             {
               "kind" : "keyword",
-              "text" : "let"
+              "text" : "var"
             },
             {
               "kind" : "text",
@@ -78,7 +84,7 @@
             },
             {
               "kind" : "identifier",
-              "text" : "formatter"
+              "text" : "description"
             },
             {
               "kind" : "text",
@@ -86,12 +92,20 @@
             },
             {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "c:objc(cs)NSFormatter",
-              "text" : "Formatter"
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
             },
             {
               "kind" : "text",
-              "text" : "?"
+              "text" : " { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
             }
           ]
         }
@@ -110,7 +124,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/swiftvizscale\/tick\/formatter"
+        "\/documentation\/swiftvizscale\/powerscale\/description"
       ],
       "traits" : [
         {
@@ -135,10 +149,10 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale": {
   "abstract" : [
     {
-      "text" : "A  visual representation of a point along an axis.",
+      "text" : "A power scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
       "type" : "text"
     }
   ],
@@ -153,30 +167,41 @@
     },
     {
       "kind" : "identifier",
-      "text" : "Tick"
+      "text" : "PowerScale"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "Tick"
+      "text" : "PowerScale"
     }
   ],
   "role" : "symbol",
-  "title" : "Tick",
+  "title" : "PowerScale",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick"
+  "url" : "\/documentation\/swiftvizscale\/powerscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/formatter": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/CustomStringConvertible-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/CustomStringConvertible-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CustomStringConvertible Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/customstringconvertible-implementations"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/description": {
   "abstract" : [
 
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "let"
+      "text" : "var"
     },
     {
       "kind" : "text",
@@ -184,7 +209,7 @@
     },
     {
       "kind" : "identifier",
-      "text" : "formatter"
+      "text" : "description"
     },
     {
       "kind" : "text",
@@ -192,20 +217,16 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "c:objc(cs)NSFormatter",
-      "text" : "Formatter"
-    },
-    {
-      "kind" : "text",
-      "text" : "?"
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/formatter",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/description",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "formatter",
+  "title" : "description",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick\/formatter"
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/description"
 }
 }
 }
