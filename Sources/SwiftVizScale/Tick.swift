@@ -13,34 +13,29 @@ import Numerics
 /// When created based on a range, a tick includes a location along a single direction
 /// and a textual representation. It is meant to be created using a Scale, with some input domain
 /// being mapped to visualization using the Scale's output range.
-public struct Tick<InputType, OutputType: Numeric>: Identifiable where OutputType: Comparable {
-    // this becomes a generic focused protocol - types implementing it will need to define the
-    // protocol conformance in coordination with a generic type
-    /// A unique identifier for the tick instance.
-    public var id: UUID = .init()
-
-    /// The value of the tick.
-    public let value: InputType
+public struct Tick<OutputType: Numeric> {
     /// The location where the tick should be placed within a chart's range.
     public let rangeLocation: OutputType
 
-    public let formatter: Formatter?
+    /// The string value for the tick.
+    public let label: String
 
-    public var label: String {
-        guard let formatter = formatter else {
-            return String("\(value)")
-        }
-        return formatter.string(for: value) ?? ""
+    // Testing interface to make it "easier" to reverse the value into a numeric type
+    var value: Double? {
+        Double(label)
     }
 
     /// Creates a new tick
     /// - Parameters:
     ///   - value: The value at the tick's location.
     ///   - location: The location of the tick within the range for a scale.
-    public init(value: InputType, location: OutputType, formatter: Formatter? = nil) {
-        self.value = value
+    public init<T>(value: T, location: OutputType, formatter: Formatter? = nil) {
         rangeLocation = location
-        self.formatter = formatter
+        if let formatter = formatter {
+            label = formatter.string(for: value) ?? ""
+        } else {
+            label = String("\(value)")
+        }
     }
 
     /// Creates a new tick.
@@ -49,13 +44,16 @@ public struct Tick<InputType, OutputType: Numeric>: Identifiable where OutputTyp
     /// - Parameters:
     ///   - value: The value at the tick's location.
     ///   - location: The location of the tick within the range for a scale.
-    public init?(value: InputType, location: OutputType, formatter: Formatter? = nil) where OutputType: Real {
-        self.value = value
-        self.formatter = formatter
+    public init?<T>(value: T, location: OutputType, formatter: Formatter? = nil) where OutputType: Real {
         if location.isNaN {
             return nil
         } else {
             rangeLocation = location
+        }
+        if let formatter = formatter {
+            label = formatter.string(for: value) ?? ""
+        } else {
+            label = String("\(value)")
         }
     }
 }

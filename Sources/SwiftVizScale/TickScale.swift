@@ -27,7 +27,7 @@ public extension TickScale {
     /// - Parameter lower: The lower value of the range the scale maps to.
     /// - Parameter higher: The higher value of the range the scale maps to.
     /// - Returns: A list of tick values validated against the domain, and range based on the setting of ``ContinuousScale/transformType``
-    func tickValues(_ inputValues: [InputType], from lower: OutputType, to higher: OutputType) -> [Tick<InputType, OutputType>] {
+    func tickValues(_ inputValues: [InputType], from lower: OutputType, to higher: OutputType) -> [Tick<OutputType>] {
         inputValues.compactMap { inputValue in
             if domainContains(inputValue),
                let rangeValue = scale(inputValue, from: lower, to: higher)
@@ -59,7 +59,7 @@ public extension TickScale where InputType == Int {
     ///
     /// - Parameter range: a ClosedRange representing the representing the range we are mapping the values into with the scale
     /// - Returns: an Array of the values within the ClosedRange of range
-    func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<InputType, OutputType>] {
+    func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<OutputType>] {
         let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
         return tickValues.compactMap { tickValue in
             if let tickRangeLocation = scale(tickValue, from: rangeLower, to: rangeHigher) {
@@ -75,7 +75,7 @@ public extension TickScale where InputType == Float {
     ///
     /// - Parameter range: a ClosedRange representing the representing the range we are mapping the values into with the scale
     /// - Returns: an Array of the values within the ClosedRange of range
-    func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<InputType, OutputType>] {
+    func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<OutputType>] {
         let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
         return tickValues.compactMap { tickValue in
             if let tickRangeLocation = scale(tickValue, from: rangeLower, to: rangeHigher) {
@@ -91,7 +91,7 @@ public extension TickScale where InputType == Double {
     ///
     /// - Parameter range: a ClosedRange representing the representing the range we are mapping the values into with the scale
     /// - Returns: an Array of the values within the ClosedRange of range
-    func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<InputType, OutputType>] {
+    func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<OutputType>] {
         let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
         return tickValues.compactMap { tickValue in
             if let tickRangeLocation = scale(tickValue, from: rangeLower, to: rangeHigher),
