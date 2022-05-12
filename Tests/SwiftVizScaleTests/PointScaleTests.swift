@@ -178,4 +178,9 @@ class PointScaleTests: XCTestCase {
             XCTAssertEqual(rangeLocDouble, 10.0, accuracy: 0.001)
         }
     }
+
+    func testCustomStringConvertibleImplementation() throws {
+        let scale = PointScale<String, CGFloat>(["1", "2", "3"], padding: 10)
+        XCTAssertEqual("\(scale)", "point[\"1\", \"2\", \"3\"]->[nil:nil]")
+    }
 }

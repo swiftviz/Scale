@@ -180,6 +180,6 @@ public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDo
 
 extension PointScale: CustomStringConvertible {
     public var description: String {
-        "\(scaleType)[\(domain)]->[\(String(describing: rangeLower)):\(String(describing: rangeHigher))]"
+        "\(scaleType)\(domain)->[\(String(describing: rangeLower)):\(String(describing: rangeHigher))]"
     }
 }
