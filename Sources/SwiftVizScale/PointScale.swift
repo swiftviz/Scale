@@ -183,3 +183,16 @@ extension PointScale: CustomStringConvertible {
         "\(scaleType)\(domain)->[\(String(describing: rangeLower)):\(String(describing: rangeHigher))]"
     }
 }
+
+public extension PointScale {
+    func ticks(rangeLower lower: RangeType, rangeHigher higher: RangeType) -> [Tick<RangeType>] {
+        // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
+        let updatedScale = range(lower: lower, higher: higher)
+        return domain.compactMap { tickValue in
+            guard let tickRangeValue = updatedScale.scale(tickValue) else {
+                return nil
+            }
+            return Tick(value: tickValue, location: tickRangeValue)
+        }
+    }
+}
