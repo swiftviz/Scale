@@ -7,7 +7,7 @@ import Foundation
 import Numerics
 
 /// A logarithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.
-public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType: ConvertibleWithDouble>: TickScale {
+public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType: ConvertibleWithDouble>: ContinuousScale {
     /// The lower bound of the input domain.
     public let domainLower: InputType
     /// The upper bound of the input domain.
