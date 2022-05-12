@@ -25,11 +25,13 @@ public enum DiscreteScaleType: Equatable {
 
 public protocol DiscreteScale: Scale, CustomStringConvertible {
     var scaleType: DiscreteScaleType { get }
-    func ticks(rangeLower: RangeType, rangeHigher: RangeType) -> [Tick<RangeType>]
-}
+    /// The lower value of the range into which the discrete values map.
+    var rangeLower: RangeType? { get }
+    /// The upper value of the range into which the discrete values map.
+    var rangeHigher: RangeType? { get }
 
-public extension DiscreteScale {
-    func ticks(rangeLower _: RangeType, rangeHigher _: RangeType) -> [Tick<RangeType>] {
-        []
-    }
+    /// An array of the types the scale maps into.
+    var domain: [InputType] { get }
+
+    func ticks(rangeLower: RangeType, rangeHigher: RangeType) -> [Tick<RangeType>]
 }

@@ -237,9 +237,26 @@ extension BandScale: CustomStringConvertible {
     }
 }
 
+public extension BandScale {
+    func ticks(rangeLower lower: RangeType, rangeHigher higher: RangeType) -> [Tick<RangeType>] {
+        // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
+        let updatedScale = range(lower: lower, higher: higher)
+        return domain.compactMap { tickValue in
+            guard let tickRangeValue = updatedScale.scale(tickValue) else {
+                return nil
+            }
+            return Tick(value: tickValue, location: tickRangeValue.middle)
+        }
+    }
+}
+
 /// A type used to indicate the start and stop positions for a band associated with the provided value.
-public struct Band<EnclosedType, RangeType> {
+public struct Band<EnclosedType, RangeType: ConvertibleWithDouble> {
     public let lower: RangeType
     public let higher: RangeType
+    public var middle: RangeType {
+        RangeType.fromDouble((higher.toDouble() - lower.toDouble()) / 2.0 + lower.toDouble())
+    }
+
     public let value: EnclosedType
 }
