@@ -1,6 +1,6 @@
 //
 //  DiscreteScale.swift
-//  
+//
 
 import Foundation
 
@@ -25,11 +25,11 @@ public enum DiscreteScaleType: Equatable {
 
 public protocol DiscreteScale: Scale, CustomStringConvertible {
     var scaleType: DiscreteScaleType { get }
-     func ticks(rangeLower: RangeType, rangeHigher: RangeType) -> [Tick<RangeType>]
+    func ticks(rangeLower: RangeType, rangeHigher: RangeType) -> [Tick<RangeType>]
 }
 
-extension DiscreteScale {
-    public func ticks(rangeLower: RangeType, rangeHigher: RangeType) -> [Tick<RangeType>] {
-        return []
+public extension DiscreteScale {
+    func ticks(rangeLower _: RangeType, rangeHigher _: RangeType) -> [Tick<RangeType>] {
+        []
     }
 }
