@@ -46,4 +46,7 @@ public protocol Scale {
     /// Returns a new scale with the domain set to span the values you provide.
     /// - Parameter values: An array of input values.
     func domain(_ values: [InputType]) -> Self
+
+//     func ticks(rangeLower: RangeType, rangeHigher: RangeType) -> [Tick<RangeType>]
+//     func tickValues(_ inputValues: [InputType], from lower: RangeType, to higher: RangeType) -> [Tick<RangeType>]
 }

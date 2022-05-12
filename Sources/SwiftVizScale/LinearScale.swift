@@ -2,7 +2,7 @@ import Foundation
 import Numerics
 
 /// A linear scale for transforming and mapping continuous input values within a domain to output values you provide.
-public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputType: ConvertibleWithDouble>: TickScale {
+public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputType: ConvertibleWithDouble>: ContinuousScale {
     /// The lower bound of the input domain.
     public let domainLower: InputType
     /// The upper bound of the input domain.
