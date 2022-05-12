@@ -28,3 +28,7 @@
 - ``SwiftVizScale/PointScale/invert(_:from:to:)``
 - ``SwiftVizScale/PointScale/scale(_:)``
 - ``SwiftVizScale/PointScale/scale(_:from:to:)``
+
+### Creating Ticks
+
+- ``SwiftVizScale/PointScale/ticks(rangeLower:rangeHigher:)``

@@ -31,3 +31,7 @@
 - ``SwiftVizScale/BandScale/invert(_:from:to:)``
 - ``SwiftVizScale/BandScale/scale(_:)``
 - ``SwiftVizScale/BandScale/scale(_:from:to:)``
+
+### Creating Ticks
+
+- ``SwiftVizScale/BandScale/ticks(rangeLower:rangeHigher:)``

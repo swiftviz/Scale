@@ -45,7 +45,8 @@
 
 ### Creating Ticks
 
-- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-2rzfa``
-- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-3ayzj``
-- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-92fac``
+- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-1gol``
+- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-3gn53``
+- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-54f6d``
+- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-8avol``
 - ``SwiftVizScale/PowerScale/tickValues(_:from:to:)``

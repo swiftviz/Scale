@@ -43,7 +43,8 @@
 
 ### Creating Ticks
 
-- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:)-2y7om``
-- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:)-8v9ne``
-- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:)-96cqk``
+- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:)-3jo2u``
+- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:)-56os6``
+- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:)-8n0cl``
+- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:)-8s65h``
 - ``SwiftVizScale/LogScale/tickValues(_:from:to:)``

@@ -1,3 +1,50 @@
 [
+  {
+    "notes" : [
 
+    ],
+    "severity" : 2,
+    "source" : "..\/LinearScale.swift",
+    "start" : {
+      "column" : 67,
+      "line" : 29
+    },
+    "summary" : "Topic reference 'TickScale\/tickValues(_:from:to:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/PowerScale.swift",
+    "start" : {
+      "column" : 67,
+      "line" : 38
+    },
+    "summary" : "Topic reference 'TickScale\/tickValues(_:from:to:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/LogScale.swift",
+    "start" : {
+      "column" : 67,
+      "line" : 34
+    },
+    "summary" : "Topic reference 'TickScale\/tickValues(_:from:to:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/RadialScale.swift",
+    "start" : {
+      "column" : 67,
+      "line" : 36
+    },
+    "summary" : "Topic reference 'TickScale\/tickValues(_:from:to:)' couldn't be resolved. No local documentation matches this reference."
+  }
 ]
