@@ -50,3 +50,15 @@ public protocol Scale {
 //     func ticks(rangeLower: RangeType, rangeHigher: RangeType) -> [Tick<RangeType>]
 //     func tickValues(_ inputValues: [InputType], from lower: RangeType, to higher: RangeType) -> [Tick<RangeType>]
 }
+
+// Quantize scale: Quantize scales use a discrete range and a
+// continuous domain. Range mapping is done by dividing the domain
+// evenly by the number of elements in the range. Because the range
+// is discrete, the values do not have to be numbers.
+
+// Quantile scale: Quantile scales are similar to quantize scales,
+// but instead of evenly dividing the domain, they determine threshold
+// values based on the domain that are used as the cutoffs between
+// values in the range. Quantile scales take an array of values for a
+// domain (not just a lower and upper limit) and maps range to be an
+// even distribution over the input domain

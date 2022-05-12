@@ -22,7 +22,7 @@ import Foundation
 ///
 /// Band scales are useful for bar charts, calculating explicit bands with optional spacing to align with elements of a collection.
 /// If you mapping discrete data into a scatter plot, consider using the ``PointScale`` instead.
-public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDouble>: Scale {
+public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDouble>: DiscreteScale {
     /// The lower value of the range into which the discrete values map.
     public let rangeLower: OutputType?
     /// The upper value of the range into which the discrete values map.
@@ -35,6 +35,9 @@ public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDou
     public let paddingOuter: OutputType
     /// An array of the types the scale maps into.
     public let domain: [CategoryType]
+
+    /// The type of discrete scale.
+    public let scaleType: DiscreteScaleType = .band
 
     /// Creates a new band scale.
     /// - Parameters:
@@ -225,6 +228,12 @@ public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDou
         precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
         let reconfiguredScale = type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, from: from, to: to)
         return reconfiguredScale.invert(location)
+    }
+}
+
+extension BandScale: CustomStringConvertible {
+    public var description: String {
+        "\(scaleType)[\(domain)]->[\(String(describing: rangeLower)):\(String(describing: rangeHigher))]"
     }
 }
 

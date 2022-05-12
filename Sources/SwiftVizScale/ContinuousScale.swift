@@ -331,26 +331,6 @@ public extension ContinuousScale where InputType == Double {
     }
 }
 
-// NOTE(heckj): OTHER SCALES: make a PowScale (& maybe Sqrt, Log, Ln)
-
-// Quantize scale: Quantize scales use a discrete range and a
-// continuous domain. Range mapping is done by dividing the domain
-// evenly by the number of elements in the range. Because the range
-// is discrete, the values do not have to be numbers.
-
-// Quantile scale: Quantile scales are similar to quantize scales,
-// but instead of evenly dividing the domain, they determine threshold
-// values based on the domain that are used as the cutoffs between
-// values in the range. Quantile scales take an array of values for a
-// domain (not just a lower and upper limit) and maps range to be an
-// even distribution over the input domain
-
-// Threshold Scale
-// Power Scale
-// Ordinal Scale
-// Band Scale
-// Point Scale
-
 // MARK: - general functions used in various implementations of Scale
 
 /// normalize(x, a ... b) takes a value x and normalizes it across the domain a...b
