@@ -210,4 +210,9 @@ class BandScaleTests: XCTestCase {
         XCTAssertEqual(band!.higher, 26.0, accuracy: 0.001)
         XCTAssertEqual(band!.lower, 23.0, accuracy: 0.001)
     }
+
+    func testCustomStringConvertibleImplementation() throws {
+        let scale = BandScale<String, CGFloat>(["1", "2", "3"])
+        XCTAssertEqual("\(scale)", "band[\"1\", \"2\", \"3\"]->[nil:nil]")
+    }
 }

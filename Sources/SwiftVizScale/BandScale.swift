@@ -233,7 +233,7 @@ public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDou
 
 extension BandScale: CustomStringConvertible {
     public var description: String {
-        "\(scaleType)[\(domain)]->[\(String(describing: rangeLower)):\(String(describing: rangeHigher))]"
+        "\(scaleType)\(domain)->[\(String(describing: rangeLower)):\(String(describing: rangeHigher))]"
     }
 }
 
