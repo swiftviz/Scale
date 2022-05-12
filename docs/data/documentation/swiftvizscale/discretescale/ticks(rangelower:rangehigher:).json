@@ -1,0 +1,444 @@
+{
+  "abstract" : [
+    {
+      "text" : "No overview available.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/ticks(rangeLower:rangeHigher:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:13SwiftVizScale08DiscreteC0P5ticks10rangeLower0F6HigherSayAA4TickVy9RangeTypeQzGGAJ_AJtF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ticks"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "rangeLower"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:13SwiftVizScale0C0P9RangeTypeQa",
+        "text" : "RangeType"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "rangeHigher"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:13SwiftVizScale0C0P9RangeTypeQa",
+        "text" : "RangeType"
+      },
+      {
+        "kind" : "text",
+        "text" : ") -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:13SwiftVizScale4TickV",
+        "text" : "Tick"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:13SwiftVizScale0C0P9RangeTypeQa",
+        "text" : "RangeType"
+      },
+      {
+        "kind" : "text",
+        "text" : ">]"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SwiftVizScale"
+      }
+    ],
+    "required" : true,
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "ticks(rangeLower:rangeHigher:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "ticks"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "rangeLower"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/RangeType",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13SwiftVizScale0C0P9RangeTypeQa",
+              "text" : "RangeType"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "rangeHigher"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/RangeType",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13SwiftVizScale0C0P9RangeTypeQa",
+              "text" : "RangeType"
+            },
+            {
+              "kind" : "text",
+              "text" : ") -> ["
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13SwiftVizScale4TickV",
+              "text" : "Tick"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/RangeType",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13SwiftVizScale0C0P9RangeTypeQa",
+              "text" : "RangeType"
+            },
+            {
+              "kind" : "text",
+              "text" : ">]"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/swiftvizscale\/discretescale\/ticks(rangelower:rangehigher:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of components to provide structures that support data visualization.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SwiftVizScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale": {
+  "abstract" : [
+    {
+      "text" : "A type that maps discrete values of an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DiscreteScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DiscreteScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DiscreteScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/ticks(rangeLower:rangeHigher:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ticks"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9RangeTypeQa",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9RangeTypeQa",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale4TickV",
+      "text" : "Tick"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9RangeTypeQa",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">]"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/ticks(rangeLower:rangeHigher:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "ticks(rangeLower:rangeHigher:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescale\/ticks(rangelower:rangehigher:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/RangeType": {
+  "abstract" : [
+    {
+      "text" : "The type used for the scale’s range.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "associatedtype"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : " : "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
+      "text" : "ConvertibleWithDouble"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/RangeType",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "RangeType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/scale\/rangetype"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick": {
+  "abstract" : [
+    {
+      "text" : "A  visual representation of a point along an axis.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Tick"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Tick"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Tick",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/tick"
+}
+}
+}

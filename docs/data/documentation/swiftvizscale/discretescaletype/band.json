@@ -1,0 +1,240 @@
+{
+  "abstract" : [
+    {
+      "text" : "A discrete scale that returns a band for the scaled value.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType"
+      ],
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType\/band"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:13SwiftVizScale08DiscreteC4TypeO4bandyA2CmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "band"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SwiftVizScale"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "DiscreteScaleType.band"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "band"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/swiftvizscale\/discretescaletype\/band"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of components to provide structures that support data visualization.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SwiftVizScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale": {
+  "abstract" : [
+    {
+      "text" : "A type that maps discrete values of an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DiscreteScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DiscreteScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DiscreteScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScaleType": {
+  "abstract" : [
+    {
+      "text" : "The type of discrete scale.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DiscreteScaleType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DiscreteScaleType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DiscreteScaleType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescaletype"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScaleType/band": {
+  "abstract" : [
+    {
+      "text" : "A discrete scale that returns a band for the scaled value.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "band"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType\/band",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "DiscreteScaleType.band",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescaletype\/band"
+}
+}
+}
