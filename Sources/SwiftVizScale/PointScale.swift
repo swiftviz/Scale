@@ -15,7 +15,7 @@ import Foundation
 ///
 /// Point scales are useful for mapping discrete data from a collection to a collection of specific points.
 /// If you are rendering a bar chart, consider using the ``BandScale`` instead.
-public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDouble>: Scale {
+public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDouble>: DiscreteScale {
     /// The lower value of the range into which the discrete values map.
     public let rangeLower: OutputType?
     /// The upper value of the range into which the discrete values map.
@@ -27,6 +27,9 @@ public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDo
 
     /// An array of the types the scale maps into.
     public let domain: [CategoryType]
+
+    /// The type of discrete scale.
+    public let scaleType: DiscreteScaleType = .point
 
     /// Creates a new point scale.
     /// - Parameters:
@@ -172,5 +175,11 @@ public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDo
         let rangeValueExpandedToCountDomain = unitRangeValue * Double(domain.count - 1)
         let closestIndex = Int(rangeValueExpandedToCountDomain.rounded())
         return domain[closestIndex]
+    }
+}
+
+extension PointScale: CustomStringConvertible {
+    public var description: String {
+        "\(scaleType)[\(domain)]->[\(String(describing: rangeLower)):\(String(describing: rangeHigher))]"
     }
 }
