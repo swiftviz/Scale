@@ -5,7 +5,7 @@
 //  Created by Joseph Heck on 4/6/22.
 //
 
-import SwiftVizScale
+@testable import SwiftVizScale
 import XCTest
 
 class AnyContinuousScaleTests: XCTestCase {
@@ -82,9 +82,23 @@ class AnyContinuousScaleTests: XCTestCase {
         XCTAssertEqual(updated.domainHigher, 15.0)
     }
 
+    func testScaleType() {
+        let anyScale = AnyContinuousScale(LinearScale<Double, CGFloat>(1.0 ... 50.0))
+        XCTAssertEqual(anyScale.scaleType.description, "linear")
+
+        let linearScale = LinearScale<Double, CGFloat>(1.0 ... 50.0).transform(.clamp)
+        XCTAssertEqual(linearScale.scaleType.description, "linear")
+
+        let logScale = LogScale<Int, CGFloat>(1 ... 100).range(lower: 0, higher: 300)
+        XCTAssertEqual(logScale.scaleType.description, "log")
+    }
+
     func testScaleDescription() {
         let myScale = AnyContinuousScale(LinearScale<Double, CGFloat>(1.0 ... 50.0))
         XCTAssertEqual(String(describing: myScale), "linear(xform:none)[1.0:50.0]->[nil:nil]")
+
+        let clampedScale = LinearScale<Double, CGFloat>(1.0 ... 50.0).transform(.clamp)
+        XCTAssertEqual(String(describing: clampedScale), "linear(xform:clamp)[1.0:50.0]->[nil:nil]")
 
         let secondScale = LogScale<Int, CGFloat>(1 ... 100).range(lower: 0, higher: 300)
         XCTAssertEqual(String(describing: secondScale), "log(xform:none)[1:100]->[Optional(0.0):Optional(300.0)]")
