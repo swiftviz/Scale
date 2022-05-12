@@ -31,11 +31,12 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 - ``SwiftVizScale/BandScale``
 - ``SwiftVizScale/Band``
 - ``SwiftVizScale/PointScale``
+- ``SwiftVizScale/DiscreteScale``
+- ``SwiftVizScale/DiscreteScaleType``
 
 ### Ticks
 
 - ``SwiftVizScale/Tick``
-- ``SwiftVizScale/TickScale``
 
 ### Supporting Types
 

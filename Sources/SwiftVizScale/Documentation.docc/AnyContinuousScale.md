@@ -41,9 +41,11 @@
 - ``SwiftVizScale/AnyContinuousScale/transformAgainstDomain(_:)``
 - ``SwiftVizScale/AnyContinuousScale/domainContains(_:)``
 
-<!--### Creating Ticks-->
-<!---->
-<!--- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:)-2i6ex``-->
-<!--- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:)-3xaat``-->
-<!--- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:)-9vifj``-->
-<!--- ``SwiftVizScale/AnyContinuousScale/tickValues(_:from:to:)``-->
+### Creating Ticks
+
+- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:)-2vo55``
+- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:)-5pjzg``
+- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:)-81saj``
+- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:)-fvz5``
+- ``SwiftVizScale/AnyContinuousScale/tickValues(_:from:to:)``
+

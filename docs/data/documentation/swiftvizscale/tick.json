@@ -155,15 +155,6 @@
   "sections" : [
 
   ],
-  "seeAlsoSections" : [
-    {
-      "generated" : true,
-      "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale"
-      ],
-      "title" : "Ticks"
-    }
-  ],
   "topicSections" : [
     {
       "identifiers" : [
@@ -481,40 +472,6 @@
   "title" : "rangeLocation",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/tick\/rangelocation"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/TickScale": {
-  "abstract" : [
-    {
-      "text" : "A type of scale that provides tick values from the domain it represents.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "protocol"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "TickScale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/TickScale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "TickScale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "TickScale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tickscale"
 }
 }
 }

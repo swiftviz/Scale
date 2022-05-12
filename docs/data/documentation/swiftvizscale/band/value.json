@@ -104,6 +104,7 @@
       "generated" : true,
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Band\/higher",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Band\/middle",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Band\/lower"
       ],
       "title" : "Inspecting a Band"
@@ -238,6 +239,40 @@
   "title" : "lower",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/band\/lower"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Band/middle": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "middle"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale4BandV9RangeTypeq_mfp",
+      "text" : "RangeType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Band\/middle",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "middle",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/band\/middle"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Band/value": {
   "abstract" : [

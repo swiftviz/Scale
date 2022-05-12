@@ -4,9 +4,7 @@
 
 import Foundation
 
-/// The type of continuous scale.
-///
-/// Exponential scales (``PowerScale``) require an additional value for the exponent of the scale.
+/// The type of discrete scale.
 public enum DiscreteScaleType: Equatable {
     /// A discrete scale that returns a point for the scaled value.
     case point
@@ -23,6 +21,7 @@ public enum DiscreteScaleType: Equatable {
     }
 }
 
+/// A type that maps discrete values of an input _domain_ to an output _range_.
 public protocol DiscreteScale: Scale, CustomStringConvertible {
     var scaleType: DiscreteScaleType { get }
     /// The lower value of the range into which the discrete values map.
