@@ -59,8 +59,49 @@ public protocol NiceValue {
     static func rangeOfNiceValues(min: NumberType, max: NumberType, ofSize size: Int) -> [NumberType]
 }
 
-// MARK: - Double
+// This would be WAY more sane if it could expand upon `Real` from swift-numerics, such that any
+// type that conformed to `Real` could be used to generate a "nice" value or series of values.
+// Then this would collapse down to `Real` and `Int` overloads.
+//
+//extension NiceValue where NumberType: Real {
+//
+//    public static func niceVersion(for number: NumberType, min: Bool) -> NumberType {
+//        let negativeInput: Bool = number < 0
+//        let positiveNumber: NumberType = abs(number)
+//        let exponent = floor(NumberType.log(positiveNumber))
+//        let fraction = positiveNumber / NumberType.pow(10, exponent)
+//        let niceFraction: NumberType
+//
+//        if min {
+//            if fraction <= 1.5 {
+//                niceFraction = 1
+//            } else if fraction <= 3 {
+//                niceFraction = 2
+//            } else if fraction <= 7 {
+//                niceFraction = 5
+//            } else {
+//                niceFraction = 10
+//            }
+//        } else {
+//            if fraction <= 1 {
+//                niceFraction = 1
+//            } else if fraction <= 2 {
+//                niceFraction = 2
+//            } else if fraction <= 5 {
+//                niceFraction = 5
+//            } else {
+//                niceFraction = 10
+//            }
+//        }
+//        if negativeInput {
+//            return -1.0 * niceFraction * NumberType.pow(10, exponent)
+//        }
+//        return niceFraction * NumberType.pow(10, exponent)
+//    }
+//
+//}
 
+// MARK: - Double
 extension Double: NiceValue {
     public typealias NumberType = Double
 
@@ -235,7 +276,7 @@ extension Double: NiceValue {
                     break
                 }
             }
-            print(result)
+//            print(result)
             return result
         }
     }
