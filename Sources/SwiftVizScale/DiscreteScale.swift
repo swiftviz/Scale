@@ -32,5 +32,14 @@ public protocol DiscreteScale: Scale, CustomStringConvertible {
     /// An array of the types the scale maps into.
     var domain: [InputType] { get }
 
-    func ticks(rangeLower: RangeType, rangeHigher: RangeType) -> [Tick<RangeType>]
+    /// Returns an array of the strings that make up the ticks for the scale.
+    /// - Parameter formatter: An optional formatter to convert the domain values into strings.
+    func defaultTickValues(formatter: Formatter?) -> [String]
+
+    /// Returns an array of the locations within the output range to locate ticks for the scale.
+    /// - Parameters:
+    ///   - rangeLower: the lower value for the range into which to position the ticks.
+    ///   - rangeHigher: The higher value for the range into which to position the ticks.
+    ///   - formatter: An optional formatter to convert the domain values into strings.
+    func ticks(rangeLower: RangeType, rangeHigher: RangeType, formatter: Formatter?) -> [Tick<RangeType>]
 }

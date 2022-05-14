@@ -98,11 +98,41 @@ final class TickTests: XCTestCase {
         print(ticks)
     }
 
+    func testAnyContinuousScaleDefaultTickValues() {
+        let scale = AnyContinuousScale(LinearScale<CGFloat, CGFloat>(from: 0, to: 10))
+        XCTAssertNotNil(scale)
+        let ticks = scale.defaultTickValues()
+        XCTAssertEqual(ticks.count, 6)
+        print(ticks)
+    }
+
     func testAnyContinuousScaleDefinedTicks() {
         let scale = AnyContinuousScale(LinearScale<Double, CGFloat>(from: 0, to: 10))
         XCTAssertNotNil(scale)
-        let ticks = scale.tickValues([-1, 3, 7, 9, 11], from: 0, to: 100)
+        let ticks = scale.ticksFromValues([-1, 3, 7, 9, 11], from: 0, to: 100)
         XCTAssertEqual(ticks.count, 3)
         print(ticks)
+    }
+
+    func testAnyContinuousScaleValidTickValues() {
+        let scale = AnyContinuousScale(LinearScale<Double, CGFloat>(from: 0, to: 10))
+        XCTAssertNotNil(scale)
+        let ticks = scale.validTickValues([-1, 3, 7, 9, 11])
+        XCTAssertEqual(ticks.count, 3)
+        print(ticks)
+    }
+
+    func testBandTickValues() {
+        let domainValues: [String] = ["1", "2", "a", "b"]
+        let scale = BandScale<String, CGFloat>(domainValues)
+        let tickValues = scale.defaultTickValues()
+        XCTAssertEqual(tickValues, domainValues)
+    }
+
+    func testPointTickValues() {
+        let domainValues: [String] = ["1", "2", "a", "b"]
+        let scale = PointScale<String, CGFloat>(domainValues)
+        let tickValues = scale.defaultTickValues()
+        XCTAssertEqual(tickValues, domainValues)
     }
 }
