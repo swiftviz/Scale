@@ -179,20 +179,38 @@ public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDo
 }
 
 extension PointScale: CustomStringConvertible {
+    /// The description of the scale.
     public var description: String {
         "\(scaleType)\(domain)->[\(String(describing: rangeLower)):\(String(describing: rangeHigher))]"
     }
 }
 
 public extension PointScale {
-    func ticks(rangeLower lower: RangeType, rangeHigher higher: RangeType) -> [Tick<RangeType>] {
+    /// Returns an array of the strings that make up the ticks for the scale.
+    /// - Parameter formatter: An optional formatter to convert the domain values into strings.
+    func defaultTickValues(formatter: Formatter? = nil) -> [String] {
+        domain.map { value in
+            if let formatter = formatter {
+                return formatter.string(for: value) ?? ""
+            } else {
+                return String("\(value)")
+            }
+        }
+    }
+
+    /// Returns an array of the locations within the output range to locate ticks for the scale.
+    /// - Parameters:
+    ///   - rangeLower: the lower value for the range into which to position the ticks.
+    ///   - rangeHigher: The higher value for the range into which to position the ticks.
+    ///   - formatter: An optional formatter to convert the domain values into strings.
+    func ticks(rangeLower lower: RangeType, rangeHigher higher: RangeType, formatter: Formatter? = nil) -> [Tick<RangeType>] {
         // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
         let updatedScale = range(lower: lower, higher: higher)
         return domain.compactMap { tickValue in
             guard let tickRangeValue = updatedScale.scale(tickValue) else {
                 return nil
             }
-            return Tick(value: tickValue, location: tickRangeValue)
+            return Tick(value: tickValue, location: tickRangeValue, formatter: formatter)
         }
     }
 }

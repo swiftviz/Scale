@@ -12,25 +12,25 @@ final class PackagingTests: XCTestCase {
     func testManualTicks() {
         let scale = LinearScale<Double, CGFloat>(from: 0.0, to: 10.0, transform: .none)
         // verifies the method is visible externally - else this won't compile
-        let ticks = scale.tickValues([2.0], from: 0.0, to: 10.0)
+        let ticks = scale.ticksFromValues([2.0], from: 0.0, to: 10.0)
         XCTAssertEqual(ticks.count, 1)
     }
 
     func testManualTicksOutsideRangeNone() {
         let scale = LinearScale<Double, CGFloat>(from: 0.0, to: 10.0, transform: .none)
-        let ticks = scale.tickValues([2.0, 4.0, 8.0, 16.0], from: 0.0, to: 10.0)
+        let ticks = scale.ticksFromValues([2.0, 4.0, 8.0, 16.0], from: 0.0, to: 10.0)
         XCTAssertEqual(ticks.count, 3)
     }
 
     func testManualTicksOutsideRangeClamped() {
         let scale = LinearScale<Double, CGFloat>(from: 0.0, to: 10.0, transform: .clamp)
-        let ticks = scale.tickValues([2.0, 4.0, 8.0, 16.0], from: 0.0, to: 10.0)
+        let ticks = scale.ticksFromValues([2.0, 4.0, 8.0, 16.0], from: 0.0, to: 10.0)
         XCTAssertEqual(ticks.count, 3)
     }
 
     func testManualTicksOutsideRangeDropped() {
         let scale = LinearScale<Double, CGFloat>(from: 0.0, to: 10.0, transform: .drop)
-        let ticks = scale.tickValues([2.0, 4.0, 8.0, 16.0], from: 0.0, to: 10.0)
+        let ticks = scale.ticksFromValues([2.0, 4.0, 8.0, 16.0], from: 0.0, to: 10.0)
         XCTAssertEqual(ticks.count, 3)
     }
 

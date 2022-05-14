@@ -67,7 +67,7 @@ final class LinearScaleTests: XCTestCase {
         XCTAssertEqual(myScale.transformType, .none)
 
         let testRange = Float(0) ... Float(100.0)
-        let manualTicks = myScale.tickValues([0.1, 0.5], from: testRange.lowerBound, to: testRange.upperBound)
+        let manualTicks = myScale.ticksFromValues([0.1, 0.5], from: testRange.lowerBound, to: testRange.upperBound)
 
         XCTAssertEqual(manualTicks.count, 2)
         for tick in manualTicks {
@@ -83,7 +83,7 @@ final class LinearScaleTests: XCTestCase {
         XCTAssertEqual(myScale.transformType, .none)
 
         let testRange = Float(0) ... Float(100.0)
-        let manualTicks = myScale.tickValues([0.1, 0.5], from: testRange.lowerBound, to: testRange.upperBound)
+        let manualTicks = myScale.ticksFromValues([0.1, 0.5], from: testRange.lowerBound, to: testRange.upperBound)
 
         XCTAssertEqual(manualTicks.count, 2)
         for tick in manualTicks {

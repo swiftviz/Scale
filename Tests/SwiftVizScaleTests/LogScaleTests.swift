@@ -98,7 +98,7 @@ class LogScaleTests: XCTestCase {
 
         let testRange = Float(0) ... Float(100.0)
 
-        let manualTicks = myScale.tickValues([0.1, 1, 10], from: testRange.lowerBound, to: testRange.upperBound)
+        let manualTicks = myScale.ticksFromValues([0.1, 1, 10], from: testRange.lowerBound, to: testRange.upperBound)
 
         XCTAssertEqual(manualTicks.count, 3)
         for tick in manualTicks {
@@ -133,7 +133,7 @@ class LogScaleTests: XCTestCase {
 
         let testRange = Float(0.0) ... Float(100.0)
 
-        let manualTicks = myScale.tickValues([0.1, 1, 10, 100, 1000], from: testRange.lowerBound, to: testRange.upperBound)
+        let manualTicks = myScale.ticksFromValues([0.1, 1, 10, 100, 1000], from: testRange.lowerBound, to: testRange.upperBound)
 
         XCTAssertEqual(manualTicks.count, 3)
         for tick in manualTicks {
