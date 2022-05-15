@@ -63,7 +63,7 @@ public protocol NiceValue {
 // type that conformed to `Real` could be used to generate a "nice" value or series of values.
 // Then this would collapse down to `Real` and `Int` overloads.
 //
-//extension NiceValue where NumberType: Real {
+// extension NiceValue where NumberType: Real {
 //
 //    public static func niceVersion(for number: NumberType, min: Bool) -> NumberType {
 //        let negativeInput: Bool = number < 0
@@ -99,9 +99,10 @@ public protocol NiceValue {
 //        return niceFraction * NumberType.pow(10, exponent)
 //    }
 //
-//}
+// }
 
 // MARK: - Double
+
 extension Double: NiceValue {
     public typealias NumberType = Double
 
