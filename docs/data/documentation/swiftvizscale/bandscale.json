@@ -260,7 +260,7 @@
     },
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/ticks(rangeLower:rangeHigher:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/ticks(rangeLower:rangeHigher:formatter:)"
       ],
       "title" : "Creating Ticks"
     },
@@ -1601,9 +1601,12 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/bandscale\/scaletype"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/ticks(rangeLower:rangeHigher:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/ticks(rangeLower:rangeHigher:formatter:)": {
   "abstract" : [
-
+    {
+      "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
+      "type" : "text"
+    }
   ],
   "conformance" : {
     "availabilityPrefix" : [
@@ -1702,7 +1705,24 @@
     },
     {
       "kind" : "text",
-      "text" : ") -> ["
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> ["
     },
     {
       "kind" : "typeIdentifier",
@@ -1723,12 +1743,12 @@
       "text" : ">]"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/ticks(rangeLower:rangeHigher:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/ticks(rangeLower:rangeHigher:formatter:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "ticks(rangeLower:rangeHigher:)",
+  "title" : "ticks(rangeLower:rangeHigher:formatter:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/bandscale\/ticks(rangelower:rangehigher:)"
+  "url" : "\/documentation\/swiftvizscale\/bandscale\/ticks(rangelower:rangehigher:formatter:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ConvertibleWithDouble": {
   "abstract" : [

@@ -9,9 +9,10 @@
 ### Updating Scales
 
 - ``SwiftVizScale/AnyContinuousScale/scaleType(_:)``
-- ``SwiftVizScale/AnyContinuousScale/domain(lower:higher:)``
 - ``SwiftVizScale/AnyContinuousScale/domain(_:)-2c2ej``
 - ``SwiftVizScale/AnyContinuousScale/domain(_:)-esgw``
+- ``SwiftVizScale/AnyContinuousScale/domain(_:nice:)``
+- ``SwiftVizScale/AnyContinuousScale/domain(lower:higher:)``
 - ``SwiftVizScale/AnyContinuousScale/range(lower:higher:)``
 - ``SwiftVizScale/AnyContinuousScale/range(_:)``
 - ``SwiftVizScale/AnyContinuousScale/transform(_:)``
@@ -43,9 +44,14 @@
 
 ### Creating Ticks
 
-- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:)-2vo55``
-- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:)-5pjzg``
-- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:)-81saj``
-- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:)-fvz5``
-- ``SwiftVizScale/AnyContinuousScale/tickValues(_:from:to:)``
+- ``SwiftVizScale/AnyContinuousScale/defaultTickValues(formatter:)-2bktr``
+- ``SwiftVizScale/AnyContinuousScale/defaultTickValues(formatter:)-5n0lo``
+- ``SwiftVizScale/AnyContinuousScale/defaultTickValues(formatter:)-856p3``
+- ``SwiftVizScale/AnyContinuousScale/defaultTickValues(formatter:)-8u0lr``
+- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-53t2s``
+- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-63x34``
+- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-6dhln``
+- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-y0vn``
+- ``SwiftVizScale/AnyContinuousScale/ticksFromValues(_:from:to:formatter:)``
+
 

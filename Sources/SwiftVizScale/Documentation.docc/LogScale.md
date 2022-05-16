@@ -9,9 +9,10 @@
 
 ### Updating Scales
 
-- ``SwiftVizScale/LogScale/domain(lower:higher:)``
 - ``SwiftVizScale/LogScale/domain(_:)-1itfq``
 - ``SwiftVizScale/LogScale/domain(_:)-3xqw2``
+- ``SwiftVizScale/LogScale/domain(_:nice:)``
+- ``SwiftVizScale/LogScale/domain(lower:higher:)``
 - ``SwiftVizScale/LogScale/transform(_:)``
 - ``SwiftVizScale/LogScale/range(_:)``
 - ``SwiftVizScale/LogScale/range(lower:higher:)``
@@ -43,8 +44,13 @@
 
 ### Creating Ticks
 
-- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:)-3jo2u``
-- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:)-56os6``
-- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:)-8n0cl``
-- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:)-8s65h``
-- ``SwiftVizScale/LogScale/tickValues(_:from:to:)``
+- ``SwiftVizScale/LogScale/defaultTickValues(formatter:)-1fo0x``
+- ``SwiftVizScale/LogScale/defaultTickValues(formatter:)-342dl``
+- ``SwiftVizScale/LogScale/defaultTickValues(formatter:)-3u2og``
+- ``SwiftVizScale/LogScale/defaultTickValues(formatter:)-6r6q8``
+- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:formatter:)-1n1ty``
+- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:formatter:)-33tb9``
+- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:formatter:)-5akta``
+- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:formatter:)-73fh``
+- ``SwiftVizScale/LogScale/ticksFromValues(_:from:to:formatter:)``
+- ``SwiftVizScale/LogScale/transform(_:)``

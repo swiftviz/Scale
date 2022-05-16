@@ -34,4 +34,4 @@
 
 ### Creating Ticks
 
-- ``SwiftVizScale/BandScale/ticks(rangeLower:rangeHigher:)``
+- ``SwiftVizScale/BandScale/ticks(rangeLower:rangeHigher:formatter:)``
