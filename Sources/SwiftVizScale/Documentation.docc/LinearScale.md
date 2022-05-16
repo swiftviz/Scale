@@ -10,9 +10,10 @@
 
 ### Updating Scales
 
-- ``SwiftVizScale/LinearScale/domain(lower:higher:)``
 - ``SwiftVizScale/LinearScale/domain(_:)-36okr``
 - ``SwiftVizScale/LinearScale/domain(_:)-9tccc``
+- ``SwiftVizScale/LinearScale/domain(_:nice:)``
+- ``SwiftVizScale/LinearScale/domain(lower:higher:)``
 - ``SwiftVizScale/LinearScale/transform(_:)``
 - ``SwiftVizScale/LinearScale/range(_:)``
 - ``SwiftVizScale/LinearScale/range(lower:higher:)``
@@ -44,8 +45,12 @@
 
 ### Creating Ticks
 
-- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:)-34j``
-- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:)-38m9n``
-- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:)-70q0x``
-- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:)-8k218``
-- ``SwiftVizScale/LinearScale/tickValues(_:from:to:)``
+- ``SwiftVizScale/LinearScale/defaultTickValues(formatter:)-1l66s``
+- ``SwiftVizScale/LinearScale/defaultTickValues(formatter:)-21dmb``
+- ``SwiftVizScale/LinearScale/defaultTickValues(formatter:)-5y342``
+- ``SwiftVizScale/LinearScale/defaultTickValues(formatter:)-66hxi``
+- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:formatter:)-4jri``
+- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:formatter:)-8v33x``
+- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:formatter:)-90bbx``
+- ``SwiftVizScale/LinearScale/ticks(rangeLower:rangeHigher:formatter:)-ndqn``
+- ``SwiftVizScale/LinearScale/ticksFromValues(_:from:to:formatter:)``

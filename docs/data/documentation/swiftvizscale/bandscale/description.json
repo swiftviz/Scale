@@ -1,15 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Inherited from ",
-      "type" : "text"
-    },
-    {
-      "code" : "CustomStringConvertible.description",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ".",
+      "text" : "The description of the scale.",
       "type" : "text"
     }
   ],
@@ -257,7 +249,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/description": {
   "abstract" : [
-
+    {
+      "text" : "The description of the scale.",
+      "type" : "text"
+    }
   ],
   "conformance" : {
     "availabilityPrefix" : [

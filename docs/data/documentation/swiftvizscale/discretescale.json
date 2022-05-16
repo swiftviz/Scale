@@ -176,9 +176,15 @@
     },
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/ticks(rangeLower:rangeHigher:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/ticks(rangeLower:rangeHigher:formatter:)"
       ],
       "title" : "Creating Ticks"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/defaultTickValues(formatter:)"
+      ],
+      "title" : "Instance Methods"
     }
   ],
   "variants" : [
@@ -350,6 +356,65 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/discretescale"
 },
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/defaultTickValues(formatter:)": {
+  "abstract" : [
+    {
+      "text" : "Returns an array of the strings that make up the ticks for the scale.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "defaultTickValues"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/defaultTickValues(formatter:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "defaultTickValues(formatter:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescale\/defaulttickvalues(formatter:)"
+},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/domain": {
   "abstract" : [
     {
@@ -511,9 +576,12 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/discretescale\/scaletype"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/ticks(rangeLower:rangeHigher:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/ticks(rangeLower:rangeHigher:formatter:)": {
   "abstract" : [
-
+    {
+      "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -564,7 +632,24 @@
     },
     {
       "kind" : "text",
-      "text" : ") -> ["
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> ["
     },
     {
       "kind" : "typeIdentifier",
@@ -585,13 +670,13 @@
       "text" : ">]"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/ticks(rangeLower:rangeHigher:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/ticks(rangeLower:rangeHigher:formatter:)",
   "kind" : "symbol",
   "required" : true,
   "role" : "symbol",
-  "title" : "ticks(rangeLower:rangeHigher:)",
+  "title" : "ticks(rangeLower:rangeHigher:formatter:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/discretescale\/ticks(rangelower:rangehigher:)"
+  "url" : "\/documentation\/swiftvizscale\/discretescale\/ticks(rangelower:rangehigher:formatter:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScaleType": {
   "abstract" : [

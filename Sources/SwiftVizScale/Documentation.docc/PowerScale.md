@@ -10,9 +10,10 @@
 
 ### Updating Scales
 
-- ``SwiftVizScale/PowerScale/domain(lower:higher:)``
 - ``SwiftVizScale/PowerScale/domain(_:)-6gsv``
 - ``SwiftVizScale/PowerScale/domain(_:)-6w4dt``
+- ``SwiftVizScale/PowerScale/domain(_:nice:)``
+- ``SwiftVizScale/PowerScale/domain(lower:higher:)``
 - ``SwiftVizScale/PowerScale/transform(_:)``
 - ``SwiftVizScale/PowerScale/range(_:)``
 - ``SwiftVizScale/PowerScale/range(lower:higher:)``
@@ -45,8 +46,12 @@
 
 ### Creating Ticks
 
-- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-1gol``
-- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-3gn53``
-- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-54f6d``
-- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:)-8avol``
-- ``SwiftVizScale/PowerScale/tickValues(_:from:to:)``
+- ``SwiftVizScale/PowerScale/defaultTickValues(formatter:)-1fuya``
+- ``SwiftVizScale/PowerScale/defaultTickValues(formatter:)-4jsvb``
+- ``SwiftVizScale/PowerScale/defaultTickValues(formatter:)-8gx0``
+- ``SwiftVizScale/PowerScale/defaultTickValues(formatter:)-hts5``
+- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:formatter:)-4hv8y``
+- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:formatter:)-5i72u``
+- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:formatter:)-7qsoh``
+- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:formatter:)-elx9``
+- ``SwiftVizScale/PowerScale/ticksFromValues(_:from:to:formatter:)``

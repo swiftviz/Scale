@@ -12,4 +12,4 @@
 
 ### Creating Ticks
 
-- ``SwiftVizScale/DiscreteScale/ticks(rangeLower:rangeHigher:)``
+- ``SwiftVizScale/DiscreteScale/ticks(rangeLower:rangeHigher:formatter:)``

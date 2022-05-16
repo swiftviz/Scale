@@ -10,9 +10,10 @@
 
 ### Updating Scales
 
-- ``SwiftVizScale/RadialScale/domain(lower:higher:)``
 - ``SwiftVizScale/RadialScale/domain(_:)-84a8n``
 - ``SwiftVizScale/RadialScale/domain(_:)-8golr``
+- ``SwiftVizScale/RadialScale/domain(_:nice:)``
+- ``SwiftVizScale/RadialScale/domain(lower:higher:)``
 - ``SwiftVizScale/RadialScale/transform(_:)``
 - ``SwiftVizScale/RadialScale/range(_:)``
 - ``SwiftVizScale/RadialScale/range(lower:higher:)``
@@ -44,7 +45,12 @@
 
 ### Creating Ticks
 
-- ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:)-1q9bi``
-- ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:)-3htvb``
-- ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:)-4vgq2``
-- ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:)-8e854``
+- ``SwiftVizScale/RadialScale/defaultTickValues(formatter:)-24xez``
+- ``SwiftVizScale/RadialScale/defaultTickValues(formatter:)-27kcq``
+- ``SwiftVizScale/RadialScale/defaultTickValues(formatter:)-3l5q5``
+- ``SwiftVizScale/RadialScale/defaultTickValues(formatter:)-3ooif``
+- ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:formatter:)-2ibni``
+- ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:formatter:)-47aaq``
+- ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:formatter:)-6tnha``
+- ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:formatter:)-9dxor``
+- ``SwiftVizScale/RadialScale/ticksFromValues(_:from:to:formatter:)``
