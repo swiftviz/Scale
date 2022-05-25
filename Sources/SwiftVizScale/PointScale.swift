@@ -30,6 +30,8 @@ public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDo
 
     /// The type of discrete scale.
     public let scaleType: DiscreteScaleType = .point
+    /// A Boolean value that indicates if the mapping from domain to range is inverted.
+    public let reversed: Bool
 
     /// Creates a new point scale.
     /// - Parameters:
@@ -38,10 +40,17 @@ public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDo
     ///   - round: A Boolean value that indicates the scaled values are returned as rounded values.
     ///   - from: The lower value of the range into which the discrete values map.
     ///   - to: The upper value of the range into which the discrete values map.
-    public init(_ domain: [CategoryType] = [], padding: OutputType = 0, round: Bool = false, from: OutputType? = nil, to: OutputType? = nil) {
+    public init(_ domain: [CategoryType] = [],
+                padding: OutputType = 0,
+                round: Bool = false,
+                reversed: Bool = false,
+                from: OutputType? = nil,
+                to: OutputType? = nil)
+    {
         self.round = round
         self.padding = padding
         self.domain = domain
+        self.reversed = reversed
         if let from = from, let to = to {
             precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
             rangeLower = from
@@ -62,35 +71,35 @@ public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDo
     /// Returns a new scale with the domain set to the values you provide.
     /// - Parameter domain: An array of the types the scale maps into.
     public func domain(_ domain: [CategoryType]) -> Self {
-        type(of: self).init(domain, padding: padding, round: round, from: rangeLower, to: rangeHigher)
+        type(of: self).init(domain, padding: padding, round: round, reversed: reversed, from: rangeLower, to: rangeHigher)
     }
 
     /// Returns a new scale with the rounding set to the value you provide.
     /// - Parameter newRound: A Boolean value that indicates the scaled values are returned as rounded values.
     public func round(_ newRound: Bool) -> Self {
-        type(of: self).init(domain, padding: padding, round: newRound, from: rangeLower, to: rangeHigher)
+        type(of: self).init(domain, padding: padding, round: newRound, reversed: reversed, from: rangeLower, to: rangeHigher)
     }
 
     /// Returns a new scale with the inner padding set to the value you provide.
     /// - Parameter newPaddingInner: The amount of padding between bands.
     public func padding(_ newPadding: OutputType) -> Self {
-        type(of: self).init(domain, padding: newPadding, round: round, from: rangeLower, to: rangeHigher)
+        type(of: self).init(domain, padding: newPadding, round: round, reversed: reversed, from: rangeLower, to: rangeHigher)
     }
 
     /// Returns a new scale with the range set to the values you provide.
     /// - Parameters:
     ///   - lower: The lower value of the range into which the discrete values map.
     ///   - higher: The upper value of the range into which the discrete values map.
-    public func range(lower: OutputType, higher: OutputType) -> Self {
+    public func range(reversed: Bool = false, lower: OutputType, higher: OutputType) -> Self {
         precondition(lower < higher, "attempting to set an inverted or empty range: \(lower) to \(higher)")
-        return type(of: self).init(domain, padding: padding, round: round, from: lower, to: higher)
+        return type(of: self).init(domain, padding: padding, round: round, reversed: reversed, from: lower, to: higher)
     }
 
     /// Returns a new scale with the range set to the range you provide.
     /// - Parameter range: The range of the values into which the discrete values map.
-    public func range(_ range: ClosedRange<OutputType>) -> Self {
+    public func range(reversed: Bool = false, _ range: ClosedRange<OutputType>) -> Self {
         precondition(range.lowerBound < range.upperBound, "attempting to set an inverted or empty range: \(range.lowerBound) to \(range.upperBound)")
-        return type(of: self).init(domain, padding: padding, round: round, from: range.lowerBound, to: range.upperBound)
+        return type(of: self).init(domain, padding: padding, round: round, reversed: reversed, from: range.lowerBound, to: range.upperBound)
     }
 
     internal func step() -> Double? {
@@ -116,9 +125,9 @@ public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDo
     /// - Parameter from: The lower value of the range into which the discrete values map.
     /// - Parameter to: The upper value of the range into which the discrete values map.
     /// - Returns: A location along the range that indicates a point that matches with the value you provided, or `nil` if the value isn't contained by the domain.
-    public func scale(_ value: CategoryType, from: OutputType, to: OutputType) -> OutputType? {
+    public func scale(_ value: CategoryType, reversed: Bool = false, from: OutputType, to: OutputType) -> OutputType? {
         precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
-        let reconfiguredScale = type(of: self).init(domain, padding: padding, round: round, from: from, to: to)
+        let reconfiguredScale = type(of: self).init(domain, padding: padding, round: round, reversed: reversed, from: from, to: to)
         return reconfiguredScale.scale(value)
     }
 
@@ -147,9 +156,9 @@ public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDo
     ///   - from: The lower value of the range into which the discrete values map.
     ///   - to: The upper value of the range into which the discrete values map.
     /// - Returns: The item that matches at that value, or nil if the point is within padding or outside the range of the scale.
-    public func invert(_ location: OutputType, from: OutputType, to: OutputType) -> CategoryType? {
+    public func invert(_ location: OutputType, reversed: Bool = false, from: OutputType, to: OutputType) -> CategoryType? {
         precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
-        let reconfiguredScale = type(of: self).init(domain, padding: padding, round: round, from: from, to: to)
+        let reconfiguredScale = type(of: self).init(domain, padding: padding, round: round, reversed: reversed, from: from, to: to)
         return reconfiguredScale.invert(location)
     }
 
@@ -203,9 +212,9 @@ public extension PointScale {
     ///   - rangeLower: the lower value for the range into which to position the ticks.
     ///   - rangeHigher: The higher value for the range into which to position the ticks.
     ///   - formatter: An optional formatter to convert the domain values into strings.
-    func ticks(rangeLower lower: RangeType, rangeHigher higher: RangeType, formatter: Formatter? = nil) -> [Tick<RangeType>] {
+    func ticks(reversed: Bool = false, rangeLower lower: RangeType, rangeHigher higher: RangeType, formatter: Formatter? = nil) -> [Tick<RangeType>] {
         // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
-        let updatedScale = range(lower: lower, higher: higher)
+        let updatedScale = range(reversed: reversed, lower: lower, higher: higher)
         return domain.compactMap { tickValue in
             guard let tickRangeValue = updatedScale.scale(tickValue) else {
                 return nil
