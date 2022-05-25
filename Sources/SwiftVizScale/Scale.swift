@@ -37,11 +37,11 @@ public protocol Scale {
     /// - Parameters:
     ///   - from: The lower value of the range into which the discrete values map.
     ///   - to: The upper value of the range into which the discrete values map.
-    func range(lower: RangeType, higher: RangeType) -> Self
+    func range(reversed: Bool, lower: RangeType, higher: RangeType) -> Self
 
     /// Returns a new scale with the range set to the range you provide.
     /// - Parameter range: The range of the values into which the discrete values map.
-    func range(_ range: ClosedRange<RangeType>) -> Self
+    func range(reversed: Bool, _ range: ClosedRange<RangeType>) -> Self
 
     /// Returns a new scale with the domain set to span the values you provide.
     /// - Parameter values: An array of input values.

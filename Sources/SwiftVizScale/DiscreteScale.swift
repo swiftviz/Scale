@@ -41,5 +41,5 @@ public protocol DiscreteScale: Scale, CustomStringConvertible {
     ///   - rangeLower: the lower value for the range into which to position the ticks.
     ///   - rangeHigher: The higher value for the range into which to position the ticks.
     ///   - formatter: An optional formatter to convert the domain values into strings.
-    func ticks(rangeLower: RangeType, rangeHigher: RangeType, formatter: Formatter?) -> [Tick<RangeType>]
+    func ticks(reversed: Bool, rangeLower: RangeType, rangeHigher: RangeType, formatter: Formatter?) -> [Tick<RangeType>]
 }

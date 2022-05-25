@@ -297,4 +297,9 @@ final class LinearScaleTests: XCTestCase {
         XCTAssertEqual(updated.domainLower, 0)
         XCTAssertEqual(updated.domainHigher, 5)
     }
+
+    func testReversed() {
+        let scale = LinearScale<Double, CGFloat>(0 ... 20).range(0 ... 20)
+        XCTAssertEqual(scale.reversed, false)
+    }
 }
