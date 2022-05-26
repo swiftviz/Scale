@@ -109,6 +109,14 @@ internal class _AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
         _abstract()
     }
 
+    func range(lower _: OutputType, higher _: OutputType) -> Self {
+        _abstract()
+    }
+
+    func range(_: ClosedRange<OutputType>) -> Self {
+        _abstract()
+    }
+
     func transform(_: DomainDataTransform) -> Self {
         _abstract()
     }
@@ -118,6 +126,14 @@ internal class _AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
     }
 
     func invert(_: OutputType, reversed _: Bool, from _: OutputType, to _: OutputType) -> InputType? {
+        _abstract()
+    }
+
+    func scale(_: InputType, from _: OutputType, to _: OutputType) -> OutputType? {
+        _abstract()
+    }
+
+    func invert(_: OutputType, from _: OutputType, to _: OutputType) -> InputType? {
         _abstract()
     }
 
@@ -204,6 +220,14 @@ internal final class _ContinuousScale<WrappedContinuousScale: ContinuousScale>: 
         Self(_base.range(reversed: reversed, range))
     }
 
+    override public func range(lower: OutputType, higher: OutputType) -> Self {
+        Self(_base.range(lower: lower, higher: higher))
+    }
+
+    override public func range(_ range: ClosedRange<OutputType>) -> Self {
+        Self(_base.range(range))
+    }
+
     override public func transform(_ transform: DomainDataTransform) -> Self {
         Self(_base.transform(transform))
     }
@@ -214,6 +238,14 @@ internal final class _ContinuousScale<WrappedContinuousScale: ContinuousScale>: 
 
     override public func scale(_ domainValue: InputType, reversed: Bool, from: OutputType, to: OutputType) -> OutputType? {
         _base.scale(domainValue, reversed: reversed, from: from, to: to)
+    }
+
+    override public func invert(_ rangeValue: OutputType, from: OutputType, to: OutputType) -> InputType? {
+        _base.invert(rangeValue, from: from, to: to)
+    }
+
+    override public func scale(_ domainValue: InputType, from: OutputType, to: OutputType) -> OutputType? {
+        _base.scale(domainValue, from: from, to: to)
     }
 
     // Scale Conformance
@@ -333,17 +365,37 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
 
     /// Returns a new scale with the range set to the values you provide.
     /// - Parameters:
-    ///   - from: The lower value of the range into which the discrete values map.
-    ///   - to: The upper value of the range into which the discrete values map.
-    public func range(reversed: Bool = false, lower: OutputType, higher: OutputType) -> Self {
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+    ///   - lower: The lower value of the range into which the discrete values map.
+    ///   - higher: The upper value of the range into which the discrete values map.
+    public func range(reversed: Bool, lower: OutputType, higher: OutputType) -> Self {
+        AnyContinuousScale(
+            _box.range(reversed: reversed, lower: lower, higher: higher)
+        )
+    }
+
+    /// Returns a new scale with the range set to the values you provide.
+    /// - Parameters:
+    ///   - lower: The lower value of the range into which the discrete values map.
+    ///   - higher: The upper value of the range into which the discrete values map.
+    public func range(lower: OutputType, higher: OutputType) -> Self {
         AnyContinuousScale(
             _box.range(reversed: reversed, lower: lower, higher: higher)
         )
     }
 
     /// Returns a new scale with the range set to the range you provide.
+    /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     /// - Parameter range: The range of the values into which the discrete values map.
-    public func range(reversed: Bool = false, _ range: ClosedRange<OutputType>) -> Self {
+    public func range(reversed: Bool, _ range: ClosedRange<OutputType>) -> Self {
+        AnyContinuousScale(
+            _box.range(reversed: reversed, range)
+        )
+    }
+
+    /// Returns a new scale with the range set to the range you provide.
+    /// - Parameter range: The range of the values into which the discrete values map.
+    public func range(_ range: ClosedRange<OutputType>) -> Self {
         AnyContinuousScale(
             _box.range(reversed: reversed, range)
         )
@@ -361,23 +413,50 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
     /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
     ///
     /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
+    /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     /// - Parameter from: The lower bounding value of the range to transform from.
     /// - Parameter to: The higher bounding value of the range to transform from.
     /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
-    public func invert(_ rangeValue: OutputType, reversed: Bool = false, from: OutputType, to: OutputType) -> InputType? {
+    public func invert(_ rangeValue: OutputType, reversed: Bool, from: OutputType, to: OutputType) -> InputType? {
         _box.invert(rangeValue, reversed: reversed, from: from, to: to)
+    }
+
+    /// Converts back from the output _range_ to a value within the input _domain_.
+    ///
+    /// The inverse of ``ContinuousScale/scale(_:from:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    ///
+    /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
+    /// - Parameter from: The lower bounding value of the range to transform from.
+    /// - Parameter to: The higher bounding value of the range to transform from.
+    /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
+    public func invert(_ rangeValue: OutputType, from: OutputType, to: OutputType) -> InputType? {
+        _box.invert(rangeValue, from: from, to: to)
     }
 
     /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
     ///
     /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
     ///
-    /// - Parameter inputValue: The value to be scaled.
+    /// - Parameter domainValue: The value to be scaled.
+    /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     /// - Parameter from: The lower bounding value of the range to transform to.
     /// - Parameter to: The higher bounding value of the range to transform to.
     /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
-    public func scale(_ domainValue: InputType, reversed: Bool = false, from: OutputType, to: OutputType) -> OutputType? {
+    public func scale(_ domainValue: InputType, reversed: Bool, from: OutputType, to: OutputType) -> OutputType? {
         _box.scale(domainValue, reversed: reversed, from: from, to: to)
+    }
+
+    /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
+    ///
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    ///
+    /// - Parameter domainValue: The value to be scaled.
+    /// - Parameter from: The lower bounding value of the range to transform to.
+    /// - Parameter to: The higher bounding value of the range to transform to.
+    /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
+    public func scale(_ domainValue: InputType, from: OutputType, to: OutputType) -> OutputType? {
+        _box.scale(domainValue, from: from, to: to)
     }
 
     // Scale Conformance

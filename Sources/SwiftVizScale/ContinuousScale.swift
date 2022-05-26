@@ -102,6 +102,7 @@ public protocol ContinuousScale: Scale, CustomStringConvertible where InputType:
 
     /// Returns a new scale with the range set to the values you provide.
     /// - Parameters:
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     ///   - lower: The lower bound for the scale's range.
     ///   - higher: The upper bound for the scale's range.
     /// - Returns: A replica of the scale, with new range values.
@@ -109,9 +110,23 @@ public protocol ContinuousScale: Scale, CustomStringConvertible where InputType:
 
     /// Returns a new scale with the range set to the values you provide.
     /// - Parameters:
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     ///   - range: The range to apply as the scale's range.
     /// - Returns: A copy of the scale with the range values you provide.
     func range(reversed: Bool, _ range: ClosedRange<OutputType>) -> Self
+
+    /// Returns a new scale with the range set to the values you provide.
+    /// - Parameters:
+    ///   - lower: The lower bound for the scale's range.
+    ///   - higher: The upper bound for the scale's range.
+    /// - Returns: A replica of the scale, with new range values.
+    func range(lower: RangeType, higher: RangeType) -> Self
+
+    /// Returns a new scale with the range set to the values you provide.
+    /// - Parameters:
+    ///   - range: The range to apply as the scale's range.
+    /// - Returns: A copy of the scale with the range values you provide.
+    func range(_ range: ClosedRange<OutputType>) -> Self
 
     /// Returns a new scale with the transform set to the value you provide.
     /// - Parameters:
@@ -123,11 +138,22 @@ public protocol ContinuousScale: Scale, CustomStringConvertible where InputType:
     ///
     /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
     ///
-    /// - Parameter inputValue: The value to be scaled.
+    /// - Parameter domainValue: The value to be scaled.
+    /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     /// - Parameter from: The lower bounding value of the range to transform to.
     /// - Parameter to: The higher bounding value of the range to transform to.
     /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
     func scale(_ domainValue: InputType, reversed: Bool, from: OutputType, to: OutputType) -> OutputType?
+
+    /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
+    ///
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    ///
+    /// - Parameter domainValue: The value to be scaled.
+    /// - Parameter from: The lower bounding value of the range to transform to.
+    /// - Parameter to: The higher bounding value of the range to transform to.
+    /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
+    func scale(_ domainValue: InputType, from: OutputType, to: OutputType) -> OutputType?
 
     /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
     ///
@@ -143,10 +169,22 @@ public protocol ContinuousScale: Scale, CustomStringConvertible where InputType:
     /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
     ///
     /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
+    /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     /// - Parameter from: The lower bounding value of the range to transform from.
     /// - Parameter to: The higher bounding value of the range to transform from.
     /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
     func invert(_ rangeValue: OutputType, reversed: Bool, from: OutputType, to: OutputType) -> InputType?
+
+    /// Converts back from the output _range_ to a value within the input _domain_.
+    ///
+    /// The inverse of ``ContinuousScale/scale(_:from:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    ///
+    /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
+    /// - Parameter from: The lower bounding value of the range to transform from.
+    /// - Parameter to: The higher bounding value of the range to transform from.
+    /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
+    func invert(_ rangeValue: OutputType, from: OutputType, to: OutputType) -> InputType?
 
     /// Converts back from the output _range_ to a value within the input _domain_.
     ///
@@ -206,11 +244,38 @@ public extension ContinuousScale {
     /// This method is a convenience method that sets the lower value of the range is `0`.
     /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
     ///
-    /// - Parameter inputValue: The value to be scaled.
+    /// - Parameter domainValue: The value to be scaled.
+    /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     /// - Parameter to: The higher bounding value of the range to transform from.
     /// - Returns: a value within the bounds of the range values you provide, or `nil` if the value was dropped.
-    func scale(_ domainValue: InputType, to upper: OutputType, reversed: Bool = false) -> OutputType? {
+    func scale(_ domainValue: InputType, to upper: OutputType, reversed: Bool) -> OutputType? {
         scale(domainValue, reversed: reversed, from: 0, to: upper)
+    }
+
+    /// Converts a value comparing it to the input domain, transforming the value, and mapping it into values between `0` and to the upper bound you provide.
+    ///
+    /// This method is a convenience method that sets the lower value of the range is `0`.
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    ///
+    /// - Parameter domainValue: The value to be scaled.
+    /// - Parameter to: The higher bounding value of the range to transform from.
+    /// - Returns: a value within the bounds of the range values you provide, or `nil` if the value was dropped.
+    func scale(_ domainValue: InputType, to upper: OutputType) -> OutputType? {
+        scale(domainValue, from: 0, to: upper)
+    }
+
+    /// Converts a value comparing it to the upper value of a range, mapping it to the input domain, and inverting scale's transform.
+    ///
+    /// This method is a convenience method that sets the lower value of the range is `0`.
+    /// The inverse of ``ContinuousScale/scale(_:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    ///
+    /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
+    /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+    /// - Parameter to: The higher bounding value of the range to transform from.
+    /// - Returns: a value within the bounds of the range values you provide, or `nil` if the value was dropped.
+    func invert(_ rangeValue: OutputType, to upper: OutputType, reversed: Bool) -> InputType? {
+        invert(rangeValue, reversed: reversed, from: 0, to: upper)
     }
 
     /// Converts a value comparing it to the upper value of a range, mapping it to the input domain, and inverting scale's transform.
@@ -222,8 +287,8 @@ public extension ContinuousScale {
     /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
     /// - Parameter to: The higher bounding value of the range to transform from.
     /// - Returns: a value within the bounds of the range values you provide, or `nil` if the value was dropped.
-    func invert(_ rangeValue: OutputType, to upper: OutputType, reversed: Bool = false) -> InputType? {
-        invert(rangeValue, reversed: reversed, from: 0, to: upper)
+    func invert(_ rangeValue: OutputType, to upper: OutputType) -> InputType? {
+        invert(rangeValue, from: 0, to: upper)
     }
 
     /// Returns a list of strings that make up the valid tick values out of the set that you provide.
@@ -299,6 +364,23 @@ public extension ContinuousScale where InputType == Int {
         }
     }
 
+    /// Returns an array of the locations within the output range to locate ticks for the scale.
+    /// - Parameters:
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+    ///   - rangeLower: the lower value for the range into which to position the ticks.
+    ///   - rangeHigher: The higher value for the range into which to position the ticks.
+    ///   - formatter: An optional formatter to convert the domain values into strings.
+    func ticks(reversed: Bool, rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
+        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
+        return tickValues.compactMap { tickValue in
+            if let tickRangeLocation = scale(tickValue, reversed: reversed, from: rangeLower, to: rangeHigher) {
+                return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
+            }
+            return nil
+        }
+    }
+
     /// Returns an array of the strings that make up the ticks for the scale.
     /// - Parameter formatter: An optional formatter to convert the domain values into strings.
     func defaultTickValues(formatter: Formatter? = nil) -> [String] {
@@ -324,6 +406,23 @@ public extension ContinuousScale where InputType == Float {
         // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
         return tickValues.compactMap { tickValue in
             if let tickRangeLocation = scale(tickValue, reversed: self.reversed, from: rangeLower, to: rangeHigher) {
+                return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
+            }
+            return nil
+        }
+    }
+
+    /// Returns an array of the locations within the output range to locate ticks for the scale.
+    /// - Parameters:
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+    ///   - rangeLower: the lower value for the range into which to position the ticks.
+    ///   - rangeHigher: The higher value for the range into which to position the ticks.
+    ///   - formatter: An optional formatter to convert the domain values into strings.
+    func ticks(reversed: Bool, rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
+        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
+        return tickValues.compactMap { tickValue in
+            if let tickRangeLocation = scale(tickValue, reversed: reversed, from: rangeLower, to: rangeHigher) {
                 return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
             }
             return nil
@@ -362,6 +461,23 @@ public extension ContinuousScale where InputType == Float {
             }
         }
 
+        /// Returns an array of the locations within the output range to locate ticks for the scale.
+        /// - Parameters:
+        ///   - rangeLower: the lower value for the range into which to position the ticks.
+        ///   - rangeHigher: The higher value for the range into which to position the ticks.
+        ///   - formatter: An optional formatter to convert the domain values into strings.
+        ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+        func ticks(reversed _: Bool, rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
+            let ticksFromValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+            // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
+            return ticksFromValues.compactMap { tickValue in
+                if let tickRangeLocation = scale(tickValue, reversed: self.reversed, from: rangeLower, to: rangeHigher) {
+                    return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
+                }
+                return nil
+            }
+        }
+
         /// Returns an array of the strings that make up the ticks for the scale.
         /// - Parameter formatter: An optional formatter to convert the domain values into strings.
         func defaultTickValues(formatter: Formatter? = nil) -> [String] {
@@ -388,6 +504,25 @@ public extension ContinuousScale where InputType == Double {
         // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
         return tickValues.compactMap { tickValue in
             if let tickRangeLocation = scale(tickValue, reversed: self.reversed, from: rangeLower, to: rangeHigher),
+               tickRangeLocation <= rangeHigher
+            {
+                return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
+            }
+            return nil
+        }
+    }
+
+    /// Returns an array of the locations within the output range to locate ticks for the scale.
+    /// - Parameters:
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+    ///   - rangeLower: the lower value for the range into which to position the ticks.
+    ///   - rangeHigher: The higher value for the range into which to position the ticks.
+    ///   - formatter: An optional formatter to convert the domain values into strings.
+    func ticks(reversed: Bool, rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
+        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
+        return tickValues.compactMap { tickValue in
+            if let tickRangeLocation = scale(tickValue, reversed: reversed, from: rangeLower, to: rangeHigher),
                tickRangeLocation <= rangeHigher
             {
                 return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)

@@ -47,6 +47,7 @@ public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDou
     ///   - paddingInner: The amount of padding between bands.
     ///   - paddingOuter: The amount of padding outside of the bands.
     ///   - round: A Boolean value that indicates the scaled values are returned as rounded values.
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     ///   - from: The lower value of the range into which the discrete values map.
     ///   - to: The upper value of the range into which the discrete values map.
     public init(_ domain: [CategoryType] = [],
@@ -107,16 +108,34 @@ public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDou
 
     /// Returns a new scale with the range set to the values you provide.
     /// - Parameters:
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     ///   - lower: The lower value of the range into which the discrete values map.
     ///   - higher: The upper value of the range into which the discrete values map.
-    public func range(reversed: Bool = false, lower: OutputType, higher: OutputType) -> Self {
+    public func range(reversed: Bool, lower: OutputType, higher: OutputType) -> Self {
+        precondition(lower < higher, "attempting to set an inverted or empty range: \(lower) to \(higher)")
+        return type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, reversed: reversed, from: lower, to: higher)
+    }
+
+    /// Returns a new scale with the range set to the values you provide.
+    /// - Parameters:
+    ///   - lower: The lower value of the range into which the discrete values map.
+    ///   - higher: The upper value of the range into which the discrete values map.
+    public func range(lower: OutputType, higher: OutputType) -> Self {
         precondition(lower < higher, "attempting to set an inverted or empty range: \(lower) to \(higher)")
         return type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, reversed: reversed, from: lower, to: higher)
     }
 
     /// Returns a new scale with the range set to the range you provide.
+    /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     /// - Parameter range: The range of the values into which the discrete values map.
-    public func range(reversed: Bool = false, _ range: ClosedRange<OutputType>) -> Self {
+    public func range(reversed: Bool, _ range: ClosedRange<OutputType>) -> Self {
+        precondition(range.lowerBound < range.upperBound, "attempting to set an inverted or empty range: \(range.lowerBound) to \(range.upperBound)")
+        return type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, reversed: reversed, from: range.lowerBound, to: range.upperBound)
+    }
+
+    /// Returns a new scale with the range set to the range you provide.
+    /// - Parameter range: The range of the values into which the discrete values map.
+    public func range(_ range: ClosedRange<OutputType>) -> Self {
         precondition(range.lowerBound < range.upperBound, "attempting to set an inverted or empty range: \(range.lowerBound) to \(range.upperBound)")
         return type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, reversed: reversed, from: range.lowerBound, to: range.upperBound)
     }
@@ -180,10 +199,23 @@ public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDou
     /// Maps the discrete item into a band with the range values you provide..
     /// - Parameters:
     ///   - value: A discrete item from the list provided as the domain for the scale.
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     ///   - from: The lower value of the range into which the discrete values map.
     ///   - to: The upper value of the range into which the discrete values map.
     /// - Returns: A band that wraps the category found in the domain with start and end values for the range of the band, or `nil` if the value isn't contained by the domain.
-    public func scale(_ value: CategoryType, reversed: Bool = true, from: OutputType, to: OutputType) -> Band<CategoryType, OutputType>? {
+    public func scale(_ value: CategoryType, reversed: Bool, from: OutputType, to: OutputType) -> Band<CategoryType, OutputType>? {
+        precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
+        let reconfiguredScale = type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, reversed: reversed, from: from, to: to)
+        return reconfiguredScale.scale(value)
+    }
+
+    /// Maps the discrete item into a band with the range values you provide..
+    /// - Parameters:
+    ///   - value: A discrete item from the list provided as the domain for the scale.
+    ///   - from: The lower value of the range into which the discrete values map.
+    ///   - to: The upper value of the range into which the discrete values map.
+    /// - Returns: A band that wraps the category found in the domain with start and end values for the range of the band, or `nil` if the value isn't contained by the domain.
+    public func scale(_ value: CategoryType, from: OutputType, to: OutputType) -> Band<CategoryType, OutputType>? {
         precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
         let reconfiguredScale = type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, reversed: reversed, from: from, to: to)
         return reconfiguredScale.scale(value)
@@ -230,11 +262,24 @@ public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDou
 
     /// Maps the value from the range values you provide back to the discrete value that it matches.
     /// - Parameters:
-    ///   - at: A value within the range of the scale.
+    ///   - location: A value within the range of the scale.
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     ///   - from: The lower value of the range into which the discrete values map.
     ///   - to: The upper value of the range into which the discrete values map.
     /// - Returns: The item that matches at that value, or nil if the point is within padding or outside the range of the scale.
-    public func invert(_ location: OutputType, reversed: Bool = false, from: OutputType, to: OutputType) -> CategoryType? {
+    public func invert(_ location: OutputType, reversed: Bool, from: OutputType, to: OutputType) -> CategoryType? {
+        precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
+        let reconfiguredScale = type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, reversed: reversed, from: from, to: to)
+        return reconfiguredScale.invert(location)
+    }
+
+    /// Maps the value from the range values you provide back to the discrete value that it matches.
+    /// - Parameters:
+    ///   - location: A value within the range of the scale.
+    ///   - from: The lower value of the range into which the discrete values map.
+    ///   - to: The upper value of the range into which the discrete values map.
+    /// - Returns: The item that matches at that value, or nil if the point is within padding or outside the range of the scale.
+    public func invert(_ location: OutputType, from: OutputType, to: OutputType) -> CategoryType? {
         precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
         let reconfiguredScale = type(of: self).init(domain, paddingInner: paddingInner, paddingOuter: paddingOuter, round: round, reversed: reversed, from: from, to: to)
         return reconfiguredScale.invert(location)
@@ -263,10 +308,11 @@ public extension BandScale {
 
     /// Returns an array of the locations within the output range to locate ticks for the scale.
     /// - Parameters:
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     ///   - rangeLower: the lower value for the range into which to position the ticks.
     ///   - rangeHigher: The higher value for the range into which to position the ticks.
     ///   - formatter: An optional formatter to convert the domain values into strings.
-    func ticks(reversed: Bool = false, rangeLower lower: RangeType, rangeHigher higher: RangeType, formatter: Formatter? = nil) -> [Tick<RangeType>] {
+    func ticks(reversed: Bool, rangeLower lower: RangeType, rangeHigher higher: RangeType, formatter: Formatter? = nil) -> [Tick<RangeType>] {
         // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
         let updatedScale = range(reversed: reversed, lower: lower, higher: higher)
         return domain.compactMap { tickValue in
@@ -275,6 +321,15 @@ public extension BandScale {
             }
             return Tick(value: tickValue, location: tickRangeValue.middle, formatter: formatter)
         }
+    }
+
+    /// Returns an array of the locations within the output range to locate ticks for the scale.
+    /// - Parameters:
+    ///   - rangeLower: the lower value for the range into which to position the ticks.
+    ///   - rangeHigher: The higher value for the range into which to position the ticks.
+    ///   - formatter: An optional formatter to convert the domain values into strings.
+    func ticks(rangeLower lower: RangeType, rangeHigher higher: RangeType, formatter: Formatter? = nil) -> [Tick<RangeType>] {
+        ticks(reversed: reversed, rangeLower: lower, rangeHigher: higher, formatter: formatter)
     }
 }
 

@@ -298,8 +298,14 @@ final class LinearScaleTests: XCTestCase {
         XCTAssertEqual(updated.domainHigher, 5)
     }
 
-    func testReversed() {
-        let scale = LinearScale<Double, CGFloat>(0 ... 20).range(0 ... 20)
+    func testReversedRangeModifiers() {
+        var scale = LinearScale<Double, CGFloat>(0 ... 20).range(0 ... 20)
+        XCTAssertEqual(scale.reversed, false)
+        scale = LinearScale(20, transform: .none, desiredTicks: 10, reversed: true, rangeLower: 0, rangeHigher: 20)
+        XCTAssertEqual(scale.reversed, true)
+        scale = scale.range(0 ... 40)
+        XCTAssertEqual(scale.reversed, true)
+        scale = scale.range(reversed: false, 0 ... 40)
         XCTAssertEqual(scale.reversed, false)
     }
 }

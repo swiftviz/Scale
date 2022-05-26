@@ -33,7 +33,7 @@ class ScaleTemplateTests: XCTestCase {
     }
 
     func testRefineScaleTemplate() throws {
-        let linear = LinearScale<Double, CGFloat>().range(lower: 0, higher: 1)
+        let linear = LinearScale<Double, CGFloat>().range(reversed: false, lower: 0, higher: 1)
         XCTAssertTrue(linear.fullyConfigured())
 
         let log = LogScale<Double, CGFloat>().range(lower: 1, higher: 10)
