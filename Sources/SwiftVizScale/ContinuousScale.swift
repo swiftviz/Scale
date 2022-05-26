@@ -560,6 +560,5 @@ func normalize<T: Real>(_ x: T, lower: T, higher: T) -> T {
 /// interpolate(a, b)(t) takes a parameter t in [0,1] and
 /// returns the corresponding range value x in [a,b].
 func interpolate<T: Real>(_ x: T, lower: T, higher: T) -> T {
-    precondition(lower < higher)
-    return lower * (1 - x) + higher * x
+    lower * (1 - x) + higher * x
 }

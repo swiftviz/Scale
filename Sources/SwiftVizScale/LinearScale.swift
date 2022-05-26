@@ -211,13 +211,13 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
             return nil
         }
         let normalizedInput = normalize(domainValue.toDouble(), lower: domainLower.toDouble(), higher: domainHigher.toDouble())
+        let result: Double
         if reversed {
-            let result: Double = interpolate(normalizedInput, lower: rangeHigher.toDouble(), higher: rangeLower.toDouble())
-            return OutputType.fromDouble(result)
+            result = interpolate(normalizedInput, lower: rangeHigher.toDouble(), higher: rangeLower.toDouble())
         } else {
-            let result: Double = interpolate(normalizedInput, lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
-            return OutputType.fromDouble(result)
+            result = interpolate(normalizedInput, lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
         }
+        return OutputType.fromDouble(result)
     }
 
     /// Transforms the input value using a linear function to the resulting value into the range you provide.
@@ -255,15 +255,14 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
         }
         // inverts the scale, taking a value in the output range and returning the relevant value from the input domain
         let normalizedRangeValue = normalize(rangeValue.toDouble(), lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
+        let mappedToDomain: Double
         if reversed {
-            let mappedToDomain = interpolate(normalizedRangeValue, lower: domainHigher.toDouble(), higher: domainLower.toDouble())
-            let castToInputType = InputType.fromDouble(mappedToDomain)
-            return transformAgainstDomain(castToInputType)
+            mappedToDomain = interpolate(normalizedRangeValue, lower: domainHigher.toDouble(), higher: domainLower.toDouble())
         } else {
-            let mappedToDomain = interpolate(normalizedRangeValue, lower: domainLower.toDouble(), higher: domainHigher.toDouble())
-            let castToInputType = InputType.fromDouble(mappedToDomain)
-            return transformAgainstDomain(castToInputType)
+            mappedToDomain = interpolate(normalizedRangeValue, lower: domainLower.toDouble(), higher: domainHigher.toDouble())
         }
+        let castToInputType = InputType.fromDouble(mappedToDomain)
+        return transformAgainstDomain(castToInputType)
     }
 
     /// Transforms a value within the range into the associated domain value.

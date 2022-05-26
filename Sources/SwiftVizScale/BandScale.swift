@@ -180,14 +180,21 @@ public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDou
     /// - Parameter value: A discrete item from the list provided as the domain for the scale.
     /// - Returns: A band that wraps the category found in the domain with start and end values for the range of the band, or `nil` if the value isn't contained by the domain.
     public func scale(_ value: CategoryType) -> Band<CategoryType, OutputType>? {
-        guard let index = domain.firstIndex(of: value), let step = step(), let width = width() else {
+        guard let step = step(), let width = width() else {
             return nil
         }
-        if width <= 0 {
+        if width <= 0 || !domain.contains(value) {
             // when there's more padding than available space for the categories
+            // OR
+            // the value to be scaled isn't within the domain
             return nil
         }
-        let doublePosition = Double(index) // 1
+        let doublePosition: Double
+        if reversed {
+            doublePosition = Double(domain.reversed().firstIndex(of: value)!)
+        } else {
+            doublePosition = Double(domain.firstIndex(of: value)!)
+        }
         let startLocation = paddingOuter.toDouble() + (doublePosition * step)
         let stopLocation = startLocation + width
         if round {
@@ -239,8 +246,13 @@ public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDou
         }
         // calculate the closest index
         let rangeExtentWithoutOuterPadding = upperRange.toDouble() - lowerRange.toDouble() - 2 * paddingOuter.toDouble()
-        let unitRangeValue = (location.toDouble() - paddingOuter.toDouble()) / rangeExtentWithoutOuterPadding
-        let rangeValueExpandedToCountDomain = unitRangeValue * Double(domain.count - 1)
+        let indexedRangeValue: Double
+        if reversed {
+            indexedRangeValue = (upperRange.toDouble() - paddingOuter.toDouble() - location.toDouble()) / rangeExtentWithoutOuterPadding
+        } else {
+            indexedRangeValue = (location.toDouble() - paddingOuter.toDouble()) / rangeExtentWithoutOuterPadding
+        }
+        let rangeValueExpandedToCountDomain = indexedRangeValue * Double(domain.count - 1)
 
         let closestIndex = Int(rangeValueExpandedToCountDomain.rounded())
         if let band = scale(domain[closestIndex]) {

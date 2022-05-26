@@ -215,4 +215,48 @@ class BandScaleTests: XCTestCase {
         let scale = BandScale<String, CGFloat>(["1", "2", "3"])
         XCTAssertEqual("\(scale)", "band[\"1\", \"2\", \"3\"]->[nil:nil]")
     }
+
+    func testReversedRangeModifiers() {
+        var scale = BandScale<String, CGFloat>(["X", "Y", "Z"]).range(0 ... 20)
+        XCTAssertEqual(scale.reversed, false)
+        scale = BandScale<String, CGFloat>(["X", "Y", "Z"], reversed: true, from: 0, to: 30)
+        XCTAssertEqual(scale.reversed, true)
+        scale = scale.range(0 ... 40)
+        XCTAssertEqual(scale.reversed, true)
+        scale = scale.range(reversed: false, 0 ... 40)
+        XCTAssertEqual(scale.reversed, false)
+    }
+
+    func testReversedCalculations() {
+        let reversed = BandScale<String, CGFloat>(["X", "Y", "Z"], reversed: true, from: 0, to: 30)
+        // print(reversed.scale("X"))
+        assertBand(reversed.scale("Z"), "Z", low: 0, high: 10)
+        assertBand(reversed.scale("Y"), "Y", low: 10, high: 20)
+        assertBand(reversed.scale("X"), "X", low: 20, high: 30)
+        XCTAssertEqual(reversed.invert(15), "Y")
+
+        let forward = reversed.range(reversed: false, lower: 0, higher: 30) // identity
+        assertBand(forward.scale("X"), "X", low: 0, high: 10)
+        assertBand(forward.scale("Y"), "Y", low: 10, high: 20)
+        assertBand(forward.scale("Z"), "Z", low: 20, high: 30)
+        // verify invert
+        XCTAssertEqual(forward.invert(5), "X")
+    }
+
+    func testReversedTicks() {
+        let reversed = BandScale<String, CGFloat>(["X", "Y", "Z"], reversed: true, from: 0, to: 30)
+        let reverseTicks = reversed.ticks(rangeLower: 0, rangeHigher: 30)
+        XCTAssertEqual(reverseTicks.count, 3)
+        print(reverseTicks)
+        assertTick(reverseTicks[0], "X", 25)
+        assertTick(reverseTicks[1], "Y", 15)
+        assertTick(reverseTicks[2], "Z", 5)
+
+        let forward = reversed.range(reversed: false, lower: 0, higher: 30) // identity
+        let forwardTicks = forward.ticks(rangeLower: 0, rangeHigher: 30)
+        XCTAssertEqual(forwardTicks.count, 3)
+        assertTick(forwardTicks[0], "X", 5)
+        assertTick(forwardTicks[1], "Y", 15)
+        assertTick(forwardTicks[2], "Z", 25)
+    }
 }

@@ -219,7 +219,12 @@ public struct PowerScale<InputType: ConvertibleWithDouble & NiceValue, OutputTyp
         let powDomainLower = pow(domainLower.toDouble(), exponent)
         let powDomainHigher = pow(domainHigher.toDouble(), exponent)
         let normalizedValueOnPowDomain = normalize(powDomainValue, lower: powDomainLower, higher: powDomainHigher)
-        let valueMappedToRange = interpolate(normalizedValueOnPowDomain, lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
+        let valueMappedToRange: Double
+        if reversed {
+            valueMappedToRange = interpolate(normalizedValueOnPowDomain, lower: rangeHigher.toDouble(), higher: rangeLower.toDouble())
+        } else {
+            valueMappedToRange = interpolate(normalizedValueOnPowDomain, lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
+        }
         return OutputType.fromDouble(valueMappedToRange)
     }
 
@@ -259,7 +264,12 @@ public struct PowerScale<InputType: ConvertibleWithDouble & NiceValue, OutputTyp
         let normalizedRangeValue = normalize(rangeValue.toDouble(), lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
         let powDomainLower = pow(domainLower.toDouble(), exponent)
         let powDomainHigher = pow(domainHigher.toDouble(), exponent)
-        let linearInterpolatedValue = interpolate(Double(normalizedRangeValue), lower: powDomainLower, higher: powDomainHigher)
+        let linearInterpolatedValue: Double
+        if reversed {
+            linearInterpolatedValue = interpolate(Double(normalizedRangeValue), lower: powDomainHigher, higher: powDomainLower)
+        } else {
+            linearInterpolatedValue = interpolate(Double(normalizedRangeValue), lower: powDomainLower, higher: powDomainHigher)
+        }
         let domainValue = pow(linearInterpolatedValue, 1.0 / exponent)
         let downcastDomainValue = InputType.fromDouble(domainValue)
         return transformAgainstDomain(downcastDomainValue)

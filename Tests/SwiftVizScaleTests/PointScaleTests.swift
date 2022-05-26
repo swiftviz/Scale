@@ -183,4 +183,48 @@ class PointScaleTests: XCTestCase {
         let scale = PointScale<String, CGFloat>(["1", "2", "3"], padding: 10)
         XCTAssertEqual("\(scale)", "point[\"1\", \"2\", \"3\"]->[nil:nil]")
     }
+
+    func testReversedRangeModifiers() {
+        var scale = PointScale<String, CGFloat>(["X", "Y", "Z"]).range(0 ... 30)
+        XCTAssertEqual(scale.reversed, false)
+        scale = PointScale<String, CGFloat>(["X", "Y", "Z"], reversed: true, from: 0, to: 30)
+        XCTAssertEqual(scale.reversed, true)
+        scale = scale.range(0 ... 40)
+        XCTAssertEqual(scale.reversed, true)
+        scale = scale.range(reversed: false, 0 ... 40)
+        XCTAssertEqual(scale.reversed, false)
+    }
+
+    func testReversedCalculations() {
+        let reversed = PointScale<String, CGFloat>(["X", "Y", "Z"], reversed: true, from: 0, to: 30)
+        // print(reversed.scale("X"))
+        XCTAssertEqual(reversed.scale("Z"), 5)
+        XCTAssertEqual(reversed.scale("Y"), 15)
+        XCTAssertEqual(reversed.scale("X"), 25)
+        XCTAssertEqual(reversed.invert(15), "Y")
+
+        let forward = reversed.range(reversed: false, lower: 0, higher: 30) // identity
+        XCTAssertEqual(forward.scale("X"), 5)
+        XCTAssertEqual(forward.scale("Y"), 15)
+        XCTAssertEqual(forward.scale("Z"), 25)
+        // verify invert
+        XCTAssertEqual(forward.invert(5), "X")
+    }
+
+    func testReversedTicks() {
+        let reversed = PointScale<String, CGFloat>(["X", "Y", "Z"], reversed: true, from: 0, to: 30)
+        let reverseTicks = reversed.ticks(rangeLower: 0, rangeHigher: 30)
+        XCTAssertEqual(reverseTicks.count, 3)
+        print(reverseTicks)
+        assertTick(reverseTicks[0], "X", 25)
+        assertTick(reverseTicks[1], "Y", 15)
+        assertTick(reverseTicks[2], "Z", 5)
+
+        let forward = reversed.range(reversed: false, lower: 0, higher: 30) // identity
+        let forwardTicks = forward.ticks(rangeLower: 0, rangeHigher: 30)
+        XCTAssertEqual(forwardTicks.count, 3)
+        assertTick(forwardTicks[0], "X", 5)
+        assertTick(forwardTicks[1], "Y", 15)
+        assertTick(forwardTicks[2], "Z", 25)
+    }
 }
