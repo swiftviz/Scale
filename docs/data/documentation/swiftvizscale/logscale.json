@@ -183,10 +183,10 @@
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LinearScale",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/AnyContinuousScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScaleType"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScaleType",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform"
       ],
       "title" : "Continuous Scales"
     }
@@ -194,8 +194,8 @@
   "topicSections" : [
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/init(from:to:transform:desiredTicks:rangeLower:rangeHigher:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/init(_:transform:desiredTicks:rangeLower:rangeHigher:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/init(_:transform:desiredTicks:reversed:rangeLower:rangeHigher:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/init(from:to:transform:desiredTicks:reversed:rangeLower:rangeHigher:)"
       ],
       "title" : "Creating Logarithmic Scales"
     },
@@ -207,7 +207,9 @@
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/domain(lower:higher:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/transform(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/range(_:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/range(lower:higher:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/range(lower:higher:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/range(reversed:_:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/range(reversed:lower:higher:)"
       ],
       "title" : "Updating Scales"
     },
@@ -218,6 +220,7 @@
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/domainExtent",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/transformType",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/desiredTicks",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/reversed",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/rangeHigher",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/rangeLower",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/scaleType"
@@ -226,12 +229,16 @@
     },
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/scale(_:from:to:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/scale(_:to:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/scale(_:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/scale(_:from:to:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/scale(_:reversed:from:to:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/scale(_:to:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/scale(_:to:reversed:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/invert(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/invert(_:from:to:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/invert(_:reversed:from:to:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/invert(_:to:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/invert(_:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/invert(_:to:reversed:)"
       ],
       "title" : "Converting Values"
     },
@@ -252,8 +259,12 @@
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/ticks(rangeLower:rangeHigher:formatter:)-33tb9",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/ticks(rangeLower:rangeHigher:formatter:)-5akta",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/ticks(rangeLower:rangeHigher:formatter:)-73fh",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-1wyve",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-2eo1i",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-3xdc2",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-7y98y",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/ticksFromValues(_:from:to:formatter:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/transform(_:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/validTickValues(_:formatter:)"
       ],
       "title" : "Creating Ticks"
     },
@@ -1451,7 +1462,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/logscale\/domainlower"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/init(_:transform:desiredTicks:rangeLower:rangeHigher:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/init(_:transform:desiredTicks:reversed:rangeLower:rangeHigher:)": {
   "abstract" : [
     {
       "text" : "Creates a new logarithmic scale for the upper and lower bounds of the domain range you provide.",
@@ -1521,6 +1532,23 @@
     },
     {
       "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
       "text" : "rangeLower"
     },
     {
@@ -1554,14 +1582,14 @@
       "text" : "?)"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/init(_:transform:desiredTicks:rangeLower:rangeHigher:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/init(_:transform:desiredTicks:reversed:rangeLower:rangeHigher:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "init(_:transform:desiredTicks:rangeLower:rangeHigher:)",
+  "title" : "init(_:transform:desiredTicks:reversed:rangeLower:rangeHigher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/logscale\/init(_:transform:desiredticks:rangelower:rangehigher:)"
+  "url" : "\/documentation\/swiftvizscale\/logscale\/init(_:transform:desiredticks:reversed:rangelower:rangehigher:)"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/init(from:to:transform:desiredTicks:rangeLower:rangeHigher:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/init(from:to:transform:desiredTicks:reversed:rangeLower:rangeHigher:)": {
   "abstract" : [
     {
       "text" : "Creates a new logarithmic scale for the upper and lower bounds of the domain you provide.",
@@ -1647,6 +1675,23 @@
     },
     {
       "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
       "text" : "rangeLower"
     },
     {
@@ -1680,12 +1725,12 @@
       "text" : "?)"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/init(from:to:transform:desiredTicks:rangeLower:rangeHigher:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/init(from:to:transform:desiredTicks:reversed:rangeLower:rangeHigher:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "init(from:to:transform:desiredTicks:rangeLower:rangeHigher:)",
+  "title" : "init(from:to:transform:desiredTicks:reversed:rangeLower:rangeHigher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/logscale\/init(from:to:transform:desiredticks:rangelower:rangehigher:)"
+  "url" : "\/documentation\/swiftvizscale\/logscale\/init(from:to:transform:desiredticks:reversed:rangelower:rangehigher:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/invert(_:)": {
   "abstract" : [
@@ -1821,6 +1866,107 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/logscale\/invert(_:from:to:)"
 },
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/invert(_:reversed:from:to:)": {
+  "abstract" : [
+    {
+      "text" : "Transforms a value within the range into the associated domain value.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "invert"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "to"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/invert(_:reversed:from:to:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "invert(_:reversed:from:to:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/logscale\/invert(_:reversed:from:to:)"
+},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/invert(_:to:)": {
   "abstract" : [
     {
@@ -1887,6 +2033,90 @@
   "title" : "invert(_:to:)",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/logscale\/invert(_:to:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/invert(_:to:reversed:)": {
+  "abstract" : [
+    {
+      "text" : "Converts a value comparing it to the upper value of a range, mapping it to the input domain, and inverting scale’s transform.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "invert"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "to"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/invert(_:to:reversed:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "invert(_:to:reversed:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/logscale\/invert(_:to:reversed:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/range(_:)": {
   "abstract" : [
@@ -2054,6 +2284,206 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/logscale\/range(lower:higher:)"
 },
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/range(reversed:_:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the range set to the values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "range"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SN",
+      "text" : "ClosedRange"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V",
+      "text" : "LogScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/range(reversed:_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "range(reversed:_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/logscale\/range(reversed:_:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/range(reversed:lower:higher:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the range set to the values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "range"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "lower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "higher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V",
+      "text" : "LogScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/range(reversed:lower:higher:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "range(reversed:lower:higher:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/logscale\/range(reversed:lower:higher:)"
+},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/rangeHigher": {
   "abstract" : [
     {
@@ -2135,6 +2565,43 @@
   "title" : "rangeLower",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/logscale\/rangelower"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/reversed": {
+  "abstract" : [
+    {
+      "text" : "A Boolean value that indicates if the mapping from domain to range is inverted.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/reversed",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "reversed",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/logscale\/reversed"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/scale(_:)": {
   "abstract" : [
@@ -2270,6 +2737,107 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/logscale\/scale(_:from:to:)"
 },
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/scale(_:reversed:from:to:)": {
+  "abstract" : [
+    {
+      "text" : "Transforms the input value using a linear function to the resulting value into the range you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "scale"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "to"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale03LogC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/scale(_:reversed:from:to:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "scale(_:reversed:from:to:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/logscale\/scale(_:reversed:from:to:)"
+},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/scale(_:to:)": {
   "abstract" : [
     {
@@ -2344,6 +2912,98 @@
   "title" : "scale(_:to:)",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/logscale\/scale(_:to:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/scale(_:to:reversed:)": {
+  "abstract" : [
+    {
+      "text" : "Converts a value comparing it to the input domain, transforming the value, and mapping it into values between ",
+      "type" : "text"
+    },
+    {
+      "code" : "0",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " and to the upper bound you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "scale"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "to"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/scale(_:to:reversed:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "scale(_:to:reversed:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/logscale\/scale(_:to:reversed:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/scaleType": {
   "abstract" : [
@@ -2914,6 +3574,606 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/logscale\/ticks(rangelower:rangehigher:formatter:)-73fh"
 },
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-1wyve": {
+  "abstract" : [
+    {
+      "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "InputType",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " is ",
+        "type" : "text"
+      },
+      {
+        "code" : "Int",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ticks"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale4TickV",
+      "text" : "Tick"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">]"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-1wyve",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ticks(reversed:rangeLower:rangeHigher:formatter:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/logscale\/ticks(reversed:rangelower:rangehigher:formatter:)-1wyve"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-2eo1i": {
+  "abstract" : [
+    {
+      "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "InputType",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " is ",
+        "type" : "text"
+      },
+      {
+        "code" : "Double",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ticks"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale4TickV",
+      "text" : "Tick"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">]"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-2eo1i",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ticks(reversed:rangeLower:rangeHigher:formatter:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/logscale\/ticks(reversed:rangelower:rangehigher:formatter:)-2eo1i"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-3xdc2": {
+  "abstract" : [
+    {
+      "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "InputType",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " is ",
+        "type" : "text"
+      },
+      {
+        "code" : "CGFloat",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ticks"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale4TickV",
+      "text" : "Tick"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">]"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-3xdc2",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ticks(reversed:rangeLower:rangeHigher:formatter:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/logscale\/ticks(reversed:rangelower:rangehigher:formatter:)-3xdc2"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-7y98y": {
+  "abstract" : [
+    {
+      "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "InputType",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " is ",
+        "type" : "text"
+      },
+      {
+        "code" : "Float",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ticks"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale4TickV",
+      "text" : "Tick"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">]"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-7y98y",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ticks(reversed:rangeLower:rangeHigher:formatter:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/logscale\/ticks(reversed:rangelower:rangehigher:formatter:)-7y98y"
+},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/ticksFromValues(_:from:to:formatter:)": {
   "abstract" : [
     {
@@ -3176,6 +4436,73 @@
   "title" : "transformType",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/logscale\/transformtype"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LogScale/validTickValues(_:formatter:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a list of strings that make up the valid tick values out of the set that you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "validTickValues"
+    },
+    {
+      "kind" : "text",
+      "text" : "(["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale0C0P9InputTypeQa",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "], "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LogScale\/validTickValues(_:formatter:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "validTickValues(_:formatter:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/logscale\/validtickvalues(_:formatter:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/NiceValue": {
   "abstract" : [

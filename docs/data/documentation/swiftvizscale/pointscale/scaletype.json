@@ -100,6 +100,20 @@
   "sections" : [
 
   ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/domain",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/round",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/padding",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/reversed",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/rangeLower",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/rangeHigher"
+      ],
+      "title" : "Inspecting Scales"
+    }
+  ],
   "variants" : [
     {
       "paths" : [
@@ -208,6 +222,240 @@
   "title" : "PointScale",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/pointscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/domain": {
+  "abstract" : [
+    {
+      "text" : "An array of the types the scale maps into.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domain"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V12CategoryTypexmfp",
+      "text" : "CategoryType"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/domain",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domain",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/domain"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/padding": {
+  "abstract" : [
+    {
+      "text" : "The amount of padding between bands.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "padding"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/padding",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "padding",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/padding"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/rangeHigher": {
+  "abstract" : [
+    {
+      "text" : "The upper value of the range into which the discrete values map.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/rangeHigher",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "rangeHigher",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/rangehigher"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/rangeLower": {
+  "abstract" : [
+    {
+      "text" : "The lower value of the range into which the discrete values map.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/rangeLower",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "rangeLower",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/rangelower"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/reversed": {
+  "abstract" : [
+    {
+      "text" : "A Boolean value that indicates if the mapping from domain to range is inverted.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/reversed",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "reversed",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/reversed"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/round": {
+  "abstract" : [
+    {
+      "text" : "A Boolean value that indicates the scaled values are returned as rounded values.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "round"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/round",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "round",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/round"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/scaleType": {
   "abstract" : [

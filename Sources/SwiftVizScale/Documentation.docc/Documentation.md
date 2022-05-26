@@ -21,10 +21,10 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 - ``SwiftVizScale/LogScale``
 - ``SwiftVizScale/PowerScale``
 - ``SwiftVizScale/RadialScale``
-- ``SwiftVizScale/ContinuousScale``
-- ``SwiftVizScale/DomainDataTransform``
 - ``SwiftVizScale/AnyContinuousScale``
+- ``SwiftVizScale/ContinuousScale``
 - ``SwiftVizScale/ContinuousScaleType``
+- ``SwiftVizScale/DomainDataTransform``
 
 ### Discrete Scales
 

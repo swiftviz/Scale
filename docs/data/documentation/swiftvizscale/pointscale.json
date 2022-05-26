@@ -222,7 +222,7 @@
   "topicSections" : [
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/init(_:padding:round:from:to:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/init(_:padding:round:reversed:from:to:)"
       ],
       "title" : "Creating a Band Scale"
     },
@@ -232,7 +232,9 @@
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/round(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/padding(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/range(_:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/range(lower:higher:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/range(lower:higher:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/range(reversed:_:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/range(reversed:lower:higher:)"
       ],
       "title" : "Updating Scales"
     },
@@ -241,31 +243,30 @@
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/domain",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/round",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/padding",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/reversed",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/rangeLower",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/rangeHigher"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/rangeHigher",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/scaleType"
       ],
       "title" : "Inspecting Scales"
     },
     {
       "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/scale(_:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/scale(_:from:to:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/scale(_:reversed:from:to:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/invert(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/invert(_:from:to:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/scale(_:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/scale(_:from:to:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/invert(_:reversed:from:to:)"
       ],
       "title" : "Converting Values"
     },
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/ticks(rangeLower:rangeHigher:formatter:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/ticks(rangeLower:rangeHigher:formatter:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)"
       ],
       "title" : "Creating Ticks"
-    },
-    {
-      "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/scaleType"
-      ],
-      "title" : "Instance Properties"
     },
     {
       "generated" : true,
@@ -689,7 +690,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/pointscale\/domain(_:)"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/init(_:padding:round:from:to:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/init(_:padding:round:reversed:from:to:)": {
   "abstract" : [
     {
       "text" : "Creates a new point scale.",
@@ -750,6 +751,23 @@
     },
     {
       "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
       "text" : "from"
     },
     {
@@ -783,12 +801,12 @@
       "text" : "?)"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/init(_:padding:round:from:to:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/init(_:padding:round:reversed:from:to:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "init(_:padding:round:from:to:)",
+  "title" : "init(_:padding:round:reversed:from:to:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/pointscale\/init(_:padding:round:from:to:)"
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/init(_:padding:round:reversed:from:to:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/invert(_:)": {
   "abstract" : [
@@ -923,6 +941,107 @@
   "title" : "invert(_:from:to:)",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/pointscale\/invert(_:from:to:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/invert(_:reversed:from:to:)": {
+  "abstract" : [
+    {
+      "text" : "Maps the value from the range back to the discrete value that it matches.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "invert"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "to"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V12CategoryTypexmfp",
+      "text" : "CategoryType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/invert(_:reversed:from:to:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "invert(_:reversed:from:to:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/invert(_:reversed:from:to:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/padding": {
   "abstract" : [
@@ -1193,6 +1312,206 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/pointscale\/range(lower:higher:)"
 },
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/range(reversed:_:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the range set to the range you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "range"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SN",
+      "text" : "ClosedRange"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V",
+      "text" : "PointScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "CategoryType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/range(reversed:_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "range(reversed:_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/range(reversed:_:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/range(reversed:lower:higher:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the range set to the values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "range"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "lower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "higher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V",
+      "text" : "PointScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "CategoryType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/range(reversed:lower:higher:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "range(reversed:lower:higher:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/range(reversed:lower:higher:)"
+},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/rangeHigher": {
   "abstract" : [
     {
@@ -1274,6 +1593,43 @@
   "title" : "rangeLower",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/pointscale\/rangelower"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/reversed": {
+  "abstract" : [
+    {
+      "text" : "A Boolean value that indicates if the mapping from domain to range is inverted.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/reversed",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "reversed",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/reversed"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/round": {
   "abstract" : [
@@ -1512,6 +1868,107 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/pointscale\/scale(_:from:to:)"
 },
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/scale(_:reversed:from:to:)": {
+  "abstract" : [
+    {
+      "text" : "Maps the discrete item into a range location.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "scale"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V12CategoryTypexmfp",
+      "text" : "CategoryType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "to"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/scale(_:reversed:from:to:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "scale(_:reversed:from:to:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/scale(_:reversed:from:to:)"
+},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/scaleType": {
   "abstract" : [
     {
@@ -1697,6 +2154,172 @@
   "title" : "ticks(rangeLower:rangeHigher:formatter:)",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/pointscale\/ticks(rangelower:rangehigher:formatter:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/ticks(reversed:rangeLower:rangeHigher:formatter:)": {
+  "abstract" : [
+    {
+      "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "CategoryType",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "Comparable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " and ",
+        "type" : "text"
+      },
+      {
+        "code" : "OutputType",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "ConvertibleWithDouble",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ticks"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V9RangeTypea",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V9RangeTypea",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale4TickV",
+      "text" : "Tick"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale05PointC0V9RangeTypea",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">]"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ticks(reversed:rangeLower:rangeHigher:formatter:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/ticks(reversed:rangelower:rangehigher:formatter:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale": {
   "abstract" : [

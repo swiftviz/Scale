@@ -101,6 +101,16 @@
   "sections" : [
 
   ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType"
+      ],
+      "title" : "Scale Types"
+    }
+  ],
   "variants" : [
     {
       "paths" : [
@@ -222,6 +232,73 @@
   "title" : "Scale",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/scale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/InputType": {
+  "abstract" : [
+    {
+      "text" : "The type used for the scale’s domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "associatedtype"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : " : "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SL",
+      "text" : "Comparable"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "InputType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/scale\/inputtype"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/OutputType": {
+  "abstract" : [
+    {
+      "text" : "The type used for the scale’s output.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "associatedtype"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "OutputType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "OutputType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/scale\/outputtype"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/RangeType": {
   "abstract" : [

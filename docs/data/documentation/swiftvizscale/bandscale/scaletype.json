@@ -100,6 +100,21 @@
   "sections" : [
 
   ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/domain",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/round",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/paddingInner",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/paddingOuter",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/reversed",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/rangeLower",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/rangeHigher"
+      ],
+      "title" : "Inspecting Scales"
+    }
+  ],
   "variants" : [
     {
       "paths" : [
@@ -174,6 +189,277 @@
   "title" : "BandScale",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/bandscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/domain": {
+  "abstract" : [
+    {
+      "text" : "An array of the types the scale maps into.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domain"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale04BandC0V12CategoryTypexmfp",
+      "text" : "CategoryType"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/domain",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domain",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/bandscale\/domain"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/paddingInner": {
+  "abstract" : [
+    {
+      "text" : "The amount of padding between bands.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "paddingInner"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale04BandC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/paddingInner",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "paddingInner",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/bandscale\/paddinginner"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/paddingOuter": {
+  "abstract" : [
+    {
+      "text" : "The amount of padding outside of the bands.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "paddingOuter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale04BandC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/paddingOuter",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "paddingOuter",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/bandscale\/paddingouter"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/rangeHigher": {
+  "abstract" : [
+    {
+      "text" : "The upper value of the range into which the discrete values map.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale04BandC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/rangeHigher",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "rangeHigher",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/bandscale\/rangehigher"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/rangeLower": {
+  "abstract" : [
+    {
+      "text" : "The lower value of the range into which the discrete values map.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale04BandC0V10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/rangeLower",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "rangeLower",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/bandscale\/rangelower"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/reversed": {
+  "abstract" : [
+    {
+      "text" : "A Boolean value that indicates if the mapping from domain to range is inverted.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/reversed",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "reversed",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/bandscale\/reversed"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/round": {
+  "abstract" : [
+    {
+      "text" : "A Boolean value that indicates the scaled values are returned as rounded values.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "round"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale\/round",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "round",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/bandscale\/round"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale/scaleType": {
   "abstract" : [

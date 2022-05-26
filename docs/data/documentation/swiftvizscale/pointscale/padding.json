@@ -105,8 +105,10 @@
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/domain",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/round",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/reversed",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/rangeLower",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/rangeHigher"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/rangeHigher",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/scaleType"
       ],
       "title" : "Inspecting Scales"
     }
@@ -346,6 +348,43 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/pointscale\/rangelower"
 },
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/reversed": {
+  "abstract" : [
+    {
+      "text" : "A Boolean value that indicates if the mapping from domain to range is inverted.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/reversed",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "reversed",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/reversed"
+},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/round": {
   "abstract" : [
     {
@@ -382,6 +421,43 @@
   "title" : "round",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/pointscale\/round"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale/scaleType": {
+  "abstract" : [
+    {
+      "text" : "The type of discrete scale.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "scaleType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale08DiscreteC4TypeO",
+      "text" : "DiscreteScaleType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale\/scaleType",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "scaleType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale\/scaletype"
 }
 }
 }

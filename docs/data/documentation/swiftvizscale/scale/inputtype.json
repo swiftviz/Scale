@@ -104,7 +104,8 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/RangeType"
       ],
       "title" : "Scale Types"
     }
@@ -263,6 +264,44 @@
   "title" : "OutputType",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/scale\/outputtype"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/RangeType": {
+  "abstract" : [
+    {
+      "text" : "The type used for the scale’s range.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "associatedtype"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : " : "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
+      "text" : "ConvertibleWithDouble"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/RangeType",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "RangeType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/scale\/rangetype"
 }
 }
 }

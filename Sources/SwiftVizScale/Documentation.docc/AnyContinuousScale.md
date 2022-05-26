@@ -13,8 +13,10 @@
 - ``SwiftVizScale/AnyContinuousScale/domain(_:)-esgw``
 - ``SwiftVizScale/AnyContinuousScale/domain(_:nice:)``
 - ``SwiftVizScale/AnyContinuousScale/domain(lower:higher:)``
-- ``SwiftVizScale/AnyContinuousScale/range(lower:higher:)``
 - ``SwiftVizScale/AnyContinuousScale/range(_:)``
+- ``SwiftVizScale/AnyContinuousScale/range(lower:higher:)``
+- ``SwiftVizScale/AnyContinuousScale/range(reversed:_:)``
+- ``SwiftVizScale/AnyContinuousScale/range(reversed:lower:higher:)``
 - ``SwiftVizScale/AnyContinuousScale/transform(_:)``
 
 ### Inspecting Scales
@@ -25,17 +27,22 @@
 - ``SwiftVizScale/AnyContinuousScale/domainExtent``
 - ``SwiftVizScale/AnyContinuousScale/transformType``
 - ``SwiftVizScale/AnyContinuousScale/desiredTicks``
+- ``SwiftVizScale/AnyContinuousScale/reversed``
 - ``SwiftVizScale/AnyContinuousScale/rangeHigher``
 - ``SwiftVizScale/AnyContinuousScale/rangeLower``
 
 ### Converting Values
 
-- ``SwiftVizScale/AnyContinuousScale/scale(_:from:to:)``
-- ``SwiftVizScale/AnyContinuousScale/scale(_:to:)``
 - ``SwiftVizScale/AnyContinuousScale/scale(_:)``
-- ``SwiftVizScale/AnyContinuousScale/invert(_:from:to:)``
-- ``SwiftVizScale/AnyContinuousScale/invert(_:to:)``
+- ``SwiftVizScale/AnyContinuousScale/scale(_:from:to:)``
+- ``SwiftVizScale/AnyContinuousScale/scale(_:reversed:from:to:)``
+- ``SwiftVizScale/AnyContinuousScale/scale(_:to:)``
+- ``SwiftVizScale/AnyContinuousScale/scale(_:to:reversed:)``
 - ``SwiftVizScale/AnyContinuousScale/invert(_:)``
+- ``SwiftVizScale/AnyContinuousScale/invert(_:from:to:)``
+- ``SwiftVizScale/AnyContinuousScale/invert(_:reversed:from:to:)``
+- ``SwiftVizScale/AnyContinuousScale/invert(_:to:)``
+- ``SwiftVizScale/AnyContinuousScale/invert(_:to:reversed:)``
 
 ### Comparing Values
 
@@ -44,14 +51,13 @@
 
 ### Creating Ticks
 
-- ``SwiftVizScale/AnyContinuousScale/defaultTickValues(formatter:)-2bktr``
-- ``SwiftVizScale/AnyContinuousScale/defaultTickValues(formatter:)-5n0lo``
-- ``SwiftVizScale/AnyContinuousScale/defaultTickValues(formatter:)-856p3``
-- ``SwiftVizScale/AnyContinuousScale/defaultTickValues(formatter:)-8u0lr``
 - ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-53t2s``
 - ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-63x34``
 - ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-6dhln``
 - ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-y0vn``
+- ``SwiftVizScale/AnyContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-4o3jw``
+- ``SwiftVizScale/AnyContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-5edrw``
+- ``SwiftVizScale/AnyContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-88d9h``
+- ``SwiftVizScale/AnyContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-8fm66``
 - ``SwiftVizScale/AnyContinuousScale/ticksFromValues(_:from:to:formatter:)``
-
-
+- ``SwiftVizScale/AnyContinuousScale/validTickValues(_:formatter:)``
