@@ -35,20 +35,29 @@ public protocol Scale {
 
     /// Returns a new scale with the range set to the values you provide.
     /// - Parameters:
-    ///   - from: The lower value of the range into which the discrete values map.
-    ///   - to: The upper value of the range into which the discrete values map.
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+    ///   - lower: The lower value of the range into which the discrete values map.
+    ///   - higher: The upper value of the range into which the discrete values map.
     func range(reversed: Bool, lower: RangeType, higher: RangeType) -> Self
 
     /// Returns a new scale with the range set to the range you provide.
+    /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     /// - Parameter range: The range of the values into which the discrete values map.
     func range(reversed: Bool, _ range: ClosedRange<RangeType>) -> Self
+
+    /// Returns a new scale with the range set to the values you provide.
+    /// - Parameters:
+    ///   - from: The lower value of the range into which the discrete values map.
+    ///   - to: The upper value of the range into which the discrete values map.
+    func range(lower: RangeType, higher: RangeType) -> Self
+
+    /// Returns a new scale with the range set to the range you provide.
+    /// - Parameter range: The range of the values into which the discrete values map.
+    func range(_ range: ClosedRange<RangeType>) -> Self
 
     /// Returns a new scale with the domain set to span the values you provide.
     /// - Parameter values: An array of input values.
     func domain(_ values: [InputType]) -> Self
-
-//     func ticks(rangeLower: RangeType, rangeHigher: RangeType) -> [Tick<RangeType>]
-//     func tickValues(_ inputValues: [InputType], from lower: RangeType, to higher: RangeType) -> [Tick<RangeType>]
 }
 
 // Quantize scale: Quantize scales use a discrete range and a

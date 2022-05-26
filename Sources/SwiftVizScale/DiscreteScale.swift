@@ -38,8 +38,16 @@ public protocol DiscreteScale: Scale, CustomStringConvertible {
 
     /// Returns an array of the locations within the output range to locate ticks for the scale.
     /// - Parameters:
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     ///   - rangeLower: the lower value for the range into which to position the ticks.
     ///   - rangeHigher: The higher value for the range into which to position the ticks.
     ///   - formatter: An optional formatter to convert the domain values into strings.
     func ticks(reversed: Bool, rangeLower: RangeType, rangeHigher: RangeType, formatter: Formatter?) -> [Tick<RangeType>]
+
+    /// Returns an array of the locations within the output range to locate ticks for the scale.
+    /// - Parameters:
+    ///   - rangeLower: the lower value for the range into which to position the ticks.
+    ///   - rangeHigher: The higher value for the range into which to position the ticks.
+    ///   - formatter: An optional formatter to convert the domain values into strings.
+    func ticks(rangeLower: RangeType, rangeHigher: RangeType, formatter: Formatter?) -> [Tick<RangeType>]
 }
