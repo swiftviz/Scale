@@ -56,7 +56,7 @@
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-3de4p",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-6agip",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-twb3",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/ticksFromValues(_:from:to:formatter:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/ticksFromValues(_:reversed:from:to:formatter:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/transformAgainstDomain(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/validTickValues(_:formatter:)"
       ],
@@ -1981,7 +1981,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/radialscale\/ticks(reversed:rangelower:rangehigher:formatter:)-twb3"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/RadialScale/ticksFromValues(_:from:to:formatter:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/RadialScale/ticksFromValues(_:reversed:from:to:formatter:)": {
   "abstract" : [
     {
       "text" : "Converts an array of values that matches the scale’s input type to a list of ticks that are within the scale’s domain.",
@@ -2013,6 +2013,23 @@
     {
       "kind" : "text",
       "text" : "], "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
     },
     {
       "kind" : "externalParam",
@@ -2084,12 +2101,12 @@
       "text" : ">]"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/ticksFromValues(_:from:to:formatter:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/RadialScale\/ticksFromValues(_:reversed:from:to:formatter:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "ticksFromValues(_:from:to:formatter:)",
+  "title" : "ticksFromValues(_:reversed:from:to:formatter:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/radialscale\/ticksfromvalues(_:from:to:formatter:)"
+  "url" : "\/documentation\/swiftvizscale\/radialscale\/ticksfromvalues(_:reversed:from:to:formatter:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/RadialScale/transformAgainstDomain(_:)": {
   "abstract" : [

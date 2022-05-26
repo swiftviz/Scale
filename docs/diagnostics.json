@@ -1,3 +1,194 @@
 [
+  {
+    "notes" : [
 
+    ],
+    "severity" : 2,
+    "source" : "..\/PowerScale.swift",
+    "start" : {
+      "column" : 67,
+      "line" : 41
+    },
+    "summary" : "Topic reference 'PowerScale\/ticksFromValues(_:from:to:formatter:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/LogScale.swift",
+    "start" : {
+      "column" : 67,
+      "line" : 37
+    },
+    "summary" : "Topic reference 'LogScale\/ticksFromValues(_:from:to:formatter:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/LinearScale.swift",
+    "start" : {
+      "column" : 67,
+      "line" : 32
+    },
+    "summary" : "Topic reference 'ContinuousScale\/ticksFromValues(_:from:to:formatter:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/ContinuousScale.swift",
+    "start" : {
+      "column" : 7,
+      "line" : 108
+    },
+    "summary" : "Topic reference 'SwiftVizScale\/ContinuousScale\/ticksFromValues(_:from:to:formatter:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/LinearScale.swift",
+    "start" : {
+      "column" : 7,
+      "line" : 66
+    },
+    "summary" : "Topic reference 'SwiftVizScale\/LinearScale\/ticksFromValues(_:from:to:formatter:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/PowerScale.swift",
+    "start" : {
+      "column" : 7,
+      "line" : 78
+    },
+    "summary" : "Topic reference 'SwiftVizScale\/PowerScale\/ticksFromValues(_:from:to:formatter:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "LinearScale.md",
+    "start" : {
+      "column" : 3,
+      "line" : 63
+    },
+    "summary" : "Topic reference 'SwiftVizScale\/LinearScale\/ticksFromValues(_:from:to:formatter:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "PowerScale.md",
+    "start" : {
+      "column" : 3,
+      "line" : 68
+    },
+    "summary" : "Topic reference 'SwiftVizScale\/PowerScale\/ticksFromValues(_:from:to:formatter:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "ContinuousScale.md",
+    "start" : {
+      "column" : 3,
+      "line" : 62
+    },
+    "summary" : "Topic reference 'SwiftVizScale\/ContinuousScale\/ticksFromValues(_:from:to:formatter:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/LogScale.swift",
+    "start" : {
+      "column" : 7,
+      "line" : 74
+    },
+    "summary" : "Topic reference 'SwiftVizScale\/LogScale\/ticksFromValues(_:from:to:formatter:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/RadialScale.swift",
+    "start" : {
+      "column" : 67,
+      "line" : 39
+    },
+    "summary" : "Topic reference 'RadialScale\/ticksFromValues(_:from:to:formatter:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/RadialScale.swift",
+    "start" : {
+      "column" : 7,
+      "line" : 73
+    },
+    "summary" : "Topic reference 'SwiftVizScale\/RadialScale\/ticksFromValues(_:from:to:formatter:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "LogScale.md",
+    "start" : {
+      "column" : 3,
+      "line" : 66
+    },
+    "summary" : "Topic reference 'SwiftVizScale\/LogScale\/ticksFromValues(_:from:to:formatter:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/AnyContinuousScale.swift",
+    "start" : {
+      "column" : 7,
+      "line" : 323
+    },
+    "summary" : "Topic reference 'SwiftVizScale\/AnyContinuousScale\/ticksFromValues(_:from:to:formatter:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "RadialScale.md",
+    "start" : {
+      "column" : 3,
+      "line" : 63
+    },
+    "summary" : "Topic reference 'SwiftVizScale\/RadialScale\/ticksFromValues(_:from:to:formatter:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "AnyContinuousScale.md",
+    "start" : {
+      "column" : 3,
+      "line" : 62
+    },
+    "summary" : "Topic reference 'SwiftVizScale\/AnyContinuousScale\/ticksFromValues(_:from:to:formatter:)' couldn't be resolved. No local documentation matches this reference."
+  }
 ]

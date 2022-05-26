@@ -315,11 +315,12 @@ public extension ContinuousScale {
     /// Values presented for display that are *not* within the domain of the scale are dropped.
     /// Values that scale outside of the range you provide are adjusted based on the setting of ``ContinuousScale/transformType``.
     /// - Parameter inputValues: an array of values of the Scale's InputType
+    /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     /// - Parameter lower: The lower value of the range the scale maps to.
     /// - Parameter higher: The higher value of the range the scale maps to.
     /// - Parameter formatter: An optional formatter to convert the domain values into strings.
     /// - Returns: A list of tick values validated against the domain, and range based on the setting of ``ContinuousScale/transformType``
-    func ticksFromValues(_ inputValues: [InputType], from lower: OutputType, to higher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
+    func ticksFromValues(_ inputValues: [InputType], reversed: Bool = false, from lower: OutputType, to higher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
         // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
         inputValues.compactMap { inputValue in
             if domainContains(inputValue),

@@ -56,7 +56,7 @@
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-5op8i",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-8y59b",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-9en4k",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticksFromValues(_:from:to:formatter:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticksFromValues(_:reversed:from:to:formatter:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/transformAgainstDomain(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/validTickValues(_:formatter:)"
       ],
@@ -1981,7 +1981,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/powerscale\/ticks(reversed:rangelower:rangehigher:formatter:)-9en4k"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/ticksFromValues(_:from:to:formatter:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/ticksFromValues(_:reversed:from:to:formatter:)": {
   "abstract" : [
     {
       "text" : "Converts an array of values that matches the scale’s input type to a list of ticks that are within the scale’s domain.",
@@ -2013,6 +2013,23 @@
     {
       "kind" : "text",
       "text" : "], "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
     },
     {
       "kind" : "externalParam",
@@ -2084,12 +2101,12 @@
       "text" : ">]"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticksFromValues(_:from:to:formatter:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PowerScale\/ticksFromValues(_:reversed:from:to:formatter:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "ticksFromValues(_:from:to:formatter:)",
+  "title" : "ticksFromValues(_:reversed:from:to:formatter:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/powerscale\/ticksfromvalues(_:from:to:formatter:)"
+  "url" : "\/documentation\/swiftvizscale\/powerscale\/ticksfromvalues(_:reversed:from:to:formatter:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PowerScale/transformAgainstDomain(_:)": {
   "abstract" : [

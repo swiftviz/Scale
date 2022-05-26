@@ -327,10 +327,15 @@
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-4k3lb",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-67z4e",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)-73yzr",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/ticksFromValues(_:from:to:formatter:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/validTickValues(_:formatter:)"
       ],
       "title" : "Creating Ticks"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/ticksFromValues(_:reversed:from:to:formatter:)"
+      ],
+      "title" : "Instance Methods"
     },
     {
       "generated" : true,
@@ -3718,7 +3723,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/continuousscale\/ticks(reversed:rangelower:rangehigher:formatter:)-73yzr"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/ticksFromValues(_:from:to:formatter:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/ticksFromValues(_:reversed:from:to:formatter:)": {
   "abstract" : [
     {
       "text" : "Converts an array of values that matches the scale’s input type to a list of ticks that are within the scale’s domain.",
@@ -3750,6 +3755,23 @@
     {
       "kind" : "text",
       "text" : "], "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
     },
     {
       "kind" : "externalParam",
@@ -3821,12 +3843,12 @@
       "text" : ">]"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/ticksFromValues(_:from:to:formatter:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/ticksFromValues(_:reversed:from:to:formatter:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "ticksFromValues(_:from:to:formatter:)",
+  "title" : "ticksFromValues(_:reversed:from:to:formatter:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/continuousscale\/ticksfromvalues(_:from:to:formatter:)"
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/ticksfromvalues(_:reversed:from:to:formatter:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/transform(_:)": {
   "abstract" : [
