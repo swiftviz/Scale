@@ -111,7 +111,7 @@ class PointScaleTests: XCTestCase {
 
         let rangeLoc = initial.scale("1")
         XCTAssertNotNil(rangeLoc)
-        XCTAssertEqual(rangeLoc, 0)
+        XCTAssertEqual(rangeLoc, 25)
     }
 
     func testScaleWithRangeUpdate() throws {
@@ -121,7 +121,7 @@ class PointScaleTests: XCTestCase {
         let rangeLoc = initial.scale("2", from: 0, to: 50)
         XCTAssertNotNil(rangeLoc)
         if let rangeLocDouble = rangeLoc?.toDouble() {
-            XCTAssertEqual(rangeLocDouble, 16.666, accuracy: 0.001)
+            XCTAssertEqual(rangeLocDouble, 25, accuracy: 0.001)
         }
     }
 
@@ -168,14 +168,14 @@ class PointScaleTests: XCTestCase {
         var rangeLoc = initial.scale("2", from: 0, to: 50)
         XCTAssertNotNil(rangeLoc)
         if let rangeLocDouble = rangeLoc?.toDouble() {
-            XCTAssertEqual(rangeLocDouble, 20, accuracy: 0.001)
+            XCTAssertEqual(rangeLocDouble, 25, accuracy: 0.001)
         }
 
         let updated = initial.round(true)
         rangeLoc = updated.scale("1", from: 0, to: 50)
         XCTAssertNotNil(rangeLoc)
         if let rangeLocDouble = rangeLoc?.toDouble() {
-            XCTAssertEqual(rangeLocDouble, 10.0, accuracy: 0.001)
+            XCTAssertEqual(rangeLocDouble, 15.0, accuracy: 0.001)
         }
     }
 
