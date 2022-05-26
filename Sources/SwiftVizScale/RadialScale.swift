@@ -195,7 +195,12 @@ public struct RadialScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
             return nil
         }
         let normalizedInput = normalize(domainValue.toDouble(), lower: domainLower.toDouble(), higher: domainHigher.toDouble())
-        let result: Double = interpolate(normalizedInput, lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
+        let result: Double
+        if reversed {
+            result = interpolate(normalizedInput, lower: rangeHigher.toDouble(), higher: rangeLower.toDouble())
+        } else {
+            result = interpolate(normalizedInput, lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
+        }
         return OutputType.fromDouble(result * result)
     }
 
@@ -234,7 +239,12 @@ public struct RadialScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
         }
         // inverts the scale, taking a value in the output range and returning the relevant value from the input domain
         let normalizedRangeValue = normalize(sqrt(rangeValue.toDouble()), lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
-        let mappedToDomain = interpolate(normalizedRangeValue, lower: domainLower.toDouble(), higher: domainHigher.toDouble())
+        let mappedToDomain: Double
+        if reversed {
+            mappedToDomain = interpolate(normalizedRangeValue, lower: domainHigher.toDouble(), higher: domainLower.toDouble())
+        } else {
+            mappedToDomain = interpolate(normalizedRangeValue, lower: domainLower.toDouble(), higher: domainHigher.toDouble())
+        }
         let castToInputType = InputType.fromDouble(mappedToDomain)
         return transformAgainstDomain(castToInputType)
     }

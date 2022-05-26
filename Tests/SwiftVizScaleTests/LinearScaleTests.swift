@@ -308,4 +308,40 @@ final class LinearScaleTests: XCTestCase {
         scale = scale.range(reversed: false, 0 ... 40)
         XCTAssertEqual(scale.reversed, false)
     }
+
+    func testReversedCalculations() {
+        let scale = LinearScale<Double, CGFloat>(20, reversed: true, rangeLower: 0, rangeHigher: 20)
+        XCTAssertEqual(scale.scale(0), 20)
+        XCTAssertEqual(scale.scale(20), 0)
+        XCTAssertEqual(scale.scale(5), 15)
+        // verify invert
+        XCTAssertEqual(scale.invert(15), 5)
+
+        let forward = scale.range(reversed: false, lower: 0, higher: 20) // identity
+        XCTAssertEqual(forward.scale(0), 0)
+        XCTAssertEqual(forward.scale(20), 20)
+        XCTAssertEqual(forward.scale(5), 5)
+        // verify invert
+        XCTAssertEqual(forward.invert(5), 5)
+    }
+
+    func testReversedTicks() {
+        let reversed = LinearScale<Double, CGFloat>(20, reversed: true, rangeLower: 0, rangeHigher: 20)
+        let reverseTicks = reversed.ticks(rangeLower: 0, rangeHigher: 20)
+        XCTAssertEqual(reverseTicks.count, 5)
+        assertTick(reverseTicks[0], "0.0", 20)
+        assertTick(reverseTicks[1], "5.0", 15)
+        assertTick(reverseTicks[2], "10.0", 10)
+        assertTick(reverseTicks[3], "15.0", 5)
+        assertTick(reverseTicks[4], "20.0", 0)
+
+        let forward = reversed.range(reversed: false, lower: 0, higher: 20) // identity
+        let forwardTicks = forward.ticks(rangeLower: 0, rangeHigher: 20)
+        XCTAssertEqual(forwardTicks.count, 5)
+        assertTick(forwardTicks[0], "0.0", 0)
+        assertTick(forwardTicks[1], "5.0", 5)
+        assertTick(forwardTicks[2], "10.0", 10)
+        assertTick(forwardTicks[3], "15.0", 15)
+        assertTick(forwardTicks[4], "20.0", 20)
+    }
 }

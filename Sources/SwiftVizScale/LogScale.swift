@@ -197,7 +197,12 @@ public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType:
         let logDomainLower = log10(domainLower.toDouble())
         let logDomainHigher = log10(domainHigher.toDouble())
         let normalizedValueOnLogDomain = normalize(logDomainValue, lower: logDomainLower, higher: logDomainHigher)
-        let valueMappedToRange = interpolate(normalizedValueOnLogDomain, lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
+        let valueMappedToRange: Double
+        if reversed {
+            valueMappedToRange = interpolate(normalizedValueOnLogDomain, lower: rangeHigher.toDouble(), higher: rangeLower.toDouble())
+        } else {
+            valueMappedToRange = interpolate(normalizedValueOnLogDomain, lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
+        }
         return OutputType.fromDouble(valueMappedToRange)
     }
 
@@ -237,7 +242,12 @@ public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType:
         let normalizedRangeValue = normalize(rangeValue.toDouble(), lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
         let logDomainLower = log10(domainLower.toDouble())
         let logDomainHigher = log10(domainHigher.toDouble())
-        let linearInterpolatedValue = interpolate(Double(normalizedRangeValue), lower: logDomainLower, higher: logDomainHigher)
+        let linearInterpolatedValue: Double
+        if reversed {
+            linearInterpolatedValue = interpolate(Double(normalizedRangeValue), lower: logDomainHigher, higher: logDomainLower)
+        } else {
+            linearInterpolatedValue = interpolate(Double(normalizedRangeValue), lower: logDomainLower, higher: logDomainHigher)
+        }
         let domainValue = pow(10, linearInterpolatedValue)
         let downcastDomainValue = InputType.fromDouble(domainValue)
         return transformAgainstDomain(downcastDomainValue)

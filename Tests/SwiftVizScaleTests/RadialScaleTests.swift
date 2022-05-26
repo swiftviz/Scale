@@ -160,4 +160,49 @@ class RadialScaleTests: XCTestCase {
         XCTAssertEqual(updated.domainLower, 5)
         XCTAssertEqual(updated.domainHigher, 5)
     }
+
+    func testReversedRangeModifiers() {
+        var scale = RadialScale<Double, CGFloat>(0 ... 100).range(0 ... 100)
+        XCTAssertEqual(scale.reversed, false)
+        scale = RadialScale(from: 0, to: 100, reversed: true, rangeLower: 0, rangeHigher: 100)
+        XCTAssertEqual(scale.reversed, true)
+        scale = scale.range(0 ... 40)
+        XCTAssertEqual(scale.reversed, true)
+        scale = scale.range(reversed: false, 0 ... 40)
+        XCTAssertEqual(scale.reversed, false)
+    }
+
+    func testReversedCalculations() {
+        let scale = RadialScale<Double, CGFloat>(from: 0, to: 100, reversed: true, rangeLower: 0, rangeHigher: 100)
+        XCTAssertEqual(scale.scale(0), 10000)
+        XCTAssertEqual(scale.scale(100), 0)
+        XCTAssertEqual(scale.scale(10), 8100)
+        // verify invert
+        XCTAssertEqual(scale.invert(8100)!, 10.0, accuracy: 0.001)
+
+        let forward = scale.range(reversed: false, lower: 0, higher: 100) // log identity
+        XCTAssertEqual(forward.scale(0), 0)
+        XCTAssertEqual(forward.scale(100), 10000)
+        XCTAssertEqual(forward.scale(10)!, 100.0, accuracy: 0.001)
+        // verify invert
+        XCTAssertEqual(forward.invert(100)!, 10.0, accuracy: 0.001)
+    }
+
+    func testReversedTicks() {
+        // Yes, ticks on a Radial Scale are kind of stupid. Radial Scale
+        // is primarily intended for scaling for the area of a size element so that it visually
+        // increases proportionally with the value.
+        let reversed = RadialScale<Double, CGFloat>(from: 0, to: 100, reversed: true, rangeLower: 0, rangeHigher: 100)
+        let reverseTicks = reversed.ticks(rangeLower: 0, rangeHigher: 20)
+        XCTAssertEqual(reverseTicks.count, 2)
+        assertTick(reverseTicks[0], "80.0", 16)
+        assertTick(reverseTicks[1], "100.0", 0)
+
+        let forward = reversed.range(reversed: false, lower: 0, higher: 20) // identity
+        let forwardTicks = forward.ticks(rangeLower: 0, rangeHigher: 20)
+        print(forwardTicks)
+        XCTAssertEqual(forwardTicks.count, 2)
+        assertTick(forwardTicks[0], "0.0", 0)
+        assertTick(forwardTicks[1], "20.0", 16)
+    }
 }

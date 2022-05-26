@@ -165,15 +165,20 @@ public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDo
     /// - Parameter value: A discrete item from the list provided as the domain for the scale.
     /// - Returns: A location along the range that indicates a point that matches with the value you provided, or `nil` if the value isn't contained by the domain.
     public func scale(_ value: CategoryType) -> OutputType? {
-        guard let index = domain.firstIndex(of: value), let step = step() else {
+        guard let step = step() else {
             return nil
         }
-        if step <= 0 {
+        if step <= 0 || !domain.contains(value) {
             // when there's more padding than available space for the categories
             return nil
         }
-        let doublePosition = Double(index) // 1
-        let location = padding.toDouble() + (doublePosition * step)
+        let doublePosition: Double
+        if reversed {
+            doublePosition = Double(domain.reversed().firstIndex(of: value)!)
+        } else {
+            doublePosition = Double(domain.firstIndex(of: value)!)
+        }
+        let location = padding.toDouble() + (doublePosition * step) + (step / 2)
         if round {
             return OutputType.fromDouble(location.rounded())
         }
@@ -223,8 +228,13 @@ public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDo
         }
         // calculate the closest index
         let rangeExtentWithoutPadding = upperRange.toDouble() - lowerRange.toDouble() - 2 * padding.toDouble()
-        let unitRangeValue = (location.toDouble() - padding.toDouble()) / rangeExtentWithoutPadding
-        let rangeValueExpandedToCountDomain = unitRangeValue * Double(domain.count - 1)
+        let indexedRangeValue: Double
+        if reversed {
+            indexedRangeValue = (upperRange.toDouble() - padding.toDouble() - location.toDouble()) / rangeExtentWithoutPadding
+        } else {
+            indexedRangeValue = (location.toDouble() - padding.toDouble()) / rangeExtentWithoutPadding
+        }
+        let rangeValueExpandedToCountDomain = indexedRangeValue * Double(domain.count - 1)
         let closestIndex = Int(rangeValueExpandedToCountDomain.rounded())
         return domain[closestIndex]
     }

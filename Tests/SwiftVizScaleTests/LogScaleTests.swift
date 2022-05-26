@@ -289,4 +289,51 @@ class LogScaleTests: XCTestCase {
         XCTAssertEqual(updated.domainLower, Double.leastNonzeroMagnitude)
         XCTAssertEqual(updated.domainHigher, 5)
     }
+
+    func testReversedRangeModifiers() {
+        var scale = LogScale<Double, CGFloat>(1 ... 100).range(1 ... 100)
+        XCTAssertEqual(scale.reversed, false)
+        scale = LogScale(from: 1, to: 100, reversed: true, rangeLower: 1, rangeHigher: 100)
+        XCTAssertEqual(scale.reversed, true)
+        scale = scale.range(0 ... 40)
+        XCTAssertEqual(scale.reversed, true)
+        scale = scale.range(reversed: false, 0 ... 40)
+        XCTAssertEqual(scale.reversed, false)
+    }
+
+    func testReversedCalculations() {
+        let scale = LogScale<Double, CGFloat>(from: 1, to: 100, reversed: true, rangeLower: 1, rangeHigher: 100)
+        XCTAssertEqual(scale.scale(1), 100)
+        XCTAssertEqual(scale.scale(100), 1)
+        XCTAssertEqual(scale.scale(10), 50.5)
+        // verify invert
+        XCTAssertEqual(scale.invert(50.5), 10)
+
+        let forward = scale.range(reversed: false, lower: 1, higher: 100) // log identity
+        XCTAssertEqual(forward.scale(1), 1)
+        XCTAssertEqual(forward.scale(100), 100)
+        XCTAssertEqual(forward.scale(10), 50.5)
+        // verify invert
+        XCTAssertEqual(forward.invert(50.5), 10)
+    }
+
+    func testReversedTicks() {
+        let reversed = LogScale<Double, CGFloat>(from: 1, to: 100, reversed: true, rangeLower: 1, rangeHigher: 100)
+        let reverseTicks = reversed.ticks(rangeLower: 0, rangeHigher: 20)
+        XCTAssertEqual(reverseTicks.count, 5)
+        assertTick(reverseTicks[0], "20.0", 6.9897)
+        assertTick(reverseTicks[1], "40.0", 3.9794)
+        assertTick(reverseTicks[2], "60.0", 2.2185)
+        assertTick(reverseTicks[3], "80.0", 0.9691)
+        assertTick(reverseTicks[4], "100.0", 0)
+
+        let forward = reversed.range(reversed: false, lower: 0, higher: 20) // identity
+        let forwardTicks = forward.ticks(rangeLower: 0, rangeHigher: 20)
+        XCTAssertEqual(forwardTicks.count, 5)
+        assertTick(forwardTicks[0], "20.0", 13.010)
+        assertTick(forwardTicks[1], "40.0", 16.020)
+        assertTick(forwardTicks[2], "60.0", 17.781)
+        assertTick(forwardTicks[3], "80.0", 19.030)
+        assertTick(forwardTicks[4], "100.0", 20)
+    }
 }
