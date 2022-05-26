@@ -13,3 +13,5 @@
 ### Creating Ticks
 
 - ``SwiftVizScale/DiscreteScale/ticks(rangeLower:rangeHigher:formatter:)``
+- ``SwiftVizScale/DiscreteScale/ticks(reversed:rangeLower:rangeHigher:formatter:)``
+- ``SwiftVizScale/DiscreteScale/defaultTickValues(formatter:)``

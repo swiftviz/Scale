@@ -4,9 +4,9 @@
 
 ### Creating Logrithmic Scales
 
-- ``SwiftVizScale/PowerScale/init(from:to:exponent:transform:desiredTicks:rangeLower:rangeHigher:)``
-- ``SwiftVizScale/PowerScale/init(_:exponent:transform:desiredTicks:rangeLower:rangeHigher:)-41bn7``
-- ``SwiftVizScale/PowerScale/init(_:exponent:transform:desiredTicks:rangeLower:rangeHigher:)-4o0iw``
+- ``SwiftVizScale/PowerScale/init(from:to:exponent:transform:desiredTicks:reversed:rangeLower:rangeHigher:)``
+- ``SwiftVizScale/PowerScale/init(_:exponent:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-3mhh9``
+- ``SwiftVizScale/PowerScale/init(_:exponent:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-60z2k``
 
 ### Updating Scales
 
@@ -17,6 +17,8 @@
 - ``SwiftVizScale/PowerScale/transform(_:)``
 - ``SwiftVizScale/PowerScale/range(_:)``
 - ``SwiftVizScale/PowerScale/range(lower:higher:)``
+- ``SwiftVizScale/PowerScale/range(reversed:_:)``
+- ``SwiftVizScale/PowerScale/range(reversed:lower:higher:)``
 
 ### Inspecting Scales
 
@@ -26,18 +28,23 @@
 - ``SwiftVizScale/PowerScale/exponent``
 - ``SwiftVizScale/PowerScale/transformType``
 - ``SwiftVizScale/PowerScale/desiredTicks``
+- ``SwiftVizScale/PowerScale/reversed``
 - ``SwiftVizScale/PowerScale/rangeHigher``
 - ``SwiftVizScale/PowerScale/rangeLower``
 - ``SwiftVizScale/PowerScale/scaleType``
 
 ### Converting Values 
 
-- ``SwiftVizScale/PowerScale/scale(_:from:to:)``
-- ``SwiftVizScale/PowerScale/scale(_:to:)``
 - ``SwiftVizScale/PowerScale/scale(_:)``
-- ``SwiftVizScale/PowerScale/invert(_:from:to:)``
-- ``SwiftVizScale/PowerScale/invert(_:to:)``
+- ``SwiftVizScale/PowerScale/scale(_:from:to:)``
+- ``SwiftVizScale/PowerScale/scale(_:reversed:from:to:)``
+- ``SwiftVizScale/PowerScale/scale(_:to:)``
+- ``SwiftVizScale/PowerScale/scale(_:to:reversed:)``
 - ``SwiftVizScale/PowerScale/invert(_:)``
+- ``SwiftVizScale/PowerScale/invert(_:from:to:)``
+- ``SwiftVizScale/PowerScale/invert(_:reversed:from:to:)``
+- ``SwiftVizScale/PowerScale/invert(_:to:)``
+- ``SwiftVizScale/PowerScale/invert(_:to:reversed:)``
 
 ### Comparing Values
 
@@ -54,4 +61,9 @@
 - ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:formatter:)-5i72u``
 - ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:formatter:)-7qsoh``
 - ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:formatter:)-elx9``
+- ``SwiftVizScale/PowerScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-2y6aq``
+- ``SwiftVizScale/PowerScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-5op8i``
+- ``SwiftVizScale/PowerScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-8y59b``
+- ``SwiftVizScale/PowerScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-9en4k``
 - ``SwiftVizScale/PowerScale/ticksFromValues(_:from:to:formatter:)``
+- ``SwiftVizScale/PowerScale/validTickValues(_:formatter:)``

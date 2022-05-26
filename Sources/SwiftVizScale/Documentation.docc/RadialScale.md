@@ -4,9 +4,9 @@
 
 ### Creating Linear Scales
 
-- ``SwiftVizScale/RadialScale/init(from:to:transform:desiredTicks:rangeLower:rangeHigher:)``
-- ``SwiftVizScale/RadialScale/init(_:transform:desiredTicks:rangeLower:rangeHigher:)-288qo``
-- ``SwiftVizScale/RadialScale/init(_:transform:desiredTicks:rangeLower:rangeHigher:)-60q05``
+- ``SwiftVizScale/RadialScale/init(from:to:transform:desiredTicks:reversed:rangeLower:rangeHigher:)``
+- ``SwiftVizScale/RadialScale/init(_:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-1rhvz``
+- ``SwiftVizScale/RadialScale/init(_:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-7uv45``
 
 ### Updating Scales
 
@@ -17,6 +17,8 @@
 - ``SwiftVizScale/RadialScale/transform(_:)``
 - ``SwiftVizScale/RadialScale/range(_:)``
 - ``SwiftVizScale/RadialScale/range(lower:higher:)``
+- ``SwiftVizScale/RadialScale/range(reversed:_:)``
+- ``SwiftVizScale/RadialScale/range(reversed:lower:higher:)``
 
 ### Inspecting Scales
 
@@ -25,18 +27,23 @@
 - ``SwiftVizScale/RadialScale/domainExtent``
 - ``SwiftVizScale/RadialScale/transformType``
 - ``SwiftVizScale/RadialScale/desiredTicks``
+- ``SwiftVizScale/RadialScale/reversed``
 - ``SwiftVizScale/RadialScale/rangeHigher``
 - ``SwiftVizScale/RadialScale/rangeLower``
 - ``SwiftVizScale/RadialScale/scaleType``
 
 ### Converting Values
 
-- ``SwiftVizScale/RadialScale/scale(_:from:to:)``
-- ``SwiftVizScale/RadialScale/scale(_:to:)``
 - ``SwiftVizScale/RadialScale/scale(_:)``
-- ``SwiftVizScale/RadialScale/invert(_:from:to:)``
-- ``SwiftVizScale/RadialScale/invert(_:to:)``
+- ``SwiftVizScale/RadialScale/scale(_:from:to:)``
+- ``SwiftVizScale/RadialScale/scale(_:reversed:from:to:)``
+- ``SwiftVizScale/RadialScale/scale(_:to:)``
+- ``SwiftVizScale/RadialScale/scale(_:to:reversed:)``
 - ``SwiftVizScale/RadialScale/invert(_:)``
+- ``SwiftVizScale/RadialScale/invert(_:from:to:)``
+- ``SwiftVizScale/RadialScale/invert(_:reversed:from:to:)``
+- ``SwiftVizScale/RadialScale/invert(_:to:)``
+- ``SwiftVizScale/RadialScale/invert(_:to:reversed:)``
 
 ### Comparing Values
 
@@ -45,12 +52,13 @@
 
 ### Creating Ticks
 
-- ``SwiftVizScale/RadialScale/defaultTickValues(formatter:)-24xez``
-- ``SwiftVizScale/RadialScale/defaultTickValues(formatter:)-27kcq``
-- ``SwiftVizScale/RadialScale/defaultTickValues(formatter:)-3l5q5``
-- ``SwiftVizScale/RadialScale/defaultTickValues(formatter:)-3ooif``
 - ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:formatter:)-2ibni``
 - ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:formatter:)-47aaq``
 - ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:formatter:)-6tnha``
 - ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:formatter:)-9dxor``
+- ``SwiftVizScale/RadialScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-24v5p``
+- ``SwiftVizScale/RadialScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-3de4p``
+- ``SwiftVizScale/RadialScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-6agip``
+- ``SwiftVizScale/RadialScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-twb3``
 - ``SwiftVizScale/RadialScale/ticksFromValues(_:from:to:formatter:)``
+- ``SwiftVizScale/RadialScale/validTickValues(_:formatter:)``
