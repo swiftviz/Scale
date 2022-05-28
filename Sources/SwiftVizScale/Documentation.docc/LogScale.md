@@ -63,5 +63,5 @@
 - ``SwiftVizScale/LogScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-2eo1i``
 - ``SwiftVizScale/LogScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-3xdc2``
 - ``SwiftVizScale/LogScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-7y98y``
-- ``SwiftVizScale/LogScale/ticksFromValues(_:from:to:formatter:)``
+- ``SwiftVizScale/LogScale/ticksFromValues(_:reversed:from:to:formatter:)``
 - ``SwiftVizScale/LogScale/validTickValues(_:formatter:)``

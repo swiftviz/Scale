@@ -36,7 +36,7 @@ public struct RadialScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
 
     /// The number of ticks desired when creating the scale.
     ///
-    /// This number may not match the number of ticks returned by ``RadialScale/ticksFromValues(_:from:to:formatter:)``
+    /// This number may not match the number of ticks returned by ``RadialScale/ticksFromValues(_:reversed:from:to:formatter:)``
     public let desiredTicks: Int
 
     /// Creates a new linear scale for the upper and lower bounds of the domain you provide.

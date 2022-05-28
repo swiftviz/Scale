@@ -59,6 +59,6 @@
 - ``SwiftVizScale/ContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-4k3lb``
 - ``SwiftVizScale/ContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-67z4e``
 - ``SwiftVizScale/ContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-73yzr``
-- ``SwiftVizScale/ContinuousScale/ticksFromValues(_:from:to:formatter:)``
+- ``SwiftVizScale/ContinuousScale/ticksFromValues(_:reversed:from:to:formatter:)``
 - ``SwiftVizScale/ContinuousScale/validTickValues(_:formatter:)``
 

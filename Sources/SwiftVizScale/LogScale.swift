@@ -34,7 +34,7 @@ public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType:
 
     /// The number of ticks desired when creating the scale.
     ///
-    /// This number may not match the number of ticks returned by ``LogScale/ticksFromValues(_:from:to:formatter:)``
+    /// This number may not match the number of ticks returned by ``LogScale/ticksFromValues(_:reversed:from:to:formatter:)``
     public let desiredTicks: Int
 
     /// Creates a new logarithmic scale for the upper and lower bounds of the domain you provide.

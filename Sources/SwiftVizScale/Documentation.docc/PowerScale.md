@@ -65,5 +65,5 @@
 - ``SwiftVizScale/PowerScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-5op8i``
 - ``SwiftVizScale/PowerScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-8y59b``
 - ``SwiftVizScale/PowerScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-9en4k``
-- ``SwiftVizScale/PowerScale/ticksFromValues(_:from:to:formatter:)``
+- ``SwiftVizScale/PowerScale/ticksFromValues(_:reversed:from:to:formatter:)``
 - ``SwiftVizScale/PowerScale/validTickValues(_:formatter:)``

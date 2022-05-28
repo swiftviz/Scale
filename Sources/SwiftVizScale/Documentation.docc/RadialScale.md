@@ -60,5 +60,5 @@
 - ``SwiftVizScale/RadialScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-3de4p``
 - ``SwiftVizScale/RadialScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-6agip``
 - ``SwiftVizScale/RadialScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-twb3``
-- ``SwiftVizScale/RadialScale/ticksFromValues(_:from:to:formatter:)``
+- ``SwiftVizScale/RadialScale/ticksFromValues(_:reversed:from:to:formatter:)``
 - ``SwiftVizScale/RadialScale/validTickValues(_:formatter:)``

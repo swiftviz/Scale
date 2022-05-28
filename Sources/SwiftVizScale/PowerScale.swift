@@ -38,7 +38,7 @@ public struct PowerScale<InputType: ConvertibleWithDouble & NiceValue, OutputTyp
 
     /// The number of ticks desired when creating the scale.
     ///
-    /// This number may not match the number of ticks returned by ``PowerScale/ticksFromValues(_:from:to:formatter:)``
+    /// This number may not match the number of ticks returned by ``PowerScale/ticksFromValues(_:reversed:from:to:formatter:)``
     public let desiredTicks: Int
 
     /// The exponent value of the scale.

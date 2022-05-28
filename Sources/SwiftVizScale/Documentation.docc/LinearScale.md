@@ -60,5 +60,5 @@
 - ``SwiftVizScale/LinearScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-4kac6``
 - ``SwiftVizScale/LinearScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-4qnov``
 - ``SwiftVizScale/LinearScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-zvvj``
-- ``SwiftVizScale/LinearScale/ticksFromValues(_:from:to:formatter:)``
+- ``SwiftVizScale/LinearScale/ticksFromValues(_:reversed:from:to:formatter:)``
 - ``SwiftVizScale/LinearScale/validTickValues(_:formatter:)``
