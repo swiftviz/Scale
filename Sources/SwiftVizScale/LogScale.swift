@@ -118,7 +118,7 @@ public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType:
         if values.count == 1 || min == max {
             if nice {
                 let bottom = Double.leastNonzeroMagnitude
-                let top = Double.niceVersion(for: max.toDouble(), min: false)
+                let top = Double.niceVersion(for: max.toDouble(), trendTowardsZero: false)
                 return domain(lower: InputType.fromDouble(bottom), higher: InputType.fromDouble(top))
             } else {
                 return domain(lower: InputType.fromDouble(Double.leastNonzeroMagnitude), higher: max)
@@ -126,7 +126,7 @@ public struct LogScale<InputType: ConvertibleWithDouble & NiceValue, OutputType:
         } else {
             if nice {
                 var bottom = Double.niceMinimumValueForRange(min: min.toDouble(), max: max.toDouble())
-                let top = Double.niceVersion(for: max.toDouble(), min: false)
+                let top = Double.niceVersion(for: max.toDouble(), trendTowardsZero: false)
                 if bottom == 0 {
                     bottom = Double.leastNonzeroMagnitude
                 }

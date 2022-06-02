@@ -140,7 +140,7 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
         if values.count == 1 || min == max {
             if nice {
                 let bottom: Double = 0
-                let top = Double.niceVersion(for: max.toDouble(), min: false)
+                let top = Double.niceVersion(for: max.toDouble(), trendTowardsZero: false)
                 return domain(lower: InputType.fromDouble(bottom), higher: InputType.fromDouble(top))
             } else {
                 return domain(lower: 0, higher: max)
@@ -148,7 +148,7 @@ public struct LinearScale<InputType: ConvertibleWithDouble & NiceValue, OutputTy
         } else {
             if nice {
                 let bottom = Double.niceMinimumValueForRange(min: min.toDouble(), max: max.toDouble())
-                let top = Double.niceVersion(for: max.toDouble(), min: false)
+                let top = Double.niceVersion(for: max.toDouble(), trendTowardsZero: false)
                 return domain(lower: InputType.fromDouble(bottom), higher: InputType.fromDouble(top))
             } else {
                 return domain(lower: min, higher: max)
