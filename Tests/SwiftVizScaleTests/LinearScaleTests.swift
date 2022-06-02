@@ -344,4 +344,20 @@ final class LinearScaleTests: XCTestCase {
         assertTick(forwardTicks[3], "15.0", 15)
         assertTick(forwardTicks[4], "20.0", 20)
     }
+
+    func testDomainCalculations() throws {
+        let sampleData: [Double] = [59.5, 59.5, 59.0, 59.4, 58.3, 62.1, 60.8, 61.0, 62.4, 65.3,
+                                    70.3, 82.2, 75.6, 75.7, 68.4, 56.3, 54.3, 54.9, 54.7, 56.5,
+                                    62.6, 59.9, 62.2, 63.0, 58.5, 59.5, 59.4, 66.6, 64.9, 59.9, 60.4, 64.4,
+                                    66.6, 67.8, 73.2, 72.1, 59.0, 59.2, 57.4, 56.8, 59.4, 61.2, 59.2, 63.1, 72.1,
+                                    75.4, 65.5, 60.1, 55.0, 55.0, 54.3, 54.1, 54.5, 53.4, 49.6, 49.8,
+                                    50.9, 52.5, 50.5, 51.3, 51.8, 52.2, 53.4, 53.2, 55.2, 56.3, 59.5, 57.2, 54.5,
+                                    56.5, 57.9, 56.1, 55.6, 55.8, 57.4, 52.9, 52.2,
+                                    52.2, 57.6, 57.6, 53.4, 57.2, 57.6, 53.6, 57.9, 57.6, 56.7, 56.3, 53.6,
+                                    55.6, 50.4, 50.2, 48.2, 48.0, 51.3, 50.9, 52.3, 52.5, 45.1, 43.2, 44.6]
+        let baseScale = LinearScale<Double, CGFloat>()
+        let updatedScale = baseScale.domain(sampleData, nice: true)
+        XCTAssertEqual(updatedScale.domainLower, 0)
+        XCTAssertEqual(updatedScale.domainHigher, 100)
+    }
 }
