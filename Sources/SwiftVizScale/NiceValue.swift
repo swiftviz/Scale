@@ -109,21 +109,26 @@ extension Double: NiceValue {
     public static func niceVersion(for number: NumberType, min: Bool) -> NumberType {
         let negativeInput: Bool = number < 0
         let positiveNumber = abs(number)
-        let exponent = floor(log10(positiveNumber))
+        var exponent = floor(log10(positiveNumber))
         let fraction = positiveNumber / pow(10, exponent)
         let niceFraction: NumberType
 
         if min {
-            if fraction <= 1.5 {
-                niceFraction = 1
-            } else if fraction <= 3 {
-                niceFraction = 2
-            } else if fraction <= 7 {
-                niceFraction = 5
-            } else {
+            // we're trying to round to the nearest 'nice' number - interval of 1, 2, 5, or 10
+            // that's CLOSER TO ZERO than the provided number.
+            if fraction <= 1 {
                 niceFraction = 10
+                exponent = max(0, exponent - 1.0)
+            } else if fraction <= 2 {
+                niceFraction = 1
+            } else if fraction <= 5 {
+                niceFraction = 2
+            } else {
+                niceFraction = 5
             }
         } else {
+            // we're trying to round to the nearest 'nice' number - interval of 1, 2, 5, or 10
+            // that's FARTHER FROM ZERO than the provided number.
             if fraction <= 1 {
                 niceFraction = 1
             } else if fraction <= 2 {
@@ -150,7 +155,7 @@ extension Double: NiceValue {
         }
         // Otherwise, compare nice against the upper range, and if it's smaller
         // than 10% of the extent of the range, round it down to 0.
-        return nice <= (max / 10) ? 0 : nice
+        return nice <= (max / 10) ? nice: 0
     }
 
     public static func niceMinStepMax(min: NumberType, max: NumberType, ofSize size: Int) -> (NumberType, NumberType, NumberType) {
