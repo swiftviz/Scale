@@ -28,7 +28,7 @@ public protocol NiceValue {
     /// - Parameters:
     ///   - number: The number to convert into a nice value.
     ///   - min: A Boolean value that indicates to take the lower, rather than higher, nearest nice number as a result.
-    static func niceVersion(for number: NumberType, min: Bool) -> NumberType
+    static func niceVersion(for number: NumberType, trendTowardsZero: Bool) -> NumberType
 
     /// Returns a nice minimum value for a given range.
     ///
@@ -106,14 +106,14 @@ public protocol NiceValue {
 extension Double: NiceValue {
     public typealias NumberType = Double
 
-    public static func niceVersion(for number: NumberType, min: Bool) -> NumberType {
+    public static func niceVersion(for number: NumberType, trendTowardsZero: Bool) -> NumberType {
         let negativeInput: Bool = number < 0
         let positiveNumber = abs(number)
         var exponent = floor(log10(positiveNumber))
         let fraction = positiveNumber / pow(10, exponent)
         let niceFraction: NumberType
 
-        if min {
+        if trendTowardsZero {
             // we're trying to round to the nearest 'nice' number - interval of 1, 2, 5, or 10
             // that's CLOSER TO ZERO than the provided number.
             if fraction <= 1 {
@@ -146,16 +146,16 @@ extension Double: NiceValue {
     }
 
     public static func niceMinimumValueForRange(min: NumberType, max: NumberType) -> NumberType {
-        let negativeMinValue = min < 0
-        let nice = niceVersion(for: min, min: !negativeMinValue)
-        if negativeMinValue {
+        let minValueBelowZero = min < 0
+        let nice = niceVersion(for: min, trendTowardsZero: !minValueBelowZero)
+        if minValueBelowZero {
             // if the minimum value is below 0, then
             // round it further negative to the next "nice" number
             return nice
         }
         // Otherwise, compare nice against the upper range, and if it's smaller
         // than 10% of the extent of the range, round it down to 0.
-        return nice <= (max / 10) ? nice: 0
+        return nice <= (max / 10) ? nice : 0
     }
 
     public static func niceMinStepMax(min: NumberType, max: NumberType, ofSize size: Int) -> (NumberType, NumberType, NumberType) {
@@ -164,9 +164,9 @@ extension Double: NiceValue {
         // print("niced min: \(niceMin)")
         let step = (max - niceMin) / NumberType(size - 1)
         // print("step: \(step)")
-        let niceStep = niceVersion(for: step, min: false)
+        let niceStep = niceVersion(for: step, trendTowardsZero: false)
         // print("niced step: \(niceStep)")
-        var niceMax = niceVersion(for: max + niceStep, min: true)
+        var niceMax = niceVersion(for: max + niceStep, trendTowardsZero: true)
         // print("niced max: \(niceMax)")
         // niceMax should never be below the provided 'max' value, so increment by the
         // calculated step value until it's above it:
@@ -202,14 +202,14 @@ extension Double: NiceValue {
 
     extension CGFloat: NiceValue {
         public typealias NumberType = CGFloat
-        public static func niceVersion(for number: NumberType, min: Bool) -> NumberType {
+        public static func niceVersion(for number: NumberType, trendTowardsZero: Bool) -> NumberType {
             let negativeInput: Bool = number < 0
             let positiveNumber = abs(number)
             let exponent = floor(log10(positiveNumber))
             let fraction = positiveNumber / pow(10, exponent)
             let niceFraction: NumberType
 
-            if min {
+            if trendTowardsZero {
                 if fraction <= 1.5 {
                     niceFraction = 1
                 } else if fraction <= 3 {
@@ -238,7 +238,7 @@ extension Double: NiceValue {
 
         public static func niceMinimumValueForRange(min: NumberType, max: NumberType) -> NumberType {
             let negativeMinValue = min < 0
-            let nice = niceVersion(for: min, min: !negativeMinValue)
+            let nice = niceVersion(for: min, trendTowardsZero: !negativeMinValue)
             if negativeMinValue {
                 // if the minimum value is below 0, then
                 // round it further negative to the next "nice" number
@@ -255,9 +255,9 @@ extension Double: NiceValue {
             // print("niced min: \(niceMin)")
             let step = (max - niceMin) / NumberType(size - 1)
             // print("step: \(step)")
-            let niceStep = niceVersion(for: step, min: false)
+            let niceStep = niceVersion(for: step, trendTowardsZero: false)
             // print("niced step: \(niceStep)")
-            var niceMax = niceVersion(for: max + niceStep, min: true)
+            var niceMax = niceVersion(for: max + niceStep, trendTowardsZero: true)
             // niceMax should never be below the provided 'max' value, so increment by the
             // calculated step value until it's above it:
             while niceMax < max {
@@ -292,14 +292,14 @@ extension Double: NiceValue {
 
 extension Float: NiceValue {
     public typealias NumberType = Float
-    public static func niceVersion(for number: NumberType, min: Bool) -> NumberType {
+    public static func niceVersion(for number: NumberType, trendTowardsZero: Bool) -> NumberType {
         let negativeInput: Bool = number < 0
         let positiveNumber = abs(number)
         let exponent = floor(log10(positiveNumber))
         let fraction = positiveNumber / pow(10, exponent)
         let niceFraction: NumberType
 
-        if min {
+        if trendTowardsZero {
             if fraction <= 1.5 {
                 niceFraction = 1
             } else if fraction <= 3 {
@@ -328,7 +328,7 @@ extension Float: NiceValue {
 
     public static func niceMinimumValueForRange(min: NumberType, max: NumberType) -> NumberType {
         let negativeMinValue = min < 0
-        let nice = niceVersion(for: min, min: !negativeMinValue)
+        let nice = niceVersion(for: min, trendTowardsZero: !negativeMinValue)
         if negativeMinValue {
             // if the minimum value is below 0, then
             // round it further negative to the next "nice" number
@@ -345,9 +345,9 @@ extension Float: NiceValue {
         // print("niced min: \(niceMin)")
         let step = (max - niceMin) / NumberType(size - 1)
         // print("step: \(step)")
-        let niceStep = niceVersion(for: step, min: false)
+        let niceStep = niceVersion(for: step, trendTowardsZero: false)
         // print("niced step: \(niceStep)")
-        var niceMax = niceVersion(for: max + niceStep, min: true)
+        var niceMax = niceVersion(for: max + niceStep, trendTowardsZero: true)
         // niceMax should never be below the provided 'max' value, so increment by the
         // calculated step value until it's above it:
         while niceMax < max {
@@ -382,7 +382,7 @@ extension Float: NiceValue {
 extension Int: NiceValue {
     public typealias NumberType = Int
 
-    public static func niceVersion(for number: NumberType, min: Bool) -> NumberType {
+    public static func niceVersion(for number: NumberType, trendTowardsZero: Bool) -> NumberType {
         let negativeInput: Bool = number < 0
         let positiveNumber = abs(number)
 
@@ -390,7 +390,7 @@ extension Int: NiceValue {
         let fraction = Double(number) / pow(10, exponent)
         let niceFraction: Double
 
-        if min {
+        if trendTowardsZero {
             if fraction <= 1.5 {
                 niceFraction = 1
             } else if fraction <= 3 {
@@ -419,7 +419,7 @@ extension Int: NiceValue {
 
     public static func niceMinimumValueForRange(min: NumberType, max: NumberType) -> NumberType {
         let negativeMinValue = min < 0
-        let nice = niceVersion(for: min, min: !negativeMinValue)
+        let nice = niceVersion(for: min, trendTowardsZero: !negativeMinValue)
         if negativeMinValue {
             // if the minimum value is below 0, then
             // round it further negative to the next "nice" number
@@ -436,9 +436,9 @@ extension Int: NiceValue {
         // print("niced min: \(niceMin)")
         let step = (max - niceMin) / NumberType(size - 1)
         // print("step: \(step)")
-        let niceStep = niceVersion(for: step, min: false)
+        let niceStep = niceVersion(for: step, trendTowardsZero: false)
         // print("niced step: \(niceStep)")
-        var niceMax = niceVersion(for: max + niceStep, min: true)
+        var niceMax = niceVersion(for: max + niceStep, trendTowardsZero: true)
         // niceMax should never be below the provided 'max' value, so increment by the
         // calculated step value until it's above it:
         while niceMax < max {

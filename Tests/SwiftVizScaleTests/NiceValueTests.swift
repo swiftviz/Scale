@@ -9,149 +9,197 @@ import Foundation
 import XCTest
 
 class NiceValueTests: XCTestCase {
-    func doubleConversionMatches(input: Double, lower: Double, higher: Double) {
-        let lowConvertedValue = Double.niceVersion(for: input, min: true)
-        let highConvertedValue = Double.niceVersion(for: input, min: false)
-        XCTAssertEqual(lower, lowConvertedValue)
-        XCTAssertEqual(higher, highConvertedValue)
+    
+    // MARK: assertion helpers
+
+    func assertCalculatedNiceValue(input: Double, expectedLowerValue: Double, expectedHigherValue: Double, file: StaticString = #file, line: UInt = #line) {
+        let lowConvertedValue = Double.niceVersion(for: input, trendTowardsZero: true)
+        let highConvertedValue = Double.niceVersion(for: input, trendTowardsZero: false)
+        XCTAssertEqual(expectedLowerValue, lowConvertedValue, file: file, line: line)
+        XCTAssertEqual(expectedHigherValue, highConvertedValue, file: file, line: line)
     }
 
-    func floatConversionMatches(input: Float, lower: Float, higher: Float) {
-        let lowConvertedValue = Float.niceVersion(for: input, min: true)
-        let highConvertedValue = Float.niceVersion(for: input, min: false)
-        XCTAssertEqual(lower, lowConvertedValue)
-        XCTAssertEqual(higher, highConvertedValue)
+    func assertCalculatedNiceValue(input: Float, expectedLowerValue: Float, expectedHigherValue: Float, file: StaticString = #file, line: UInt = #line) {
+        let lowConvertedValue = Float.niceVersion(for: input, trendTowardsZero: true)
+        let highConvertedValue = Float.niceVersion(for: input, trendTowardsZero: false)
+        XCTAssertEqual(expectedLowerValue, lowConvertedValue, file: file, line: line)
+        XCTAssertEqual(expectedHigherValue, highConvertedValue, file: file, line: line)
     }
 
-    func cgFloatConversionMatches(input: CGFloat, lower: CGFloat, higher: CGFloat) {
-        let lowConvertedValue = CGFloat.niceVersion(for: input, min: true)
-        let highConvertedValue = CGFloat.niceVersion(for: input, min: false)
-        XCTAssertEqual(lower, lowConvertedValue)
-        XCTAssertEqual(higher, highConvertedValue)
+    func assertCalculatedNiceValue(input: CGFloat, expectedLowerValue: CGFloat, expectedHigherValue: CGFloat, file: StaticString = #file, line: UInt = #line) {
+        let lowConvertedValue = CGFloat.niceVersion(for: input, trendTowardsZero: true)
+        let highConvertedValue = CGFloat.niceVersion(for: input, trendTowardsZero: false)
+        XCTAssertEqual(expectedLowerValue, lowConvertedValue, file: file, line: line)
+        XCTAssertEqual(expectedHigherValue, highConvertedValue, file: file, line: line)
     }
 
-    func intConversionMatches(input: Int, lower: Int, higher: Int) {
-        let lowConvertedValue = Int.niceVersion(for: input, min: true)
-        let highConvertedValue = Int.niceVersion(for: input, min: false)
-        XCTAssertEqual(lower, lowConvertedValue)
-        XCTAssertEqual(higher, highConvertedValue)
+    func assertCalculatedNiceValue(input: Int, expectedLowerValue: Int, expectedHigherValue: Int, file: StaticString = #file, line: UInt = #line) {
+        let lowConvertedValue = Int.niceVersion(for: input, trendTowardsZero: true)
+        let highConvertedValue = Int.niceVersion(for: input, trendTowardsZero: false)
+        XCTAssertEqual(expectedLowerValue, lowConvertedValue, file: file, line: line)
+        XCTAssertEqual(expectedHigherValue, highConvertedValue, file: file, line: line)
     }
 
+    func verifyRangeAttributes(min: Double, max: Double, steps: Int, calcSteps: Int, stepsize: Double, niceMax: Double, file: StaticString = #file, line: UInt = #line) throws {
+        XCTAssertTrue(steps > 1, file: file, line: line)
+        let calculatedRange = Double.rangeOfNiceValues(min: min, max: max, ofSize: steps)
+        XCTAssertTrue(calculatedRange.first! <= min, file: file, line: line)
+        XCTAssertTrue(calculatedRange.last! >= max, file: file, line: line)
+        XCTAssertEqual(calculatedRange.count, calcSteps, file: file, line: line)
+        let derivedStepSize = calculatedRange[1] - calculatedRange[0]
+        XCTAssertEqual(derivedStepSize, stepsize, accuracy: 0.01, file: file, line: line)
+        XCTAssertEqual(calculatedRange.last!, niceMax, accuracy: 0.01, file: file, line: line)
+    }
+
+    func verifyFloatRangeAttributes(min: Float, max: Float, steps: Int, calcSteps: Int, stepsize: Float, niceMax: Float, file: StaticString = #file, line: UInt = #line) throws {
+        XCTAssertTrue(steps > 1, file: file, line: line)
+        let calculatedRange = Float.rangeOfNiceValues(min: min, max: max, ofSize: steps)
+        XCTAssertTrue(calculatedRange.first! <= min, file: file, line: line)
+        XCTAssertTrue(calculatedRange.last! >= max, file: file, line: line)
+        XCTAssertEqual(calculatedRange.count, calcSteps, file: file, line: line)
+        let derivedStepSize = calculatedRange[1] - calculatedRange[0]
+        XCTAssertEqual(derivedStepSize, stepsize, accuracy: 0.01, file: file, line: line)
+        XCTAssertEqual(calculatedRange.last!, niceMax, accuracy: 0.01, file: file, line: line)
+    }
+
+    func verifyCGFloatRangeAttributes(min: CGFloat, max: CGFloat, steps: Int, calcSteps: Int, stepsize: CGFloat, niceMax: CGFloat, file: StaticString = #file, line: UInt = #line) throws {
+        XCTAssertTrue(steps > 1, file: file, line: line)
+        let calculatedRange = CGFloat.rangeOfNiceValues(min: min, max: max, ofSize: steps)
+        XCTAssertTrue(calculatedRange.first! <= min, file: file, line: line)
+        XCTAssertTrue(calculatedRange.last! >= max, file: file, line: line)
+        XCTAssertEqual(calculatedRange.count, calcSteps)
+        let derivedStepSize = calculatedRange[1] - calculatedRange[0]
+        XCTAssertEqual(derivedStepSize, stepsize, accuracy: 0.01, file: file, line: line)
+        XCTAssertEqual(calculatedRange.last!, niceMax, accuracy: 0.01, file: file, line: line)
+    }
+    func verifyIntRangeAttributes(min: Int, max: Int, steps: Int, calcSteps: Int, stepsize: Int, niceMax: Int, file: StaticString = #file, line: UInt = #line) throws {
+        XCTAssertTrue(steps > 1, file: file, line: line)
+        let calculatedRange = Int.rangeOfNiceValues(min: min, max: max, ofSize: steps)
+        XCTAssertTrue(calculatedRange.first! <= min, file: file, line: line)
+        XCTAssertTrue(calculatedRange.last! >= max, file: file, line: line)
+        XCTAssertEqual(calculatedRange.count, calcSteps, file: file, line: line)
+        let derivedStepSize = calculatedRange[1] - calculatedRange[0]
+        XCTAssertEqual(derivedStepSize, stepsize, file: file, line: line)
+        XCTAssertEqual(calculatedRange.last!, niceMax, file: file, line: line)
+    }
+
+    // MARK: tests
+    
     func testNegativeNiceValues() throws {
-        doubleConversionMatches(input: 0.0, lower: 0.0, higher: 0.0)
-        doubleConversionMatches(input: -1.0, lower: -1.0, higher: -1.0)
-        doubleConversionMatches(input: -1.1, lower: -1.0, higher: -2.0)
-        doubleConversionMatches(input: -1.6, lower: -2.0, higher: -2.0)
-        doubleConversionMatches(input: -3.0, lower: -2.0, higher: -5.0)
-        doubleConversionMatches(input: -4.0, lower: -5.0, higher: -5.0)
-        doubleConversionMatches(input: -6.0, lower: -5.0, higher: -10.0)
-        doubleConversionMatches(input: -11.0, lower: -10.0, higher: -20.0)
-        doubleConversionMatches(input: -101.0, lower: -100, higher: -200)
-        doubleConversionMatches(input: -1010.0, lower: -1000, higher: -2000)
-        doubleConversionMatches(input: -1110.0, lower: -1000, higher: -2000)
+        assertCalculatedNiceValue(input: 0.0, expectedLowerValue: 0.0, expectedHigherValue: 0.0)
+        assertCalculatedNiceValue(input: -1.0, expectedLowerValue: -1.0, expectedHigherValue: -1.0)
+        assertCalculatedNiceValue(input: -1.1, expectedLowerValue: -1.0, expectedHigherValue: -2.0)
+        assertCalculatedNiceValue(input: -1.6, expectedLowerValue: -2.0, expectedHigherValue: -2.0)
+        assertCalculatedNiceValue(input: -3.0, expectedLowerValue: -2.0, expectedHigherValue: -5.0)
+        assertCalculatedNiceValue(input: -4.0, expectedLowerValue: -5.0, expectedHigherValue: -5.0)
+        assertCalculatedNiceValue(input: -6.0, expectedLowerValue: -5.0, expectedHigherValue: -10.0)
+        assertCalculatedNiceValue(input: -11.0, expectedLowerValue: -10.0, expectedHigherValue: -20.0)
+        assertCalculatedNiceValue(input: -101.0, expectedLowerValue: -100, expectedHigherValue: -200)
+        assertCalculatedNiceValue(input: -1010.0, expectedLowerValue: -1000, expectedHigherValue: -2000)
+        assertCalculatedNiceValue(input: -1110.0, expectedLowerValue: -1000, expectedHigherValue: -2000)
     }
 
     func testNiceValuesOfDoubleSequence() throws {
-        doubleConversionMatches(input: 0.0, lower: 0.0, higher: 0.0)
-        doubleConversionMatches(input: 1.0, lower: 1.0, higher: 1.0)
-        doubleConversionMatches(input: 1.1, lower: 1.0, higher: 2.0)
-        doubleConversionMatches(input: 1.2, lower: 1.0, higher: 2.0)
-        doubleConversionMatches(input: 1.3, lower: 1.0, higher: 2.0)
-        doubleConversionMatches(input: 1.4, lower: 1.0, higher: 2.0)
-        doubleConversionMatches(input: 1.5, lower: 1.0, higher: 2.0)
-        doubleConversionMatches(input: 1.6, lower: 2.0, higher: 2.0)
-        doubleConversionMatches(input: 1.7, lower: 2.0, higher: 2.0)
-        doubleConversionMatches(input: 1.8, lower: 2.0, higher: 2.0)
-        doubleConversionMatches(input: 1.9, lower: 2.0, higher: 2.0)
-        doubleConversionMatches(input: 2.0, lower: 2.0, higher: 2.0)
-        doubleConversionMatches(input: 3.0, lower: 2.0, higher: 5.0)
-        doubleConversionMatches(input: 4.0, lower: 5.0, higher: 5.0)
-        doubleConversionMatches(input: 5.0, lower: 5.0, higher: 5.0)
-        doubleConversionMatches(input: 6.0, lower: 5.0, higher: 10.0)
-        doubleConversionMatches(input: 7.0, lower: 5.0, higher: 10.0)
-        doubleConversionMatches(input: 8.0, lower: 10.0, higher: 10.0)
-        doubleConversionMatches(input: 9.0, lower: 10.0, higher: 10.0)
-        doubleConversionMatches(input: 10.0, lower: 10.0, higher: 10.0)
-        doubleConversionMatches(input: 11.0, lower: 10.0, higher: 20.0)
-        doubleConversionMatches(input: 101.0, lower: 100, higher: 200)
-        doubleConversionMatches(input: 111.0, lower: 100, higher: 200)
-        doubleConversionMatches(input: 1010.0, lower: 1000, higher: 2000)
-        doubleConversionMatches(input: 1110.0, lower: 1000, higher: 2000)
+        assertCalculatedNiceValue(input: 0.0, expectedLowerValue: 0.0, expectedHigherValue: 0.0)
+        assertCalculatedNiceValue(input: 1.0, expectedLowerValue: 1.0, expectedHigherValue: 1.0)
+        assertCalculatedNiceValue(input: 1.1, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.2, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.3, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.4, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.5, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.6, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.7, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.8, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.9, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 2.0, expectedLowerValue: 2.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 3.0, expectedLowerValue: 2.0, expectedHigherValue: 5.0)
+        assertCalculatedNiceValue(input: 4.0, expectedLowerValue: 5.0, expectedHigherValue: 5.0)
+        assertCalculatedNiceValue(input: 5.0, expectedLowerValue: 5.0, expectedHigherValue: 5.0)
+        assertCalculatedNiceValue(input: 6.0, expectedLowerValue: 5.0, expectedHigherValue: 10.0)
+        assertCalculatedNiceValue(input: 7.0, expectedLowerValue: 5.0, expectedHigherValue: 10.0)
+        assertCalculatedNiceValue(input: 8.0, expectedLowerValue: 10.0, expectedHigherValue: 10.0)
+        assertCalculatedNiceValue(input: 9.0, expectedLowerValue: 10.0, expectedHigherValue: 10.0)
+        assertCalculatedNiceValue(input: 10.0, expectedLowerValue: 10.0, expectedHigherValue: 10.0)
+        assertCalculatedNiceValue(input: 11.0, expectedLowerValue: 10.0, expectedHigherValue: 20.0)
+        assertCalculatedNiceValue(input: 101.0, expectedLowerValue: 100, expectedHigherValue: 200)
+        assertCalculatedNiceValue(input: 111.0, expectedLowerValue: 100, expectedHigherValue: 200)
+        assertCalculatedNiceValue(input: 1010.0, expectedLowerValue: 1000, expectedHigherValue: 2000)
+        assertCalculatedNiceValue(input: 1110.0, expectedLowerValue: 1000, expectedHigherValue: 2000)
     }
 
     func testNiceValuesOfFloatSequence() throws {
-        floatConversionMatches(input: 0.0, lower: 0.0, higher: 0.0)
-        floatConversionMatches(input: 1.0, lower: 1.0, higher: 1.0)
-        floatConversionMatches(input: 1.1, lower: 1.0, higher: 2.0)
-        floatConversionMatches(input: 1.2, lower: 1.0, higher: 2.0)
-        floatConversionMatches(input: 1.3, lower: 1.0, higher: 2.0)
-        floatConversionMatches(input: 1.4, lower: 1.0, higher: 2.0)
-        floatConversionMatches(input: 1.5, lower: 1.0, higher: 2.0)
-        floatConversionMatches(input: 1.6, lower: 2.0, higher: 2.0)
-        floatConversionMatches(input: 1.7, lower: 2.0, higher: 2.0)
-        floatConversionMatches(input: 1.8, lower: 2.0, higher: 2.0)
-        floatConversionMatches(input: 1.9, lower: 2.0, higher: 2.0)
-        floatConversionMatches(input: 2.0, lower: 2.0, higher: 2.0)
-        floatConversionMatches(input: 3.0, lower: 2.0, higher: 5.0)
-        floatConversionMatches(input: 4.0, lower: 5.0, higher: 5.0)
-        floatConversionMatches(input: 5.0, lower: 5.0, higher: 5.0)
-        floatConversionMatches(input: 6.0, lower: 5.0, higher: 10.0)
-        floatConversionMatches(input: 7.0, lower: 5.0, higher: 10.0)
-        floatConversionMatches(input: 8.0, lower: 10.0, higher: 10.0)
-        floatConversionMatches(input: 9.0, lower: 10.0, higher: 10.0)
-        floatConversionMatches(input: 10.0, lower: 10.0, higher: 10.0)
-        floatConversionMatches(input: 11.0, lower: 10.0, higher: 20.0)
-        floatConversionMatches(input: 101.0, lower: 100, higher: 200)
-        floatConversionMatches(input: 111.0, lower: 100, higher: 200)
-        floatConversionMatches(input: 1010.0, lower: 1000, higher: 2000)
-        floatConversionMatches(input: 1110.0, lower: 1000, higher: 2000)
+        assertCalculatedNiceValue(input: 0.0, expectedLowerValue: 0.0, expectedHigherValue: 0.0)
+        assertCalculatedNiceValue(input: 1.0, expectedLowerValue: 1.0, expectedHigherValue: 1.0)
+        assertCalculatedNiceValue(input: 1.1, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.2, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.3, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.4, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.5, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.6, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.7, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.8, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.9, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 2.0, expectedLowerValue: 2.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 3.0, expectedLowerValue: 2.0, expectedHigherValue: 5.0)
+        assertCalculatedNiceValue(input: 4.0, expectedLowerValue: 5.0, expectedHigherValue: 5.0)
+        assertCalculatedNiceValue(input: 5.0, expectedLowerValue: 5.0, expectedHigherValue: 5.0)
+        assertCalculatedNiceValue(input: 6.0, expectedLowerValue: 5.0, expectedHigherValue: 10.0)
+        assertCalculatedNiceValue(input: 7.0, expectedLowerValue: 5.0, expectedHigherValue: 10.0)
+        assertCalculatedNiceValue(input: 8.0, expectedLowerValue: 10.0, expectedHigherValue: 10.0)
+        assertCalculatedNiceValue(input: 9.0, expectedLowerValue: 10.0, expectedHigherValue: 10.0)
+        assertCalculatedNiceValue(input: 10.0, expectedLowerValue: 10.0, expectedHigherValue: 10.0)
+        assertCalculatedNiceValue(input: 11.0, expectedLowerValue: 10.0, expectedHigherValue: 20.0)
+        assertCalculatedNiceValue(input: 101.0, expectedLowerValue: 100, expectedHigherValue: 200)
+        assertCalculatedNiceValue(input: 111.0, expectedLowerValue: 100, expectedHigherValue: 200)
+        assertCalculatedNiceValue(input: 1010.0, expectedLowerValue: 1000, expectedHigherValue: 2000)
+        assertCalculatedNiceValue(input: 1110.0, expectedLowerValue: 1000, expectedHigherValue: 2000)
     }
 
     func testNiceValuesOfCGFloatSequence() throws {
-        cgFloatConversionMatches(input: 0.0, lower: 0.0, higher: 0.0)
-        cgFloatConversionMatches(input: 1.0, lower: 1.0, higher: 1.0)
-        cgFloatConversionMatches(input: 1.1, lower: 1.0, higher: 2.0)
-        cgFloatConversionMatches(input: 1.2, lower: 1.0, higher: 2.0)
-        cgFloatConversionMatches(input: 1.3, lower: 1.0, higher: 2.0)
-        cgFloatConversionMatches(input: 1.4, lower: 1.0, higher: 2.0)
-        cgFloatConversionMatches(input: 1.5, lower: 1.0, higher: 2.0)
-        cgFloatConversionMatches(input: 1.6, lower: 2.0, higher: 2.0)
-        cgFloatConversionMatches(input: 1.7, lower: 2.0, higher: 2.0)
-        cgFloatConversionMatches(input: 1.8, lower: 2.0, higher: 2.0)
-        cgFloatConversionMatches(input: 1.9, lower: 2.0, higher: 2.0)
-        cgFloatConversionMatches(input: 2.0, lower: 2.0, higher: 2.0)
-        cgFloatConversionMatches(input: 3.0, lower: 2.0, higher: 5.0)
-        cgFloatConversionMatches(input: 4.0, lower: 5.0, higher: 5.0)
-        cgFloatConversionMatches(input: 5.0, lower: 5.0, higher: 5.0)
-        cgFloatConversionMatches(input: 6.0, lower: 5.0, higher: 10.0)
-        cgFloatConversionMatches(input: 7.0, lower: 5.0, higher: 10.0)
-        cgFloatConversionMatches(input: 8.0, lower: 10.0, higher: 10.0)
-        cgFloatConversionMatches(input: 9.0, lower: 10.0, higher: 10.0)
-        cgFloatConversionMatches(input: 10.0, lower: 10.0, higher: 10.0)
-        cgFloatConversionMatches(input: 11.0, lower: 10.0, higher: 20.0)
-        cgFloatConversionMatches(input: 101.0, lower: 100, higher: 200)
-        cgFloatConversionMatches(input: 111.0, lower: 100, higher: 200)
-        cgFloatConversionMatches(input: 1010.0, lower: 1000, higher: 2000)
-        cgFloatConversionMatches(input: 1110.0, lower: 1000, higher: 2000)
+        assertCalculatedNiceValue(input: 0.0, expectedLowerValue: 0.0, expectedHigherValue: 0.0)
+        assertCalculatedNiceValue(input: 1.0, expectedLowerValue: 1.0, expectedHigherValue: 1.0)
+        assertCalculatedNiceValue(input: 1.1, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.2, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.3, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.4, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.5, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.6, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.7, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.8, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 1.9, expectedLowerValue: 1.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 2.0, expectedLowerValue: 2.0, expectedHigherValue: 2.0)
+        assertCalculatedNiceValue(input: 3.0, expectedLowerValue: 2.0, expectedHigherValue: 5.0)
+        assertCalculatedNiceValue(input: 4.0, expectedLowerValue: 5.0, expectedHigherValue: 5.0)
+        assertCalculatedNiceValue(input: 5.0, expectedLowerValue: 5.0, expectedHigherValue: 5.0)
+        assertCalculatedNiceValue(input: 6.0, expectedLowerValue: 5.0, expectedHigherValue: 10.0)
+        assertCalculatedNiceValue(input: 7.0, expectedLowerValue: 5.0, expectedHigherValue: 10.0)
+        assertCalculatedNiceValue(input: 8.0, expectedLowerValue: 10.0, expectedHigherValue: 10.0)
+        assertCalculatedNiceValue(input: 9.0, expectedLowerValue: 10.0, expectedHigherValue: 10.0)
+        assertCalculatedNiceValue(input: 10.0, expectedLowerValue: 10.0, expectedHigherValue: 10.0)
+        assertCalculatedNiceValue(input: 11.0, expectedLowerValue: 10.0, expectedHigherValue: 20.0)
+        assertCalculatedNiceValue(input: 101.0, expectedLowerValue: 100, expectedHigherValue: 200)
+        assertCalculatedNiceValue(input: 111.0, expectedLowerValue: 100, expectedHigherValue: 200)
+        assertCalculatedNiceValue(input: 1010.0, expectedLowerValue: 1000, expectedHigherValue: 2000)
+        assertCalculatedNiceValue(input: 1110.0, expectedLowerValue: 1000, expectedHigherValue: 2000)
     }
 
     func testNiceValuesOfIntSequence() throws {
-        intConversionMatches(input: 0, lower: 0, higher: 0)
-        intConversionMatches(input: 1, lower: 1, higher: 1)
-        intConversionMatches(input: 2, lower: 2, higher: 2)
-        intConversionMatches(input: 3, lower: 2, higher: 5)
-        intConversionMatches(input: 4, lower: 5, higher: 5)
-        intConversionMatches(input: 5, lower: 5, higher: 5)
-        intConversionMatches(input: 6, lower: 5, higher: 10)
-        intConversionMatches(input: 7, lower: 5, higher: 10)
-        intConversionMatches(input: 8, lower: 10, higher: 10)
-        intConversionMatches(input: 9, lower: 10, higher: 10)
-        intConversionMatches(input: 10, lower: 10, higher: 10)
-        intConversionMatches(input: 11, lower: 10, higher: 20)
-        intConversionMatches(input: 101, lower: 100, higher: 200)
-        intConversionMatches(input: 111, lower: 100, higher: 200)
-        intConversionMatches(input: 1010, lower: 1000, higher: 2000)
-        intConversionMatches(input: 1110, lower: 1000, higher: 2000)
+        assertCalculatedNiceValue(input: 0, expectedLowerValue: 0, expectedHigherValue: 0)
+        assertCalculatedNiceValue(input: 1, expectedLowerValue: 1, expectedHigherValue: 1)
+        assertCalculatedNiceValue(input: 2, expectedLowerValue: 2, expectedHigherValue: 2)
+        assertCalculatedNiceValue(input: 3, expectedLowerValue: 2, expectedHigherValue: 5)
+        assertCalculatedNiceValue(input: 4, expectedLowerValue: 5, expectedHigherValue: 5)
+        assertCalculatedNiceValue(input: 5, expectedLowerValue: 5, expectedHigherValue: 5)
+        assertCalculatedNiceValue(input: 6, expectedLowerValue: 5, expectedHigherValue: 10)
+        assertCalculatedNiceValue(input: 7, expectedLowerValue: 5, expectedHigherValue: 10)
+        assertCalculatedNiceValue(input: 8, expectedLowerValue: 10, expectedHigherValue: 10)
+        assertCalculatedNiceValue(input: 9, expectedLowerValue: 10, expectedHigherValue: 10)
+        assertCalculatedNiceValue(input: 10, expectedLowerValue: 10, expectedHigherValue: 10)
+        assertCalculatedNiceValue(input: 11, expectedLowerValue: 10, expectedHigherValue: 20)
+        assertCalculatedNiceValue(input: 101, expectedLowerValue: 100, expectedHigherValue: 200)
+        assertCalculatedNiceValue(input: 111, expectedLowerValue: 100, expectedHigherValue: 200)
+        assertCalculatedNiceValue(input: 1010, expectedLowerValue: 1000, expectedHigherValue: 2000)
+        assertCalculatedNiceValue(input: 1110, expectedLowerValue: 1000, expectedHigherValue: 2000)
     }
 
     func testNiceMinimumForRangeDoubleNegativeValues() throws {
@@ -242,17 +290,6 @@ class NiceValueTests: XCTestCase {
         XCTAssertEqual(Int.niceMinimumValueForRange(min: 3, max: 100), 0)
     }
 
-    func verifyRangeAttributes(min: Double, max: Double, steps: Int, calcSteps: Int, stepsize: Double, niceMax: Double) throws {
-        XCTAssertTrue(steps > 1)
-        let calculatedRange = Double.rangeOfNiceValues(min: min, max: max, ofSize: steps)
-        XCTAssertTrue(calculatedRange.first! <= min)
-        XCTAssertTrue(calculatedRange.last! >= max)
-        XCTAssertEqual(calculatedRange.count, calcSteps)
-        let derivedStepSize = calculatedRange[1] - calculatedRange[0]
-        XCTAssertEqual(derivedStepSize, stepsize, accuracy: 0.01)
-        XCTAssertEqual(calculatedRange.last!, niceMax, accuracy: 0.01)
-    }
-
     func testDoubleNiceRange() throws {
         let min = 0.1
         let max = 12.56
@@ -292,17 +329,6 @@ class NiceValueTests: XCTestCase {
         try verifyRangeAttributes(min: min, max: max, steps: 170, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
         try verifyRangeAttributes(min: min, max: max, steps: 180, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
         try verifyRangeAttributes(min: min, max: max, steps: 190, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
-    }
-
-    func verifyFloatRangeAttributes(min: Float, max: Float, steps: Int, calcSteps: Int, stepsize: Float, niceMax: Float) throws {
-        XCTAssertTrue(steps > 1)
-        let calculatedRange = Float.rangeOfNiceValues(min: min, max: max, ofSize: steps)
-        XCTAssertTrue(calculatedRange.first! <= min)
-        XCTAssertTrue(calculatedRange.last! >= max)
-        XCTAssertEqual(calculatedRange.count, calcSteps)
-        let derivedStepSize = calculatedRange[1] - calculatedRange[0]
-        XCTAssertEqual(derivedStepSize, stepsize, accuracy: 0.01)
-        XCTAssertEqual(calculatedRange.last!, niceMax, accuracy: 0.01)
     }
 
     func testFloatNiceRange() throws {
@@ -346,17 +372,6 @@ class NiceValueTests: XCTestCase {
         try verifyFloatRangeAttributes(min: min, max: max, steps: 190, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
     }
 
-    func verifyCGFloatRangeAttributes(min: CGFloat, max: CGFloat, steps: Int, calcSteps: Int, stepsize: CGFloat, niceMax: CGFloat) throws {
-        XCTAssertTrue(steps > 1)
-        let calculatedRange = CGFloat.rangeOfNiceValues(min: min, max: max, ofSize: steps)
-        XCTAssertTrue(calculatedRange.first! <= min)
-        XCTAssertTrue(calculatedRange.last! >= max)
-        XCTAssertEqual(calculatedRange.count, calcSteps)
-        let derivedStepSize = calculatedRange[1] - calculatedRange[0]
-        XCTAssertEqual(derivedStepSize, stepsize, accuracy: 0.01)
-        XCTAssertEqual(calculatedRange.last!, niceMax, accuracy: 0.01)
-    }
-
     func testCGFloatNiceRange() throws {
         let min: CGFloat = 0.1
         let max: CGFloat = 12.56
@@ -396,17 +411,6 @@ class NiceValueTests: XCTestCase {
         try verifyCGFloatRangeAttributes(min: min, max: max, steps: 170, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
         try verifyCGFloatRangeAttributes(min: min, max: max, steps: 180, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
         try verifyCGFloatRangeAttributes(min: min, max: max, steps: 190, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
-    }
-
-    func verifyIntRangeAttributes(min: Int, max: Int, steps: Int, calcSteps: Int, stepsize: Int, niceMax: Int) throws {
-        XCTAssertTrue(steps > 1)
-        let calculatedRange = Int.rangeOfNiceValues(min: min, max: max, ofSize: steps)
-        XCTAssertTrue(calculatedRange.first! <= min)
-        XCTAssertTrue(calculatedRange.last! >= max)
-        XCTAssertEqual(calculatedRange.count, calcSteps)
-        let derivedStepSize = calculatedRange[1] - calculatedRange[0]
-        XCTAssertEqual(derivedStepSize, stepsize)
-        XCTAssertEqual(calculatedRange.last!, niceMax)
     }
 
     func testIntNiceRange() throws {
