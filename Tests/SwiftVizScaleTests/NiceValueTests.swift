@@ -9,7 +9,6 @@ import Foundation
 import XCTest
 
 class NiceValueTests: XCTestCase {
-    
     // MARK: assertion helpers
 
     func assertCalculatedNiceValue(input: Double, expectedLowerValue: Double, expectedHigherValue: Double, file: StaticString = #file, line: UInt = #line) {
@@ -72,6 +71,7 @@ class NiceValueTests: XCTestCase {
         XCTAssertEqual(derivedStepSize, stepsize, accuracy: 0.01, file: file, line: line)
         XCTAssertEqual(calculatedRange.last!, niceMax, accuracy: 0.01, file: file, line: line)
     }
+
     func verifyIntRangeAttributes(min: Int, max: Int, steps: Int, calcSteps: Int, stepsize: Int, niceMax: Int, file: StaticString = #file, line: UInt = #line) throws {
         XCTAssertTrue(steps > 1, file: file, line: line)
         let calculatedRange = Int.rangeOfNiceValues(min: min, max: max, ofSize: steps)
@@ -84,7 +84,7 @@ class NiceValueTests: XCTestCase {
     }
 
     // MARK: tests
-    
+
     func testNegativeNiceValues() throws {
         assertCalculatedNiceValue(input: 0.0, expectedLowerValue: 0.0, expectedHigherValue: 0.0)
         assertCalculatedNiceValue(input: -1.0, expectedLowerValue: -1.0, expectedHigherValue: -1.0)
