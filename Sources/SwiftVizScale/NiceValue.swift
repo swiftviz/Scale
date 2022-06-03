@@ -147,6 +147,7 @@ extension Double: NiceValue {
 
     public static func niceMinimumValueForRange(min: NumberType, max: NumberType) -> NumberType {
         let minValueBelowZero = min < 0
+
         let nice = niceVersion(for: min, trendTowardsZero: !minValueBelowZero)
         if minValueBelowZero {
             // if the minimum value is below 0, then
@@ -155,7 +156,11 @@ extension Double: NiceValue {
         }
         // Otherwise, compare nice against the upper range, and if it's smaller
         // than 10% of the extent of the range, round it down to 0.
-        return nice <= (max / 10) ? nice : 0
+        let tenPercentOfRange = (max - min) / 10
+        if nice < (max - tenPercentOfRange), !minValueBelowZero {
+            return 0
+        }
+        return nice
     }
 
     public static func niceMinStepMax(min: NumberType, max: NumberType, ofSize size: Int) -> (NumberType, NumberType, NumberType) {
