@@ -119,9 +119,9 @@ extension Double: NiceValue {
             if fraction < 1 {
                 niceFraction = 10
                 exponent = max(0, exponent - 1.0)
-            } else if fraction <= 2 {
+            } else if fraction < 2 {
                 niceFraction = 1
-            } else if fraction <= 5 {
+            } else if fraction < 5 {
                 niceFraction = 2
             } else {
                 niceFraction = 5

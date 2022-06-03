@@ -117,7 +117,7 @@ class LogScaleTests: XCTestCase {
 
         let defaultTicks = myScale.ticks(rangeLower: testRange.lowerBound, rangeHigher: testRange.upperBound)
         // print(defaultTicks.map { $0.value })
-        XCTAssertEqual(defaultTicks.count, 5)
+        XCTAssertEqual(defaultTicks.count, 4)
         for tick in defaultTicks {
             print(tick)
             // every tick should be from within the scale's range (output area)
@@ -261,7 +261,7 @@ class LogScaleTests: XCTestCase {
         XCTAssertEqual(myScale.transformType, .none)
 
         let updated = myScale.domain([1.0, 15.0, 5.0])
-        XCTAssertEqual(updated.domainLower, 1)
+        XCTAssertEqual(updated.domainLower, Double.leastNonzeroMagnitude)
         XCTAssertEqual(updated.domainHigher, 20.0)
     }
 
@@ -320,13 +320,15 @@ class LogScaleTests: XCTestCase {
     func testReversedTicks() {
         let reversed = LogScale<Double, CGFloat>(from: 1, to: 100, reversed: true, rangeLower: 1, rangeHigher: 100)
         let reverseTicks = reversed.ticks(rangeLower: 0, rangeHigher: 20)
-        XCTAssertEqual(reverseTicks.count, 6)
-        assertTick(reverseTicks[0], "1.0", 6.9897)
-        assertTick(reverseTicks[1], "20.0", 6.9897)
-        assertTick(reverseTicks[2], "41.0", 3.9794)
-        assertTick(reverseTicks[3], "61.0", 2.2185)
-        assertTick(reverseTicks[4], "80.0", 0.9691)
-//        assertTick(reverseTicks[5], "100.0", 0)
+        XCTAssertEqual(reverseTicks.count, 5)
+        print(reverseTicks)
+//        [SwiftVizScale.Tick<CoreGraphics.CGFloat>(rangeLocation: 6.9897000433601875, label: "20.0"), SwiftVizScale.Tick<CoreGraphics.CGFloat>(rangeLocation: 3.979400086720377, label: "40.0"), SwiftVizScale.Tick<CoreGraphics.CGFloat>(rangeLocation: 2.2184874961635637, label: "60.0"), SwiftVizScale.Tick<CoreGraphics.CGFloat>(rangeLocation: 0.9691001300805646, label: "80.0"), SwiftVizScale.Tick<CoreGraphics.CGFloat>(rangeLocation: 0.0, label: "100.0")]
+
+        assertTick(reverseTicks[0], "20.0", 6.9897)
+        assertTick(reverseTicks[1], "40.0", 3.9794)
+        assertTick(reverseTicks[2], "60.0", 2.2185)
+        assertTick(reverseTicks[3], "80.0", 0.9691)
+        assertTick(reverseTicks[4], "100.0", 0.0)
 
         let forward = reversed.range(reversed: false, lower: 0, higher: 20) // identity
         let forwardTicks = forward.ticks(rangeLower: 0, rangeHigher: 20)
