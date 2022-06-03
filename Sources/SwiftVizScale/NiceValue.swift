@@ -116,7 +116,7 @@ extension Double: NiceValue {
         if trendTowardsZero {
             // we're trying to round to the nearest 'nice' number - interval of 1, 2, 5, or 10
             // that's CLOSER TO ZERO than the provided number.
-            if fraction <= 1 {
+            if fraction < 1 {
                 niceFraction = 10
                 exponent = max(0, exponent - 1.0)
             } else if fraction <= 2 {
