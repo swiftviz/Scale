@@ -4,7 +4,7 @@
 
 ### Generating Nice Numbers
 
-- ``SwiftVizScale/NiceValue/niceVersion(for:min:)``
+- ``SwiftVizScale/NiceValue/niceVersion(for:trendTowardsZero:)``
 - ``SwiftVizScale/NiceValue/NumberType``
 
 ### Creating Ranges of Nice Numbers
