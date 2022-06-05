@@ -32,6 +32,17 @@ public enum ContinuousScaleType: Equatable {
             return "radial"
         }
     }
+    
+    var transform: (Double) -> Double {
+        switch self {
+        case .log:
+            return { Double.log($0) }
+        case .linear, .radial:
+            return { $0 }
+        case let .power(exp):
+            return { Double.pow($0, exp) }
+        }
+    }
 }
 
 // fatal error function (with line numbers to debug) that shows when you've accidentally
