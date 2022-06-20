@@ -92,13 +92,14 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init(_ range: ClosedRange<InputType>,
+                type scaleType: ContinuousScaleType = .linear,
                 transform: DomainDataTransform = .none,
                 desiredTicks: Int = 10,
                 reversed: Bool = false,
                 rangeLower: OutputType? = nil,
                 rangeHigher: OutputType? = nil)
     {
-        self.init(from: range.lowerBound, to: range.upperBound, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+        self.init(from: range.lowerBound, to: range.upperBound, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
     /// Creates a new power scale for the domain of `0` to the value you provide.
@@ -110,6 +111,7 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init(_ single: InputType,
+                type scaleType: ContinuousScaleType = .linear,
                 transform: DomainDataTransform = .none,
                 desiredTicks: Int = 10,
                 reversed: Bool = false,
@@ -117,9 +119,9 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
                 rangeHigher: OutputType? = nil)
     {
         if single > 0 {
-            self.init(from: 0, to: single, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+            self.init(from: 0, to: single, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
         } else {
-            self.init(from: single, to: 0, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+            self.init(from: single, to: 0, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
         }
     }
 
