@@ -22,19 +22,19 @@ class ScaleFactoryTests: XCTestCase {
         XCTAssertEqual(scale3.domainLower, 0)
     }
 
-    func testFloatScaleFactoryMethods() throws {
-        let low: Float = 6
-        let high: Float = 124
-
-        let scale1 = LinearScale<Float, CGFloat>(from: low, to: high)
-        let scale2 = LinearScale<Float, CGFloat>(low ... high)
-        let scale3 = LinearScale<Float, CGFloat>(high)
-
-        XCTAssertEqual(scale1.domainLower, scale2.domainLower)
-        XCTAssertEqual(scale1.domainExtent, scale2.domainExtent)
-        XCTAssertEqual(scale1.domainLower, 6)
-        XCTAssertEqual(scale3.domainLower, 0)
-    }
+//    func testFloatScaleFactoryMethods() throws {
+//        let low: Float = 6
+//        let high: Float = 124
+//
+//        let scale1 = LinearScale<Float, CGFloat>(from: low, to: high)
+//        let scale2 = LinearScale<Float, CGFloat>(low ... high)
+//        let scale3 = LinearScale<Float, CGFloat>(high)
+//
+//        XCTAssertEqual(scale1.domainLower, scale2.domainLower)
+//        XCTAssertEqual(scale1.domainExtent, scale2.domainExtent)
+//        XCTAssertEqual(scale1.domainLower, 6)
+//        XCTAssertEqual(scale3.domainLower, 0)
+//    }
 
     func testDoubleScaleFactoryMethods() throws {
         let low: Double = 6

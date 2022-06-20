@@ -394,17 +394,17 @@ public extension ContinuousScaleProtocol where InputType == Int {
     }
 }
 
-public extension ContinuousScaleProtocol where InputType == Float {
+public extension ContinuousScaleProtocol where InputType: BinaryFloatingPoint {
     /// Returns an array of the locations within the output range to locate ticks for the scale.
     /// - Parameters:
     ///   - rangeLower: the lower value for the range into which to position the ticks.
     ///   - rangeHigher: The higher value for the range into which to position the ticks.
     ///   - formatter: An optional formatter to convert the domain values into strings.
     func ticks(rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
-        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        let tickValues = Double.rangeOfNiceValues(min: domainLower.toDouble(), max: domainHigher.toDouble(), ofSize: desiredTicks)
         // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
         return tickValues.compactMap { tickValue in
-            if let tickRangeLocation = scale(tickValue, reversed: self.reversed, from: rangeLower, to: rangeHigher) {
+            if let tickRangeLocation = scale(Self.InputType.fromDouble(tickValue), reversed: self.reversed, from: rangeLower, to: rangeHigher) {
                 return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
             }
             return nil
@@ -418,10 +418,10 @@ public extension ContinuousScaleProtocol where InputType == Float {
     ///   - rangeHigher: The higher value for the range into which to position the ticks.
     ///   - formatter: An optional formatter to convert the domain values into strings.
     func ticks(reversed: Bool, rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
-        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        let tickValues = Double.rangeOfNiceValues(min: domainLower.toDouble(), max: domainHigher.toDouble(), ofSize: desiredTicks)
         // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
         return tickValues.compactMap { tickValue in
-            if let tickRangeLocation = scale(tickValue, reversed: reversed, from: rangeLower, to: rangeHigher) {
+            if let tickRangeLocation = scale(Self.InputType.fromDouble(tickValue), reversed: reversed, from: rangeLower, to: rangeHigher) {
                 return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
             }
             return nil
@@ -431,7 +431,7 @@ public extension ContinuousScaleProtocol where InputType == Float {
     /// Returns an array of the strings that make up the ticks for the scale.
     /// - Parameter formatter: An optional formatter to convert the domain values into strings.
     func defaultTickValues(formatter: Formatter? = nil) -> [String] {
-        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        let tickValues = Double.rangeOfNiceValues(min: domainLower.toDouble(), max: domainHigher.toDouble(), ofSize: desiredTicks)
         return tickValues.map { intValue in
             if let formatter = formatter {
                 return formatter.string(for: intValue) ?? ""
@@ -442,107 +442,108 @@ public extension ContinuousScaleProtocol where InputType == Float {
     }
 }
 
-#if canImport(CoreGraphics)
-    public extension ContinuousScaleProtocol where InputType == CGFloat {
-        /// Returns an array of the locations within the output range to locate ticks for the scale.
-        /// - Parameters:
-        ///   - rangeLower: the lower value for the range into which to position the ticks.
-        ///   - rangeHigher: The higher value for the range into which to position the ticks.
-        ///   - formatter: An optional formatter to convert the domain values into strings.
-        func ticks(rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
-            let ticksFromValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
-            // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
-            return ticksFromValues.compactMap { tickValue in
-                if let tickRangeLocation = scale(tickValue, reversed: self.reversed, from: rangeLower, to: rangeHigher) {
-                    return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
-                }
-                return nil
-            }
-        }
-
-        /// Returns an array of the locations within the output range to locate ticks for the scale.
-        /// - Parameters:
-        ///   - rangeLower: the lower value for the range into which to position the ticks.
-        ///   - rangeHigher: The higher value for the range into which to position the ticks.
-        ///   - formatter: An optional formatter to convert the domain values into strings.
-        ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
-        func ticks(reversed _: Bool, rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
-            let ticksFromValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
-            // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
-            return ticksFromValues.compactMap { tickValue in
-                if let tickRangeLocation = scale(tickValue, reversed: self.reversed, from: rangeLower, to: rangeHigher) {
-                    return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
-                }
-                return nil
-            }
-        }
-
-        /// Returns an array of the strings that make up the ticks for the scale.
-        /// - Parameter formatter: An optional formatter to convert the domain values into strings.
-        func defaultTickValues(formatter: Formatter? = nil) -> [String] {
-            let ticksFromValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
-            return ticksFromValues.map { intValue in
-                if let formatter = formatter {
-                    return formatter.string(for: intValue) ?? ""
-                } else {
-                    return String("\(intValue)")
-                }
-            }
-        }
-    }
-#endif
-
-public extension ContinuousScaleProtocol where InputType == Double {
-    /// Returns an array of the locations within the output range to locate ticks for the scale.
-    /// - Parameters:
-    ///   - rangeLower: the lower value for the range into which to position the ticks.
-    ///   - rangeHigher: The higher value for the range into which to position the ticks.
-    ///   - formatter: An optional formatter to convert the domain values into strings.
-    func ticks(rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
-        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
-        // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
-        return tickValues.compactMap { tickValue in
-            if let tickRangeLocation = scale(tickValue, reversed: self.reversed, from: rangeLower, to: rangeHigher),
-               tickRangeLocation <= rangeHigher
-            {
-                return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
-            }
-            return nil
-        }
-    }
-
-    /// Returns an array of the locations within the output range to locate ticks for the scale.
-    /// - Parameters:
-    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
-    ///   - rangeLower: the lower value for the range into which to position the ticks.
-    ///   - rangeHigher: The higher value for the range into which to position the ticks.
-    ///   - formatter: An optional formatter to convert the domain values into strings.
-    func ticks(reversed: Bool, rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
-        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
-        // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
-        return tickValues.compactMap { tickValue in
-            if let tickRangeLocation = scale(tickValue, reversed: reversed, from: rangeLower, to: rangeHigher),
-               tickRangeLocation <= rangeHigher
-            {
-                return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
-            }
-            return nil
-        }
-    }
-
-    /// Returns an array of the strings that make up the ticks for the scale.
-    /// - Parameter formatter: An optional formatter to convert the domain values into strings.
-    func defaultTickValues(formatter: Formatter? = nil) -> [String] {
-        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
-        return tickValues.map { intValue in
-            if let formatter = formatter {
-                return formatter.string(for: intValue) ?? ""
-            } else {
-                return String("\(intValue)")
-            }
-        }
-    }
-}
+//
+// #if canImport(CoreGraphics)
+//    public extension ContinuousScaleProtocol where InputType == CGFloat {
+//        /// Returns an array of the locations within the output range to locate ticks for the scale.
+//        /// - Parameters:
+//        ///   - rangeLower: the lower value for the range into which to position the ticks.
+//        ///   - rangeHigher: The higher value for the range into which to position the ticks.
+//        ///   - formatter: An optional formatter to convert the domain values into strings.
+//        func ticks(rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
+//            let ticksFromValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+//            // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
+//            return ticksFromValues.compactMap { tickValue in
+//                if let tickRangeLocation = scale(tickValue, reversed: self.reversed, from: rangeLower, to: rangeHigher) {
+//                    return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
+//                }
+//                return nil
+//            }
+//        }
+//
+//        /// Returns an array of the locations within the output range to locate ticks for the scale.
+//        /// - Parameters:
+//        ///   - rangeLower: the lower value for the range into which to position the ticks.
+//        ///   - rangeHigher: The higher value for the range into which to position the ticks.
+//        ///   - formatter: An optional formatter to convert the domain values into strings.
+//        ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+//        func ticks(reversed _: Bool, rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
+//            let ticksFromValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+//            // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
+//            return ticksFromValues.compactMap { tickValue in
+//                if let tickRangeLocation = scale(tickValue, reversed: self.reversed, from: rangeLower, to: rangeHigher) {
+//                    return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
+//                }
+//                return nil
+//            }
+//        }
+//
+//        /// Returns an array of the strings that make up the ticks for the scale.
+//        /// - Parameter formatter: An optional formatter to convert the domain values into strings.
+//        func defaultTickValues(formatter: Formatter? = nil) -> [String] {
+//            let ticksFromValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+//            return ticksFromValues.map { intValue in
+//                if let formatter = formatter {
+//                    return formatter.string(for: intValue) ?? ""
+//                } else {
+//                    return String("\(intValue)")
+//                }
+//            }
+//        }
+//    }
+// #endif
+//
+// public extension ContinuousScaleProtocol where InputType == Double {
+//    /// Returns an array of the locations within the output range to locate ticks for the scale.
+//    /// - Parameters:
+//    ///   - rangeLower: the lower value for the range into which to position the ticks.
+//    ///   - rangeHigher: The higher value for the range into which to position the ticks.
+//    ///   - formatter: An optional formatter to convert the domain values into strings.
+//    func ticks(rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
+//        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+//        // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
+//        return tickValues.compactMap { tickValue in
+//            if let tickRangeLocation = scale(tickValue, reversed: self.reversed, from: rangeLower, to: rangeHigher),
+//               tickRangeLocation <= rangeHigher
+//            {
+//                return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
+//            }
+//            return nil
+//        }
+//    }
+//
+//    /// Returns an array of the locations within the output range to locate ticks for the scale.
+//    /// - Parameters:
+//    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+//    ///   - rangeLower: the lower value for the range into which to position the ticks.
+//    ///   - rangeHigher: The higher value for the range into which to position the ticks.
+//    ///   - formatter: An optional formatter to convert the domain values into strings.
+//    func ticks(reversed: Bool, rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
+//        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+//        // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
+//        return tickValues.compactMap { tickValue in
+//            if let tickRangeLocation = scale(tickValue, reversed: reversed, from: rangeLower, to: rangeHigher),
+//               tickRangeLocation <= rangeHigher
+//            {
+//                return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
+//            }
+//            return nil
+//        }
+//    }
+//
+//    /// Returns an array of the strings that make up the ticks for the scale.
+//    /// - Parameter formatter: An optional formatter to convert the domain values into strings.
+//    func defaultTickValues(formatter: Formatter? = nil) -> [String] {
+//        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+//        return tickValues.map { intValue in
+//            if let formatter = formatter {
+//                return formatter.string(for: intValue) ?? ""
+//            } else {
+//                return String("\(intValue)")
+//            }
+//        }
+//    }
+// }
 
 // MARK: - general functions used in various implementations of Scale
 

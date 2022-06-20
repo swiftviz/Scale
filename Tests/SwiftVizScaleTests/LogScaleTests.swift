@@ -81,7 +81,7 @@ class LogScaleTests: XCTestCase {
         let testRange = Float(0.0) ... Float(100.0)
 
         let defaultTicks = myScale.ticks(rangeLower: testRange.lowerBound, rangeHigher: testRange.upperBound)
-        // print(defaultTicks.map { $0.value })
+//         print(defaultTicks.map { $0.value })
         XCTAssertEqual(defaultTicks.count, 5)
         for tick in defaultTicks {
             // every tick should be from within the scale's range (output area)
