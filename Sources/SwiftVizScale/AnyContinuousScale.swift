@@ -17,7 +17,7 @@ internal func _abstract(
 }
 
 // the abstract base class, implementing the base methods
-internal class _AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
+internal class _AnyContinuousScale<InputType: ConvertibleWithDouble,
     OutputType: ConvertibleWithDouble>: ContinuousScaleProtocol
 {
     // ContinuousScaleProtocol protocol conformance
@@ -227,8 +227,7 @@ internal final class _ContinuousScale<WrappedContinuousScale: ContinuousScalePro
 /// A type-erased continuous scale.
 ///
 /// Encapsulates a scale that conforms to the``ContinuousScale`` protocol, identified by ``ContinuousScaleType``.
-public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
-    OutputType: ConvertibleWithDouble>: ContinuousScaleProtocol
+public struct AnyContinuousScale<InputType: ConvertibleWithDouble, OutputType: ConvertibleWithDouble>: ContinuousScaleProtocol
 {
     private let _box: _AnyContinuousScale<InputType, OutputType>
 
@@ -444,24 +443,24 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
 
     // Transformation types (converting between enclosed scale types)
 
-    public func scaleType(_ type: ContinuousScaleType) -> Self {
-        switch type {
-        case .linear:
-            return AnyContinuousScale(
-                LinearScale(from: _box.domainLower, to: _box.domainHigher, transform: _box.transformType, desiredTicks: _box.desiredTicks, rangeLower: _box.rangeLower, rangeHigher: _box.rangeHigher)
-            )
-        case .log:
-            return AnyContinuousScale(
-                LogScale(from: _box.domainLower, to: _box.domainHigher, transform: _box.transformType, desiredTicks: _box.desiredTicks, rangeLower: _box.rangeLower, rangeHigher: _box.rangeHigher)
-            )
-        case let .power(exponent):
-            return AnyContinuousScale(
-                PowerScale(from: _box.domainLower, to: _box.domainHigher, exponent: exponent, transform: _box.transformType, desiredTicks: _box.desiredTicks, rangeLower: _box.rangeLower, rangeHigher: _box.rangeHigher)
-            )
-        case .radial:
-            return AnyContinuousScale(
-                RadialScale(from: _box.domainLower, to: _box.domainHigher, transform: _box.transformType, desiredTicks: _box.desiredTicks, rangeLower: _box.rangeLower, rangeHigher: _box.rangeHigher)
-            )
-        }
-    }
+//    public func scaleType(_ type: ContinuousScaleType) -> Self {
+//        switch type {
+//        case .linear:
+//            return AnyContinuousScale(
+//                LinearScale(from: _box.domainLower, to: _box.domainHigher, transform: _box.transformType, desiredTicks: _box.desiredTicks, rangeLower: _box.rangeLower, rangeHigher: _box.rangeHigher)
+//            )
+//        case .log:
+//            return AnyContinuousScale(
+//                LogScale(from: _box.domainLower, to: _box.domainHigher, transform: _box.transformType, desiredTicks: _box.desiredTicks, rangeLower: _box.rangeLower, rangeHigher: _box.rangeHigher)
+//            )
+//        case let .power(exponent):
+//            return AnyContinuousScale(
+//                PowerScale(from: _box.domainLower, to: _box.domainHigher, exponent: exponent, transform: _box.transformType, desiredTicks: _box.desiredTicks, rangeLower: _box.rangeLower, rangeHigher: _box.rangeHigher)
+//            )
+//        case .radial:
+//            return AnyContinuousScale(
+//                RadialScale(from: _box.domainLower, to: _box.domainHigher, transform: _box.transformType, desiredTicks: _box.desiredTicks, rangeLower: _box.rangeLower, rangeHigher: _box.rangeHigher)
+//            )
+//        }
+//    }
 }

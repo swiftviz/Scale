@@ -49,16 +49,16 @@ class AnyContinuousScaleTests: XCTestCase {
         XCTAssertEqual(25, cScale.invert(50, from: 0, to: 100))
     }
 
-    func testAnyContinuousScaleConversions() throws {
-        let linearScale = AnyContinuousScale(LinearScale<Double, CGFloat>(1.0 ... 50.0))
-        XCTAssertEqual(linearScale.scaleType, .linear)
-
-        let log = linearScale.scaleType(.log)
-        XCTAssertEqual(log.scaleType, .log)
-
-        let power = linearScale.scaleType(.power(2))
-        XCTAssertEqual(power.scaleType, .power(2))
-    }
+//    func testAnyContinuousScaleConversions() throws {
+//        let linearScale = AnyContinuousScale(LinearScale<Double, CGFloat>(1.0 ... 50.0))
+//        XCTAssertEqual(linearScale.scaleType, .linear)
+//
+//        let log = linearScale.scaleType(.log)
+//        XCTAssertEqual(log.scaleType, .log)
+//
+//        let power = linearScale.scaleType(.power(2))
+//        XCTAssertEqual(power.scaleType, .power(2))
+//    }
 
     func testArrayDomainModifier() {
         let myScale = AnyContinuousScale(LinearScale<Double, CGFloat>(1.0 ... 50.0))
