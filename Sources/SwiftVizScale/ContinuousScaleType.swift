@@ -21,8 +21,8 @@ public enum ContinuousScaleType: Equatable {
             return "linear"
         case .log:
             return "log"
-        case .power:
-            return "power"
+        case let .power(exp):
+            return "power(\(exp))"
         case .radial:
             return "radial"
         }

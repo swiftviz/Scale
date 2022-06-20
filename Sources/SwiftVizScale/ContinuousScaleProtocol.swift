@@ -59,8 +59,6 @@ public protocol ContinuousScaleProtocol: Scale, CustomStringConvertible where In
     var domainLower: InputType { get }
     /// The upper bound of the input domain.
     var domainHigher: InputType { get }
-    /// The distance or length between the upper and lower bounds of the input domain.
-    var domainExtent: InputType { get }
 
     /// The lower bound of the input domain.
     var rangeLower: OutputType? { get }

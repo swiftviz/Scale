@@ -11,8 +11,6 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble & NiceValue, Outp
     public let domainLower: InputType
     /// The upper bound of the input domain.
     public let domainHigher: InputType
-    /// The distance or length between the upper and lower bounds of the input domain.
-    public let domainExtent: InputType
 
     /// The lower bound of the input domain.
     public let rangeLower: OutputType?
@@ -51,13 +49,22 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble & NiceValue, Outp
                 rangeLower: OutputType? = nil,
                 rangeHigher: OutputType? = nil)
     {
+        self.scaleType = scaleType
+        if case .log = scaleType {
+            if lower == 0 {
+                domainLower = InputType.fromDouble(Double.leastNonzeroMagnitude)
+            } else {
+                domainLower = lower
+            }
+            precondition(lower >= 0, "attempting to set lower domain value at 0 or below on a log scale: \(lower)")
+            precondition(higher >= 0, "attempting to set higher domain value at 0 or below on a log scale: \(higher)")
+        } else {
+            domainLower = lower
+        }
         precondition(lower <= higher, "attempting to set an inverted domain: \(lower) to \(higher)")
         precondition(lower != higher, "attempting to set an empty domain: \(lower) to \(higher)")
-        self.scaleType = scaleType
         transformType = transform
-        domainLower = lower
         domainHigher = higher
-        domainExtent = higher - lower
         self.desiredTicks = desiredTicks
         if let rangeLower = rangeLower, let rangeHigher = rangeHigher {
             if rangeLower > rangeHigher {
@@ -239,6 +246,9 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble & NiceValue, Outp
         } else {
             valueMappedToRange = interpolate(normalizedDomainValue, lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
         }
+        if case .radial = scaleType {
+            return OutputType.fromDouble(valueMappedToRange * valueMappedToRange)
+        }
         return OutputType.fromDouble(valueMappedToRange)
     }
 
@@ -276,7 +286,12 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble & NiceValue, Outp
             return nil
         }
         // inverts the scale, taking a value in the output range and returning the relevant value from the input domain
-        let normalizedRangeValue = normalize(rangeValue.toDouble(), lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
+        let normalizedRangeValue: Double
+        if case .radial = scaleType {
+            normalizedRangeValue = normalize(sqrt(rangeValue.toDouble()), lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
+        } else {
+            normalizedRangeValue = normalize(rangeValue.toDouble(), lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
+        }
         let transformedDomainLower = scaleType.transform(domainLower.toDouble())
         let transformedDomainHigher = scaleType.transform(domainHigher.toDouble())
 
