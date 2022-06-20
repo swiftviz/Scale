@@ -1,7 +1,6 @@
 //
 //  ContinuousScaleType.swift
-//  
-
+//
 
 /// The type of continuous scale.
 ///

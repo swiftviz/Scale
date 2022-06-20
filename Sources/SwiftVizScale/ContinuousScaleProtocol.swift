@@ -45,7 +45,7 @@ public enum DomainDataTransform {
 }
 
 /// A type that maps continuous values from an input _domain_ to an output _range_.
-public protocol ContinuousScale: Scale, CustomStringConvertible where InputType: ConvertibleWithDouble & NiceValue, RangeType == OutputType {
+public protocol ContinuousScaleProtocol: Scale, CustomStringConvertible where InputType: ConvertibleWithDouble & NiceValue, RangeType == OutputType {
     /// A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///
     /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
@@ -136,7 +136,7 @@ public protocol ContinuousScale: Scale, CustomStringConvertible where InputType:
 
     /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
     ///
-    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
     ///
     /// - Parameter domainValue: The value to be scaled.
     /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
@@ -147,7 +147,7 @@ public protocol ContinuousScale: Scale, CustomStringConvertible where InputType:
 
     /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
     ///
-    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
     ///
     /// - Parameter domainValue: The value to be scaled.
     /// - Parameter from: The lower bounding value of the range to transform to.
@@ -157,7 +157,7 @@ public protocol ContinuousScale: Scale, CustomStringConvertible where InputType:
 
     /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
     ///
-    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
     ///
     /// - Parameter inputValue: The value to be scaled.
     /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
@@ -165,8 +165,8 @@ public protocol ContinuousScale: Scale, CustomStringConvertible where InputType:
 
     /// Converts back from the output _range_ to a value within the input _domain_.
     ///
-    /// The inverse of ``ContinuousScale/scale(_:from:to:)``.
-    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    /// The inverse of ``ContinuousScaleProtocol/scale(_:from:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
     ///
     /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
     /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
@@ -177,8 +177,8 @@ public protocol ContinuousScale: Scale, CustomStringConvertible where InputType:
 
     /// Converts back from the output _range_ to a value within the input _domain_.
     ///
-    /// The inverse of ``ContinuousScale/scale(_:from:to:)``.
-    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    /// The inverse of ``ContinuousScaleProtocol/scale(_:from:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
     ///
     /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
     /// - Parameter from: The lower bounding value of the range to transform from.
@@ -188,23 +188,23 @@ public protocol ContinuousScale: Scale, CustomStringConvertible where InputType:
 
     /// Converts back from the output _range_ to a value within the input _domain_.
     ///
-    /// The inverse of ``ContinuousScale/scale(_:from:to:)``.
-    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    /// The inverse of ``ContinuousScaleProtocol/scale(_:from:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
     ///
     /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
     /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
     func invert(_ rangeValue: OutputType) -> InputType?
 }
 
-public extension ContinuousScale {
+public extension ContinuousScaleProtocol {
     var description: String {
         "\(scaleType)(xform:\(transformType))[\(domainLower):\(domainHigher)]->[\(String(describing: rangeLower)):\(String(describing: rangeHigher))]"
     }
 
     /// Processes a value against the scale, potentially constraining or dropping the value.
     ///
-    /// The value is transformed based on the scale's ``ContinuousScale/transformType`` setting.
-    /// | ``ContinuousScale/transformType`` | transform effect |
+    /// The value is transformed based on the scale's ``ContinuousScaleProtocol/transformType`` setting.
+    /// | ``ContinuousScaleProtocol/transformType`` | transform effect |
     /// | ------------------------ | --------- |
     /// | ``DomainDataTransform/none`` | The method doesn't adjusted or drop the value. |
     /// | ``DomainDataTransform/drop`` | Values outside the scale's domain are dropped. |
@@ -242,7 +242,7 @@ public extension ContinuousScale {
     /// Converts a value comparing it to the input domain, transforming the value, and mapping it into values between `0` and to the upper bound you provide.
     ///
     /// This method is a convenience method that sets the lower value of the range is `0`.
-    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
     ///
     /// - Parameter domainValue: The value to be scaled.
     /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
@@ -255,7 +255,7 @@ public extension ContinuousScale {
     /// Converts a value comparing it to the input domain, transforming the value, and mapping it into values between `0` and to the upper bound you provide.
     ///
     /// This method is a convenience method that sets the lower value of the range is `0`.
-    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
     ///
     /// - Parameter domainValue: The value to be scaled.
     /// - Parameter to: The higher bounding value of the range to transform from.
@@ -267,8 +267,8 @@ public extension ContinuousScale {
     /// Converts a value comparing it to the upper value of a range, mapping it to the input domain, and inverting scale's transform.
     ///
     /// This method is a convenience method that sets the lower value of the range is `0`.
-    /// The inverse of ``ContinuousScale/scale(_:to:)``.
-    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    /// The inverse of ``ContinuousScaleProtocol/scale(_:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
     ///
     /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
     /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
@@ -281,8 +281,8 @@ public extension ContinuousScale {
     /// Converts a value comparing it to the upper value of a range, mapping it to the input domain, and inverting scale's transform.
     ///
     /// This method is a convenience method that sets the lower value of the range is `0`.
-    /// The inverse of ``ContinuousScale/scale(_:to:)``.
-    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    /// The inverse of ``ContinuousScaleProtocol/scale(_:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
     ///
     /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
     /// - Parameter to: The higher bounding value of the range to transform from.
@@ -313,7 +313,7 @@ public extension ContinuousScale {
     /// Used for manually specifying a series of ticks that you want to have displayed.
     ///
     /// Values presented for display that are *not* within the domain of the scale are dropped.
-    /// Values that scale outside of the range you provide are adjusted based on the setting of ``ContinuousScale/transformType``.
+    /// Values that scale outside of the range you provide are adjusted based on the setting of ``ContinuousScaleProtocol/transformType``.
     /// - Parameter inputValues: an array of values of the Scale's InputType
     /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
     /// - Parameter lower: The lower value of the range the scale maps to.
@@ -348,7 +348,7 @@ public extension ContinuousScale {
     }
 }
 
-public extension ContinuousScale where InputType == Int {
+public extension ContinuousScaleProtocol where InputType == Int {
     /// Returns an array of the locations within the output range to locate ticks for the scale.
     /// - Parameters:
     ///   - rangeLower: the lower value for the range into which to position the ticks.
@@ -396,7 +396,7 @@ public extension ContinuousScale where InputType == Int {
     }
 }
 
-public extension ContinuousScale where InputType == Float {
+public extension ContinuousScaleProtocol where InputType == Float {
     /// Returns an array of the locations within the output range to locate ticks for the scale.
     /// - Parameters:
     ///   - rangeLower: the lower value for the range into which to position the ticks.
@@ -445,7 +445,7 @@ public extension ContinuousScale where InputType == Float {
 }
 
 #if canImport(CoreGraphics)
-    public extension ContinuousScale where InputType == CGFloat {
+    public extension ContinuousScaleProtocol where InputType == CGFloat {
         /// Returns an array of the locations within the output range to locate ticks for the scale.
         /// - Parameters:
         ///   - rangeLower: the lower value for the range into which to position the ticks.
@@ -494,7 +494,7 @@ public extension ContinuousScale where InputType == Float {
     }
 #endif
 
-public extension ContinuousScale where InputType == Double {
+public extension ContinuousScaleProtocol where InputType == Double {
     /// Returns an array of the locations within the output range to locate ticks for the scale.
     /// - Parameters:
     ///   - rangeLower: the lower value for the range into which to position the ticks.

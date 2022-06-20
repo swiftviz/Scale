@@ -9,7 +9,7 @@ import Foundation
 import Numerics
 
 /// A linear scale for transforming and mapping continuous input values within a domain to output values you provide.
-public struct RadialScale<InputType: ConvertibleWithDouble & NiceValue, OutputType: ConvertibleWithDouble>: ContinuousScale {
+public struct RadialScale<InputType: ConvertibleWithDouble & NiceValue, OutputType: ConvertibleWithDouble>: ContinuousScaleProtocol {
     /// The lower bound of the input domain.
     public let domainLower: InputType
     /// The upper bound of the input domain.
