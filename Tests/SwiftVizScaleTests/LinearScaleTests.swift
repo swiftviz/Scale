@@ -46,21 +46,21 @@ final class LinearScaleTests: XCTestCase {
         XCTAssertEqual(updated.domainHigher, 10.0)
     }
 
-    func testFloatLinearScaleTicks() {
-        let myScale = LinearScale<Float, Float>(from: 0.0, to: 1.0)
-        XCTAssertEqual(myScale.transformType, .none)
-
-        let testRange = Float(0) ... Float(100.0)
-        let defaultTicks = myScale.ticks(rangeLower: testRange.lowerBound, rangeHigher: testRange.upperBound)
-        XCTAssertEqual(defaultTicks.count, 6)
-        for tick in defaultTicks {
-            print(tick)
-            // every tick should be from within the scale's domain (input) range
-            XCTAssertTrue(testRange.contains(tick.rangeLocation))
-            XCTAssertTrue(tick.value! >= Double(myScale.domainLower))
-            XCTAssertTrue(tick.value! <= Double(myScale.domainHigher))
-        }
-    }
+//    func testFloatLinearScaleTicks() {
+//        let myScale = LinearScale<Float, Float>(from: 0.0, to: 1.0)
+//        XCTAssertEqual(myScale.transformType, .none)
+//
+//        let testRange = Float(0) ... Float(100.0)
+//        let defaultTicks = myScale.ticks(rangeLower: testRange.lowerBound, rangeHigher: testRange.upperBound)
+//        XCTAssertEqual(defaultTicks.count, 6)
+//        for tick in defaultTicks {
+//            print(tick)
+//            // every tick should be from within the scale's domain (input) range
+//            XCTAssertTrue(testRange.contains(tick.rangeLocation))
+//            XCTAssertTrue(tick.value! >= Double(myScale.domainLower))
+//            XCTAssertTrue(tick.value! <= Double(myScale.domainHigher))
+//        }
+//    }
 
     func testDoubleLinearScaleManualTicks() {
         let myScale = LinearScale<Double, Float>(from: 0.0, to: 10.0)
@@ -78,21 +78,21 @@ final class LinearScaleTests: XCTestCase {
         }
     }
 
-    func testFloatLinearScaleManualTicks() {
-        let myScale = LinearScale<Float, Float>(from: 0.0, to: 10.0)
-        XCTAssertEqual(myScale.transformType, .none)
-
-        let testRange = Float(0) ... Float(100.0)
-        let manualTicks = myScale.ticksFromValues([0.1, 0.5], from: testRange.lowerBound, to: testRange.upperBound)
-
-        XCTAssertEqual(manualTicks.count, 2)
-        for tick in manualTicks {
-            // every tick should be from within the scale's domain (input) range
-            XCTAssertTrue(testRange.contains(tick.rangeLocation))
-            XCTAssertTrue(tick.value! >= Double(myScale.domainLower))
-            XCTAssertTrue(tick.value! <= Double(myScale.domainHigher))
-        }
-    }
+//    func testFloatLinearScaleManualTicks() {
+//        let myScale = LinearScale<Float, Float>(from: 0.0, to: 10.0)
+//        XCTAssertEqual(myScale.transformType, .none)
+//
+//        let testRange = Float(0) ... Float(100.0)
+//        let manualTicks = myScale.ticksFromValues([0.1, 0.5], from: testRange.lowerBound, to: testRange.upperBound)
+//
+//        XCTAssertEqual(manualTicks.count, 2)
+//        for tick in manualTicks {
+//            // every tick should be from within the scale's domain (input) range
+//            XCTAssertTrue(testRange.contains(tick.rangeLocation))
+//            XCTAssertTrue(tick.value! >= Double(myScale.domainLower))
+//            XCTAssertTrue(tick.value! <= Double(myScale.domainHigher))
+//        }
+//    }
 
     func testDoubleLinearScaleClamp() {
         let scale = LinearScale<Double, Float>(from: 0.0, to: 10.0)
