@@ -131,7 +131,7 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
     ///   - higher: The upper bound for the scale's domain.
     /// - Returns: A copy of the scale with the domain values you provide.
     public func domain(lower: InputType, higher: InputType) -> Self {
-        Self(from: lower, to: higher, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+        Self(from: lower, to: higher, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
     /// Returns a new scale with the domain set to the values you provide.
@@ -139,7 +139,7 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
     ///   - range: The range to apply as the scale's domain
     /// - Returns: A copy of the scale with the domain values you provide.
     public func domain(_ range: ClosedRange<InputType>) -> Self {
-        Self(from: range.lowerBound, to: range.upperBound, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+        Self(from: range.lowerBound, to: range.upperBound, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
     /// Returns a new scale with the domain set to span the values you provide.
@@ -183,7 +183,7 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
     ///   - higher: The upper bound for the scale's range.
     /// - Returns: A copy of the scale with the range values you provide.
     public func range(reversed: Bool, lower: OutputType, higher: OutputType) -> Self {
-        Self(from: domainLower, to: domainHigher, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: lower, rangeHigher: higher)
+        Self(from: domainLower, to: domainHigher, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: lower, rangeHigher: higher)
     }
 
     /// Returns a new scale with the range set to the values you provide.
@@ -192,7 +192,7 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
     ///   - higher: The upper bound for the scale's range.
     /// - Returns: A copy of the scale with the range values you provide.
     public func range(lower: OutputType, higher: OutputType) -> Self {
-        Self(from: domainLower, to: domainHigher, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: lower, rangeHigher: higher)
+        Self(from: domainLower, to: domainHigher, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: lower, rangeHigher: higher)
     }
 
     /// Returns a new scale with the range set to the values you provide.
@@ -201,7 +201,7 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
     ///   - range: The range to apply as the scale's range.
     /// - Returns: A copy of the scale with the range values you provide.
     public func range(reversed: Bool, _ range: ClosedRange<OutputType>) -> Self {
-        Self(from: domainLower, to: domainHigher, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: range.lowerBound, rangeHigher: range.upperBound)
+        Self(from: domainLower, to: domainHigher, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: range.lowerBound, rangeHigher: range.upperBound)
     }
 
     /// Returns a new scale with the range set to the values you provide.
@@ -209,7 +209,7 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
     ///   - range: The range to apply as the scale's range.
     /// - Returns: A copy of the scale with the range values you provide.
     public func range(_ range: ClosedRange<OutputType>) -> Self {
-        Self(from: domainLower, to: domainHigher, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: range.lowerBound, rangeHigher: range.upperBound)
+        Self(from: domainLower, to: domainHigher, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: range.lowerBound, rangeHigher: range.upperBound)
     }
 
     /// Returns a new scale with the transform set to the value you provide.
@@ -217,11 +217,12 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     /// - Returns: A copy of the scale with the transform setting you provide.
     public func transform(_ transform: DomainDataTransform) -> Self {
-        Self(from: domainLower, to: domainHigher, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+        Self(from: domainLower, to: domainHigher, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
-    public func scaleType(_ type: ContinuousScaleType) -> Self {
-        Self(from: domainLower, to: domainHigher, type: type, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+    public func scaleType(_ scaleType: ContinuousScaleType) -> Self {
+        let x = Self(from: domainLower, to: domainHigher, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+        return x
     }
 
     // MARK: - scale functions
