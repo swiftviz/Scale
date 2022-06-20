@@ -62,21 +62,21 @@ class RadialScaleTests: XCTestCase {
         XCTAssertEqual(2, myScale.invert(4, from: 0, to: 10))
     }
 
-    func testRadialScaleTicks() {
-        let myScale = RadialScale<Double, CGFloat>(from: 0.0, to: 10.0)
-        XCTAssertEqual(myScale.transformType, .none)
-
-        let testRange = CGFloat(0) ... CGFloat(100.0)
-        let defaultTicks = myScale.ticks(rangeLower: testRange.lowerBound, rangeHigher: testRange.upperBound)
-        XCTAssertEqual(defaultTicks.count, 1)
-        for tick in defaultTicks {
-            print(tick)
-            // every tick should be from within the scale's domain (input) range
-            XCTAssertTrue(testRange.contains(tick.rangeLocation))
-            XCTAssertTrue(tick.value! >= myScale.domainLower)
-            XCTAssertTrue(tick.value! <= myScale.domainHigher)
-        }
-    }
+//    func testRadialScaleTicks() {
+//        let myScale = RadialScale<Double, CGFloat>(from: 0.0, to: 10.0)
+//        XCTAssertEqual(myScale.transformType, .none)
+//
+//        let testRange = CGFloat(0) ... CGFloat(100.0)
+//        let defaultTicks = myScale.ticks(rangeLower: testRange.lowerBound, rangeHigher: testRange.upperBound)
+//        XCTAssertEqual(defaultTicks.count, 1)
+//        for tick in defaultTicks {
+//            print(tick)
+//            // every tick should be from within the scale's domain (input) range
+//            XCTAssertTrue(testRange.contains(tick.rangeLocation))
+//            XCTAssertTrue(tick.value! >= myScale.domainLower)
+//            XCTAssertTrue(tick.value! <= myScale.domainHigher)
+//        }
+//    }
 
     func testRadialScaleDomainModifier() {
         let scale = RadialScale<Double, Float>()
@@ -188,21 +188,21 @@ class RadialScaleTests: XCTestCase {
         XCTAssertEqual(forward.invert(100)!, 10.0, accuracy: 0.001)
     }
 
-    func testReversedTicks() {
-        // Yes, ticks on a Radial Scale are kind of stupid. Radial Scale
-        // is primarily intended for scaling for the area of a size element so that it visually
-        // increases proportionally with the value.
-        let reversed = RadialScale<Double, CGFloat>(from: 0, to: 100, reversed: true, rangeLower: 0, rangeHigher: 100)
-        let reverseTicks = reversed.ticks(rangeLower: 0, rangeHigher: 20)
-        XCTAssertEqual(reverseTicks.count, 2)
-        assertTick(reverseTicks[0], "80.0", 16)
-        assertTick(reverseTicks[1], "100.0", 0)
-
-        let forward = reversed.range(reversed: false, lower: 0, higher: 20) // identity
-        let forwardTicks = forward.ticks(rangeLower: 0, rangeHigher: 20)
-        print(forwardTicks)
-        XCTAssertEqual(forwardTicks.count, 2)
-        assertTick(forwardTicks[0], "0.0", 0)
-        assertTick(forwardTicks[1], "20.0", 16)
-    }
+//    func testReversedTicks() {
+//        // Yes, ticks on a Radial Scale are kind of stupid. Radial Scale
+//        // is primarily intended for scaling for the area of a size element so that it visually
+//        // increases proportionally with the value.
+//        let reversed = RadialScale<Double, CGFloat>(from: 0, to: 100, reversed: true, rangeLower: 0, rangeHigher: 100)
+//        let reverseTicks = reversed.ticks(rangeLower: 0, rangeHigher: 20)
+//        XCTAssertEqual(reverseTicks.count, 2)
+//        assertTick(reverseTicks[0], "80.0", 16)
+//        assertTick(reverseTicks[1], "100.0", 0)
+//
+//        let forward = reversed.range(reversed: false, lower: 0, higher: 20) // identity
+//        let forwardTicks = forward.ticks(rangeLower: 0, rangeHigher: 20)
+//        print(forwardTicks)
+//        XCTAssertEqual(forwardTicks.count, 2)
+//        assertTick(forwardTicks[0], "0.0", 0)
+//        assertTick(forwardTicks[1], "20.0", 16)
+//    }
 }
