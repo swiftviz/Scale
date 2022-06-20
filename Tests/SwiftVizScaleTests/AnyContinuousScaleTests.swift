@@ -12,7 +12,6 @@ class AnyContinuousScaleTests: XCTestCase {
     func testAnyContinuousScaleInitializer() throws {
         let linear = LinearScale<Double, CGFloat>(0.0 ... 50.0)
         let cScale = AnyContinuousScale(linear)
-        XCTAssertEqual(cScale.domainExtent, 50)
         XCTAssertEqual(cScale.domainLower, 0, accuracy: 0.001)
         XCTAssertEqual(cScale.domainHigher, 50, accuracy: 0.001)
         XCTAssertEqual(cScale.transformType, .none)
@@ -22,7 +21,6 @@ class AnyContinuousScaleTests: XCTestCase {
     func testAnyContinuousScaleModifiers() throws {
         let linear = LinearScale<Double, CGFloat>(0.0 ... 50.0)
         let cScale = AnyContinuousScale(linear)
-        XCTAssertEqual(cScale.domainExtent, 50)
         XCTAssertEqual(cScale.domainLower, 0, accuracy: 0.001)
         XCTAssertEqual(cScale.domainHigher, 50, accuracy: 0.001)
 
@@ -30,7 +28,6 @@ class AnyContinuousScaleTests: XCTestCase {
         XCTAssertNil(cScale.invert(25))
 
         var updated = cScale.domain(lower: -50, higher: 50)
-        XCTAssertEqual(updated.domainExtent, 100)
         XCTAssertEqual(updated.domainLower, -50, accuracy: 0.001)
         XCTAssertEqual(updated.domainHigher, 50, accuracy: 0.001)
 
@@ -45,7 +42,6 @@ class AnyContinuousScaleTests: XCTestCase {
     func testAnyContinuousScaleMethods() throws {
         let linear = LinearScale<Double, CGFloat>(0.0 ... 50.0)
         let cScale = AnyContinuousScale(linear)
-        XCTAssertEqual(cScale.domainExtent, 50)
         XCTAssertEqual(cScale.domainLower, 0, accuracy: 0.001)
         XCTAssertEqual(cScale.domainHigher, 50, accuracy: 0.001)
 

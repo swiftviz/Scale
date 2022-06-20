@@ -38,10 +38,6 @@ internal class _AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
         _abstract()
     }
 
-    var domainExtent: InputType {
-        _abstract()
-    }
-
     var desiredTicks: Int {
         _abstract()
     }
@@ -151,10 +147,6 @@ internal final class _ContinuousScale<WrappedContinuousScale: ContinuousScalePro
 
     override public var domainHigher: InputType {
         _base.domainHigher
-    }
-
-    override public var domainExtent: InputType {
-        _base.domainExtent
     }
 
     override public var reversed: Bool {
@@ -269,11 +261,6 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
     /// The upper bound of the input domain.
     public var domainHigher: InputType {
         _box.domainHigher
-    }
-
-    /// The distance or length between the upper and lower bounds of the input domain.
-    public var domainExtent: InputType {
-        _box.domainExtent
     }
 
     /// The number of requested tick marks for the scale.
