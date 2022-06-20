@@ -45,7 +45,7 @@ public enum DomainDataTransform {
 }
 
 /// A type that maps continuous values from an input _domain_ to an output _range_.
-public protocol ContinuousScaleProtocol: Scale, CustomStringConvertible where InputType: ConvertibleWithDouble & NiceValue, RangeType == OutputType {
+public protocol ContinuousScaleProtocol: Scale, CustomStringConvertible where InputType: ConvertibleWithDouble, RangeType == OutputType {
     /// A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///
     /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
