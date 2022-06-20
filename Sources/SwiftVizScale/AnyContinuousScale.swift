@@ -18,9 +18,9 @@ internal func _abstract(
 
 // the abstract base class, implementing the base methods
 internal class _AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
-    OutputType: ConvertibleWithDouble>: ContinuousScale
+    OutputType: ConvertibleWithDouble>: ContinuousScaleProtocol
 {
-    // ContinuousScale protocol conformance
+    // ContinuousScaleProtocol protocol conformance
 
     var scaleType: ContinuousScaleType {
         _abstract()
@@ -124,14 +124,14 @@ internal class _AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
 // the "Any" class to hold a reference to a specific type, and forward invocations from
 // the (partially) type-erased class into the concrete, specific class that it holds
 // (which is how we achieve type-erasure)
-internal final class _ContinuousScale<WrappedContinuousScale: ContinuousScale>: _AnyContinuousScale<WrappedContinuousScale.InputType, WrappedContinuousScale.OutputType> {
+internal final class _ContinuousScale<WrappedContinuousScale: ContinuousScaleProtocol>: _AnyContinuousScale<WrappedContinuousScale.InputType, WrappedContinuousScale.OutputType> {
     private var _base: WrappedContinuousScale
 
     init(_ base: WrappedContinuousScale) {
         _base = base
     }
 
-    // ContinuousScale Overrides
+    // ContinuousScaleProtocol Overrides
 
     override public var scaleType: ContinuousScaleType {
         _base.scaleType
@@ -236,17 +236,17 @@ internal final class _ContinuousScale<WrappedContinuousScale: ContinuousScale>: 
 ///
 /// Encapsulates a scale that conforms to the``ContinuousScale`` protocol, identified by ``ContinuousScaleType``.
 public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
-    OutputType: ConvertibleWithDouble>: ContinuousScale
+    OutputType: ConvertibleWithDouble>: ContinuousScaleProtocol
 {
     private let _box: _AnyContinuousScale<InputType, OutputType>
 
     /// Creates a type-erased continuous scale.
     /// - Parameter base: The continuous scale to wrap.
-    public init<WrappedScale: ContinuousScale>(_ base: WrappedScale) where WrappedScale.InputType == InputType, WrappedScale.OutputType == OutputType {
+    public init<WrappedScale: ContinuousScaleProtocol>(_ base: WrappedScale) where WrappedScale.InputType == InputType, WrappedScale.OutputType == OutputType {
         _box = _ContinuousScale(base)
     }
 
-    // ContinuousScale Conformance
+    // ContinuousScaleProtocol Conformance
 
     /// A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///
@@ -382,8 +382,8 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
 
     /// Converts back from the output _range_ to a value within the input _domain_.
     ///
-    /// The inverse of ``ContinuousScale/scale(_:from:to:)``.
-    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    /// The inverse of ``ContinuousScaleProtocol/scale(_:from:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
     ///
     /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
     /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
@@ -396,8 +396,8 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
 
     /// Converts back from the output _range_ to a value within the input _domain_.
     ///
-    /// The inverse of ``ContinuousScale/scale(_:from:to:)``.
-    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    /// The inverse of ``ContinuousScaleProtocol/scale(_:from:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
     ///
     /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
     /// - Parameter from: The lower bounding value of the range to transform from.
@@ -409,7 +409,7 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
 
     /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
     ///
-    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
     ///
     /// - Parameter domainValue: The value to be scaled.
     /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
@@ -422,7 +422,7 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
 
     /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
     ///
-    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
     ///
     /// - Parameter domainValue: The value to be scaled.
     /// - Parameter from: The lower bounding value of the range to transform to.
@@ -436,8 +436,8 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
 
     /// Converts back from the output _range_ to a value within the input _domain_.
     ///
-    /// The inverse of ``ContinuousScale/scale(_:from:to:)``.
-    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    /// The inverse of ``ContinuousScaleProtocol/scale(_:from:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
     ///
     /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
     /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
@@ -447,7 +447,7 @@ public struct AnyContinuousScale<InputType: ConvertibleWithDouble & NiceValue,
 
     /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
     ///
-    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
     ///
     /// - Parameter inputValue: The value to be scaled.
     /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.

@@ -9,7 +9,7 @@ import Foundation
 import Numerics
 
 /// A power scale created with a continuous input domain that provides methods to convert values within that domain to an output range.
-public struct PowerScale<InputType: ConvertibleWithDouble & NiceValue, OutputType: ConvertibleWithDouble>: ContinuousScale {
+public struct PowerScale<InputType: ConvertibleWithDouble & NiceValue, OutputType: ConvertibleWithDouble>: ContinuousScaleProtocol {
     /// The lower bound of the input domain.
     public let domainLower: InputType
     /// The upper bound of the input domain.
