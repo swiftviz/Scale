@@ -6,26 +6,26 @@ echo "git rebase -i origin/main docs"
 set -e  # exit on a non-zero return code from a command
 set -x  # print a trace of commands as they execute
 
-rm -rf .build
-mkdir -p .build/symbol-graphs
-
-$(xcrun --find swift) build --target SwiftVizScale \
-    -Xswiftc -emit-symbol-graph \
-    -Xswiftc -emit-symbol-graph-dir -Xswiftc .build/symbol-graphs
-
-# Enables deterministic output
-# - useful when you're committing the results to host on github pages
-export DOCC_JSON_PRETTYPRINT=YES
-
-$(xcrun --find docc) convert Sources/SwiftVizScale/Documentation.docc \
-    --output-path ./docs \
-    --fallback-display-name SwiftVizScale \
-    --fallback-bundle-identifier com.github.swiftviz.SwiftVizScale \
-    --fallback-bundle-version 0.1.9 \
-    --additional-symbol-graph-dir .build/symbol-graphs \
-    --emit-digest \
-    --transform-for-static-hosting \
-    --hosting-base-path 'Scale'
+#rm -rf .build
+#mkdir -p .build/symbol-graphs
+#
+#$(xcrun --find swift) build --target SwiftVizScale \
+#    -Xswiftc -emit-symbol-graph \
+#    -Xswiftc -emit-symbol-graph-dir -Xswiftc .build/symbol-graphs
+#
+## Enables deterministic output
+## - useful when you're committing the results to host on github pages
+#export DOCC_JSON_PRETTYPRINT=YES
+#
+#$(xcrun --find docc) convert Sources/SwiftVizScale/Documentation.docc \
+#    --output-path ./docs \
+#    --fallback-display-name SwiftVizScale \
+#    --fallback-bundle-identifier com.github.swiftviz.SwiftVizScale \
+#    --fallback-bundle-version 0.1.9 \
+#    --additional-symbol-graph-dir .build/symbol-graphs \
+#    --emit-digest \
+#    --transform-for-static-hosting \
+#    --hosting-base-path 'Scale'
 
 # Add the following as a dependency into your Package.swift
 #
@@ -40,15 +40,16 @@ $(xcrun --find docc) convert Sources/SwiftVizScale/Documentation.docc \
 
 # Swift package plugin for hosted content:
 #
-# $(xcrun --find swift) package \
-#     --allow-writing-to-directory ./docs \
-#     generate-documentation \
-#     --target SwiftViz \
-#     --output-path ./docs \
-#     --emit-digest \
-#     --disable-indexing \
-#     --transform-for-static-hosting \
-#     --hosting-base-path 'SwiftViz'
+ $(xcrun --find swift) package \
+     --allow-writing-to-directory ./docs \
+     generate-documentation \
+     --fallback-bundle-identifier com.github.swiftviz.SwiftVizScale \
+     --target SwiftVizScale \
+     --output-path ./docs \
+     --emit-digest \
+     --disable-indexing \
+     --transform-for-static-hosting \
+     --hosting-base-path 'Scale'
 
 # Generate a list of all the identifiers to assist in DocC curation
 #
