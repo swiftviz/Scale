@@ -6,4 +6,3 @@ func doSomething() {
     let scaledValue = linear.scale(3, from: 0, to: 100)
     print(String(describing: scaledValue))
 }
-
