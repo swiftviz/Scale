@@ -16,7 +16,7 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 
 ### Continuous Scales
 
-
+- <doc:ExampleArticle>
 - ``SwiftVizScale/LinearScale``
 - ``SwiftVizScale/LogScale``
 - ``SwiftVizScale/PowerScale``
