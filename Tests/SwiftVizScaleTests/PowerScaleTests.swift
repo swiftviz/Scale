@@ -24,7 +24,7 @@ class PowerScaleTests: XCTestCase {
             XCTFail()
             return
         }
-        XCTAssertEqual(result, 20.0, accuracy: 0.001)
+        XCTAssertEqual(result, 4.0, accuracy: 0.001)
     }
 
     func testPowerScale_invert_identity() throws {
@@ -42,7 +42,7 @@ class PowerScaleTests: XCTestCase {
             XCTFail()
             return
         }
-        XCTAssertEqual(result, 1.6, accuracy: 0.001)
+        XCTAssertEqual(result, 4, accuracy: 0.001)
     }
 
     func testReversedRangeModifiers() {
