@@ -52,16 +52,16 @@
 ### Creating Ticks
 
 - ``SwiftVizScale/LogScale/defaultTickValues(formatter:)-1fo0x``
-- ``SwiftVizScale/LogScale/defaultTickValues(formatter:)-342dl``
+- ``SwiftVizScale/LogScale/defaultTickValues(formatter:)-3hn86``
 - ``SwiftVizScale/LogScale/defaultTickValues(formatter:)-3u2og``
 - ``SwiftVizScale/LogScale/defaultTickValues(formatter:)-6r6q8``
 - ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:formatter:)-1n1ty``
 - ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:formatter:)-33tb9``
+- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:formatter:)-349a1``
 - ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:formatter:)-5akta``
-- ``SwiftVizScale/LogScale/ticks(rangeLower:rangeHigher:formatter:)-73fh``
 - ``SwiftVizScale/LogScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-1wyve``
 - ``SwiftVizScale/LogScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-2eo1i``
-- ``SwiftVizScale/LogScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-3xdc2``
+- ``SwiftVizScale/LogScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-5i2bc``
 - ``SwiftVizScale/LogScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-7y98y``
 - ``SwiftVizScale/LogScale/ticksFromValues(_:reversed:from:to:formatter:)``
 - ``SwiftVizScale/LogScale/validTickValues(_:formatter:)``

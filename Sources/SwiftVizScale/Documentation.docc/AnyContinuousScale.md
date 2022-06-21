@@ -51,12 +51,12 @@
 
 ### Creating Ticks
 
+- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-28q8y``
 - ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-53t2s``
-- ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-63x34``
 - ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-6dhln``
 - ``SwiftVizScale/AnyContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-y0vn``
 - ``SwiftVizScale/AnyContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-4o3jw``
-- ``SwiftVizScale/AnyContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-5edrw``
+- ``SwiftVizScale/AnyContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-6ck57``
 - ``SwiftVizScale/AnyContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-88d9h``
 - ``SwiftVizScale/AnyContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-8fm66``
 - ``SwiftVizScale/AnyContinuousScale/ticksFromValues(_:reversed:from:to:formatter:)``

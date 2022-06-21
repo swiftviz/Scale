@@ -48,15 +48,15 @@
 ### Creating Ticks
 
 - ``SwiftVizScale/ContinuousScale/defaultTickValues(formatter:)-2cw9p``
-- ``SwiftVizScale/ContinuousScale/defaultTickValues(formatter:)-72had``
+- ``SwiftVizScale/ContinuousScale/defaultTickValues(formatter:)-4k4b7``
 - ``SwiftVizScale/ContinuousScale/defaultTickValues(formatter:)-7ax2e``
 - ``SwiftVizScale/ContinuousScale/defaultTickValues(formatter:)-7n4lo``
+- ``SwiftVizScale/ContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-1x7lo``
 - ``SwiftVizScale/ContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-2p14l``
-- ``SwiftVizScale/ContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-4ufzx``
 - ``SwiftVizScale/ContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-7cxnv``
 - ``SwiftVizScale/ContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-94baq``
 - ``SwiftVizScale/ContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-3qbki``
-- ``SwiftVizScale/ContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-4k3lb``
+- ``SwiftVizScale/ContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-3ze9p``
 - ``SwiftVizScale/ContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-67z4e``
 - ``SwiftVizScale/ContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-73yzr``
 - ``SwiftVizScale/ContinuousScale/ticksFromValues(_:reversed:from:to:formatter:)``

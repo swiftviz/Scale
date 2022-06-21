@@ -1,4 +1,4 @@
-# ExampleArticle
+# Example Article
 
 Summary of Example Article
 
@@ -10,4 +10,4 @@ Overview of the article. Interesting things about what problem is being solved.
 
 Here's some text laying things out for the process I'm showing you.
 
-
+@Snippet(path: "SwiftVizScale/Snippets/snippet1")

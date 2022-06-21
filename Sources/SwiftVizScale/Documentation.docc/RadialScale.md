@@ -52,13 +52,17 @@
 
 ### Creating Ticks
 
+- ``SwiftVizScale/RadialScale/defaultTickValues(formatter:)-27kcq``
+- ``SwiftVizScale/RadialScale/defaultTickValues(formatter:)-3l5q5``
+- ``SwiftVizScale/RadialScale/defaultTickValues(formatter:)-3ooif``
+- ``SwiftVizScale/RadialScale/defaultTickValues(formatter:)-8yu4o``
 - ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:formatter:)-2ibni``
-- ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:formatter:)-47aaq``
+- ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:formatter:)-4ualb``
 - ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:formatter:)-6tnha``
 - ``SwiftVizScale/RadialScale/ticks(rangeLower:rangeHigher:formatter:)-9dxor``
 - ``SwiftVizScale/RadialScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-24v5p``
 - ``SwiftVizScale/RadialScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-3de4p``
-- ``SwiftVizScale/RadialScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-6agip``
+- ``SwiftVizScale/RadialScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-8fsam``
 - ``SwiftVizScale/RadialScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-twb3``
 - ``SwiftVizScale/RadialScale/ticksFromValues(_:reversed:from:to:formatter:)``
 - ``SwiftVizScale/RadialScale/validTickValues(_:formatter:)``

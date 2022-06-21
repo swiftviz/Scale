@@ -55,14 +55,14 @@
 
 - ``SwiftVizScale/PowerScale/defaultTickValues(formatter:)-1fuya``
 - ``SwiftVizScale/PowerScale/defaultTickValues(formatter:)-4jsvb``
-- ``SwiftVizScale/PowerScale/defaultTickValues(formatter:)-8gx0``
+- ``SwiftVizScale/PowerScale/defaultTickValues(formatter:)-9423s``
 - ``SwiftVizScale/PowerScale/defaultTickValues(formatter:)-hts5``
+- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:formatter:)-2r9tk``
 - ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:formatter:)-4hv8y``
 - ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:formatter:)-5i72u``
-- ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:formatter:)-7qsoh``
 - ``SwiftVizScale/PowerScale/ticks(rangeLower:rangeHigher:formatter:)-elx9``
+- ``SwiftVizScale/PowerScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-2uxp4``
 - ``SwiftVizScale/PowerScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-2y6aq``
-- ``SwiftVizScale/PowerScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-5op8i``
 - ``SwiftVizScale/PowerScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-8y59b``
 - ``SwiftVizScale/PowerScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-9en4k``
 - ``SwiftVizScale/PowerScale/ticksFromValues(_:reversed:from:to:formatter:)``
