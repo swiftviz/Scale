@@ -42,7 +42,7 @@ public enum ContinuousScaleType: Equatable {
     var invertedTransform: (Double) -> Double {
         switch self {
         case .log:
-            return { Double.pow($0, 10) }
+            return { Double.pow(10, $0) }
         case .linear, .radial:
             return { $0 }
         case let .power(exp):
