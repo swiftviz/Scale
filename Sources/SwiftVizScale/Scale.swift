@@ -16,7 +16,7 @@ public protocol Scale {
 
     /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
     ///
-    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
     ///
     /// - Parameter inputValue: The value to be scaled.
     /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
@@ -24,8 +24,8 @@ public protocol Scale {
 
     /// Converts back from the output _range_ to a value within the input _domain_.
     ///
-    /// The inverse of ``ContinuousScaleProtocol/scale(_:from:to:)``.
-    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScaleProtocol/transformType``.
+    /// The inverse of ``ContinuousScale/scale(_:from:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``ContinuousScale/transformType``.
     ///
     /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
     /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
@@ -71,3 +71,20 @@ public protocol Scale {
 // values in the range. Quantile scales take an array of values for a
 // domain (not just a lower and upper limit) and maps range to be an
 // even distribution over the input domain
+
+// Inspired by D3's scale concept - maps input values (domain) to an output range (range)
+// - https://github.com/d3/d3-scale
+// - https://github.com/pshrmn/notes/blob/master/d3/scales.md
+
+// import { scaleTime } from 'd3-scale';
+// const time = scaleTime()
+//    .domain([new Date('1910-1-1'), (new Date('1920-1-1'))]);
+//
+/// / for UTC
+// const utc = d3.scaleUtc();
+// https://github.com/d3/d3-scale#scaleUtc
+// https://github.com/d3/d3-3.x-api-reference/blob/master/Time-Scales.md
+// Time Scale
+// - https://github.com/d3/d3-scale/blob/master/src/time.js
+// - D3 has a time format (https://github.com/d3/d3-time-format), but we can probably use
+//   IOS/MacOS NSTime, NSDate formatters and calendrical mechanisms

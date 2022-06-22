@@ -6,7 +6,6 @@
 
 - ``SwiftVizScale/ContinuousScale/domainLower``
 - ``SwiftVizScale/ContinuousScale/domainHigher``
-- ``SwiftVizScale/ContinuousScale/domainExtent``
 - ``SwiftVizScale/ContinuousScale/transformType``
 - ``SwiftVizScale/ContinuousScale/scaleType``
 - ``SwiftVizScale/ContinuousScale/desiredTicks``
@@ -17,7 +16,8 @@
 
 ### Updating Scales
 
-- ``SwiftVizScale/ContinuousScale/domain(_:)``
+- ``SwiftVizScale/ContinuousScale/domain(_:)-4f5d3``
+- ``SwiftVizScale/ContinuousScale/domain(_:)-6auzq``
 - ``SwiftVizScale/ContinuousScale/domain(_:nice:)``
 - ``SwiftVizScale/ContinuousScale/domain(lower:higher:)``
 - ``SwiftVizScale/ContinuousScale/range(_:)``
@@ -41,24 +41,13 @@
 
 ### Comparing Values
 
-- ``SwiftVizScale/ContinuousScale/domainContains(_:)-7ghgo``
-- ``SwiftVizScale/ContinuousScale/domainContains(_:)-8vn1a``
 - ``SwiftVizScale/ContinuousScale/transformAgainstDomain(_:)``
 
 ### Creating Ticks
 
-- ``SwiftVizScale/ContinuousScale/defaultTickValues(formatter:)-2cw9p``
-- ``SwiftVizScale/ContinuousScale/defaultTickValues(formatter:)-72had``
-- ``SwiftVizScale/ContinuousScale/defaultTickValues(formatter:)-7ax2e``
-- ``SwiftVizScale/ContinuousScale/defaultTickValues(formatter:)-7n4lo``
-- ``SwiftVizScale/ContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-2p14l``
-- ``SwiftVizScale/ContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-4ufzx``
-- ``SwiftVizScale/ContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-7cxnv``
-- ``SwiftVizScale/ContinuousScale/ticks(rangeLower:rangeHigher:formatter:)-94baq``
-- ``SwiftVizScale/ContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-3qbki``
-- ``SwiftVizScale/ContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-4k3lb``
-- ``SwiftVizScale/ContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-67z4e``
-- ``SwiftVizScale/ContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)-73yzr``
+- ``SwiftVizScale/ContinuousScale/defaultTickValues(formatter:)``
+- ``SwiftVizScale/ContinuousScale/ticks(rangeLower:rangeHigher:formatter:)``
+- ``SwiftVizScale/ContinuousScale/ticks(reversed:rangeLower:rangeHigher:formatter:)``
 - ``SwiftVizScale/ContinuousScale/ticksFromValues(_:reversed:from:to:formatter:)``
 - ``SwiftVizScale/ContinuousScale/validTickValues(_:formatter:)``
 

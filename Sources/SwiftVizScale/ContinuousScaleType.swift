@@ -3,8 +3,6 @@
 //
 
 /// The type of continuous scale.
-///
-/// Exponential scales (``PowerScale``) require an additional value for the exponent of the scale.
 public enum ContinuousScaleType: Equatable {
     /// A linear continuous scale.
     case linear

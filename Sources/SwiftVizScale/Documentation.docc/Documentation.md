@@ -17,11 +17,6 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 ### Continuous Scales
 
 - <doc:MakingAndUsingScales>
-- ``SwiftVizScale/LinearScale``
-- ``SwiftVizScale/LogScale``
-- ``SwiftVizScale/PowerScale``
-- ``SwiftVizScale/RadialScale``
-- ``SwiftVizScale/AnyContinuousScale``
 - ``SwiftVizScale/ContinuousScale``
 - ``SwiftVizScale/ContinuousScaleType``
 - ``SwiftVizScale/DomainDataTransform``
