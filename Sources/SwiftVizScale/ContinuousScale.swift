@@ -5,7 +5,7 @@
 import Foundation
 
 /// A continuous scale for transforming and mapping continuous input values within a domain to output values you provide.
-public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: ConvertibleWithDouble> {
+public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: ConvertibleWithDouble>: Scale {
     /// The lower bound of the input domain.
     public let domainLower: InputType
     /// The upper bound of the input domain.

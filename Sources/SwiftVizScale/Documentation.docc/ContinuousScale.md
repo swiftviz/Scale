@@ -7,12 +7,14 @@
 - ``SwiftVizScale/ContinuousScale/domainLower``
 - ``SwiftVizScale/ContinuousScale/domainHigher``
 - ``SwiftVizScale/ContinuousScale/transformType``
+- ``SwiftVizScale/DomainDataTransform``
 - ``SwiftVizScale/ContinuousScale/scaleType``
+- ``SwiftVizScale/ContinuousScaleType``
 - ``SwiftVizScale/ContinuousScale/desiredTicks``
 - ``SwiftVizScale/ContinuousScale/reversed``
 - ``SwiftVizScale/ContinuousScale/rangeHigher``
 - ``SwiftVizScale/ContinuousScale/rangeLower``
-- ``SwiftVizScale/DomainDataTransform``
+- ``SwiftVizScale/ContinuousScale/description``
 
 ### Updating Scales
 
@@ -20,6 +22,7 @@
 - ``SwiftVizScale/ContinuousScale/domain(_:)-6auzq``
 - ``SwiftVizScale/ContinuousScale/domain(_:nice:)``
 - ``SwiftVizScale/ContinuousScale/domain(lower:higher:)``
+- ``SwiftVizScale/ContinuousScale/scaleType(_:)``
 - ``SwiftVizScale/ContinuousScale/range(_:)``
 - ``SwiftVizScale/ContinuousScale/range(lower:higher:)``
 - ``SwiftVizScale/ContinuousScale/range(reversed:_:)``
