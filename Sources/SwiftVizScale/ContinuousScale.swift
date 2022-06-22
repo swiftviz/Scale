@@ -256,6 +256,7 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
         if case .radial = scaleType {
             return OutputType.fromDouble(valueMappedToRange * valueMappedToRange)
         }
+        if valueMappedToRange.isNaN { return nil }
         return OutputType.fromDouble(valueMappedToRange)
     }
 
