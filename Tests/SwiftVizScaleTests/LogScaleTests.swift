@@ -116,7 +116,7 @@ class LogScaleTests: XCTestCase {
         let testRange = Float(0.0) ... Float(100.0)
 
         let defaultTicks = myScale.ticks(rangeLower: testRange.lowerBound, rangeHigher: testRange.upperBound)
-        // print(defaultTicks.map { $0.value })
+        print(defaultTicks.map(\.value))
         XCTAssertEqual(defaultTicks.count, 4)
         for tick in defaultTicks {
             print(tick)
@@ -145,7 +145,7 @@ class LogScaleTests: XCTestCase {
     }
 
     func testLogScaleClamp() {
-        let scale = ContinuousScale<Double, Float>(from: 1.0, to: 100.0)
+        let scale = ContinuousScale<Double, Float>(from: 1.0, to: 100.0, type: .log)
         let clampedScale = ContinuousScale<Double, Float>(from: 1.0, to: 100.0, type: .log, transform: .clamp)
 
         XCTAssertEqual(scale.transformType, .none)

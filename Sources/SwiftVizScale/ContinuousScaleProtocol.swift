@@ -404,6 +404,10 @@ public extension ContinuousScaleProtocol where InputType: BinaryFloatingPoint {
         let tickValues = Double.rangeOfNiceValues(min: domainLower.toDouble(), max: domainHigher.toDouble(), ofSize: desiredTicks)
         // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
         return tickValues.compactMap { tickValue in
+            // we only want tick values that are within the domain that's been specified on the scale.
+            if tickValue > domainHigher.toDouble() {
+                return nil
+            }
             if let tickRangeLocation = scale(Self.InputType.fromDouble(tickValue), reversed: self.reversed, from: rangeLower, to: rangeHigher) {
                 return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
             }
