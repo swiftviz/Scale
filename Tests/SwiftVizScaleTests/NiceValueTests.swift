@@ -32,9 +32,11 @@ class NiceValueTests: XCTestCase {
         XCTAssertTrue(calculatedRange.first! <= min, file: file, line: line)
         XCTAssertTrue(calculatedRange.last! >= max, file: file, line: line)
         XCTAssertEqual(calculatedRange.count, calcSteps, file: file, line: line)
-        let derivedStepSize = calculatedRange[1] - calculatedRange[0]
-        XCTAssertEqual(derivedStepSize, stepsize, accuracy: 0.01, file: file, line: line)
-        XCTAssertEqual(calculatedRange.last!, niceMax, accuracy: 0.01, file: file, line: line)
+        if calculatedRange.count > 1 {
+            let derivedStepSize = calculatedRange[1] - calculatedRange[0]
+            XCTAssertEqual(derivedStepSize, stepsize, accuracy: 0.01, file: file, line: line)
+            XCTAssertEqual(calculatedRange.last!, niceMax, accuracy: 0.01, file: file, line: line)
+        }
     }
 
     func verifyIntRangeAttributes(min: Int, max: Int, steps: Int, calcSteps: Int, stepsize: Int, niceMax: Int, file: StaticString = #file, line: UInt = #line) throws {
@@ -49,6 +51,11 @@ class NiceValueTests: XCTestCase {
     }
 
     // MARK: tests
+
+    func testRangeOfNiceValues() throws {
+        let result = Double.rangeOfNiceValues(min: 1, max: 999, ofSize: 10)
+        print(result)
+    }
 
     func testNegativeNiceValues() throws {
         assertCalculatedNiceValue(input: 0.0, expectedLowerValue: 0.0, expectedHigherValue: 0.0)
