@@ -77,7 +77,7 @@ final class TickTests: XCTestCase {
 
     func testDefaultTicksInt() {
         let scale = ContinuousScale<Int, CGFloat>(from: 0, to: 10)
-        XCTAssertEqual(scale.ticks(rangeLower: 0, rangeHigher: 100).count, 10)
+        XCTAssertEqual(scale.ticks(rangeLower: 0, rangeHigher: 100).count, 6)
     }
 
     func testDefaultTicksDouble() {
