@@ -18,7 +18,7 @@ let package = Package(
             name: "SwiftVizScale",
             targets: ["SwiftVizScale"]
         ),
-        .library(name: "ScaleVisualTests", targets: ["SwiftVizScale", "VisualTests"])
+        .library(name: "ScaleVisualTests", targets: ["SwiftVizScale", "VisualTests"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-numerics", from: "1.0.0"),
