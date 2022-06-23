@@ -24,7 +24,7 @@ public protocol Interpolator {
 }
 
 import CoreGraphics
-enum MyColorSpaces {
+enum LCH {
     // https://en.wikipedia.org/wiki/HSL_and_HSV
     // https://en.wikipedia.org/wiki/HCL_color_space
     // https://en.wikipedia.org/wiki/CIELUV#Cylindrical_representation_(CIELCh) (aka HCL)
@@ -42,12 +42,45 @@ enum MyColorSpaces {
     // Color interpolation discussion:
     // https://www.alanzucconi.com/2016/01/06/colour-interpolation/
 
-    public static var rgb: CGColorSpace = .init(name: CGColorSpace.genericRGBLinear)!
-
-    public static var lab: CGColorSpace = .init(name: CGColorSpace.genericLab)!
+    public static var lab = CGColorSpace(name: CGColorSpace.genericLab)!
 
     static func color(from components: [CGFloat]) -> CGColor {
-        CGColor(colorSpace: Self.rgb, components: components)!
+        precondition(components.count == 4)
+        var newComponents = components
+        // from https://mina86.com/2021/srgb-lab-lchab-conversions/
+        // reversing the computation (LCHab -> La*b*)
+        // L = L
+        // a* = C * cos(Hab)
+        // b* = C * sin(Hab)
+        let c = newComponents[1]
+        let h = newComponents[2]
+        let a = c * sin(h)
+        let b = c * cos(h)
+        newComponents[1] = a
+        newComponents[2] = b
+        return CGColor(colorSpace: Self.lab, components: newComponents)!
+    }
+
+    static func components(from color: CGColor) -> [CGFloat] {
+        // from https://mina86.com/2021/srgb-lab-lchab-conversions/
+        // converting L,a*,b* to L,C,Hab (polar coordinate LAB color space)
+        // L (luminance) = L
+        // C (chroma)    = sqrt(a* ^ 2, b* ^ 2)
+        // Hab (hue)     = atan2(b*, a*)
+        let labColor = color.converted(to: lab, intent: .perceptual, options: nil)!
+        var components = labColor.components!
+        precondition(components.count == 4)
+        let a = components[1]
+        let b = components[2]
+        let c = sqrt(a * a + b * b)
+        let h = atan2(a, b)
+        components[1] = c
+        components[2] = h
+        return components
+    }
+
+    static func color(from components: [CGFloat], using colorspace: CGColorSpace) -> CGColor {
+        CGColor(colorSpace: colorspace, components: components)!
     }
 
     static func components(from color: CGColor, for colorspace: CGColorSpace) -> [CGFloat] {
@@ -56,27 +89,29 @@ enum MyColorSpaces {
         return components
     }
 
-    // from https://mina86.com/2021/srgb-lab-lchab-conversions/
-    // converting L,a*,b* to L,C,Hab (polar coordinate LAB color space)
-    // L = L
-    // C  (chroma) = sqrt(a* ^ 2, b* ^ 2)
-    // Hab (hue) = atan2(b*, a*)
-    //
-    // reversing the computation (LCHab -> La*b*)
-    // L = L
-    // a* = C * cos(Hab)
-    // b* = C * sin(Hab)
-
     static func interpolate(_ color1: CGColor, _ color2: CGColor, t: CGFloat, using colorspace: CGColorSpace) -> CGColor {
         precondition(t >= 0 && t <= 1)
-        let components1 = MyColorSpaces.components(from: color1, for: colorspace)
-        let components2 = MyColorSpaces.components(from: color2, for: colorspace)
+        let components1 = LCH.components(from: color1, for: colorspace)
+        let components2 = LCH.components(from: color2, for: colorspace)
         let newComponents = [
             components1[0] + (components2[0] - components1[0]) * t,
             components1[1] + (components2[1] - components1[1]) * t,
             components1[2] + (components2[2] - components1[2]) * t,
             components1[3] + (components2[3] - components1[3]) * t,
         ]
-        return MyColorSpaces.color(from: newComponents)
+        return LCH.color(from: newComponents, using: colorspace)
+    }
+
+    static func interpolate(_ color1: CGColor, _ color2: CGColor, t: CGFloat) -> CGColor {
+        precondition(t >= 0 && t <= 1)
+        let components1 = LCH.components(from: color1)
+        let components2 = LCH.components(from: color2)
+        let newComponents = [
+            components1[0] + (components2[0] - components1[0]) * t,
+            components1[1] + (components2[1] - components1[1]) * t,
+            components1[2] + (components2[2] - components1[2]) * t,
+            components1[3] + (components2[3] - components1[3]) * t,
+        ]
+        return LCH.color(from: newComponents)
     }
 }
