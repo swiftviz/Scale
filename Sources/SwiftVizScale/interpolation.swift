@@ -24,7 +24,7 @@ public protocol Interpolator {
 }
 
 import CoreGraphics
-enum LCH {
+public enum LCH {
     // https://en.wikipedia.org/wiki/HSL_and_HSV
     // https://en.wikipedia.org/wiki/HCL_color_space
     // https://en.wikipedia.org/wiki/CIELUV#Cylindrical_representation_(CIELCh) (aka HCL)
