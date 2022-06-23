@@ -1,9 +1,6 @@
 //
 //  PowerScaleTests.swift
 //
-//
-//  Created by Joseph Heck on 3/10/22.
-//
 
 @testable import SwiftVizScale
 import XCTest

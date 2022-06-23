@@ -1,8 +1,6 @@
 //
 //  ExternalPackageTests.swift
 //
-//  Created by Joseph Heck on 3/10/20.
-//
 
 import Foundation
 import SwiftVizScale

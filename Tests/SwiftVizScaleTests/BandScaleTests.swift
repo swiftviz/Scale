@@ -1,9 +1,6 @@
 //
 //  BandScaleTests.swift
 //
-//
-//  Created by Joseph Heck on 4/1/22.
-//
 
 @testable import SwiftVizScale
 import XCTest

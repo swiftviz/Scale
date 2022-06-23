@@ -1,8 +1,6 @@
 //
 //  InterpolateTests.swift
 //
-//  Created by Joseph Heck on 4/19/19.
-//
 
 @testable import SwiftVizScale
 import XCTest
