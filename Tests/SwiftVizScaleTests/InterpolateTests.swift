@@ -42,11 +42,13 @@ final class InterpolateTests: XCTestCase {
 
     func testRedInterpolationResults() throws {
         let red = CGColor(red: 1, green: 0, blue: 0, alpha: 0)
-        let components = MyColorSpaces.components(from: red, for: CGColorSpace(name: CGColorSpace.sRGB)!)
+        let components = LCH.components(from: red, for: CGColorSpace(name: CGColorSpace.genericXYZ)!)
         print("components: \(components)")
         // generic RGB: [1.0, 0.0, 0.0002487376914359629, 0.0]
         // sRGB: [1.0, 0.14910027384757996, 0.0, 0.0]
+        // extendedSRGB: [1.0110152959823608, 0.14910027384757996, -0.022766731679439545, 0.0]
         // extendedLinearSRGB: [1.025241732597351, 0.019400756806135178, -0.0017621309962123632, 0.0]
         // generic lab: [56.27880096435547, 77.81539916992188, 72.43891906738281, 0.0]
+        // generic XYZ: [0.45425543189048767, 0.241912841796875, 0.014888899400830269, 0.0]
     }
 }
