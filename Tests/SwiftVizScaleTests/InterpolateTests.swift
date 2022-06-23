@@ -39,4 +39,14 @@ final class InterpolateTests: XCTestCase {
         XCTAssertFalse(resultValue.isNaN)
         XCTAssertEqual(resultValue, 0.0, accuracy: 0.01)
     }
+
+    func testRedInterpolationResults() throws {
+        let red = CGColor(red: 1, green: 0, blue: 0, alpha: 0)
+        let components = MyColorSpaces.components(from: red, for: CGColorSpace(name: CGColorSpace.sRGB)!)
+        print("components: \(components)")
+        // generic RGB: [1.0, 0.0, 0.0002487376914359629, 0.0]
+        // sRGB: [1.0, 0.14910027384757996, 0.0, 0.0]
+        // extendedLinearSRGB: [1.025241732597351, 0.019400756806135178, -0.0017621309962123632, 0.0]
+        // generic lab: [56.27880096435547, 77.81539916992188, 72.43891906738281, 0.0]
+    }
 }
