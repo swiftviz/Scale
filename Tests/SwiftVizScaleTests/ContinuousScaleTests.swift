@@ -88,13 +88,14 @@ class ContinuousScaleTests: XCTestCase {
 
     func testScaleDescription() {
         let myScale = ContinuousScale<Double, CGFloat>(1.0 ... 50.0)
-        XCTAssertEqual(String(describing: myScale), "ContinuousScale<Double, CGFloat>(domainLower: 1.0, domainHigher: 50.0, rangeLower: nil, rangeHigher: nil, scaleType: SwiftVizScale.ContinuousScaleType.linear, reversed: false, transformType: SwiftVizScale.DomainDataTransform.none, desiredTicks: 10)")
+
+        XCTAssertEqual(String(describing: myScale), "linear(xform:none)[1.0:50.0]->[nil:nil]")
 
         let clampedScale = ContinuousScale<Double, CGFloat>(1.0 ... 50.0).transform(.clamp)
-        XCTAssertEqual(String(describing: clampedScale), "ContinuousScale<Double, CGFloat>(domainLower: 1.0, domainHigher: 50.0, rangeLower: nil, rangeHigher: nil, scaleType: SwiftVizScale.ContinuousScaleType.linear, reversed: false, transformType: SwiftVizScale.DomainDataTransform.clamp, desiredTicks: 10)")
+        XCTAssertEqual(String(describing: clampedScale), "linear(xform:clamp)[1.0:50.0]->[nil:nil]")
 
         let secondScale = ContinuousScale<Int, CGFloat>(1 ... 100, type: .log).range(lower: 0, higher: 300)
-        XCTAssertEqual(String(describing: secondScale), "ContinuousScale<Int, CGFloat>(domainLower: 1, domainHigher: 100, rangeLower: Optional(0.0), rangeHigher: Optional(300.0), scaleType: SwiftVizScale.ContinuousScaleType.log, reversed: false, transformType: SwiftVizScale.DomainDataTransform.none, desiredTicks: 10)")
+        XCTAssertEqual(String(describing: secondScale), "log(xform:none)[1:100]->[Optional(0.0):Optional(300.0)]")
     }
 
     func testScaleExampleValues() {
