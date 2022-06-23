@@ -500,7 +500,7 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
         // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
         return tickValues.compactMap { tickValue in
             // we only want tick values that are within the domain that's been specified on the scale.
-            if tickValue > domainHigher.toDouble() {
+            if tickValue > domainHigher.toDouble() || tickValue < domainLower.toDouble() {
                 return nil
             }
             if let tickRangeLocation = scale(InputType.fromDouble(tickValue), reversed: self.reversed, from: rangeLower, to: rangeHigher) {
