@@ -11,13 +11,11 @@ func normalize<T: Real>(_ x: T, lower: T, higher: T) -> T {
     return (x - lower) / extent
 }
 
-// inspiration - https://github.com/d3/d3-interpolate#interpolateNumber
 /// interpolate(a, b)(t) takes a parameter t in [0,1] and
 /// returns the corresponding range value t in [a,b].
 func interpolate<T: Real>(_ t: T, lower: T, higher: T) -> T {
-    // precondition(t >= 0 && t <= 1)
+    // strict interpolation would require: precondition(t >= 0 && t <= 1)
     lower + (higher - lower) * t
-    // c = a + (b - a) * t
 }
 
 public protocol Interpolator {
