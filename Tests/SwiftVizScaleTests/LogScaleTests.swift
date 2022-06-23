@@ -2,8 +2,6 @@
 //  LogScaleTests.swift
 //  SwiftVizTests
 //
-//  Created by Joseph Heck on 3/3/20.
-//
 
 @testable import SwiftVizScale
 import XCTest

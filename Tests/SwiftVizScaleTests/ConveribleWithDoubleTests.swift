@@ -1,9 +1,6 @@
 //
 //  ConveribleWithDoubleTests.swift
 //
-//
-//  Created by Joseph Heck on 3/31/22.
-//
 
 import Foundation
 import SwiftVizScale

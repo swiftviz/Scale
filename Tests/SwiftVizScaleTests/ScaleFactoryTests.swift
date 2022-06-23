@@ -1,9 +1,6 @@
 //
 //  ScaleFactoryTests.swift
 //
-//
-//  Created by Joseph Heck on 3/9/22.
-//
 
 import SwiftVizScale
 import XCTest

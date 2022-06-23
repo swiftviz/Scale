@@ -1,8 +1,6 @@
 //
 //  TickLabelTests.swift
 //
-//  Created by Joseph Heck on 3/14/20.
-//
 
 @testable import SwiftVizScale
 import XCTest
