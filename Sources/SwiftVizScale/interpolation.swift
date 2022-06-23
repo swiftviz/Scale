@@ -13,10 +13,11 @@ func normalize<T: Real>(_ x: T, lower: T, higher: T) -> T {
 
 // inspiration - https://github.com/d3/d3-interpolate#interpolateNumber
 /// interpolate(a, b)(t) takes a parameter t in [0,1] and
-/// returns the corresponding range value x in [a,b].
-func interpolate<T: Real>(_ x: T, lower: T, higher: T) -> T {
-    precondition(x >= 0 && x <= 1)
-    return lower * (1 - x) + higher * x
+/// returns the corresponding range value t in [a,b].
+func interpolate<T: Real>(_ t: T, lower: T, higher: T) -> T {
+    // precondition(t >= 0 && t <= 1)
+    lower + (higher - lower) * t
+    // c = a + (b - a) * t
 }
 
 public protocol Interpolator {
@@ -26,6 +27,21 @@ public protocol Interpolator {
 
 import CoreGraphics
 enum MyColorSpaces {
+    // https://en.wikipedia.org/wiki/HSL_and_HSV
+    // https://en.wikipedia.org/wiki/HCL_color_space
+    // https://en.wikipedia.org/wiki/CIELAB_color_space
+
+    // Interpolating between hues with HSV results in varying levels of perceived luminosity.
+    // The HCL color maintains luminosity as you interpolate across hues.
+    // H: Hue, C: Chroma, L: Lightness
+
+    // examples interpolating through different color spaces (javascript)
+    // https://observablehq.com/@zanarmstrong/comparing-interpolating-in-different-color-spaces
+    // https://bl.ocks.org/mbostock/3014589
+
+    // Color interpolation discussion:
+    // https://www.alanzucconi.com/2016/01/06/colour-interpolation/
+
     private static var rgb: CGColorSpace = .init(name: CGColorSpace.genericRGBLinear)!
 
     private static var lab: CGColorSpace = .init(name: CGColorSpace.genericLab)!
