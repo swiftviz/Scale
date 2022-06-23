@@ -22,7 +22,7 @@ public enum DiscreteScaleType: Equatable {
 }
 
 /// A type that maps discrete values of an input _domain_ to an output _range_.
-public protocol DiscreteScale: Scale, CustomStringConvertible {
+public protocol DiscreteScale: ReversibleScale, CustomStringConvertible {
     var scaleType: DiscreteScaleType { get }
     /// The lower value of the range into which the discrete values map.
     var rangeLower: RangeType? { get }
