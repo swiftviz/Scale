@@ -112,7 +112,7 @@ struct LCHAssembler: View {
 
     static let yellow = CGColor(srgbRed: 1, green: 1, blue: 0, alpha: 1)
     static let purple = CGColor(srgbRed: 1, green: 0, blue: 1, alpha: 1)
-    static let cyan = CGColor(srgbRed: 0, green: 1, blue: 1, alpha: 1)
+    static let teal = CGColor(srgbRed: 0, green: 1, blue: 1, alpha: 1)
     @State private var L: CGFloat = 100 // luminance ( 0 - 100 )
     @State private var C: CGFloat = 130 // chroma ( 0 - 130 )
     @State private var H: CGFloat = 0 // hue ( iterations of 2*.pi )
@@ -123,6 +123,9 @@ struct LCHAssembler: View {
         return formatter
     }()
 
+    var tau: CGFloat {
+        CGFloat(Double.pi * 2)
+    }
     func colorFromLCHComponents(_ l: CGFloat, _ c: CGFloat, _ h: CGFloat) -> CGColor {
         LCH.color(from: [l, c, h, 1.0])
     }
@@ -139,12 +142,13 @@ struct LCHAssembler: View {
 
                 LCHValues(color: LCHAssembler.yellow, name: "yellow")
                 LCHValues(color: LCHAssembler.purple, name: "purple")
-                LCHValues(color: LCHAssembler.cyan, name: "cyan")
+                LCHValues(color: LCHAssembler.teal, name: "teal")
             }
             Form {
                 TextField("L", value: $L, formatter: decimal)
                 TextField("C", value: $C, formatter: decimal)
                 TextField("H", value: $H, formatter: decimal)
+                Slider(value: $H, in: -tau...tau, step: 0.1)
             }
             Text("\(L), \(C), \(H)")
             Color(cgColor: colorFromLCHComponents(L, C, H))
