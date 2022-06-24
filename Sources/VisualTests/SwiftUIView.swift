@@ -1,12 +1,12 @@
 //
-//  SwiftUIView.swift
+//  InterpolationView.swift
 //
 
 import Numerics
 import SwiftUI
 @testable import SwiftVizScale
 
-@available(macOS 12.0, *)
+@available(macOS 12.0, iOS 15.0, *)
 struct InterpolationView: View {
     var steps: CGFloat
     var startColor: CGColor
@@ -25,7 +25,7 @@ struct InterpolationView: View {
                 HStack(spacing: 0.0) {
                     ForEach(0 ... 31, id: \.self) { stepValue in
                         Color(cgColor: color(stepValue))
-                            .frame(width: proxy.size.width / steps, height: 40)
+                            .frame(width: proxy.size.width / steps, height: 30)
                     }
                 }
                 Text(String(colorspace.name!))
@@ -34,7 +34,7 @@ struct InterpolationView: View {
     }
 }
 
-@available(macOS 12.0, *)
+@available(macOS 12.0, iOS 15.0, *)
 struct LCHInterpolationView: View {
     var steps: CGFloat
     var startColor: CGColor
@@ -51,7 +51,7 @@ struct LCHInterpolationView: View {
                 HStack(spacing: 0.0) {
                     ForEach(0 ... 31, id: \.self) { stepValue in
                         Color(cgColor: color(stepValue))
-                            .frame(width: proxy.size.width / steps, height: 40)
+                            .frame(width: proxy.size.width / steps, height: 30)
                     }
                 }
                 Text("LCH")
@@ -60,7 +60,7 @@ struct LCHInterpolationView: View {
     }
 }
 
-@available(macOS 12.0, *)
+@available(macOS 12.0, iOS 15.0, *)
 struct InterpolationSetView: View {
     var steps: CGFloat
     var startColor: CGColor
@@ -83,7 +83,7 @@ struct InterpolationSetView: View {
     }
 }
 
-@available(macOS 12.0, *)
+@available(macOS 12.0, iOS 15.0, *)
 struct InterpolationView_Previews: PreviewProvider {
     static let red = CGColor(srgbRed: 1, green: 0, blue: 0, alpha: 1)
     static let blue = CGColor(srgbRed: 0, green: 0, blue: 1, alpha: 1)
