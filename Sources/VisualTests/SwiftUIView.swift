@@ -181,5 +181,6 @@ struct InterpolationView_Previews: PreviewProvider {
             InterpolationSetView(steps: 64, startColor: blue, endColor: green)
             InterpolationSetView(steps: 64, startColor: green, endColor: red)
         }
+        .padding()
     }
 }

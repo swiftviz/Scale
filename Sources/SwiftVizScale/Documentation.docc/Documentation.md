@@ -36,6 +36,9 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 ### Supporting Types
 
 - ``SwiftVizScale/Scale``
+- ``SwiftVizScale/ReversibleScale``
+- ``SwiftVizScale/Interpolator``
+- ``SwiftVizScale/LCH``
 - ``SwiftVizScale/NiceValue``
 - ``SwiftVizScale/ConvertibleWithDouble``
 
