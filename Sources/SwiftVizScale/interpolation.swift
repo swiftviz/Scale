@@ -102,10 +102,25 @@ public enum LCH {
         return LCH.color(from: newComponents, using: colorspace)
     }
 
+    // LCH component values from stock sRGB combinations:
+    // red:    54.3, 107.3,  0.8
+    // blue:   29.6, 131.7,  2.6
+    // green:  87.8, 113.7, -0.7
+    // yellow: 97.6,  95.1, -0.17
+    // purple: 60.2, 111.8,  2.1
+    // teal:   90.6,  53.0, -1.86
+    // white:  100,     0,   0
+    // black:    0,     0,   0
+
     static func interpolate(_ color1: CGColor, _ color2: CGColor, t: CGFloat) -> CGColor {
         precondition(t >= 0 && t <= 1)
         let components1 = LCH.components(from: color1)
         let components2 = LCH.components(from: color2)
+        // blue to green in LCH is interpolated through red... unexpected
+        // blue:   29.6, 131.7,  2.6
+        // green:  87.8, 113.7, -0.7
+
+        // 0 ... 6.28
         let newComponents = [
             components1[0] + (components2[0] - components1[0]) * t,
             components1[1] + (components2[1] - components1[1]) * t,
