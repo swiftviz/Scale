@@ -2,7 +2,6 @@
 //  InterpolationView.swift
 //
 
-import Numerics
 import SwiftUI
 @testable import SwiftVizScale
 
@@ -15,7 +14,7 @@ struct InterpolationView: View {
     func color(_ stepValue: Int) -> CGColor {
         LCH.interpolate(startColor,
                         endColor,
-                        t: normalize(Double(stepValue), lower: 0.0, higher: 31.0),
+                        t: normalize(Double(stepValue), lower: 0.0, higher: steps - 1),
                         using: colorspace)
     }
 
@@ -23,7 +22,7 @@ struct InterpolationView: View {
         ZStack {
             GeometryReader { proxy in
                 HStack(spacing: 0.0) {
-                    ForEach(0 ... 31, id: \.self) { stepValue in
+                    ForEach(0 ... Int(steps - 1), id: \.self) { stepValue in
                         Color(cgColor: color(stepValue))
                             .frame(width: proxy.size.width / steps, height: 30)
                     }
@@ -42,14 +41,14 @@ struct LCHInterpolationView: View {
     func color(_ stepValue: Int) -> CGColor {
         LCH.interpolate(startColor,
                         endColor,
-                        t: normalize(Double(stepValue), lower: 0.0, higher: 31.0))
+                        t: normalize(Double(stepValue), lower: 0.0, higher: steps - 1))
     }
 
     var body: some View {
         ZStack {
             GeometryReader { proxy in
                 HStack(spacing: 0.0) {
-                    ForEach(0 ... 31, id: \.self) { stepValue in
+                    ForEach(0 ... Int(steps - 1), id: \.self) { stepValue in
                         Color(cgColor: color(stepValue))
                             .frame(width: proxy.size.width / steps, height: 30)
                     }
@@ -126,6 +125,7 @@ struct LCHAssembler: View {
     var tau: CGFloat {
         CGFloat(Double.pi * 2)
     }
+
     func colorFromLCHComponents(_ l: CGFloat, _ c: CGFloat, _ h: CGFloat) -> CGColor {
         LCH.color(from: [l, c, h, 1.0])
     }
@@ -148,7 +148,7 @@ struct LCHAssembler: View {
                 TextField("L", value: $L, formatter: decimal)
                 TextField("C", value: $C, formatter: decimal)
                 TextField("H", value: $H, formatter: decimal)
-                Slider(value: $H, in: -tau...tau, step: 0.1)
+                Slider(value: $H, in: -tau ... tau, step: 0.1)
             }
             Text("\(L), \(C), \(H)")
             Color(cgColor: colorFromLCHComponents(L, C, H))
