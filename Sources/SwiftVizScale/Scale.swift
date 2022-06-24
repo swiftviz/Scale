@@ -2,6 +2,7 @@
 //  Scale.swift
 //
 
+/// A type that maps values from an input _domain_ to an output _range_.
 public protocol Scale {
     /// The type used for the scale's domain.
     associatedtype InputType: Comparable

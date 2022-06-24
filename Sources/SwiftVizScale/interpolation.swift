@@ -18,12 +18,28 @@ func interpolate<T: Real>(_ t: T, lower: T, higher: T) -> T {
     lower + (higher - lower) * t
 }
 
+/// A type that provides an interpolated result types between two corresponding instances.
 public protocol Interpolator {
+    /// The type that the interpolator accepts as instances, and returns as an interpolated result.
     associatedtype OutputType
+    /// Provide an instance that is the interpolated value between two others.
+    /// - Parameter t: A unit value between `0` and `1` that represents the distance between the two values.
+    /// - Returns: An instance of a type that is the interpolated result based on the value you provide.
     func interpolate<T: Real>(_ t: T) -> OutputType
 }
 
 import CoreGraphics
+
+/// A type that provides conversion and interpolation of colors through the LCH color space.
+///
+/// The LCH (Luminosity, Chroma, Hue) color space provides a more perceptually consistent interpolation between
+/// two colors when compared to other color spaces.
+/// The LAB color space is the closest, but interpolation within LAB directly can result in perceptually darker segments during the interpolation.
+/// The following image provides a visual comparison of interpolating between the main boundary colors (red, green, and blue)
+/// when interpolated through the LAB color space and the LCH color space.
+///
+/// ![A table of of colors interpolated using two different color spaces.](LAB_vs_LCH.png)
+/// The wikipedia article on the [LCH color space](https://en.wikipedia.org/wiki/HCL_color_space) provides more information.
 public enum LCH {
     // https://en.wikipedia.org/wiki/HSL_and_HSV
     // https://en.wikipedia.org/wiki/HCL_color_space
@@ -42,7 +58,7 @@ public enum LCH {
     // Color interpolation discussion:
     // https://www.alanzucconi.com/2016/01/06/colour-interpolation/
 
-    public static var lab = CGColorSpace(name: CGColorSpace.genericLab)!
+    static var lab = CGColorSpace(name: CGColorSpace.genericLab)!
 
     static func color(from components: [CGFloat]) -> CGColor {
         precondition(components.count == 4)
@@ -111,7 +127,7 @@ public enum LCH {
     // teal:   90.6,  53.0, -1.86
     // white:  100,     0,   0
     // black:    0,     0,   0
-    
+
     /// Interpolate between two colors using the LCH color space.
     ///
     /// The [LCH color space](https://en.wikipedia.org/wiki/HCL_color_space) is a mapping of the
@@ -141,21 +157,21 @@ public enum LCH {
         if hue1 > hue2 {
             // If the value for hue2 is greater than hue1, add 2*PI to hue2 and compare, choosing
             // the shortest path for the target to which to interpolate.
-            if abs(hue1 - hue2) > abs(hue1 - (hue2 + 2*Double.pi)) {
-                targetForInterpolation = hue2 + 2*Double.pi
+            if abs(hue1 - hue2) > abs(hue1 - (hue2 + 2 * Double.pi)) {
+                targetForInterpolation = hue2 + 2 * Double.pi
             } else {
                 targetForInterpolation = hue2
             }
         } else {
             // If the value for hue2 is less than hue1, subtract 2*PI to hue2 and compare, choosing
             // the shortest path for the target to which to interpolate.
-            if abs(hue1 - hue2) > abs(hue1 - (hue2 - 2*Double.pi)) {
-                targetForInterpolation = hue2 + 2*Double.pi
+            if abs(hue1 - hue2) > abs(hue1 - (hue2 - 2 * Double.pi)) {
+                targetForInterpolation = hue2 + 2 * Double.pi
             } else {
                 targetForInterpolation = hue2
             }
         }
-        
+
         let newComponents = [
             components1[0] + (components2[0] - components1[0]) * t,
             components1[1] + (components2[1] - components1[1]) * t,
