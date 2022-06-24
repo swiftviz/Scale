@@ -111,8 +111,19 @@ public enum LCH {
     // teal:   90.6,  53.0, -1.86
     // white:  100,     0,   0
     // black:    0,     0,   0
-
-    static func interpolate(_ color1: CGColor, _ color2: CGColor, t: CGFloat) -> CGColor {
+    
+    /// Interpolate between two colors using the LCH color space.
+    ///
+    /// The [LCH color space](https://en.wikipedia.org/wiki/HCL_color_space) is a mapping of the
+    /// color coordinates of the CIELAB color space into polar coordinates with the goal of maintaining a perceptually
+    /// constant luminosity and color value (chroma) while interpolating between two colors.
+    ///
+    /// - Parameters:
+    ///   - color1: The first color.
+    ///   - color2: The second color.
+    ///   - t: A unit value between 0 and 1 representing the position between the first and second colors to return.
+    /// - Returns: A color interpolated between the two colors you provide.
+    public static func interpolate(_ color1: CGColor, _ color2: CGColor, t: CGFloat) -> CGColor {
         precondition(t >= 0 && t <= 1)
         let components1 = LCH.components(from: color1)
         let components2 = LCH.components(from: color2)
@@ -120,11 +131,35 @@ public enum LCH {
         // blue:   29.6, 131.7,  2.6
         // green:  87.8, 113.7, -0.7
 
-        // 0 ... 6.28
+        // The hue (components[2]) is an angle, in radians, with the LCH conversion.
+        // As such, it's cyclic, and we need to determine if the shortest path is
+        // a direct path between the two hue values provided, or if we should adjust the hue
+        // by +/- 2*PI to get a shorter distance.
+        let hue1 = components1[2]
+        let hue2 = components2[2]
+        let targetForInterpolation: CGFloat
+        if hue1 > hue2 {
+            // If the value for hue2 is greater than hue1, add 2*PI to hue2 and compare, choosing
+            // the shortest path for the target to which to interpolate.
+            if abs(hue1 - hue2) > abs(hue1 - (hue2 + 2*Double.pi)) {
+                targetForInterpolation = hue2 + 2*Double.pi
+            } else {
+                targetForInterpolation = hue2
+            }
+        } else {
+            // If the value for hue2 is less than hue1, subtract 2*PI to hue2 and compare, choosing
+            // the shortest path for the target to which to interpolate.
+            if abs(hue1 - hue2) > abs(hue1 - (hue2 - 2*Double.pi)) {
+                targetForInterpolation = hue2 + 2*Double.pi
+            } else {
+                targetForInterpolation = hue2
+            }
+        }
+        
         let newComponents = [
             components1[0] + (components2[0] - components1[0]) * t,
             components1[1] + (components2[1] - components1[1]) * t,
-            components1[2] + (components2[2] - components1[2]) * t,
+            components1[2] + (targetForInterpolation - components1[2]) * t,
             components1[3] + (components2[3] - components1[3]) * t,
         ]
         return LCH.color(from: newComponents)
