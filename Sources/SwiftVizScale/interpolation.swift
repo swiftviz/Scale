@@ -17,13 +17,3 @@ func interpolate<T: Real>(_ t: T, lower: T, higher: T) -> T {
     // strict interpolation would require: precondition(t >= 0 && t <= 1)
     lower + (higher - lower) * t
 }
-
-/// A type that provides an interpolated result types between two corresponding instances.
-public protocol Interpolator {
-    /// The type that the interpolator accepts as instances, and returns as an interpolated result.
-    associatedtype OutputType
-    /// Provide an instance that is the interpolated value between two others.
-    /// - Parameter t: A unit value between `0` and `1` that represents the distance between the two values.
-    /// - Returns: An instance of a type that is the interpolated result based on the value you provide.
-    func interpolate(_ t: Double) -> OutputType
-}
