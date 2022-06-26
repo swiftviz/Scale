@@ -29,6 +29,12 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 - ``SwiftVizScale/DiscreteScale``
 - ``SwiftVizScale/DiscreteScaleType``
 
+### Sequential Scales
+
+- ``SwiftVizScale/SequentialScale``
+- ``SwiftVizScale/ArrayInterpolator``
+- ``SwiftVizScale/LCH``
+
 ### Ticks
 
 - ``SwiftVizScale/Tick``
@@ -37,8 +43,6 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 
 - ``SwiftVizScale/Scale``
 - ``SwiftVizScale/ReversibleScale``
-- ``SwiftVizScale/Interpolator``
-- ``SwiftVizScale/LCH``
 - ``SwiftVizScale/NiceValue``
 - ``SwiftVizScale/ConvertibleWithDouble``
 
