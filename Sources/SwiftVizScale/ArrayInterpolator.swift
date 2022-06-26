@@ -42,12 +42,14 @@ public struct ArrayInterpolator: Interpolator {
         colors = [from, to]
     }
 
-    public static let Grays = Self(CGColor.white,
-                                   CGColor.black)
-    public static let Blues = Self(CGColor.white,
-                                   CGColor(srgbRed: 0, green: 0, blue: 1, alpha: 1))
-    public static let Greens = Self(CGColor.white,
-                                    CGColor(srgbRed: 0, green: 1, blue: 0, alpha: 1))
-    public static let Reds = Self(CGColor.white,
-                                  CGColor(srgbRed: 1, green: 0, blue: 0, alpha: 1))
+    static let white = CGColor(srgbRed: 1, green: 1, blue: 1, alpha: 1)
+    static let black = CGColor(srgbRed: 0, green: 0, blue: 0, alpha: 1)
+    static let red = CGColor(srgbRed: 1, green: 0, blue: 0, alpha: 1)
+    static let blue = CGColor(srgbRed: 0, green: 0, blue: 1, alpha: 1)
+    static let green = CGColor(srgbRed: 0, green: 1, blue: 0, alpha: 1)
+
+    public static let Grays = Self(white, black)
+    public static let Blues = Self(white, blue)
+    public static let Greens = Self(white, green)
+    public static let Reds = Self(white, red)
 }
