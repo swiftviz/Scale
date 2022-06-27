@@ -17,6 +17,35 @@ final class ArrayInterpolatorTests: XCTestCase {
         }
     }
 
+    func testHexValuesFromInterpolatorGuides() throws {
+        XCTAssertEqual(ArrayInterpolator.white.toHex(), "FFFFFF")
+        XCTAssertEqual(ArrayInterpolator.black.toHex(), "000000")
+        XCTAssertEqual(ArrayInterpolator.red.toHex(), "FF0000")
+        XCTAssertEqual(ArrayInterpolator.green.toHex(), "00FF00")
+        XCTAssertEqual(ArrayInterpolator.blue.toHex(), "0000FF")
+    }
+
+    func testHexSequence() throws {
+        let colors = CGColor.fromHexSequence("010101FFFFFF")
+        XCTAssertEqual(colors.count, 2)
+        XCTAssertEqual(colors[0].toHex(), "010101")
+        XCTAssertEqual(colors[1].toHex(), "FFFFFF")
+    }
+
+    func testHexSequenceWithBrokenSequence() throws {
+        let colors = CGColor.fromHexSequence("010101FFFFFFABCD")
+        XCTAssertEqual(colors.count, 2)
+        XCTAssertEqual(colors[0].toHex(), "010101")
+        XCTAssertEqual(colors[1].toHex(), "FFFFFF")
+    }
+
+    func testHexSequenceWithInvalidSequence() throws {
+        let colors = CGColor.fromHexSequence("010101FFFFFFgoodbye")
+        XCTAssertEqual(colors.count, 2)
+        XCTAssertEqual(colors[0].toHex(), "010101")
+        XCTAssertEqual(colors[1].toHex(), "FFFFFF")
+    }
+
     func testFiveStepInterpolationValues() throws {
         // Five colors added means there'll be four breaks:
         // 0, 0.25, 0.5, 0.75, and 1.0
