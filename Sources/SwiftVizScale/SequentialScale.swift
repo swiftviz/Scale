@@ -14,7 +14,7 @@ public struct SequentialScale<InputType: ConvertibleWithDouble>: CustomStringCon
     /// A Boolean value that indicates if the mapping from domain to range is inverted.
     public let reversed: Bool
 
-    let interpolator: ArrayInterpolator
+    let interpolator: ColorInterpolator
 
     /// Creates a new sequential scale that maps a _domain_ value to a color.
     /// - Parameters:
@@ -25,7 +25,7 @@ public struct SequentialScale<InputType: ConvertibleWithDouble>: CustomStringCon
     public init(lower: InputType = 0,
                 higher: InputType = 1,
                 reversed: Bool = false,
-                interpolator: ArrayInterpolator)
+                interpolator: ColorInterpolator)
     {
         precondition(lower <= higher, "attempting to set an inverted domain: \(lower) to \(higher)")
         precondition(lower != higher, "attempting to set an empty domain: \(lower) to \(higher)")
@@ -65,7 +65,7 @@ public struct SequentialScale<InputType: ConvertibleWithDouble>: CustomStringCon
     /// Returns a new scale with the interpolator set to the instance you provide.
     /// - Parameter interpolator: An interpolator instance.
     /// - Returns: A copy of the scale with the domain values you provide.
-    public func interpolator(_ interpolator: ArrayInterpolator) -> Self {
+    public func interpolator(_ interpolator: ColorInterpolator) -> Self {
         Self(lower: domainLower, higher: domainHigher, reversed: reversed, interpolator: interpolator)
     }
 
