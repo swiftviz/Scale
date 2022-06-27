@@ -32,7 +32,7 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 ### Sequential Scales
 
 - ``SwiftVizScale/SequentialScale``
-- ``SwiftVizScale/ArrayInterpolator``
+- ``SwiftVizScale/ColorInterpolator``
 - ``SwiftVizScale/LCH``
 
 ### Ticks
