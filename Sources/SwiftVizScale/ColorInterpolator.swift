@@ -57,10 +57,12 @@ public struct ColorInterpolator {
     /// - Parameters:
     ///   - colors: The sequences of colors to map through.
     public init(_ colors: [CGColor]) {
-        precondition(colors.count > 2, "ArrayInterpolator requires at least 2 colors.")
+        precondition(colors.count > 2, "ColorInterpolator requires at least 2 colors.")
         self.colors = colors
     }
 
+    /// Creates a new color interpolator using sequences of 6 Hex Digits to represent a color.
+    /// - Parameter hexSequence: The sequence to convert into the colors.
     public init(_ hexSequence: String) {
         precondition(hexSequence.count >= 12)
         let colors = CGColor.fromHexSequence(hexSequence)
