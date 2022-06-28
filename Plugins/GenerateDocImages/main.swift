@@ -1,6 +1,9 @@
 import Foundation
 import PackagePlugin
 
+// reference for making plugins:
+// https://github.com/apple/swift-evolution/blob/main/proposals/0332-swiftpm-command-plugins.md
+
 @main
 struct GenerateDocImages: CommandPlugin {
     func performCommand(context _: PluginContext, arguments _: [String]) async throws {
