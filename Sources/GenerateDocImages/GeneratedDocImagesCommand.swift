@@ -1,6 +1,7 @@
 import ArgumentParser
 import SwiftUI
 import SystemPackage
+import SwiftVizScale
 import VisualTests
 
 #if os(macOS)
@@ -13,7 +14,10 @@ import VisualTests
         @MainActor
         func run() throws {
             print("Hi, \(phrase)")
-
+            
+            for interpolator in ColorInterpolator.allCases {
+                print("Says its a: \(interpolator)")
+            }
             // damnit, I can't use this until macOS 13
 //        if #available(macOS 13.0, *) {
 //            let renderer = ImageRenderer(content: ColorInterpolatorView(steps: 128, interpolator: .Viridis))
