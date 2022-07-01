@@ -6,7 +6,7 @@ import SwiftUI
 @testable import SwiftVizScale
 
 @available(macOS 12.0, iOS 15.0, *)
-struct ColorInterpolatorView: View {
+public struct ColorInterpolatorView: View {
     var steps: CGFloat
     var interpolator: ColorInterpolator
 
@@ -17,7 +17,7 @@ struct ColorInterpolatorView: View {
         return interpolator.interpolate(t)
     }
 
-    var body: some View {
+    public var body: some View {
         GeometryReader { proxy in
             HStack(spacing: 0.0) {
                 ForEach(0 ... Int(steps - 1), id: \.self) { stepValue in
@@ -26,6 +26,11 @@ struct ColorInterpolatorView: View {
                 }
             }
         }
+    }
+    
+    public init(steps: CGFloat, interpolator: ColorInterpolator) {
+        self.steps = steps
+        self.interpolator = interpolator
     }
 }
 
