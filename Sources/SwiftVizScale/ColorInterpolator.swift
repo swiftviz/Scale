@@ -1,5 +1,5 @@
 //
-//  ArrayInterpolator.swift
+//  ColorInterpolator.swift
 //
 
 import CoreGraphics
@@ -42,7 +42,7 @@ public struct ColorInterpolator: CaseIterable, CustomStringConvertible {
     /// Returns the color mapped from the unit value you provide.
     /// - Parameter t: A unit value between `0` and  `1`.
     public func interpolate(_ t: Double) -> CGColor {
-        let (colorIndex, tBetweenIndicies) = Self.interpolateIntoSteps(t, colors.count - 1)
+        let (colorIndex, tBetweenIndicies) = Self.interpolateIntoSteps(t, colors.count)
         return LCH.interpolate(colors[colorIndex], colors[colorIndex + 1], t: tBetweenIndicies)
     }
 
@@ -51,8 +51,17 @@ public struct ColorInterpolator: CaseIterable, CustomStringConvertible {
     ///   - from: The color at the beginning.
     ///   - to: The color at the end.
     public init(_ from: CGColor, _ to: CGColor) {
+        let name = "\(from.toHex() ?? ""):\(to.toHex() ?? "")"
+        self.init(name, from, to)
+    }
+
+    /// Creates a new color interpolator that maps between the two colors you provide.
+    /// - Parameters:
+    ///   - from: The color at the beginning.
+    ///   - to: The color at the end.
+    public init(_ name: String, _ from: CGColor, _ to: CGColor) {
         colors = [from, to]
-        description = "\(from.toHex() ?? ""):\(to.toHex() ?? "")"
+        description = name
     }
 
     /// Creates a new color interpolator that maps between the colors you provide.
@@ -145,11 +154,11 @@ public struct ColorInterpolator: CaseIterable, CustomStringConvertible {
     // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-single/Purples.js
     public static let Purples = Self("Purples", "fcfbfdefedf5dadaebbcbddc9e9ac8807dba6a51a354278f3f007d")
     /// An interpolator that maps to various shades between white to black.
-    public static let Grays = Self("Grays", [white, black])
+    public static let Grays = Self("Grays", white, black)
     /// An interpolator that maps to various shades between white to blue.
-    public static let Blues = Self("Blues", [white, blue])
+    public static let Blues = Self("Blues", white, blue)
     /// An interpolator that maps to various shades between white to green.
-    public static let Greens = Self("Greens", [white, green])
+    public static let Greens = Self("Greens", white, green)
     /// An interpolator that maps to various shades between white and red.
-    public static let Reds = Self("Reds", [white, red])
+    public static let Reds = Self("Reds", white, red)
 }
