@@ -1,7 +1,7 @@
 import ArgumentParser
 import SwiftUI
-import SystemPackage
 import SwiftVizScale
+import SystemPackage
 import VisualTests
 
 #if os(macOS)
@@ -14,7 +14,7 @@ import VisualTests
         @MainActor
         func run() throws {
             print("Hi, \(phrase)")
-            
+
             for interpolator in ColorInterpolator.allCases {
                 print("Says its a: \(interpolator)")
             }
