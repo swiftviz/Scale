@@ -10,6 +10,7 @@ public struct ColorInterpolator: CaseIterable, CustomStringConvertible {
     // https://github.com/d3/d3-scale-chromatic/blob/main/README.md
     // https://bids.github.io/colormap/
     var colors: [CGColor]
+    /// The description of the color scheme.
     public var description: String
 
     /// Returns an index and re-normalized interpolation value to be able to step-wise interpolate through an array of options.
@@ -57,6 +58,7 @@ public struct ColorInterpolator: CaseIterable, CustomStringConvertible {
 
     /// Creates a new color interpolator that maps between the two colors you provide.
     /// - Parameters:
+    ///   - name: The name of the color scheme.
     ///   - from: The color at the beginning.
     ///   - to: The color at the end.
     public init(_ name: String, _ from: CGColor, _ to: CGColor) {
@@ -66,6 +68,7 @@ public struct ColorInterpolator: CaseIterable, CustomStringConvertible {
 
     /// Creates a new color interpolator that maps between the colors you provide.
     /// - Parameters:
+    ///   - name: The name of the color scheme.
     ///   - colors: The sequences of colors to map through.
     public init(_ name: String, _ colors: [CGColor]) {
         precondition(colors.count >= 2, "ColorInterpolator requires at least 2 colors.")
@@ -74,6 +77,7 @@ public struct ColorInterpolator: CaseIterable, CustomStringConvertible {
     }
 
     /// Creates a new color interpolator using sequences of 6 Hex Digits to represent a color.
+    /// - Parameter name: The name of the color scheme.
     /// - Parameter hexSequence: The sequence to convert into the colors.
     public init(_ name: String, _ hexSequence: String) {
         precondition(hexSequence.count >= 12)
@@ -86,7 +90,8 @@ public struct ColorInterpolator: CaseIterable, CustomStringConvertible {
     static let red = CGColor(srgbRed: 1, green: 0, blue: 0, alpha: 1)
     static let blue = CGColor(srgbRed: 0, green: 0, blue: 1, alpha: 1)
     static let green = CGColor(srgbRed: 0, green: 1, blue: 0, alpha: 1)
-
+    
+    /// The built-in color schemes.
     public static var allCases: [ColorInterpolator] = [
         BrBG, PrGN, PiYG, PuOR, RdBu, RdGy, RdYlBu, RdYlGn, Spectral,
         BuGn, BuPu, GnBu, OrRd, PuBu, PuBuGn, PuRd, RdPu, YlGn, YlGnBu, YlOrBr, YlOrRd,
@@ -97,6 +102,8 @@ public struct ColorInterpolator: CaseIterable, CustomStringConvertible {
     // MARK: - Diverging Color Schemes, replicated from d3-scale-chromatic
 
     // https://github.com/d3/d3-scale-chromatic/blob/main/src/diverging/BrBG.js
+    /// An interpolator the presents a brown to blue-green diverging color scheme.
+    /// ![A visual sample of the brown to blue-green color scheme.](BrBG.png)
     public static let BrBG = Self("BrBG", "5430058c510abf812ddfc27df6e8c3f5f5f5c7eae580cdc135978f01665e003c30")
     // https://github.com/d3/d3-scale-chromatic/blob/main/src/diverging/PRGn.js
     public static let PrGN = Self("PrGN", "40004b762a839970abc2a5cfe7d4e8f7f7f7d9f0d3a6dba05aae611b783700441b")
@@ -150,15 +157,28 @@ public struct ColorInterpolator: CaseIterable, CustomStringConvertible {
     // MARK: Sequential sequences - single hue
 
     // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-single/Oranges.js
+    /// An interpolator the presents a white to orange single-hue color scheme.
+    /// ![A visual sample of the white to orange single-hue color scheme.](Oranges.png)
     public static let Oranges = Self("Oranges", "fff5ebfee6cefdd0a2fdae6bfd8d3cf16913d94801a636037f2704")
+
     // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-single/Purples.js
+    /// An interpolator the presents a white to purple single-hue color scheme.
+    /// ![A visual sample of the white to purple single-hue color scheme.](Purples.png)
     public static let Purples = Self("Purples", "fcfbfdefedf5dadaebbcbddc9e9ac8807dba6a51a354278f3f007d")
-    /// An interpolator that maps to various shades between white to black.
+    
+    /// An interpolator the presents a white to black single-hue color scheme.
+    /// ![A visual sample of the white to black single-hue color scheme.](Grays.png)
     public static let Grays = Self("Grays", white, black)
-    /// An interpolator that maps to various shades between white to blue.
+
+    /// An interpolator the presents a white to blue single-hue color scheme.
+    /// ![A visual sample of the white to blue single-hue color scheme.](Blues.png)
     public static let Blues = Self("Blues", white, blue)
-    /// An interpolator that maps to various shades between white to green.
+
+    /// An interpolator the presents a white to green single-hue color scheme.
+    /// ![A visual sample of the white to green single-hue color scheme.](Greens.png)
     public static let Greens = Self("Greens", white, green)
-    /// An interpolator that maps to various shades between white and red.
+
+    /// An interpolator the presents a white to red single-hue color scheme.
+    /// ![A visual sample of the white to red single-hue color scheme.](Reds.png)
     public static let Reds = Self("Reds", white, red)
 }
