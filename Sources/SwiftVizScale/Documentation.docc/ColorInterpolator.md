@@ -45,10 +45,16 @@
 
 ### Creating an Interpolator
 
-- ``SwiftVizScale/ColorInterpolator/init(_:)-417qd``
-- ``SwiftVizScale/ColorInterpolator/init(_:)-5lx8r``
-- ``SwiftVizScale/ColorInterpolator/init(_:_:)``
+- ``SwiftVizScale/ColorInterpolator/init(_:_:)-249p8``
+- ``SwiftVizScale/ColorInterpolator/init(_:_:)-87132``
+- ``SwiftVizScale/ColorInterpolator/init(_:_:)-9m2o2``
+- ``SwiftVizScale/ColorInterpolator/init(_:_:_:)``
 
 ### Mapping values to colors
 
 - ``SwiftVizScale/ColorInterpolator/interpolate(_:)``
+
+### Inspecting an Interpolator
+
+- ``SwiftVizScale/ColorInterpolator/description``
+- ``SwiftVizScale/ColorInterpolator/allCases``
