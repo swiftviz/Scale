@@ -10,15 +10,50 @@ import VisualTests
     struct GeneratedDocImagesCommand: ParsableCommand {
         @MainActor
         func run() throws {
-            for interpolator in ColorInterpolator.allCases {
-                print("Says its a: \(interpolator)")
+            
+            let schemes: [ColorInterpolator: String] = [
+                .BrBG: "BrBG",
+                .PrGN: "PrGN",
+                .PiYG: "PiYG",
+                .PuOR: "PuOR",
+                .RdBu: "RdBu",
+                .RdGy: "RdGy",
+                .RdYlBu: "RdYlBu",
+                .RdYlGn: "RdYlGn",
+                .Spectral: "Spectral",
+                .BuGn: "BuGn",
+                .BuPu: "BuPu",
+                .GnBu: "GnBu",
+                .OrRd: "OrRd",
+                .PuBu: "PuBu",
+                .PuBuGn: "PuBuGn",
+                .PuRd: "PuRd",
+                .RdPu: "RdPu",
+                .YlGn: "YlGn",
+                .YlGnBu: "YlGnBu",
+                .YlOrBr: "YlOrBr",
+                .YlOrRd: "YlOrRd",
+                .Viridis: "Viridis",
+                .Magma: "Magma",
+                .Inferno: "Inferno",
+                .Plasma: "Plasma",
+                .Oranges: "Oranges",
+                .Purples: "Purples",
+                .Grays: "Grays",
+                .Blues: "Blues",
+                .Greens: "Greens",
+                .Reds: "Reds",
+            ]
+
+            for (interpolator, name) in schemes {
+                print("Creating color swatch for \(name)")
 
                 let view = ColorInterpolatorView(steps: 128, interpolator: interpolator)
                     .frame(width: 400, height: 40)
                 let image = view.snapshot()!.cgImage(forProposedRect: nil, context: nil, hints: nil)!
                 let newRepresentation = NSBitmapImageRep(cgImage: image)
 
-                let path = FilePath("\(interpolator).png")
+                let path = FilePath("\(name).png")
                 let fd = try FileDescriptor.open(path, .writeOnly,
                                                  options: [.append, .create],
                                                  permissions: .ownerReadWrite)
