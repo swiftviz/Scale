@@ -27,7 +27,7 @@ public struct ColorInterpolatorView: View {
             }
         }
     }
-    
+
     public init(steps: CGFloat, interpolator: ColorInterpolator) {
         self.steps = steps
         self.interpolator = interpolator
