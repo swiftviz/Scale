@@ -10,7 +10,6 @@ import VisualTests
     struct GeneratedDocImagesCommand: ParsableCommand {
         @MainActor
         func run() throws {
-            
             let schemes: [ColorInterpolator: String] = [
                 .BrBG: "BrBG",
                 .PrGN: "PrGN",
