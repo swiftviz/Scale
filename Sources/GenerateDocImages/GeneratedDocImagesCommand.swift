@@ -8,7 +8,6 @@ import VisualTests
     @main
     @available(macOS 12.0, *)
     struct GeneratedDocImagesCommand: ParsableCommand {
-
         @MainActor
         func run() throws {
             for interpolator in ColorInterpolator.allCases {
@@ -28,7 +27,6 @@ import VisualTests
                         _ = try fd.writeAll(pngData)
                     }
                 }
-
             }
             // damnit, I can't use this until macOS 13
 //        if #available(macOS 13.0, *) {
