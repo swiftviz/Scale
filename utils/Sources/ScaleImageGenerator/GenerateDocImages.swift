@@ -5,7 +5,6 @@ import VisualTests
 
 @main
 struct GenerateDocImages: ParsableCommand {
-
     // I'm thinking to do something with rendering images using
     // https://developer.apple.com/documentation/swiftui/imagerenderer
 
@@ -22,7 +21,7 @@ struct GenerateDocImages: ParsableCommand {
         print("Hi")
         let repeatCount = count ?? 2
 
-        for i in 1...repeatCount {
+        for i in 1 ... repeatCount {
             if includeCounter {
                 print("\(i): \(phrase)")
             } else {
