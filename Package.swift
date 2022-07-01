@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.6
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import Foundation
@@ -18,6 +18,7 @@ let package = Package(
             targets: ["SwiftVizScale"]
         ),
         .library(name: "ScaleVisualTests", targets: ["SwiftVizScale", "VisualTests"]),
+        .plugin(name: "GenerateDocImages", targets: ["GenerateDocImages"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-numerics", from: "1.0.0"),
@@ -26,7 +27,7 @@ let package = Package(
         .target(
             name: "SwiftVizScale",
             dependencies: [
-                .product(name: "Numerics", package: "swift-numerics")
+                .product(name: "Numerics", package: "swift-numerics"),
             ]
         ),
         .target(
@@ -37,9 +38,12 @@ let package = Package(
             name: "SwiftVizScaleTests",
             dependencies: [
                 .product(name: "Numerics", package: "swift-numerics"),
-                "SwiftVizScale"
+                "SwiftVizScale",
             ]
         ),
+        .plugin(name: "GenerateDocImages",
+            capability: .command(intent: .custom(verb: "generate-documentation-images", description: "Generates images for DocC documentation.")),
+                dependencies: []),
     ]
 )
 
