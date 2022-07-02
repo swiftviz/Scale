@@ -68,4 +68,11 @@ import VisualTests
 //        } else {
         }
     }
+#else
+    @main
+    struct GeneratedDocImagesCommand: ParsableCommand {
+        func run() throws {
+            print("NOT IMPLEMENTED for Swift < 5.7")
+        }
+    }
 #endif
