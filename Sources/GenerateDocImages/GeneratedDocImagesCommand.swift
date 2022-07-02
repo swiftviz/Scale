@@ -4,7 +4,7 @@ import SwiftVizScale
 import SystemPackage
 import VisualTests
 
-#if os(macOS)
+#if os(macOS) && swift(>=5.7)
     @main
     @available(macOS 12.0, *)
     struct GeneratedDocImagesCommand: ParsableCommand {
