@@ -17,13 +17,10 @@ let package = Package(
             name: "SwiftVizScale",
             targets: ["SwiftVizScale"]
         ),
-        .library(name: "ScaleVisualTests", targets: ["SwiftVizScale", "VisualTests"]),
-//        .plugin(name: "GenerateDocImages", targets: ["GenerateDocImages"]),
-        .executable(name: "GenerateDocImages", targets: ["GenerateDocImages"]),
+        .library(name: "ScaleVisualTests", targets: ["SwiftVizScale", "VisualTests"])
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-numerics", from: "1.0.0"),
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
         .package(url: "https://github.com/apple/swift-system", from: "0.0.3"),
     ],
     targets: [
@@ -43,31 +40,28 @@ let package = Package(
                 .product(name: "Numerics", package: "swift-numerics"),
                 "SwiftVizScale",
             ]
-        ),
-        .executableTarget(
-            name: "GenerateDocImages",
-            dependencies: [
-                "VisualTests",
-                .product(name: "ArgumentParser", package: "swift-argument-parser"),
-                .product(name: "SystemPackage", package: "swift-system"),
-            ]
-        ),
-//        .plugin(name: "GenerateDocImages",
-//                capability: .command(
-//                    intent: .custom(verb: "generate-documentation-images",
-//                                    description: "Generates images for DocC documentation."),
-//                                    permissions: [
-//                                        .writeToPackageDirectory(reason: "This command generates images for documentation.")
-//                                    ]
-//                ),
-//                dependencies: [
-//                    .productItem(name: "VisualTests", package: "SwiftVizScale")
-//                    // ^ can't depend on libraries created in THIS Oackage.swift (with Swift 5.7)
-//                    // You get the error:
-//                    // unknown package 'SwiftVizScale' in dependencies of target 'GenerateDocImages'; valid packages are: 'swift-numerics', 'swift-docc-plugin'
-//                ]),
+        )
     ]
 )
+
+#if os(macOS)
+package.products.append(
+    .executable(name: "GenerateDocImages", targets: ["GenerateDocImages"])
+)
+package.dependencies.append(
+    .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0")
+)
+package.targets.append(
+    .executableTarget(
+        name: "GenerateDocImages",
+        dependencies: [
+            "VisualTests",
+            .product(name: "ArgumentParser", package: "swift-argument-parser"),
+            .product(name: "SystemPackage", package: "swift-system"),
+        ]
+    )
+)
+#endif
 
 if ProcessInfo.processInfo.environment["BENCHMARK"] != nil {
     package.products.append(
