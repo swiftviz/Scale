@@ -1,5 +1,4 @@
-// swift-tools-version:5.5
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version:5.6
 
 import Foundation
 import PackageDescription
@@ -23,7 +22,8 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/apple/swift-numerics", from: "1.0.0"),
         .package(url: "https://github.com/apple/swift-system", from: "0.0.3"),
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0")
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
+        .package(url: "https://github.com/apple/swift-docc-plugin", branch: "1.0.0")
     ],
     targets: [
         .target(
@@ -74,10 +74,3 @@ if ProcessInfo.processInfo.environment["BENCHMARK"] != nil {
         )
     )
 }
-
-#if swift(>=5.6)
-    // Add the documentation compiler plugin if possible
-    package.dependencies.append(
-        .package(url: "https://github.com/apple/swift-docc-plugin", branch: "main") // from: "1.0.0")
-    )
-#endif
