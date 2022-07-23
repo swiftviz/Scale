@@ -98,7 +98,7 @@ public struct ColorInterpolator: Hashable {
 
     // https://github.com/d3/d3-scale-chromatic/blob/main/src/diverging/PuOr.js
     /// An interpolator that presents  a purple to orange diverging color scheme.
-    /// ![A visual sample of a purple to orange diverging color scheme.](PuOR.png)
+    /// ![A visual sample of a purple to orange diverging color scheme.](PuOr.png)
     public static let PuOR = Self("2d004b5427888073acb2abd2d8daebf7f7f7fee0b6fdb863e08214b358067f3b08")
 
     // https://github.com/d3/d3-scale-chromatic/blob/main/src/diverging/RdBu.js
