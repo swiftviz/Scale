@@ -5,7 +5,7 @@
 import SwiftUI
 @testable import SwiftVizScale
 
-@available(macOS 12.0, iOS 15.0, *)
+@available(macOS 12.0, iOS 15.0, watchOS 8.0, *)
 struct InterpolationView: View {
     var steps: CGFloat
     var startColor: CGColor
@@ -33,7 +33,7 @@ struct InterpolationView: View {
     }
 }
 
-@available(macOS 12.0, iOS 15.0, *)
+@available(macOS 12.0, iOS 15.0, watchOS 8.0, *)
 struct LCHInterpolationView: View {
     var steps: CGFloat
     var startColor: CGColor
@@ -59,7 +59,7 @@ struct LCHInterpolationView: View {
     }
 }
 
-@available(macOS 12.0, iOS 15.0, *)
+@available(macOS 12.0, iOS 15.0, watchOS 8.0, *)
 struct InterpolationSetView: View {
     var steps: CGFloat
     var startColor: CGColor
@@ -82,7 +82,7 @@ struct InterpolationSetView: View {
     }
 }
 
-@available(macOS 12.0, iOS 15.0, *)
+@available(macOS 12.0, iOS 15.0, watchOS 8.0, *)
 struct InterpolationView_Previews: PreviewProvider {
     static let red = CGColor(srgbRed: 1, green: 0, blue: 0, alpha: 1)
     static let blue = CGColor(srgbRed: 0, green: 0, blue: 1, alpha: 1)

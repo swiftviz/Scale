@@ -6,6 +6,7 @@ import SwiftUI
 @testable import SwiftVizScale
 
 /// Displays the Luminance, Chroma, Hue, and gamma values for LCH components of the color you provide.
+@available(watchOS 6.0, *)
 struct LCHValues: View {
     var values: [CGFloat]
     var name: String
@@ -25,7 +26,7 @@ struct LCHValues: View {
     }
 }
 
-@available(macOS 12.0, iOS 15.0, *)
+@available(macOS 12.0, iOS 15.0, watchOS 8.0, *)
 struct LCHAssembler: View {
     static let red = CGColor(srgbRed: 1, green: 0, blue: 0, alpha: 1)
     static let blue = CGColor(srgbRed: 0, green: 0, blue: 1, alpha: 1)
@@ -82,7 +83,7 @@ struct LCHAssembler: View {
     }
 }
 
-@available(macOS 12.0, iOS 15.0, *)
+@available(macOS 12.0, iOS 15.0, watchOS 8.0, *)
 struct LCHAssembler_Previews: PreviewProvider {
     static var previews: some View {
         LCHAssembler()

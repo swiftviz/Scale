@@ -5,6 +5,7 @@
 import CoreGraphics
 
 /// An interpolator that maps a unit value into a color based on the position between the colors.
+@available(watchOS 6.0, *)
 public struct ColorInterpolator: Hashable {
     // Color pallets for interpolation and presentation:
     // https://github.com/d3/d3-scale-chromatic/blob/main/README.md
@@ -73,10 +74,19 @@ public struct ColorInterpolator: Hashable {
         self.init(colors)
     }
 
+    @available(watchOS 6.0, *)
     static let white = CGColor(srgbRed: 1, green: 1, blue: 1, alpha: 1)
+
+    @available(watchOS 6.0, *)
     static let black = CGColor(srgbRed: 0, green: 0, blue: 0, alpha: 1)
+
+    @available(watchOS 6.0, *)
     static let red = CGColor(srgbRed: 1, green: 0, blue: 0, alpha: 1)
+
+    @available(watchOS 6.0, *)
     static let blue = CGColor(srgbRed: 0, green: 0, blue: 1, alpha: 1)
+
+    @available(watchOS 6.0, *)
     static let green = CGColor(srgbRed: 0, green: 1, blue: 0, alpha: 1)
 
     // MARK: - Diverging Color Schemes, replicated from d3-scale-chromatic

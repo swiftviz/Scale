@@ -6,6 +6,7 @@ import CoreGraphics
 import Foundation
 
 /// A type that maps values from a continuous input _domain_ to a color.
+@available(watchOS 6.0, *)
 public struct SequentialScale<InputType: ConvertibleWithDouble>: CustomStringConvertible {
     /// The lower bound of the input domain.
     public let domainLower: InputType

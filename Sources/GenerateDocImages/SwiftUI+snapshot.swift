@@ -4,6 +4,7 @@
 
 import SwiftUI
 
+@available(watchOS 6.0, *)
 extension View {
     #if os(macOS)
         func snapshot() -> NSImage? {

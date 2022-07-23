@@ -6,6 +6,7 @@ import CoreGraphics
 import Foundation
 
 extension CGColor {
+    @available(watchOS 6.0, *)
     func fromHex(_ hex: String) -> Self? {
         let r, g, b, a: CGFloat
 
@@ -42,6 +43,7 @@ extension CGColor {
         return nil
     }
 
+    @available(watchOS 6.0, *)
     static func fromHexSequence(_ hex: String) -> [CGColor] {
         var colors: [CGColor] = []
 
