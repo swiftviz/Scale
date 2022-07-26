@@ -12,6 +12,8 @@ public struct ColorInterpolator: Hashable {
     // https://bids.github.io/colormap/
     var colors: [CGColor]
 
+    private static var lab = CGColorSpace(name: CGColorSpace.genericLab)!
+    
     /// Returns an index and re-normalized interpolation value to be able to step-wise interpolate through an array of options.
     /// - Parameters:
     ///   - t: The unit value to interpolate into and between the array elements
@@ -39,6 +41,29 @@ public struct ColorInterpolator: Hashable {
         return (lowerIndex, tValueBetweenSteps)
     }
 
+    private func color(from components: [CGFloat], using colorspace: CGColorSpace) -> CGColor {
+        CGColor(colorSpace: colorspace, components: components)!
+    }
+
+    private func components(from color: CGColor, for colorspace: CGColorSpace) -> [CGFloat] {
+        let convertedColor = color.converted(to: colorspace, intent: .perceptual, options: nil)!
+        let components = convertedColor.components!
+        return components
+    }
+
+    internal func interpolate(_ color1: CGColor, _ color2: CGColor, t: CGFloat, using colorspace: CGColorSpace) -> CGColor {
+        precondition(t >= 0 && t <= 1)
+        let components1 = components(from: color1, for: colorspace)
+        let components2 = components(from: color2, for: colorspace)
+        let newComponents = [
+            components1[0] + (components2[0] - components1[0]) * t,
+            components1[1] + (components2[1] - components1[1]) * t,
+            components1[2] + (components2[2] - components1[2]) * t,
+            components1[3] + (components2[3] - components1[3]) * t,
+        ]
+        return color(from: newComponents, using: colorspace)
+    }
+
     /// Returns the color mapped from the unit value you provide.
     /// - Parameter t: A unit value between `0` and  `1`.
     public func interpolate(_ t: Double) -> CGColor {
@@ -46,8 +71,7 @@ public struct ColorInterpolator: Hashable {
         // For the hex color sequences from D3 - we *don't* want to interpolate through LCH space,
         // but instead through regular LAB space. The colors were chosen with the direct LAB space in mind, not
         // the polar coordinate variation.
-        return LCH.interpolate(colors[colorIndex], colors[colorIndex + 1], t: tBetweenIndices, using: LCH.lab)
-        // return LCH.interpolate(colors[colorIndex], colors[colorIndex + 1], t: tBetweenIndices)
+        return interpolate(colors[colorIndex], colors[colorIndex + 1], t: tBetweenIndices, using: Self.lab)
     }
 
     /// Creates a new color interpolator that maps between the two colors you provide.
