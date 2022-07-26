@@ -33,7 +33,7 @@ public enum LCH {
     // https://www.alanzucconi.com/2016/01/06/colour-interpolation/
 
     static var lab = CGColorSpace(name: CGColorSpace.genericLab)!
-    
+
     /// Creates a Core Graphics color instance from individual components in the LCH color space.
     /// - Parameter components: A list of four components in the order: Luminance, Chroma, Hue, and Alpha.
     public static func color(from components: [CGFloat]) -> CGColor {

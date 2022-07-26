@@ -4,16 +4,40 @@
 
 import CoreGraphics
 
+public protocol ColorInterpolatorProtocol: Hashable {
+    func interpolate(_ t: Double) -> CGColor
+}
+
+public struct LCHColorInterpolator: ColorInterpolatorProtocol {
+    let startColor: CGColor
+    let endColor: CGColor
+
+    /// Creates a new color interpolator that maps between the two colors you provide.
+    /// - Parameters:
+    ///   - from: The color at the beginning.
+    ///   - to: The color at the end.
+    public init(_ from: CGColor, _ to: CGColor) {
+        startColor = from
+        endColor = to
+    }
+
+    /// Returns the color mapped from the unit value you provide.
+    /// - Parameter t: A unit value between `0` and  `1`.
+    public func interpolate(_ t: Double) -> CGColor {
+        LCH.interpolate(startColor, endColor, t: t)
+    }
+}
+
 /// An interpolator that maps a unit value into a color based on the position between the colors.
 @available(watchOS 6.0, *)
-public struct ColorInterpolator: Hashable {
+public struct ColorInterpolator: ColorInterpolatorProtocol {
     // Color pallets for interpolation and presentation:
     // https://github.com/d3/d3-scale-chromatic/blob/main/README.md
     // https://bids.github.io/colormap/
     var colors: [CGColor]
 
     private static var lab = CGColorSpace(name: CGColorSpace.genericLab)!
-    
+
     /// Returns an index and re-normalized interpolation value to be able to step-wise interpolate through an array of options.
     /// - Parameters:
     ///   - t: The unit value to interpolate into and between the array elements
@@ -41,17 +65,17 @@ public struct ColorInterpolator: Hashable {
         return (lowerIndex, tValueBetweenSteps)
     }
 
-    private func color(from components: [CGFloat], using colorspace: CGColorSpace) -> CGColor {
+    private static func color(from components: [CGFloat], using colorspace: CGColorSpace) -> CGColor {
         CGColor(colorSpace: colorspace, components: components)!
     }
 
-    private func components(from color: CGColor, for colorspace: CGColorSpace) -> [CGFloat] {
+    private static func components(from color: CGColor, for colorspace: CGColorSpace) -> [CGFloat] {
         let convertedColor = color.converted(to: colorspace, intent: .perceptual, options: nil)!
         let components = convertedColor.components!
         return components
     }
 
-    internal func interpolate(_ color1: CGColor, _ color2: CGColor, t: CGFloat, using colorspace: CGColorSpace) -> CGColor {
+    internal static func interpolate(_ color1: CGColor, _ color2: CGColor, t: CGFloat, using colorspace: CGColorSpace) -> CGColor {
         precondition(t >= 0 && t <= 1)
         let components1 = components(from: color1, for: colorspace)
         let components2 = components(from: color2, for: colorspace)
@@ -71,15 +95,7 @@ public struct ColorInterpolator: Hashable {
         // For the hex color sequences from D3 - we *don't* want to interpolate through LCH space,
         // but instead through regular LAB space. The colors were chosen with the direct LAB space in mind, not
         // the polar coordinate variation.
-        return interpolate(colors[colorIndex], colors[colorIndex + 1], t: tBetweenIndices, using: Self.lab)
-    }
-
-    /// Creates a new color interpolator that maps between the two colors you provide.
-    /// - Parameters:
-    ///   - from: The color at the beginning.
-    ///   - to: The color at the end.
-    public init(_ from: CGColor, _ to: CGColor) {
-        colors = [from, to]
+        return ColorInterpolator.interpolate(colors[colorIndex], colors[colorIndex + 1], t: tBetweenIndices, using: Self.lab)
     }
 
     /// Creates a new color interpolator that maps between the colors you provide.

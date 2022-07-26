@@ -26,7 +26,7 @@ struct LCHValues: View {
     }
 }
 
-@available(macOS 12.0, iOS 15.0, watchOS 8.0, *)
+@available(macOS 12.0, iOS 15.0, watchOS 8.0, tvOS 15.0, *)
 struct LCHAssembler: View {
     static let red = CGColor(srgbRed: 1, green: 0, blue: 0, alpha: 1)
     static let blue = CGColor(srgbRed: 0, green: 0, blue: 1, alpha: 1)
@@ -73,7 +73,9 @@ struct LCHAssembler: View {
                 TextField("L", value: $L, formatter: decimal)
                 TextField("C", value: $C, formatter: decimal)
                 TextField("H", value: $H, formatter: decimal)
+                #if !os(tvOS)
                 Slider(value: $H, in: -tau ... tau, step: 0.1)
+                #endif
             }
             Text("\(L), \(C), \(H)")
             Color(cgColor: colorFromLCHComponents(L, C, H))
@@ -83,7 +85,7 @@ struct LCHAssembler: View {
     }
 }
 
-@available(macOS 12.0, iOS 15.0, watchOS 8.0, *)
+@available(macOS 12.0, iOS 15.0, watchOS 8.0, tvOS 15.0, *)
 struct LCHAssembler_Previews: PreviewProvider {
     static var previews: some View {
         LCHAssembler()
