@@ -9,7 +9,7 @@ final class ArrayInterpolatorTests: XCTestCase {
     func testSweepInterpolateIntoSteps() throws {
         for count in 2 ... 10 {
             for tValue in 0 ... 10 {
-                let (index, intermediateTValue) = ColorInterpolator.interpolateIntoSteps(Double(tValue) / 10, count)
+                let (index, intermediateTValue) = IndexedColorInterpolator.interpolateIntoSteps(Double(tValue) / 10, count)
                 XCTAssertTrue(index >= 0)
                 XCTAssertTrue(index < count - 1)
                 XCTAssertTrue((0.0 ... 1.0).contains(intermediateTValue))
@@ -18,11 +18,11 @@ final class ArrayInterpolatorTests: XCTestCase {
     }
 
     func testHexValuesFromInterpolatorGuides() throws {
-        XCTAssertEqual(ColorInterpolator.white.toHex(), "FFFFFF")
-        XCTAssertEqual(ColorInterpolator.black.toHex(), "000000")
-        XCTAssertEqual(ColorInterpolator.red.toHex(), "FF0000")
-        XCTAssertEqual(ColorInterpolator.green.toHex(), "00FF00")
-        XCTAssertEqual(ColorInterpolator.blue.toHex(), "0000FF")
+        XCTAssertEqual(IndexedColorInterpolator.white.toHex(), "FFFFFF")
+        XCTAssertEqual(IndexedColorInterpolator.black.toHex(), "000000")
+        XCTAssertEqual(IndexedColorInterpolator.red.toHex(), "FF0000")
+        XCTAssertEqual(IndexedColorInterpolator.green.toHex(), "00FF00")
+        XCTAssertEqual(IndexedColorInterpolator.blue.toHex(), "0000FF")
     }
 
     func testHexSequence() throws {
@@ -63,7 +63,7 @@ final class ArrayInterpolatorTests: XCTestCase {
             1.0: (3, 1.0),
         ]
         for (tValue, resultSet) in expectedTValueResults {
-            let (index, intermediateTValue) = ColorInterpolator.interpolateIntoSteps(tValue, 5)
+            let (index, intermediateTValue) = IndexedColorInterpolator.interpolateIntoSteps(tValue, 5)
             print("index: \(index) t: \(intermediateTValue)")
             XCTAssertEqual(index, resultSet.0)
             XCTAssertEqual(intermediateTValue, resultSet.1, accuracy: 0.001)

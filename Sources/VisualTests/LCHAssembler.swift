@@ -74,7 +74,7 @@ struct LCHAssembler: View {
                 TextField("C", value: $C, formatter: decimal)
                 TextField("H", value: $H, formatter: decimal)
                 #if !os(tvOS)
-                Slider(value: $H, in: -tau ... tau, step: 0.1)
+                    Slider(value: $H, in: -tau ... tau, step: 0.1)
                 #endif
             }
             Text("\(L), \(C), \(H)")
