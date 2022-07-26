@@ -1,1 +1,221 @@
-{"primaryContentSections":[{"kind":"declarations","declarations":[{"tokens":[{"kind":"keyword","text":"let"},{"kind":"text","text":" "},{"kind":"identifier","text":"domainHigher"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"InputType"}],"languages":["swift"],"platforms":["macOS"]}]}],"schemaVersion":{"major":0,"minor":3,"patch":0},"sections":[],"variants":[{"paths":["\/documentation\/swiftvizscale\/sequentialscale\/domainhigher"],"traits":[{"interfaceLanguage":"swift"}]}],"identifier":{"url":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale\/domainHigher","interfaceLanguage":"swift"},"abstract":[{"type":"text","text":"The upper bound of the input domain."}],"kind":"symbol","metadata":{"fragments":[{"kind":"keyword","text":"let"},{"kind":"text","text":" "},{"kind":"identifier","text":"domainHigher"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"InputType"}],"title":"domainHigher","roleHeading":"Instance Property","role":"symbol","symbolKind":"property","externalID":"s:13SwiftVizScale010SequentialC0V12domainHigherxvp","modules":[{"name":"SwiftVizScale"}]},"hierarchy":{"paths":[["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale"]]},"references":{"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/SequentialScale/domainHigher":{"role":"symbol","title":"domainHigher","fragments":[{"kind":"keyword","text":"let"},{"kind":"text","text":" "},{"kind":"identifier","text":"domainHigher"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"InputType"}],"abstract":[{"type":"text","text":"The upper bound of the input domain."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale\/domainHigher","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale\/sequentialscale\/domainhigher"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale":{"role":"collection","title":"SwiftVizScale","abstract":[{"type":"text","text":"A collection of components to provide structures that support data visualization."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/SequentialScale":{"role":"symbol","title":"SequentialScale","fragments":[{"kind":"keyword","text":"struct"},{"kind":"text","text":" "},{"kind":"identifier","text":"SequentialScale"}],"abstract":[{"type":"text","text":"A type that maps values from a continuous input "},{"type":"emphasis","inlineContent":[{"type":"text","text":"domain"}]},{"type":"text","text":" to a color."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"SequentialScale"}],"url":"\/documentation\/swiftvizscale\/sequentialscale"}}}
+{
+  "abstract" : [
+    {
+      "text" : "The upper bound of the input domain.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale\/domainHigher"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:13SwiftVizScale010SequentialC0V12domainHigherxvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "domainHigher"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "InputType"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SwiftVizScale"
+      }
+    ],
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "6.0",
+        "name" : "watchOS",
+        "unavailable" : false
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "domainHigher"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "let"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "domainHigher"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "InputType"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/swiftvizscale\/sequentialscale\/domainhigher"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of components to provide structures that support data visualization.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SwiftVizScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/SequentialScale": {
+  "abstract" : [
+    {
+      "text" : "A type that maps values from a continuous input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to a color.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SequentialScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SequentialScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SequentialScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/sequentialscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/SequentialScale/domainHigher": {
+  "abstract" : [
+    {
+      "text" : "The upper bound of the input domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domainHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "InputType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale\/domainHigher",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domainHigher",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/sequentialscale\/domainhigher"
+}
+}
+}

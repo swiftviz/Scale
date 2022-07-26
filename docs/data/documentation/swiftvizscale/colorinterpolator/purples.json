@@ -1,1 +1,544 @@
-{"primaryContentSections":[{"kind":"declarations","declarations":[{"tokens":[{"kind":"keyword","text":"static"},{"kind":"text","text":" "},{"kind":"keyword","text":"let"},{"kind":"text","text":" "},{"kind":"identifier","text":"Purples"},{"kind":"text","text":": "},{"kind":"typeIdentifier","identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator","preciseIdentifier":"s:13SwiftVizScale17ColorInterpolatorV","text":"ColorInterpolator"}],"languages":["swift"],"platforms":["macOS"]}]}],"schemaVersion":{"major":0,"minor":3,"patch":0},"sections":[],"variants":[{"paths":["\/documentation\/swiftvizscale\/colorinterpolator\/purples"],"traits":[{"interfaceLanguage":"swift"}]}],"identifier":{"url":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Purples","interfaceLanguage":"swift"},"abstract":[{"type":"text","text":"An interpolator that presents  a white to purple single-hue color scheme."},{"type":"text","text":" "},{"type":"image","identifier":"Purples.png"}],"kind":"symbol","metadata":{"fragments":[{"kind":"keyword","text":"static"},{"kind":"text","text":" "},{"kind":"keyword","text":"let"},{"kind":"text","text":" "},{"kind":"identifier","text":"Purples"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"ColorInterpolator","preciseIdentifier":"s:13SwiftVizScale17ColorInterpolatorV"}],"title":"Purples","roleHeading":"Type Property","role":"symbol","symbolKind":"property","externalID":"s:13SwiftVizScale17ColorInterpolatorV7PurplesACvpZ","modules":[{"name":"SwiftVizScale"}]},"hierarchy":{"paths":[["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator"]]},"seeAlsoSections":[{"title":"Sequential Single Hue Color Schemes","identifiers":["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Grays","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Blues","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Greens","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Reds","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Oranges"],"generated":true}],"references":{"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator/Reds":{"role":"symbol","title":"Reds","fragments":[{"kind":"keyword","text":"static"},{"kind":"text","text":" "},{"kind":"keyword","text":"let"},{"kind":"text","text":" "},{"kind":"identifier","text":"Reds"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"ColorInterpolator","preciseIdentifier":"s:13SwiftVizScale17ColorInterpolatorV"}],"abstract":[{"type":"text","text":"An interpolator that presents  a white to red single-hue color scheme."},{"type":"text","text":" "},{"type":"image","identifier":"Reds.png"}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Reds","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale\/colorinterpolator\/reds"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator/Grays":{"role":"symbol","title":"Grays","fragments":[{"kind":"keyword","text":"static"},{"kind":"text","text":" "},{"kind":"keyword","text":"let"},{"kind":"text","text":" "},{"kind":"identifier","text":"Grays"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"ColorInterpolator","preciseIdentifier":"s:13SwiftVizScale17ColorInterpolatorV"}],"abstract":[{"type":"text","text":"An interpolator that presents  a white to black single-hue color scheme."},{"type":"text","text":" "},{"type":"image","identifier":"Grays.png"}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Grays","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale\/colorinterpolator\/grays"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator":{"role":"symbol","title":"ColorInterpolator","fragments":[{"kind":"keyword","text":"struct"},{"kind":"text","text":" "},{"kind":"identifier","text":"ColorInterpolator"}],"abstract":[{"type":"text","text":"An interpolator that maps a unit value into a color based on the position between the colors."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"ColorInterpolator"}],"url":"\/documentation\/swiftvizscale\/colorinterpolator"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator/Blues":{"role":"symbol","title":"Blues","fragments":[{"kind":"keyword","text":"static"},{"kind":"text","text":" "},{"kind":"keyword","text":"let"},{"kind":"text","text":" "},{"kind":"identifier","text":"Blues"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"ColorInterpolator","preciseIdentifier":"s:13SwiftVizScale17ColorInterpolatorV"}],"abstract":[{"type":"text","text":"An interpolator that presents  a white to blue single-hue color scheme."},{"type":"text","text":" "},{"type":"image","identifier":"Blues.png"}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Blues","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale\/colorinterpolator\/blues"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator/Greens":{"role":"symbol","title":"Greens","fragments":[{"kind":"keyword","text":"static"},{"kind":"text","text":" "},{"kind":"keyword","text":"let"},{"kind":"text","text":" "},{"kind":"identifier","text":"Greens"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"ColorInterpolator","preciseIdentifier":"s:13SwiftVizScale17ColorInterpolatorV"}],"abstract":[{"type":"text","text":"An interpolator that presents  a white to green single-hue color scheme."},{"type":"text","text":" "},{"type":"image","identifier":"Greens.png"}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Greens","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale\/colorinterpolator\/greens"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator/Purples":{"role":"symbol","title":"Purples","fragments":[{"kind":"keyword","text":"static"},{"kind":"text","text":" "},{"kind":"keyword","text":"let"},{"kind":"text","text":" "},{"kind":"identifier","text":"Purples"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"ColorInterpolator","preciseIdentifier":"s:13SwiftVizScale17ColorInterpolatorV"}],"abstract":[{"type":"text","text":"An interpolator that presents  a white to purple single-hue color scheme."},{"type":"text","text":" "},{"type":"image","identifier":"Purples.png"}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Purples","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale\/colorinterpolator\/purples"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator/Oranges":{"role":"symbol","title":"Oranges","fragments":[{"kind":"keyword","text":"static"},{"kind":"text","text":" "},{"kind":"keyword","text":"let"},{"kind":"text","text":" "},{"kind":"identifier","text":"Oranges"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"ColorInterpolator","preciseIdentifier":"s:13SwiftVizScale17ColorInterpolatorV"}],"abstract":[{"type":"text","text":"An interpolator that presents  a white to orange single-hue color scheme."},{"type":"text","text":" "},{"type":"image","identifier":"Oranges.png"}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Oranges","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale\/colorinterpolator\/oranges"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale":{"role":"collection","title":"SwiftVizScale","abstract":[{"type":"text","text":"A collection of components to provide structures that support data visualization."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale"},"Purples.png":{"alt":"A visual sample of the white to purple single-hue color scheme.","type":"image","identifier":"Purples.png","variants":[{"url":"\/images\/Purples.png","traits":["1x","light"]}]}}}
+{
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a white to purple single-hue color scheme.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "Purples.png",
+      "type" : "image"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Purples"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:13SwiftVizScale17ColorInterpolatorV7PurplesACvpZ",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "static"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Purples"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:13SwiftVizScale17ColorInterpolatorV",
+        "text" : "ColorInterpolator"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SwiftVizScale"
+      }
+    ],
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "6.0",
+        "name" : "watchOS",
+        "unavailable" : false
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Type Property",
+    "symbolKind" : "property",
+    "title" : "Purples"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "static"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "let"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Purples"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13SwiftVizScale17ColorInterpolatorV",
+              "text" : "ColorInterpolator"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Grays",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Blues",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Greens",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Reds",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Oranges"
+      ],
+      "title" : "Sequential Single Hue Color Schemes"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/swiftvizscale\/colorinterpolator\/purples"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"Purples.png": {
+  "alt" : "A visual sample of the white to purple single-hue color scheme.",
+  "identifier" : "Purples.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/Purples.png"
+    }
+  ]
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of components to provide structures that support data visualization.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SwiftVizScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that maps a unit value into a color based on the position between the colors.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ColorInterpolator"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ColorInterpolator",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorinterpolator"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator/Blues": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a white to blue single-hue color scheme.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "Blues.png",
+      "type" : "image"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Blues"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale17ColorInterpolatorV",
+      "text" : "ColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Blues",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Blues",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorinterpolator\/blues"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator/Grays": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a white to black single-hue color scheme.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "Grays.png",
+      "type" : "image"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Grays"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale17ColorInterpolatorV",
+      "text" : "ColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Grays",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Grays",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorinterpolator\/grays"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator/Greens": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a white to green single-hue color scheme.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "Greens.png",
+      "type" : "image"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Greens"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale17ColorInterpolatorV",
+      "text" : "ColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Greens",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Greens",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorinterpolator\/greens"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator/Oranges": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a white to orange single-hue color scheme.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "Oranges.png",
+      "type" : "image"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Oranges"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale17ColorInterpolatorV",
+      "text" : "ColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Oranges",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Oranges",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorinterpolator\/oranges"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator/Purples": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a white to purple single-hue color scheme.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "Purples.png",
+      "type" : "image"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Purples"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale17ColorInterpolatorV",
+      "text" : "ColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Purples",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Purples",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorinterpolator\/purples"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator/Reds": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a white to red single-hue color scheme.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "Reds.png",
+      "type" : "image"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Reds"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale17ColorInterpolatorV",
+      "text" : "ColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/Reds",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Reds",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorinterpolator\/reds"
+}
+}
+}

@@ -1,1 +1,379 @@
-{"primaryContentSections":[{"kind":"declarations","declarations":[{"tokens":[{"kind":"keyword","text":"associatedtype"},{"kind":"text","text":" "},{"kind":"identifier","text":"OutputType"}],"languages":["swift"],"platforms":["macOS"]}]}],"schemaVersion":{"major":0,"minor":3,"patch":0},"sections":[],"variants":[{"paths":["\/documentation\/swiftvizscale\/scale\/outputtype"],"traits":[{"interfaceLanguage":"swift"}]}],"identifier":{"url":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType","interfaceLanguage":"swift"},"abstract":[{"type":"text","text":"The type used for the scale’s output."}],"kind":"symbol","metadata":{"role":"symbol","title":"OutputType","roleHeading":"Associated Type","fragments":[{"kind":"keyword","text":"associatedtype"},{"kind":"text","text":" "},{"kind":"identifier","text":"OutputType"}],"symbolKind":"associatedtype","externalID":"s:13SwiftVizScale0C0P10OutputTypeQa","required":true,"modules":[{"name":"SwiftVizScale"}]},"hierarchy":{"paths":[["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ReversibleScale"],["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale"]]},"seeAlsoSections":[{"title":"Scale Types","identifiers":["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ReversibleScale\/RangeType"],"generated":true}],"references":{"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale":{"role":"symbol","title":"Scale","fragments":[{"kind":"keyword","text":"protocol"},{"kind":"text","text":" "},{"kind":"identifier","text":"Scale"}],"abstract":[{"type":"text","text":"A type that maps values from an input "},{"type":"emphasis","inlineContent":[{"type":"text","text":"domain"}]},{"type":"text","text":" to an output "},{"type":"emphasis","inlineContent":[{"type":"text","text":"range"}]},{"type":"text","text":"."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"Scale"}],"url":"\/documentation\/swiftvizscale\/scale"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/OutputType":{"role":"symbol","title":"OutputType","fragments":[{"kind":"keyword","text":"associatedtype"},{"kind":"text","text":" "},{"kind":"identifier","text":"OutputType"}],"abstract":[{"type":"text","text":"The type used for the scale’s output."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType","kind":"symbol","required":true,"type":"topic","url":"\/documentation\/swiftvizscale\/scale\/outputtype"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ReversibleScale":{"role":"symbol","title":"ReversibleScale","fragments":[{"kind":"keyword","text":"protocol"},{"kind":"text","text":" "},{"kind":"identifier","text":"ReversibleScale"}],"abstract":[{"type":"text","text":"A type that maps values from an input "},{"type":"emphasis","inlineContent":[{"type":"text","text":"domain"}]},{"type":"text","text":" to an output "},{"type":"emphasis","inlineContent":[{"type":"text","text":"range"}]},{"type":"text","text":", or reversed from an output "},{"type":"emphasis","inlineContent":[{"type":"text","text":"range"}]},{"type":"text","text":" to a corresponding "},{"type":"emphasis","inlineContent":[{"type":"text","text":"domain"}]},{"type":"text","text":" value."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ReversibleScale","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"ReversibleScale"}],"url":"\/documentation\/swiftvizscale\/reversiblescale"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ReversibleScale/RangeType":{"role":"symbol","title":"RangeType","fragments":[{"kind":"keyword","text":"associatedtype"},{"kind":"text","text":" "},{"kind":"identifier","text":"RangeType"},{"kind":"text","text":" : "},{"kind":"typeIdentifier","text":"ConvertibleWithDouble","preciseIdentifier":"s:13SwiftVizScale21ConvertibleWithDoubleP"}],"abstract":[{"type":"text","text":"The type used for the scale’s range."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ReversibleScale\/RangeType","kind":"symbol","required":true,"type":"topic","url":"\/documentation\/swiftvizscale\/reversiblescale\/rangetype"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale":{"role":"collection","title":"SwiftVizScale","abstract":[{"type":"text","text":"A collection of components to provide structures that support data visualization."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/InputType":{"role":"symbol","title":"InputType","fragments":[{"kind":"keyword","text":"associatedtype"},{"kind":"text","text":" "},{"kind":"identifier","text":"InputType"},{"kind":"text","text":" : "},{"kind":"typeIdentifier","text":"Comparable","preciseIdentifier":"s:SL"}],"abstract":[{"type":"text","text":"The type used for the scale’s domain."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType","kind":"symbol","required":true,"type":"topic","url":"\/documentation\/swiftvizscale\/scale\/inputtype"}}}
+{
+  "abstract" : [
+    {
+      "text" : "The type used for the scale’s output.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ReversibleScale"
+      ],
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:13SwiftVizScale0C0P10OutputTypeQa",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "associatedtype"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "OutputType"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SwiftVizScale"
+      }
+    ],
+    "required" : true,
+    "role" : "symbol",
+    "roleHeading" : "Associated Type",
+    "symbolKind" : "associatedtype",
+    "title" : "OutputType"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "associatedtype"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "OutputType"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ReversibleScale\/RangeType"
+      ],
+      "title" : "Scale Types"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/swiftvizscale\/scale\/outputtype"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of components to provide structures that support data visualization.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SwiftVizScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ReversibleScale": {
+  "abstract" : [
+    {
+      "text" : "A type that maps values from an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ", or reversed from an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to a corresponding ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " value.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ReversibleScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ReversibleScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ReversibleScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ReversibleScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/reversiblescale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ReversibleScale/RangeType": {
+  "abstract" : [
+    {
+      "text" : "The type used for the scale’s range.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "associatedtype"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : " : "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
+      "text" : "ConvertibleWithDouble"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ReversibleScale\/RangeType",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "RangeType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/reversiblescale\/rangetype"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale": {
+  "abstract" : [
+    {
+      "text" : "A type that maps values from an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Scale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Scale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Scale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/scale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/InputType": {
+  "abstract" : [
+    {
+      "text" : "The type used for the scale’s domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "associatedtype"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : " : "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SL",
+      "text" : "Comparable"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/InputType",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "InputType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/scale\/inputtype"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale/OutputType": {
+  "abstract" : [
+    {
+      "text" : "The type used for the scale’s output.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "associatedtype"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "OutputType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale\/OutputType",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "OutputType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/scale\/outputtype"
+}
+}
+}

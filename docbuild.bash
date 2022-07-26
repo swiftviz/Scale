@@ -13,10 +13,11 @@ set -x  # print a trace of commands as they execute
 #    -Xswiftc -emit-symbol-graph \
 #    -Xswiftc -emit-symbol-graph-dir -Xswiftc .build/symbol-graphs
 #
-## Enables deterministic output
-## - useful when you're committing the results to host on github pages
-#export DOCC_JSON_PRETTYPRINT=YES
-#
+
+# Enables deterministic output
+# - useful when you're committing the results to host on github pages
+export DOCC_JSON_PRETTYPRINT=YES
+
 #$(xcrun --find docc) convert Sources/SwiftVizScale/Documentation.docc \
 #    --output-path ./docs \
 #    --fallback-display-name SwiftVizScale \

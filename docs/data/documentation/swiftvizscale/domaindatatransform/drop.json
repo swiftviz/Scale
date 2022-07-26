@@ -1,1 +1,280 @@
-{"primaryContentSections":[{"kind":"declarations","declarations":[{"tokens":[{"kind":"keyword","text":"case"},{"kind":"text","text":" "},{"kind":"identifier","text":"drop"}],"languages":["swift"],"platforms":["macOS"]}]}],"schemaVersion":{"major":0,"minor":3,"patch":0},"sections":[],"variants":[{"paths":["\/documentation\/swiftvizscale\/domaindatatransform\/drop"],"traits":[{"interfaceLanguage":"swift"}]}],"identifier":{"url":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform\/drop","interfaceLanguage":"swift"},"abstract":[{"type":"text","text":"Data processed against a scale is dropped if the value is outside of the scale’s domain."}],"kind":"symbol","metadata":{"fragments":[{"kind":"keyword","text":"case"},{"kind":"text","text":" "},{"kind":"identifier","text":"drop"}],"title":"DomainDataTransform.drop","roleHeading":"Case","role":"symbol","symbolKind":"case","externalID":"s:13SwiftVizScale19DomainDataTransformO4dropyA2CmF","modules":[{"name":"SwiftVizScale"}]},"hierarchy":{"paths":[["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform"],["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform"]]},"seeAlsoSections":[{"title":"Domain Transform Values","identifiers":["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform\/none","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform\/clamp"],"generated":true}],"references":{"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale":{"role":"symbol","title":"ContinuousScale","fragments":[{"kind":"keyword","text":"struct"},{"kind":"text","text":" "},{"kind":"identifier","text":"ContinuousScale"}],"abstract":[{"type":"text","text":"A continuous scale for transforming and mapping continuous input values within a domain to output values you provide."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"ContinuousScale"}],"url":"\/documentation\/swiftvizscale\/continuousscale"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform/none":{"role":"symbol","title":"DomainDataTransform.none","fragments":[{"kind":"keyword","text":"case"},{"kind":"text","text":" "},{"kind":"identifier","text":"none"}],"abstract":[{"type":"text","text":"Data processed against a scale isn’t influenced by the scale’s domain."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform\/none","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale\/domaindatatransform\/none"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform":{"role":"symbol","title":"DomainDataTransform","fragments":[{"kind":"keyword","text":"enum"},{"kind":"text","text":" "},{"kind":"identifier","text":"DomainDataTransform"}],"abstract":[{"type":"text","text":"A value that represents how a scale handles data transformation that exceed the domain or range of the scale."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"DomainDataTransform"}],"url":"\/documentation\/swiftvizscale\/domaindatatransform"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform/drop":{"role":"symbol","title":"DomainDataTransform.drop","fragments":[{"kind":"keyword","text":"case"},{"kind":"text","text":" "},{"kind":"identifier","text":"drop"}],"abstract":[{"type":"text","text":"Data processed against a scale is dropped if the value is outside of the scale’s domain."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform\/drop","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale\/domaindatatransform\/drop"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform/clamp":{"role":"symbol","title":"DomainDataTransform.clamp","fragments":[{"kind":"keyword","text":"case"},{"kind":"text","text":" "},{"kind":"identifier","text":"clamp"}],"abstract":[{"type":"text","text":"Data processed against a scale is clamped to the upper and lower values of the scale’s domain."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform\/clamp","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale\/domaindatatransform\/clamp"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale":{"role":"collection","title":"SwiftVizScale","abstract":[{"type":"text","text":"A collection of components to provide structures that support data visualization."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale"}}}
+{
+  "abstract" : [
+    {
+      "text" : "Data processed against a scale is dropped if the value is outside of the scale’s domain.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform"
+      ],
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform\/drop"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:13SwiftVizScale19DomainDataTransformO4dropyA2CmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "drop"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SwiftVizScale"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "DomainDataTransform.drop"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "drop"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform\/none",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform\/clamp"
+      ],
+      "title" : "Domain Transform Values"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/swiftvizscale\/domaindatatransform\/drop"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of components to provide structures that support data visualization.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SwiftVizScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale": {
+  "abstract" : [
+    {
+      "text" : "A continuous scale for transforming and mapping continuous input values within a domain to output values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ContinuousScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ContinuousScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ContinuousScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform": {
+  "abstract" : [
+    {
+      "text" : "A value that represents how a scale handles data transformation that exceed the domain or range of the scale.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DomainDataTransform"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DomainDataTransform"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DomainDataTransform",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/domaindatatransform"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform/clamp": {
+  "abstract" : [
+    {
+      "text" : "Data processed against a scale is clamped to the upper and lower values of the scale’s domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "clamp"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform\/clamp",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "DomainDataTransform.clamp",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/domaindatatransform\/clamp"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform/drop": {
+  "abstract" : [
+    {
+      "text" : "Data processed against a scale is dropped if the value is outside of the scale’s domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "drop"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform\/drop",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "DomainDataTransform.drop",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/domaindatatransform\/drop"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform/none": {
+  "abstract" : [
+    {
+      "text" : "Data processed against a scale isn’t influenced by the scale’s domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "none"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform\/none",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "DomainDataTransform.none",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/domaindatatransform\/none"
+}
+}
+}

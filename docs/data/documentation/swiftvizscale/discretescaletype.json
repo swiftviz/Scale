@@ -1,1 +1,460 @@
-{"seeAlsoSections":[{"title":"Discrete Scales","identifiers":["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Band","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale"],"generated":true}],"schemaVersion":{"major":0,"minor":3,"patch":0},"metadata":{"fragments":[{"kind":"keyword","text":"enum"},{"kind":"text","text":" "},{"kind":"identifier","text":"DiscreteScaleType"}],"title":"DiscreteScaleType","roleHeading":"Enumeration","role":"symbol","symbolKind":"enum","externalID":"s:13SwiftVizScale08DiscreteC4TypeO","modules":[{"name":"SwiftVizScale"}],"navigatorTitle":[{"kind":"identifier","text":"DiscreteScaleType"}]},"abstract":[{"type":"text","text":"The type of discrete scale."}],"sections":[],"identifier":{"url":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType","interfaceLanguage":"swift"},"relationshipsSections":[{"identifiers":["doc:\/\/com.github.swiftviz.SwiftVizScale\/SQ","doc:\/\/com.github.swiftviz.SwiftVizScale\/SH"],"kind":"relationships","title":"Conforms To","type":"conformsTo"}],"hierarchy":{"paths":[["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale"],["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale"]]},"topicSections":[{"title":"Enumeration Cases","identifiers":["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType\/band","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType\/point"]},{"title":"Default Implementations","identifiers":["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType\/Equatable-Implementations"],"generated":true}],"variants":[{"paths":["\/documentation\/swiftvizscale\/discretescaletype"],"traits":[{"interfaceLanguage":"swift"}]}],"kind":"symbol","primaryContentSections":[{"kind":"declarations","declarations":[{"tokens":[{"kind":"keyword","text":"enum"},{"kind":"text","text":" "},{"kind":"identifier","text":"DiscreteScaleType"}],"languages":["swift"],"platforms":["macOS"]}]}],"references":{"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScaleType":{"role":"symbol","title":"DiscreteScaleType","fragments":[{"kind":"keyword","text":"enum"},{"kind":"text","text":" "},{"kind":"identifier","text":"DiscreteScaleType"}],"abstract":[{"type":"text","text":"The type of discrete scale."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"DiscreteScaleType"}],"url":"\/documentation\/swiftvizscale\/discretescaletype"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale":{"role":"symbol","title":"DiscreteScale","fragments":[{"kind":"keyword","text":"protocol"},{"kind":"text","text":" "},{"kind":"identifier","text":"DiscreteScale"}],"abstract":[{"type":"text","text":"A type that maps discrete values of an input "},{"type":"emphasis","inlineContent":[{"type":"text","text":"domain"}]},{"type":"text","text":" to an output "},{"type":"emphasis","inlineContent":[{"type":"text","text":"range"}]},{"type":"text","text":"."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"DiscreteScale"}],"url":"\/documentation\/swiftvizscale\/discretescale"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScaleType/band":{"role":"symbol","title":"DiscreteScaleType.band","fragments":[{"kind":"keyword","text":"case"},{"kind":"text","text":" "},{"kind":"identifier","text":"band"}],"abstract":[{"type":"text","text":"A discrete scale that returns a band for the scaled value."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType\/band","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale\/discretescaletype\/band"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScaleType/point":{"role":"symbol","title":"DiscreteScaleType.point","fragments":[{"kind":"keyword","text":"case"},{"kind":"text","text":" "},{"kind":"identifier","text":"point"}],"abstract":[{"type":"text","text":"A discrete scale that returns a point for the scaled value."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType\/point","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale\/discretescaletype\/point"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale":{"role":"symbol","title":"PointScale","fragments":[{"kind":"keyword","text":"struct"},{"kind":"text","text":" "},{"kind":"identifier","text":"PointScale"}],"abstract":[{"type":"text","text":"A discrete scale that maps from a discrete value within a collection to a point within a continuous output "},{"type":"emphasis","inlineContent":[{"type":"text","text":"range"}]},{"type":"text","text":"."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"PointScale"}],"url":"\/documentation\/swiftvizscale\/pointscale"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale":{"role":"collection","title":"SwiftVizScale","abstract":[{"type":"text","text":"A collection of components to provide structures that support data visualization."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale"},"doc://com.github.swiftviz.SwiftVizScale/SH":{"type":"unresolvable","title":"Swift.Hashable","identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/SH"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale":{"role":"symbol","title":"BandScale","fragments":[{"kind":"keyword","text":"struct"},{"kind":"text","text":" "},{"kind":"identifier","text":"BandScale"}],"abstract":[{"type":"text","text":"A discrete scale that maps from a discrete value within a collection to a band within a continuous output "},{"type":"emphasis","inlineContent":[{"type":"text","text":"range"}]},{"type":"text","text":"."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"BandScale"}],"url":"\/documentation\/swiftvizscale\/bandscale"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScaleType/Equatable-Implementations":{"role":"collectionGroup","title":"Equatable Implementations","abstract":[],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType\/Equatable-Implementations","kind":"article","type":"topic","url":"\/documentation\/swiftvizscale\/discretescaletype\/equatable-implementations"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Band":{"role":"symbol","title":"Band","fragments":[{"kind":"keyword","text":"struct"},{"kind":"text","text":" "},{"kind":"identifier","text":"Band"}],"abstract":[{"type":"text","text":"A type used to indicate the start and stop positions for a band associated with the provided value."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Band","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"Band"}],"url":"\/documentation\/swiftvizscale\/band"},"doc://com.github.swiftviz.SwiftVizScale/SQ":{"type":"unresolvable","title":"Swift.Equatable","identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/SQ"}}}
+{
+  "abstract" : [
+    {
+      "text" : "The type of discrete scale.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale"
+      ],
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:13SwiftVizScale08DiscreteC4TypeO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "DiscreteScaleType"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SwiftVizScale"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "DiscreteScaleType"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "DiscreteScaleType"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "DiscreteScaleType"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/SQ",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/SH"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Band",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale"
+      ],
+      "title" : "Discrete Scales"
+    }
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType\/band",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType\/point"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/swiftvizscale\/discretescaletype"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://com.github.swiftviz.SwiftVizScale/SH": {
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://com.github.swiftviz.SwiftVizScale/SQ": {
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of components to provide structures that support data visualization.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SwiftVizScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Band": {
+  "abstract" : [
+    {
+      "text" : "A type used to indicate the start and stop positions for a band associated with the provided value.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Band"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Band",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Band"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Band",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/band"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale": {
+  "abstract" : [
+    {
+      "text" : "A discrete scale that maps from a discrete value within a collection to a band within a continuous output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BandScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BandScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "BandScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/bandscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale": {
+  "abstract" : [
+    {
+      "text" : "A type that maps discrete values of an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DiscreteScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DiscreteScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DiscreteScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScaleType": {
+  "abstract" : [
+    {
+      "text" : "The type of discrete scale.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DiscreteScaleType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DiscreteScaleType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DiscreteScaleType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescaletype"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScaleType/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescaletype\/equatable-implementations"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScaleType/band": {
+  "abstract" : [
+    {
+      "text" : "A discrete scale that returns a band for the scaled value.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "band"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType\/band",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "DiscreteScaleType.band",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescaletype\/band"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScaleType/point": {
+  "abstract" : [
+    {
+      "text" : "A discrete scale that returns a point for the scaled value.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "point"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType\/point",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "DiscreteScaleType.point",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescaletype\/point"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale": {
+  "abstract" : [
+    {
+      "text" : "A discrete scale that maps from a discrete value within a collection to a point within a continuous output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PointScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PointScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PointScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale"
+}
+}
+}

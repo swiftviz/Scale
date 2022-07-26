@@ -1,1 +1,9 @@
-{"bundleDisplayName":"SwiftVizScale","bundleIdentifier":"com.github.swiftviz.SwiftVizScale","schemaVersion":{"major":0,"minor":1,"patch":0}}
+{
+  "bundleDisplayName" : "SwiftVizScale",
+  "bundleIdentifier" : "com.github.swiftviz.SwiftVizScale",
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 1,
+    "patch" : 0
+  }
+}

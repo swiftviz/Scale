@@ -1,1 +1,1093 @@
-{"seeAlsoSections":[{"title":"Discrete Scales","identifiers":["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Band","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType"],"generated":true}],"schemaVersion":{"major":0,"minor":3,"patch":0},"metadata":{"fragments":[{"kind":"keyword","text":"protocol"},{"kind":"text","text":" "},{"kind":"identifier","text":"DiscreteScale"}],"title":"DiscreteScale","roleHeading":"Protocol","role":"symbol","symbolKind":"protocol","externalID":"s:13SwiftVizScale08DiscreteC0P","modules":[{"name":"SwiftVizScale"}],"navigatorTitle":[{"kind":"identifier","text":"DiscreteScale"}]},"abstract":[{"type":"text","text":"A type that maps discrete values of an input "},{"type":"emphasis","inlineContent":[{"type":"text","text":"domain"}]},{"type":"text","text":" to an output "},{"type":"emphasis","inlineContent":[{"type":"text","text":"range"}]},{"type":"text","text":"."}],"sections":[],"identifier":{"url":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale","interfaceLanguage":"swift"},"relationshipsSections":[{"identifiers":["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ReversibleScale","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale","doc:\/\/com.github.swiftviz.SwiftVizScale\/s23CustomStringConvertibleP"],"kind":"relationships","title":"Inherits From","type":"inheritsFrom"},{"identifiers":["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale"],"kind":"relationships","title":"Conforming Types","type":"conformingTypes"}],"hierarchy":{"paths":[["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale"]]},"topicSections":[{"title":"Inspecting Scales","identifiers":["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/domain","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/rangeHigher","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/rangeLower","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/scaleType","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType"]},{"title":"Creating Ticks","identifiers":["doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/ticks(rangeLower:rangeHigher:formatter:)","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)","doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/defaultTickValues(formatter:)"]}],"variants":[{"paths":["\/documentation\/swiftvizscale\/discretescale"],"traits":[{"interfaceLanguage":"swift"}]}],"kind":"symbol","primaryContentSections":[{"kind":"declarations","declarations":[{"tokens":[{"kind":"keyword","text":"protocol"},{"kind":"text","text":" "},{"kind":"identifier","text":"DiscreteScale"},{"kind":"text","text":" : "},{"kind":"typeIdentifier","text":"CustomStringConvertible","preciseIdentifier":"s:s23CustomStringConvertibleP"},{"kind":"text","text":", "},{"kind":"typeIdentifier","identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ReversibleScale","preciseIdentifier":"s:13SwiftVizScale010ReversibleC0P","text":"ReversibleScale"}],"languages":["swift"],"platforms":["macOS"]}]}],"references":{"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ReversibleScale":{"role":"symbol","title":"ReversibleScale","fragments":[{"kind":"keyword","text":"protocol"},{"kind":"text","text":" "},{"kind":"identifier","text":"ReversibleScale"}],"abstract":[{"type":"text","text":"A type that maps values from an input "},{"type":"emphasis","inlineContent":[{"type":"text","text":"domain"}]},{"type":"text","text":" to an output "},{"type":"emphasis","inlineContent":[{"type":"text","text":"range"}]},{"type":"text","text":", or reversed from an output "},{"type":"emphasis","inlineContent":[{"type":"text","text":"range"}]},{"type":"text","text":" to a corresponding "},{"type":"emphasis","inlineContent":[{"type":"text","text":"domain"}]},{"type":"text","text":" value."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ReversibleScale","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"ReversibleScale"}],"url":"\/documentation\/swiftvizscale\/reversiblescale"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/rangeLower":{"role":"symbol","title":"rangeLower","fragments":[{"kind":"keyword","text":"var"},{"kind":"text","text":" "},{"kind":"identifier","text":"rangeLower"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"Self"},{"kind":"text","text":"."},{"kind":"typeIdentifier","text":"RangeType"},{"kind":"text","text":"?"}],"abstract":[{"type":"text","text":"The lower value of the range into which the discrete values map."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/rangeLower","kind":"symbol","required":true,"type":"topic","url":"\/documentation\/swiftvizscale\/discretescale\/rangelower"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale":{"role":"symbol","title":"BandScale","fragments":[{"kind":"keyword","text":"struct"},{"kind":"text","text":" "},{"kind":"identifier","text":"BandScale"}],"abstract":[{"type":"text","text":"A discrete scale that maps from a discrete value within a collection to a band within a continuous output "},{"type":"emphasis","inlineContent":[{"type":"text","text":"range"}]},{"type":"text","text":"."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"BandScale"}],"url":"\/documentation\/swiftvizscale\/bandscale"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScaleType":{"role":"symbol","title":"DiscreteScaleType","fragments":[{"kind":"keyword","text":"enum"},{"kind":"text","text":" "},{"kind":"identifier","text":"DiscreteScaleType"}],"abstract":[{"type":"text","text":"The type of discrete scale."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"DiscreteScaleType"}],"url":"\/documentation\/swiftvizscale\/discretescaletype"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/ticks(reversed:rangeLower:rangeHigher:formatter:)":{"role":"symbol","title":"ticks(reversed:rangeLower:rangeHigher:formatter:)","fragments":[{"kind":"keyword","text":"func"},{"kind":"text","text":" "},{"kind":"identifier","text":"ticks"},{"kind":"text","text":"("},{"kind":"externalParam","text":"reversed"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"Bool","preciseIdentifier":"s:Sb"},{"kind":"text","text":", "},{"kind":"externalParam","text":"rangeLower"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"Self"},{"kind":"text","text":"."},{"kind":"typeIdentifier","text":"RangeType"},{"kind":"text","text":", "},{"kind":"externalParam","text":"rangeHigher"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"Self"},{"kind":"text","text":"."},{"kind":"typeIdentifier","text":"RangeType"},{"kind":"text","text":", "},{"kind":"externalParam","text":"formatter"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"Formatter","preciseIdentifier":"c:objc(cs)NSFormatter"},{"kind":"text","text":"?) -> ["},{"kind":"typeIdentifier","text":"Tick","preciseIdentifier":"s:13SwiftVizScale4TickV"},{"kind":"text","text":"<"},{"kind":"typeIdentifier","text":"Self"},{"kind":"text","text":"."},{"kind":"typeIdentifier","text":"RangeType"},{"kind":"text","text":">]"}],"abstract":[{"type":"text","text":"Returns an array of the locations within the output range to locate ticks for the scale."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)","kind":"symbol","required":true,"type":"topic","url":"\/documentation\/swiftvizscale\/discretescale\/ticks(reversed:rangelower:rangehigher:formatter:)"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale":{"role":"symbol","title":"DiscreteScale","fragments":[{"kind":"keyword","text":"protocol"},{"kind":"text","text":" "},{"kind":"identifier","text":"DiscreteScale"}],"abstract":[{"type":"text","text":"A type that maps discrete values of an input "},{"type":"emphasis","inlineContent":[{"type":"text","text":"domain"}]},{"type":"text","text":" to an output "},{"type":"emphasis","inlineContent":[{"type":"text","text":"range"}]},{"type":"text","text":"."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"DiscreteScale"}],"url":"\/documentation\/swiftvizscale\/discretescale"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/scaleType":{"role":"symbol","title":"scaleType","fragments":[{"kind":"keyword","text":"var"},{"kind":"text","text":" "},{"kind":"identifier","text":"scaleType"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"DiscreteScaleType","preciseIdentifier":"s:13SwiftVizScale08DiscreteC4TypeO"}],"abstract":[],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/scaleType","kind":"symbol","required":true,"type":"topic","url":"\/documentation\/swiftvizscale\/discretescale\/scaletype"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Band":{"role":"symbol","title":"Band","fragments":[{"kind":"keyword","text":"struct"},{"kind":"text","text":" "},{"kind":"identifier","text":"Band"}],"abstract":[{"type":"text","text":"A type used to indicate the start and stop positions for a band associated with the provided value."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Band","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"Band"}],"url":"\/documentation\/swiftvizscale\/band"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/defaultTickValues(formatter:)":{"role":"symbol","title":"defaultTickValues(formatter:)","fragments":[{"kind":"keyword","text":"func"},{"kind":"text","text":" "},{"kind":"identifier","text":"defaultTickValues"},{"kind":"text","text":"("},{"kind":"externalParam","text":"formatter"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"Formatter","preciseIdentifier":"c:objc(cs)NSFormatter"},{"kind":"text","text":"?) -> ["},{"kind":"typeIdentifier","text":"String","preciseIdentifier":"s:SS"},{"kind":"text","text":"]"}],"abstract":[{"type":"text","text":"Returns an array of the strings that make up the ticks for the scale."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/defaultTickValues(formatter:)","kind":"symbol","required":true,"type":"topic","url":"\/documentation\/swiftvizscale\/discretescale\/defaulttickvalues(formatter:)"},"doc://com.github.swiftviz.SwiftVizScale/s23CustomStringConvertibleP":{"type":"unresolvable","title":"Swift.CustomStringConvertible","identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/s23CustomStringConvertibleP"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/domain":{"role":"symbol","title":"domain","fragments":[{"kind":"keyword","text":"var"},{"kind":"text","text":" "},{"kind":"identifier","text":"domain"},{"kind":"text","text":": ["},{"kind":"typeIdentifier","text":"Self"},{"kind":"text","text":"."},{"kind":"typeIdentifier","text":"InputType"},{"kind":"text","text":"]"}],"abstract":[{"type":"text","text":"An array of the types the scale maps into."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/domain","kind":"symbol","required":true,"type":"topic","url":"\/documentation\/swiftvizscale\/discretescale\/domain"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/rangeHigher":{"role":"symbol","title":"rangeHigher","fragments":[{"kind":"keyword","text":"var"},{"kind":"text","text":" "},{"kind":"identifier","text":"rangeHigher"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"Self"},{"kind":"text","text":"."},{"kind":"typeIdentifier","text":"RangeType"},{"kind":"text","text":"?"}],"abstract":[{"type":"text","text":"The upper value of the range into which the discrete values map."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/rangeHigher","kind":"symbol","required":true,"type":"topic","url":"\/documentation\/swiftvizscale\/discretescale\/rangehigher"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale":{"role":"collection","title":"SwiftVizScale","abstract":[{"type":"text","text":"A collection of components to provide structures that support data visualization."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale","kind":"symbol","type":"topic","url":"\/documentation\/swiftvizscale"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale":{"role":"symbol","title":"Scale","fragments":[{"kind":"keyword","text":"protocol"},{"kind":"text","text":" "},{"kind":"identifier","text":"Scale"}],"abstract":[{"type":"text","text":"A type that maps values from an input "},{"type":"emphasis","inlineContent":[{"type":"text","text":"domain"}]},{"type":"text","text":" to an output "},{"type":"emphasis","inlineContent":[{"type":"text","text":"range"}]},{"type":"text","text":"."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"Scale"}],"url":"\/documentation\/swiftvizscale\/scale"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/ticks(rangeLower:rangeHigher:formatter:)":{"role":"symbol","title":"ticks(rangeLower:rangeHigher:formatter:)","fragments":[{"kind":"keyword","text":"func"},{"kind":"text","text":" "},{"kind":"identifier","text":"ticks"},{"kind":"text","text":"("},{"kind":"externalParam","text":"rangeLower"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"Self"},{"kind":"text","text":"."},{"kind":"typeIdentifier","text":"RangeType"},{"kind":"text","text":", "},{"kind":"externalParam","text":"rangeHigher"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"Self"},{"kind":"text","text":"."},{"kind":"typeIdentifier","text":"RangeType"},{"kind":"text","text":", "},{"kind":"externalParam","text":"formatter"},{"kind":"text","text":": "},{"kind":"typeIdentifier","text":"Formatter","preciseIdentifier":"c:objc(cs)NSFormatter"},{"kind":"text","text":"?) -> ["},{"kind":"typeIdentifier","text":"Tick","preciseIdentifier":"s:13SwiftVizScale4TickV"},{"kind":"text","text":"<"},{"kind":"typeIdentifier","text":"Self"},{"kind":"text","text":"."},{"kind":"typeIdentifier","text":"RangeType"},{"kind":"text","text":">]"}],"abstract":[{"type":"text","text":"Returns an array of the locations within the output range to locate ticks for the scale."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/ticks(rangeLower:rangeHigher:formatter:)","kind":"symbol","required":true,"type":"topic","url":"\/documentation\/swiftvizscale\/discretescale\/ticks(rangelower:rangehigher:formatter:)"},"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale":{"role":"symbol","title":"PointScale","fragments":[{"kind":"keyword","text":"struct"},{"kind":"text","text":" "},{"kind":"identifier","text":"PointScale"}],"abstract":[{"type":"text","text":"A discrete scale that maps from a discrete value within a collection to a point within a continuous output "},{"type":"emphasis","inlineContent":[{"type":"text","text":"range"}]},{"type":"text","text":"."}],"identifier":"doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale","kind":"symbol","type":"topic","navigatorTitle":[{"kind":"identifier","text":"PointScale"}],"url":"\/documentation\/swiftvizscale\/pointscale"}}}
+{
+  "abstract" : [
+    {
+      "text" : "A type that maps discrete values of an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:13SwiftVizScale08DiscreteC0P",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "protocol"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "DiscreteScale"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SwiftVizScale"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "DiscreteScale"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Protocol",
+    "symbolKind" : "protocol",
+    "title" : "DiscreteScale"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "protocol"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "DiscreteScale"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s23CustomStringConvertibleP",
+              "text" : "CustomStringConvertible"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ReversibleScale",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13SwiftVizScale010ReversibleC0P",
+              "text" : "ReversibleScale"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ReversibleScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/s23CustomStringConvertibleP"
+      ],
+      "kind" : "relationships",
+      "title" : "Inherits From",
+      "type" : "inheritsFrom"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforming Types",
+      "type" : "conformingTypes"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Band",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType"
+      ],
+      "title" : "Discrete Scales"
+    }
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/domain",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/rangeHigher",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/rangeLower",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/scaleType",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType"
+      ],
+      "title" : "Inspecting Scales"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/ticks(rangeLower:rangeHigher:formatter:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/defaultTickValues(formatter:)"
+      ],
+      "title" : "Creating Ticks"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/swiftvizscale\/discretescale"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of components to provide structures that support data visualization.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SwiftVizScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Band": {
+  "abstract" : [
+    {
+      "text" : "A type used to indicate the start and stop positions for a band associated with the provided value.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Band"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Band",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Band"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Band",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/band"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/BandScale": {
+  "abstract" : [
+    {
+      "text" : "A discrete scale that maps from a discrete value within a collection to a band within a continuous output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BandScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/BandScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BandScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "BandScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/bandscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale": {
+  "abstract" : [
+    {
+      "text" : "A type that maps discrete values of an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DiscreteScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DiscreteScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DiscreteScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/defaultTickValues(formatter:)": {
+  "abstract" : [
+    {
+      "text" : "Returns an array of the strings that make up the ticks for the scale.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "defaultTickValues"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/defaultTickValues(formatter:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "defaultTickValues(formatter:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescale\/defaulttickvalues(formatter:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/domain": {
+  "abstract" : [
+    {
+      "text" : "An array of the types the scale maps into.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domain"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/domain",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "domain",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescale\/domain"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/rangeHigher": {
+  "abstract" : [
+    {
+      "text" : "The upper value of the range into which the discrete values map.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/rangeHigher",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "rangeHigher",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescale\/rangehigher"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/rangeLower": {
+  "abstract" : [
+    {
+      "text" : "The lower value of the range into which the discrete values map.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/rangeLower",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "rangeLower",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescale\/rangelower"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/scaleType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "scaleType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale08DiscreteC4TypeO",
+      "text" : "DiscreteScaleType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/scaleType",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "scaleType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescale\/scaletype"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/ticks(rangeLower:rangeHigher:formatter:)": {
+  "abstract" : [
+    {
+      "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ticks"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale4TickV",
+      "text" : "Tick"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">]"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/ticks(rangeLower:rangeHigher:formatter:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "ticks(rangeLower:rangeHigher:formatter:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescale\/ticks(rangelower:rangehigher:formatter:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale/ticks(reversed:rangeLower:rangeHigher:formatter:)": {
+  "abstract" : [
+    {
+      "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ticks"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale4TickV",
+      "text" : "Tick"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "RangeType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">]"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "ticks(reversed:rangeLower:rangeHigher:formatter:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescale\/ticks(reversed:rangelower:rangehigher:formatter:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScaleType": {
+  "abstract" : [
+    {
+      "text" : "The type of discrete scale.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DiscreteScaleType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DiscreteScaleType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DiscreteScaleType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DiscreteScaleType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/discretescaletype"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/PointScale": {
+  "abstract" : [
+    {
+      "text" : "A discrete scale that maps from a discrete value within a collection to a point within a continuous output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PointScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/PointScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PointScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PointScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/pointscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ReversibleScale": {
+  "abstract" : [
+    {
+      "text" : "A type that maps values from an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ", or reversed from an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to a corresponding ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " value.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ReversibleScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ReversibleScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ReversibleScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ReversibleScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/reversiblescale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Scale": {
+  "abstract" : [
+    {
+      "text" : "A type that maps values from an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Scale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Scale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Scale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Scale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/scale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/s23CustomStringConvertibleP": {
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/s23CustomStringConvertibleP",
+  "title" : "Swift.CustomStringConvertible",
+  "type" : "unresolvable"
+}
+}
+}
