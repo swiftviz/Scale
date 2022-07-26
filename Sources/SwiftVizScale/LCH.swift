@@ -6,9 +6,9 @@ import CoreGraphics
 
 /// A type that provides conversion and interpolation of colors through the LCH color space.
 ///
-/// The LCH (Luminosity, Chroma, Hue) color space provides a more perceptually consistent interpolation between
-/// two colors when compared to other color spaces.
-/// The LAB color space is the closest, but interpolation within LAB directly can result in perceptually darker segments during the interpolation.
+/// The LCH (Luminosity, Chroma, Hue) color space provides a perceptually consistent interpolation between
+/// two colors when compared to interpolating through other color spaces.
+/// Interpolation using the LAB color space is the close, but can result in perceptually darker segments during the interpolation.
 /// The following image provides a visual comparison of interpolating between the main boundary colors (red, green, and blue)
 /// when interpolated through the LAB color space and the LCH color space.
 ///
@@ -33,8 +33,10 @@ public enum LCH {
     // https://www.alanzucconi.com/2016/01/06/colour-interpolation/
 
     static var lab = CGColorSpace(name: CGColorSpace.genericLab)!
-
-    static func color(from components: [CGFloat]) -> CGColor {
+    
+    /// Creates a Core Graphics color instance from individual components in the LCH color space.
+    /// - Parameter components: A list of four components in the order: Luminance, Chroma, Hue, and Alpha.
+    public static func color(from components: [CGFloat]) -> CGColor {
         precondition(components.count == 4)
         var newComponents = components
         // from https://mina86.com/2021/srgb-lab-lchab-conversions/
@@ -51,13 +53,16 @@ public enum LCH {
         return CGColor(colorSpace: Self.lab, components: newComponents)!
     }
 
-    static func components(from color: CGColor) -> [CGFloat] {
+    /// Returns a list of four components from a Core Graphics color instance, mapped into the LCH color space.
+    ///
+    /// The components, in order, are Luminance, Chroma, Hue, and Alpha.
+    public static func components(from color: CGColor) -> [CGFloat] {
         // from https://mina86.com/2021/srgb-lab-lchab-conversions/
         // converting L,a*,b* to L,C,Hab (polar coordinate LAB color space)
         // L (luminance) = L
         // C (chroma)    = sqrt(a* ^ 2, b* ^ 2)
         // Hab (hue)     = atan2(b*, a*)
-        let labColor = color.converted(to: lab, intent: .perceptual, options: nil)!
+        let labColor = color.converted(to: Self.lab, intent: .perceptual, options: nil)!
         var components = labColor.components!
         precondition(components.count == 4)
         let a = components[1]
@@ -67,29 +72,6 @@ public enum LCH {
         components[1] = c
         components[2] = h
         return components
-    }
-
-    static func color(from components: [CGFloat], using colorspace: CGColorSpace) -> CGColor {
-        CGColor(colorSpace: colorspace, components: components)!
-    }
-
-    static func components(from color: CGColor, for colorspace: CGColorSpace) -> [CGFloat] {
-        let convertedColor = color.converted(to: colorspace, intent: .perceptual, options: nil)!
-        let components = convertedColor.components!
-        return components
-    }
-
-    static func interpolate(_ color1: CGColor, _ color2: CGColor, t: CGFloat, using colorspace: CGColorSpace) -> CGColor {
-        precondition(t >= 0 && t <= 1)
-        let components1 = LCH.components(from: color1, for: colorspace)
-        let components2 = LCH.components(from: color2, for: colorspace)
-        let newComponents = [
-            components1[0] + (components2[0] - components1[0]) * t,
-            components1[1] + (components2[1] - components1[1]) * t,
-            components1[2] + (components2[2] - components1[2]) * t,
-            components1[3] + (components2[3] - components1[3]) * t,
-        ]
-        return LCH.color(from: newComponents, using: colorspace)
     }
 
     // LCH component values from stock sRGB combinations:
