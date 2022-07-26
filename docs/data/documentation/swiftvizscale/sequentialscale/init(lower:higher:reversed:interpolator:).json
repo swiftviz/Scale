@@ -32,7 +32,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:13SwiftVizScale010SequentialC0V5lower6higher8reversed12interpolatorACyxGx_xSbAA17ColorInterpolatorVtcfc",
+    "externalID" : "s:13SwiftVizScale010SequentialC0V5lower6higher8reversed12interpolatorACyxGx_xSbAA24IndexedColorInterpolatorVtcfc",
     "fragments" : [
       {
         "kind" : "identifier",
@@ -101,8 +101,8 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:13SwiftVizScale17ColorInterpolatorV",
-        "text" : "ColorInterpolator"
+        "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+        "text" : "IndexedColorInterpolator"
       },
       {
         "kind" : "text",
@@ -205,10 +205,10 @@
               "text" : ": "
             },
             {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator",
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/IndexedColorInterpolator",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale17ColorInterpolatorV",
-              "text" : "ColorInterpolator"
+              "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+              "text" : "IndexedColorInterpolator"
             },
             {
               "kind" : "text",
@@ -317,7 +317,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/IndexedColorInterpolator": {
   "abstract" : [
     {
       "text" : "An interpolator that maps a unit value into a color based on the position between the colors.",
@@ -335,21 +335,21 @@
     },
     {
       "kind" : "identifier",
-      "text" : "ColorInterpolator"
+      "text" : "IndexedColorInterpolator"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/IndexedColorInterpolator",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "ColorInterpolator"
+      "text" : "IndexedColorInterpolator"
     }
   ],
   "role" : "symbol",
-  "title" : "ColorInterpolator",
+  "title" : "IndexedColorInterpolator",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/colorinterpolator"
+  "url" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/SequentialScale": {
   "abstract" : [
@@ -486,8 +486,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale17ColorInterpolatorV",
-      "text" : "ColorInterpolator"
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
     },
     {
       "kind" : "text",

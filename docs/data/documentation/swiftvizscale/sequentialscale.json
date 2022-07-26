@@ -221,14 +221,14 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator": {
   "abstract" : [
     {
-      "text" : "An interpolator that maps a unit value into a color based on the position between the colors.",
+      "text" : "A type that can provide an interpolated color.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "struct"
+      "text" : "protocol"
     },
     {
       "kind" : "text",
@@ -839,8 +839,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale17ColorInterpolatorV",
-      "text" : "ColorInterpolator"
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
     },
     {
       "kind" : "text",
@@ -880,8 +880,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale17ColorInterpolatorV",
-      "text" : "ColorInterpolator"
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
     },
     {
       "kind" : "text",

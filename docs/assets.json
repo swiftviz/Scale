@@ -4,104 +4,6 @@
   ],
   "images" : [
     {
-      "alt" : "A visual sample of a purple to green diverging color scheme.",
-      "identifier" : "PrGN.png",
-      "type" : "image",
-      "variants" : [
-        {
-          "traits" : [
-            "1x",
-            "light"
-          ],
-          "url" : "\/images\/PrGN.png"
-        }
-      ]
-    },
-    {
-      "alt" : "A visual sample of a purple to red sequential color scheme.",
-      "identifier" : "PuRd.png",
-      "type" : "image",
-      "variants" : [
-        {
-          "traits" : [
-            "1x",
-            "light"
-          ],
-          "url" : "\/images\/PuRd.png"
-        }
-      ]
-    },
-    {
-      "alt" : "A visual sample of a purple to blue sequential color scheme.",
-      "identifier" : "PuBu.png",
-      "type" : "image",
-      "variants" : [
-        {
-          "traits" : [
-            "1x",
-            "light"
-          ],
-          "url" : "\/images\/PuBu.png"
-        }
-      ]
-    },
-    {
-      "alt" : "A visual sample of the spectral diverging color scheme.",
-      "identifier" : "Spectral.png",
-      "type" : "image",
-      "variants" : [
-        {
-          "traits" : [
-            "1x",
-            "light"
-          ],
-          "url" : "\/images\/Spectral.png"
-        }
-      ]
-    },
-    {
-      "alt" : "A visual sample a red through yellow to green diverging color scheme.",
-      "identifier" : "RdYlGn.png",
-      "type" : "image",
-      "variants" : [
-        {
-          "traits" : [
-            "1x",
-            "light"
-          ],
-          "url" : "\/images\/RdYlGn.png"
-        }
-      ]
-    },
-    {
-      "alt" : "A visual sample of a pink to yellow-green diverging color scheme.",
-      "identifier" : "PiYG.png",
-      "type" : "image",
-      "variants" : [
-        {
-          "traits" : [
-            "1x",
-            "light"
-          ],
-          "url" : "\/images\/PiYG.png"
-        }
-      ]
-    },
-    {
-      "alt" : "A visual sample of the magma sequential color scheme.",
-      "identifier" : "Magma.png",
-      "type" : "image",
-      "variants" : [
-        {
-          "traits" : [
-            "1x",
-            "light"
-          ],
-          "url" : "\/images\/Magma.png"
-        }
-      ]
-    },
-    {
       "alt" : "A visual sample of a blue to green sequential color scheme.",
       "identifier" : "GnBu.png",
       "type" : "image",
@@ -116,8 +18,8 @@
       ]
     },
     {
-      "alt" : "A visual sample of the white to purple single-hue color scheme.",
-      "identifier" : "Purples.png",
+      "alt" : "A visual sample of an orange to red sequential color scheme.",
+      "identifier" : "OrRd.png",
       "type" : "image",
       "variants" : [
         {
@@ -125,13 +27,13 @@
             "1x",
             "light"
           ],
-          "url" : "\/images\/Purples.png"
+          "url" : "\/images\/OrRd.png"
         }
       ]
     },
     {
-      "alt" : "A visual sample of the white to black single-hue color scheme.",
-      "identifier" : "Grays.png",
+      "alt" : "A visual sample of a yellow through green to blue sequential color scheme.",
+      "identifier" : "YlGnBu.png",
       "type" : "image",
       "variants" : [
         {
@@ -139,13 +41,13 @@
             "1x",
             "light"
           ],
-          "url" : "\/images\/Grays.png"
+          "url" : "\/images\/YlGnBu.png"
         }
       ]
     },
     {
-      "alt" : "A visual sample of a red to purple sequential color scheme.",
-      "identifier" : "RdPu.png",
+      "alt" : "A visual sample of the inferno sequential color scheme.",
+      "identifier" : "Inferno.png",
       "type" : "image",
       "variants" : [
         {
@@ -153,35 +55,7 @@
             "1x",
             "light"
           ],
-          "url" : "\/images\/RdPu.png"
-        }
-      ]
-    },
-    {
-      "alt" : "A visual sample of the plasma sequential color scheme.",
-      "identifier" : "Plasma.png",
-      "type" : "image",
-      "variants" : [
-        {
-          "traits" : [
-            "1x",
-            "light"
-          ],
-          "url" : "\/images\/Plasma.png"
-        }
-      ]
-    },
-    {
-      "alt" : "A visual sample of a red through yellow to green diverging color scheme.",
-      "identifier" : "RdYlBu.png",
-      "type" : "image",
-      "variants" : [
-        {
-          "traits" : [
-            "1x",
-            "light"
-          ],
-          "url" : "\/images\/RdYlBu.png"
+          "url" : "\/images\/Inferno.png"
         }
       ]
     },
@@ -200,6 +74,34 @@
       ]
     },
     {
+      "alt" : "A visual sample of a red to blue diverging color scheme..",
+      "identifier" : "RdBu.png",
+      "type" : "image",
+      "variants" : [
+        {
+          "traits" : [
+            "1x",
+            "light"
+          ],
+          "url" : "\/images\/RdBu.png"
+        }
+      ]
+    },
+    {
+      "alt" : "A visual sample of a yellow through orange to brown sequential color scheme.",
+      "identifier" : "YlOrBr.png",
+      "type" : "image",
+      "variants" : [
+        {
+          "traits" : [
+            "1x",
+            "light"
+          ],
+          "url" : "\/images\/YlOrBr.png"
+        }
+      ]
+    },
+    {
       "alt" : "A table of of colors interpolated using two different color spaces.",
       "identifier" : "LAB_vs_LCH.png",
       "type" : "image",
@@ -214,8 +116,8 @@
       ]
     },
     {
-      "alt" : "A visual sample of a red to grey diverging color scheme.",
-      "identifier" : "RdGy.png",
+      "alt" : "A visual sample of a brown to blue-green diverging color scheme..",
+      "identifier" : "BrBG.png",
       "type" : "image",
       "variants" : [
         {
@@ -223,7 +125,21 @@
             "1x",
             "light"
           ],
-          "url" : "\/images\/RdGy.png"
+          "url" : "\/images\/BrBG.png"
+        }
+      ]
+    },
+    {
+      "alt" : "A visual sample of the white to green single-hue color scheme.",
+      "identifier" : "Greens.png",
+      "type" : "image",
+      "variants" : [
+        {
+          "traits" : [
+            "1x",
+            "light"
+          ],
+          "url" : "\/images\/Greens.png"
         }
       ]
     },
@@ -256,8 +172,8 @@
       ]
     },
     {
-      "alt" : "A visual sample of a purple to orange diverging color scheme.",
-      "identifier" : "PuOr.png",
+      "alt" : "A visual sample of a purple to blue sequential color scheme.",
+      "identifier" : "PuBu.png",
       "type" : "image",
       "variants" : [
         {
@@ -265,7 +181,63 @@
             "1x",
             "light"
           ],
-          "url" : "\/images\/PuOr.png"
+          "url" : "\/images\/PuBu.png"
+        }
+      ]
+    },
+    {
+      "alt" : "A visual sample of a red through yellow to green diverging color scheme.",
+      "identifier" : "RdYlBu.png",
+      "type" : "image",
+      "variants" : [
+        {
+          "traits" : [
+            "1x",
+            "light"
+          ],
+          "url" : "\/images\/RdYlBu.png"
+        }
+      ]
+    },
+    {
+      "alt" : "A visual sample of the magma sequential color scheme.",
+      "identifier" : "Magma.png",
+      "type" : "image",
+      "variants" : [
+        {
+          "traits" : [
+            "1x",
+            "light"
+          ],
+          "url" : "\/images\/Magma.png"
+        }
+      ]
+    },
+    {
+      "alt" : "A visual sample of a white to purple single-hue color scheme.",
+      "identifier" : "Spectral.png",
+      "type" : "image",
+      "variants" : [
+        {
+          "traits" : [
+            "1x",
+            "light"
+          ],
+          "url" : "\/images\/Spectral.png"
+        }
+      ]
+    },
+    {
+      "alt" : "A visual sample of the plasma sequential color scheme.",
+      "identifier" : "Plasma.png",
+      "type" : "image",
+      "variants" : [
+        {
+          "traits" : [
+            "1x",
+            "light"
+          ],
+          "url" : "\/images\/Plasma.png"
         }
       ]
     },
@@ -284,8 +256,8 @@
       ]
     },
     {
-      "alt" : "A visual sample of a red to blue diverging color scheme..",
-      "identifier" : "RdBu.png",
+      "alt" : "A visual sample of a purple to green diverging color scheme.",
+      "identifier" : "PrGN.png",
       "type" : "image",
       "variants" : [
         {
@@ -293,13 +265,13 @@
             "1x",
             "light"
           ],
-          "url" : "\/images\/RdBu.png"
+          "url" : "\/images\/PrGN.png"
         }
       ]
     },
     {
-      "alt" : "A visual sample of the white to green single-hue color scheme.",
-      "identifier" : "Greens.png",
+      "alt" : "A visual sample of a purple to orange diverging color scheme.",
+      "identifier" : "PuOr.png",
       "type" : "image",
       "variants" : [
         {
@@ -307,63 +279,7 @@
             "1x",
             "light"
           ],
-          "url" : "\/images\/Greens.png"
-        }
-      ]
-    },
-    {
-      "alt" : "A visual sample of the inferno sequential color scheme.",
-      "identifier" : "Inferno.png",
-      "type" : "image",
-      "variants" : [
-        {
-          "traits" : [
-            "1x",
-            "light"
-          ],
-          "url" : "\/images\/Inferno.png"
-        }
-      ]
-    },
-    {
-      "alt" : "A visual sample of a yellow to green sequential color scheme.",
-      "identifier" : "YlGn.png",
-      "type" : "image",
-      "variants" : [
-        {
-          "traits" : [
-            "1x",
-            "light"
-          ],
-          "url" : "\/images\/YlGn.png"
-        }
-      ]
-    },
-    {
-      "alt" : "A visual sample of a yellow through green to blue sequential color scheme.",
-      "identifier" : "YlGnBu.png",
-      "type" : "image",
-      "variants" : [
-        {
-          "traits" : [
-            "1x",
-            "light"
-          ],
-          "url" : "\/images\/YlGnBu.png"
-        }
-      ]
-    },
-    {
-      "alt" : "A visual sample of a brown to blue-green diverging color scheme..",
-      "identifier" : "BrBG.png",
-      "type" : "image",
-      "variants" : [
-        {
-          "traits" : [
-            "1x",
-            "light"
-          ],
-          "url" : "\/images\/BrBG.png"
+          "url" : "\/images\/PuOr.png"
         }
       ]
     },
@@ -396,6 +312,48 @@
       ]
     },
     {
+      "alt" : "A visual sample of a yellow to green sequential color scheme.",
+      "identifier" : "YlGn.png",
+      "type" : "image",
+      "variants" : [
+        {
+          "traits" : [
+            "1x",
+            "light"
+          ],
+          "url" : "\/images\/YlGn.png"
+        }
+      ]
+    },
+    {
+      "alt" : "A visual sample of a purple to red sequential color scheme.",
+      "identifier" : "PuRd.png",
+      "type" : "image",
+      "variants" : [
+        {
+          "traits" : [
+            "1x",
+            "light"
+          ],
+          "url" : "\/images\/PuRd.png"
+        }
+      ]
+    },
+    {
+      "alt" : "A visual sample of the white to black single-hue color scheme.",
+      "identifier" : "Grays.png",
+      "type" : "image",
+      "variants" : [
+        {
+          "traits" : [
+            "1x",
+            "light"
+          ],
+          "url" : "\/images\/Grays.png"
+        }
+      ]
+    },
+    {
       "alt" : "A visual sample of a blue through purple sequential color scheme.",
       "identifier" : "BuPu.png",
       "type" : "image",
@@ -410,8 +368,8 @@
       ]
     },
     {
-      "alt" : "A visual sample of a yellow through orange to brown sequential color scheme.",
-      "identifier" : "YlOrBr.png",
+      "alt" : "A visual sample of a red to grey diverging color scheme.",
+      "identifier" : "RdGy.png",
       "type" : "image",
       "variants" : [
         {
@@ -419,13 +377,13 @@
             "1x",
             "light"
           ],
-          "url" : "\/images\/YlOrBr.png"
+          "url" : "\/images\/RdGy.png"
         }
       ]
     },
     {
-      "alt" : "A visual sample of an orange to red sequential color scheme.",
-      "identifier" : "OrRd.png",
+      "alt" : "A visual sample of a pink to yellow-green diverging color scheme.",
+      "identifier" : "PiYG.png",
       "type" : "image",
       "variants" : [
         {
@@ -433,7 +391,49 @@
             "1x",
             "light"
           ],
-          "url" : "\/images\/OrRd.png"
+          "url" : "\/images\/PiYG.png"
+        }
+      ]
+    },
+    {
+      "alt" : "A visual sample of the white to purple single-hue color scheme.",
+      "identifier" : "Purples.png",
+      "type" : "image",
+      "variants" : [
+        {
+          "traits" : [
+            "1x",
+            "light"
+          ],
+          "url" : "\/images\/Purples.png"
+        }
+      ]
+    },
+    {
+      "alt" : "A visual sample a red through yellow to green diverging color scheme.",
+      "identifier" : "RdYlGn.png",
+      "type" : "image",
+      "variants" : [
+        {
+          "traits" : [
+            "1x",
+            "light"
+          ],
+          "url" : "\/images\/RdYlGn.png"
+        }
+      ]
+    },
+    {
+      "alt" : "A visual sample of a red to purple sequential color scheme.",
+      "identifier" : "RdPu.png",
+      "type" : "image",
+      "variants" : [
+        {
+          "traits" : [
+            "1x",
+            "light"
+          ],
+          "url" : "\/images\/RdPu.png"
         }
       ]
     }

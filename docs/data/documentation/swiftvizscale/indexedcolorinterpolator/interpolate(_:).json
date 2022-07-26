@@ -9,17 +9,17 @@
     "paths" : [
       [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/IndexedColorInterpolator"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/interpolate(_:)"
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/IndexedColorInterpolator\/interpolate(_:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:13SwiftVizScale17ColorInterpolatorP11interpolateySo10CGColorRefaSdF",
+    "externalID" : "s:13SwiftVizScale24IndexedColorInterpolatorV11interpolateySo10CGColorRefaSdF",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -57,7 +57,15 @@
         "name" : "SwiftVizScale"
       }
     ],
-    "required" : true,
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "6.0",
+        "name" : "watchOS",
+        "unavailable" : false
+      }
+    ],
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",
@@ -172,7 +180,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/swiftvizscale\/colorinterpolator\/interpolate(_:)"
+        "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/interpolate(_:)"
       ],
       "traits" : [
         {
@@ -197,17 +205,17 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/IndexedColorInterpolator": {
   "abstract" : [
     {
-      "text" : "A type that can provide an interpolated color.",
+      "text" : "An interpolator that maps a unit value into a color based on the position between the colors.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "protocol"
+      "text" : "struct"
     },
     {
       "kind" : "text",
@@ -215,23 +223,23 @@
     },
     {
       "kind" : "identifier",
-      "text" : "ColorInterpolator"
+      "text" : "IndexedColorInterpolator"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/IndexedColorInterpolator",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "ColorInterpolator"
+      "text" : "IndexedColorInterpolator"
     }
   ],
   "role" : "symbol",
-  "title" : "ColorInterpolator",
+  "title" : "IndexedColorInterpolator",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/colorinterpolator"
+  "url" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorInterpolator/interpolate(_:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/IndexedColorInterpolator/interpolate(_:)": {
   "abstract" : [
     {
       "text" : "Returns the color mapped from the unit value you provide.",
@@ -270,13 +278,12 @@
       "text" : "CGColor"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator\/interpolate(_:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/IndexedColorInterpolator\/interpolate(_:)",
   "kind" : "symbol",
-  "required" : true,
   "role" : "symbol",
   "title" : "interpolate(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/colorinterpolator\/interpolate(_:)"
+  "url" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/interpolate(_:)"
 }
 }
 }
