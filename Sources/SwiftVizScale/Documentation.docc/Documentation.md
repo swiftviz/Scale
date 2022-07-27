@@ -32,8 +32,15 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 ### Sequential Scales
 
 - ``SwiftVizScale/SequentialScale``
+
+### Color Interpolators
+
 - ``SwiftVizScale/ColorInterpolator``
+- ``SwiftVizScale/LCHColorInterpolator``
 - ``SwiftVizScale/LCH``
+- ``SwiftVizScale/IndexedColorInterpolator``
+- ``SwiftVizScale/ComputedRGBInterpolator``
+- ``SwiftVizScale/ColorScheme``
 
 ### Ticks
 

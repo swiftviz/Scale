@@ -9,41 +9,44 @@ import VisualTests
 struct GeneratedDocImagesCommand: ParsableCommand {
     @MainActor
     func run() throws {
-        let schemes: [IndexedColorInterpolator: String] = [
-            ColorScheme.Diverging.BrBG: "BrBG",
-            ColorScheme.Diverging.PrGN: "PrGN",
-            ColorScheme.Diverging.PiYG: "PiYG",
-            ColorScheme.Diverging.PuOR: "PuOR",
-            ColorScheme.Diverging.RdBu: "RdBu",
-            ColorScheme.Diverging.RdGy: "RdGy",
-            ColorScheme.Diverging.RdYlBu: "RdYlBu",
-            ColorScheme.Diverging.RdYlGn: "RdYlGn",
-            ColorScheme.Diverging.Spectral: "Spectral",
-            ColorScheme.SequentialMultiHue.BuGn: "BuGn",
-            ColorScheme.SequentialMultiHue.BuPu: "BuPu",
-            ColorScheme.SequentialMultiHue.GnBu: "GnBu",
-            ColorScheme.SequentialMultiHue.OrRd: "OrRd",
-            ColorScheme.SequentialMultiHue.PuBu: "PuBu",
-            ColorScheme.SequentialMultiHue.PuBuGn: "PuBuGn",
-            ColorScheme.SequentialMultiHue.PuRd: "PuRd",
-            ColorScheme.SequentialMultiHue.RdPu: "RdPu",
-            ColorScheme.SequentialMultiHue.YlGn: "YlGn",
-            ColorScheme.SequentialMultiHue.YlGnBu: "YlGnBu",
-            ColorScheme.SequentialMultiHue.YlOrBr: "YlOrBr",
-            ColorScheme.SequentialMultiHue.YlOrRd: "YlOrRd",
-            ColorScheme.SequentialMultiHue.Viridis: "Viridis",
-            ColorScheme.SequentialMultiHue.Magma: "Magma",
-            ColorScheme.SequentialMultiHue.Inferno: "Inferno",
-            ColorScheme.SequentialMultiHue.Plasma: "Plasma",
-            ColorScheme.SequentialSingleHue.Oranges: "Oranges",
-            ColorScheme.SequentialSingleHue.Purples: "Purples",
-            ColorScheme.SequentialSingleHue.Grays: "Grays",
-            ColorScheme.SequentialSingleHue.Blues: "Blues",
-            ColorScheme.SequentialSingleHue.Greens: "Greens",
-            ColorScheme.SequentialSingleHue.Reds: "Reds",
+        let schemes: [String: any ColorInterpolator] = [
+            "BrBG": ColorScheme.Diverging.BrBG,
+            "PrGN": ColorScheme.Diverging.PrGN,
+            "PiYG": ColorScheme.Diverging.PiYG,
+            "PuOr": ColorScheme.Diverging.PuOr,
+            "RdBu": ColorScheme.Diverging.RdBu,
+            "RdGy": ColorScheme.Diverging.RdGy,
+            "RdYlBu": ColorScheme.Diverging.RdYlBu,
+            "RdYlGn": ColorScheme.Diverging.RdYlGn,
+            "Spectral": ColorScheme.Diverging.Spectral,
+            "BuGn": ColorScheme.SequentialMultiHue.BuGn,
+            "BuPu": ColorScheme.SequentialMultiHue.BuPu,
+            "GnBu": ColorScheme.SequentialMultiHue.GnBu,
+            "OrRd": ColorScheme.SequentialMultiHue.OrRd,
+            "PuBu": ColorScheme.SequentialMultiHue.PuBu,
+            "PuBuGn": ColorScheme.SequentialMultiHue.PuBuGn,
+            "PuRd": ColorScheme.SequentialMultiHue.PuRd,
+            "RdPu": ColorScheme.SequentialMultiHue.RdPu,
+            "YlGn": ColorScheme.SequentialMultiHue.YlGn,
+            "YlGnBu": ColorScheme.SequentialMultiHue.YlGnBu,
+            "YlOrBr": ColorScheme.SequentialMultiHue.YlOrBr,
+            "YlOrRd": ColorScheme.SequentialMultiHue.YlOrRd,
+            "Viridis": ColorScheme.SequentialMultiHue.Viridis,
+            "Magma": ColorScheme.SequentialMultiHue.Magma,
+            "Inferno": ColorScheme.SequentialMultiHue.Inferno,
+            "Plasma": ColorScheme.SequentialMultiHue.Plasma,
+            "Cividis": ColorScheme.SequentialMultiHue.Cividis,
+            "Turbo": ColorScheme.SequentialMultiHue.Turbo,
+            "Oranges": ColorScheme.SequentialSingleHue.Oranges,
+            "Purples": ColorScheme.SequentialSingleHue.Purples,
+            "Grays": ColorScheme.SequentialSingleHue.Grays,
+            "Blues": ColorScheme.SequentialSingleHue.Blues,
+            "Greens": ColorScheme.SequentialSingleHue.Greens,
+            "Reds": ColorScheme.SequentialSingleHue.Reds,
+            "Sinebow": ColorScheme.Cyclical.Sinebow,
         ]
 
-        for (interpolator, name) in schemes {
+        for (name, interpolator) in schemes {
             print("Creating color swatch for \(name)")
 
             let view = ColorInterpolatorView(steps: 128, interpolator: interpolator)
@@ -51,7 +54,7 @@ struct GeneratedDocImagesCommand: ParsableCommand {
             let image = view.snapshot()!.cgImage(forProposedRect: nil, context: nil, hints: nil)!
             let newRepresentation = NSBitmapImageRep(cgImage: image)
 
-            let path = FilePath("\(name).png")
+            let path = FilePath("\(name)@2x.png")
             let fd = try FileDescriptor.open(path, .writeOnly,
                                              options: [.append, .create],
                                              permissions: .ownerReadWrite)

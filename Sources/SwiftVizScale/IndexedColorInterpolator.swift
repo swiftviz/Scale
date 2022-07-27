@@ -6,7 +6,7 @@ import CoreGraphics
 
 /// An interpolator that maps a unit value into a color based on the position between the colors.
 @available(watchOS 6.0, *)
-public struct IndexedColorInterpolator: ColorInterpolator, Hashable {
+public struct IndexedColorInterpolator: ColorInterpolator {
     // Color pallets for interpolation and presentation:
     // https://github.com/d3/d3-scale-chromatic/blob/main/README.md
     // https://bids.github.io/colormap/
