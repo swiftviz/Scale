@@ -38,7 +38,7 @@ public enum ColorScheme {
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-single/Reds.js
         /// An interpolator that presents  a white to red single-hue color scheme.
-        /// 
+        ///
         /// ![A visual sample of the white to red single-hue color scheme.](Reds.png)
         public static let Reds = IndexedColorInterpolator("fff5f0fee0d2fcbba1fc9272fb6a4aef3b2ccb181da50f1567000d")
     }

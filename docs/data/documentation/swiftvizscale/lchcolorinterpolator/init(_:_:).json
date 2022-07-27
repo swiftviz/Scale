@@ -53,6 +53,15 @@
         "name" : "SwiftVizScale"
       }
     ],
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "6.0",
+        "name" : "watchOS",
+        "unavailable" : false
+      }
+    ],
     "role" : "symbol",
     "roleHeading" : "Initializer",
     "symbolKind" : "init",
@@ -204,7 +213,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LCHColorInterpolator": {
   "abstract" : [
-
+    {
+      "text" : "A color interpolator that maps colors between two colors through the LCH color space.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
