@@ -1,0 +1,568 @@
+{
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a white to blue single-hue color scheme.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialSingleHue"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialSingleHue\/Blues"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:13SwiftVizScale11ColorSchemeO19SequentialSingleHueO5BluesAA07IndexedD12InterpolatorVvpZ",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "static"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Blues"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+        "text" : "IndexedColorInterpolator"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SwiftVizScale"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Type Property",
+    "symbolKind" : "property",
+    "title" : "Blues"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "static"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "let"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Blues"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/IndexedColorInterpolator",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+              "text" : "IndexedColorInterpolator"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "Blues.png",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialSingleHue\/Oranges",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialSingleHue\/Purples",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialSingleHue\/Grays",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialSingleHue\/Greens",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialSingleHue\/Reds"
+      ],
+      "title" : "Sequential Single Hue Color Schemes"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/blues"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"Blues.png": {
+  "alt" : "A visual sample of the white to blue single-hue color scheme.",
+  "identifier" : "Blues.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "2x",
+        "light"
+      ],
+      "url" : "\/images\/Blues@2x.png"
+    }
+  ]
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of components to provide structures that support data visualization.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SwiftVizScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme": {
+  "abstract" : [
+    {
+      "text" : "A type that contains color schemes for use within a sequential scale.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ColorScheme"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ColorScheme"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ColorScheme",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialSingleHue": {
+  "abstract" : [
+    {
+      "text" : "Sequential, single-hue color schemes.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SequentialSingleHue"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialSingleHue",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SequentialSingleHue"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ColorScheme.SequentialSingleHue",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialSingleHue/Blues": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a white to blue single-hue color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Blues"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialSingleHue\/Blues",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Blues",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/blues"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialSingleHue/Grays": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a white to black single-hue color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Grays"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialSingleHue\/Grays",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Grays",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/grays"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialSingleHue/Greens": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a white to green single-hue color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Greens"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialSingleHue\/Greens",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Greens",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/greens"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialSingleHue/Oranges": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a white to orange single-hue color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Oranges"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialSingleHue\/Oranges",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Oranges",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/oranges"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialSingleHue/Purples": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a white to purple single-hue color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Purples"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialSingleHue\/Purples",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Purples",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/purples"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialSingleHue/Reds": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a white to red single-hue color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Reds"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialSingleHue\/Reds",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Reds",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/reds"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/IndexedColorInterpolator": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that maps a unit value into a color based on the position between the colors.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/IndexedColorInterpolator",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "IndexedColorInterpolator",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator"
+}
+}
+}

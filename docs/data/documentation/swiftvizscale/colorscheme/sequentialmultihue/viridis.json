@@ -1,0 +1,1150 @@
+{
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  the viridis sequential color scheme.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/Viridis"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:13SwiftVizScale11ColorSchemeO18SequentialMultiHueO7ViridisAA07IndexedD12InterpolatorVvpZ",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "static"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Viridis"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+        "text" : "IndexedColorInterpolator"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SwiftVizScale"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Type Property",
+    "symbolKind" : "property",
+    "title" : "Viridis"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "static"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "let"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Viridis"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/IndexedColorInterpolator",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+              "text" : "IndexedColorInterpolator"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Designed by ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/bids.github.io\/colormap\/",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "Viridis.png",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/BuGn",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/BuPu",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/GnBu",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/OrRd",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/PuBu",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/PuBuGn",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/PuRd",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/RdPu",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/RdPu",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/YlGn",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/YlGnBu",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/YlOrBr",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/YlOrRd",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/Inferno",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/Magma",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/Plasma",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/Cividis",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/Turbo"
+      ],
+      "title" : "Sequential Multi Hue Color Schemes"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/viridis"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"Viridis.png": {
+  "alt" : "A visual sample of the viridis sequential color scheme.",
+  "identifier" : "Viridis.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "2x",
+        "light"
+      ],
+      "url" : "\/images\/Viridis@2x.png"
+    }
+  ]
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of components to provide structures that support data visualization.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SwiftVizScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme": {
+  "abstract" : [
+    {
+      "text" : "A type that contains color schemes for use within a sequential scale.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ColorScheme"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ColorScheme"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ColorScheme",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue": {
+  "abstract" : [
+    {
+      "text" : "Sequential, multi-hue color schemes.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SequentialMultiHue"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SequentialMultiHue"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ColorScheme.SequentialMultiHue",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/BuGn": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  the spectral diverging color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BuGn"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/BuGn",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "BuGn",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/bugn"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/BuPu": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a blue through purple sequential color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BuPu"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/BuPu",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "BuPu",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/bupu"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/Cividis": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents the cividis color scheme, designed for color impaired viewers.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Cividis"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale23ComputedRGBInterpolatorV",
+      "text" : "ComputedRGBInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/Cividis",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Cividis",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/cividis"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/GnBu": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a blue to green sequential color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GnBu"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/GnBu",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "GnBu",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/gnbu"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/Inferno": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  the inferno sequential color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Inferno"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/Inferno",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Inferno",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/inferno"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/Magma": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  the magma sequential color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Magma"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/Magma",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Magma",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/magma"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/OrRd": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  an orange to red sequential color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "OrRd"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/OrRd",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "OrRd",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/orrd"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/Plasma": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  the plasma sequential color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Plasma"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/Plasma",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Plasma",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/plasma"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/PuBu": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a purple to blue sequential color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PuBu"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/PuBu",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "PuBu",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/pubu"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/PuBuGn": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a purple through blue to green sequential color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PuBuGn"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/PuBuGn",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "PuBuGn",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/pubugn"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/PuRd": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a purple to red sequential color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PuRd"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/PuRd",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "PuRd",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/purd"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/RdPu": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a red to purple sequential color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RdPu"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/RdPu",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "RdPu",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/rdpu"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/Turbo": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents the turbo color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Turbo"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale23ComputedRGBInterpolatorV",
+      "text" : "ComputedRGBInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/Turbo",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Turbo",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/turbo"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/Viridis": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  the viridis sequential color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Viridis"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/Viridis",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Viridis",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/viridis"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/YlGn": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a yellow to green sequential color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "YlGn"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/YlGn",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "YlGn",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/ylgn"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/YlGnBu": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a yellow through green to blue sequential color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "YlGnBu"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/YlGnBu",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "YlGnBu",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/ylgnbu"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/YlOrBr": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a yellow through orange to brown sequential color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "YlOrBr"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/YlOrBr",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "YlOrBr",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/ylorbr"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme/SequentialMultiHue/YlOrRd": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that presents  a yellow through orange to red sequential color scheme.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "YlOrRd"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme\/SequentialMultiHue\/YlOrRd",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "YlOrRd",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/ylorrd"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/IndexedColorInterpolator": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that maps a unit value into a color based on the position between the colors.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/IndexedColorInterpolator",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "IndexedColorInterpolator",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator"
+},
+"https://bids.github.io/colormap/": {
+  "identifier" : "https:\/\/bids.github.io\/colormap\/",
+  "title" : "van der Walt, Smith and Firing for matplotlib",
+  "titleInlineContent" : [
+    {
+      "text" : "van der Walt, Smith and Firing for matplotlib",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/bids.github.io\/colormap\/"
+}
+}
+}

@@ -7,7 +7,6 @@ import CoreGraphics
 /// A color interpolator that maps colors between two colors through the LCH color space.
 @available(watchOS 6.0, *)
 public struct LCHColorInterpolator: ColorInterpolator {
-    
     let startColor: CGColor
     let endColor: CGColor
 

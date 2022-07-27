@@ -104,6 +104,14 @@
             },
             {
               "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "genericParameter",
+              "text" : "Interpolator"
+            },
+            {
+              "kind" : "text",
               "text" : "> "
             },
             {
@@ -127,6 +135,24 @@
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
               "text" : "ConvertibleWithDouble"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Interpolator"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13SwiftVizScale17ColorInterpolatorP",
+              "text" : "ColorInterpolator"
             }
           ]
         }
@@ -152,22 +178,12 @@
   "sections" : [
 
   ],
-  "seeAlsoSections" : [
-    {
-      "generated" : true,
-      "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LCH"
-      ],
-      "title" : "Sequential Scales"
-    }
-  ],
   "topicSections" : [
     {
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale\/init(lower:higher:reversed:interpolator:)"
       ],
-      "title" : "Initializers"
+      "title" : "Creating a Sequential Scale"
     },
     {
       "identifiers" : [
@@ -180,8 +196,8 @@
     },
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale\/domain(_:)-40h9i",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale\/domain(_:)-7nee8",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale\/domain(_:)-5m2g6",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale\/domain(_:)-ct2c",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale\/domain(_:nice:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale\/domain(lower:higher:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale\/interpolator(_:)",
@@ -286,40 +302,6 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/convertiblewithdouble"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LCH": {
-  "abstract" : [
-    {
-      "text" : "A type that provides conversion and interpolation of colors through the LCH color space.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "enum"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "LCH"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LCH",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "LCH"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "LCH",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/lch"
-},
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/SequentialScale": {
   "abstract" : [
     {
@@ -401,7 +383,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/sequentialscale\/description"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/SequentialScale/domain(_:)-40h9i": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/SequentialScale/domain(_:)-5m2g6": {
   "abstract" : [
     {
       "text" : "Returns a new scale with the domain set to the values you provide.",
@@ -457,17 +439,25 @@
     },
     {
       "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Interpolator"
+    },
+    {
+      "kind" : "text",
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale\/domain(_:)-40h9i",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale\/domain(_:)-5m2g6",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "domain(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(_:)-40h9i"
+  "url" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(_:)-5m2g6"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/SequentialScale/domain(_:)-7nee8": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/SequentialScale/domain(_:)-ct2c": {
   "abstract" : [
     {
       "text" : "Returns a new scale with the domain set to span the values you provide.",
@@ -514,15 +504,23 @@
     },
     {
       "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Interpolator"
+    },
+    {
+      "kind" : "text",
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale\/domain(_:)-7nee8",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale\/domain(_:)-ct2c",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "domain(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(_:)-7nee8"
+  "url" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(_:)-ct2c"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/SequentialScale/domain(_:nice:)": {
   "abstract" : [
@@ -585,6 +583,14 @@
     {
       "kind" : "typeIdentifier",
       "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Interpolator"
     },
     {
       "kind" : "text",
@@ -666,6 +672,14 @@
     {
       "kind" : "typeIdentifier",
       "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Interpolator"
     },
     {
       "kind" : "text",
@@ -839,8 +853,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
-      "text" : "IndexedColorInterpolator"
+      "text" : "Interpolator"
     },
     {
       "kind" : "text",
@@ -880,8 +893,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale24IndexedColorInterpolatorV",
-      "text" : "IndexedColorInterpolator"
+      "text" : "Interpolator"
     },
     {
       "kind" : "text",
@@ -899,6 +911,14 @@
     {
       "kind" : "typeIdentifier",
       "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Interpolator"
     },
     {
       "kind" : "text",

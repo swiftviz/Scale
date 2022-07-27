@@ -1005,12 +1005,12 @@
           {
             "children" : [
               {
-                "title" : "Initializers",
+                "title" : "Creating a Sequential Scale",
                 "type" : "groupMarker"
               },
               {
                 "path" : "\/documentation\/swiftvizscale\/sequentialscale\/init(lower:higher:reversed:interpolator:)",
-                "title" : "init(lower: InputType, higher: InputType, reversed: Bool, interpolator: IndexedColorInterpolator)",
+                "title" : "init(lower: InputType, higher: InputType, reversed: Bool, interpolator: Interpolator)",
                 "type" : "init"
               },
               {
@@ -1042,28 +1042,28 @@
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(_:)-40h9i",
-                "title" : "func domain(ClosedRange<InputType>) -> SequentialScale<InputType>",
+                "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(_:)-5m2g6",
+                "title" : "func domain(ClosedRange<InputType>) -> SequentialScale<InputType, Interpolator>",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(_:)-7nee8",
-                "title" : "func domain([InputType]) -> SequentialScale<InputType>",
+                "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(_:)-ct2c",
+                "title" : "func domain([InputType]) -> SequentialScale<InputType, Interpolator>",
                 "type" : "method"
               },
               {
                 "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(_:nice:)",
-                "title" : "func domain([InputType], nice: Bool) -> SequentialScale<InputType>",
+                "title" : "func domain([InputType], nice: Bool) -> SequentialScale<InputType, Interpolator>",
                 "type" : "method"
               },
               {
                 "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(lower:higher:)",
-                "title" : "func domain(lower: InputType, higher: InputType) -> SequentialScale<InputType>",
+                "title" : "func domain(lower: InputType, higher: InputType) -> SequentialScale<InputType, Interpolator>",
                 "type" : "method"
               },
               {
                 "path" : "\/documentation\/swiftvizscale\/sequentialscale\/interpolator(_:)",
-                "title" : "func interpolator(IndexedColorInterpolator) -> SequentialScale<InputType>",
+                "title" : "func interpolator(Interpolator) -> SequentialScale<InputType, Interpolator>",
                 "type" : "method"
               },
               {
@@ -1075,6 +1075,10 @@
             "path" : "\/documentation\/swiftvizscale\/sequentialscale",
             "title" : "SequentialScale",
             "type" : "struct"
+          },
+          {
+            "title" : "Color Interpolators",
+            "type" : "groupMarker"
           },
           {
             "children" : [
@@ -1091,6 +1095,31 @@
             "path" : "\/documentation\/swiftvizscale\/colorinterpolator",
             "title" : "ColorInterpolator",
             "type" : "protocol"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Creating an Interpolator",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/lchcolorinterpolator\/init(_:_:)",
+                "title" : "init(CGColor, CGColor)",
+                "type" : "init"
+              },
+              {
+                "title" : "Mapping values to colors",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/lchcolorinterpolator\/interpolate(_:)",
+                "title" : "func interpolate(Double) -> CGColor",
+                "type" : "method"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/lchcolorinterpolator",
+            "title" : "LCHColorInterpolator",
+            "type" : "struct"
           },
           {
             "children" : [
@@ -1120,6 +1149,295 @@
             ],
             "path" : "\/documentation\/swiftvizscale\/lch",
             "title" : "LCH",
+            "type" : "enum"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Creating an Interpolator",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/init(_:)-3gpbm",
+                "title" : "init(String)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/init(_:)-6i0o1",
+                "title" : "init([CGColor])",
+                "type" : "init"
+              },
+              {
+                "title" : "Mapping values to colors",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/interpolate(_:)",
+                "title" : "func interpolate(Double) -> CGColor",
+                "type" : "method"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator",
+            "title" : "IndexedColorInterpolator",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Creating an Interpolator",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/computedrgbinterpolator\/init(name:r:g:b:)",
+                "title" : "init(name: String, r: (Double) -> Double, g: (Double) -> Double, b: (Double) -> Double)",
+                "type" : "init"
+              },
+              {
+                "title" : "Mapping values to colors",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/computedrgbinterpolator\/interpolate(_:)",
+                "title" : "func interpolate(Double) -> CGColor",
+                "type" : "method"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/computedrgbinterpolator",
+            "title" : "ComputedRGBInterpolator",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Single Hue Color Schemesw",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Sequential Single Hue Color Schemes",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/oranges",
+                    "title" : "static let Oranges: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/purples",
+                    "title" : "static let Purples: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/grays",
+                    "title" : "static let Grays: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/blues",
+                    "title" : "static let Blues: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/greens",
+                    "title" : "static let Greens: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/reds",
+                    "title" : "static let Reds: IndexedColorInterpolator",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue",
+                "title" : "ColorScheme.SequentialSingleHue",
+                "type" : "enum"
+              },
+              {
+                "title" : "Multi Hue Color Schemes",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Sequential Multi Hue Color Schemes",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/bugn",
+                    "title" : "static let BuGn: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/bupu",
+                    "title" : "static let BuPu: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/gnbu",
+                    "title" : "static let GnBu: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/orrd",
+                    "title" : "static let OrRd: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/pubu",
+                    "title" : "static let PuBu: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/pubugn",
+                    "title" : "static let PuBuGn: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/purd",
+                    "title" : "static let PuRd: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/rdpu",
+                    "title" : "static let RdPu: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/rdpu",
+                    "title" : "static let RdPu: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/ylgn",
+                    "title" : "static let YlGn: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/ylgnbu",
+                    "title" : "static let YlGnBu: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/ylorbr",
+                    "title" : "static let YlOrBr: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/ylorrd",
+                    "title" : "static let YlOrRd: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/viridis",
+                    "title" : "static let Viridis: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/inferno",
+                    "title" : "static let Inferno: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/magma",
+                    "title" : "static let Magma: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/plasma",
+                    "title" : "static let Plasma: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/cividis",
+                    "title" : "static let Cividis: ComputedRGBInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/turbo",
+                    "title" : "static let Turbo: ComputedRGBInterpolator",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue",
+                "title" : "ColorScheme.SequentialMultiHue",
+                "type" : "enum"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Diverging Color Schemes",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/brbg",
+                    "title" : "static let BrBG: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/prgn",
+                    "title" : "static let PrGN: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/piyg",
+                    "title" : "static let PiYG: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/puor",
+                    "title" : "static let PuOr: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/rdbu",
+                    "title" : "static let RdBu: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/rdgy",
+                    "title" : "static let RdGy: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/rdylbu",
+                    "title" : "static let RdYlBu: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/rdylgn",
+                    "title" : "static let RdYlGn: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/spectral",
+                    "title" : "static let Spectral: IndexedColorInterpolator",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging",
+                "title" : "ColorScheme.Diverging",
+                "type" : "enum"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Cyclical Color Schemes",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/cyclical\/sinebow",
+                    "title" : "static let Sinebow: ComputedRGBInterpolator",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/colorscheme\/cyclical",
+                "title" : "ColorScheme.Cyclical",
+                "type" : "enum"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/colorscheme",
+            "title" : "ColorScheme",
             "type" : "enum"
           },
           {
@@ -1333,286 +1651,6 @@
             "path" : "\/documentation\/swiftvizscale\/convertiblewithdouble",
             "title" : "ConvertibleWithDouble",
             "type" : "protocol"
-          },
-          {
-            "title" : "Structures",
-            "type" : "groupMarker"
-          },
-          {
-            "children" : [
-              {
-                "title" : "Sequential Single Hue Color Schemes",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/grays",
-                "title" : "static let Grays: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/blues",
-                "title" : "static let Blues: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/greens",
-                "title" : "static let Greens: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/reds",
-                "title" : "static let Reds: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/oranges",
-                "title" : "static let Oranges: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/purples",
-                "title" : "static let Purples: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "title" : "Sequential Multi Hue Color Schemes",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/bugn",
-                "title" : "static let BuGn: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/bupu",
-                "title" : "static let BuPu: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/gnbu",
-                "title" : "static let GnBu: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/orrd",
-                "title" : "static let OrRd: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/pubu",
-                "title" : "static let PuBu: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/pubugn",
-                "title" : "static let PuBuGn: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/purd",
-                "title" : "static let PuRd: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/rdpu",
-                "title" : "static let RdPu: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/rdpu",
-                "title" : "static let RdPu: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/ylgn",
-                "title" : "static let YlGn: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/ylgnbu",
-                "title" : "static let YlGnBu: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/ylorbr",
-                "title" : "static let YlOrBr: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/ylorrd",
-                "title" : "static let YlOrRd: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/viridis",
-                "title" : "static let Viridis: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/inferno",
-                "title" : "static let Inferno: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/magma",
-                "title" : "static let Magma: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/plasma",
-                "title" : "static let Plasma: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "title" : "Diverging Color Schemes",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/brbg",
-                "title" : "static let BrBG: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/prgn",
-                "title" : "static let PrGN: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/piyg",
-                "title" : "static let PiYG: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/puor",
-                "title" : "static let PuOR: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/rdbu",
-                "title" : "static let RdBu: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/rdgy",
-                "title" : "static let RdGy: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/rdylbu",
-                "title" : "static let RdYlBu: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/rdylgn",
-                "title" : "static let RdYlGn: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/spectral",
-                "title" : "static let Spectral: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "title" : "Creating an Interpolator",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/init(_:)-3gpbm",
-                "title" : "init(String)",
-                "type" : "init"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/init(_:)-6i0o1",
-                "title" : "init([CGColor])",
-                "type" : "init"
-              },
-              {
-                "title" : "Mapping values to colors",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/interpolate(_:)",
-                "title" : "func interpolate(Double) -> CGColor",
-                "type" : "method"
-              },
-              {
-                "title" : "Default Implementations",
-                "type" : "groupMarker"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Operators",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/!=(_:_:)",
-                    "title" : "static func != (Self, Self) -> Bool",
-                    "type" : "op"
-                  }
-                ],
-                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/equatable-implementations",
-                "title" : "Equatable Implementations",
-                "type" : "symbol"
-              }
-            ],
-            "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator",
-            "title" : "IndexedColorInterpolator",
-            "type" : "struct"
-          },
-          {
-            "children" : [
-              {
-                "title" : "Creating an Interpolator",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/lchcolorinterpolator\/init(_:_:)",
-                "title" : "init(CGColor, CGColor)",
-                "type" : "init"
-              },
-              {
-                "title" : "Mapping values to colors",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/lchcolorinterpolator\/interpolate(_:)",
-                "title" : "func interpolate(Double) -> CGColor",
-                "type" : "method"
-              },
-              {
-                "title" : "Comparing LCH Color Interpolators",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/lchcolorinterpolator\/!=(_:_:)",
-                "title" : "static func != (Self, Self) -> Bool",
-                "type" : "op"
-              },
-              {
-                "title" : "Default Implementations",
-                "type" : "groupMarker"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Operators",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/swiftvizscale\/lchcolorinterpolator\/!=(_:_:)",
-                    "title" : "static func != (Self, Self) -> Bool",
-                    "type" : "op"
-                  }
-                ],
-                "path" : "\/documentation\/swiftvizscale\/lchcolorinterpolator\/equatable-implementations",
-                "title" : "Equatable Implementations",
-                "type" : "symbol"
-              }
-            ],
-            "path" : "\/documentation\/swiftvizscale\/lchcolorinterpolator",
-            "title" : "LCHColorInterpolator",
-            "type" : "struct"
           }
         ],
         "path" : "\/documentation\/swiftvizscale",

@@ -168,10 +168,13 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorInterpolator",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LCHColorInterpolator",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/IndexedColorInterpolator",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ComputedRGBInterpolator",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme"
       ],
-      "title" : "Sequential Scales"
+      "title" : "Color Interpolators"
     }
   ],
   "topicSections" : [
@@ -264,6 +267,108 @@
   "title" : "ColorInterpolator",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/colorinterpolator"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ColorScheme": {
+  "abstract" : [
+    {
+      "text" : "A type that contains color schemes for use within a sequential scale.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ColorScheme"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ColorScheme",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ColorScheme"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ColorScheme",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/colorscheme"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ComputedRGBInterpolator": {
+  "abstract" : [
+    {
+      "text" : "A color interpolator that maps colors based on the output of red, green, and blue closures to compute a final color.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ComputedRGBInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ComputedRGBInterpolator",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ComputedRGBInterpolator"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ComputedRGBInterpolator",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/computedrgbinterpolator"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/IndexedColorInterpolator": {
+  "abstract" : [
+    {
+      "text" : "An interpolator that maps a unit value into a color based on the position between the colors.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/IndexedColorInterpolator",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "IndexedColorInterpolator"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "IndexedColorInterpolator",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LCH": {
   "abstract" : [
@@ -507,23 +612,10 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/lch\/interpolate(_:_:t:)"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/SequentialScale": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/LCHColorInterpolator": {
   "abstract" : [
     {
-      "text" : "A type that maps values from a continuous input ",
-      "type" : "text"
-    },
-    {
-      "inlineContent" : [
-        {
-          "text" : "domain",
-          "type" : "text"
-        }
-      ],
-      "type" : "emphasis"
-    },
-    {
-      "text" : " to a color.",
+      "text" : "A color interpolator that maps colors between two colors through the LCH color space.",
       "type" : "text"
     }
   ],
@@ -538,21 +630,21 @@
     },
     {
       "kind" : "identifier",
-      "text" : "SequentialScale"
+      "text" : "LCHColorInterpolator"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/SequentialScale",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/LCHColorInterpolator",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "SequentialScale"
+      "text" : "LCHColorInterpolator"
     }
   ],
   "role" : "symbol",
-  "title" : "SequentialScale",
+  "title" : "LCHColorInterpolator",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/sequentialscale"
+  "url" : "\/documentation\/swiftvizscale\/lchcolorinterpolator"
 },
 "https://en.wikipedia.org/wiki/HCL_color_space": {
   "identifier" : "https:\/\/en.wikipedia.org\/wiki\/HCL_color_space",
