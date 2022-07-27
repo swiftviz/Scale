@@ -40,10 +40,10 @@ jobs:
     # - name: env review
     #   run: env
 
-    - name: doc utility build verification
-      run: |
-        cd utils
-        swift build
+      #- name: doc utility build verification
+      # run: |
+      #  cd utils
+      #  swift build
 
     - name: Prepare Code Coverage
       run: xcrun llvm-cov export -format="lcov" .build/debug/SwiftVizScalePackageTests.xctest/Contents/MacOS/SwiftVizScalePackageTests -instr-profile .build/debug/codecov/default.profdata > info.lcov
