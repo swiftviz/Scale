@@ -43,8 +43,17 @@ let package = Package(
     ]
 )
 
-// Checking iOS build
-// xcodebuild clean build -scheme SwiftVizScale-Package -destination 'platform=iOS Simulator,OS=16.0,name=iPhone 8'
+// Checking macOS build w/ Xcode 14 beta
+// xcodebuild clean test -scheme SwiftVizScale-Package -destination 'platform=macOS,arch=arm64'
+
+// Checking iOS build w/ Xcode 14 beta
+// xcodebuild clean test -scheme SwiftVizScale-Package -destination 'platform=iOS Simulator,OS=16.0,name=iPhone 8'
+
+// Checking tvOS build w/ Xcode 14 beta
+// xcodebuild clean build -scheme SwiftVizScale-Package -destination 'platform=tvOS Simulator,OS=16.0,name=Apple TV'
+
+// Checking watchOS build w/ Xcode 14 beta
+// xcodebuild clean build -scheme SwiftVizScale-Package -destination 'platform=watchOS Simulator,OS=9.0,name=Apple Watch Series 6 - 44mm'
 
 if ProcessInfo.processInfo.environment["BENCHMARK"] != nil {
     package.products.append(
