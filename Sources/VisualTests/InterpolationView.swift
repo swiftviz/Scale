@@ -13,9 +13,9 @@ struct InterpolationView: View {
     var colorspace: CGColorSpace
     func color(_ stepValue: Int) -> CGColor {
         IndexedColorInterpolator.interpolate(startColor,
-                                      endColor,
-                                      t: normalize(Double(stepValue), lower: 0.0, higher: steps - 1),
-                                      using: colorspace)
+                                             endColor,
+                                             t: normalize(Double(stepValue), lower: 0.0, higher: steps - 1),
+                                             using: colorspace)
     }
 
     var body: some View {

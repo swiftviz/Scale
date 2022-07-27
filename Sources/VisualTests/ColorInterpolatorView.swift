@@ -37,6 +37,6 @@ public struct ColorInterpolatorView: View {
 @available(macOS 12.0, iOS 15.0, watchOS 8.0, tvOS 15.0, *)
 struct ColorInterpolatorView_Previews: PreviewProvider {
     static var previews: some View {
-        ColorInterpolatorView(steps: 128, interpolator: .Viridis)
+        ColorInterpolatorView(steps: 128, interpolator: ColorScheme.SequentialMultiHue.Viridis)
     }
 }

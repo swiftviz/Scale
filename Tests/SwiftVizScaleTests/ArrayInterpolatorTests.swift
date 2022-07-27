@@ -17,14 +17,6 @@ final class ArrayInterpolatorTests: XCTestCase {
         }
     }
 
-    func testHexValuesFromInterpolatorGuides() throws {
-        XCTAssertEqual(IndexedColorInterpolator.white.toHex(), "FFFFFF")
-        XCTAssertEqual(IndexedColorInterpolator.black.toHex(), "000000")
-        XCTAssertEqual(IndexedColorInterpolator.red.toHex(), "FF0000")
-        XCTAssertEqual(IndexedColorInterpolator.green.toHex(), "00FF00")
-        XCTAssertEqual(IndexedColorInterpolator.blue.toHex(), "0000FF")
-    }
-
     func testHexSequence() throws {
         let colors = CGColor.fromHexSequence("010101FFFFFF")
         XCTAssertEqual(colors.count, 2)
