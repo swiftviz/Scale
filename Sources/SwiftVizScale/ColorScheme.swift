@@ -8,31 +8,37 @@ public enum ColorScheme {
     public enum SequentialSingleHue {
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-single/Oranges.js
         /// An interpolator that presents  a white to orange single-hue color scheme.
+        ///
         /// ![A visual sample of the white to orange single-hue color scheme.](Oranges.png)
         public static let Oranges = IndexedColorInterpolator("fff5ebfee6cefdd0a2fdae6bfd8d3cf16913d94801a636037f2704")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-single/Purples.js
         /// An interpolator that presents  a white to purple single-hue color scheme.
+        ///
         /// ![A visual sample of the white to purple single-hue color scheme.](Purples.png)
         public static let Purples = IndexedColorInterpolator("fcfbfdefedf5dadaebbcbddc9e9ac8807dba6a51a354278f3f007d")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-single/Greys.js
         /// An interpolator that presents  a white to black single-hue color scheme.
+        ///
         /// ![A visual sample of the white to black single-hue color scheme.](Grays.png)
         public static let Grays = IndexedColorInterpolator("fffffff0f0f0d9d9d9bdbdbd969696737373525252252525000000")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-single/Blues.js
         /// An interpolator that presents  a white to blue single-hue color scheme.
+        ///
         /// ![A visual sample of the white to blue single-hue color scheme.](Blues.png)
         public static let Blues = IndexedColorInterpolator("f7fbffdeebf7c6dbef9ecae16baed64292c62171b508519c08306b")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-single/Greens.js
         /// An interpolator that presents  a white to green single-hue color scheme.
+        ///
         /// ![A visual sample of the white to green single-hue color scheme.](Greens.png)
         public static let Greens = IndexedColorInterpolator("f7fcf5e5f5e0c7e9c0a1d99b74c47641ab5d238b45006d2c00441b")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-single/Reds.js
         /// An interpolator that presents  a white to red single-hue color scheme.
+        /// 
         /// ![A visual sample of the white to red single-hue color scheme.](Reds.png)
         public static let Reds = IndexedColorInterpolator("fff5f0fee0d2fcbba1fc9272fb6a4aef3b2ccb181da50f1567000d")
     }
@@ -41,61 +47,73 @@ public enum ColorScheme {
     public enum SequentialMultiHue {
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-multi/BuGn.js
         /// An interpolator that presents  the spectral diverging color scheme.
+        ///
         /// ![A visual sample of a white to purple single-hue color scheme.](Spectral.png)
         public static let BuGn = IndexedColorInterpolator("f7fcfde5f5f9ccece699d8c966c2a441ae76238b45006d2c00441b")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-multi/BuPu.js
         /// An interpolator that presents  a blue through purple sequential color scheme.
+        ///
         /// ![A visual sample of a blue through purple sequential color scheme.](BuPu.png)
         public static let BuPu = IndexedColorInterpolator("f7fcfde0ecf4bfd3e69ebcda8c96c68c6bb188419d810f7c4d004b")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-multi/GnBu.js
         /// An interpolator that presents  a blue to green sequential color scheme.
+        ///
         /// ![A visual sample of a blue to green sequential color scheme.](GnBu.png)
         public static let GnBu = IndexedColorInterpolator("f7fcf0e0f3dbccebc5a8ddb57bccc44eb3d32b8cbe0868ac084081")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-multi/OrRd.js
         /// An interpolator that presents  an orange to red sequential color scheme.
+        ///
         /// ![A visual sample of an orange to red sequential color scheme.](OrRd.png)
         public static let OrRd = IndexedColorInterpolator("fff7ecfee8c8fdd49efdbb84fc8d59ef6548d7301fb300007f0000")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-multi/PuBu.js
         /// An interpolator that presents  a purple to blue sequential color scheme.
+        ///
         /// ![A visual sample of a purple to blue sequential color scheme.](PuBu.png)
         public static let PuBu = IndexedColorInterpolator("fff7fbece7f2d0d1e6a6bddb74a9cf3690c00570b0045a8d023858")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-multi/PuBuGn.js
         /// An interpolator that presents  a purple through blue to green sequential color scheme.
+        ///
         /// ![A visual sample of a purple through blue to green sequential color scheme.](PuBuGn.png)
         public static let PuBuGn = IndexedColorInterpolator("fff7fbece2f0d0d1e6a6bddb67a9cf3690c002818a016c59014636")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-multi/PuRd.js
         /// An interpolator that presents  a purple to red sequential color scheme.
+        ///
         /// ![A visual sample of a purple to red sequential color scheme.](PuRd.png)
         public static let PuRd = IndexedColorInterpolator("f7f4f9e7e1efd4b9dac994c7df65b0e7298ace125698004367001f")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-multi/RdPu.js
         /// An interpolator that presents  a red to purple sequential color scheme.
+        ///
         /// ![A visual sample of a red to purple sequential color scheme.](RdPu.png)
         public static let RdPu = IndexedColorInterpolator("fff7f3fde0ddfcc5c0fa9fb5f768a1dd3497ae017e7a017749006a")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-multi/YlGn.js
         /// An interpolator that presents  a yellow to green sequential color scheme.
+        ///
         /// ![A visual sample of a yellow to green sequential color scheme.](YlGn.png)
         public static let YlGn = IndexedColorInterpolator("ffffe5f7fcb9d9f0a3addd8e78c67941ab5d238443006837004529")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-multi/YlGnBu.js
         /// An interpolator that presents  a yellow through green to blue sequential color scheme.
+        ///
         /// ![A visual sample of a yellow through green to blue sequential color scheme.](YlGnBu.png)
         public static let YlGnBu = IndexedColorInterpolator("ffffd9edf8b1c7e9b47fcdbb41b6c41d91c0225ea8253494081d58")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-multi/YlOrBr.js
         /// An interpolator that presents  a yellow through orange to brown sequential color scheme.
+        ///
         /// ![A visual sample of a yellow through orange to brown sequential color scheme.](YlOrBr.png)
         public static let YlOrBr = IndexedColorInterpolator("ffffe5fff7bcfee391fec44ffe9929ec7014cc4c02993404662506")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-multi/YlOrRd.js
         /// An interpolator that presents  a yellow through orange to red sequential color scheme.
+        ///
         /// ![A visual sample of a yellow through orange to red sequential color scheme.](YlOrRd.png)
         public static let YlOrRd = IndexedColorInterpolator("ffffccffeda0fed976feb24cfd8d3cfc4e2ae31a1cbd0026800026")
 
@@ -140,6 +158,7 @@ public enum ColorScheme {
     /// Cyclical, multi-hue color schemes.
     public enum Cyclical {
         /// An interpolator that presents the sinebow cyclical color scheme.
+        ///
         /// ![A visual sample of the sinebow cyclical color scheme.](Sinebow.png)
         public static let Sinebow = ComputedRGBInterpolator.Sinebow
     }
@@ -150,46 +169,55 @@ public enum ColorScheme {
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/diverging/BrBG.js
         /// An interpolator that presents a brown to blue-green diverging color scheme.
+        ///
         /// ![A visual sample of a brown to blue-green diverging color scheme..](BrBG.png)
         public static let BrBG = IndexedColorInterpolator("5430058c510abf812ddfc27df6e8c3f5f5f5c7eae580cdc135978f01665e003c30")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/diverging/PRGn.js
         /// An interpolator that presents  a purple to green diverging color scheme.
+        ///
         /// ![A visual sample of a purple to green diverging color scheme.](PrGN.png)
         public static let PrGN = IndexedColorInterpolator("40004b762a839970abc2a5cfe7d4e8f7f7f7d9f0d3a6dba05aae611b783700441b")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/diverging/PiYG.js
         /// An interpolator that presents  a pink to yellow-green diverging color scheme.
+        ///
         /// ![A visual sample of a pink to yellow-green diverging color scheme.](PiYG.png)
         public static let PiYG = IndexedColorInterpolator("8e0152c51b7dde77aef1b6dafde0eff7f7f7e6f5d0b8e1867fbc414d9221276419")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/diverging/PuOr.js
         /// An interpolator that presents  a purple to orange diverging color scheme.
+        ///
         /// ![A visual sample of a purple to orange diverging color scheme.](PuOr.png)
-        public static let PuOR = IndexedColorInterpolator("2d004b5427888073acb2abd2d8daebf7f7f7fee0b6fdb863e08214b358067f3b08")
+        public static let PuOr = IndexedColorInterpolator("2d004b5427888073acb2abd2d8daebf7f7f7fee0b6fdb863e08214b358067f3b08")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/diverging/RdBu.js
         /// An interpolator that presents  a red to blue diverging color scheme.
+        ///
         /// ![A visual sample of a red to blue diverging color scheme..](RdBu.png)
         public static let RdBu = IndexedColorInterpolator("67001fb2182bd6604df4a582fddbc7f7f7f7d1e5f092c5de4393c32166ac053061")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/diverging/RdGy.js
         /// An interpolator that presents  a red to grey diverging color scheme.
+        ///
         /// ![A visual sample of a red to grey diverging color scheme.](RdGy.png)
         public static let RdGy = IndexedColorInterpolator("67001fb2182bd6604df4a582fddbc7ffffffe0e0e0bababa8787874d4d4d1a1a1a")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/diverging/RdYlBu.js
         /// An interpolator that presents  a red through yellow to green diverging color scheme.
+        ///
         /// ![A visual sample of a red through yellow to green diverging color scheme.](RdYlBu.png)
         public static let RdYlBu = IndexedColorInterpolator("a50026d73027f46d43fdae61fee090ffffbfe0f3f8abd9e974add14575b4313695")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/diverging/RdYlGn.js
         /// An interpolator that presents  a red through yellow to green diverging color scheme.
+        ///
         /// ![A visual sample a red through yellow to green diverging color scheme.](RdYlGn.png)
         public static let RdYlGn = IndexedColorInterpolator("a50026d73027f46d43fdae61fee08bffffbfd9ef8ba6d96a66bd631a9850006837")
 
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/diverging/Spectral.js
         /// An interpolator that presents  the spectral diverging color scheme.
+        ///
         /// ![A visual sample of the spectral diverging color scheme.](Spectral.png)
         public static let Spectral = IndexedColorInterpolator("9e0142d53e4ff46d43fdae61fee08bffffbfe6f598abdda466c2a53288bd5e4fa2")
     }

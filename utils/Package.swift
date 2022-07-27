@@ -14,8 +14,8 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
-        .package(url: "https://github.com/swiftviz/scale", branch: "main"),
         .package(url: "https://github.com/apple/swift-system", from: "0.0.3"),
+        .package(name: "scale", path: "../")
     ],
     targets: [
         .executableTarget(
