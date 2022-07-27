@@ -7,7 +7,7 @@ import Foundation
 
 /// A type that maps values from a continuous input _domain_ to a color.
 @available(watchOS 6.0, *)
-public struct SequentialScale<InputType: ConvertibleWithDouble>: CustomStringConvertible {
+public struct SequentialScale<InputType: ConvertibleWithDouble, Interpolator: ColorInterpolator>: CustomStringConvertible {
     /// The lower bound of the input domain.
     public let domainLower: InputType
     /// The upper bound of the input domain.
@@ -15,7 +15,7 @@ public struct SequentialScale<InputType: ConvertibleWithDouble>: CustomStringCon
     /// A Boolean value that indicates if the mapping from domain to range is inverted.
     public let reversed: Bool
 
-    let interpolator: IndexedColorInterpolator
+    let interpolator: Interpolator
 
     /// Creates a new sequential scale that maps a _domain_ value to a color.
     /// - Parameters:
@@ -26,7 +26,7 @@ public struct SequentialScale<InputType: ConvertibleWithDouble>: CustomStringCon
     public init(lower: InputType = 0,
                 higher: InputType = 1,
                 reversed: Bool = false,
-                interpolator: IndexedColorInterpolator)
+                interpolator: Interpolator)
     {
         precondition(lower <= higher, "attempting to set an inverted domain: \(lower) to \(higher)")
         precondition(lower != higher, "attempting to set an empty domain: \(lower) to \(higher)")
@@ -66,7 +66,7 @@ public struct SequentialScale<InputType: ConvertibleWithDouble>: CustomStringCon
     /// Returns a new scale with the interpolator set to the instance you provide.
     /// - Parameter interpolator: An interpolator instance.
     /// - Returns: A copy of the scale with the domain values you provide.
-    public func interpolator(_ interpolator: IndexedColorInterpolator) -> Self {
+    public func interpolator(_ interpolator: Interpolator) -> Self {
         Self(lower: domainLower, higher: domainHigher, reversed: reversed, interpolator: interpolator)
     }
 
