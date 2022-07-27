@@ -4,7 +4,6 @@
 
 /// A type that contains color schemes for use within a sequential scale.
 public enum ColorScheme {
-    
     /// Sequential, single-hue color schemes.
     public enum SequentialSingleHue {
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-single/Oranges.js
