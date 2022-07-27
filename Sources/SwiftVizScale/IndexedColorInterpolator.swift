@@ -4,29 +4,9 @@
 
 import CoreGraphics
 
-public struct LCHColorInterpolator: ColorInterpolator {
-    let startColor: CGColor
-    let endColor: CGColor
-
-    /// Creates a new color interpolator that maps between the two colors you provide.
-    /// - Parameters:
-    ///   - from: The color at the beginning.
-    ///   - to: The color at the end.
-    public init(_ from: CGColor, _ to: CGColor) {
-        startColor = from
-        endColor = to
-    }
-
-    /// Returns the color mapped from the unit value you provide.
-    /// - Parameter t: A unit value between `0` and  `1`.
-    public func interpolate(_ t: Double) -> CGColor {
-        LCH.interpolate(startColor, endColor, t: t)
-    }
-}
-
 /// An interpolator that maps a unit value into a color based on the position between the colors.
 @available(watchOS 6.0, *)
-public struct IndexedColorInterpolator: ColorInterpolator {
+public struct IndexedColorInterpolator: ColorInterpolator, Hashable {
     // Color pallets for interpolation and presentation:
     // https://github.com/d3/d3-scale-chromatic/blob/main/README.md
     // https://bids.github.io/colormap/
