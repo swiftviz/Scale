@@ -18,12 +18,9 @@ let package = Package(
             targets: ["SwiftVizScale"]
         ),
         .library(name: "ScaleVisualTests", targets: ["SwiftVizScale", "VisualTests"]),
-        .executable(name: "GenerateDocImages", targets: ["GenerateDocImages"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-numerics", from: "1.0.0"),
-        .package(url: "https://github.com/apple/swift-system", from: "0.0.3"),
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
     ],
     targets: [
         .target(
@@ -41,14 +38,6 @@ let package = Package(
             dependencies: [
                 .product(name: "Numerics", package: "swift-numerics"),
                 "SwiftVizScale",
-            ]
-        ),
-        .executableTarget(
-            name: "GenerateDocImages",
-            dependencies: [
-                "VisualTests",
-                .product(name: "ArgumentParser", package: "swift-argument-parser"),
-                .product(name: "SystemPackage", package: "swift-system"),
             ]
         ),
     ]
