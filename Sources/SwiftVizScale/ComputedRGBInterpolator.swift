@@ -1,6 +1,6 @@
 //
 //  ComputedRGBInterpolator.swift
-//  
+//
 
 import CoreGraphics
 
@@ -16,7 +16,8 @@ public struct ComputedRGBInterpolator: ColorInterpolator {
     ///   - to: The color at the end.
     public init(r: @escaping (Double) -> Double,
                 g: @escaping (Double) -> Double,
-                b: @escaping (Double) -> Double) {
+                b: @escaping (Double) -> Double)
+    {
         rClosure = r
         gClosure = g
         bClosure = b

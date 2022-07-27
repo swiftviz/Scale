@@ -1,6 +1,6 @@
 //
 //  LCHColorInterpolator.swift
-//  
+//
 
 import CoreGraphics
 
