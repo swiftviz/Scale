@@ -8,7 +8,7 @@ import SwiftUI
 @available(macOS 12.0, iOS 15.0, watchOS 8.0, tvOS 15.0, *)
 public struct ColorInterpolatorView: View {
     var steps: CGFloat
-    var interpolator: IndexedColorInterpolator
+    var interpolator: ColorInterpolator
 
     func color(_ stepValue: Int) -> CGColor {
         let t = normalize(Double(stepValue),
@@ -28,7 +28,7 @@ public struct ColorInterpolatorView: View {
         }
     }
 
-    public init(steps: CGFloat, interpolator: IndexedColorInterpolator) {
+    public init(steps: CGFloat, interpolator: some ColorInterpolator) {
         self.steps = steps
         self.interpolator = interpolator
     }
@@ -37,6 +37,6 @@ public struct ColorInterpolatorView: View {
 @available(macOS 12.0, iOS 15.0, watchOS 8.0, tvOS 15.0, *)
 struct ColorInterpolatorView_Previews: PreviewProvider {
     static var previews: some View {
-        ColorInterpolatorView(steps: 128, interpolator: ColorScheme.SequentialMultiHue.Viridis)
+        ColorInterpolatorView(steps: 128, interpolator: ColorScheme.SequentialMultiHue.cividis)
     }
 }
