@@ -2,7 +2,10 @@
 //  ColorScheme.swift
 //
 
+/// A type that contains color schemes for use within a sequential scale.
 public enum ColorScheme {
+    
+    /// Sequential, single-hue color schemes.
     public enum SequentialSingleHue {
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-single/Oranges.js
         /// An interpolator that presents  a white to orange single-hue color scheme.
@@ -35,6 +38,7 @@ public enum ColorScheme {
         public static let Reds = IndexedColorInterpolator("fff5f0fee0d2fcbba1fc9272fb6a4aef3b2ccb181da50f1567000d")
     }
 
+    /// Sequential, multi-hue color schemes.
     public enum SequentialMultiHue {
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-multi/BuGn.js
         /// An interpolator that presents  the spectral diverging color scheme.
@@ -134,12 +138,14 @@ public enum ColorScheme {
         public static let Turbo = ComputedRGBInterpolator.Turbo
     }
 
+    /// Cyclical, multi-hue color schemes.
     public enum Cyclical {
         /// An interpolator that presents the sinebow cyclical color scheme.
         /// ![A visual sample of the sinebow cyclical color scheme.](Sinebow.png)
         public static let Sinebow = ComputedRGBInterpolator.Sinebow
     }
 
+    /// Diverging, multi-hue color schemes.
     public enum Diverging {
         // MARK: - Diverging Color Schemes, replicated from d3-scale-chromatic
 
