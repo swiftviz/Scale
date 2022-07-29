@@ -45,7 +45,6 @@ let package = Package(
             name: "SwiftVizScaleTests",
             dependencies: [
                 .product(name: "Numerics", package: "swift-numerics"),
-                .product(name: "Collections", package: "swift-collections"),
                 "SwiftVizScale",
             ]
         ),
