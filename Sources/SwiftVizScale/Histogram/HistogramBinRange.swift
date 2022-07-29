@@ -9,7 +9,7 @@ import Foundation
 /// All bins except the last for a particular chart represent an open range, meaning that the range doesn’t include the upper bound.
 /// The last range of the last bin is closed, so that it does include the upper bound.
 /// The system keeps track of the open or closed state of a particular range.
-public struct HistogramBinRange<Bound> where Bound: Comparable {
+public struct HistogramBinRange<Bound: Hashable & Comparable> {
     // rough clone ChartBinRange
     public let lowerBound: Bound
     public let upperBound: Bound
@@ -21,6 +21,7 @@ public struct HistogramBinRange<Bound> where Bound: Comparable {
         self._final = _final
     }
 }
+extension HistogramBinRange: Hashable { }
 
 extension HistogramBinRange: RangeExpression {
     /// Returns the range of indices described by this range expression within the given collection.
