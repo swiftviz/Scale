@@ -18,11 +18,11 @@ Loosely based on the APIs and mechanisms created by Mike Bostock and contributor
 
 ## Generate documentation images for the included color scales
 
-    swift build
-    .build/debug/GenerateDocImages
+    cd utils
+    swift run GenerateDocImages
 
 then optionally move the files into the DocC resources directory:
 
-    mv *.png Sources/SwiftVizScale/Documentation.docc/Resources/
+    mv *.png ../Sources/SwiftVizScale/Documentation.docc/Resources/
 
 

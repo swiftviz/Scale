@@ -20,13 +20,21 @@ let package = Package(
         .library(name: "ScaleVisualTests", targets: ["SwiftVizScale", "VisualTests"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-numerics", from: "1.0.0"),
+        .package(
+            url: "https://github.com/apple/swift-numerics",
+            .upToNextMajor(from: "1.0.0")
+        ),
+        .package(
+            url: "https://github.com/apple/swift-collections.git",
+            .upToNextMajor(from: "1.0.0")
+        ),
     ],
     targets: [
         .target(
             name: "SwiftVizScale",
             dependencies: [
                 .product(name: "Numerics", package: "swift-numerics"),
+                .product(name: "Collections", package: "swift-collections"),
             ]
         ),
         .target(
@@ -37,6 +45,7 @@ let package = Package(
             name: "SwiftVizScaleTests",
             dependencies: [
                 .product(name: "Numerics", package: "swift-numerics"),
+                .product(name: "Collections", package: "swift-collections"),
                 "SwiftVizScale",
             ]
         ),
@@ -76,6 +85,6 @@ if ProcessInfo.processInfo.environment["BENCHMARK"] != nil {
 #if swift(>=5.6)
     // Add the documentation compiler plugin if possible
     package.dependencies.append(
-        .package(url: "https://github.com/apple/swift-docc-plugin", branch: "main") // from: "1.0.0")
+        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0") // from: "1.0.0")
     )
 #endif

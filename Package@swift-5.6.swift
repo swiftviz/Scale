@@ -19,14 +19,22 @@ let package = Package(
         .library(name: "ScaleVisualTests", targets: ["SwiftVizScale", "VisualTests"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-numerics", from: "1.0.0"),
-        .package(url: "https://github.com/apple/swift-docc-plugin", branch: "1.0.0"),
+        .package(
+            url: "https://github.com/apple/swift-numerics",
+            .upToNextMajor(from: "1.0.0")
+        ),
+        .package(
+            url: "https://github.com/apple/swift-collections.git",
+            .upToNextMajor(from: "1.0.0")
+        ),
+        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
     ],
     targets: [
         .target(
             name: "SwiftVizScale",
             dependencies: [
                 .product(name: "Numerics", package: "swift-numerics"),
+                .product(name: "Collections", package: "swift-collections"),
             ]
         ),
         .target(
@@ -37,6 +45,7 @@ let package = Package(
             name: "SwiftVizScaleTests",
             dependencies: [
                 .product(name: "Numerics", package: "swift-numerics"),
+                .product(name: "Collections", package: "swift-collections"),
                 "SwiftVizScale",
             ]
         ),
