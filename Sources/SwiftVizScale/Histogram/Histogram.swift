@@ -32,9 +32,10 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
         guard let stdDev = data.stdDev, let smallestValue = data.min(), let largestValue = data.max() else {
             return
         }
-        // As a default, use Scott's normal reference rule: 3.49 * stdDev / pow(n, 1/3) to determine a uniform
-        // bin size for the histogram.
-        let binSize = 3.49 * stdDev / pow(Double(data.count), 1.0 / 3.0)
+        
+        // As a default, use Scott's normal reference rule: 3.49 * stdDev / pow(n, 1/3) to select a uniform
+        // bin size for the histogram, with the assumption that the distribution is roughly normal.
+        let binSize = round(3.49 * stdDev / pow(Double(data.count), 1.0 / 3.0))
 
         // Create and initialize the keys for the bins with a count of 0
         var currentStep = smallestValue
@@ -142,9 +143,9 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
         if let desiredCount = desiredCount {
             // if a desired number of bins was provided, and a stride value evenly dividing the
             // data's range into those values is larger than the minimum, use that larger stride.
-            let maybeStride = (largestValue - smallestValue) / Value(desiredCount)
-            if maybeStride >= minimumStride {
-                stride = maybeStride
+            let maybeStride = round((Double(largestValue) - Double(smallestValue)) / Double(desiredCount))
+            if maybeStride >= Double(minimumStride) {
+                stride = Value(maybeStride)
             }
         }
 
