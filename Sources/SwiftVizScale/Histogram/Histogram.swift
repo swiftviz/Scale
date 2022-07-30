@@ -11,15 +11,15 @@ import OrderedCollections
 // Choosing a "bin size" shows different features - smaller bins for higher density data is the gist of the
 // desire. Picking the right size.. is something of an art.
 
-//extension Sequence where Element: Hashable {
+// extension Sequence where Element: Hashable {
 //    func histogram() -> [Element: Int] {
 //        return self.reduce(into: [:]) { counts, elem in counts[elem, default: 0] += 1 }
 //    }
-//}
+// }
 
-struct Histogram<Value: Numeric & Hashable & Comparable>: Sequence {
-
-    var _storage: OrderedDictionary<HistogramBinRange<Value>, Int>
+struct Histogram<Value: Numeric & Hashable & Comparable> {
+    typealias InternalDictType = OrderedDictionary<HistogramBinRange<Value>, Int>
+    private var _storage: InternalDictType
 
     // Collection Conformance
 //    var startIndex: HistogramBinRange<Value>?
@@ -43,50 +43,9 @@ struct Histogram<Value: Numeric & Hashable & Comparable>: Sequence {
 //        return nil
 //    }
 
-    // Sequence Conformance
-    public typealias Element = (HistogramBinRange<Value>, Int)
-    public typealias Iterator = HistogramIterator
-    public typealias Index = HistogramBinRange<Value>
-    
-    /// The type that allows iteration over an ordered dictionary's elements.
-    @frozen
-    public struct HistogramIterator: IteratorProtocol {
-      @usableFromInline
-      internal let _base: Histogram<Value>
-
-      @usableFromInline
-      internal var _position: Int
-
-      @inlinable
-      @inline(__always)
-      internal init(_base: Histogram<Value>) {
-        self._base = _base
-        self._position = 0
-      }
-
-      /// Advances to the next element and returns it, or nil if no next
-      /// element exists.
-      ///
-      /// - Complexity: O(1)
-      @inlinable
-      public mutating func next() -> Element? {
-        guard _position < _base._storage.count else { return nil }
-          let key = _base._storage.keys[_position]
-          let result = (key, _base._storage[key]!)
-        _position += 1
-        return result
-      }
-    }
-    
-    
-    func makeIterator() -> HistogramIterator {
-        return HistogramIterator(_base: self)
-    }
-    
-
-
+//
     /// A type representing the sequence's elements.
-    
+
 //    /// A type that represents a position in the collection.
 //    ///
 //    /// Valid indices consist of the position of every element and a
@@ -101,10 +60,9 @@ struct Histogram<Value: Numeric & Hashable & Comparable>: Sequence {
 //    /// supplying `IndexingIterator` as its associated `Iterator`
 //    /// type.
 //    public typealias Iterator = OrderedDictionary<HistogramBinRange<Value>, Int>.Iterator
-    
-    
+
     // MARK: - Automatic (Scott's Rule) Initializers
-    
+
     /// Automatically determine the bins from data.
     /// - Parameter data: <#data description#>
     init(data: [Value]) where Value: BinaryInteger {
@@ -114,8 +72,8 @@ struct Histogram<Value: Numeric & Hashable & Comparable>: Sequence {
         }
         // As a default, use Scott's normal reference rule: 3.49 * stdDev / pow(n, 1/3) to determine a uniform
         // bin size for the histogram.
-        let binSize = 3.49 * stdDev / pow(Double(data.count), 1.0/3.0)
-        
+        let binSize = 3.49 * stdDev / pow(Double(data.count), 1.0 / 3.0)
+
         // Create and initialize the keys for the bins with a count of 0
         var currentStep = smallestValue
         while currentStep < largestValue {
@@ -128,7 +86,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable>: Sequence {
             _storage[bin] = 0
             currentStep += Value(binSize)
         }
-        
+
         // Iterate through the data to insert everything into the histogram keyed by bin.
         for dataValue in data {
             // This could be improved (perf wise) by potentially doing a binary search
@@ -157,8 +115,8 @@ struct Histogram<Value: Numeric & Hashable & Comparable>: Sequence {
         }
         // As a default, use Scott's normal reference rule: 3.49 * stdDev / pow(n, 1/3) to determine a uniform
         // bin size for the histogram.
-        let binSize = 3.49 * stdDev / pow(Double(data.count), 1.0/3.0)
-        
+        let binSize = 3.49 * stdDev / pow(Double(data.count), 1.0 / 3.0)
+
         // Create and initialize the keys for the bins with a count of 0
         var currentStep = smallestValue
         while currentStep < largestValue {
@@ -171,7 +129,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable>: Sequence {
             _storage[bin] = 0
             currentStep += Value(binSize)
         }
-        
+
         // Iterate through the data to insert everything into the histogram keyed by bin.
         for dataValue in data {
             // This could be improved (perf wise) by potentially doing a binary search
@@ -189,9 +147,8 @@ struct Histogram<Value: Numeric & Hashable & Comparable>: Sequence {
         }
 //        startIndex = _storage.keys.first
 //        endIndex = _storage.keys.last
-
     }
-    
+
     // MARK: - Uniform Initializers
 
     /// Automatically determine the bins from data, constrained by a minimum bin size
@@ -217,7 +174,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable>: Sequence {
                 stride = maybeStride
             }
         }
-        
+
         // Create and initialize the keys for the bins with a count of 0
         var currentStep = smallestValue
         while currentStep < largestValue {
@@ -230,7 +187,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable>: Sequence {
             _storage[bin] = 0
             currentStep += stride
         }
-        
+
         // Iterate through the data to insert everything into the histogram keyed by bin.
         for dataValue in data {
             // This could be improved (perf wise) by potentially doing a binary search
@@ -248,7 +205,6 @@ struct Histogram<Value: Numeric & Hashable & Comparable>: Sequence {
         }
 //        startIndex = _storage.keys.first
 //        endIndex = _storage.keys.last
-
     }
 
     /// Automatically determine the bins from data, constrained by a minimum bin size
@@ -274,7 +230,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable>: Sequence {
                 stride = maybeStride
             }
         }
-        
+
         // Create and initialize the keys for the bins with a count of 0
         var currentStep = smallestValue
         while currentStep < largestValue {
@@ -287,7 +243,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable>: Sequence {
             _storage[bin] = 0
             currentStep += stride
         }
-        
+
         // Iterate through the data to insert everything into the histogram keyed by bin.
         for dataValue in data {
             // This could be improved (perf wise) by potentially doing a binary search
@@ -305,7 +261,6 @@ struct Histogram<Value: Numeric & Hashable & Comparable>: Sequence {
         }
 //        startIndex = _storage.keys.first
 //        endIndex = _storage.keys.last
-
     }
 
     // MARK: - Explicit Thresholds, Non-uniform bin-size Initializers
@@ -328,7 +283,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable>: Sequence {
             }
             _storage[bin] = 0
         }
-        
+
         // Iterate through the data to insert everything into the histogram keyed by bin.
         for dataValue in data {
             // This could be improved (perf wise) by potentially doing a binary search
@@ -348,3 +303,68 @@ struct Histogram<Value: Numeric & Hashable & Comparable>: Sequence {
 //        endIndex = _storage.keys.last
     }
 }
+
+extension Histogram: Sequence {
+    // Sequence Conformance
+    public typealias Element = (HistogramBinRange<Value>, Int)
+    public typealias Iterator = HistogramIterator
+
+    /// The type that allows iteration over an ordered dictionary's elements.
+    @frozen
+    public struct HistogramIterator: IteratorProtocol {
+        @usableFromInline
+        internal let _base: Histogram<Value>
+
+        @usableFromInline
+        internal var _position: Int
+
+        @inlinable
+        @inline(__always)
+        internal init(_base: Histogram<Value>) {
+            self._base = _base
+            _position = 0
+        }
+
+        /// Advances to the next element and returns it, or nil if no next
+        /// element exists.
+        ///
+        /// - Complexity: O(1)
+        @inlinable
+        public mutating func next() -> Element? {
+            guard _position < _base._storage.count else { return nil }
+            let key = _base._storage.keys[_position]
+            guard let valueAtKey = _base._storage[key] else { return nil }
+            let result = (key, valueAtKey)
+            _position += 1
+            return result
+        }
+    }
+
+    func makeIterator() -> HistogramIterator {
+        HistogramIterator(_base: self)
+    }
+}
+
+// https://www.swiftbysundell.com/articles/creating-custom-collections-in-swift/
+// OrderedDictionary *doesn't* conform to Collection itself, so we'd have to really screw with this...
+//
+//    public typealias Index = HistogramBinRange<Value>
+//    extension Histogram: Collection {
+//        // Required nested types, that tell Swift what our collection contains
+//        typealias Index = Histogram.InternalDictType.Index
+//        typealias Element = Histogram.InternalDictType.Element
+//
+//        // The upper and lower bounds of the collection, used in iterations
+//        var startIndex: Index { return _storage.startIndex }
+//        var endIndex: Index { return _storage.endIndex }
+//
+//        // Required subscript, based on a dictionary index
+//        subscript(index: Index) -> Histogram.InternalDictType.Iterator.Element {
+//            get { return _storage[index] }
+//        }
+//
+//        // Method that returns the next index when iterating
+//        func index(after i: Index) -> Index {
+//            return _storage.index(after: i)
+//        }
+//    }
