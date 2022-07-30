@@ -246,7 +246,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     public func domain<T: BinaryInteger>(lower: T, higher: T) -> Self {
         Self(lower: Double(lower), higher: Double(higher), type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
-    
+
     /// Returns a new scale with the domain set to the values you provide.
     /// - Parameters:
     ///   - lower: The lower bound for the scale's domain.
