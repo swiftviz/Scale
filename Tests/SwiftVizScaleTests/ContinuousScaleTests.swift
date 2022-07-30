@@ -7,7 +7,7 @@ import XCTest
 
 class ContinuousScaleTests: XCTestCase {
     func testAnyContinuousScaleInitializer() throws {
-        let cScale = ContinuousScale<Double, CGFloat>(0.0 ... 50.0)
+        let cScale = ContinuousScale<CGFloat>(0.0 ... 50.0)
 
         XCTAssertEqual(cScale.domainLower, 0, accuracy: 0.001)
         XCTAssertEqual(cScale.domainHigher, 50, accuracy: 0.001)
@@ -16,7 +16,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testAnyContinuousScaleModifiers() throws {
-        let cScale = ContinuousScale<Double, CGFloat>(0.0 ... 50.0)
+        let cScale = ContinuousScale<CGFloat>(0.0 ... 50.0)
 
         XCTAssertEqual(cScale.domainLower, 0, accuracy: 0.001)
         XCTAssertEqual(cScale.domainHigher, 50, accuracy: 0.001)
@@ -37,7 +37,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testAnyContinuousScaleMethods() throws {
-        let cScale = ContinuousScale<Double, CGFloat>(0.0 ... 50.0)
+        let cScale = ContinuousScale<CGFloat>(0.0 ... 50.0)
 
         XCTAssertEqual(cScale.domainLower, 0, accuracy: 0.001)
         XCTAssertEqual(cScale.domainHigher, 50, accuracy: 0.001)
@@ -47,7 +47,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testAnyContinuousScaleConversions() throws {
-        let linearScale = ContinuousScale<Double, CGFloat>(1.0 ... 50.0)
+        let linearScale = ContinuousScale<CGFloat>(1.0 ... 50.0)
         XCTAssertEqual(linearScale.scaleType, .linear)
 
         let log = linearScale.scaleType(.log)
@@ -58,7 +58,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testArrayDomainModifier() {
-        let myScale = ContinuousScale<Double, CGFloat>(1.0 ... 50.0)
+        let myScale = ContinuousScale<CGFloat>(1.0 ... 50.0)
         XCTAssertEqual(myScale.scaleType, .linear)
 
         let updated = myScale.domain([0.0, 15.0, 5.0])
@@ -67,7 +67,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testArrayDomainModifierWithoutNice() {
-        let myScale = ContinuousScale<Double, CGFloat>(1.0 ... 50.0)
+        let myScale = ContinuousScale<CGFloat>(1.0 ... 50.0)
         XCTAssertEqual(myScale.scaleType, .linear)
 
         let updated = myScale.domain([0.0, 15.0, 5.0], nice: false)
@@ -76,26 +76,26 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testScaleType() {
-        let anyScale = ContinuousScale<Double, CGFloat>(1.0 ... 50.0)
+        let anyScale = ContinuousScale<CGFloat>(1.0 ... 50.0)
         XCTAssertEqual(anyScale.scaleType.description, "linear")
 
-        let linearScale = ContinuousScale<Double, CGFloat>(1.0 ... 50.0).transform(.clamp)
+        let linearScale = ContinuousScale<CGFloat>(1.0 ... 50.0).transform(.clamp)
         XCTAssertEqual(linearScale.scaleType.description, "linear")
 
-        let logScale = ContinuousScale<Int, CGFloat>(1 ... 100).scaleType(.log).range(lower: 0, higher: 300)
+        let logScale = ContinuousScale<CGFloat>(1 ... 100).scaleType(.log).range(lower: 0, higher: 300)
         XCTAssertEqual(logScale.scaleType.description, "log")
     }
 
     func testScaleDescription() {
-        let myScale = ContinuousScale<Double, CGFloat>(1.0 ... 50.0)
+        let myScale = ContinuousScale<CGFloat>(1.0 ... 50.0)
 
         XCTAssertEqual(String(describing: myScale), "linear(xform:none)[1.0:50.0]->[nil:nil]")
 
-        let clampedScale = ContinuousScale<Double, CGFloat>(1.0 ... 50.0).transform(.clamp)
+        let clampedScale = ContinuousScale<CGFloat>(1.0 ... 50.0).transform(.clamp)
         XCTAssertEqual(String(describing: clampedScale), "linear(xform:clamp)[1.0:50.0]->[nil:nil]")
 
-        let secondScale = ContinuousScale<Int, CGFloat>(1 ... 100, type: .log).range(lower: 0, higher: 300)
-        XCTAssertEqual(String(describing: secondScale), "log(xform:none)[1:100]->[Optional(0.0):Optional(300.0)]")
+        let secondScale = ContinuousScale<CGFloat>(1 ... 100, type: .log).range(lower: 0, higher: 300)
+        XCTAssertEqual(String(describing: secondScale), "log(xform:none)[1.0:100.0]->[Optional(0.0):Optional(300.0)]")
     }
 
     func testScaleExampleValues() {
@@ -106,7 +106,7 @@ class ContinuousScaleTests: XCTestCase {
         let incoming = TimeInterval(0.00062460815272012726)
         let outputRange = CGFloat(1) ... CGFloat(367)
         // domain appears to be 0..0 in my example where this is failing
-        let scale = ContinuousScale<Double, CGFloat>(from: 0.003, to: 0.056)
+        let scale = ContinuousScale<CGFloat>(from: 0.003, to: 0.056)
         guard let result = scale.scale(incoming + 0.003, from: CGFloat(1.0), to: CGFloat(367.0)) else {
             XCTFail()
             return
@@ -115,7 +115,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testDoubleLinearScaleTicks() {
-        let myScale = ContinuousScale<Double, Float>(from: 0.0, to: 1.0)
+        let myScale = ContinuousScale<Float>(from: 0.0, to: 1.0)
         XCTAssertEqual(myScale.transformType, .none)
 
         let testRange = Float(0) ... Float(100.0)
@@ -131,7 +131,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testDoubleLinearScaleManualTicks() {
-        let myScale = ContinuousScale<Double, Float>(from: 0.0, to: 10.0)
+        let myScale = ContinuousScale<Float>(from: 0.0, to: 10.0)
         XCTAssertEqual(myScale.transformType, .none)
 
         let testRange = Float(0) ... Float(100.0)
@@ -147,9 +147,9 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testDoubleLinearScaleClamp() {
-        let scale = ContinuousScale<Double, Float>(from: 0.0, to: 10.0)
-        let clampedScale = ContinuousScale<Double, Float>(from: 0.0, to: 10.0, transform: .clamp)
-        let dropScale = ContinuousScale<Double, Float>(from: 0, to: 10, transform: .drop)
+        let scale = ContinuousScale<Float>(from: 0.0, to: 10.0)
+        let clampedScale = ContinuousScale<Float>(from: 0.0, to: 10.0, transform: .clamp)
+        let dropScale = ContinuousScale<Float>(from: 0, to: 10, transform: .drop)
         XCTAssertEqual(scale.transformType, .none)
         XCTAssertEqual(clampedScale.transformType, .clamp)
         XCTAssertEqual(dropScale.transformType, .drop)
@@ -179,9 +179,9 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testIntLinearScaleClamp() {
-        let scale = ContinuousScale<Int, Float>(from: 0, to: 10)
-        let clampedScale = ContinuousScale<Int, Float>(from: 0, to: 10, transform: .clamp)
-        let dropScale = ContinuousScale<Int, Float>(from: 0, to: 10, transform: .drop)
+        let scale = ContinuousScale<Float>(from: 0, to: 10)
+        let clampedScale = ContinuousScale<Float>(from: 0, to: 10, transform: .clamp)
+        let dropScale = ContinuousScale<Float>(from: 0, to: 10, transform: .drop)
 
         XCTAssertEqual(scale.transformType, .none)
         XCTAssertEqual(clampedScale.transformType, .clamp)
@@ -213,9 +213,9 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testDoubleLinearInvertClamp() {
-        let scale = ContinuousScale<Double, Float>(from: 0.0, to: 10.0)
-        let clampedScale = ContinuousScale<Double, Float>(from: 0.0, to: 10.0, transform: .clamp)
-        let dropScale = ContinuousScale<Double, Float>(from: 0, to: 10, transform: .drop)
+        let scale = ContinuousScale<Float>(from: 0.0, to: 10.0)
+        let clampedScale = ContinuousScale<Float>(from: 0.0, to: 10.0, transform: .clamp)
+        let dropScale = ContinuousScale<Float>(from: 0, to: 10, transform: .drop)
         XCTAssertEqual(scale.transformType, .none)
         XCTAssertEqual(clampedScale.transformType, .clamp)
         XCTAssertEqual(dropScale.transformType, .drop)
@@ -245,9 +245,9 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testIntLinearInvertClamp() {
-        let scale = ContinuousScale<Int, Float>(from: 0, to: 10)
-        let clampedScale = ContinuousScale<Int, Float>(from: 0, to: 10, transform: .clamp)
-        let dropScale = ContinuousScale<Int, Float>(from: 0, to: 10, transform: .drop)
+        let scale = ContinuousScale<Float>(from: 0, to: 10)
+        let clampedScale = ContinuousScale<Float>(from: 0, to: 10, transform: .clamp)
+        let dropScale = ContinuousScale<Float>(from: 0, to: 10, transform: .drop)
         XCTAssertEqual(scale.transformType, .none)
         XCTAssertEqual(clampedScale.transformType, .clamp)
         XCTAssertEqual(dropScale.transformType, .drop)
@@ -277,7 +277,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testLinearScaleDomainModifier() {
-        let scale = ContinuousScale<Double, Float>()
+        let scale = ContinuousScale<Float>()
         XCTAssertEqual(0, scale.domainLower)
         XCTAssertEqual(1, scale.domainHigher)
         XCTAssertNil(scale.rangeLower)
@@ -289,7 +289,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testLinearScaleDomain2Modifier() {
-        let scale = ContinuousScale<Double, Float>()
+        let scale = ContinuousScale<Float>()
         XCTAssertEqual(0, scale.domainLower)
         XCTAssertEqual(1, scale.domainHigher)
         XCTAssertNil(scale.rangeLower)
@@ -301,7 +301,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testLinearScaleRangeModifier() {
-        let scale = ContinuousScale<Double, Float>()
+        let scale = ContinuousScale<Float>()
         XCTAssertEqual(0, scale.domainLower)
         XCTAssertEqual(1, scale.domainHigher)
         XCTAssertNil(scale.rangeLower)
@@ -314,7 +314,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testLinearScaleRange2Modifier() {
-        let scale = ContinuousScale<Double, Float>()
+        let scale = ContinuousScale<Float>()
         XCTAssertEqual(0, scale.domainLower)
         XCTAssertEqual(1, scale.domainHigher)
         XCTAssertNil(scale.rangeLower)
@@ -327,7 +327,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testLinearScaleTransformModifier() {
-        let scale = ContinuousScale<Double, Float>()
+        let scale = ContinuousScale<Float>()
         XCTAssertEqual(scale.transformType, DomainDataTransform.none)
 
         let updated = scale.transform(.clamp)
@@ -335,7 +335,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testScaleDomainOfOneValue() {
-        let scale = ContinuousScale<Double, CGFloat>()
+        let scale = ContinuousScale<CGFloat>()
 
         let updated = scale.domain([5.0])
         XCTAssertEqual(updated.domainLower, 0)
@@ -343,7 +343,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testScaleDomainOfOneValueNiced() {
-        let scale = ContinuousScale<Double, CGFloat>()
+        let scale = ContinuousScale<CGFloat>()
 
         let updated = scale.domain([5.0], nice: true)
         XCTAssertEqual(updated.domainLower, 0)
@@ -351,7 +351,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testReversedRangeModifiers() {
-        var scale = ContinuousScale<Double, CGFloat>(0 ... 20).range(0 ... 20)
+        var scale = ContinuousScale<CGFloat>(0 ... 20).range(0 ... 20)
         XCTAssertEqual(scale.reversed, false)
         scale = ContinuousScale(20, transform: .none, desiredTicks: 10, reversed: true, rangeLower: 0, rangeHigher: 20)
         XCTAssertEqual(scale.reversed, true)
@@ -362,7 +362,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testReversedCalculations() {
-        let scale = ContinuousScale<Double, CGFloat>(20, reversed: true, rangeLower: 0, rangeHigher: 20)
+        let scale = ContinuousScale<CGFloat>(20, reversed: true, rangeLower: 0, rangeHigher: 20)
         XCTAssertEqual(scale.scale(0), 20)
         XCTAssertEqual(scale.scale(20), 0)
         XCTAssertEqual(scale.scale(5), 15)
@@ -378,7 +378,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testReversedTicks() {
-        let reversed = ContinuousScale<Double, CGFloat>(20, reversed: true, rangeLower: 0, rangeHigher: 20)
+        let reversed = ContinuousScale<CGFloat>(20, reversed: true, rangeLower: 0, rangeHigher: 20)
         let reverseTicks = reversed.ticks(rangeLower: 0, rangeHigher: 20)
         XCTAssertEqual(reverseTicks.count, 5)
         assertTick(reverseTicks[0], "0.0", 20)
@@ -407,7 +407,7 @@ class ContinuousScaleTests: XCTestCase {
                                     56.5, 57.9, 56.1, 55.6, 55.8, 57.4, 52.9, 52.2,
                                     52.2, 57.6, 57.6, 53.4, 57.2, 57.6, 53.6, 57.9, 57.6, 56.7, 56.3, 53.6,
                                     55.6, 50.4, 50.2, 48.2, 48.0, 51.3, 50.9, 52.3, 52.5, 45.1, 43.2, 44.6]
-        let baseScale = ContinuousScale<Double, CGFloat>()
+        let baseScale = ContinuousScale<CGFloat>()
         let updatedScale = baseScale.domain(sampleData, nice: true)
         XCTAssertEqual(updatedScale.domainLower, 0)
         XCTAssertEqual(updatedScale.domainHigher, 100)

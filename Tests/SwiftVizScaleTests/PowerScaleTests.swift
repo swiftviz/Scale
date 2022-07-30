@@ -7,7 +7,7 @@ import XCTest
 
 class PowerScaleTests: XCTestCase {
     func testPowerScale_scale_identity() throws {
-        let pow = ContinuousScale<Double, CGFloat>(from: 0, to: 100, type: .power(1))
+        let pow = ContinuousScale<CGFloat>(from: 0, to: 100, type: .power(1))
         guard let result = pow.scale(2, from: 0, to: 100) else {
             XCTFail()
             return
@@ -16,7 +16,7 @@ class PowerScaleTests: XCTestCase {
     }
 
     func testPowerScale_scale_square() throws {
-        let pow = ContinuousScale<Double, CGFloat>(from: 0, to: 10, type: .power(2))
+        let pow = ContinuousScale<CGFloat>(from: 0, to: 10, type: .power(2))
         guard let result = pow.scale(2, from: 0, to: 100) else {
             XCTFail()
             return
@@ -25,7 +25,7 @@ class PowerScaleTests: XCTestCase {
     }
 
     func testPowerScale_invert_identity() throws {
-        let pow = ContinuousScale<Double, CGFloat>(from: 0, to: 100, type: .power(1))
+        let pow = ContinuousScale<CGFloat>(from: 0, to: 100, type: .power(1))
         guard let result = pow.invert(5, from: 0, to: 100) else {
             XCTFail()
             return
@@ -34,7 +34,7 @@ class PowerScaleTests: XCTestCase {
     }
 
     func testPowerScale_invert_square() throws {
-        let pow = ContinuousScale<Double, CGFloat>(from: 0, to: 10, type: .power(2))
+        let pow = ContinuousScale<CGFloat>(from: 0, to: 10, type: .power(2))
         guard let result = pow.invert(16, from: 0, to: 100) else {
             XCTFail()
             return
@@ -43,7 +43,7 @@ class PowerScaleTests: XCTestCase {
     }
 
     func testReversedRangeModifiers() {
-        var scale = ContinuousScale<Double, CGFloat>(0 ... 100, type: .power(1)).range(0 ... 100)
+        var scale = ContinuousScale<CGFloat>(0 ... 100, type: .power(1)).range(0 ... 100)
         XCTAssertEqual(scale.reversed, false)
         scale = ContinuousScale(from: 0, to: 100, reversed: true, rangeLower: 0, rangeHigher: 100)
         XCTAssertEqual(scale.reversed, true)
@@ -54,7 +54,7 @@ class PowerScaleTests: XCTestCase {
     }
 
     func testReversedCalculations() {
-        let scale = ContinuousScale<Double, CGFloat>(from: 0, to: 100, type: .power(1), reversed: true, rangeLower: 0, rangeHigher: 100)
+        let scale = ContinuousScale<CGFloat>(from: 0, to: 100, type: .power(1), reversed: true, rangeLower: 0, rangeHigher: 100)
         XCTAssertEqual(scale.scale(0), 100)
         XCTAssertEqual(scale.scale(100), 0)
         XCTAssertEqual(scale.scale(10), 90)
@@ -70,7 +70,7 @@ class PowerScaleTests: XCTestCase {
     }
 
     func testReversedTicks() {
-        let reversed = ContinuousScale<Double, CGFloat>(from: 0, to: 100, type: .power(1), reversed: true, rangeLower: 0, rangeHigher: 100)
+        let reversed = ContinuousScale<CGFloat>(from: 0, to: 100, type: .power(1), reversed: true, rangeLower: 0, rangeHigher: 100)
         let reverseTicks = reversed.ticks(rangeLower: 0, rangeHigher: 20)
         XCTAssertEqual(reverseTicks.count, 6)
         assertTick(reverseTicks[0], "0.0", 20)
