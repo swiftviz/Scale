@@ -33,6 +33,16 @@ final class HistogramTests: XCTestCase {
         XCTAssertEqual(last.description, "10...15")
     }
 
+    func testHistogramBinRangeComparable() throws {
+        let first = HistogramBinRange(lowerBound: 0, upperBound: 5)
+        let second = HistogramBinRange(lowerBound: 5, upperBound: 10)
+        let last = HistogramBinRange(lowerBound: 10, upperBound: 15, _final: true)
+
+        XCTAssertTrue(first < second)
+        XCTAssertTrue(second < last)
+        XCTAssertTrue(first < last)
+    }
+
     func testHistogramBinRangeRelative() throws {
         let first = HistogramBinRange(lowerBound: 0, upperBound: 5)
         let second = HistogramBinRange(lowerBound: 5, upperBound: 10)
@@ -51,8 +61,40 @@ final class HistogramTests: XCTestCase {
         XCTAssertEqual(rangeFirst.relative(to: offCollection), 0 ..< 6)
     }
 
-    func testInferredHistogramInitializer() throws {
+    func testInferredHistogramInitializerInt() throws {
         let h = Histogram(data: listIntOutliers)
+        XCTAssertNotNil(h)
+        // create an array of range-count tuples to inspect how the histogram was created
+        let flayedHistogram = Array(h)
+
+        XCTAssertEqual(flayedHistogram.count, 4)
+        // print(flayedHistogram[0])
+        let (firstRange, firstCount) = flayedHistogram[0]
+        XCTAssertEqual(firstRange.lowerBound, 2)
+        XCTAssertEqual(firstRange.upperBound, 22)
+        XCTAssertEqual(firstCount, 11)
+
+        // print(flayedHistogram[1])
+        let (secondRange, secondCount) = flayedHistogram[1]
+        XCTAssertEqual(secondRange.lowerBound, 22)
+        XCTAssertEqual(secondRange.upperBound, 42)
+        XCTAssertEqual(secondCount, 0)
+
+        // print(flayedHistogram[2])
+        let (thirdRange, thirdCount) = flayedHistogram[2]
+        XCTAssertEqual(thirdRange.lowerBound, 42)
+        XCTAssertEqual(thirdRange.upperBound, 62)
+        XCTAssertEqual(thirdCount, 0)
+
+        // print(flayedHistogram[3])
+        let (fourthRange, fourthCount) = flayedHistogram[3]
+        XCTAssertEqual(fourthRange.lowerBound, 62)
+        XCTAssertEqual(fourthRange.upperBound, 65)
+        XCTAssertEqual(fourthCount, 1)
+    }
+
+    func testInferredHistogramInitializerFloat() throws {
+        let h = Histogram(data: listDoubleClose)
         XCTAssertNotNil(h)
         // create an array of range-count tuples to inspect how the histogram was created
         let flayedHistogram = Array(h)
@@ -61,20 +103,20 @@ final class HistogramTests: XCTestCase {
         // print(flayedHistogram[0])
         let (firstRange, firstCount) = flayedHistogram[0]
         XCTAssertEqual(firstRange.lowerBound, 2)
-        XCTAssertEqual(firstRange.upperBound, 29)
-        XCTAssertEqual(firstCount, 11)
+        XCTAssertEqual(firstRange.upperBound, 4, accuracy: 0.01)
+        XCTAssertEqual(firstCount, 6)
 
         // print(flayedHistogram[1])
         let (secondRange, secondCount) = flayedHistogram[1]
-        XCTAssertEqual(secondRange.lowerBound, 29)
-        XCTAssertEqual(secondRange.upperBound, 56)
-        XCTAssertEqual(secondCount, 0)
+        XCTAssertEqual(secondRange.lowerBound, 4, accuracy: 0.01)
+        XCTAssertEqual(secondRange.upperBound, 6, accuracy: 0.01)
+        XCTAssertEqual(secondCount, 5)
 
         // print(flayedHistogram[2])
         let (thirdRange, thirdCount) = flayedHistogram[2]
-        XCTAssertEqual(thirdRange.lowerBound, 56)
-        XCTAssertEqual(thirdRange.upperBound, 65)
-        XCTAssertEqual(thirdCount, 1)
+        XCTAssertEqual(thirdRange.lowerBound, 6, accuracy: 0.01)
+        XCTAssertEqual(thirdRange.upperBound, 8)
+        XCTAssertEqual(thirdCount, 4)
     }
 
     func testStrideHistogramInitializer() throws {
@@ -142,5 +184,15 @@ final class HistogramTests: XCTestCase {
         let flayedHistogram = Array(h)
 
         XCTAssertEqual(flayedHistogram.count, 11)
+    }
+
+    func testThresholdHistogramInitializer() throws {
+        let h = Histogram(data: listIntOutliers, thresholds: [0, 2, 5, 10, 20, 50, 100])
+        XCTAssertNotNil(h)
+        // create an array of range-count tuples to inspect how the histogram was created
+        let flayedHistogram = Array(h)
+
+        XCTAssertEqual(flayedHistogram.count, 6)
+        XCTAssertEqual(h.description, "[0..<2: 0, 2..<5: 4, 5..<10: 6, 10..<20: 0, 20..<50: 1, 50...100: 1]")
     }
 }

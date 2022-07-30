@@ -36,18 +36,19 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
         // As a default, use Scott's normal reference rule: 3.49 * stdDev / pow(n, 1/3) to select a uniform
         // bin size for the histogram, with the assumption that the distribution is roughly normal.
         let binSize = round(3.49 * stdDev / pow(Double(data.count), 1.0 / 3.0))
+        let niceBinSize = Double.niceVersion(for: binSize, trendTowardsZero: true)
 
         // Create and initialize the keys for the bins with a count of 0
         var currentStep = smallestValue
         while currentStep < largestValue {
             let bin: HistogramBinRange<Value>
-            if currentStep + Value(binSize) > largestValue {
+            if currentStep + Value(niceBinSize) > largestValue {
                 bin = HistogramBinRange(lowerBound: currentStep, upperBound: largestValue, _final: true)
             } else {
-                bin = HistogramBinRange(lowerBound: currentStep, upperBound: currentStep + Value(binSize))
+                bin = HistogramBinRange(lowerBound: currentStep, upperBound: currentStep + Value(niceBinSize))
             }
             _storage[bin] = 0
-            currentStep += Value(binSize)
+            currentStep += Value(niceBinSize)
         }
 
         // Iterate through the data to insert everything into the histogram keyed by bin.
@@ -64,18 +65,19 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
         // As a default, use Scott's normal reference rule: 3.49 * stdDev / pow(n, 1/3) to determine a uniform
         // bin size for the histogram.
         let binSize = 3.49 * stdDev / pow(Double(data.count), 1.0 / 3.0)
+        let niceBinSize = Double.niceVersion(for: binSize, trendTowardsZero: true)
 
         // Create and initialize the keys for the bins with a count of 0
         var currentStep = smallestValue
         while currentStep < largestValue {
             let bin: HistogramBinRange<Value>
-            if currentStep + Value(binSize) > largestValue {
+            if currentStep + Value(niceBinSize) > largestValue {
                 bin = HistogramBinRange(lowerBound: currentStep, upperBound: largestValue, _final: true)
             } else {
-                bin = HistogramBinRange(lowerBound: currentStep, upperBound: currentStep + Value(binSize))
+                bin = HistogramBinRange(lowerBound: currentStep, upperBound: currentStep + Value(niceBinSize))
             }
             _storage[bin] = 0
-            currentStep += Value(binSize)
+            currentStep += Value(niceBinSize)
         }
 
         // Iterate through the data to insert everything into the histogram keyed by bin.
