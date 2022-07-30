@@ -5,7 +5,7 @@
 /// A type that maps values from an input _domain_ to an output _range_, or reversed from an output _range_ to a corresponding _domain_ value.
 public protocol ReversibleScale: Scale {
     /// The type used for the scale's range.
-    associatedtype RangeType: ConvertibleWithDouble
+    associatedtype RangeType: BinaryFloatingPoint
 
     /// Converts back from the output _range_ to a value within the input _domain_.
     ///

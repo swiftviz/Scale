@@ -7,7 +7,7 @@ import Foundation
 
 /// A type that maps values from a continuous input _domain_ to a color.
 @available(watchOS 6.0, *)
-public struct SequentialScale<InputType: ConvertibleWithDouble, Interpolator: ColorInterpolator>: CustomStringConvertible {
+public struct SequentialScale<InputType: BinaryFloatingPoint, Interpolator: ColorInterpolator>: CustomStringConvertible {
     /// The lower bound of the input domain.
     public let domainLower: InputType
     /// The upper bound of the input domain.
@@ -57,7 +57,7 @@ public struct SequentialScale<InputType: ConvertibleWithDouble, Interpolator: Co
         } else {
             clampedX = x
         }
-        let t = normalize(clampedX.toDouble(), lower: domainLower.toDouble(), higher: domainHigher.toDouble())
+        let t = normalize(Double(clampedX), lower: Double(domainLower), higher: Double(domainHigher))
         return interpolator.interpolate(t)
     }
 
@@ -105,16 +105,16 @@ public struct SequentialScale<InputType: ConvertibleWithDouble, Interpolator: Co
         if values.count == 1 || min == max {
             if nice {
                 let bottom: Double = 0
-                let top = Double.niceVersion(for: max.toDouble(), trendTowardsZero: false)
-                return domain(lower: InputType.fromDouble(bottom), higher: InputType.fromDouble(top))
+                let top = InputType.niceVersion(for: max, trendTowardsZero: false)
+                return domain(lower: InputType(bottom), higher: InputType(top))
             } else {
                 return domain(lower: 0, higher: max)
             }
         } else {
             if nice {
-                let bottom = Double.niceMinimumValueForRange(min: min.toDouble(), max: max.toDouble())
-                let top = Double.niceVersion(for: max.toDouble(), trendTowardsZero: false)
-                return domain(lower: InputType.fromDouble(bottom), higher: InputType.fromDouble(top))
+                let bottom = Double.niceMinimumValueForRange(min: Double(min), max: Double(max))
+                let top = Double.niceVersion(for: Double(max), trendTowardsZero: false)
+                return domain(lower: InputType(bottom), higher: InputType(top))
             } else {
                 return domain(lower: min, higher: max)
             }

@@ -5,7 +5,7 @@
 import Foundation
 
 /// A continuous scale for transforming and mapping continuous input values within a domain to output values you provide.
-public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: ConvertibleWithDouble>: ReversibleScale, CustomStringConvertible {
+public struct ContinuousScale<InputType: BinaryFloatingPoint, OutputType: BinaryFloatingPoint>: ReversibleScale, CustomStringConvertible {
     /// The lower bound of the input domain.
     public let domainLower: InputType
     /// The upper bound of the input domain.
@@ -51,7 +51,7 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
         self.scaleType = scaleType
         if case .log = scaleType {
             if lower == 0 {
-                domainLower = InputType.fromDouble(Double.leastNonzeroMagnitude)
+                domainLower = InputType(Double.leastNonzeroMagnitude)
             } else {
                 domainLower = lower
             }
@@ -205,16 +205,16 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
         if values.count == 1 || min == max {
             if nice {
                 let bottom: Double = 0
-                let top = Double.niceVersion(for: max.toDouble(), trendTowardsZero: false)
-                return domain(lower: InputType.fromDouble(bottom), higher: InputType.fromDouble(top))
+                let top = InputType.niceVersion(for: InputType(max), trendTowardsZero: false)
+                return domain(lower: InputType(bottom), higher: InputType(top))
             } else {
                 return domain(lower: 0, higher: max)
             }
         } else {
             if nice {
-                let bottom = Double.niceMinimumValueForRange(min: min.toDouble(), max: max.toDouble())
-                let top = Double.niceVersion(for: max.toDouble(), trendTowardsZero: false)
-                return domain(lower: InputType.fromDouble(bottom), higher: InputType.fromDouble(top))
+                let bottom = InputType.niceMinimumValueForRange(min: min, max: max)
+                let top = InputType.niceVersion(for: max, trendTowardsZero: false)
+                return domain(lower: bottom, higher: top)
             } else {
                 return domain(lower: min, higher: max)
             }
@@ -284,23 +284,23 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
             return nil
         }
 
-        let transformedDomainValue = scaleType.transform(domainValue.toDouble())
-        let transformedDomainLow = scaleType.transform(domainLower.toDouble())
-        let transformedDomainHigh = scaleType.transform(domainHigher.toDouble())
+        let transformedDomainValue = scaleType.transform(Double(domainValue))
+        let transformedDomainLow = scaleType.transform(Double(domainLower))
+        let transformedDomainHigh = scaleType.transform(Double(domainHigher))
 
         let normalizedDomainValue = normalize(transformedDomainValue, lower: transformedDomainLow, higher: transformedDomainHigh)
 
         let valueMappedToRange: Double
         if reversed {
-            valueMappedToRange = interpolate(normalizedDomainValue, lower: rangeHigher.toDouble(), higher: rangeLower.toDouble())
+            valueMappedToRange = interpolate(normalizedDomainValue, lower: Double(rangeHigher), higher: Double(rangeLower))
         } else {
-            valueMappedToRange = interpolate(normalizedDomainValue, lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
+            valueMappedToRange = interpolate(normalizedDomainValue, lower: Double(rangeLower), higher: Double(rangeHigher))
         }
         if case .radial = scaleType {
-            return OutputType.fromDouble(valueMappedToRange * valueMappedToRange)
+            return OutputType(valueMappedToRange * valueMappedToRange)
         }
         if valueMappedToRange.isNaN { return nil }
-        return OutputType.fromDouble(valueMappedToRange)
+        return OutputType(valueMappedToRange)
     }
 
     /// Transforms the input value using a linear function to the resulting value into the range you provide.
@@ -364,12 +364,12 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
         // inverts the scale, taking a value in the output range and returning the relevant value from the input domain
         let normalizedRangeValue: Double
         if case .radial = scaleType {
-            normalizedRangeValue = normalize(sqrt(rangeValue.toDouble()), lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
+            normalizedRangeValue = normalize(sqrt(Double(rangeValue)), lower: Double(rangeLower), higher: Double(rangeHigher))
         } else {
-            normalizedRangeValue = normalize(rangeValue.toDouble(), lower: rangeLower.toDouble(), higher: rangeHigher.toDouble())
+            normalizedRangeValue = normalize(Double(rangeValue), lower: Double(rangeLower), higher: Double(rangeHigher))
         }
-        let transformedDomainLower = scaleType.transform(domainLower.toDouble())
-        let transformedDomainHigher = scaleType.transform(domainHigher.toDouble())
+        let transformedDomainLower = scaleType.transform(Double(domainLower))
+        let transformedDomainHigher = scaleType.transform(Double(domainHigher))
 
         let linearInterpolatedValue: Double
         if reversed {
@@ -378,7 +378,7 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
             linearInterpolatedValue = interpolate(normalizedRangeValue, lower: transformedDomainLower, higher: transformedDomainHigher)
         }
         let domainValue = scaleType.invertedTransform(linearInterpolatedValue)
-        let castToInputType = InputType.fromDouble(domainValue)
+        let castToInputType = InputType(domainValue)
         return transformAgainstDomain(castToInputType)
     }
 
@@ -496,14 +496,14 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
     ///   - rangeHigher: The higher value for the range into which to position the ticks.
     ///   - formatter: An optional formatter to convert the domain values into strings.
     public func ticks(rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
-        let tickValues = Double.rangeOfNiceValues(min: domainLower.toDouble(), max: domainHigher.toDouble(), ofSize: desiredTicks)
+        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
         // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
-        return tickValues.compactMap { tickValue in
+        return tickValues.compactMap { tickValue -> Tick<OutputType>? in
             // we only want tick values that are within the domain that's been specified on the scale.
-            if tickValue > domainHigher.toDouble() || tickValue < domainLower.toDouble() {
+            if InputType(tickValue) > domainHigher || InputType(tickValue) < domainLower {
                 return nil
             }
-            if let tickRangeLocation = scale(InputType.fromDouble(tickValue), reversed: self.reversed, from: rangeLower, to: rangeHigher) {
+            if let tickRangeLocation = scale(InputType(tickValue), reversed: self.reversed, from: rangeLower, to: rangeHigher) {
                 return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
             }
             return nil
@@ -517,10 +517,10 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
     ///   - rangeHigher: The higher value for the range into which to position the ticks.
     ///   - formatter: An optional formatter to convert the domain values into strings.
     public func ticks(reversed: Bool, rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
-        let tickValues = Double.rangeOfNiceValues(min: domainLower.toDouble(), max: domainHigher.toDouble(), ofSize: desiredTicks)
+        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
         // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
         return tickValues.compactMap { tickValue in
-            if let tickRangeLocation = scale(InputType.fromDouble(tickValue), reversed: reversed, from: rangeLower, to: rangeHigher) {
+            if let tickRangeLocation = scale(InputType(tickValue), reversed: reversed, from: rangeLower, to: rangeHigher) {
                 return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
             }
             return nil
@@ -530,7 +530,7 @@ public struct ContinuousScale<InputType: ConvertibleWithDouble, OutputType: Conv
     /// Returns an array of the strings that make up the ticks for the scale.
     /// - Parameter formatter: An optional formatter to convert the domain values into strings.
     public func defaultTickValues(formatter: Formatter? = nil) -> [String] {
-        let tickValues = Double.rangeOfNiceValues(min: domainLower.toDouble(), max: domainHigher.toDouble(), ofSize: desiredTicks)
+        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
         return tickValues.map { intValue in
             if let formatter = formatter {
                 return formatter.string(for: intValue) ?? ""
