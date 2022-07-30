@@ -16,8 +16,8 @@ final class TickTests: XCTestCase {
     func testTickInitNotRealLocation() {
         let result = Tick(value: "one", location: 1)
         XCTAssertNotNil(result)
-        XCTAssertEqual("one", result.label)
-        XCTAssertEqual(1, result.rangeLocation)
+        XCTAssertEqual("one", result!.label)
+        XCTAssertEqual(1, result!.rangeLocation)
     }
 
     func testTickLabelFailInitFloat() {

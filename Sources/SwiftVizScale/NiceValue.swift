@@ -6,10 +6,6 @@
 //
 
 import Foundation
-import Numerics
-#if canImport(CoreGraphics)
-    import CoreGraphics
-#endif
 
 // MARK: - Integers
 

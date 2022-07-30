@@ -21,10 +21,6 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/apple/swift-numerics",
-            .upToNextMajor(from: "1.0.0")
-        ),
-        .package(
             url: "https://github.com/apple/swift-collections.git",
             .upToNextMajor(from: "1.0.0")
         ),
@@ -33,7 +29,6 @@ let package = Package(
         .target(
             name: "SwiftVizScale",
             dependencies: [
-                .product(name: "Numerics", package: "swift-numerics"),
                 .product(name: "Collections", package: "swift-collections"),
             ]
         ),
@@ -44,7 +39,6 @@ let package = Package(
         .testTarget(
             name: "SwiftVizScaleTests",
             dependencies: [
-                .product(name: "Numerics", package: "swift-numerics"),
                 "SwiftVizScale",
             ]
         ),

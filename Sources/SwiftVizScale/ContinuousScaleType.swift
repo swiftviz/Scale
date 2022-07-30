@@ -1,6 +1,7 @@
 //
 //  ContinuousScaleType.swift
 //
+import Foundation
 
 /// The type of continuous scale.
 public enum ContinuousScaleType: Equatable {
@@ -29,22 +30,22 @@ public enum ContinuousScaleType: Equatable {
     var transform: (Double) -> Double {
         switch self {
         case .log:
-            return { Double.log10($0) }
+            return { log10($0) }
         case .linear, .radial:
             return { $0 }
         case let .power(exp):
-            return { Double.pow($0, exp) }
+            return { pow($0, exp) }
         }
     }
 
     var invertedTransform: (Double) -> Double {
         switch self {
         case .log:
-            return { Double.pow(10, $0) }
+            return { pow(10, $0) }
         case .linear, .radial:
             return { $0 }
         case let .power(exp):
-            return { Double.pow($0, 1.0 / exp) }
+            return { pow($0, 1.0 / exp) }
         }
     }
 }
