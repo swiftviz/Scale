@@ -15,7 +15,7 @@ import Foundation
 ///
 /// Point scales are useful for mapping discrete data from a collection to a collection of specific points.
 /// If you are rendering a bar chart, consider using the ``BandScale`` instead.
-public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDouble>: DiscreteScale {
+public struct PointScale<CategoryType: Comparable, OutputType: BinaryFloatingPoint>: DiscreteScale {
     /// The lower value of the range into which the discrete values map.
     public let rangeLower: OutputType?
     /// The upper value of the range into which the discrete values map.
@@ -128,8 +128,8 @@ public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDo
             return nil
         }
 
-        let extent = to.toDouble() - from.toDouble()
-        let extentWithoutOuterPadding = extent - (2 * padding.toDouble())
+        let extent = Double(to) - Double(from)
+        let extentWithoutOuterPadding = extent - (2 * Double(padding))
         if extentWithoutOuterPadding < 0 {
             return 0
         } else {
@@ -178,11 +178,11 @@ public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDo
         } else {
             doublePosition = Double(domain.firstIndex(of: value)!)
         }
-        let location = padding.toDouble() + (doublePosition * step) + (step / 2)
+        let location = Double(padding) + (doublePosition * step) + (step / 2)
         if round {
-            return OutputType.fromDouble(location.rounded())
+            return OutputType(location.rounded())
         }
-        return OutputType.fromDouble(location)
+        return OutputType(location)
     }
 
     /// Maps the value from the range back to the discrete value that it matches.
@@ -227,12 +227,12 @@ public struct PointScale<CategoryType: Comparable, OutputType: ConvertibleWithDo
             return nil
         }
         // calculate the closest index
-        let rangeExtentWithoutPadding = upperRange.toDouble() - lowerRange.toDouble() - 2 * padding.toDouble()
+        let rangeExtentWithoutPadding = Double(upperRange) - Double(lowerRange) - 2 * Double(padding)
         let indexedRangeValue: Double
         if reversed {
-            indexedRangeValue = (upperRange.toDouble() - padding.toDouble() - location.toDouble()) / rangeExtentWithoutPadding
+            indexedRangeValue = (Double(upperRange) - Double(padding) - Double(location)) / rangeExtentWithoutPadding
         } else {
-            indexedRangeValue = (location.toDouble() - padding.toDouble()) / rangeExtentWithoutPadding
+            indexedRangeValue = (Double(location) - Double(padding)) / rangeExtentWithoutPadding
         }
         let rangeValueExpandedToCountDomain = indexedRangeValue * Double(domain.count - 1)
         let closestIndex = Int(rangeValueExpandedToCountDomain.rounded())

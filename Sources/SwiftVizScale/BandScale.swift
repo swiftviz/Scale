@@ -22,7 +22,7 @@ import Foundation
 ///
 /// Band scales are useful for bar charts, calculating explicit bands with optional spacing to align with elements of a collection.
 /// If you mapping discrete data into a scatter plot, consider using the ``PointScale`` instead.
-public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDouble>: DiscreteScale {
+public struct BandScale<CategoryType: Comparable, OutputType: BinaryFloatingPoint>: DiscreteScale {
     /// The lower value of the range into which the discrete values map.
     public let rangeLower: OutputType?
     /// The upper value of the range into which the discrete values map.
@@ -149,9 +149,9 @@ public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDou
         if domain.isEmpty {
             return nil
         }
-        let extent = to.toDouble() - from.toDouble()
-        let extentWithoutOuterPadding = extent - (2 * paddingOuter.toDouble())
-        let sumOfInternalPadding = Double(domain.count - 1) * paddingInner.toDouble()
+        let extent = Double(to) - Double(from)
+        let extentWithoutOuterPadding = extent - (2 * Double(paddingOuter))
+        let sumOfInternalPadding = Double(domain.count - 1) * Double(paddingInner)
 //        #if DEBUG
 //        assert(extentWithoutOuterPadding - sumOfInternalPadding > 0)
 //        #endif
@@ -171,9 +171,9 @@ public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDou
             return nil
         }
         if round {
-            return (width + paddingInner.toDouble()).rounded()
+            return (width + Double(paddingInner)).rounded()
         }
-        return width + paddingInner.toDouble()
+        return width + Double(paddingInner)
     }
 
     /// Maps the discrete item into a band.
@@ -195,12 +195,12 @@ public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDou
         } else {
             doublePosition = Double(domain.firstIndex(of: value)!)
         }
-        let startLocation = paddingOuter.toDouble() + (doublePosition * step)
+        let startLocation = Double(paddingOuter) + (doublePosition * step)
         let stopLocation = startLocation + width
         if round {
-            return Band(lower: OutputType.fromDouble(startLocation.rounded()), higher: OutputType.fromDouble(stopLocation.rounded()), value: value)
+            return Band(lower: OutputType(startLocation.rounded()), higher: OutputType(stopLocation.rounded()), value: value)
         }
-        return Band(lower: OutputType.fromDouble(startLocation), higher: OutputType.fromDouble(stopLocation), value: value)
+        return Band(lower: OutputType(startLocation), higher: OutputType(stopLocation), value: value)
     }
 
     /// Maps the discrete item into a band with the range values you provide..
@@ -245,12 +245,12 @@ public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDou
             return nil
         }
         // calculate the closest index
-        let rangeExtentWithoutOuterPadding = upperRange.toDouble() - lowerRange.toDouble() - 2 * paddingOuter.toDouble()
+        let rangeExtentWithoutOuterPadding = Double(upperRange) - Double(lowerRange) - 2 * Double(paddingOuter)
         let indexedRangeValue: Double
         if reversed {
-            indexedRangeValue = (upperRange.toDouble() - paddingOuter.toDouble() - location.toDouble()) / rangeExtentWithoutOuterPadding
+            indexedRangeValue = (Double(upperRange) - Double(paddingOuter) - Double(location)) / rangeExtentWithoutOuterPadding
         } else {
-            indexedRangeValue = (location.toDouble() - paddingOuter.toDouble()) / rangeExtentWithoutOuterPadding
+            indexedRangeValue = (Double(location) - Double(paddingOuter)) / rangeExtentWithoutOuterPadding
         }
         let rangeValueExpandedToCountDomain = indexedRangeValue * Double(domain.count - 1)
 
@@ -268,8 +268,8 @@ public struct BandScale<CategoryType: Comparable, OutputType: ConvertibleWithDou
     /// - Parameter rangeValue: a band providing a pair of range values.
     /// - Returns: The category that matches the midpoint of the band values.
     public func invert(_ rangeValue: Band<CategoryType, OutputType>) -> CategoryType? {
-        let middlePoint = (rangeValue.higher.toDouble() + rangeValue.lower.toDouble()) / 2.0
-        return invert(OutputType.fromDouble(middlePoint))
+        let middlePoint = (Double(rangeValue.higher) + Double(rangeValue.lower)) / 2.0
+        return invert(OutputType(middlePoint))
     }
 
     /// Maps the value from the range values you provide back to the discrete value that it matches.
@@ -346,11 +346,11 @@ public extension BandScale {
 }
 
 /// A type used to indicate the start and stop positions for a band associated with the provided value.
-public struct Band<EnclosedType, RangeType: ConvertibleWithDouble> {
+public struct Band<EnclosedType, RangeType: BinaryFloatingPoint> {
     public let lower: RangeType
     public let higher: RangeType
     public var middle: RangeType {
-        RangeType.fromDouble((higher.toDouble() - lower.toDouble()) / 2.0 + lower.toDouble())
+        RangeType((Double(higher) - Double(lower)) / 2.0 + Double(lower))
     }
 
     public let value: EnclosedType
