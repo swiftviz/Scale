@@ -9,7 +9,7 @@ class ScaleFactoryTests: XCTestCase {
     func testIntScaleFactoryMethods() throws {
         let low = 6
         let high = 124
-        let scale1 = ContinuousScale<CGFloat>(from: low, to: high)
+        let scale1 = ContinuousScale<CGFloat>(lower: low, higher: high)
         let scale2 = ContinuousScale<CGFloat>(low ... high)
         let scale3 = ContinuousScale<CGFloat>(high)
 
@@ -22,7 +22,7 @@ class ScaleFactoryTests: XCTestCase {
         let low: Double = 6
         let high: Double = 124
 
-        let scale1 = ContinuousScale<CGFloat>(from: low, to: high)
+        let scale1 = ContinuousScale<CGFloat>(lower: low, higher: high)
         let scale2 = ContinuousScale<CGFloat>(low ... high)
         let scale3 = ContinuousScale<CGFloat>(high)
 
@@ -32,7 +32,7 @@ class ScaleFactoryTests: XCTestCase {
     }
 
     func testScaleConvenienceMethod() throws {
-        let lin = ContinuousScale<CGFloat>(from: 0, to: 100.0)
+        let lin = ContinuousScale<CGFloat>(lower: 0, higher: 100.0)
         guard let result = lin.scale(5.0, to: 10.0) else {
             XCTFail()
             return
@@ -41,7 +41,7 @@ class ScaleFactoryTests: XCTestCase {
     }
 
     func testInvertConvenienceMethod() throws {
-        let lin = ContinuousScale<CGFloat>(from: 0, to: 100.0)
+        let lin = ContinuousScale<CGFloat>(lower: 0, higher: 100.0)
         guard let result = lin.invert(5.0, to: 10.0) else {
             XCTFail()
             return

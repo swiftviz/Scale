@@ -7,7 +7,7 @@ import XCTest
 
 class RadialScaleTests: XCTestCase {
     func testRadialScale() {
-        let myScale = ContinuousScale<CGFloat>(from: 0.0, to: 10.0, type: .radial)
+        let myScale = ContinuousScale<CGFloat>(lower: 0.0, higher: 10.0, type: .radial)
         XCTAssertEqual(myScale.transformType, .none)
         XCTAssertEqual(myScale.scaleType, .radial)
         XCTAssertEqual(myScale.desiredTicks, 10)
@@ -30,7 +30,7 @@ class RadialScaleTests: XCTestCase {
     }
 
     func testRadialScaleCompleteInitializer() {
-        let myScale = ContinuousScale(from: 0, to: 100, type: .radial, transform: .clamp, desiredTicks: 5, rangeLower: 0, rangeHigher: 50)
+        let myScale = ContinuousScale(lower: 0, higher: 100, type: .radial, transform: .clamp, desiredTicks: 5, rangeLower: 0, rangeHigher: 50)
         XCTAssertEqual(myScale.transformType, .clamp)
         XCTAssertEqual(myScale.scaleType, .radial)
         XCTAssertEqual(myScale.desiredTicks, 5)
@@ -40,7 +40,7 @@ class RadialScaleTests: XCTestCase {
     }
 
     func testReversedCalculations() {
-        let scale = ContinuousScale<CGFloat>(from: 0, to: 100, type: .radial, reversed: true, rangeLower: 0, rangeHigher: 100)
+        let scale = ContinuousScale<CGFloat>(lower: 0, higher: 100, type: .radial, reversed: true, rangeLower: 0, rangeHigher: 100)
         XCTAssertEqual(scale.scale(0), 10000)
         XCTAssertEqual(scale.scale(100), 0)
         XCTAssertEqual(scale.scale(10), 8100)
