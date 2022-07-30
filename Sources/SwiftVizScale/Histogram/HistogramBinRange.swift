@@ -21,7 +21,14 @@ public struct HistogramBinRange<Bound: Hashable & Comparable> {
         self._final = _final
     }
 }
-extension HistogramBinRange: Hashable { }
+
+extension HistogramBinRange: Hashable {}
+
+extension HistogramBinRange: Comparable {
+    public static func < (lhs: HistogramBinRange<Bound>, rhs: HistogramBinRange<Bound>) -> Bool {
+        lhs.lowerBound < rhs.lowerBound
+    }
+}
 
 extension HistogramBinRange: RangeExpression {
     /// Returns the range of indices described by this range expression within the given collection.
