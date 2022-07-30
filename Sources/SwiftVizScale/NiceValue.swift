@@ -385,6 +385,84 @@ extension Double: NiceValue {
 
 // MARK: - Int
 
+public extension BinaryInteger {
+    static func niceVersion(for number: Self, trendTowardsZero: Bool) -> Self {
+        let negativeInput: Bool = number < 0
+        let positiveNumber = abs(Double(number))
+
+        let exponent = floor(log10(positiveNumber))
+        let fraction = Double(number) / pow(10, exponent)
+        let niceFraction: Double
+
+        if trendTowardsZero {
+            if fraction <= 1.5 {
+                niceFraction = 1
+            } else if fraction <= 3 {
+                niceFraction = 2
+            } else if fraction <= 7 {
+                niceFraction = 5
+            } else {
+                niceFraction = 10
+            }
+        } else {
+            if fraction <= 1 {
+                niceFraction = 1
+            } else if fraction <= 2 {
+                niceFraction = 2
+            } else if fraction <= 5 {
+                niceFraction = 5
+            } else {
+                niceFraction = 10
+            }
+        }
+        if negativeInput {
+            return Self(-1.0 * niceFraction * pow(10, exponent))
+        }
+        return Self(niceFraction * pow(10, exponent))
+    }
+}
+
+public extension BinaryFloatingPoint {
+    static func niceVersion(for number: Self, trendTowardsZero: Bool) -> Self {
+        let negativeInput: Bool = number < 0
+        let positiveNumber = abs(Double(number))
+        var exponent = floor(log10(positiveNumber))
+        let fraction = positiveNumber / pow(10, exponent)
+        let niceFraction: Double
+
+        if trendTowardsZero {
+            // we're trying to round to the nearest 'nice' number - interval of 1, 2, 5, or 10
+            // that's CLOSER TO ZERO than the provided number.
+            if fraction < 1 {
+                niceFraction = 10
+                exponent = max(0, exponent - 1.0)
+            } else if fraction < 2 {
+                niceFraction = 1
+            } else if fraction < 5 {
+                niceFraction = 2
+            } else {
+                niceFraction = 5
+            }
+        } else {
+            // we're trying to round to the nearest 'nice' number - interval of 1, 2, 5, or 10
+            // that's FARTHER FROM ZERO than the provided number.
+            if fraction <= 1 {
+                niceFraction = 1
+            } else if fraction <= 2 {
+                niceFraction = 2
+            } else if fraction <= 5 {
+                niceFraction = 5
+            } else {
+                niceFraction = 10
+            }
+        }
+        if negativeInput {
+            return Self(-1.0 * niceFraction * pow(10, exponent))
+        }
+        return Self(niceFraction * pow(10, exponent))
+    }
+}
+
 extension Int: NiceValue {
     public typealias NumberType = Int
 
