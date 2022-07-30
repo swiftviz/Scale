@@ -21,19 +21,6 @@ public struct Tick<OutputType: BinaryFloatingPoint> {
         Double(label)
     }
 
-//    /// Creates a new tick
-//    /// - Parameters:
-//    ///   - value: The value at the tick's location.
-//    ///   - location: The location of the tick within the range for a scale.
-//    public init<T>(value: T, location: OutputType, formatter: Formatter? = nil) {
-//        rangeLocation = location
-//        if let formatter = formatter {
-//            label = formatter.string(for: value) ?? ""
-//        } else {
-//            label = String("\(value)")
-//        }
-//    }
-//
     /// Creates a new tick.
     ///
     /// If the location value you provide is NaN, the initializer returns nil.

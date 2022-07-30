@@ -1,6 +1,7 @@
 //
 //  ContinuousScaleType.swift
 //
+
 import Foundation
 
 /// The type of continuous scale.

@@ -1,9 +1,6 @@
 //
 //  BandScale.swift
 //
-//
-//  Created by Joseph Heck on 4/1/22.
-//
 
 import Foundation
 
