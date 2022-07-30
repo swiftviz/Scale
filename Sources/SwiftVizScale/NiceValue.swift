@@ -1,9 +1,6 @@
 //
 //  NiceNumber.swift
 //
-//
-//  Created by Joseph Heck on 3/7/22.
-//
 
 import Foundation
 
