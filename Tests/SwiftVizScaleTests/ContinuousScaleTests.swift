@@ -106,7 +106,7 @@ class ContinuousScaleTests: XCTestCase {
         let incoming = TimeInterval(0.00062460815272012726)
         let outputRange = CGFloat(1) ... CGFloat(367)
         // domain appears to be 0..0 in my example where this is failing
-        let scale = ContinuousScale<CGFloat>(from: 0.003, to: 0.056)
+        let scale = ContinuousScale<CGFloat>(lower: 0.003, higher: 0.056)
         guard let result = scale.scale(incoming + 0.003, from: CGFloat(1.0), to: CGFloat(367.0)) else {
             XCTFail()
             return
@@ -115,7 +115,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testDoubleLinearScaleTicks() {
-        let myScale = ContinuousScale<Float>(from: 0.0, to: 1.0)
+        let myScale = ContinuousScale<Float>(lower: 0.0, higher: 1.0)
         XCTAssertEqual(myScale.transformType, .none)
 
         let testRange = Float(0) ... Float(100.0)
@@ -131,7 +131,7 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testDoubleLinearScaleManualTicks() {
-        let myScale = ContinuousScale<Float>(from: 0.0, to: 10.0)
+        let myScale = ContinuousScale<Float>(lower: 0.0, higher: 10.0)
         XCTAssertEqual(myScale.transformType, .none)
 
         let testRange = Float(0) ... Float(100.0)
@@ -147,9 +147,9 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testDoubleLinearScaleClamp() {
-        let scale = ContinuousScale<Float>(from: 0.0, to: 10.0)
-        let clampedScale = ContinuousScale<Float>(from: 0.0, to: 10.0, transform: .clamp)
-        let dropScale = ContinuousScale<Float>(from: 0, to: 10, transform: .drop)
+        let scale = ContinuousScale<Float>(lower: 0.0, higher: 10.0)
+        let clampedScale = ContinuousScale<Float>(lower: 0.0, higher: 10.0, transform: .clamp)
+        let dropScale = ContinuousScale<Float>(lower: 0, higher: 10, transform: .drop)
         XCTAssertEqual(scale.transformType, .none)
         XCTAssertEqual(clampedScale.transformType, .clamp)
         XCTAssertEqual(dropScale.transformType, .drop)
@@ -179,9 +179,9 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testIntLinearScaleClamp() {
-        let scale = ContinuousScale<Float>(from: 0, to: 10)
-        let clampedScale = ContinuousScale<Float>(from: 0, to: 10, transform: .clamp)
-        let dropScale = ContinuousScale<Float>(from: 0, to: 10, transform: .drop)
+        let scale = ContinuousScale<Float>(lower: 0, higher: 10)
+        let clampedScale = ContinuousScale<Float>(lower: 0, higher: 10, transform: .clamp)
+        let dropScale = ContinuousScale<Float>(lower: 0, higher: 10, transform: .drop)
 
         XCTAssertEqual(scale.transformType, .none)
         XCTAssertEqual(clampedScale.transformType, .clamp)
@@ -213,9 +213,9 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testDoubleLinearInvertClamp() {
-        let scale = ContinuousScale<Float>(from: 0.0, to: 10.0)
-        let clampedScale = ContinuousScale<Float>(from: 0.0, to: 10.0, transform: .clamp)
-        let dropScale = ContinuousScale<Float>(from: 0, to: 10, transform: .drop)
+        let scale = ContinuousScale<Float>(lower: 0.0, higher: 10.0)
+        let clampedScale = ContinuousScale<Float>(lower: 0.0, higher: 10.0, transform: .clamp)
+        let dropScale = ContinuousScale<Float>(lower: 0, higher: 10, transform: .drop)
         XCTAssertEqual(scale.transformType, .none)
         XCTAssertEqual(clampedScale.transformType, .clamp)
         XCTAssertEqual(dropScale.transformType, .drop)
@@ -245,9 +245,9 @@ class ContinuousScaleTests: XCTestCase {
     }
 
     func testIntLinearInvertClamp() {
-        let scale = ContinuousScale<Float>(from: 0, to: 10)
-        let clampedScale = ContinuousScale<Float>(from: 0, to: 10, transform: .clamp)
-        let dropScale = ContinuousScale<Float>(from: 0, to: 10, transform: .drop)
+        let scale = ContinuousScale<Float>(lower: 0, higher: 10)
+        let clampedScale = ContinuousScale<Float>(lower: 0, higher: 10, transform: .clamp)
+        let dropScale = ContinuousScale<Float>(lower: 0, higher: 10, transform: .drop)
         XCTAssertEqual(scale.transformType, .none)
         XCTAssertEqual(clampedScale.transformType, .clamp)
         XCTAssertEqual(dropScale.transformType, .drop)
