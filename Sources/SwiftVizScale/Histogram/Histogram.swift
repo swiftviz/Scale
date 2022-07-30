@@ -165,7 +165,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
 
         // default to using the provided minimum as the stride length for the histogram bins
         var stride = minimumStride
-        if let desiredCount {
+        if let desiredCount = desiredCount {
             // if a desired number of bins was provided, and a stride value evenly dividing the
             // data's range into those values is larger than the minimum, use that larger stride.
             let maybeStride = (largestValue - smallestValue) / Value(desiredCount)
@@ -221,7 +221,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
 
         // default to using the provided minimum as the stride length for the histogram bins
         var stride = minimumStride
-        if let desiredCount {
+        if let desiredCount = desiredCount {
             // if a desired number of bins was provided, and a stride value evenly dividing the
             // data's range into those values is larger than the minimum, use that larger stride.
             let maybeStride = (largestValue - smallestValue) / Value(desiredCount)
