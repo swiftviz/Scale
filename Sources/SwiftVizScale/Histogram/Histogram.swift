@@ -2,7 +2,6 @@
 //  Histogram.swift
 //
 
-import Charts
 import Foundation
 import OrderedCollections
 
@@ -348,23 +347,45 @@ extension Histogram: Sequence {
 // https://www.swiftbysundell.com/articles/creating-custom-collections-in-swift/
 // OrderedDictionary *doesn't* conform to Collection itself, so we'd have to really screw with this...
 //
+//extension Histogram: Collection {
+////    var startIndex: HistogramBinRange<Value> {
+////        <#code#>
+////    }
+////
+////    var endIndex: HistogramBinRange<Value> {
+////        <#code#>
+////    }
+////
+////    func index(after i: HistogramBinRange<Value>) -> HistogramBinRange<Value> {
+////        <#code#>
+////    }
+//    
+//    // Required nested types, that tell Swift what our collection contains
 //    public typealias Index = HistogramBinRange<Value>
-//    extension Histogram: Collection {
-//        // Required nested types, that tell Swift what our collection contains
-//        typealias Index = Histogram.InternalDictType.Index
-//        typealias Element = Histogram.InternalDictType.Element
+//    //public typealias Element = (HistogramBinRange<Value>, Int)
 //
-//        // The upper and lower bounds of the collection, used in iterations
-//        var startIndex: Index { return _storage.startIndex }
-//        var endIndex: Index { return _storage.endIndex }
+//    var startIndex: Index? {
+//        guard let firstKey = _storage.keys.first else { return nil }
+//        return firstKey
+//    }
+//    var endIndex: Index? {
+//        guard let lastKey = _storage.keys.last else { return nil }
+//        return lastKey
+//    }
 //
-//        // Required subscript, based on a dictionary index
-//        subscript(index: Index) -> Histogram.InternalDictType.Iterator.Element {
-//            get { return _storage[index] }
-//        }
-//
-//        // Method that returns the next index when iterating
-//        func index(after i: Index) -> Index {
-//            return _storage.index(after: i)
+//    subscript(index: Index) -> Histogram.Element? {
+//        get {
+//            guard let valueAtKey = _storage[index] else { return nil }
+//            let result = (index, valueAtKey)
+//            return result
 //        }
 //    }
+//
+//    // Method that returns the next index when iterating
+//    func index(after i: Index) -> HistogramBinRange<Value>? {
+//        guard let indexedKeyPostion = _storage.keys.firstIndex(of: i),
+//              indexedKeyPostion < _storage.keys.endIndex else { return nil }
+//        let nextIndex = indexedKeyPostion + 1
+//        return _storage.keys[nextIndex]
+//    }
+//}
