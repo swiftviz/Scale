@@ -7,8 +7,8 @@ import XCTest
 
 class ScaleFactoryTests: XCTestCase {
     func testIntScaleFactoryMethods() throws {
-        let low: Int = 6
-        let high: Int = 124
+        let low = 6
+        let high = 124
         let scale1 = ContinuousScale<CGFloat>(from: low, to: high)
         let scale2 = ContinuousScale<CGFloat>(low ... high)
         let scale3 = ContinuousScale<CGFloat>(high)

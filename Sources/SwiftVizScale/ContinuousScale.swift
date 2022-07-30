@@ -39,10 +39,11 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
                 desiredTicks: Int = 10,
                 reversed: Bool = false,
                 rangeLower: OutputType? = nil,
-                rangeHigher: OutputType? = nil) {
+                rangeHigher: OutputType? = nil)
+    {
         self.init(from: 0.0, to: 1.0, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
-    
+
     /// Creates a new linear scale for the upper and lower bounds of the domain you provide.
     /// - Parameters:
     ///   - lower: The lower bound for the scale's domain.
@@ -50,13 +51,13 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init<T: BinaryInteger>(from lower: T = 0,
-                to higher: T = 1,
-                type scaleType: ContinuousScaleType = .linear,
-                transform: DomainDataTransform = .none,
-                desiredTicks: Int = 10,
-                reversed: Bool = false,
-                rangeLower: OutputType? = nil,
-                rangeHigher: OutputType? = nil)
+                                  to higher: T = 1,
+                                  type scaleType: ContinuousScaleType = .linear,
+                                  transform: DomainDataTransform = .none,
+                                  desiredTicks: Int = 10,
+                                  reversed: Bool = false,
+                                  rangeLower: OutputType? = nil,
+                                  rangeHigher: OutputType? = nil)
     {
         self.init(from: Double(lower), to: Double(higher), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
@@ -68,13 +69,13 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init<T: BinaryFloatingPoint>(from lower: T = 0,
-                to higher: T = 1,
-                type scaleType: ContinuousScaleType = .linear,
-                transform: DomainDataTransform = .none,
-                desiredTicks: Int = 10,
-                reversed: Bool = false,
-                rangeLower: OutputType? = nil,
-                rangeHigher: OutputType? = nil)
+                                        to higher: T = 1,
+                                        type scaleType: ContinuousScaleType = .linear,
+                                        transform: DomainDataTransform = .none,
+                                        desiredTicks: Int = 10,
+                                        reversed: Bool = false,
+                                        rangeLower: OutputType? = nil,
+                                        rangeHigher: OutputType? = nil)
     {
         self.scaleType = scaleType
         if case .log = scaleType {
@@ -119,12 +120,12 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init<T: BinaryFloatingPoint>(_ range: ClosedRange<T>,
-                type scaleType: ContinuousScaleType = .linear,
-                transform: DomainDataTransform = .none,
-                desiredTicks: Int = 10,
-                reversed: Bool = false,
-                rangeLower: OutputType? = nil,
-                rangeHigher: OutputType? = nil)
+                                        type scaleType: ContinuousScaleType = .linear,
+                                        transform: DomainDataTransform = .none,
+                                        desiredTicks: Int = 10,
+                                        reversed: Bool = false,
+                                        rangeLower: OutputType? = nil,
+                                        rangeHigher: OutputType? = nil)
     {
         self.init(from: Double(range.lowerBound), to: Double(range.upperBound), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
@@ -135,12 +136,12 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init<T: BinaryInteger>(_ range: ClosedRange<T>,
-                type scaleType: ContinuousScaleType = .linear,
-                transform: DomainDataTransform = .none,
-                desiredTicks: Int = 10,
-                reversed: Bool = false,
-                rangeLower: OutputType? = nil,
-                rangeHigher: OutputType? = nil)
+                                  type scaleType: ContinuousScaleType = .linear,
+                                  transform: DomainDataTransform = .none,
+                                  desiredTicks: Int = 10,
+                                  reversed: Bool = false,
+                                  rangeLower: OutputType? = nil,
+                                  rangeHigher: OutputType? = nil)
     {
         self.init(from: Double(range.lowerBound), to: Double(range.upperBound), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
@@ -154,12 +155,12 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init<T: BinaryFloatingPoint>(_ single: T,
-                type scaleType: ContinuousScaleType = .linear,
-                transform: DomainDataTransform = .none,
-                desiredTicks: Int = 10,
-                reversed: Bool = false,
-                rangeLower: OutputType? = nil,
-                rangeHigher: OutputType? = nil)
+                                        type scaleType: ContinuousScaleType = .linear,
+                                        transform: DomainDataTransform = .none,
+                                        desiredTicks: Int = 10,
+                                        reversed: Bool = false,
+                                        rangeLower: OutputType? = nil,
+                                        rangeHigher: OutputType? = nil)
     {
         if single > 0 {
             self.init(from: 0, to: Double(single), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
@@ -167,7 +168,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
             self.init(from: Double(single), to: 0, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
         }
     }
-    
+
     /// Creates a new power scale for the domain of `0` to the value you provide.
     ///
     /// If the value you provide is less than `0`, the domain of the scale ranges from the value you provide to `0`.
@@ -177,12 +178,12 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
     public init<T: BinaryInteger>(_ single: T,
-                type scaleType: ContinuousScaleType = .linear,
-                transform: DomainDataTransform = .none,
-                desiredTicks: Int = 10,
-                reversed: Bool = false,
-                rangeLower: OutputType? = nil,
-                rangeHigher: OutputType? = nil)
+                                  type scaleType: ContinuousScaleType = .linear,
+                                  transform: DomainDataTransform = .none,
+                                  desiredTicks: Int = 10,
+                                  reversed: Bool = false,
+                                  rangeLower: OutputType? = nil,
+                                  rangeHigher: OutputType? = nil)
     {
         if single > 0 {
             self.init(from: 0, to: Double(single), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
@@ -190,7 +191,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
             self.init(from: Double(single), to: 0, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
         }
     }
-    
+
     // MARK: - description
 
     public var description: String {
