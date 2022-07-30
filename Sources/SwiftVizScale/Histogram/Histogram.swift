@@ -16,49 +16,12 @@ import OrderedCollections
 //    }
 // }
 
+// Collection.bin -> Histogram(data: _)
+// Collection.bin(stride: _) -> Histogram(data: self, stride: stride)
+
 struct Histogram<Value: Numeric & Hashable & Comparable> {
     typealias InternalDictType = OrderedDictionary<HistogramBinRange<Value>, Int>
     private var _storage: InternalDictType
-
-    // Collection Conformance
-//    var startIndex: HistogramBinRange<Value>?
-//    var endIndex: HistogramBinRange<Value>?
-//
-//    subscript(position: HistogramBinRange<Value>) -> (HistogramBinRange<Value>, Int)? {
-//        if let countValue = _storage[position] {
-//            return (position, countValue)
-//        }
-//        return nil
-//    }
-//
-//    func index(after i: HistogramBinRange<Value>) -> HistogramBinRange<Value>? {
-//        if let indexPosition = _storage.keys.firstIndex(of: i) {
-//            if indexPosition >= _storage.keys.endIndex {
-//                return nil
-//            } else {
-//                return _storage.keys[indexPosition+1]
-//            }
-//        }
-//        return nil
-//    }
-
-//
-    /// A type representing the sequence's elements.
-
-//    /// A type that represents a position in the collection.
-//    ///
-//    /// Valid indices consist of the position of every element and a
-//    /// "past the end" position that's not valid for use as a subscript
-//    /// argument.
-//    public typealias Index = OrderedDictionary<HistogramBinRange<Value>, Value>.Index
-
-//    /// A type that provides the collection's iteration interface and
-//    /// encapsulates its iteration state.
-//    ///
-//    /// By default, a collection conforms to the `Sequence` protocol by
-//    /// supplying `IndexingIterator` as its associated `Iterator`
-//    /// type.
-//    public typealias Iterator = OrderedDictionary<HistogramBinRange<Value>, Int>.Iterator
 
     // MARK: - Automatic (Scott's Rule) Initializers
 
@@ -87,22 +50,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
         }
 
         // Iterate through the data to insert everything into the histogram keyed by bin.
-        for dataValue in data {
-            // This could be improved (perf wise) by potentially doing a binary search
-            // over keys, assuming OrderedDictionary.keys returns that nicely ordered
-            // collection.
-            if let key = _storage.keys.first(where: { bin in
-                bin.contains(dataValue)
-            }) {
-                if let count = _storage[key] {
-                    _storage[key] = count + 1
-                } else {
-                    _storage[key] = 1
-                }
-            }
-        }
-//        startIndex = _storage.keys.first
-//        endIndex = _storage.keys.last
+        populate(data)
     }
 
     /// Automatically determine the bins from data.
@@ -130,22 +78,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
         }
 
         // Iterate through the data to insert everything into the histogram keyed by bin.
-        for dataValue in data {
-            // This could be improved (perf wise) by potentially doing a binary search
-            // over keys, assuming OrderedDictionary.keys returns that nicely ordered
-            // collection.
-            if let key = _storage.keys.first(where: { bin in
-                bin.contains(dataValue)
-            }) {
-                if let count = _storage[key] {
-                    _storage[key] = count + 1
-                } else {
-                    _storage[key] = 1
-                }
-            }
-        }
-//        startIndex = _storage.keys.first
-//        endIndex = _storage.keys.last
+        populate(data)
     }
 
     // MARK: - Uniform Initializers
@@ -188,22 +121,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
         }
 
         // Iterate through the data to insert everything into the histogram keyed by bin.
-        for dataValue in data {
-            // This could be improved (perf wise) by potentially doing a binary search
-            // over keys, assuming OrderedDictionary.keys returns that nicely ordered
-            // collection.
-            if let key = _storage.keys.first(where: { bin in
-                bin.contains(dataValue)
-            }) {
-                if let count = _storage[key] {
-                    _storage[key] = count + 1
-                } else {
-                    _storage[key] = 1
-                }
-            }
-        }
-//        startIndex = _storage.keys.first
-//        endIndex = _storage.keys.last
+        populate(data)
     }
 
     /// Automatically determine the bins from data, constrained by a minimum bin size
@@ -244,22 +162,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
         }
 
         // Iterate through the data to insert everything into the histogram keyed by bin.
-        for dataValue in data {
-            // This could be improved (perf wise) by potentially doing a binary search
-            // over keys, assuming OrderedDictionary.keys returns that nicely ordered
-            // collection.
-            if let key = _storage.keys.first(where: { bin in
-                bin.contains(dataValue)
-            }) {
-                if let count = _storage[key] {
-                    _storage[key] = count + 1
-                } else {
-                    _storage[key] = 1
-                }
-            }
-        }
-//        startIndex = _storage.keys.first
-//        endIndex = _storage.keys.last
+        populate(data)
     }
 
     // MARK: - Explicit Thresholds, Non-uniform bin-size Initializers
@@ -283,6 +186,10 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
             _storage[bin] = 0
         }
 
+        populate(data)
+    }
+
+    private mutating func populate(_ data: [Value]) {
         // Iterate through the data to insert everything into the histogram keyed by bin.
         for dataValue in data {
             // This could be improved (perf wise) by potentially doing a binary search
@@ -298,8 +205,6 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
                 }
             }
         }
-//        startIndex = _storage.keys.first
-//        endIndex = _storage.keys.last
     }
 }
 
@@ -347,33 +252,28 @@ extension Histogram: Sequence {
 // https://www.swiftbysundell.com/articles/creating-custom-collections-in-swift/
 // OrderedDictionary *doesn't* conform to Collection itself, so we'd have to really screw with this...
 //
-// extension Histogram: Collection {
-////    var startIndex: HistogramBinRange<Value> {
-////        <#code#>
-////    }
-////
-////    var endIndex: HistogramBinRange<Value> {
-////        <#code#>
-////    }
-////
-////    func index(after i: HistogramBinRange<Value>) -> HistogramBinRange<Value> {
-////        <#code#>
-////    }
+// For Histogram to use HistogramBinRange as an index value, it would need to have an instance
+// of that type that was specifically a placeholder in order to return it for startIndex and endIndex
+// in the scenario where the collection was empty.
+// If we used Int as the index, we'd have to return an Int, and would need an alternate path to get
+// at the HistogramBinRange element.
+// That said, I suspect it's likely just fine that we support Sequence for iterating through
+// the values. I don't think we need random-access like collection.
 //
 //    // Required nested types, that tell Swift what our collection contains
 //    public typealias Index = HistogramBinRange<Value>
 //    //public typealias Element = (HistogramBinRange<Value>, Int)
 //
-//    var startIndex: Index? {
+//    var startIndex: Index {
 //        guard let firstKey = _storage.keys.first else { return nil }
 //        return firstKey
 //    }
-//    var endIndex: Index? {
+//    var endIndex: Index {
 //        guard let lastKey = _storage.keys.last else { return nil }
 //        return lastKey
 //    }
 //
-//    subscript(index: Index) -> Histogram.Element? {
+//    subscript(index: Index) -> Histogram.Element {
 //        get {
 //            guard let valueAtKey = _storage[index] else { return nil }
 //            let result = (index, valueAtKey)
@@ -382,7 +282,7 @@ extension Histogram: Sequence {
 //    }
 //
 //    // Method that returns the next index when iterating
-//    func index(after i: Index) -> HistogramBinRange<Value>? {
+//    func index(after i: Index) -> HistogramBinRange<Value> {
 //        guard let indexedKeyPostion = _storage.keys.firstIndex(of: i),
 //              indexedKeyPostion < _storage.keys.endIndex else { return nil }
 //        let nextIndex = indexedKeyPostion + 1
