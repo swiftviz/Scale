@@ -89,7 +89,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
     ///   - data: <#data description#>
     ///   - desiredCount: <#desiredCount description#>
     ///   - minimumStride: <#minimumStride description#>
-    init(data: [Value], desiredCount: Int?, minimumStride: Value) where Value: BinaryFloatingPoint {
+    init(data: [Value], minimumStride: Value, desiredCount: Int? = nil) where Value: BinaryFloatingPoint {
         _storage = [:]
         guard let smallestValue = data.min(), let largestValue = data.max() else {
             return
@@ -130,7 +130,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
     ///   - data: <#data description#>
     ///   - desiredCount: <#desiredCount description#>
     ///   - minimumStride: <#minimumStride description#>
-    init(data: [Value], desiredCount: Int?, minimumStride: Value) where Value: BinaryInteger {
+    init(data: [Value], minimumStride: Value, desiredCount: Int? = nil) where Value: BinaryInteger {
         _storage = [:]
         guard let smallestValue = data.min(), let largestValue = data.max() else {
             return
@@ -248,6 +248,16 @@ extension Histogram: Sequence {
 
     func makeIterator() -> HistogramIterator {
         HistogramIterator(_base: self)
+    }
+}
+
+extension Histogram: CustomStringConvertible {
+    public var description: String {
+        var strings: [String] = []
+        for (binrange, bincount) in self {
+            strings.append("\(binrange): \(bincount)")
+        }
+        return "[\(strings.joined(separator: ", "))]"
     }
 }
 

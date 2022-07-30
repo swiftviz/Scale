@@ -53,3 +53,13 @@ extension HistogramBinRange: RangeExpression {
         }
     }
 }
+
+extension HistogramBinRange: CustomStringConvertible {
+    public var description: String {
+        if _final {
+            return String(describing: lowerBound ... upperBound)
+        } else {
+            return String(describing: lowerBound ..< upperBound)
+        }
+    }
+}
