@@ -172,12 +172,13 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
     /// - Parameter data: <#data description#>
     init(data: [Value], thresholds: [Value]) {
         _storage = [:]
-        guard let lastThreshold = thresholds.last, data.count > 1, thresholds.count > 1 else {
+        let sortedThresholds = thresholds.sorted()
+        guard let lastThreshold = sortedThresholds.last, data.count > 1, sortedThresholds.count > 1 else {
             return
         }
 
         // Create and initialize the keys for the bins with a count of 0
-        for (lower, higher) in thresholds.pairs() {
+        for (lower, higher) in sortedThresholds.pairs() {
             let bin: HistogramBinRange<Value>
             if higher == lastThreshold {
                 bin = HistogramBinRange(lowerBound: lower, upperBound: higher, _final: true)
