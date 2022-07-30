@@ -13,8 +13,8 @@ import Numerics
 
 // MARK: - Integers
 
-extension BinaryInteger {
-    public static func niceVersion(for number: Self, trendTowardsZero: Bool) -> Self {
+public extension BinaryInteger {
+    static func niceVersion(for number: Self, trendTowardsZero: Bool) -> Self {
         let negativeInput: Bool = number < 0
         let positiveNumber = abs(Double(number))
 
@@ -48,8 +48,8 @@ extension BinaryInteger {
         }
         return Self(niceFraction * pow(10, exponent))
     }
-    
-    public static func niceMinimumValueForRange(min: Self, max: Self) -> Self {
+
+    static func niceMinimumValueForRange(min: Self, max: Self) -> Self {
         let negativeMinValue = min < 0
         let nice = niceVersion(for: min, trendTowardsZero: !negativeMinValue)
         if negativeMinValue {
@@ -62,7 +62,7 @@ extension BinaryInteger {
         return nice <= (max / 10) ? 0 : nice
     }
 
-    public static func niceMinStepMax(min: Self, max: Self, ofSize size: Int) -> (Self, Self, Self) {
+    static func niceMinStepMax(min: Self, max: Self, ofSize size: Int) -> (Self, Self, Self) {
         precondition(size > 1)
         let niceMin = niceMinimumValueForRange(min: min, max: max)
         // print("niced min: \(niceMin)")
@@ -79,7 +79,7 @@ extension BinaryInteger {
         return (niceMin, niceStep, niceMax)
     }
 
-    public static func rangeOfNiceValues(min: Self, max: Self, ofSize size: Int) -> [Self] {
+    static func rangeOfNiceValues(min: Self, max: Self, ofSize size: Int) -> [Self] {
         let (niceMin, niceStep, _) = niceMinStepMax(min: min, max: max, ofSize: size)
         var result: [Self] = []
         result.append(niceMin)
@@ -92,8 +92,8 @@ extension BinaryInteger {
 
 // MARK: - FloatingPoint
 
-extension BinaryFloatingPoint {
-    public static func niceVersion(for number: Self, trendTowardsZero: Bool) -> Self {
+public extension BinaryFloatingPoint {
+    static func niceVersion(for number: Self, trendTowardsZero: Bool) -> Self {
         let negativeInput: Bool = number < 0
         let positiveNumber = abs(Double(number))
         var exponent = floor(log10(positiveNumber))
@@ -131,8 +131,8 @@ extension BinaryFloatingPoint {
         }
         return Self(niceFraction * pow(10, exponent))
     }
-    
-    public static func niceMinimumValueForRange(min: Self, max: Self) -> Self {
+
+    static func niceMinimumValueForRange(min: Self, max: Self) -> Self {
         let minValueBelowZero = min < 0
 
         let nice = niceVersion(for: min, trendTowardsZero: !minValueBelowZero)
@@ -150,7 +150,7 @@ extension BinaryFloatingPoint {
         return nice
     }
 
-    public static func niceMinStepMax(min: Self, max: Self, ofSize size: Int) -> (Self, Self, Self) {
+    static func niceMinStepMax(min: Self, max: Self, ofSize size: Int) -> (Self, Self, Self) {
         precondition(size > 1)
         let niceMin = niceMinimumValueForRange(min: min, max: max)
         // print("niced min: \(niceMin)")
@@ -168,7 +168,7 @@ extension BinaryFloatingPoint {
         return (niceMin, niceStep, niceMax)
     }
 
-    public static func rangeOfNiceValues(min: Self, max: Self, ofSize size: Int) -> [Self] {
+    static func rangeOfNiceValues(min: Self, max: Self, ofSize size: Int) -> [Self] {
         let (niceMin, niceStep, niceMax) = niceMinStepMax(min: min, max: max, ofSize: size)
         var result: [Self] = []
         // incrementing the comparison point by a half step
