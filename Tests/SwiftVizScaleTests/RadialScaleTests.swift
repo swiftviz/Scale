@@ -7,7 +7,7 @@ import XCTest
 
 class RadialScaleTests: XCTestCase {
     func testRadialScale() {
-        let myScale = ContinuousScale<Double, CGFloat>(from: 0.0, to: 10.0, type: .radial)
+        let myScale = ContinuousScale<CGFloat>(from: 0.0, to: 10.0, type: .radial)
         XCTAssertEqual(myScale.transformType, .none)
         XCTAssertEqual(myScale.scaleType, .radial)
         XCTAssertEqual(myScale.desiredTicks, 10)
@@ -40,7 +40,7 @@ class RadialScaleTests: XCTestCase {
     }
 
     func testReversedCalculations() {
-        let scale = ContinuousScale<Double, CGFloat>(from: 0, to: 100, type: .radial, reversed: true, rangeLower: 0, rangeHigher: 100)
+        let scale = ContinuousScale<CGFloat>(from: 0, to: 100, type: .radial, reversed: true, rangeLower: 0, rangeHigher: 100)
         XCTAssertEqual(scale.scale(0), 10000)
         XCTAssertEqual(scale.scale(100), 0)
         XCTAssertEqual(scale.scale(10), 8100)

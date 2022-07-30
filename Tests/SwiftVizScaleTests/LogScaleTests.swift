@@ -18,7 +18,7 @@ class LogScaleTests: XCTestCase {
     }
 
     func testLogScale_scale() {
-        let myScale = ContinuousScale<Double, Float>(from: 1.0, to: 100.0, type: .log, transform: .none)
+        let myScale = ContinuousScale<Float>(from: 1.0, to: 100.0, type: .log, transform: .none)
         XCTAssertEqual(myScale.transformType, .none)
         let testRange = Float(0) ... Float(100.0)
         guard let scaledValue = myScale.scale(10.0, from: testRange.lowerBound, to: testRange.upperBound) else {
@@ -29,7 +29,7 @@ class LogScaleTests: XCTestCase {
     }
 
     func testLogScale_invert() {
-        let myScale = ContinuousScale<Double, Float>(from: 1.0, to: 100.0, type: .log, transform: .none)
+        let myScale = ContinuousScale<Float>(from: 1.0, to: 100.0, type: .log, transform: .none)
         XCTAssertEqual(myScale.transformType, .none)
         let testRange = Float(0) ... Float(100.0)
         guard let result = myScale.invert(50.0, from: testRange.lowerBound, to: testRange.upperBound) else {
@@ -40,7 +40,7 @@ class LogScaleTests: XCTestCase {
     }
 
     func testLogScale_Intscale() {
-        let myScale = ContinuousScale<Int, Float>(from: 1, to: 100, type: .log, transform: .none)
+        let myScale = ContinuousScale<Float>(from: 1, to: 100, type: .log, transform: .none)
         XCTAssertEqual(myScale.transformType, .none)
         let testRange = Float(0) ... Float(100.0)
         guard let scaledValue = myScale.scale(10, from: testRange.lowerBound, to: testRange.upperBound) else {
@@ -51,7 +51,7 @@ class LogScaleTests: XCTestCase {
     }
 
     func testLogScale_Intinvert() {
-        let myScale = ContinuousScale<Int, Float>(from: 1, to: 100, type: .log, transform: .none)
+        let myScale = ContinuousScale<Float>(from: 1, to: 100, type: .log, transform: .none)
         XCTAssertEqual(myScale.transformType, .none)
         let testRange = Float(0) ... Float(100.0)
         guard let result = myScale.invert(50.0, from: testRange.lowerBound, to: testRange.upperBound) else {
@@ -62,7 +62,7 @@ class LogScaleTests: XCTestCase {
     }
 
     func testLogScale_RangeInitializaer() {
-        let myScale = ContinuousScale<Double, CGFloat>(1 ... 100, type: .log, transform: .none)
+        let myScale = ContinuousScale<CGFloat>(1 ... 100, type: .log, transform: .none)
         XCTAssertEqual(myScale.transformType, .none)
         let testRange = Double(0) ... Double(100.0)
         guard let result = myScale.invert(50.0, from: testRange.lowerBound, to: testRange.upperBound) else {
@@ -73,7 +73,7 @@ class LogScaleTests: XCTestCase {
     }
 
     func testLogScaleTicks() {
-        let myScale = ContinuousScale<Double, Float>(from: 0.01, to: 100.0, type: .log, transform: .none)
+        let myScale = ContinuousScale<Float>(from: 0.01, to: 100.0, type: .log, transform: .none)
         XCTAssertEqual(myScale.transformType, .none)
 
         let testRange = Float(0.0) ... Float(100.0)
@@ -91,7 +91,7 @@ class LogScaleTests: XCTestCase {
     }
 
     func testLogScaleManualTicks() {
-        let myScale = ContinuousScale<Double, Float>(from: 0.01, to: 100.0, type: .log, transform: .none)
+        let myScale = ContinuousScale<Float>(from: 0.01, to: 100.0, type: .log, transform: .none)
         XCTAssertEqual(myScale.transformType, .none)
 
         let testRange = Float(0) ... Float(100.0)
@@ -108,7 +108,7 @@ class LogScaleTests: XCTestCase {
     }
 
     func testLogScaleTicksWeirdDomain() {
-        let myScale = ContinuousScale<Double, Float>(from: 0.8, to: 999.0, type: .log, transform: .none)
+        let myScale = ContinuousScale<Float>(from: 0.8, to: 999.0, type: .log, transform: .none)
         XCTAssertEqual(myScale.transformType, .none)
 
         let testRange = Float(0.0) ... Float(100.0)
@@ -126,7 +126,7 @@ class LogScaleTests: XCTestCase {
     }
 
     func testLogScaleTicksOutsideDomain() {
-        let myScale = ContinuousScale<Double, Float>(from: 10.0, to: 1000.0, type: .log, transform: .none)
+        let myScale = ContinuousScale<Float>(from: 10.0, to: 1000.0, type: .log, transform: .none)
         XCTAssertEqual(myScale.transformType, .none)
 
         let testRange = Float(0.0) ... Float(100.0)
@@ -143,8 +143,8 @@ class LogScaleTests: XCTestCase {
     }
 
     func testLogScaleClamp() {
-        let scale = ContinuousScale<Double, Float>(from: 1.0, to: 100.0, type: .log)
-        let clampedScale = ContinuousScale<Double, Float>(from: 1.0, to: 100.0, type: .log, transform: .clamp)
+        let scale = ContinuousScale<Float>(from: 1.0, to: 100.0, type: .log)
+        let clampedScale = ContinuousScale<Float>(from: 1.0, to: 100.0, type: .log, transform: .clamp)
 
         XCTAssertEqual(scale.transformType, .none)
         XCTAssertEqual(clampedScale.transformType, .clamp)
@@ -172,8 +172,8 @@ class LogScaleTests: XCTestCase {
     }
 
     func testLogInvertClamp() {
-        let scale = ContinuousScale<Double, Float>(from: 1.0, to: 100.0, type: .log)
-        let clampedScale = ContinuousScale<Double, Float>(from: 1.0, to: 100.0, type: .log, transform: .clamp)
+        let scale = ContinuousScale<Float>(from: 1.0, to: 100.0, type: .log)
+        let clampedScale = ContinuousScale<Float>(from: 1.0, to: 100.0, type: .log, transform: .clamp)
 
         XCTAssertEqual(scale.transformType, .none)
         XCTAssertEqual(clampedScale.transformType, .clamp)
@@ -201,7 +201,7 @@ class LogScaleTests: XCTestCase {
     }
 
     func testScaleDomainOfOneValue() {
-        let scale = ContinuousScale<Double, CGFloat>(type: .log)
+        let scale = ContinuousScale<CGFloat>(type: .log)
 
         let updated = scale.domain([5.0])
         XCTAssertEqual(updated.domainLower, Double.leastNonzeroMagnitude)
@@ -209,7 +209,7 @@ class LogScaleTests: XCTestCase {
     }
 
     func testScaleDomainOfOneValueNiced() {
-        let scale = ContinuousScale<Double, CGFloat>(type: .log)
+        let scale = ContinuousScale<CGFloat>(type: .log)
 
         let updated = scale.domain([5.0], nice: true)
         XCTAssertEqual(updated.domainLower, Double.leastNonzeroMagnitude)
@@ -217,7 +217,7 @@ class LogScaleTests: XCTestCase {
     }
 
     func testReversedRangeModifiers() {
-        var scale = ContinuousScale<Double, CGFloat>(1 ... 100, type: .log).range(1 ... 100)
+        var scale = ContinuousScale<CGFloat>(1 ... 100, type: .log).range(1 ... 100)
         XCTAssertEqual(scale.reversed, false)
         scale = ContinuousScale(from: 1, to: 100, type: .log, reversed: true, rangeLower: 1, rangeHigher: 100)
         XCTAssertEqual(scale.reversed, true)
@@ -228,7 +228,7 @@ class LogScaleTests: XCTestCase {
     }
 
     func testReversedCalculations() {
-        let scale = ContinuousScale<Double, CGFloat>(from: 1, to: 100, type: .log, reversed: true, rangeLower: 1, rangeHigher: 100)
+        let scale = ContinuousScale<CGFloat>(from: 1, to: 100, type: .log, reversed: true, rangeLower: 1, rangeHigher: 100)
         XCTAssertEqual(scale.scale(1), 100)
         XCTAssertEqual(scale.scale(100), 1)
         XCTAssertEqual(scale.scale(10), 50.5)
@@ -244,7 +244,7 @@ class LogScaleTests: XCTestCase {
     }
 
     func testReversedTicks() {
-        let reversed = ContinuousScale<Double, CGFloat>(from: 1, to: 100, type: .log, reversed: true, rangeLower: 1, rangeHigher: 100)
+        let reversed = ContinuousScale<CGFloat>(from: 1, to: 100, type: .log, reversed: true, rangeLower: 1, rangeHigher: 100)
         let reverseTicks = reversed.ticks(rangeLower: 0, rangeHigher: 20)
         XCTAssertEqual(reverseTicks.count, 5)
         print(reverseTicks)
