@@ -1,6 +1,6 @@
 //
 //  RandomAccessCollection+SimpleStats.swift
-//  
+//
 
 import Foundation
 
@@ -12,41 +12,47 @@ public extension Collection {
     }
 }
 
-extension Collection where Element: BinaryFloatingPoint {
-    public var sum: Double {
-        self.reduce(0.0) { $0 + Double($1) }
+public extension Collection where Element: BinaryFloatingPoint {
+    var sum: Double {
+        reduce(0.0) { $0 + Double($1) }
     }
-    public var sumSquared: Double {
-        self.reduce(0.0) { $0 + Double($1) * Double($1) }
+
+    var sumSquared: Double {
+        reduce(0.0) { $0 + Double($1) * Double($1) }
     }
-    public var avg: Double {
-        guard self.count > 0 else { return 0 }
-        return self.sum / Double(self.count)
+
+    var avg: Double {
+        guard count > 0 else { return 0 }
+        return sum / Double(count)
     }
-    public var stdDev: Double? {
-        guard self.count > 1 else { return nil }
-        let c = Double(self.count)
-        let sum = self.sum
+
+    var stdDev: Double? {
+        guard count > 1 else { return nil }
+        let c = Double(count)
+        let sum = sum
         let s2: Double = (c * sumSquared - sum * sum) / (c * (c - 1))
         return s2.squareRoot()
     }
 }
 
-extension Collection where Element: BinaryInteger {
-    public var sum: Double {
-        self.reduce(0.0) { $0 + Double($1) }
+public extension Collection where Element: BinaryInteger {
+    var sum: Double {
+        reduce(0.0) { $0 + Double($1) }
     }
-    public var sumSquared: Double {
-        self.reduce(0.0) { $0 + Double($1) * Double($1) }
+
+    var sumSquared: Double {
+        reduce(0.0) { $0 + Double($1) * Double($1) }
     }
-    public var avg: Double {
-        guard self.count > 0 else { return 0 }
-        return self.sum / Double(self.count)
+
+    var avg: Double {
+        guard count > 0 else { return 0 }
+        return sum / Double(count)
     }
-    public var stdDev: Double? {
-        guard self.count > 1 else { return nil }
-        let c = Double(self.count)
-        let sum = self.sum
+
+    var stdDev: Double? {
+        guard count > 1 else { return nil }
+        let c = Double(count)
+        let sum = sum
         let s2: Double = (c * sumSquared - sum * sum) / (c * (c - 1))
         return s2.squareRoot()
     }
