@@ -347,7 +347,7 @@ extension Histogram: Sequence {
 // https://www.swiftbysundell.com/articles/creating-custom-collections-in-swift/
 // OrderedDictionary *doesn't* conform to Collection itself, so we'd have to really screw with this...
 //
-//extension Histogram: Collection {
+// extension Histogram: Collection {
 ////    var startIndex: HistogramBinRange<Value> {
 ////        <#code#>
 ////    }
@@ -359,7 +359,7 @@ extension Histogram: Sequence {
 ////    func index(after i: HistogramBinRange<Value>) -> HistogramBinRange<Value> {
 ////        <#code#>
 ////    }
-//    
+//
 //    // Required nested types, that tell Swift what our collection contains
 //    public typealias Index = HistogramBinRange<Value>
 //    //public typealias Element = (HistogramBinRange<Value>, Int)
@@ -388,4 +388,4 @@ extension Histogram: Sequence {
 //        let nextIndex = indexedKeyPostion + 1
 //        return _storage.keys[nextIndex]
 //    }
-//}
+// }
