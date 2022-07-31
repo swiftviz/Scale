@@ -19,7 +19,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:13SwiftVizScale010ContinuousC0V5ticks8reversed10rangeLower0G6Higher9formatterSayAA4TickVyq_GGSb_q_q_So11NSFormatterCSgtF",
+    "externalID" : "s:13SwiftVizScale010ContinuousC0V5ticks8reversed10rangeLower0G6Higher9formatterSayAA4TickVyxGGSb_xxSo11NSFormatterCSgtF",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -688,6 +688,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     },
     {
@@ -811,6 +829,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     },
     {

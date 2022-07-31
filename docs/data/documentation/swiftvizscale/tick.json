@@ -102,8 +102,8 @@
             },
             {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:Sj",
-              "text" : "Numeric"
+              "preciseIdentifier" : "s:SB",
+              "text" : "BinaryFloatingPoint"
             }
           ]
         }
@@ -158,8 +158,7 @@
   "topicSections" : [
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/init(value:location:formatter:)-62lbu",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/init(value:location:formatter:)-8v5fg"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/init(value:location:formatter:)"
       ],
       "title" : "Creating Ticks"
     },
@@ -233,88 +232,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/tick"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/init(value:location:formatter:)-62lbu": {
-  "abstract" : [
-    {
-      "text" : "Creates a new tick",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "identifier",
-      "text" : "init"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "T"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "value"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "T"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "location"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "formatter"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "c:objc(cs)NSFormatter",
-      "text" : "Formatter"
-    },
-    {
-      "kind" : "text",
-      "text" : "?)"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/init(value:location:formatter:)-62lbu",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "init(value:location:formatter:)",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick\/init(value:location:formatter:)-62lbu"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/init(value:location:formatter:)-8v5fg": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/init(value:location:formatter:)": {
   "abstract" : [
     {
       "text" : "Creates a new tick.",
@@ -388,12 +306,12 @@
       "text" : "?)"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/init(value:location:formatter:)-8v5fg",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Tick\/init(value:location:formatter:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(value:location:formatter:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/tick\/init(value:location:formatter:)-8v5fg"
+  "url" : "\/documentation\/swiftvizscale\/tick\/init(value:location:formatter:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Tick/label": {
   "abstract" : [

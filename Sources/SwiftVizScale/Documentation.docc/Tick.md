@@ -4,8 +4,7 @@
 
 ### Creating Ticks
 
-- ``SwiftVizScale/Tick/init(value:location:formatter:)-62lbu``
-- ``SwiftVizScale/Tick/init(value:location:formatter:)-8v5fg``
+- ``SwiftVizScale/Tick/init(value:location:formatter:)``
 
 ### Inspecting Ticks
 

@@ -19,7 +19,7 @@ import OrderedCollections
 // Collection.bin -> Histogram(data: _)
 // Collection.bin(stride: _) -> Histogram(data: self, stride: stride)
 
-struct Histogram<Value: Numeric & Hashable & Comparable> {
+public struct Histogram<Value: Numeric & Hashable & Comparable> {
     typealias InternalDictType = OrderedDictionary<HistogramBinRange<Value>, Int>
     private var _storage: InternalDictType
 
@@ -27,7 +27,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
 
     /// Automatically determine the bins from data.
     /// - Parameter data: <#data description#>
-    init(data: [Value]) where Value: BinaryInteger {
+    public init(data: [Value]) where Value: BinaryInteger {
         _storage = [:]
         guard let stdDev = data.stdDev, let smallestValue = data.min(), let largestValue = data.max() else {
             return
@@ -57,7 +57,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
 
     /// Automatically determine the bins from data.
     /// - Parameter data: <#data description#>
-    init(data: [Value]) where Value: BinaryFloatingPoint {
+    public init(data: [Value]) where Value: BinaryFloatingPoint {
         _storage = [:]
         guard let stdDev = data.stdDev, let smallestValue = data.min(), let largestValue = data.max() else {
             return
@@ -91,7 +91,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
     ///   - data: <#data description#>
     ///   - desiredCount: <#desiredCount description#>
     ///   - minimumStride: <#minimumStride description#>
-    init(data: [Value], minimumStride: Value, desiredCount: Int? = nil) where Value: BinaryFloatingPoint {
+    public init(data: [Value], minimumStride: Value, desiredCount: Int? = nil) where Value: BinaryFloatingPoint {
         _storage = [:]
         guard let smallestValue = data.min(), let largestValue = data.max() else {
             return
@@ -132,7 +132,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
     ///   - data: <#data description#>
     ///   - desiredCount: <#desiredCount description#>
     ///   - minimumStride: <#minimumStride description#>
-    init(data: [Value], minimumStride: Value, desiredCount: Int? = nil) where Value: BinaryInteger {
+    public init(data: [Value], minimumStride: Value, desiredCount: Int? = nil) where Value: BinaryInteger {
         _storage = [:]
         guard let smallestValue = data.min(), let largestValue = data.max() else {
             return
@@ -172,7 +172,7 @@ struct Histogram<Value: Numeric & Hashable & Comparable> {
 
     /// Explicitly build a histogram with N-1 threshold bins, with the explicit thresholds you provide.
     /// - Parameter data: <#data description#>
-    init(data: [Value], thresholds: [Value]) {
+    public init(data: [Value], thresholds: [Value]) {
         _storage = [:]
         let sortedThresholds = thresholds.sorted()
         guard let lastThreshold = sortedThresholds.last, data.count > 1, sortedThresholds.count > 1 else {
@@ -237,7 +237,6 @@ extension Histogram: Sequence {
         /// element exists.
         ///
         /// - Complexity: O(1)
-        @inlinable
         public mutating func next() -> Element? {
             guard _position < _base._storage.count else { return nil }
             let key = _base._storage.keys[_position]
@@ -248,7 +247,7 @@ extension Histogram: Sequence {
         }
     }
 
-    func makeIterator() -> HistogramIterator {
+    public func makeIterator() -> HistogramIterator {
         HistogramIterator(_base: self)
     }
 }

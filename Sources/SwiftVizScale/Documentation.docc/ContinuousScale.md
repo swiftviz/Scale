@@ -2,6 +2,16 @@
 
 ## Topics
 
+### Creating a Continuous Scale
+
+- ``SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-4twbk``
+- ``SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-5y3b5``
+- ``SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-7c7g6``
+- ``SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-7n1l8``
+- ``SwiftVizScale/ContinuousScale/init(lower:higher:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-1dq3o``
+- ``SwiftVizScale/ContinuousScale/init(lower:higher:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-6xgot``
+- ``SwiftVizScale/ContinuousScale/init(type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)``
+
 ### Inspecting Scales
 
 - ``SwiftVizScale/ContinuousScale/domainLower``
@@ -18,10 +28,13 @@
 
 ### Updating Scales
 
-- ``SwiftVizScale/ContinuousScale/domain(_:)-4f5d3``
-- ``SwiftVizScale/ContinuousScale/domain(_:)-6auzq``
+- ``SwiftVizScale/ContinuousScale/domain(_:)-63bua``
+- ``SwiftVizScale/ContinuousScale/domain(_:)-6qxk9``
+- ``SwiftVizScale/ContinuousScale/domain(_:)-7oobb``
+- ``SwiftVizScale/ContinuousScale/domain(_:)-91w7x``
 - ``SwiftVizScale/ContinuousScale/domain(_:nice:)``
-- ``SwiftVizScale/ContinuousScale/domain(lower:higher:)``
+- ``SwiftVizScale/ContinuousScale/domain(lower:higher:)-5u2ks``
+- ``SwiftVizScale/ContinuousScale/domain(lower:higher:)-78pku``
 - ``SwiftVizScale/ContinuousScale/scaleType(_:)``
 - ``SwiftVizScale/ContinuousScale/range(_:)``
 - ``SwiftVizScale/ContinuousScale/range(lower:higher:)``
