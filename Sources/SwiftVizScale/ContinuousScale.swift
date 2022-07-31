@@ -31,7 +31,10 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
 
     /// The number of ticks desired when creating the scale.
     ///
-    /// This number may not match the number of ticks returned by ``ContinuousScale/ticksFromValues(_:reversed:from:to:formatter:)``
+    /// This number may not match the number of ticks returned by
+    /// ``SwiftVizScale/ContinuousScale/ticksFromValues(_:reversed:from:to:formatter:)-3u6d8`` or
+    ///  ``SwiftVizScale/ContinuousScale/ticksFromValues(_:reversed:from:to:formatter:)-7mb58``.
+
     public let desiredTicks: Int
 
     public init(type scaleType: ContinuousScaleType = .linear,

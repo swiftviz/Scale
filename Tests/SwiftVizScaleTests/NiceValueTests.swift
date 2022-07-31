@@ -49,11 +49,6 @@ class NiceValueTests: XCTestCase {
 
     // MARK: tests
 
-    func testRangeOfNiceValues() throws {
-        let result = Double.rangeOfNiceValues(min: 1, max: 999, ofSize: 10)
-        // print(result)
-    }
-
     func testNegativeNiceValues() throws {
         assertCalculatedNiceValue(input: 0.0, expectedLowerValue: 0.0, expectedHigherValue: 0.0)
         assertCalculatedNiceValue(input: -1.0, expectedLowerValue: -1.0, expectedHigherValue: -1.0)
