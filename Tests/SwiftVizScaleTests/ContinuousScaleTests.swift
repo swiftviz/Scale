@@ -122,7 +122,7 @@ class ContinuousScaleTests: XCTestCase {
         let defaultTicks = myScale.ticks(rangeLower: testRange.lowerBound, rangeHigher: testRange.upperBound)
         XCTAssertEqual(defaultTicks.count, 6)
         for tick in defaultTicks {
-            print(tick)
+            // print(tick)
             // every tick should be from within the scale's domain (input) range
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
             XCTAssertTrue(tick.value! >= myScale.domainLower)

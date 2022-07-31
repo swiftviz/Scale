@@ -88,7 +88,7 @@ final class TickTests: XCTestCase {
         XCTAssertNotNil(scale)
         let ticks = scale.ticksFromValues([-1, 3, 7, 9, 11], from: 0, to: 100)
         XCTAssertEqual(ticks.count, 3)
-        print(ticks)
+        // print(ticks)
     }
 
     func testAnyContinuousScaleValidTickValues() {
@@ -96,7 +96,7 @@ final class TickTests: XCTestCase {
         XCTAssertNotNil(scale)
         let ticks = scale.validTickValues([-1, 3, 7, 9, 11])
         XCTAssertEqual(ticks.count, 3)
-        print(ticks)
+        // print(ticks)
     }
 
     func testBandTickValues() {

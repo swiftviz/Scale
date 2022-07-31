@@ -79,11 +79,11 @@ class LogScaleTests: XCTestCase {
         let testRange = Float(0.0) ... Float(100.0)
 
         let defaultTicks = myScale.ticks(rangeLower: testRange.lowerBound, rangeHigher: testRange.upperBound)
-        print(defaultTicks.map(\.value))
-        XCTAssertEqual(defaultTicks.count, 5)
+        // print(defaultTicks.map(\.value))
+        XCTAssertEqual(defaultTicks.count, 12)
         for tick in defaultTicks {
             // every tick should be from within the scale's range (output area)
-            print(tick)
+            // print(tick)
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
             XCTAssertTrue(myScale.domainLower <= tick.value!)
             XCTAssertTrue(myScale.domainHigher >= tick.value!)
@@ -114,10 +114,10 @@ class LogScaleTests: XCTestCase {
         let testRange = Float(0.0) ... Float(100.0)
 
         let defaultTicks = myScale.ticks(rangeLower: testRange.lowerBound, rangeHigher: testRange.upperBound)
-        print(defaultTicks.map(\.value))
-        XCTAssertEqual(defaultTicks.count, 4)
+        // print(defaultTicks.map(\.value))
+        XCTAssertEqual(defaultTicks.count, 9)
         for tick in defaultTicks {
-            print(tick)
+            // print(tick)
             // every tick should be from within the scale's range (output area)
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
             XCTAssertTrue(myScale.domainLower <= tick.value!)
@@ -246,23 +246,22 @@ class LogScaleTests: XCTestCase {
     func testReversedTicks() {
         let reversed = ContinuousScale<CGFloat>(lower: 1, higher: 100, type: .log, reversed: true, rangeLower: 1, rangeHigher: 100)
         let reverseTicks = reversed.ticks(rangeLower: 0, rangeHigher: 20)
-        XCTAssertEqual(reverseTicks.count, 5)
-        print(reverseTicks)
-        //        [SwiftVizScale.Tick<CoreGraphics.CGFloat>(rangeLocation: 6.9897000433601875, label: "20.0"), SwiftVizScale.Tick<CoreGraphics.CGFloat>(rangeLocation: 3.979400086720377, label: "40.0"), SwiftVizScale.Tick<CoreGraphics.CGFloat>(rangeLocation: 2.2184874961635637, label: "60.0"), SwiftVizScale.Tick<CoreGraphics.CGFloat>(rangeLocation: 0.9691001300805646, label: "80.0"), SwiftVizScale.Tick<CoreGraphics.CGFloat>(rangeLocation: 0.0, label: "100.0")]
-
-        assertTick(reverseTicks[0], "20.0", 6.9897)
-        assertTick(reverseTicks[1], "40.0", 3.9794)
-        assertTick(reverseTicks[2], "60.0", 2.2185)
-        assertTick(reverseTicks[3], "80.0", 0.9691)
-        assertTick(reverseTicks[4], "100.0", 0.0)
+        XCTAssertEqual(reverseTicks.count, 6)
+        assertTick(reverseTicks[0], "1.0", 20.0)
+        assertTick(reverseTicks[1], "2.0", 16.989)
+        assertTick(reverseTicks[2], "5.0", 13.01)
+        assertTick(reverseTicks[3], "10.0", 10.0)
+        assertTick(reverseTicks[4], "20.0", 6.989)
+        assertTick(reverseTicks[5], "50.0", 3.010)
 
         let forward = reversed.range(reversed: false, lower: 0, higher: 20) // identity
         let forwardTicks = forward.ticks(rangeLower: 0, rangeHigher: 20)
-        XCTAssertEqual(forwardTicks.count, 5)
-        assertTick(forwardTicks[0], "20.0", 13.010)
-        assertTick(forwardTicks[1], "40.0", 16.020)
-        assertTick(forwardTicks[2], "60.0", 17.781)
-        assertTick(forwardTicks[3], "80.0", 19.030)
-        assertTick(forwardTicks[4], "100.0", 20)
+        XCTAssertEqual(forwardTicks.count, 6)
+        assertTick(forwardTicks[0], "1.0", 0)
+        assertTick(forwardTicks[1], "2.0", 3.010)
+        assertTick(forwardTicks[2], "5.0", 6.989)
+        assertTick(forwardTicks[3], "10.0", 10)
+        assertTick(forwardTicks[4], "20.0", 13.01)
+        assertTick(forwardTicks[5], "50.0", 16.989)
     }
 }

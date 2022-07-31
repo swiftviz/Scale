@@ -56,7 +56,7 @@ final class ArrayInterpolatorTests: XCTestCase {
         ]
         for (tValue, resultSet) in expectedTValueResults {
             let (index, intermediateTValue) = IndexedColorInterpolator.interpolateIntoSteps(tValue, 5)
-            print("index: \(index) t: \(intermediateTValue)")
+            // print("index: \(index) t: \(intermediateTValue)")
             XCTAssertEqual(index, resultSet.0)
             XCTAssertEqual(intermediateTValue, resultSet.1, accuracy: 0.001)
         }

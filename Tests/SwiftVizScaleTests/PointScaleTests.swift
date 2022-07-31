@@ -212,7 +212,7 @@ class PointScaleTests: XCTestCase {
         let reversed = PointScale<String, CGFloat>(["X", "Y", "Z"], reversed: true, from: 0, to: 30)
         let reverseTicks = reversed.ticks(rangeLower: 0, rangeHigher: 30)
         XCTAssertEqual(reverseTicks.count, 3)
-        print(reverseTicks)
+        // print(reverseTicks)
         assertTick(reverseTicks[0], "X", 25)
         assertTick(reverseTicks[1], "Y", 15)
         assertTick(reverseTicks[2], "Z", 5)

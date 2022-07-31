@@ -51,7 +51,7 @@ class NiceValueTests: XCTestCase {
 
     func testRangeOfNiceValues() throws {
         let result = Double.rangeOfNiceValues(min: 1, max: 999, ofSize: 10)
-        print(result)
+        // print(result)
     }
 
     func testNegativeNiceValues() throws {
@@ -213,5 +213,27 @@ class NiceValueTests: XCTestCase {
         try verifyIntRangeAttributes(min: min, max: max, steps: 2, calcSteps: 2, stepsize: 200, niceMax: 200)
         try verifyIntRangeAttributes(min: min, max: max, steps: 3, calcSteps: 3, stepsize: 100, niceMax: 200)
         try verifyIntRangeAttributes(min: min, max: max, steps: 3, calcSteps: 3, stepsize: 100, niceMax: 200)
+    }
+
+    func testLogRangeNiceValue() throws {
+        let min: Double = 2
+        let max: Double = 2013
+        let result = Double.logRangeOfNiceValues(min: min, max: max)
+        XCTAssertEqual(result, [2.0, 5.0, 10.0, 20.0, 50.0, 100.0, 200.0, 500.0, 1000.0, 2000.0])
+    }
+
+    func testLongerLogRangeNiceValue() throws {
+        let min = 0.02
+        let max: Double = 2013
+        let result = Double.logRangeOfNiceValues(min: min, max: max)
+        XCTAssertEqual(result.count, 16)
+    }
+
+    func testStupidLogRangeNiceValue() throws {
+        let min: Double = 0
+        let max: Double = 20
+        let result = Double.logRangeOfNiceValues(min: min, max: max)
+        // print(result)
+        XCTAssertEqual(result.count, 974)
     }
 }
