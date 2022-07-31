@@ -360,12 +360,22 @@
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/continuousscale\/ticksfromvalues(_:reversed:from:to:formatter:)",
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/ticksfromvalues(_:reversed:from:to:formatter:)-3u6d8",
                 "title" : "func ticksFromValues([ContinuousScale<OutputType>.InputType], reversed: Bool, from: OutputType, to: OutputType, formatter: Formatter?) -> [Tick<OutputType>]",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/continuousscale\/validtickvalues(_:formatter:)",
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/ticksfromvalues(_:reversed:from:to:formatter:)-7mb58",
+                "title" : "func ticksFromValues<T>([T], reversed: Bool, from: OutputType, to: OutputType, formatter: Formatter?) -> [Tick<OutputType>]",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/validtickvalues(_:formatter:)-9dbw",
+                "title" : "func validTickValues<T>([T], formatter: Formatter?) -> [String]",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/validtickvalues(_:formatter:)-9ytj1",
                 "title" : "func validTickValues([ContinuousScale<OutputType>.InputType], formatter: Formatter?) -> [String]",
                 "type" : "method"
               },

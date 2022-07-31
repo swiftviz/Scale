@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
+      "text" : "Converts an array of values that matches the scale’s input type to a list of ticks that are within the scale’s domain.",
       "type" : "text"
     }
   ],
@@ -15,11 +15,11 @@
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/ticks(rangeLower:rangeHigher:formatter:)"
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/ticksFromValues(_:reversed:from:to:formatter:)-7mb58"
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:13SwiftVizScale010ContinuousC0V5ticks10rangeLower0F6Higher9formatterSayAA4TickVyxGGx_xSo11NSFormatterCSgtF",
+    "externalID" : "s:13SwiftVizScale010ContinuousC0V15ticksFromValues_8reversed4from2to9formatterSayAA4TickVyxGGSayqd__G_SbxxSo11NSFormatterCSgtSzRd__lF",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -31,15 +31,48 @@
       },
       {
         "kind" : "identifier",
-        "text" : "ticks"
+        "text" : "ticksFromValues"
       },
       {
         "kind" : "text",
-        "text" : "("
+        "text" : "<"
+      },
+      {
+        "kind" : "genericParameter",
+        "text" : "T"
+      },
+      {
+        "kind" : "text",
+        "text" : ">(["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "T"
+      },
+      {
+        "kind" : "text",
+        "text" : "], "
       },
       {
         "kind" : "externalParam",
-        "text" : "rangeLower"
+        "text" : "reversed"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "from"
       },
       {
         "kind" : "text",
@@ -55,7 +88,7 @@
       },
       {
         "kind" : "externalParam",
-        "text" : "rangeHigher"
+        "text" : "to"
       },
       {
         "kind" : "text",
@@ -112,7 +145,7 @@
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",
-    "title" : "ticks(rangeLower:rangeHigher:formatter:)"
+    "title" : "ticksFromValues(_:reversed:from:to:formatter:)"
   },
   "primaryContentSections" : [
     {
@@ -135,15 +168,72 @@
             },
             {
               "kind" : "identifier",
-              "text" : "ticks"
+              "text" : "ticksFromValues"
             },
             {
               "kind" : "text",
-              "text" : "("
+              "text" : "<"
+            },
+            {
+              "kind" : "genericParameter",
+              "text" : "T"
+            },
+            {
+              "kind" : "text",
+              "text" : ">("
             },
             {
               "kind" : "externalParam",
-              "text" : "rangeLower"
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "inputValues"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "T"
+            },
+            {
+              "kind" : "text",
+              "text" : "], "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "reversed"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sb",
+              "text" : "Bool"
+            },
+            {
+              "kind" : "text",
+              "text" : " = false, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "from"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "lower"
             },
             {
               "kind" : "text",
@@ -159,7 +249,15 @@
             },
             {
               "kind" : "externalParam",
-              "text" : "rangeHigher"
+              "text" : "to"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "higher"
             },
             {
               "kind" : "text",
@@ -206,12 +304,58 @@
             },
             {
               "kind" : "text",
-              "text" : ">]"
+              "text" : ">] "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "where"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "T"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sz",
+              "text" : "BinaryInteger"
             }
           ]
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A list of tick values validated against the domain, and range based on the setting of ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/transformType",
+              "isActive" : true,
+              "type" : "reference"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     },
     {
       "kind" : "parameters",
@@ -221,28 +365,56 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "the lower value for the range into which to position the ticks.",
+                  "text" : "an array of values of the Scale’s InputType",
                   "type" : "text"
                 }
               ],
               "type" : "paragraph"
             }
           ],
-          "name" : "rangeLower"
+          "name" : "inputValues"
         },
         {
           "content" : [
             {
               "inlineContent" : [
                 {
-                  "text" : "The higher value for the range into which to position the ticks.",
+                  "text" : "A Boolean value that indicates if the mapping from domain to range is inverted.",
                   "type" : "text"
                 }
               ],
               "type" : "paragraph"
             }
           ],
-          "name" : "rangeHigher"
+          "name" : "reversed"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The lower value of the range the scale maps to.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "lower"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The higher value of the range the scale maps to.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "higher"
         },
         {
           "content" : [
@@ -259,6 +431,65 @@
           "name" : "formatter"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Used for manually specifying a series of ticks that you want to have displayed.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Values presented for display that are ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "not",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : " within the domain of the scale are dropped.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Values that scale outside of the range you provide are adjusted based on the setting of ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/transformType",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -274,9 +505,9 @@
       "generated" : true,
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/defaultTickValues(formatter:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/ticks(rangeLower:rangeHigher:formatter:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/ticks(reversed:rangeLower:rangeHigher:formatter:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/ticksFromValues(_:reversed:from:to:formatter:)-3u6d8",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/ticksFromValues(_:reversed:from:to:formatter:)-7mb58",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/validTickValues(_:formatter:)-9dbw",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/validTickValues(_:formatter:)-9ytj1"
       ],
@@ -286,7 +517,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/swiftvizscale\/continuousscale\/ticks(rangelower:rangehigher:formatter:)"
+        "\/documentation\/swiftvizscale\/continuousscale\/ticksfromvalues(_:reversed:from:to:formatter:)-7mb58"
       ],
       "traits" : [
         {
@@ -887,6 +1118,43 @@
   "title" : "ticksFromValues(_:reversed:from:to:formatter:)",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/continuousscale\/ticksfromvalues(_:reversed:from:to:formatter:)-7mb58"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/transformType": {
+  "abstract" : [
+    {
+      "text" : "A transformation value that indicates whether the output vales are constrained to the min and max of the output range.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "transformType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale19DomainDataTransformO",
+      "text" : "DomainDataTransform"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/transformType",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "transformType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/transformtype"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/validTickValues(_:formatter:)-9dbw": {
   "abstract" : [
