@@ -527,7 +527,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
 
     // MARK: - tick methods
 
-    /// Returns a list of strings that make up the valid tick values out of the set that you provide.
+    /// Returns a list of strings that make up the tick values that are contained within the domain of the scale.
     /// - Parameters:
     ///   - inputValues: an array of values of the Scale's InputType
     ///   - formatter: An optional formatter to convert the domain values into strings.
@@ -542,6 +542,15 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
             }
             return nil
         }
+    }
+
+    /// Returns a list of strings that make up the tick values that are contained within the domain of the scale.
+    /// - Parameters:
+    ///   - inputValues: an array of values of the Scale's InputType
+    ///   - formatter: An optional formatter to convert the domain values into strings.
+    public func validTickValues<T: BinaryInteger>(_ inputValues: [T], formatter: Formatter? = nil) -> [String] {
+        let converted = inputValues.map { Double($0) }
+        return validTickValues(converted, formatter: formatter)
     }
 
     /// Converts an array of values that matches the scale's input type to a list of ticks that are within the scale's domain.
@@ -581,6 +590,23 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
             }
             return nil
         }
+    }
+
+    /// Converts an array of values that matches the scale's input type to a list of ticks that are within the scale's domain.
+    ///
+    /// Used for manually specifying a series of ticks that you want to have displayed.
+    ///
+    /// Values presented for display that are *not* within the domain of the scale are dropped.
+    /// Values that scale outside of the range you provide are adjusted based on the setting of ``ContinuousScale/transformType``.
+    /// - Parameter inputValues: an array of values of the Scale's InputType
+    /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+    /// - Parameter lower: The lower value of the range the scale maps to.
+    /// - Parameter higher: The higher value of the range the scale maps to.
+    /// - Parameter formatter: An optional formatter to convert the domain values into strings.
+    /// - Returns: A list of tick values validated against the domain, and range based on the setting of ``ContinuousScale/transformType``
+    public func ticksFromValues<T: BinaryInteger>(_ inputValues: [T], reversed: Bool = false, from lower: OutputType, to higher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
+        let converted = inputValues.map { Double($0) }
+        return ticksFromValues(converted, reversed: reversed, from: lower, to: higher, formatter: formatter)
     }
 
     /// Returns an array of the locations within the output range to locate ticks for the scale.
