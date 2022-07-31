@@ -23,7 +23,7 @@ import OrderedCollections
 public struct Histogram<Value: Numeric & Hashable & Comparable> {
     typealias InternalDictType = OrderedDictionary<HistogramBinRange<Value>, Int>
     private var _storage: InternalDictType
-    
+
     /// The lowest value of the histogram's range.
     public var lowerBound: Value
     /// The highest value of the histogram's range.
@@ -252,6 +252,9 @@ public struct Histogram<Value: Numeric & Hashable & Comparable> {
     private mutating func populate(_ data: [Value]) {
         // Iterate through the data to insert everything into the histogram keyed by bin.
         for dataValue in data {
+            if dataValue < lowerBound || dataValue > upperBound {
+                break
+            }
             // This could be improved (perf wise) by potentially doing a binary search
             // over keys, assuming OrderedDictionary.keys returns that nicely ordered
             // collection.

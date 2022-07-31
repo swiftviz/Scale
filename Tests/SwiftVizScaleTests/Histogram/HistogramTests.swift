@@ -91,12 +91,12 @@ final class HistogramTests: XCTestCase {
         XCTAssertEqual(fourthRange.lowerBound, 62)
         XCTAssertEqual(fourthRange.upperBound, 65)
         XCTAssertEqual(fourthCount, 1)
-        
+
         XCTAssertEqual(h.lowerBound, 2)
         XCTAssertEqual(h.upperBound, 65)
         XCTAssertFalse(h.isEmpty)
     }
-    
+
     func testEmptyDoubleHistogram() throws {
         let emptyDouble: [Double] = []
         let h = Histogram(data: emptyDouble)
@@ -104,7 +104,7 @@ final class HistogramTests: XCTestCase {
         XCTAssertEqual(h.upperBound, 0)
         XCTAssertTrue(h.isEmpty)
     }
-    
+
     func testEmptyIntHistogram() throws {
         let emptyDouble: [Int] = []
         let h = Histogram(data: emptyDouble)
@@ -214,5 +214,24 @@ final class HistogramTests: XCTestCase {
 
         XCTAssertEqual(flayedHistogram.count, 6)
         XCTAssertEqual(h.description, "[0..<2: 0, 2..<5: 4, 5..<10: 6, 10..<20: 0, 20..<50: 1, 50...100: 1]")
+    }
+
+    func testIntHistogramWithBounds() throws {
+        let h = Histogram(data: listIntOutliers, minimumStride: 1, bounds: 0 ... 15, desiredCount: 10)
+
+        // create an array of range-count tuples to inspect how the histogram was created
+        let flayedHistogram = Array(h)
+        XCTAssertEqual(flayedHistogram.count, 8)
+        // Note that with setting the bounds, the outliers are excluded...
+        XCTAssertEqual(h.description, "[0..<2: 0, 2..<4: 3, 4..<6: 0, 6..<8: 1, 8..<10: 0, 10..<12: 0, 12..<14: 0, 14...15: 0]")
+    }
+
+    func testFloatHistogramWithBounds() throws {
+        let h = Histogram(data: listDoubleClose, minimumStride: 1, bounds: 0 ... 15, desiredCount: 10)
+
+        // create an array of range-count tuples to inspect how the histogram was created
+        let flayedHistogram = Array(h)
+        XCTAssertEqual(flayedHistogram.count, 10)
+        XCTAssertEqual(h.description, "[0.0..<1.5: 0, 1.5..<3.0: 4, 3.0..<4.5: 4, 4.5..<6.0: 3, 6.0..<7.5: 4, 7.5..<9.0: 1, 9.0..<10.5: 0, 10.5..<12.0: 0, 12.0..<13.5: 0, 13.5..<15.0: 0]")
     }
 }
