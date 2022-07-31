@@ -139,10 +139,9 @@
               "text" : " : "
             },
             {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ConvertibleWithDouble",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
-              "text" : "ConvertibleWithDouble"
+              "preciseIdentifier" : "s:SB",
+              "text" : "BinaryFloatingPoint"
             }
           ]
         }
@@ -2077,7 +2076,7 @@
         "type" : "text"
       },
       {
-        "code" : "ConvertibleWithDouble",
+        "code" : "BinaryFloatingPoint",
         "type" : "codeVoice"
       },
       {
@@ -2251,40 +2250,6 @@
   "title" : "ticks(rangeLower:rangeHigher:formatter:)",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/bandscale\/ticks(rangelower:rangehigher:formatter:)"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ConvertibleWithDouble": {
-  "abstract" : [
-    {
-      "text" : "A type that can be consistently converted to and from a Double.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "protocol"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "ConvertibleWithDouble"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ConvertibleWithDouble",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "ConvertibleWithDouble"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "ConvertibleWithDouble",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/convertiblewithdouble"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DiscreteScale": {
   "abstract" : [

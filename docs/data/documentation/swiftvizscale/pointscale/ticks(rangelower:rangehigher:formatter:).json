@@ -63,7 +63,7 @@
           "type" : "text"
         },
         {
-          "code" : "ConvertibleWithDouble",
+          "code" : "BinaryFloatingPoint",
           "type" : "codeVoice"
         },
         {
@@ -633,7 +633,7 @@
         "type" : "text"
       },
       {
-        "code" : "ConvertibleWithDouble",
+        "code" : "BinaryFloatingPoint",
         "type" : "codeVoice"
       },
       {
@@ -854,7 +854,7 @@
         "type" : "text"
       },
       {
-        "code" : "ConvertibleWithDouble",
+        "code" : "BinaryFloatingPoint",
         "type" : "codeVoice"
       },
       {

@@ -42,6 +42,11 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 - ``SwiftVizScale/ComputedRGBInterpolator``
 - ``SwiftVizScale/ColorScheme``
 
+### Histograms
+
+- ``SwiftVizScale/Histogram``
+- ``SwiftVizScale/HistogramBinRange``
+
 ### Ticks
 
 - ``SwiftVizScale/Tick``
@@ -50,5 +55,3 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 
 - ``SwiftVizScale/Scale``
 - ``SwiftVizScale/ReversibleScale``
-- ``SwiftVizScale/ConvertibleWithDouble``
-

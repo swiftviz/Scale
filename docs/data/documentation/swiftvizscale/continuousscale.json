@@ -78,14 +78,6 @@
             },
             {
               "kind" : "genericParameter",
-              "text" : "InputType"
-            },
-            {
-              "kind" : "text",
-              "text" : ", "
-            },
-            {
-              "kind" : "genericParameter",
               "text" : "OutputType"
             },
             {
@@ -102,24 +94,6 @@
             },
             {
               "kind" : "typeIdentifier",
-              "text" : "InputType"
-            },
-            {
-              "kind" : "text",
-              "text" : " : "
-            },
-            {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ConvertibleWithDouble",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
-              "text" : "ConvertibleWithDouble"
-            },
-            {
-              "kind" : "text",
-              "text" : ", "
-            },
-            {
-              "kind" : "typeIdentifier",
               "text" : "OutputType"
             },
             {
@@ -127,10 +101,9 @@
               "text" : " : "
             },
             {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ConvertibleWithDouble",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:13SwiftVizScale21ConvertibleWithDoubleP",
-              "text" : "ConvertibleWithDouble"
+              "preciseIdentifier" : "s:SB",
+              "text" : "BinaryFloatingPoint"
             }
           ]
         }
@@ -172,6 +145,18 @@
   "topicSections" : [
     {
       "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-4twbk",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-5y3b5",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-7c7g6",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-7n1l8",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(lower:higher:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-1dq3o",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(lower:higher:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-6xgot",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)"
+      ],
+      "title" : "Creating a Continuous Scale"
+    },
+    {
+      "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domainLower",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domainHigher",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/transformType",
@@ -188,10 +173,13 @@
     },
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(_:)-4f5d3",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(_:)-6auzq",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(_:)-63bua",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(_:)-6qxk9",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(_:)-7oobb",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(_:)-91w7x",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(_:nice:)",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(lower:higher:)",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(lower:higher:)-5u2ks",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(lower:higher:)-78pku",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/scaleType(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/range(_:)",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/range(lower:higher:)",
@@ -234,11 +222,9 @@
     },
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-2rwdv",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-9hcw4",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(from:to:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/InputType"
       ],
-      "title" : "Initializers"
+      "title" : "Type Aliases"
     }
   ],
   "variants" : [
@@ -302,6 +288,37 @@
   "title" : "ContinuousScale",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/continuousscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/InputType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "InputType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/InputType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "InputType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ContinuousScale.InputType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/inputtype"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/defaultTickValues(formatter:)": {
   "abstract" : [
@@ -432,7 +449,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/continuousscale\/desiredticks"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/domain(_:)-4f5d3": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/domain(_:)-63bua": {
   "abstract" : [
     {
       "text" : "Returns a new scale with the domain set to the values you provide.",
@@ -454,7 +471,15 @@
     },
     {
       "kind" : "text",
-      "text" : "("
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
     },
     {
       "kind" : "typeIdentifier",
@@ -467,7 +492,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "InputType"
+      "text" : "T"
     },
     {
       "kind" : "text",
@@ -484,11 +509,77 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "InputType"
+      "text" : "OutputType"
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(_:)-63bua",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domain(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:)-63bua"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/domain(_:)-6qxk9": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the domain set to the values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domain"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SN",
+      "text" : "ClosedRange"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
     },
     {
       "kind" : "typeIdentifier",
@@ -499,14 +590,14 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(_:)-4f5d3",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(_:)-6qxk9",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "domain(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:)-4f5d3"
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:)-6qxk9"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/domain(_:)-6auzq": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/domain(_:)-7oobb": {
   "abstract" : [
     {
       "text" : "Returns a new scale with the domain set to span the values you provide.",
@@ -528,11 +619,19 @@
     },
     {
       "kind" : "text",
-      "text" : "(["
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">(["
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "InputType"
+      "text" : "T"
     },
     {
       "kind" : "text",
@@ -549,11 +648,68 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "InputType"
+      "text" : "OutputType"
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(_:)-7oobb",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domain(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:)-7oobb"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/domain(_:)-91w7x": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the domain set to span the values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domain"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">(["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : "]) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
     },
     {
       "kind" : "typeIdentifier",
@@ -564,12 +720,12 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(_:)-6auzq",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(_:)-91w7x",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "domain(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:)-6auzq"
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:)-91w7x"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/domain(_:nice:)": {
   "abstract" : [
@@ -593,11 +749,19 @@
     },
     {
       "kind" : "text",
-      "text" : "(["
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">(["
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "InputType"
+      "text" : "T"
     },
     {
       "kind" : "text",
@@ -631,14 +795,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
       "text" : "OutputType"
     },
     {
@@ -653,7 +809,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:nice:)"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/domain(lower:higher:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/domain(lower:higher:)-5u2ks": {
   "abstract" : [
     {
       "text" : "Returns a new scale with the domain set to the values you provide.",
@@ -675,7 +831,15 @@
     },
     {
       "kind" : "text",
-      "text" : "("
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
     },
     {
       "kind" : "externalParam",
@@ -687,7 +851,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "InputType"
+      "text" : "T"
     },
     {
       "kind" : "text",
@@ -703,7 +867,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "InputType"
+      "text" : "T"
     },
     {
       "kind" : "text",
@@ -720,11 +884,92 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "InputType"
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(lower:higher:)-5u2ks",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domain(lower:higher:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/domain(lower:higher:)-5u2ks"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/domain(lower:higher:)-78pku": {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the domain set to the values you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domain"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "lower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "T"
     },
     {
       "kind" : "text",
       "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "higher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
     },
     {
       "kind" : "typeIdentifier",
@@ -735,12 +980,12 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(lower:higher:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domain(lower:higher:)-78pku",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "domain(lower:higher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/continuousscale\/domain(lower:higher:)"
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/domain(lower:higher:)-78pku"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/domainHigher": {
   "abstract" : [
@@ -768,6 +1013,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     }
   ],
@@ -804,6 +1067,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     }
   ],
@@ -814,147 +1095,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/continuousscale\/domainlower"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-2rwdv": {
-  "abstract" : [
-    {
-      "text" : "Creates a new power scale for the domain of ",
-      "type" : "text"
-    },
-    {
-      "code" : "0",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " to the value you provide.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "identifier",
-      "text" : "init"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "type"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC4TypeO",
-      "text" : "ContinuousScaleType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "transform"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale19DomainDataTransformO",
-      "text" : "DomainDataTransform"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "desiredTicks"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Si",
-      "text" : "Int"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "reversed"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sb",
-      "text" : "Bool"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "rangeLower"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : "?, "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "rangeHigher"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : "?)"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-2rwdv",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/continuousscale\/init(_:type:transform:desiredticks:reversed:rangelower:rangehigher:)-2rwdv"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-9hcw4": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-4twbk": {
   "abstract" : [
     {
       "text" : "Creates a new linear scale for the upper and lower bounds of the domain range you provide.",
@@ -968,7 +1109,15 @@
     },
     {
       "kind" : "text",
-      "text" : "("
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
     },
     {
       "kind" : "typeIdentifier",
@@ -981,7 +1130,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "InputType"
+      "text" : "T"
     },
     {
       "kind" : "text",
@@ -1088,17 +1237,17 @@
       "text" : "?)"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-9hcw4",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-4twbk",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/continuousscale\/init(_:type:transform:desiredticks:reversed:rangelower:rangehigher:)-9hcw4"
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/init(_:type:transform:desiredticks:reversed:rangelower:rangehigher:)-4twbk"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(from:to:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-5y3b5": {
   "abstract" : [
     {
-      "text" : "Creates a new linear scale for the upper and lower bounds of the domain you provide.",
+      "text" : "Creates a new linear scale for the upper and lower bounds of the domain range you provide.",
       "type" : "text"
     }
   ],
@@ -1109,11 +1258,36 @@
     },
     {
       "kind" : "text",
-      "text" : "("
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SN",
+      "text" : "ClosedRange"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">, "
     },
     {
       "kind" : "externalParam",
-      "text" : "from"
+      "text" : "type"
     },
     {
       "kind" : "text",
@@ -1121,7 +1295,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "InputType"
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC4TypeO",
+      "text" : "ContinuousScaleType"
     },
     {
       "kind" : "text",
@@ -1129,7 +1304,7 @@
     },
     {
       "kind" : "externalParam",
-      "text" : "to"
+      "text" : "transform"
     },
     {
       "kind" : "text",
@@ -1137,7 +1312,122 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "InputType"
+      "preciseIdentifier" : "s:13SwiftVizScale19DomainDataTransformO",
+      "text" : "DomainDataTransform"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "desiredTicks"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-5y3b5",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/init(_:type:transform:desiredticks:reversed:rangelower:rangehigher:)-5y3b5"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-7c7g6": {
+  "abstract" : [
+    {
+      "text" : "Creates a new power scale for the domain of ",
+      "type" : "text"
+    },
+    {
+      "code" : "0",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " to the value you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "T"
     },
     {
       "kind" : "text",
@@ -1244,12 +1534,609 @@
       "text" : "?)"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(from:to:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-7c7g6",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "init(from:to:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)",
+  "title" : "init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/continuousscale\/init(from:to:type:transform:desiredticks:reversed:rangelower:rangehigher:)"
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/init(_:type:transform:desiredticks:reversed:rangelower:rangehigher:)-7c7g6"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-7n1l8": {
+  "abstract" : [
+    {
+      "text" : "Creates a new power scale for the domain of ",
+      "type" : "text"
+    },
+    {
+      "code" : "0",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " to the value you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "type"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC4TypeO",
+      "text" : "ContinuousScaleType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "transform"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale19DomainDataTransformO",
+      "text" : "DomainDataTransform"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "desiredTicks"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-7n1l8",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/init(_:type:transform:desiredticks:reversed:rangelower:rangehigher:)-7n1l8"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(lower:higher:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-1dq3o": {
+  "abstract" : [
+    {
+      "text" : "Creates a new linear scale for the upper and lower bounds of the domain you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "lower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "higher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "type"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC4TypeO",
+      "text" : "ContinuousScaleType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "transform"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale19DomainDataTransformO",
+      "text" : "DomainDataTransform"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "desiredTicks"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(lower:higher:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-1dq3o",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(lower:higher:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/init(lower:higher:type:transform:desiredticks:reversed:rangelower:rangehigher:)-1dq3o"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(lower:higher:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-6xgot": {
+  "abstract" : [
+    {
+      "text" : "Creates a new linear scale for the upper and lower bounds of the domain you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "lower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "higher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "type"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC4TypeO",
+      "text" : "ContinuousScaleType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "transform"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale19DomainDataTransformO",
+      "text" : "DomainDataTransform"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "desiredTicks"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(lower:higher:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-6xgot",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(lower:higher:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/init(lower:higher:type:transform:desiredticks:reversed:rangelower:rangehigher:)-6xgot"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "type"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC4TypeO",
+      "text" : "ContinuousScaleType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "transform"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale19DomainDataTransformO",
+      "text" : "DomainDataTransform"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "desiredTicks"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reversed"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeLower"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rangeHigher"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/init(type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/continuousscale\/init(type:transform:desiredticks:reversed:rangelower:rangehigher:)"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/invert(_:)": {
   "abstract" : [
@@ -1285,6 +2172,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     },
     {
@@ -1365,6 +2270,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     },
     {
@@ -1462,6 +2385,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     },
     {
@@ -1526,6 +2467,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     },
     {
@@ -1607,6 +2566,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     },
     {
@@ -1670,14 +2647,6 @@
     {
       "kind" : "text",
       "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
     },
     {
       "kind" : "typeIdentifier",
@@ -1762,14 +2731,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
       "text" : "OutputType"
     },
     {
@@ -1850,14 +2811,6 @@
     {
       "kind" : "text",
       "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
     },
     {
       "kind" : "typeIdentifier",
@@ -1956,14 +2909,6 @@
     {
       "kind" : "text",
       "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
     },
     {
       "kind" : "typeIdentifier",
@@ -2124,6 +3069,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     },
     {
@@ -2172,6 +3135,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     },
     {
@@ -2252,6 +3233,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     },
     {
@@ -2357,6 +3356,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     },
     {
@@ -2429,6 +3446,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     },
     {
@@ -2559,14 +3594,6 @@
     {
       "kind" : "text",
       "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
     },
     {
       "kind" : "typeIdentifier",
@@ -2823,6 +3850,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     },
     {
@@ -2964,14 +4009,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
       "text" : "OutputType"
     },
     {
@@ -3012,6 +4049,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     },
     {
@@ -3020,6 +4075,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     },
     {
@@ -3097,6 +4170,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
+      "text" : "ContinuousScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
       "text" : "InputType"
     },
     {
@@ -3170,40 +4261,6 @@
   "title" : "ContinuousScaleType",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/continuousscaletype"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ConvertibleWithDouble": {
-  "abstract" : [
-    {
-      "text" : "A type that can be consistently converted to and from a Double.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "protocol"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "ConvertibleWithDouble"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ConvertibleWithDouble",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "ConvertibleWithDouble"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "ConvertibleWithDouble",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/convertiblewithdouble"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform": {
   "abstract" : [
