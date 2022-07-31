@@ -615,7 +615,12 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - rangeHigher: The higher value for the range into which to position the ticks.
     ///   - formatter: An optional formatter to convert the domain values into strings.
     public func ticks(rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
-        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        let tickValues: [InputType]
+        if scaleType == .log {
+            tickValues = InputType.logRangeOfNiceValues(min: domainLower, max: domainHigher)
+        } else {
+            tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        }
         // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
         return tickValues.compactMap { tickValue -> Tick<OutputType>? in
             // we only want tick values that are within the domain that's been specified on the scale.
@@ -636,7 +641,12 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - rangeHigher: The higher value for the range into which to position the ticks.
     ///   - formatter: An optional formatter to convert the domain values into strings.
     public func ticks(reversed: Bool, rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
-        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        let tickValues: [InputType]
+        if scaleType == .log {
+            tickValues = InputType.logRangeOfNiceValues(min: domainLower, max: domainHigher)
+        } else {
+            tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        }
         // NOTE(heckj): perf: for a larger number of ticks, it may be more efficient to assign the range to a temp scale and then iterate on that...
         return tickValues.compactMap { tickValue in
             if let tickRangeLocation = scale(InputType(tickValue), reversed: reversed, from: rangeLower, to: rangeHigher) {
@@ -649,7 +659,12 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     /// Returns an array of the strings that make up the ticks for the scale.
     /// - Parameter formatter: An optional formatter to convert the domain values into strings.
     public func defaultTickValues(formatter: Formatter? = nil) -> [String] {
-        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        let tickValues: [InputType]
+        if scaleType == .log {
+            tickValues = InputType.logRangeOfNiceValues(min: domainLower, max: domainHigher)
+        } else {
+            tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        }
         return tickValues.map { intValue in
             if let formatter = formatter {
                 return formatter.string(for: intValue) ?? ""

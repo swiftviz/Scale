@@ -179,4 +179,41 @@ public extension BinaryFloatingPoint {
         }
         return result
     }
+
+    static func logRangeOfNiceValues(min: Self, max: Self) -> [Self] {
+        // ex: 2 to 2013 - extent = 2011, mag of extent: 3.3
+        // Safety net - make sure we're not passed '0', which explodes the math in this
+        // algorithm. If they're that crazy, pick the smallest non-zero value and work up
+        // from there.
+        let fixedMin: Double
+        if min == 0 {
+            fixedMin = Double.leastNonzeroMagnitude
+        } else {
+            fixedMin = Double(min)
+        }
+        let testRange = fixedMin ... Double(max)
+        var result: [Self] = []
+        // values:
+        //  - iterate up from the lowest included value using a 1,2,5 pattern
+        //    for each magnitude within the range.
+        //  - stop when > max
+        var magnitude = floor(log10(fixedMin))
+        let cutoff = log10(Double(max))
+        while magnitude < cutoff {
+            // The 1,2,5 pattern presents the most visually even display of ticks
+            // within a log output.
+            // 10  -> 1
+            // 20  -> 1.3
+            // 50  -> 1.69
+            // 100 -> 2
+            let marks = [1, 2, 5].map { $0 * pow(10.0, magnitude) }
+            for m in marks {
+                if testRange.contains(m) {
+                    result.append(Self(m))
+                }
+            }
+            magnitude += 1.0
+        }
+        return result
+    }
 }
