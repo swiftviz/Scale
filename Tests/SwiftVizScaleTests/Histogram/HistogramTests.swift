@@ -91,6 +91,26 @@ final class HistogramTests: XCTestCase {
         XCTAssertEqual(fourthRange.lowerBound, 62)
         XCTAssertEqual(fourthRange.upperBound, 65)
         XCTAssertEqual(fourthCount, 1)
+        
+        XCTAssertEqual(h.lowerBound, 2)
+        XCTAssertEqual(h.upperBound, 65)
+        XCTAssertFalse(h.isEmpty)
+    }
+    
+    func testEmptyDoubleHistogram() throws {
+        let emptyDouble: [Double] = []
+        let h = Histogram(data: emptyDouble)
+        XCTAssertEqual(h.lowerBound, 0)
+        XCTAssertEqual(h.upperBound, 0)
+        XCTAssertTrue(h.isEmpty)
+    }
+    
+    func testEmptyIntHistogram() throws {
+        let emptyDouble: [Int] = []
+        let h = Histogram(data: emptyDouble)
+        XCTAssertEqual(h.lowerBound, 0)
+        XCTAssertEqual(h.upperBound, 0)
+        XCTAssertTrue(h.isEmpty)
     }
 
     func testInferredHistogramInitializerFloat() throws {
