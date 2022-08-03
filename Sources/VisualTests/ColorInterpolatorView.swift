@@ -2,7 +2,8 @@
 //  ColorInterpolatorView.swift
 //
 
-#if swift(>=5.7)
+#if swift(>=5.7) && canImport(SwiftUI)
+
     import SwiftUI
     @testable import SwiftVizScale
 
