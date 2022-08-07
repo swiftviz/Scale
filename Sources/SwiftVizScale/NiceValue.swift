@@ -81,6 +81,11 @@ public extension BinaryInteger {
         }
         return result
     }
+
+    static func logRangeOfNiceValues(min: Self, max: Self) -> [Self] {
+        let fpValues = Double.logRangeOfNiceValues(min: Double(min), max: Double(max))
+        return fpValues.map { Self($0) }
+    }
 }
 
 // MARK: - FloatingPoint
