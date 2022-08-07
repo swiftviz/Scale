@@ -51,8 +51,14 @@ public struct DateScale<OutputType: BinaryFloatingPoint>: ReversibleScale, Custo
     /// - Parameters:
     ///   - lower: The lower bound for the scale's domain.
     ///   - higher: The upper bound for the scale's domain.
-    public init(lower: Date, higher: Date) {
-        self.init(lower: lower, higher: higher, scale: ContinuousScale<OutputType>(lower: lower.timeIntervalSinceReferenceDate, higher: higher.timeIntervalSinceReferenceDate))
+    public init(lower: Date, higher: Date, type scaleType: ContinuousScaleType = .linear,
+                transform: DomainDataTransform = .none,
+                desiredTicks: Int = 10,
+                reversed: Bool = false,
+                rangeLower: OutputType? = nil,
+                rangeHigher: OutputType? = nil)
+    {
+        self.init(lower: lower, higher: higher, scale: ContinuousScale<OutputType>(lower: lower.timeIntervalSinceReferenceDate, higher: higher.timeIntervalSinceReferenceDate, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher))
     }
 
     private init(lower: Date,
