@@ -8,9 +8,9 @@ import Foundation
 public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale, CustomStringConvertible {
     public typealias InputType = Double
     /// The lower bound of the input domain.
-    public let domainLower: InputType
+    public let domainLower: Double
     /// The upper bound of the input domain.
-    public let domainHigher: InputType
+    public let domainHigher: Double
 
     /// The lower bound of the output range.
     public let rangeLower: OutputType?
@@ -34,17 +34,8 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     /// This number may not match the number of ticks returned by
     /// ``SwiftVizScale/ContinuousScale/ticksFromValues(_:reversed:from:to:formatter:)-3u6d8`` or
     ///  ``SwiftVizScale/ContinuousScale/ticksFromValues(_:reversed:from:to:formatter:)-7mb58``.
-
     public let desiredTicks: Int
 
-    //
-    private enum CapturedInputType {
-        case int
-        case float
-        case date
-    }
-    private let capturedInputType: CapturedInputType
-    
     /// Creates a new identity scale.
     /// - Parameters:
     ///   - scaleType: The type of continuous scale.
@@ -60,7 +51,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
                 rangeLower: OutputType? = nil,
                 rangeHigher: OutputType? = nil)
     {
-        self.init(capturedInputType: .float, lower: 0.0, higher: 1.0, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+        self.init(lower: 0.0, higher: 1.0, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
     /// Creates a new scale for the upper and lower bounds of the domain you provide.
@@ -82,7 +73,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
                                   rangeLower: OutputType? = nil,
                                   rangeHigher: OutputType? = nil)
     {
-        self.init(capturedInputType: .int, lower: Double(lower), higher: Double(higher), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+        self.init(lower: Double(lower), higher: Double(higher), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
     /// Creates a new scale for the upper and lower bounds of the domain you provide.
@@ -104,19 +95,18 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
                                         rangeLower: OutputType? = nil,
                                         rangeHigher: OutputType? = nil)
     {
-        self.init(capturedInputType: .float, lower: Double(lower), higher: Double(higher), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+        self.init(lower: Double(lower), higher: Double(higher), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
-    private init(capturedInputType: CapturedInputType,
-                 lower: Double,
+    private init(lower: Double,
                  higher: Double,
                  type scaleType: ContinuousScaleType,
                  transform: DomainDataTransform,
                  desiredTicks: Int,
                  reversed: Bool,
                  rangeLower: OutputType? = nil,
-                 rangeHigher: OutputType? = nil) {
-        self.capturedInputType = capturedInputType
+                 rangeHigher: OutputType? = nil)
+    {
         self.scaleType = scaleType
         if case .log = scaleType {
             if lower == 0 {
@@ -148,7 +138,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
         }
         self.reversed = reversed
     }
-    
+
     // testing function
     internal func fullyConfigured() -> Bool {
         rangeLower != nil && rangeHigher != nil
@@ -171,7 +161,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
                                         rangeLower: OutputType? = nil,
                                         rangeHigher: OutputType? = nil)
     {
-        self.init(capturedInputType: .float, lower: Double(range.lowerBound), higher: Double(range.upperBound), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+        self.init(lower: Double(range.lowerBound), higher: Double(range.upperBound), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
     /// Creates a new scale for the upper and lower bounds of the domain range you provide.
@@ -191,7 +181,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
                                   rangeLower: OutputType? = nil,
                                   rangeHigher: OutputType? = nil)
     {
-        self.init(capturedInputType: .int, lower: Double(range.lowerBound), higher: Double(range.upperBound), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+        self.init(lower: Double(range.lowerBound), higher: Double(range.upperBound), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
     /// Creates a new scale for the domain of `0` to the value you provide.
@@ -215,9 +205,9 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
                                         rangeHigher: OutputType? = nil)
     {
         if single > 0 {
-            self.init(capturedInputType: .float, lower: 0, higher: Double(single), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+            self.init(lower: 0, higher: Double(single), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
         } else {
-            self.init(capturedInputType: .float, lower: Double(single), higher: 0, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+            self.init(lower: Double(single), higher: 0, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
         }
     }
 
@@ -242,9 +232,9 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
                                   rangeHigher: OutputType? = nil)
     {
         if single > 0 {
-            self.init(capturedInputType: .int, lower: 0, higher: Double(single), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+            self.init(lower: 0, higher: Double(single), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
         } else {
-            self.init(capturedInputType: .int, lower: Double(single), higher: 0, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+            self.init(lower: Double(single), higher: 0, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
         }
     }
 
@@ -300,7 +290,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - higher: The upper bound for the scale's domain.
     /// - Returns: A copy of the scale with the domain values you provide.
     public func domain<T: BinaryInteger>(lower: T, higher: T) -> Self {
-        Self(capturedInputType: .int, lower: Double(lower), higher: Double(higher), type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+        Self(lower: Double(lower), higher: Double(higher), type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
     /// Returns a new scale with the domain set to the values you provide.
@@ -309,7 +299,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - higher: The upper bound for the scale's domain.
     /// - Returns: A copy of the scale with the domain values you provide.
     public func domain<T: BinaryFloatingPoint>(lower: T, higher: T) -> Self {
-        Self(capturedInputType: .float, lower: Double(lower), higher: Double(higher), type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+        Self(lower: Double(lower), higher: Double(higher), type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
     /// Returns a new scale with the domain set to the values you provide.
@@ -317,7 +307,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - range: The range to apply as the scale's domain
     /// - Returns: A copy of the scale with the domain values you provide.
     public func domain<T: BinaryFloatingPoint>(_ range: ClosedRange<T>) -> Self {
-        Self(capturedInputType: .float, lower: Double(range.lowerBound), higher: Double(range.upperBound), type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+        Self(lower: Double(range.lowerBound), higher: Double(range.upperBound), type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
     /// Returns a new scale with the domain set to the values you provide.
@@ -325,7 +315,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - range: The range to apply as the scale's domain
     /// - Returns: A copy of the scale with the domain values you provide.
     public func domain<T: BinaryInteger>(_ range: ClosedRange<T>) -> Self {
-        Self(capturedInputType: .int, lower: Double(range.lowerBound), higher: Double(range.upperBound), type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+        Self(lower: Double(range.lowerBound), higher: Double(range.upperBound), type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
     /// Returns a new scale with the domain set to span the values you provide.
@@ -377,7 +367,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - higher: The upper bound for the scale's range.
     /// - Returns: A copy of the scale with the range values you provide.
     public func range(reversed: Bool, lower: OutputType, higher: OutputType) -> Self {
-        Self(capturedInputType: capturedInputType, lower: domainLower, higher: domainHigher, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: lower, rangeHigher: higher)
+        Self(lower: domainLower, higher: domainHigher, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: lower, rangeHigher: higher)
     }
 
     /// Returns a new scale with the range set to the values you provide.
@@ -386,7 +376,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - higher: The upper bound for the scale's range.
     /// - Returns: A copy of the scale with the range values you provide.
     public func range(lower: OutputType, higher: OutputType) -> Self {
-        Self(capturedInputType: capturedInputType, lower: domainLower, higher: domainHigher, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: lower, rangeHigher: higher)
+        Self(lower: domainLower, higher: domainHigher, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: lower, rangeHigher: higher)
     }
 
     /// Returns a new scale with the range set to the values you provide.
@@ -395,7 +385,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - range: The range to apply as the scale's range.
     /// - Returns: A copy of the scale with the range values you provide.
     public func range(reversed: Bool, _ range: ClosedRange<OutputType>) -> Self {
-        Self(capturedInputType: capturedInputType, lower: domainLower, higher: domainHigher, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: range.lowerBound, rangeHigher: range.upperBound)
+        Self(lower: domainLower, higher: domainHigher, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: range.lowerBound, rangeHigher: range.upperBound)
     }
 
     /// Returns a new scale with the range set to the values you provide.
@@ -403,7 +393,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - range: The range to apply as the scale's range.
     /// - Returns: A copy of the scale with the range values you provide.
     public func range(_ range: ClosedRange<OutputType>) -> Self {
-        Self(capturedInputType: capturedInputType, lower: domainLower, higher: domainHigher, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: range.lowerBound, rangeHigher: range.upperBound)
+        Self(lower: domainLower, higher: domainHigher, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: range.lowerBound, rangeHigher: range.upperBound)
     }
 
     /// Returns a new scale with the transform set to the value you provide.
@@ -411,12 +401,13 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     /// - Returns: A copy of the scale with the transform setting you provide.
     public func transform(_ transform: DomainDataTransform) -> Self {
-        Self(capturedInputType: capturedInputType, lower: domainLower, higher: domainHigher, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
+        Self(lower: domainLower, higher: domainHigher, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
+    /// Returns a new scale with the type of scale set to the type you provide.
+    /// - Parameter scaleType: The type of continuous scale.
     public func scaleType(_ scaleType: ContinuousScaleType) -> Self {
-        let x = Self(capturedInputType: capturedInputType, lower: domainLower, higher: domainHigher, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
-        return x
+        Self(lower: domainLower, higher: domainHigher, type: scaleType, transform: transformType, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
     // MARK: - scale functions
@@ -503,8 +494,6 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     /// Transforms a value within the range into an associated domain value.
     /// - Parameters:
     ///   - rangeValue: A value in the range of the scale.
-    ///   - lower: The lower bound to the range to map from.
-    ///   - higher: The upper bound to the range to map from.
     /// - Returns: A value linearly mapped from the range back into the domain.
     public func invert(_ rangeValue: OutputType) -> InputType? {
         guard let rangeLower = rangeLower, let rangeHigher = rangeHigher else {
