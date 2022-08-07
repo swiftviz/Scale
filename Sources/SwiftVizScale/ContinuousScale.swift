@@ -12,9 +12,9 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     /// The upper bound of the input domain.
     public let domainHigher: InputType
 
-    /// The lower bound of the input domain.
+    /// The lower bound of the output range.
     public let rangeLower: OutputType?
-    /// The upper bound of the input domain.
+    /// The upper bound of the output range.
     public let rangeHigher: OutputType?
 
     /// The type of continuous scale.
@@ -36,7 +36,15 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
     ///  ``SwiftVizScale/ContinuousScale/ticksFromValues(_:reversed:from:to:formatter:)-7mb58``.
 
     public let desiredTicks: Int
-
+    
+    /// Creates a new identity scale.
+    /// - Parameters:
+    ///   - scaleType: The type of continuous scale.
+    ///   - transform: A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
+    ///   - desiredTicks: The desired number of ticks when visually representing the scale.
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+    ///   - rangeLower: The lower bound of the output range.
+    ///   - rangeHigher: The upper bound of the output range.
     public init(type scaleType: ContinuousScaleType = .linear,
                 transform: DomainDataTransform = .none,
                 desiredTicks: Int = 10,
@@ -47,12 +55,16 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
         self.init(lower: 0.0, higher: 1.0, type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
-    /// Creates a new linear scale for the upper and lower bounds of the domain you provide.
+    /// Creates a new scale for the upper and lower bounds of the domain you provide.
     /// - Parameters:
     ///   - lower: The lower bound for the scale's domain.
     ///   - higher: The upper bound for the scale's domain.
-    ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
+    ///   - scaleType: The type of continuous scale.
+    ///   - transform: A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+    ///   - rangeLower: The lower bound of the output range.
+    ///   - rangeHigher: The upper bound of the output range.
     public init<T: BinaryInteger>(lower: T = 0,
                                   higher: T = 1,
                                   type scaleType: ContinuousScaleType = .linear,
@@ -65,12 +77,16 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
         self.init(lower: Double(lower), higher: Double(higher), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
-    /// Creates a new linear scale for the upper and lower bounds of the domain you provide.
+    /// Creates a new scale for the upper and lower bounds of the domain you provide.
     /// - Parameters:
     ///   - lower: The lower bound for the scale's domain.
     ///   - higher: The upper bound for the scale's domain.
-    ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
+    ///   - scaleType: The type of continuous scale.
+    ///   - transform: A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+    ///   - rangeLower: The lower bound of the output range.
+    ///   - rangeHigher: The upper bound of the output range.
     public init<T: BinaryFloatingPoint>(lower: T = 0,
                                         higher: T = 1,
                                         type scaleType: ContinuousScaleType = .linear,
@@ -117,11 +133,15 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
         rangeLower != nil && rangeHigher != nil
     }
 
-    /// Creates a new linear scale for the upper and lower bounds of the domain range you provide.
+    /// Creates a new scale for the upper and lower bounds of the domain range you provide.
     /// - Parameters:
     ///   - range: A range that represents the scale's domain.
-    ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
+    ///   - scaleType: The type of continuous scale.
+    ///   - transform: A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+    ///   - rangeLower: The lower bound of the output range.
+    ///   - rangeHigher: The upper bound of the output range.
     public init<T: BinaryFloatingPoint>(_ range: ClosedRange<T>,
                                         type scaleType: ContinuousScaleType = .linear,
                                         transform: DomainDataTransform = .none,
@@ -133,11 +153,15 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
         self.init(lower: Double(range.lowerBound), higher: Double(range.upperBound), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
-    /// Creates a new linear scale for the upper and lower bounds of the domain range you provide.
+    /// Creates a new scale for the upper and lower bounds of the domain range you provide.
     /// - Parameters:
     ///   - range: A range that represents the scale's domain.
-    ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
+    ///   - scaleType: The type of continuous scale.
+    ///   - transform: A transformation value that indicates whether the output vales are constrained to the min and max of the output range.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+    ///   - rangeLower: The lower bound of the output range.
+    ///   - rangeHigher: The upper bound of the output range.
     public init<T: BinaryInteger>(_ range: ClosedRange<T>,
                                   type scaleType: ContinuousScaleType = .linear,
                                   transform: DomainDataTransform = .none,
@@ -149,14 +173,18 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
         self.init(lower: Double(range.lowerBound), higher: Double(range.upperBound), type: scaleType, transform: transform, desiredTicks: desiredTicks, reversed: reversed, rangeLower: rangeLower, rangeHigher: rangeHigher)
     }
 
-    /// Creates a new power scale for the domain of `0` to the value you provide.
+    /// Creates a new scale for the domain of `0` to the value you provide.
     ///
     /// If the value you provide is less than `0`, the domain of the scale ranges from the value you provide to `0`.
     /// If the value you provide is greater than `0`, the domain of the scale ranges from `0` to the value you provide.
     /// - Parameters:
     ///   - single: The upper, or lower, bound for the domain.
+    ///   - scaleType: The type of continuous scale.
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+    ///   - rangeLower: The lower bound of the output range.
+    ///   - rangeHigher: The upper bound of the output range.
     public init<T: BinaryFloatingPoint>(_ single: T,
                                         type scaleType: ContinuousScaleType = .linear,
                                         transform: DomainDataTransform = .none,
@@ -172,14 +200,18 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
         }
     }
 
-    /// Creates a new power scale for the domain of `0` to the value you provide.
+    /// Creates a new scale for the domain of `0` to the value you provide.
     ///
     /// If the value you provide is less than `0`, the domain of the scale ranges from the value you provide to `0`.
     /// If the value you provide is greater than `0`, the domain of the scale ranges from `0` to the value you provide.
     /// - Parameters:
     ///   - single: The upper, or lower, bound for the domain.
+    ///   - scaleType: The type of continuous scale.
     ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
     ///   - desiredTicks: The desired number of ticks when visually representing the scale.
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+    ///   - rangeLower: The lower bound of the output range.
+    ///   - rangeHigher: The upper bound of the output range.
     public init<T: BinaryInteger>(_ single: T,
                                   type scaleType: ContinuousScaleType = .linear,
                                   transform: DomainDataTransform = .none,
