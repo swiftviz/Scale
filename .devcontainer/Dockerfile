@@ -13,3 +13,7 @@ RUN apt-get update && apt-get install -y zsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 RUN curl https://raw.githubusercontent.com/heckj/dotfiles/master/zshrc > ~/.zshrc
 RUN chsh -s $(which zsh)
+RUN cd /tmp
+RUN git clone https://github.com/nicklockwood/SwiftFormat
+RUN cd /tmp/SwiftFormat
+RUN swift build -c release
