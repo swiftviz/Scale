@@ -6,12 +6,14 @@ import Foundation
 
 /// The range of data that a single bin of a histogram represents.
 ///
-/// All bins except the last for a particular chart represent an open range, meaning that the range doesn’t include the upper bound.
-/// The last range of the last bin is closed, so that it does include the upper bound.
-/// The system keeps track of the open or closed state of a particular range.
+/// The bins are expected to be used either independently as an ordered collection, or as the keys for an ordered dictionary.
+/// Within the collection, all bins except the last for a particular chart represent an open range.
+/// As an open range, the bin doesn’t include the threshold of the upper bound within it.
+/// The last bin of the collection is a closed range to include the final upper bound.
 public struct HistogramBinRange<Bound: Hashable & Comparable> {
-    // rough clone ChartBinRange
+    /// The lower bound of the bin range.
     public let lowerBound: Bound
+    /// The upper bound of the bin range.
     public let upperBound: Bound
     internal let _final: Bool
 
@@ -55,6 +57,7 @@ extension HistogramBinRange: RangeExpression {
 }
 
 extension HistogramBinRange: CustomStringConvertible {
+    /// The description of the bin.
     public var description: String {
         if _final {
             return String(describing: lowerBound ... upperBound)
