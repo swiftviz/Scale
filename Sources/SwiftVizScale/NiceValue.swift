@@ -81,7 +81,6 @@ public extension BinaryInteger {
         }
         return result
     }
-
 }
 
 // MARK: - FloatingPoint Numbers
@@ -237,15 +236,15 @@ public enum DateMagnitude {
     case months
     /// Years.
     case years
-    
+
     static let subsecondThreshold: PartialRangeUpTo<Double> = ..<log10(1)
-    static let secondsThreshold: Range<Double> = log10(1)..<log10(60)
-    static let minutesThreshold: Range<Double> = log10(60)..<log10(60*60)
-    static let hoursThreshold: Range<Double> = log10(60*60)..<log10(60*60*24)
-    static let daysThreshold: Range<Double> = log10(60*60*24)..<log10(60*60*24*28)
-    static let monthsThreshold: Range<Double> = log10(60*60*24*28)..<log10(60*60*24*365)
-    static let yearsThreshold: PartialRangeFrom<Double> = log10(60*60*24*365)...
-    
+    static let secondsThreshold: Range<Double> = log10(1) ..< log10(60)
+    static let minutesThreshold: Range<Double> = log10(60) ..< log10(60 * 60)
+    static let hoursThreshold: Range<Double> = log10(60 * 60) ..< log10(60 * 60 * 24)
+    static let daysThreshold: Range<Double> = log10(60 * 60 * 24) ..< log10(60 * 60 * 24 * 28)
+    static let monthsThreshold: Range<Double> = log10(60 * 60 * 24 * 28) ..< log10(60 * 60 * 24 * 365)
+    static let yearsThreshold: PartialRangeFrom<Double> = log10(60 * 60 * 24 * 365)...
+
     public static func magnitudeOfDateRange(_ lhs: Date, _ rhs: Date) -> DateMagnitude {
         let dateExtentMagnitude = log10(abs(lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate))
         switch dateExtentMagnitude {
@@ -268,12 +267,72 @@ public enum DateMagnitude {
 }
 
 public extension Date {
-    static func niceVersion(for theDate: Self, trendDownward: Bool, magnitude: DateMagnitude) -> Self? {
-        
+    /// Returns a Date value rounded down or up to the next nice "date" value based on a localized calendar.
+    /// - Parameters:
+    ///   - theDate: the
+    ///   - magnitude: <#magnitude description#>
+    ///   - downward: <#downward description#>
+    /// - Returns: <#description#>
+    func round(magnitude: DateMagnitude, downward: Bool = true) -> Self? {
+        let cal = Calendar.autoupdatingCurrent
+        var components = cal.dateComponents([.year, .month, .day, .hour, .minute, .second, .nanosecond, .timeZone, .calendar], from: self)
+        assert(components.isValidDate)
+        if downward {
+            switch magnitude {
+            case .subsecond:
+                return components.date
+            case .seconds:
+                print(components)
+                components.setValue(0, for: .nanosecond)
+                print(components)
+                components.setValue(0, for: .second)
+                print(components)
+                assert(components.isValidDate)
+                return components.date
+            case .minutes:
+                components.setValue(0, for: .nanosecond)
+                components.setValue(0, for: .second)
+                components.setValue(0, for: .minute)
+                return components.date
+            case .hours:
+                components.setValue(0, for: .nanosecond)
+                components.setValue(0, for: .second)
+                components.setValue(0, for: .minute)
+                components.setValue(0, for: .hour)
+                return components.date
+            case .days:
+                components.setValue(0, for: .nanosecond)
+                components.setValue(0, for: .second)
+                components.setValue(0, for: .minute)
+                components.setValue(0, for: .hour)
+                components.setValue(0, for: .day)
+                return components.date
+            case .months:
+                components.setValue(0, for: .nanosecond)
+                components.setValue(0, for: .second)
+                components.setValue(0, for: .minute)
+                components.setValue(0, for: .hour)
+                components.setValue(0, for: .day)
+                components.setValue(0, for: .month)
+                return components.date
+            case .years:
+                components.setValue(0, for: .nanosecond)
+                components.setValue(0, for: .second)
+                components.setValue(0, for: .minute)
+                components.setValue(0, for: .hour)
+                components.setValue(0, for: .day)
+                components.setValue(0, for: .month)
+                return components.date
+            }
+        }
+        return nil
+    }
+
+    static func niceVersion(for theDate: Self, trendDownward _: Bool, magnitude: DateMagnitude) -> Self? {
         // calendar that takes into account local preferences and time zones
         let cal = Calendar.autoupdatingCurrent
         var components = cal.dateComponents([.year, .month, .day, .hour, .minute, .second, .nanosecond], from: theDate)
-        
+
         switch magnitude {
         case .subsecond:
             return components.date
@@ -310,7 +369,7 @@ public extension Date {
         case .years:
             return components.date
         }
-        
+
 //        var exponent = floor(log10(positiveNumber))
 //        let fraction = positiveNumber / pow(10, exponent)
 //        let niceFraction: Double
@@ -345,6 +404,5 @@ public extension Date {
 //            return Self(-1.0 * niceFraction * pow(10, exponent))
 //        }
 //        return Self(niceFraction * pow(10, exponent))
-        
     }
 }
