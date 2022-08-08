@@ -223,7 +223,7 @@ public extension BinaryFloatingPoint {
 /// A type that represents the magnitude of the range between two dates.
 public enum DateMagnitude: Equatable {
     /// Less than a second.
-    case subsecond(magnitude: Double)
+    case subsecond
     /// Seconds, up to a minute.
     case seconds
     /// Minutes, up to an hour.
@@ -249,7 +249,7 @@ public enum DateMagnitude: Equatable {
         let dateExtentMagnitude = abs(lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate)
         switch dateExtentMagnitude {
         case subsecondThreshold:
-            return .subsecond(magnitude: floor(dateExtentMagnitude))
+            return .subsecond
         case secondsThreshold:
             return .seconds
         case minutesThreshold:
@@ -284,8 +284,8 @@ public extension Date {
         if downward {
             switch magnitude {
             case .subsecond:
-                //print(components.nanosecond)
-                let asSeconds: Double = Double(components.nanosecond!)
+                // print(components.nanosecond)
+                let asSeconds: Double = .init(components.nanosecond!)
                 // ALT:
                 let x = Double.niceVersion(for: asSeconds, trendTowardsZero: true)
                 print("Original: \(asSeconds) converts to: \(x)")
@@ -336,7 +336,7 @@ public extension Date {
                 components.setValue(0, for: .second)
                 components.setValue(0, for: .minute)
                 components.setValue(0, for: .hour)
-                components.setValue(0, for: .day)
+                components.setValue(1, for: .day)
                 assert(components.isValidDate)
                 return components.date
             case .months:
@@ -344,8 +344,8 @@ public extension Date {
                 components.setValue(0, for: .second)
                 components.setValue(0, for: .minute)
                 components.setValue(0, for: .hour)
-                components.setValue(0, for: .day)
-                components.setValue(0, for: .month)
+                components.setValue(1, for: .day)
+                components.setValue(1, for: .month)
                 assert(components.isValidDate)
                 return components.date
             case .years:
@@ -353,8 +353,8 @@ public extension Date {
                 components.setValue(0, for: .second)
                 components.setValue(0, for: .minute)
                 components.setValue(0, for: .hour)
-                components.setValue(0, for: .day)
-                components.setValue(0, for: .month)
+                components.setValue(1, for: .day)
+                components.setValue(1, for: .month)
                 assert(components.isValidDate)
                 return components.date
             }

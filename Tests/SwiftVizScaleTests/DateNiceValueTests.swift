@@ -23,7 +23,7 @@ final class DateNiceValueTests: XCTestCase {
 
     func testDateMagnitudes() throws {
         let (_, now) = formatterAndNow()
-        XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + 0.1), .subsecond(magnitude: -0.0))
+        XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + 0.1), .subsecond)
         XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + 1), .seconds)
         XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + 6), .seconds)
         XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + 60), .minutes)
@@ -37,7 +37,13 @@ final class DateNiceValueTests: XCTestCase {
         let (formatter, now) = formatterAndNow()
         let result = now.round(magnitude: .seconds)
         XCTAssertEqual(formatter.string(from: result!), "2022-08-07T10:41:00.000Z")
-        
-        XCTAssertEqual(formatter.string(from: now.round(magnitude: .subsecond(magnitude: -1.0))!), "2022-08-07T10:41:06.010Z")
+
+        XCTAssertEqual(formatter.string(from: now.round(magnitude: .subsecond)!), "2022-08-07T10:41:06.010Z")
+        XCTAssertEqual(formatter.string(from: now.round(magnitude: .seconds)!), "2022-08-07T10:41:00.000Z")
+        XCTAssertEqual(formatter.string(from: now.round(magnitude: .minutes)!), "2022-08-07T10:00:00.000Z")
+        XCTAssertEqual(formatter.string(from: now.round(magnitude: .hours)!), "2022-08-07T07:00:00.000Z")
+        XCTAssertEqual(formatter.string(from: now.round(magnitude: .days)!), "2022-08-01T07:00:00.000Z")
+        XCTAssertEqual(formatter.string(from: now.round(magnitude: .months)!), "2022-01-01T08:00:00.000Z")
+        XCTAssertEqual(formatter.string(from: now.round(magnitude: .years(magnitude: 1.0))!), "2022-01-01T08:00:00.000Z")
     }
 }
