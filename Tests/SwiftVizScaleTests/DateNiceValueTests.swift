@@ -23,20 +23,21 @@ final class DateNiceValueTests: XCTestCase {
 
     func testDateMagnitudes() throws {
         let (_, now) = formatterAndNow()
-        XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + 0.1), .subsecond)
+        XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + 0.1), .subsecond(magnitude: -0.0))
         XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + 1), .seconds)
         XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + 6), .seconds)
         XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + 60), .minutes)
         XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + secHour), .hours)
         XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + secDay), .days)
         XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + secMonth), .months)
-        XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + secYear), .years)
+        XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + secYear), .years(magnitude: 0))
     }
 
-    func testCalindricalDateRounding() throws {
+    func testCalendricalDateRounding() throws {
         let (formatter, now) = formatterAndNow()
         let result = now.round(magnitude: .seconds)
-        XCTAssertNotNil(result)
         XCTAssertEqual(formatter.string(from: result!), "2022-08-07T10:41:00.000Z")
+        
+        XCTAssertEqual(formatter.string(from: now.round(magnitude: .subsecond(magnitude: -1.0))!), "2022-08-07T10:41:06.010Z")
     }
 }

@@ -221,9 +221,9 @@ public extension BinaryFloatingPoint {
 // MARK: - Dates
 
 /// A type that represents the magnitude of the range between two dates.
-public enum DateMagnitude {
+public enum DateMagnitude: Equatable {
     /// Less than a second.
-    case subsecond
+    case subsecond(magnitude: Double)
     /// Seconds, up to a minute.
     case seconds
     /// Minutes, up to an hour.
@@ -235,21 +235,21 @@ public enum DateMagnitude {
     /// Months, up to a year.
     case months
     /// Years.
-    case years
+    case years(magnitude: Double)
 
-    static let subsecondThreshold: PartialRangeUpTo<Double> = ..<log10(1)
-    static let secondsThreshold: Range<Double> = log10(1) ..< log10(60)
-    static let minutesThreshold: Range<Double> = log10(60) ..< log10(60 * 60)
-    static let hoursThreshold: Range<Double> = log10(60 * 60) ..< log10(60 * 60 * 24)
-    static let daysThreshold: Range<Double> = log10(60 * 60 * 24) ..< log10(60 * 60 * 24 * 28)
-    static let monthsThreshold: Range<Double> = log10(60 * 60 * 24 * 28) ..< log10(60 * 60 * 24 * 365)
-    static let yearsThreshold: PartialRangeFrom<Double> = log10(60 * 60 * 24 * 365)...
+    static let subsecondThreshold: PartialRangeUpTo<Double> = ..<1
+    static let secondsThreshold: Range<Double> = 1 ..< 60
+    static let minutesThreshold: Range<Double> = 60 ..< 60 * 60
+    static let hoursThreshold: Range<Double> = 60 * 60 ..< 60 * 60 * 24
+    static let daysThreshold: Range<Double> = 60 * 60 * 24 ..< 60 * 60 * 24 * 28
+    static let monthsThreshold: Range<Double> = 60 * 60 * 24 * 28 ..< 60 * 60 * 24 * 365
+    static let yearsThreshold: PartialRangeFrom<Double> = (60 * 60 * 24 * 365)...
 
     public static func magnitudeOfDateRange(_ lhs: Date, _ rhs: Date) -> DateMagnitude {
-        let dateExtentMagnitude = log10(abs(lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate))
+        let dateExtentMagnitude = abs(lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate)
         switch dateExtentMagnitude {
         case subsecondThreshold:
-            return .subsecond
+            return .subsecond(magnitude: floor(dateExtentMagnitude))
         case secondsThreshold:
             return .seconds
         case minutesThreshold:
@@ -261,7 +261,11 @@ public enum DateMagnitude {
         case monthsThreshold:
             return .months
         default:
-            return .years
+            let yearsValue = abs(lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate) / yearsThreshold.lowerBound
+            let yearsMagnitude = floor(log10(yearsValue))
+            print("\(lhs) to \(rhs) is \(yearsValue) years")
+            print("log10 of that is \(log10(yearsValue))")
+            return .years(magnitude: yearsMagnitude)
         }
     }
 }
@@ -280,25 +284,52 @@ public extension Date {
         if downward {
             switch magnitude {
             case .subsecond:
+                //print(components.nanosecond)
+                let asSeconds: Double = Double(components.nanosecond!)
+                // ALT:
+                let x = Double.niceVersion(for: asSeconds, trendTowardsZero: true)
+                print("Original: \(asSeconds) converts to: \(x)")
+                components.nanosecond = Int(Double.niceVersion(for: asSeconds, trendTowardsZero: true))
+                assert(components.isValidDate)
                 return components.date
+
+//                // 10999917 => 11ms (x.011)
+//                var exponent = floor(log10(asSeconds))
+//                let fraction = asSeconds / pow(10, exponent)
+//                let niceFraction: Double
+//
+//                // Same algorithm to round down to 1, 2, or 5 based on order of magnitude
+//                if fraction < 1 {
+//                    niceFraction = 10
+//                    exponent = max(0, exponent - 1.0)
+//                } else if fraction < 2 {
+//                    niceFraction = 1
+//                } else if fraction < 5 {
+//                    niceFraction = 2
+//                } else {
+//                    niceFraction = 5
+//                }
+//                let niceNanoseconds = niceFraction * pow(10, exponent)
+//                components.nanosecond = Int(niceNanoseconds)
+//                assert(components.isValidDate)
+//                return components.date
             case .seconds:
-                print(components)
                 components.setValue(0, for: .nanosecond)
-                print(components)
                 components.setValue(0, for: .second)
-                print(components)
                 assert(components.isValidDate)
                 return components.date
             case .minutes:
                 components.setValue(0, for: .nanosecond)
                 components.setValue(0, for: .second)
                 components.setValue(0, for: .minute)
+                assert(components.isValidDate)
                 return components.date
             case .hours:
                 components.setValue(0, for: .nanosecond)
                 components.setValue(0, for: .second)
                 components.setValue(0, for: .minute)
                 components.setValue(0, for: .hour)
+                assert(components.isValidDate)
                 return components.date
             case .days:
                 components.setValue(0, for: .nanosecond)
@@ -306,6 +337,7 @@ public extension Date {
                 components.setValue(0, for: .minute)
                 components.setValue(0, for: .hour)
                 components.setValue(0, for: .day)
+                assert(components.isValidDate)
                 return components.date
             case .months:
                 components.setValue(0, for: .nanosecond)
@@ -314,6 +346,7 @@ public extension Date {
                 components.setValue(0, for: .hour)
                 components.setValue(0, for: .day)
                 components.setValue(0, for: .month)
+                assert(components.isValidDate)
                 return components.date
             case .years:
                 components.setValue(0, for: .nanosecond)
@@ -322,6 +355,7 @@ public extension Date {
                 components.setValue(0, for: .hour)
                 components.setValue(0, for: .day)
                 components.setValue(0, for: .month)
+                assert(components.isValidDate)
                 return components.date
             }
         }
