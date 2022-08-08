@@ -6,6 +6,8 @@
 /Packages
 /*.xcodeproj
 .swiftpm
+.build
+.scale-graphs
 Sources/SwiftVizScale/Documentation.docc/.docc-build/
 
 # docbuild helper sets - generated from docbuild script

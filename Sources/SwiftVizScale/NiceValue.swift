@@ -1,5 +1,5 @@
 //
-//  NiceNumber.swift
+//  NiceValue.swift
 //
 
 import Foundation
@@ -82,13 +82,9 @@ public extension BinaryInteger {
         return result
     }
 
-//    static func logRangeOfNiceValues(min: Self, max: Self) -> [Self] {
-//        let fpValues = Double.logRangeOfNiceValues(min: Double(min), max: Double(max))
-//        return fpValues.map { Self($0) }
-//    }
 }
 
-// MARK: - FloatingPoint
+// MARK: - FloatingPoint Numbers
 
 public extension BinaryFloatingPoint {
     static func niceVersion(for number: Self, trendTowardsZero: Bool) -> Self {
@@ -220,5 +216,135 @@ public extension BinaryFloatingPoint {
             magnitude += 1.0
         }
         return result
+    }
+}
+
+// MARK: - Dates
+
+/// A type that represents the magnitude of the range between two dates.
+public enum DateMagnitude {
+    /// Less than a second.
+    case subsecond
+    /// Seconds, up to a minute.
+    case seconds
+    /// Minutes, up to an hour.
+    case minutes
+    /// Hours, up to a day.
+    case hours
+    /// Days, up to a month.
+    case days
+    /// Months, up to a year.
+    case months
+    /// Years.
+    case years
+    
+    static let subsecondThreshold: PartialRangeUpTo<Double> = ..<log10(1)
+    static let secondsThreshold: Range<Double> = log10(1)..<log10(60)
+    static let minutesThreshold: Range<Double> = log10(60)..<log10(60*60)
+    static let hoursThreshold: Range<Double> = log10(60*60)..<log10(60*60*24)
+    static let daysThreshold: Range<Double> = log10(60*60*24)..<log10(60*60*24*28)
+    static let monthsThreshold: Range<Double> = log10(60*60*24*28)..<log10(60*60*24*365)
+    static let yearsThreshold: PartialRangeFrom<Double> = log10(60*60*24*365)...
+    
+    public static func magnitudeOfDateRange(_ lhs: Date, _ rhs: Date) -> DateMagnitude {
+        let dateExtentMagnitude = log10(abs(lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate))
+        switch dateExtentMagnitude {
+        case subsecondThreshold:
+            return .subsecond
+        case secondsThreshold:
+            return .seconds
+        case minutesThreshold:
+            return .minutes
+        case hoursThreshold:
+            return .hours
+        case daysThreshold:
+            return .days
+        case monthsThreshold:
+            return .months
+        default:
+            return .years
+        }
+    }
+}
+
+public extension Date {
+    static func niceVersion(for theDate: Self, trendDownward: Bool, magnitude: DateMagnitude) -> Self? {
+        
+        // calendar that takes into account local preferences and time zones
+        let cal = Calendar.autoupdatingCurrent
+        var components = cal.dateComponents([.year, .month, .day, .hour, .minute, .second, .nanosecond], from: theDate)
+        
+        switch magnitude {
+        case .subsecond:
+            return components.date
+        case .seconds:
+            components.setValue(0, for: .nanosecond)
+            components.setValue(0, for: .second)
+            return components.date
+        case .minutes:
+            components.setValue(0, for: .nanosecond)
+            components.setValue(0, for: .second)
+            components.setValue(0, for: .minute)
+            return components.date
+        case .hours:
+            components.setValue(0, for: .nanosecond)
+            components.setValue(0, for: .second)
+            components.setValue(0, for: .minute)
+            components.setValue(0, for: .hour)
+            return components.date
+        case .days:
+            components.setValue(0, for: .nanosecond)
+            components.setValue(0, for: .second)
+            components.setValue(0, for: .minute)
+            components.setValue(0, for: .hour)
+            components.setValue(0, for: .day)
+            return components.date
+        case .months:
+            components.setValue(0, for: .nanosecond)
+            components.setValue(0, for: .second)
+            components.setValue(0, for: .minute)
+            components.setValue(0, for: .hour)
+            components.setValue(0, for: .day)
+            components.setValue(0, for: .month)
+            return components.date
+        case .years:
+            return components.date
+        }
+        
+//        var exponent = floor(log10(positiveNumber))
+//        let fraction = positiveNumber / pow(10, exponent)
+//        let niceFraction: Double
+//
+//        if trendTowardsZero {
+//            // we're trying to round to the nearest 'nice' number - interval of 1, 2, 5, or 10
+//            // that's CLOSER TO ZERO than the provided number.
+//            if fraction < 1 {
+//                niceFraction = 10
+//                exponent = max(0, exponent - 1.0)
+//            } else if fraction < 2 {
+//                niceFraction = 1
+//            } else if fraction < 5 {
+//                niceFraction = 2
+//            } else {
+//                niceFraction = 5
+//            }
+//        } else {
+//            // we're trying to round to the nearest 'nice' number - interval of 1, 2, 5, or 10
+//            // that's FARTHER FROM ZERO than the provided number.
+//            if fraction <= 1 {
+//                niceFraction = 1
+//            } else if fraction <= 2 {
+//                niceFraction = 2
+//            } else if fraction <= 5 {
+//                niceFraction = 5
+//            } else {
+//                niceFraction = 10
+//            }
+//        }
+//        if negativeInput {
+//            return Self(-1.0 * niceFraction * pow(10, exponent))
+//        }
+//        return Self(niceFraction * pow(10, exponent))
+        
     }
 }
