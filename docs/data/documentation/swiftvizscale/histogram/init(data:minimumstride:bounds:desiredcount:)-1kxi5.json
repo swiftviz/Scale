@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Automatically determine the bins from data.",
+      "text" : "Automatically determine the bins from data, constrained by a minimum bin size",
       "type" : "text"
     }
   ],
@@ -15,11 +15,11 @@
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:)-4w0u8"
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:minimumStride:bounds:desiredCount:)-1kxi5"
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:13SwiftVizScale9HistogramV4dataACyxGSayxG_tcSBRzrlufc",
+    "externalID" : "s:13SwiftVizScale9HistogramV4data13minimumStride6bounds12desiredCountACyxGSayxG_xSNyxGSgSiSgtcSzRzrlufc",
     "fragments" : [
       {
         "kind" : "identifier",
@@ -43,7 +43,65 @@
       },
       {
         "kind" : "text",
-        "text" : "])"
+        "text" : "], "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "minimumStride"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Value"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "bounds"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Value"
+      },
+      {
+        "kind" : "text",
+        "text" : ">?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "desiredCount"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : "?)"
       }
     ],
     "modules" : [
@@ -54,7 +112,7 @@
     "role" : "symbol",
     "roleHeading" : "Initializer",
     "symbolKind" : "init",
-    "title" : "init(data:)"
+    "title" : "init(data:minimumStride:bounds:desiredCount:)"
   },
   "primaryContentSections" : [
     {
@@ -89,7 +147,65 @@
             },
             {
               "kind" : "text",
-              "text" : "]) "
+              "text" : "], "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "minimumStride"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Value"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "bounds"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SN",
+              "text" : "ClosedRange"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Value"
+            },
+            {
+              "kind" : "text",
+              "text" : ">? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "desiredCount"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Si",
+              "text" : "Int"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil) "
             },
             {
               "kind" : "keyword",
@@ -109,8 +225,8 @@
             },
             {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:SB",
-              "text" : "BinaryFloatingPoint"
+              "preciseIdentifier" : "s:Sz",
+              "text" : "BinaryInteger"
             }
           ]
         }
@@ -133,6 +249,56 @@
             }
           ],
           "name" : "data"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The minimum bin size to group the counts.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "minimumStride"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The minimum and maximum value that the histogram supports.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "bounds"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "An optional value of the number of bins to create. If ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "nil",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ", the number of bins is determined by the minimum stride you provide.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "desiredCount"
         }
       ]
     }
@@ -149,8 +315,8 @@
     {
       "generated" : true,
       "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:)-4w0u8",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:)-6k9pg",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:minimumStride:bounds:desiredCount:)-1kxi5",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:minimumStride:bounds:desiredCount:)-2c242",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:thresholds:)"
       ],
@@ -160,7 +326,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/swiftvizscale\/histogram\/init(data:)-4w0u8"
+        "\/documentation\/swiftvizscale\/histogram\/init(data:minimumstride:bounds:desiredcount:)-1kxi5"
       ],
       "traits" : [
         {

@@ -1,15 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Inherited from ",
-      "type" : "text"
-    },
-    {
-      "code" : "Sequence.lazy",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ".",
+      "text" : "A Boolean value that indicates of the histogram is empty.",
       "type" : "text"
     }
   ],
@@ -17,19 +9,17 @@
     "paths" : [
       [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/Sequence-Implementations"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/lazy"
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/isEmpty"
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "Swift",
-    "externalID" : "s:STsE4lazys12LazySequenceVyxGvp::SYNTHESIZED::s:13SwiftVizScale9HistogramV",
+    "externalID" : "s:13SwiftVizScale9HistogramV7isEmptySbvp",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -41,7 +31,7 @@
       },
       {
         "kind" : "identifier",
-        "text" : "lazy"
+        "text" : "isEmpty"
       },
       {
         "kind" : "text",
@@ -49,20 +39,8 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:s12LazySequenceV",
-        "text" : "LazySequence"
-      },
-      {
-        "kind" : "text",
-        "text" : "<"
-      },
-      {
-        "kind" : "typeIdentifier",
-        "text" : "Self"
-      },
-      {
-        "kind" : "text",
-        "text" : ">"
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
       }
     ],
     "modules" : [
@@ -73,7 +51,7 @@
     "role" : "symbol",
     "roleHeading" : "Instance Property",
     "symbolKind" : "property",
-    "title" : "lazy"
+    "title" : "isEmpty"
   },
   "primaryContentSections" : [
     {
@@ -96,7 +74,7 @@
             },
             {
               "kind" : "identifier",
-              "text" : "lazy"
+              "text" : "isEmpty"
             },
             {
               "kind" : "text",
@@ -104,28 +82,8 @@
             },
             {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:s12LazySequenceV",
-              "text" : "LazySequence"
-            },
-            {
-              "kind" : "text",
-              "text" : "<"
-            },
-            {
-              "kind" : "typeIdentifier",
-              "text" : "Self"
-            },
-            {
-              "kind" : "text",
-              "text" : "> { "
-            },
-            {
-              "kind" : "keyword",
-              "text" : "get"
-            },
-            {
-              "kind" : "text",
-              "text" : " }"
+              "preciseIdentifier" : "s:Sb",
+              "text" : "Bool"
             }
           ]
         }
@@ -144,7 +102,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/swiftvizscale\/histogram\/lazy"
+        "\/documentation\/swiftvizscale\/histogram\/isempty"
       ],
       "traits" : [
         {
@@ -203,20 +161,12 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/histogram"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Histogram/Sequence-Implementations": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Histogram/isEmpty": {
   "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/Sequence-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "Sequence Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/histogram\/sequence-implementations"
-},
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Histogram/lazy": {
-  "abstract" : [
-
+    {
+      "text" : "A Boolean value that indicates of the histogram is empty.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -229,7 +179,7 @@
     },
     {
       "kind" : "identifier",
-      "text" : "lazy"
+      "text" : "isEmpty"
     },
     {
       "kind" : "text",
@@ -237,28 +187,16 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:s12LazySequenceV",
-      "text" : "LazySequence"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Self"
-    },
-    {
-      "kind" : "text",
-      "text" : ">"
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/lazy",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/isEmpty",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "lazy",
+  "title" : "isEmpty",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/histogram\/lazy"
+  "url" : "\/documentation\/swiftvizscale\/histogram\/isempty"
 }
 }
 }

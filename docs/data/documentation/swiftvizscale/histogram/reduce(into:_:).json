@@ -305,7 +305,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Histogram": {
   "abstract" : [
-
+    {
+      "text" : "A histogram representing a distribution of numeric data.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

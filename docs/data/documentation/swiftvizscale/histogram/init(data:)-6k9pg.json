@@ -125,7 +125,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "<#data description#>",
+                  "text" : "The data to populate the histogram.",
                   "type" : "text"
                 }
               ],
@@ -150,8 +150,8 @@
       "generated" : true,
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:)-4w0u8",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:minimumStride:desiredCount:)-77r56",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:minimumStride:desiredCount:)-9jf6n",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:minimumStride:bounds:desiredCount:)-1kxi5",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:minimumStride:bounds:desiredCount:)-2c242",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:thresholds:)"
       ],
       "title" : "Creating a Histogram"
@@ -187,7 +187,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Histogram": {
   "abstract" : [
-
+    {
+      "text" : "A histogram representing a distribution of numeric data.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -296,7 +299,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/histogram\/init(data:)-6k9pg"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Histogram/init(data:minimumStride:desiredCount:)-77r56": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Histogram/init(data:minimumStride:bounds:desiredCount:)-1kxi5": {
   "abstract" : [
     {
       "text" : "Automatically determine the bins from data, constrained by a minimum bin size",
@@ -346,6 +349,31 @@
     },
     {
       "kind" : "externalParam",
+      "text" : "bounds"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SN",
+      "text" : "ClosedRange"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">?, "
+    },
+    {
+      "kind" : "externalParam",
       "text" : "desiredCount"
     },
     {
@@ -362,14 +390,14 @@
       "text" : "?)"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:minimumStride:desiredCount:)-77r56",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:minimumStride:bounds:desiredCount:)-1kxi5",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "init(data:minimumStride:desiredCount:)",
+  "title" : "init(data:minimumStride:bounds:desiredCount:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/histogram\/init(data:minimumstride:desiredcount:)-77r56"
+  "url" : "\/documentation\/swiftvizscale\/histogram\/init(data:minimumstride:bounds:desiredcount:)-1kxi5"
 },
-"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Histogram/init(data:minimumStride:desiredCount:)-9jf6n": {
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Histogram/init(data:minimumStride:bounds:desiredCount:)-2c242": {
   "abstract" : [
     {
       "text" : "Automatically determine the bins from data, constrained by a minimum bin size",
@@ -419,6 +447,31 @@
     },
     {
       "kind" : "externalParam",
+      "text" : "bounds"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SN",
+      "text" : "ClosedRange"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">?, "
+    },
+    {
+      "kind" : "externalParam",
       "text" : "desiredCount"
     },
     {
@@ -435,17 +488,17 @@
       "text" : "?)"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:minimumStride:desiredCount:)-9jf6n",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/Histogram\/init(data:minimumStride:bounds:desiredCount:)-2c242",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "init(data:minimumStride:desiredCount:)",
+  "title" : "init(data:minimumStride:bounds:desiredCount:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftvizscale\/histogram\/init(data:minimumstride:desiredcount:)-9jf6n"
+  "url" : "\/documentation\/swiftvizscale\/histogram\/init(data:minimumstride:bounds:desiredcount:)-2c242"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/Histogram/init(data:thresholds:)": {
   "abstract" : [
     {
-      "text" : "Explicitly build a histogram with N-1 threshold bins, with the explicit thresholds you provide.",
+      "text" : "Explicitly build a histogram with the explicit thresholds you provide.",
       "type" : "text"
     }
   ],

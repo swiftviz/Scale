@@ -1515,13 +1515,13 @@
                 "type" : "init"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/init(data:minimumstride:desiredcount:)-77r56",
-                "title" : "init(data: [Value], minimumStride: Value, desiredCount: Int?)",
+                "path" : "\/documentation\/swiftvizscale\/histogram\/init(data:minimumstride:bounds:desiredcount:)-1kxi5",
+                "title" : "init(data: [Value], minimumStride: Value, bounds: ClosedRange<Value>?, desiredCount: Int?)",
                 "type" : "init"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/init(data:minimumstride:desiredcount:)-9jf6n",
-                "title" : "init(data: [Value], minimumStride: Value, desiredCount: Int?)",
+                "path" : "\/documentation\/swiftvizscale\/histogram\/init(data:minimumstride:bounds:desiredcount:)-2c242",
+                "title" : "init(data: [Value], minimumStride: Value, bounds: ClosedRange<Value>?, desiredCount: Int?)",
                 "type" : "init"
               },
               {
@@ -1557,6 +1557,25 @@
                 "path" : "\/documentation\/swiftvizscale\/histogram\/histogramiterator",
                 "title" : "Histogram.HistogramIterator",
                 "type" : "struct"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/histogram\/isempty",
+                "title" : "var isEmpty: Bool",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/histogram\/lowerbound",
+                "title" : "var lowerBound: Value",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/histogram\/upperbound",
+                "title" : "var upperBound: Value",
+                "type" : "property"
               },
               {
                 "title" : "Default Implementations",
