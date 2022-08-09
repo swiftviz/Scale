@@ -11,7 +11,7 @@ class NiceValueTests: XCTestCase {
     func assertCalculatedNiceValue(input: Double, expectedLowerValue: Double, expectedHigherValue: Double, file: StaticString = #file, line: UInt = #line) {
         let lowConvertedValue = Double.niceVersion(for: input, trendTowardsZero: true)
         let highConvertedValue = Double.niceVersion(for: input, trendTowardsZero: false)
-        print(lowConvertedValue, highConvertedValue)
+        // print(lowConvertedValue, highConvertedValue)
         XCTAssertEqual(expectedLowerValue, lowConvertedValue, file: file, line: line)
         XCTAssertEqual(expectedHigherValue, highConvertedValue, file: file, line: line)
     }
