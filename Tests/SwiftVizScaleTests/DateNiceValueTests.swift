@@ -9,7 +9,6 @@ import XCTest
 final class DateNiceValueTests: XCTestCase {
     func formatterAndNow() -> (ISO8601DateFormatter, Date) {
         let f = ISO8601DateFormatter()
-
         f.formatOptions.insert(ISO8601DateFormatter.Options.withFractionalSeconds)
         // let now = f.date(from: "2022-08-07T10:41:06.0110Z")!
         // turns out creating a date from ISO8601DateFormatter implicitly uses the local time zone...
@@ -26,7 +25,11 @@ final class DateNiceValueTests: XCTestCase {
     let secMonth: Double = 60 * 60 * 24 * 28
     let secYear: Double = 60 * 60 * 24 * 365
 
-    let testCal = Calendar(identifier: .iso8601)
+    var testCal: Calendar {
+        var testCal = Calendar(identifier: .iso8601)
+        testCal.timeZone = TimeZone(identifier: "UTC")!
+        return testCal
+    }
 
     func testDateMagnitudes() throws {
         let (_, now) = formatterAndNow()
@@ -41,6 +44,7 @@ final class DateNiceValueTests: XCTestCase {
     }
 
     func testCalendricalDateRounding() throws {
+        print(testCal.timeZone)
         let (formatter, now) = formatterAndNow()
         XCTAssertEqual(formatter.string(from: now), "2022-08-08T22:43:09.011Z")
         XCTAssertEqual(now.timeIntervalSinceReferenceDate, 681_691_389.011)
