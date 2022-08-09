@@ -475,6 +475,10 @@ public extension Date {
     }
 
     static func rangeOfNiceValues(min: Self, max: Self, ofSize size: Int, using calendar: Calendar) -> [Self] {
+        // NOTE(heckj): This doesn't have an option, currently, to allow the minimum value to stay _exactly_ where
+        // it is, and only modify the upper bound of the tick values to exceed the max. It sort of feels like
+        // that may be a desirable result, so might need to circle back and either add an option for that
+        // or add a parameter to this method to allow the choice.
         let (niceMin, niceStep, niceMax) = niceMinStepMax(min: min, max: max, ofSize: size, calendar: calendar)
         var result: [Self] = []
         // incrementing the comparison point by a half step
