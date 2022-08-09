@@ -188,4 +188,74 @@ final class DateNiceValueTests: XCTestCase {
         // print(formatter.string(from: dateMax))
         XCTAssertTrue(niceMax >= dateMax)
     }
+
+    func testDateTicks_minutes_31() throws {
+        // NOTE(heckj): the minutes span seems like visually it should align to the local 5 minute
+        // markers from the local calendar IF the step is 5 minutes.
+        // Minute steps can be 1, 2, 5, and 10 minutes. Not sure the 1 and 2 minute steps matter,
+        // but the 5 and 10 minute steps just reads "off" to me with this example.
+        let (formatter, now) = formatterAndNow()
+
+        let dateMin = now
+        let dateMax = now + 31.2 * secMin
+        let resultDates = Date.rangeOfNiceValues(min: dateMin, max: dateMax, ofSize: 10, using: testCal)
+        XCTAssertEqual(resultDates.count, 8)
+
+        // 31.x minutes results in 8 ticks, each 5 minutes apart,
+        XCTAssertEqual(resultDates.map { formatter.string(from: $0) }, [
+            "2022-08-07T10:41:00.000Z",
+            "2022-08-07T10:46:00.000Z",
+            "2022-08-07T10:51:00.000Z",
+            "2022-08-07T10:56:00.000Z",
+            "2022-08-07T11:01:00.000Z",
+            "2022-08-07T11:06:00.000Z",
+            "2022-08-07T11:11:00.000Z",
+            "2022-08-07T11:16:00.000Z",
+        ])
+        XCTAssertTrue(resultDates.first! <= dateMin)
+        XCTAssertTrue(resultDates.last! >= dateMax)
+    }
+
+    func testDateTicks_hours_11() throws {
+        let (formatter, now) = formatterAndNow()
+
+        let dateMin = now
+        let dateMax = now + 11.1 * secHour
+        let resultDates = Date.rangeOfNiceValues(min: dateMin, max: dateMax, ofSize: 10, using: testCal)
+        XCTAssertEqual(resultDates.count, 8)
+
+        // 31.x minutes results in 8 ticks, each 2 hours apart,
+        XCTAssertEqual(resultDates.map { formatter.string(from: $0) }, [
+            "2022-08-07T10:00:00.000Z",
+            "2022-08-07T12:00:00.000Z",
+            "2022-08-07T14:00:00.000Z",
+            "2022-08-07T16:00:00.000Z",
+            "2022-08-07T18:00:00.000Z",
+            "2022-08-07T20:00:00.000Z",
+            "2022-08-07T22:00:00.000Z",
+            "2022-08-08T00:00:00.000Z",
+        ])
+        XCTAssertTrue(resultDates.first! <= dateMin)
+        XCTAssertTrue(resultDates.last! >= dateMax)
+    }
+
+    func testDateTicks_days_23() throws {
+        let (formatter, now) = formatterAndNow()
+
+        let dateMin = now
+        let dateMax = now + 23.1 * secDay
+        let resultDates = Date.rangeOfNiceValues(min: dateMin, max: dateMax, ofSize: 10, using: testCal)
+        XCTAssertEqual(resultDates.count, 5)
+
+        // 23.1 days results in 5 ticks, each 7 days apart,
+        XCTAssertEqual(resultDates.map { formatter.string(from: $0) }, [
+            "2022-08-07T07:00:00.000Z",
+            "2022-08-14T07:00:00.000Z",
+            "2022-08-21T07:00:00.000Z",
+            "2022-08-28T07:00:00.000Z",
+            "2022-09-04T07:00:00.000Z",
+        ])
+        XCTAssertTrue(resultDates.first! <= dateMin)
+        XCTAssertTrue(resultDates.last! >= dateMax)
+    }
 }
