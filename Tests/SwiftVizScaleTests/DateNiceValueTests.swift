@@ -9,7 +9,7 @@ import XCTest
 final class DateNiceValueTests: XCTestCase {
     func formatterAndNow() -> (ISO8601DateFormatter, Date) {
         let f = ISO8601DateFormatter()
-        
+
         f.formatOptions.insert(ISO8601DateFormatter.Options.withFractionalSeconds)
         // let now = f.date(from: "2022-08-07T10:41:06.0110Z")!
         // turns out creating a date from ISO8601DateFormatter implicitly uses the local time zone...
@@ -43,8 +43,8 @@ final class DateNiceValueTests: XCTestCase {
     func testCalendricalDateRounding() throws {
         let (formatter, now) = formatterAndNow()
         XCTAssertEqual(formatter.string(from: now), "2022-08-08T22:43:09.011Z")
-        XCTAssertEqual(now.timeIntervalSinceReferenceDate, 681691389.011)
-        
+        XCTAssertEqual(now.timeIntervalSinceReferenceDate, 681_691_389.011)
+
         let result = now.round(magnitude: .seconds, calendar: testCal)
         XCTAssertEqual(formatter.string(from: result!), "2022-08-08T22:43:09.000Z")
 
@@ -70,17 +70,17 @@ final class DateNiceValueTests: XCTestCase {
 
         XCTAssertEqual(
             formatter.string(from: now.round(magnitude: .days, calendar: testCal)!),
-            "2022-08-08T07:00:00.000Z"
+            "2022-08-08T00:00:00.000Z"
         )
 
         XCTAssertEqual(
             formatter.string(from: now.round(magnitude: .months, calendar: testCal)!),
-            "2022-08-01T07:00:00.000Z"
+            "2022-08-01T00:00:00.000Z"
         )
 
         XCTAssertEqual(
             formatter.string(from: now.round(magnitude: .years(magnitude: 1.0, fraction: 1.0), calendar: testCal)!),
-            "2022-01-01T08:00:00.000Z"
+            "2022-01-01T00:00:00.000Z"
         )
     }
 
@@ -218,7 +218,8 @@ final class DateNiceValueTests: XCTestCase {
             "2022-08-08T23:03:00.000Z",
             "2022-08-08T23:08:00.000Z",
             "2022-08-08T23:13:00.000Z",
-            "2022-08-08T23:18:00.000Z"])
+            "2022-08-08T23:18:00.000Z",
+        ])
         XCTAssertTrue(resultDates.first! <= dateMin)
         XCTAssertTrue(resultDates.last! >= dateMax)
     }
@@ -240,7 +241,7 @@ final class DateNiceValueTests: XCTestCase {
             "2022-08-09T06:00:00.000Z",
             "2022-08-09T08:00:00.000Z",
             "2022-08-09T10:00:00.000Z",
-            "2022-08-09T12:00:00.000Z"
+            "2022-08-09T12:00:00.000Z",
         ])
         XCTAssertTrue(resultDates.first! <= dateMin)
         XCTAssertTrue(resultDates.last! >= dateMax)
@@ -256,11 +257,11 @@ final class DateNiceValueTests: XCTestCase {
 
         // 23.1 days results in 5 ticks, each 7 days apart,
         XCTAssertEqual(resultDates.map { formatter.string(from: $0) }, [
-            "2022-08-08T07:00:00.000Z",
-            "2022-08-15T07:00:00.000Z",
-            "2022-08-22T07:00:00.000Z",
-            "2022-08-29T07:00:00.000Z",
-            "2022-09-05T07:00:00.000Z",
+            "2022-08-08T00:00:00.000Z",
+            "2022-08-15T00:00:00.000Z",
+            "2022-08-22T00:00:00.000Z",
+            "2022-08-29T00:00:00.000Z",
+            "2022-09-05T00:00:00.000Z",
         ])
         XCTAssertTrue(resultDates.first! <= dateMin)
         XCTAssertTrue(resultDates.last! >= dateMax)
