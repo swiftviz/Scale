@@ -30,7 +30,7 @@ final class DateNiceValueTests: XCTestCase {
         XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + secHour), .hours)
         XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + secDay), .days)
         XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + secMonth), .months)
-        XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + secYear), .years(magnitude: 0))
+        XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + secYear), .years(magnitude: 0, fraction: 1))
     }
 
 //    func testCalendricalDateRounding() throws {
