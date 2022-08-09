@@ -235,7 +235,7 @@ public enum DateMagnitude: Equatable {
     /// Months, up to a year.
     case months
     /// Years.
-    case years(magnitude: Double)
+    case years(magnitude: Double, fraction: Double)
 
     static let subsecondThreshold: PartialRangeUpTo<Double> = ..<1
     static let secondsThreshold: Range<Double> = 1 ..< 60
@@ -263,35 +263,33 @@ public enum DateMagnitude: Equatable {
         default:
             let yearsValue = abs(lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate) / yearsThreshold.lowerBound
             let yearsMagnitude = floor(log10(yearsValue))
-            print("\(lhs) to \(rhs) is \(yearsValue) years")
-            print("log10 of that is \(log10(yearsValue))")
-            return .years(magnitude: yearsMagnitude)
+            let yearsFraction = yearsValue / pow(10, yearsMagnitude)
+            // print("\(lhs) to \(rhs) is \(yearsValue) years")
+            // print("log10 of that is \(log10(yearsValue))")
+            return .years(magnitude: yearsMagnitude, fraction: yearsFraction)
         }
     }
 }
 
 public extension Date {
-    /// Returns a Date value rounded down or up to the next nice "date" value based on a localized calendar.
+    /// Returns a Date value rounded down to the next nice "date" value based on a calendar.
     /// - Parameters:
-    ///   - theDate: the
-    ///   - magnitude: <#magnitude description#>
-    ///   - downward: <#downward description#>
-    /// - Returns: <#description#>
-    func round(magnitude: DateMagnitude, downward: Bool = true) -> Self? {
-        let cal = Calendar.autoupdatingCurrent
-        var components = cal.dateComponents([.year, .month, .day, .hour, .minute, .second, .nanosecond, .timeZone, .calendar], from: self)
+    ///   - magnitude: The magnitude to which to round
+    ///   - calendar: The calendar to use to compute the next lower value.
+    func round(magnitude: DateMagnitude, calendar: Calendar) -> Self? {
+        var components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second, .nanosecond, .timeZone, .calendar], from: self)
         assert(components.isValidDate)
-        if downward {
-            switch magnitude {
-            case .subsecond:
-                // print(components.nanosecond)
-                let asSeconds: Double = .init(components.nanosecond!)
-                // ALT:
-                let x = Double.niceVersion(for: asSeconds, trendTowardsZero: true)
-                print("Original: \(asSeconds) converts to: \(x)")
-                components.nanosecond = Int(Double.niceVersion(for: asSeconds, trendTowardsZero: true))
-                assert(components.isValidDate)
-                return components.date
+
+        switch magnitude {
+        case .subsecond:
+            // print(components.nanosecond)
+            let asSeconds: Double = .init(components.nanosecond!)
+            // ALT:
+            let x = Double.niceVersion(for: asSeconds, trendTowardsZero: true)
+            print("Original: \(asSeconds) converts to: \(x)")
+            components.nanosecond = Int(Double.niceVersion(for: asSeconds, trendTowardsZero: true))
+            assert(components.isValidDate)
+            return components.date
 
 //                // 10999917 => 11ms (x.011)
 //                var exponent = floor(log10(asSeconds))
@@ -313,130 +311,186 @@ public extension Date {
 //                components.nanosecond = Int(niceNanoseconds)
 //                assert(components.isValidDate)
 //                return components.date
-            case .seconds:
-                components.setValue(0, for: .nanosecond)
-                components.setValue(0, for: .second)
-                assert(components.isValidDate)
-                return components.date
-            case .minutes:
-                components.setValue(0, for: .nanosecond)
-                components.setValue(0, for: .second)
-                components.setValue(0, for: .minute)
-                assert(components.isValidDate)
-                return components.date
-            case .hours:
-                components.setValue(0, for: .nanosecond)
-                components.setValue(0, for: .second)
-                components.setValue(0, for: .minute)
-                components.setValue(0, for: .hour)
-                assert(components.isValidDate)
-                return components.date
-            case .days:
-                components.setValue(0, for: .nanosecond)
-                components.setValue(0, for: .second)
-                components.setValue(0, for: .minute)
-                components.setValue(0, for: .hour)
-                components.setValue(1, for: .day)
-                assert(components.isValidDate)
-                return components.date
-            case .months:
-                components.setValue(0, for: .nanosecond)
-                components.setValue(0, for: .second)
-                components.setValue(0, for: .minute)
-                components.setValue(0, for: .hour)
-                components.setValue(1, for: .day)
-                components.setValue(1, for: .month)
-                assert(components.isValidDate)
-                return components.date
-            case .years:
-                components.setValue(0, for: .nanosecond)
-                components.setValue(0, for: .second)
-                components.setValue(0, for: .minute)
-                components.setValue(0, for: .hour)
-                components.setValue(1, for: .day)
-                components.setValue(1, for: .month)
-                assert(components.isValidDate)
-                return components.date
-            }
-        }
-        return nil
-    }
-
-    static func niceVersion(for theDate: Self, trendDownward _: Bool, magnitude: DateMagnitude) -> Self? {
-        // calendar that takes into account local preferences and time zones
-        let cal = Calendar.autoupdatingCurrent
-        var components = cal.dateComponents([.year, .month, .day, .hour, .minute, .second, .nanosecond], from: theDate)
-
-        switch magnitude {
-        case .subsecond:
-            return components.date
         case .seconds:
             components.setValue(0, for: .nanosecond)
-            components.setValue(0, for: .second)
+            assert(components.isValidDate)
             return components.date
         case .minutes:
             components.setValue(0, for: .nanosecond)
             components.setValue(0, for: .second)
-            components.setValue(0, for: .minute)
+            assert(components.isValidDate)
             return components.date
         case .hours:
             components.setValue(0, for: .nanosecond)
             components.setValue(0, for: .second)
             components.setValue(0, for: .minute)
-            components.setValue(0, for: .hour)
+            assert(components.isValidDate)
             return components.date
         case .days:
             components.setValue(0, for: .nanosecond)
             components.setValue(0, for: .second)
             components.setValue(0, for: .minute)
             components.setValue(0, for: .hour)
-            components.setValue(0, for: .day)
+            assert(components.isValidDate)
             return components.date
         case .months:
             components.setValue(0, for: .nanosecond)
             components.setValue(0, for: .second)
             components.setValue(0, for: .minute)
             components.setValue(0, for: .hour)
-            components.setValue(0, for: .day)
-            components.setValue(0, for: .month)
+            components.setValue(1, for: .day)
+            assert(components.isValidDate)
             return components.date
         case .years:
+            components.setValue(0, for: .nanosecond)
+            components.setValue(0, for: .second)
+            components.setValue(0, for: .minute)
+            components.setValue(0, for: .hour)
+            components.setValue(1, for: .day)
+            components.setValue(1, for: .month)
+            assert(components.isValidDate)
             return components.date
         }
+    }
 
-//        var exponent = floor(log10(positiveNumber))
-//        let fraction = positiveNumber / pow(10, exponent)
-//        let niceFraction: Double
-//
-//        if trendTowardsZero {
-//            // we're trying to round to the nearest 'nice' number - interval of 1, 2, 5, or 10
-//            // that's CLOSER TO ZERO than the provided number.
-//            if fraction < 1 {
-//                niceFraction = 10
-//                exponent = max(0, exponent - 1.0)
-//            } else if fraction < 2 {
-//                niceFraction = 1
-//            } else if fraction < 5 {
-//                niceFraction = 2
-//            } else {
-//                niceFraction = 5
-//            }
-//        } else {
-//            // we're trying to round to the nearest 'nice' number - interval of 1, 2, 5, or 10
-//            // that's FARTHER FROM ZERO than the provided number.
-//            if fraction <= 1 {
-//                niceFraction = 1
-//            } else if fraction <= 2 {
-//                niceFraction = 2
-//            } else if fraction <= 5 {
-//                niceFraction = 5
-//            } else {
-//                niceFraction = 10
-//            }
-//        }
-//        if negativeInput {
-//            return Self(-1.0 * niceFraction * pow(10, exponent))
-//        }
-//        return Self(niceFraction * pow(10, exponent))
+    static func niceStepForMagnitude(step: Double, magnitude: DateMagnitude) -> Double {
+        var exponent = floor(log10(step))
+        let fraction = step / pow(10, exponent)
+        let niceFraction: Double
+        switch magnitude {
+        case .subsecond:
+            if fraction <= 1 {
+                niceFraction = 1
+            } else if fraction <= 2 {
+                niceFraction = 2
+            } else if fraction <= 5 {
+                niceFraction = 5
+            } else {
+                niceFraction = 10
+            }
+        case .seconds:
+            exponent = 0
+            if step <= 1 {
+                niceFraction = 1
+            } else if step <= 2 {
+                niceFraction = 2
+            } else if step <= 5 {
+                niceFraction = 5
+            } else if step <= 10 {
+                niceFraction = 10
+            } else {
+                niceFraction = 30
+            }
+        case .minutes:
+            exponent = 0
+            let stepInMinutes = step / DateMagnitude.minutesThreshold.lowerBound
+            if stepInMinutes <= 1 {
+                niceFraction = 1 * DateMagnitude.minutesThreshold.lowerBound
+            } else if stepInMinutes <= 2 {
+                niceFraction = 2 * DateMagnitude.minutesThreshold.lowerBound
+            } else if stepInMinutes <= 5 {
+                niceFraction = 5 * DateMagnitude.minutesThreshold.lowerBound
+            } else if stepInMinutes <= 10 {
+                niceFraction = 10 * DateMagnitude.minutesThreshold.lowerBound
+            } else {
+                niceFraction = 30 * DateMagnitude.minutesThreshold.lowerBound
+            }
+        case .hours:
+            exponent = 0
+            let stepInHours = step / DateMagnitude.hoursThreshold.lowerBound
+            if stepInHours <= 1 {
+                niceFraction = 1 * DateMagnitude.hoursThreshold.lowerBound
+            } else if stepInHours <= 2 {
+                niceFraction = 2 * DateMagnitude.hoursThreshold.lowerBound
+            } else if stepInHours <= 6 {
+                niceFraction = 6 * DateMagnitude.hoursThreshold.lowerBound
+            } else {
+                niceFraction = 12 * DateMagnitude.hoursThreshold.lowerBound
+            }
+        case .days:
+            exponent = 0
+            let stepInDays = step / DateMagnitude.daysThreshold.lowerBound
+            if stepInDays <= 1 {
+                niceFraction = 1 * DateMagnitude.daysThreshold.lowerBound
+            } else if stepInDays <= 2 {
+                niceFraction = 2 * DateMagnitude.daysThreshold.lowerBound
+            } else {
+                niceFraction = 7 * DateMagnitude.daysThreshold.lowerBound
+            }
+        case .months:
+            exponent = 0
+            let stepInMonths = step / DateMagnitude.monthsThreshold.lowerBound
+            if stepInMonths <= 1 {
+                niceFraction = 1 * DateMagnitude.monthsThreshold.lowerBound
+            } else if stepInMonths <= 2 {
+                niceFraction = 2 * DateMagnitude.monthsThreshold.lowerBound
+            } else {
+                niceFraction = 6 * DateMagnitude.monthsThreshold.lowerBound
+            }
+        case let .years(magnitude: magnitude, fraction: fraction):
+            exponent = 0
+            let yearsFraction: Double
+            if fraction <= 1 {
+                yearsFraction = 1
+            } else if fraction <= 2 {
+                yearsFraction = 2
+            } else if fraction <= 5 {
+                yearsFraction = 5
+            } else {
+                yearsFraction = 10
+            }
+            niceFraction = yearsFraction * pow(10, magnitude) * DateMagnitude.yearsThreshold.lowerBound
+        }
+        return niceFraction * pow(10, exponent)
+    }
+
+    static func niceMinStepMax(min: Self, max: Self, ofSize size: Int, calendar: Calendar) -> (Self, Double, Self) {
+        precondition(size > 1)
+        let magnitude = DateMagnitude.magnitudeOfDateRange(min, max)
+        var minDouble = min.timeIntervalSinceReferenceDate
+        let maxDouble = max.timeIntervalSinceReferenceDate
+
+        // "round the Date" down based on the calendar provided, using the rounded
+        // value as a minimum if there's a valid date returned.
+        let niceMin = min.round(magnitude: magnitude, calendar: calendar)
+        if let niceMin = niceMin {
+            minDouble = niceMin.timeIntervalSinceReferenceDate
+        }
+
+        // calculate the step size in seconds
+        let step = abs(maxDouble - minDouble) / Double(size - 1)
+        // calculate a nice version of the step size (in seconds) based on the calendar magnitude of the range.
+        let niceStep = Date.niceStepForMagnitude(step: step, magnitude: magnitude)
+
+        // Add the step size (in seconds) to the current max value
+        let maxAndStep = Date(timeIntervalSinceReferenceDate: maxDouble + niceStep)
+        // and then round it down based on the magnitude of the distance between min and max
+        if let niceMin = niceMin,
+           let niceMax = maxAndStep.round(magnitude: magnitude, calendar: calendar)
+        {
+            return (niceMin, niceStep, niceMax)
+        } else {
+            return (min, niceStep, max)
+        }
+    }
+
+    static func rangeOfNiceValues(min: Self, max: Self, ofSize size: Int, using calendar: Calendar) -> [Self] {
+        let (niceMin, niceStep, niceMax) = niceMinStepMax(min: min, max: max, ofSize: size, calendar: calendar)
+        var result: [Self] = []
+        // incrementing the comparison point by a half step
+        // prevents some slight rounding errors that could lead
+        // to a final value not getting appended.
+        let comparisonPoint = niceMax.timeIntervalSinceReferenceDate + (0.5 * niceStep)
+        let minInSeconds = niceMin.timeIntervalSinceReferenceDate
+        result.append(niceMin)
+        for i in 1 ... size - 1 {
+            let steppedValue = minInSeconds + Double(i) * niceStep
+            if steppedValue <= comparisonPoint {
+                result.append(Date(timeIntervalSinceReferenceDate: steppedValue))
+            } else {
+                break
+            }
+        }
+        return result
     }
 }
