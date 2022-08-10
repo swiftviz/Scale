@@ -251,15 +251,15 @@ public enum DateMagnitude: Equatable {
         case subsecondThreshold:
             return .subsecond
         case secondsThreshold:
-            return .seconds //(magnitude: 0, fraction: secondsValue)
+            return .seconds // (magnitude: 0, fraction: secondsValue)
         case minutesThreshold:
-            return .minutes //(magnitude: 0, fraction: minutesValue)
+            return .minutes // (magnitude: 0, fraction: minutesValue)
         case hoursThreshold:
-            return .hours //(magnitude: 0, fraction: hoursValue)
+            return .hours // (magnitude: 0, fraction: hoursValue)
         case daysThreshold:
-            return .days //(magnitude: 0, fraction: daysValue)
+            return .days // (magnitude: 0, fraction: daysValue)
         case monthsThreshold:
-            return .months //(magnitude: 0, fraction: monthsValue)
+            return .months // (magnitude: 0, fraction: monthsValue)
         default:
             return .years
         }
@@ -330,7 +330,7 @@ public extension Date {
             return components.date
         }
     }
-    
+
     /// Returns a nice step size for the magnitude of date range you provide.
     /// - Parameters:
     ///   - step: The step size (in seconds) for the date increment.

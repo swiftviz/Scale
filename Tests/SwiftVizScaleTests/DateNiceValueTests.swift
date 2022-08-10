@@ -176,7 +176,7 @@ final class DateNiceValueTests: XCTestCase {
 
         let dateMin = now
         let dateMax = now + 3.2 * secMin
-        
+
         let magnitude = DateMagnitude.magnitudeOfDateRange(dateMin, dateMax)
         XCTAssertEqual(magnitude, .minutes)
         // calculate the step size in seconds
@@ -186,7 +186,7 @@ final class DateNiceValueTests: XCTestCase {
         let niceStep = Date.niceStepForMagnitude(step: step, magnitude: magnitude)
         XCTAssertEqual(niceStep, 60)
     }
-    
+
     func testNiceRangeAndStep_minutes_3() throws {
         let (formatter, now) = formatterAndNow()
 
