@@ -285,8 +285,7 @@ public extension Date {
             // print(components.nanosecond)
             let asSeconds: Double = .init(components.nanosecond!)
             // ALT:
-            let x = Double.niceVersion(for: asSeconds, trendTowardsZero: true)
-            print("Original: \(asSeconds) converts to: \(x)")
+            // print("Original: \(asSeconds) converts to: \(x)")
             components.nanosecond = Int(Double.niceVersion(for: asSeconds, trendTowardsZero: true))
             assert(components.isValidDate)
             return components.date
@@ -352,6 +351,33 @@ public extension Date {
             return components.date
         }
     }
+
+//    static func niceMinMax(min: Date, max: Date, calendar: Calendar) -> (Date, Date) {
+//        let magnitude = DateMagnitude.magnitudeOfDateRange(min, max)
+//        guard let niceMin = min.round(magnitude: magnitude, calendar: calendar) else {
+//            return (min, max)
+//        }
+//        let fractionOfMagnitude: Double
+//        switch magnitude {
+//        case .subsecond:
+//            fractionOfMagnitude = (max.timeIntervalSinceReferenceDate - niceMin.timeIntervalSinceReferenceDate)
+//        case .seconds:
+//            fractionOfMagnitude = (max.timeIntervalSinceReferenceDate - niceMin.timeIntervalSinceReferenceDate) / DateMagnitude.secondsThreshold.lowerBound
+//
+//        case .minutes:
+//            fractionOfMagnitude = (max.timeIntervalSinceReferenceDate - niceMin.timeIntervalSinceReferenceDate) / DateMagnitude.minutesThreshold.lowerBound
+//        case .hours:
+//            fractionOfMagnitude = (max.timeIntervalSinceReferenceDate - niceMin.timeIntervalSinceReferenceDate) / DateMagnitude.hoursThreshold.lowerBound
+//        case .days:
+//            fractionOfMagnitude = (max.timeIntervalSinceReferenceDate - niceMin.timeIntervalSinceReferenceDate) / DateMagnitude.daysThreshold.lowerBound
+//        case .months:
+//            fractionOfMagnitude = (max.timeIntervalSinceReferenceDate - niceMin.timeIntervalSinceReferenceDate) / DateMagnitude.monthsThreshold.lowerBound
+//        case .years(magnitude: let magnitude, fraction: let fraction):
+//            fractionOfMagnitude = (max.timeIntervalSinceReferenceDate - niceMin.timeIntervalSinceReferenceDate) / DateMagnitude.yearsThreshold.lowerBound
+//        }
+//
+//        return (min, max)
+//    }
 
     static func niceStepForMagnitude(step: Double, magnitude: DateMagnitude) -> Double {
         var exponent = floor(log10(step))
