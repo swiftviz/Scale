@@ -236,7 +236,7 @@ public enum DateMagnitude: Equatable {
     case months
     /// Years.
     case years
-    
+
     static let subsecondThreshold: PartialRangeUpTo<Double> = ..<1
     static let secondsThreshold: Range<Double> = 1 ..< 60
     static let minutesThreshold: Range<Double> = 60 ..< 60 * 60
@@ -244,7 +244,7 @@ public enum DateMagnitude: Equatable {
     static let daysThreshold: Range<Double> = 60 * 60 * 24 ..< 60 * 60 * 24 * 28
     static let monthsThreshold: Range<Double> = 60 * 60 * 24 * 28 ..< 60 * 60 * 24 * 365
     static let yearsThreshold: PartialRangeFrom<Double> = (60 * 60 * 24 * 365)...
-    
+
     /// The value of the date magnitude in seconds per increment.
     public var seconds: Double {
         switch self {
@@ -299,6 +299,7 @@ public extension Date {
         case .subsecond:
             if let asNanoseconds = components.nanosecond {
                 components.nanosecond = Int.niceVersion(for: asNanoseconds, trendTowardsZero: true)
+                assert(components.isValidDate)
             }
             assert(components.isValidDate)
             return components.date
@@ -307,6 +308,7 @@ public extension Date {
             if let stepSize = stepSize, let seconds = components.second {
                 let valueRoundedByStep = floor(Double(seconds) / stepSize) * stepSize
                 components.setValue(Int(valueRoundedByStep), for: .second)
+                assert(components.isValidDate)
             }
             assert(components.isValidDate)
             return components.date
@@ -317,6 +319,7 @@ public extension Date {
                 let stepSizeInMinutes = stepSize / 60
                 let valueRoundedByStep = floor(Double(minutes) / stepSizeInMinutes) * stepSizeInMinutes
                 components.setValue(Int(valueRoundedByStep), for: .minute)
+                assert(components.isValidDate)
             }
             assert(components.isValidDate)
             return components.date
@@ -328,6 +331,7 @@ public extension Date {
                 let stepSizeInHours = stepSize / (60 * 60)
                 let valueRoundedByStep = floor(Double(hours) / stepSizeInHours) * stepSizeInHours
                 components.setValue(Int(valueRoundedByStep), for: .hour)
+                assert(components.isValidDate)
             }
             assert(components.isValidDate)
             return components.date
@@ -339,7 +343,12 @@ public extension Date {
             if let stepSize = stepSize, let days = components.day {
                 let stepSizeInDays = stepSize / (24 * 60 * 60)
                 let valueRoundedByStep = floor(Double(days) / stepSizeInDays) * stepSizeInDays
-                components.setValue(Int(valueRoundedByStep), for: .day)
+                if valueRoundedByStep < 1.0 {
+                    components.setValue(1, for: .day)
+                } else {
+                    components.setValue(Int(valueRoundedByStep), for: .day)
+                }
+                assert(components.isValidDate)
             }
             assert(components.isValidDate)
             return components.date
@@ -352,7 +361,12 @@ public extension Date {
             if let stepSize = stepSize, let months = components.month {
                 let stepSizeInMonths = stepSize / (28 * 24 * 60 * 60)
                 let valueRoundedByStep = floor(Double(months) / stepSizeInMonths) * stepSizeInMonths
-                components.setValue(Int(valueRoundedByStep), for: .month)
+                if valueRoundedByStep < 1.0 {
+                    components.setValue(1, for: .month)
+                } else {
+                    components.setValue(Int(valueRoundedByStep), for: .month)
+                }
+                assert(components.isValidDate)
             }
             assert(components.isValidDate)
             return components.date
@@ -367,7 +381,7 @@ public extension Date {
             return components.date
         }
     }
-    
+
     /// Returns a date based on the current value, rounded 'up' to the next incremental step value.
     /// - Parameters:
     ///   - magnitude: The magnitude to which to round.
@@ -376,13 +390,13 @@ public extension Date {
     func roundUp(magnitude: DateMagnitude, calendar: Calendar, stepSize: Double? = nil) -> Self? {
         let incDate: Date
         if let stepSize = stepSize, stepSize >= magnitude.seconds {
-            incDate = self+stepSize
+            incDate = self + stepSize
         } else {
-            incDate = self+magnitude.seconds
+            incDate = self + magnitude.seconds
         }
         return incDate.round(magnitude: magnitude, calendar: calendar, stepSize: stepSize)
     }
-    
+
     /// Returns a nice step size for the magnitude of date range you provide.
     /// - Parameters:
     ///   - step: The step size (in seconds) for the date increment.
