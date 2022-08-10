@@ -227,12 +227,12 @@ final class DateNiceValueTests: XCTestCase {
         )
 
         XCTAssertEqual(
-            formatter.string(from: now.round(magnitude: .hours, calendar: testCal, stepSize: 2 * 60 * 60)!),
+            formatter.string(from: now.roundUp(magnitude: .hours, calendar: testCal, stepSize: 2 * 60 * 60)!),
             "2022-08-09T00:00:00.000Z"
         )
 
         XCTAssertEqual(
-            formatter.string(from: now.round(magnitude: .hours, calendar: testCal, stepSize: 6 * 60 * 60)!),
+            formatter.string(from: now.roundUp(magnitude: .hours, calendar: testCal, stepSize: 6 * 60 * 60)!),
             "2022-08-09T00:00:00.000Z"
         )
     }
@@ -243,12 +243,12 @@ final class DateNiceValueTests: XCTestCase {
         XCTAssertEqual(formatter.string(from: now), "2022-08-08T22:43:09.011Z")
 
         XCTAssertEqual(
-            formatter.string(from: now.round(magnitude: .days, calendar: testCal, stepSize: 1 * 24 * 60 * 60)!),
+            formatter.string(from: now.roundUp(magnitude: .days, calendar: testCal, stepSize: 1 * 24 * 60 * 60)!),
             "2022-08-09T00:00:00.000Z"
         )
 
         XCTAssertEqual(
-            formatter.string(from: now.round(magnitude: .days, calendar: testCal, stepSize: 2 * 24 * 60 * 60)!),
+            formatter.string(from: now.roundUp(magnitude: .days, calendar: testCal, stepSize: 2 * 24 * 60 * 60)!),
             "2022-08-10T00:00:00.000Z"
         )
 
@@ -256,8 +256,8 @@ final class DateNiceValueTests: XCTestCase {
         // and we might want to choose the other path in terms of "nice values" that are spanning 7 day (week)
         // increments.
         XCTAssertEqual(
-            formatter.string(from: now.round(magnitude: .days, calendar: testCal, stepSize: 7 * 24 * 60 * 60)!),
-            "2022-08-15T00:00:00.000Z"
+            formatter.string(from: now.roundUp(magnitude: .days, calendar: testCal, stepSize: 7 * 24 * 60 * 60)!),
+            "2022-08-14T00:00:00.000Z"
         )
     }
 
@@ -267,18 +267,18 @@ final class DateNiceValueTests: XCTestCase {
         XCTAssertEqual(formatter.string(from: now), "2022-08-08T22:43:09.011Z")
 
         XCTAssertEqual(
-            formatter.string(from: now.round(magnitude: .months, calendar: testCal, stepSize: 1 * 28 * 24 * 60 * 60)!),
+            formatter.string(from: now.roundUp(magnitude: .months, calendar: testCal, stepSize: 1 * 28 * 24 * 60 * 60)!),
             "2022-09-01T00:00:00.000Z"
         )
 
         XCTAssertEqual(
-            formatter.string(from: now.round(magnitude: .months, calendar: testCal, stepSize: 2 * 28 * 24 * 60 * 60)!),
-            "2022-09-01T00:00:00.000Z"
+            formatter.string(from: now.roundUp(magnitude: .months, calendar: testCal, stepSize: 2 * 28 * 24 * 60 * 60)!),
+            "2022-10-01T00:00:00.000Z"
         )
 
         XCTAssertEqual(
-            formatter.string(from: now.round(magnitude: .months, calendar: testCal, stepSize: 6 * 28 * 24 * 60 * 60)!),
-            "2022-12-01T00:00:00.000Z"
+            formatter.string(from: now.roundUp(magnitude: .months, calendar: testCal, stepSize: 6 * 28 * 24 * 60 * 60)!),
+            "2023-01-01T00:00:00.000Z"
         )
     }
 
