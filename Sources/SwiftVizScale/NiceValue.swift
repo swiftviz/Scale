@@ -447,28 +447,17 @@ public extension Date {
     static func niceMinStepMax(min: Self, max: Self, ofSize size: Int, calendar: Calendar) -> (Self, Double, Self) {
         precondition(size > 1)
         let magnitude = DateMagnitude.magnitudeOfDateRange(min, max)
-        var minDouble = min.timeIntervalSinceReferenceDate
         let maxDouble = max.timeIntervalSinceReferenceDate
-
-        // "round the Date" down based on the calendar provided, using the rounded
-        // value as a minimum if there's a valid date returned.
-        let niceMin = min.round(magnitude: magnitude, calendar: calendar)
-        if let niceMin = niceMin {
-            minDouble = niceMin.timeIntervalSinceReferenceDate
-        }
-
         // calculate the step size in seconds
-        let step = abs(maxDouble - minDouble) / Double(size - 1)
+        let step = abs(maxDouble - min.timeIntervalSinceReferenceDate) / Double(size - 1)
         // calculate a nice version of the step size (in seconds) based on the calendar magnitude of the range.
         let niceStep = Date.niceStepForMagnitude(step: step, magnitude: magnitude)
 
         // Add the step size (in seconds) to the current max value
         let maxAndStep = Date(timeIntervalSinceReferenceDate: maxDouble + niceStep)
         // and then round it down based on the magnitude of the distance between min and max
-        if let niceMin = niceMin,
-           let niceMax = maxAndStep.round(magnitude: magnitude, calendar: calendar)
-        {
-            return (niceMin, niceStep, niceMax)
+        if let niceMax = maxAndStep.round(magnitude: magnitude, calendar: calendar) {
+            return (min, niceStep, niceMax)
         } else {
             return (min, niceStep, max)
         }
