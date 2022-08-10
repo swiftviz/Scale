@@ -236,7 +236,7 @@ public enum DateMagnitude: Equatable {
     case months
     /// Years.
     case years
-
+    
     static let subsecondThreshold: PartialRangeUpTo<Double> = ..<1
     static let secondsThreshold: Range<Double> = 1 ..< 60
     static let minutesThreshold: Range<Double> = 60 ..< 60 * 60
@@ -244,6 +244,26 @@ public enum DateMagnitude: Equatable {
     static let daysThreshold: Range<Double> = 60 * 60 * 24 ..< 60 * 60 * 24 * 28
     static let monthsThreshold: Range<Double> = 60 * 60 * 24 * 28 ..< 60 * 60 * 24 * 365
     static let yearsThreshold: PartialRangeFrom<Double> = (60 * 60 * 24 * 365)...
+    
+    /// The value of the date magnitude in seconds per increment.
+    public var seconds: Double {
+        switch self {
+        case .subsecond:
+            return 0
+        case .seconds:
+            return 1
+        case .minutes:
+            return DateMagnitude.minutesThreshold.lowerBound
+        case .hours:
+            return DateMagnitude.hoursThreshold.lowerBound
+        case .days:
+            return DateMagnitude.daysThreshold.lowerBound
+        case .months:
+            return DateMagnitude.monthsThreshold.lowerBound
+        default:
+            return DateMagnitude.yearsThreshold.lowerBound
+        }
+    }
 
     public static func magnitudeOfDateRange(_ lhs: Date, _ rhs: Date) -> DateMagnitude {
         let dateExtentMagnitude = abs(lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate)
@@ -269,7 +289,7 @@ public enum DateMagnitude: Equatable {
 public extension Date {
     /// Returns a Date value rounded down to the next nice "date" value based on a calendar, and optionally the step size of the range.
     /// - Parameters:
-    ///   - magnitude: The magnitude to which to round
+    ///   - magnitude: The magnitude to which to round.
     ///   - calendar: The calendar to use to compute the next lower value.
     ///   - stepSize: The nice step size, in seconds, for the date increments.
     func round(magnitude: DateMagnitude, calendar: Calendar, stepSize: Double? = nil) -> Self? {
@@ -347,7 +367,22 @@ public extension Date {
             return components.date
         }
     }
-
+    
+    /// Returns a date based on the current value, rounded 'up' to the next incremental step value.
+    /// - Parameters:
+    ///   - magnitude: The magnitude to which to round.
+    ///   - calendar: The calendar to use to compute the next lower value.
+    ///   - stepSize: The nice step size, in seconds, for the date increments.
+    func roundUp(magnitude: DateMagnitude, calendar: Calendar, stepSize: Double? = nil) -> Self? {
+        let incDate: Date
+        if let stepSize = stepSize, stepSize >= magnitude.seconds {
+            incDate = self+stepSize
+        } else {
+            incDate = self+magnitude.seconds
+        }
+        return incDate.round(magnitude: magnitude, calendar: calendar, stepSize: stepSize)
+    }
+    
     /// Returns a nice step size for the magnitude of date range you provide.
     /// - Parameters:
     ///   - step: The step size (in seconds) for the date increment.
