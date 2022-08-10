@@ -116,10 +116,8 @@ public struct DateScale<OutputType: BinaryFloatingPoint>: ReversibleScale, Custo
         }
         precondition(min < max)
         if nice {
-            let magnitude = DateMagnitude.magnitudeOfDateRange(min, max)
-            if let bottom = min.round(magnitude: magnitude, calendar: Calendar.current) {
-                return domain(lower: bottom, higher: max)
-            }
+            let (newMin, newMax) = Date.niceExpandDomain(min: min, max: max, calendar: Calendar.current)
+            return domain(lower: newMin, higher: newMax)
         }
         return domain(lower: min, higher: max)
     }

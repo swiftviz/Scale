@@ -33,9 +33,13 @@ final class DateScaleTests: XCTestCase {
         XCTAssertEqual(updated.domainHigher, now)
 
         let dateSet = [now, now.addingTimeInterval(-600), now.addingTimeInterval(600)]
-        let setUpdated = updated.domain(dateSet)
+        let setUpdated = updated.domain(dateSet, nice: false)
         XCTAssertEqual(setUpdated.domainLower, now.addingTimeInterval(-600))
         XCTAssertEqual(setUpdated.domainHigher, now.addingTimeInterval(600))
+
+        let setNiceUpdated = updated.domain(dateSet, nice: true)
+        XCTAssertEqual(setNiceUpdated.domainLower, now.addingTimeInterval(-600))
+        XCTAssertEqual(setNiceUpdated.domainHigher, now.addingTimeInterval(660))
     }
 
     func testTransformModifier() throws {

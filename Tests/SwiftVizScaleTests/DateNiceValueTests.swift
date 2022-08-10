@@ -479,4 +479,34 @@ final class DateNiceValueTests: XCTestCase {
         XCTAssertTrue(resultDates.first! <= dateMin)
         XCTAssertTrue(resultDates.last! >= dateMax)
     }
+
+    func testNiceExpandDomain_days_23() throws {
+        let (formatter, now) = formatterAndNow()
+
+        let dateMin = now
+        let dateMax = now + 23.1 * DateMagnitude.days.seconds
+        // before
+        XCTAssertEqual(formatter.string(from: dateMin), "2022-08-08T22:43:09.011Z")
+        XCTAssertEqual(formatter.string(from: dateMax), "2022-09-01T01:07:09.011Z")
+
+        // after
+        let (updatedMin, updatedMax) = Date.niceExpandDomain(min: dateMin, max: dateMax, calendar: testCal)
+        XCTAssertEqual(formatter.string(from: updatedMin), "2022-08-08T00:00:00.000Z")
+        XCTAssertEqual(formatter.string(from: updatedMax), "2022-09-02T00:00:00.000Z")
+    }
+
+    func testNiceExpandDomain_hours_11() throws {
+        let (formatter, now) = formatterAndNow()
+
+        let dateMin = now
+        let dateMax = now + 11 * DateMagnitude.hours.seconds
+        // before
+        XCTAssertEqual(formatter.string(from: dateMin), "2022-08-08T22:43:09.011Z")
+        XCTAssertEqual(formatter.string(from: dateMax), "2022-08-09T09:43:09.011Z")
+
+        // after
+        let (updatedMin, updatedMax) = Date.niceExpandDomain(min: dateMin, max: dateMax, calendar: testCal)
+        XCTAssertEqual(formatter.string(from: updatedMin), "2022-08-08T22:00:00.000Z")
+        XCTAssertEqual(formatter.string(from: updatedMax), "2022-08-09T10:00:00.000Z")
+    }
 }
