@@ -432,53 +432,53 @@ public extension Date {
             }
             return niceFraction
         case .minutes:
-            let stepFractionInMinutes = step / DateMagnitude.minutesThreshold.lowerBound
+            let stepFractionInMinutes = step / DateMagnitude.minutes.seconds
             if stepFractionInMinutes <= 1 {
-                niceFraction = 1 * DateMagnitude.minutesThreshold.lowerBound
+                niceFraction = 1 * DateMagnitude.minutes.seconds
             } else if stepFractionInMinutes <= 2 {
-                niceFraction = 2 * DateMagnitude.minutesThreshold.lowerBound
+                niceFraction = 2 * DateMagnitude.minutes.seconds
             } else if stepFractionInMinutes <= 5 {
-                niceFraction = 5 * DateMagnitude.minutesThreshold.lowerBound
+                niceFraction = 5 * DateMagnitude.minutes.seconds
             } else if stepFractionInMinutes <= 10 {
-                niceFraction = 10 * DateMagnitude.minutesThreshold.lowerBound
+                niceFraction = 10 * DateMagnitude.minutes.seconds
             } else {
-                niceFraction = 30 * DateMagnitude.minutesThreshold.lowerBound
+                niceFraction = 30 * DateMagnitude.minutes.seconds
             }
             return niceFraction
         case .hours:
-            let stepFractionInHours = step / DateMagnitude.hoursThreshold.lowerBound
+            let stepFractionInHours = step / DateMagnitude.hours.seconds
             if stepFractionInHours <= 1 {
-                niceFraction = 1 * DateMagnitude.hoursThreshold.lowerBound
+                niceFraction = 1 * DateMagnitude.hours.seconds
             } else if stepFractionInHours <= 2 {
-                niceFraction = 2 * DateMagnitude.hoursThreshold.lowerBound
+                niceFraction = 2 * DateMagnitude.hours.seconds
             } else if stepFractionInHours <= 6 {
-                niceFraction = 6 * DateMagnitude.hoursThreshold.lowerBound
+                niceFraction = 6 * DateMagnitude.hours.seconds
             } else {
-                niceFraction = 12 * DateMagnitude.hoursThreshold.lowerBound
+                niceFraction = 12 * DateMagnitude.hours.seconds
             }
             return niceFraction
         case .days:
-            let stepFractionInDays = step / DateMagnitude.daysThreshold.lowerBound
+            let stepFractionInDays = step / DateMagnitude.days.seconds
             if stepFractionInDays <= 1 {
-                niceFraction = 1 * DateMagnitude.daysThreshold.lowerBound
+                niceFraction = 1 * DateMagnitude.days.seconds
             } else if stepFractionInDays <= 2 {
-                niceFraction = 2 * DateMagnitude.daysThreshold.lowerBound
+                niceFraction = 2 * DateMagnitude.days.seconds
             } else {
-                niceFraction = 7 * DateMagnitude.daysThreshold.lowerBound
+                niceFraction = 7 * DateMagnitude.days.seconds
             }
             return niceFraction
         case .months:
-            let stepFractionInMonths = step / DateMagnitude.monthsThreshold.lowerBound
+            let stepFractionInMonths = step / DateMagnitude.months.seconds
             if stepFractionInMonths <= 1 {
-                niceFraction = 1 * DateMagnitude.monthsThreshold.lowerBound
+                niceFraction = 1 * DateMagnitude.months.seconds
             } else if stepFractionInMonths <= 2 {
-                niceFraction = 2 * DateMagnitude.monthsThreshold.lowerBound
+                niceFraction = 2 * DateMagnitude.months.seconds
             } else {
-                niceFraction = 6 * DateMagnitude.monthsThreshold.lowerBound
+                niceFraction = 6 * DateMagnitude.months.seconds
             }
             return niceFraction
         case .years:
-            let stepFractionInYears = step / DateMagnitude.yearsThreshold.lowerBound
+            let stepFractionInYears = step / DateMagnitude.years.seconds
             let yearsMagnitude = floor(log10(stepFractionInYears))
             let yearsFraction = stepFractionInYears / pow(10, yearsMagnitude)
             if yearsFraction <= 1 {
@@ -492,6 +492,16 @@ public extension Date {
             }
             return niceFraction * pow(10, yearsMagnitude) * DateMagnitude.yearsThreshold.lowerBound
         }
+    }
+
+    static func niceExpandDomain(min: Self, max: Self, calendar: Calendar) -> (Self, Self) {
+        let magnitude = DateMagnitude.magnitudeOfDateRange(min, max)
+        if let niceMin = min.round(magnitude: magnitude, calendar: calendar),
+           let niceMax = max.roundUp(magnitude: magnitude, calendar: calendar)
+        {
+            return (niceMin, niceMax)
+        }
+        return (min, max)
     }
 
     static func niceMinStepMax(min: Self, max: Self, ofSize size: Int, calendar: Calendar) -> (Self, Double, Self) {
