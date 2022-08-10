@@ -40,7 +40,7 @@ final class DateNiceValueTests: XCTestCase {
         XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + secHour), .hours)
         XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + secDay), .days)
         XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + secMonth), .months)
-        XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + secYear), .years(magnitude: 0, fraction: 1))
+        XCTAssertEqual(DateMagnitude.magnitudeOfDateRange(now, now + secYear), .years)
     }
 
     func testCalendricalDateRounding() throws {
@@ -83,7 +83,7 @@ final class DateNiceValueTests: XCTestCase {
         )
 
         XCTAssertEqual(
-            formatter.string(from: now.round(magnitude: .years(magnitude: 1.0, fraction: 1.0), calendar: testCal)!),
+            formatter.string(from: now.round(magnitude: .years, calendar: testCal)!),
             "2022-01-01T00:00:00.000Z"
         )
     }
@@ -109,7 +109,7 @@ final class DateNiceValueTests: XCTestCase {
     }
 
     func testNiceStepForDateMagnitudes_minutes() throws {
-        XCTAssertEqual(Date.niceStepForMagnitude(step: 4.3, magnitude: .minutes), 60)
+        XCTAssertEqual(Date.niceStepForMagnitude(step: 0.9, magnitude: .minutes), 60)
         XCTAssertEqual(Date.niceStepForMagnitude(step: 1.5 * 60, magnitude: .minutes), 60 * 2)
         XCTAssertEqual(Date.niceStepForMagnitude(step: 5.1 * 60, magnitude: .minutes), 60 * 10)
     }
@@ -136,23 +136,23 @@ final class DateNiceValueTests: XCTestCase {
 
     func testNiceStepForDateMagnitudes_years() throws {
         XCTAssertEqual(Date.niceStepForMagnitude(
-            step: 1.1 * secYear,
-            magnitude: .years(magnitude: 0, fraction: 1)
+            step: 0.95 * secYear,
+            magnitude: .years
         ), 1 * secYear)
 
         XCTAssertEqual(Date.niceStepForMagnitude(
             step: 1.1 * secYear,
-            magnitude: .years(magnitude: 0, fraction: 1.1)
+            magnitude: .years
         ), 2 * secYear)
 
         XCTAssertEqual(Date.niceStepForMagnitude(
             step: 3.1 * secYear,
-            magnitude: .years(magnitude: 0, fraction: 3.1)
+            magnitude: .years
         ), 5 * secYear)
 
         XCTAssertEqual(Date.niceStepForMagnitude(
-            step: 3.1 * 10 * secYear,
-            magnitude: .years(magnitude: 1, fraction: 3.1)
+            step: 31 * secYear,
+            magnitude: .years
         ), 50 * secYear)
     }
 
@@ -171,6 +171,22 @@ final class DateNiceValueTests: XCTestCase {
         XCTAssertTrue(niceMax >= dateMax)
     }
 
+    func testNiceStep_3min() throws {
+        let (_, now) = formatterAndNow()
+
+        let dateMin = now
+        let dateMax = now + 3.2 * secMin
+        
+        let magnitude = DateMagnitude.magnitudeOfDateRange(dateMin, dateMax)
+        XCTAssertEqual(magnitude, .minutes)
+        // calculate the step size in seconds
+        let step = abs(dateMax.timeIntervalSinceReferenceDate - dateMin.timeIntervalSinceReferenceDate) / Double(10.0 - 1)
+        XCTAssertEqual(step, 21.3, accuracy: 0.1)
+        // calculate a nice version of the step size (in seconds) based on the calendar magnitude of the range.
+        let niceStep = Date.niceStepForMagnitude(step: step, magnitude: magnitude)
+        XCTAssertEqual(niceStep, 60)
+    }
+    
     func testNiceRangeAndStep_minutes_3() throws {
         let (formatter, now) = formatterAndNow()
 
