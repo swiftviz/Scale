@@ -44,7 +44,6 @@ final class DateNiceValueTests: XCTestCase {
     }
 
     func testCalendricalDateRounding() throws {
-        print(testCal.timeZone)
         let (formatter, now) = formatterAndNow()
         XCTAssertEqual(formatter.string(from: now), "2022-08-08T22:43:09.011Z")
         XCTAssertEqual(now.timeIntervalSinceReferenceDate, 681_691_389.011)
@@ -85,6 +84,98 @@ final class DateNiceValueTests: XCTestCase {
         XCTAssertEqual(
             formatter.string(from: now.round(magnitude: .years, calendar: testCal)!),
             "2022-01-01T00:00:00.000Z"
+        )
+    }
+
+    func testCalendricalDateRoundingSecondsWithStepsizes() throws {
+        let (formatter, now) = formatterAndNow()
+        // starting position for comparison
+        XCTAssertEqual(formatter.string(from: now), "2022-08-08T22:43:09.011Z")
+
+        let result_1 = now.round(magnitude: .seconds, calendar: testCal, stepSize: 1)
+        // step size of 1 is same result as not providing it for seconds
+        XCTAssertEqual(now.round(magnitude: .seconds, calendar: testCal), now.round(magnitude: .seconds, calendar: testCal, stepSize: 1))
+        XCTAssertEqual(formatter.string(from: result_1!), "2022-08-08T22:43:09.000Z")
+
+        let result_2 = now.round(magnitude: .seconds, calendar: testCal, stepSize: 2)
+        XCTAssertEqual(formatter.string(from: result_2!), "2022-08-08T22:43:08.000Z")
+
+        let result_5 = now.round(magnitude: .seconds, calendar: testCal, stepSize: 5)
+        XCTAssertEqual(formatter.string(from: result_5!), "2022-08-08T22:43:05.000Z")
+    }
+
+    func testCalendricalDateRoundingMinutesWithStepsizes() throws {
+        let (formatter, now) = formatterAndNow()
+        // starting position for comparison
+        XCTAssertEqual(formatter.string(from: now), "2022-08-08T22:43:09.011Z")
+
+        XCTAssertEqual(now.round(magnitude: .minutes, calendar: testCal), now.round(magnitude: .minutes, calendar: testCal, stepSize: 60))
+
+        XCTAssertEqual(
+            formatter.string(from: now.round(magnitude: .minutes, calendar: testCal, stepSize: 2 * 60)!),
+            "2022-08-08T22:42:00.000Z"
+        )
+
+        XCTAssertEqual(
+            formatter.string(from: now.round(magnitude: .minutes, calendar: testCal, stepSize: 5 * 60)!),
+            "2022-08-08T22:40:00.000Z"
+        )
+    }
+
+    func testCalendricalDateRoundingHoursWithStepsizes() throws {
+        let (formatter, now) = formatterAndNow()
+        // starting position for comparison
+        XCTAssertEqual(formatter.string(from: now), "2022-08-08T22:43:09.011Z")
+
+        XCTAssertEqual(now.round(magnitude: .hours, calendar: testCal), now.round(magnitude: .hours, calendar: testCal, stepSize: 60 * 60))
+
+        XCTAssertEqual(
+            formatter.string(from: now.round(magnitude: .hours, calendar: testCal, stepSize: 2 * 60 * 60)!),
+            "2022-08-08T22:00:00.000Z"
+        )
+
+        XCTAssertEqual(
+            formatter.string(from: now.round(magnitude: .hours, calendar: testCal, stepSize: 6 * 60 * 60)!),
+            "2022-08-08T18:00:00.000Z"
+        )
+    }
+
+    func testCalendricalDateRoundingDaysWithStepsizes() throws {
+        let (formatter, now) = formatterAndNow()
+        // starting position for comparison
+        XCTAssertEqual(formatter.string(from: now), "2022-08-08T22:43:09.011Z")
+
+        XCTAssertEqual(now.round(magnitude: .days, calendar: testCal), now.round(magnitude: .days, calendar: testCal, stepSize: 24 * 60 * 60))
+
+        XCTAssertEqual(
+            formatter.string(from: now.round(magnitude: .days, calendar: testCal, stepSize: 2 * 24 * 60 * 60)!),
+            "2022-08-08T00:00:00.000Z"
+        )
+
+        // NOTE(heckj): This is rounding down to the 7th day of the month rather than to a specific "day of week"
+        // and we might want to choose the other path in terms of "nice values" that are spanning 7 day (week)
+        // increments.
+        XCTAssertEqual(
+            formatter.string(from: now.round(magnitude: .days, calendar: testCal, stepSize: 7 * 24 * 60 * 60)!),
+            "2022-08-07T00:00:00.000Z"
+        )
+    }
+
+    func testCalendricalDateRoundingMonthsWithStepsizes() throws {
+        let (formatter, now) = formatterAndNow()
+        // starting position for comparison
+        XCTAssertEqual(formatter.string(from: now), "2022-08-08T22:43:09.011Z")
+
+        XCTAssertEqual(now.round(magnitude: .months, calendar: testCal), now.round(magnitude: .months, calendar: testCal, stepSize: 28 * 24 * 60 * 60))
+
+        XCTAssertEqual(
+            formatter.string(from: now.round(magnitude: .months, calendar: testCal, stepSize: 2 * 28 * 24 * 60 * 60)!),
+            "2022-08-01T00:00:00.000Z"
+        )
+
+        XCTAssertEqual(
+            formatter.string(from: now.round(magnitude: .months, calendar: testCal, stepSize: 6 * 28 * 24 * 60 * 60)!),
+            "2022-06-01T00:00:00.000Z"
         )
     }
 

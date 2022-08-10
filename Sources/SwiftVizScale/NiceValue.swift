@@ -285,7 +285,7 @@ public extension Date {
         case .seconds:
             components.setValue(0, for: .nanosecond)
             if let stepSize = stepSize, let seconds = components.second {
-                let valueRoundedByStep = floor(Double(seconds) / stepSize)
+                let valueRoundedByStep = floor(Double(seconds) / stepSize) * stepSize
                 components.setValue(Int(valueRoundedByStep), for: .second)
             }
             assert(components.isValidDate)
@@ -294,7 +294,8 @@ public extension Date {
             components.setValue(0, for: .nanosecond)
             components.setValue(0, for: .second)
             if let stepSize = stepSize, let minutes = components.minute {
-                let valueRoundedByStep = floor(Double(minutes) / stepSize * 60)
+                let stepSizeInMinutes = stepSize / 60
+                let valueRoundedByStep = floor(Double(minutes) / stepSizeInMinutes) * stepSizeInMinutes
                 components.setValue(Int(valueRoundedByStep), for: .minute)
             }
             assert(components.isValidDate)
@@ -303,6 +304,11 @@ public extension Date {
             components.setValue(0, for: .nanosecond)
             components.setValue(0, for: .second)
             components.setValue(0, for: .minute)
+            if let stepSize = stepSize, let hours = components.hour {
+                let stepSizeInHours = stepSize / (60 * 60)
+                let valueRoundedByStep = floor(Double(hours) / stepSizeInHours) * stepSizeInHours
+                components.setValue(Int(valueRoundedByStep), for: .hour)
+            }
             assert(components.isValidDate)
             return components.date
         case .days:
@@ -310,6 +316,11 @@ public extension Date {
             components.setValue(0, for: .second)
             components.setValue(0, for: .minute)
             components.setValue(0, for: .hour)
+            if let stepSize = stepSize, let days = components.day {
+                let stepSizeInDays = stepSize / (24 * 60 * 60)
+                let valueRoundedByStep = floor(Double(days) / stepSizeInDays) * stepSizeInDays
+                components.setValue(Int(valueRoundedByStep), for: .day)
+            }
             assert(components.isValidDate)
             return components.date
         case .months:
@@ -318,6 +329,11 @@ public extension Date {
             components.setValue(0, for: .minute)
             components.setValue(0, for: .hour)
             components.setValue(1, for: .day)
+            if let stepSize = stepSize, let months = components.month {
+                let stepSizeInMonths = stepSize / (28 * 24 * 60 * 60)
+                let valueRoundedByStep = floor(Double(months) / stepSizeInMonths) * stepSizeInMonths
+                components.setValue(Int(valueRoundedByStep), for: .month)
+            }
             assert(components.isValidDate)
             return components.date
         case .years:
