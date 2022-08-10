@@ -78,6 +78,13 @@ public struct DateScale<OutputType: BinaryFloatingPoint>: ReversibleScale, Custo
         "\(scaleType)(xform:\(transformType))[\(domainLower):\(domainHigher)]->[\(String(describing: rangeLower)):\(String(describing: rangeHigher))]"
     }
 
+    /// Returns a Boolean value that indicates whether the value you provided is within the scale's domain.
+    /// - Parameter value: The value to compare.
+    /// - Returns: `true` if the value is between the lower and upper domain values.
+    func domainContains(_ value: InputType) -> Bool {
+        value >= domainLower && value <= domainHigher
+    }
+
     // MARK: - modifier functions
 
     /// Returns a new scale with the domain set to the values you provide.
@@ -101,20 +108,19 @@ public struct DateScale<OutputType: BinaryFloatingPoint>: ReversibleScale, Custo
     /// Returns a new scale with the domain set to span the values you provide.
     /// - Parameter nice: A Boolean value that indicates whether to expand the domain to visually nice values.
     /// - Parameter values: An array of dates.
-    public func domain(_ values: [Date], nice _: Bool = true) -> Self {
+    public func domain(_ values: [Date], nice: Bool = true) -> Self {
         precondition(values.count > 1)
         let sortedValues = values.sorted()
         guard let min = sortedValues.min(), let max = sortedValues.max() else {
             return self
         }
         precondition(min < max)
-//        if nice {
-//            let bottom = Date.niceMinimumValueForRange(min: min, max: max)
-//            let top = Date.niceVersion(for: max, trendTowardsZero: false)
-//            return domain(lower: bottom, higher: top)
-//        } else {
-//            return domain(lower: min, higher: max)
-//        }
+        if nice {
+            let magnitude = DateMagnitude.magnitudeOfDateRange(min, max)
+            if let bottom = min.round(magnitude: magnitude, calendar: Calendar.current) {
+                return domain(lower: bottom, higher: max)
+            }
+        }
         return domain(lower: min, higher: max)
     }
 
@@ -194,5 +200,96 @@ public struct DateScale<OutputType: BinaryFloatingPoint>: ReversibleScale, Custo
             return nil
         }
         return Date(timeIntervalSinceReferenceDate: doubleAtDate)
+    }
+
+    // MARK: - tick methods
+
+    /// Returns a list of strings that make up the tick values that are contained within the domain of the scale.
+    /// - Parameters:
+    ///   - inputValues: an array of values of the Scale's InputType
+    ///   - formatter: An optional formatter to convert the domain values into strings.
+    public func validTickValues(_ inputValues: [InputType], formatter: Formatter? = nil) -> [String] {
+        inputValues.compactMap { value in
+            if domainContains(value) {
+                if let formatter = formatter {
+                    return formatter.string(for: value) ?? ""
+                } else {
+                    return String("\(value)")
+                }
+            }
+            return nil
+        }
+    }
+
+    /// Converts an array of values that matches the scale's input type to a list of ticks that are within the scale's domain.
+    ///
+    /// Used for manually specifying a series of ticks that you want to have displayed.
+    ///
+    /// Values presented for display that are *not* within the domain of the scale are dropped.
+    /// Values that scale outside of the range you provide are adjusted based on the setting of ``ContinuousScale/transformType``.
+    /// - Parameter inputValues: an array of values of the Scale's InputType
+    /// - Parameter reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+    /// - Parameter lower: The lower value of the range the scale maps to.
+    /// - Parameter higher: The higher value of the range the scale maps to.
+    /// - Parameter formatter: An optional formatter to convert the domain values into strings.
+    /// - Returns: A list of tick values validated against the domain, and range based on the setting of ``ContinuousScale/transformType``
+    public func ticksFromValues(_ inputValues: [InputType], reversed: Bool = false, from lower: OutputType, to higher: OutputType, formatter: Formatter? = nil) -> [Tick<OutputType>] {
+        let updatedScale = range(reversed: reversed, lower: lower, higher: higher)
+        return inputValues.compactMap { inputValue in
+            if domainContains(inputValue),
+               let rangeValue = updatedScale.scale(inputValue)
+            {
+                switch transformType {
+                case .none:
+                    return Tick(value: inputValue, location: rangeValue, formatter: formatter)
+                case .drop:
+                    if rangeValue > higher || rangeValue < lower {
+                        return nil
+                    }
+                    return Tick(value: inputValue, location: rangeValue, formatter: formatter)
+                case .clamp:
+                    if rangeValue > higher {
+                        return Tick(value: inputValue, location: higher, formatter: formatter)
+                    } else if rangeValue < lower {
+                        return Tick(value: inputValue, location: lower, formatter: formatter)
+                    }
+                    return Tick(value: inputValue, location: rangeValue, formatter: formatter)
+                }
+            }
+            return nil
+        }
+    }
+
+    /// Returns an array of the locations within the output range to locate ticks for the scale.
+    /// - Parameters:
+    ///   - reversed: A Boolean value that indicates if the mapping from domain to range is inverted.
+    ///   - rangeLower: the lower value for the range into which to position the ticks.
+    ///   - rangeHigher: The higher value for the range into which to position the ticks.
+    ///   - formatter: An optional formatter to convert the domain values into strings.
+    ///   - calendar: The calendar to use in determining time slices.
+    public func ticks(reversed: Bool = false, rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter? = nil, calendar: Calendar = Calendar.current) -> [Tick<OutputType>] {
+        let tickValues: [InputType] = Date.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks, using: calendar)
+        let updatedScale = range(reversed: reversed, lower: rangeLower, higher: rangeHigher)
+        return tickValues.compactMap { tickValue -> Tick<OutputType>? in
+            // we only want tick values that are within the domain that's been specified on the scale.
+            if domainContains(tickValue), let tickRangeLocation = updatedScale.scale(tickValue) {
+                return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
+            }
+            return nil
+        }
+    }
+
+    /// Returns an array of the strings that make up the ticks for the scale.
+    /// - Parameter formatter: An optional formatter to convert the domain values into strings.
+    /// - Parameter calendar: The calendar to use in determining time slices.
+    public func defaultTickValues(formatter: Formatter? = nil, calendar: Calendar = Calendar.current) -> [String] {
+        let tickValues: [InputType] = Date.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks, using: calendar)
+        return tickValues.map { intValue in
+            if let formatter = formatter {
+                return formatter.string(for: intValue) ?? ""
+            } else {
+                return String("\(intValue)")
+            }
+        }
     }
 }

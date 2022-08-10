@@ -164,7 +164,7 @@ final class DateNiceValueTests: XCTestCase {
         let (niceMin, step, niceMax) = Date.niceMinStepMax(min: dateMin, max: dateMax, ofSize: 10, calendar: testCal)
         XCTAssertTrue(niceMin <= dateMin)
         // print(formatter.string(from: dateMin))
-        XCTAssertEqual(formatter.string(from: niceMin), "2022-08-08T22:43:00.000Z")
+        XCTAssertEqual(formatter.string(from: niceMin), "2022-08-08T22:43:09.011Z")
         XCTAssertEqual(step, 60) // 1 minute steps
         XCTAssertEqual(formatter.string(from: niceMax), "2022-08-08T22:45:00.000Z")
         // print(formatter.string(from: dateMax))
@@ -179,7 +179,7 @@ final class DateNiceValueTests: XCTestCase {
         let (niceMin, step, niceMax) = Date.niceMinStepMax(min: dateMin, max: dateMax, ofSize: 10, calendar: testCal)
         XCTAssertTrue(niceMin <= dateMin)
         // print(formatter.string(from: dateMin))
-        XCTAssertEqual(formatter.string(from: niceMin), "2022-08-08T22:43:00.000Z")
+        XCTAssertEqual(formatter.string(from: niceMin), "2022-08-08T22:43:09.011Z")
         XCTAssertEqual(step, 60) // 1 minute steps
         XCTAssertEqual(formatter.string(from: niceMax), "2022-08-08T22:47:00.000Z")
         // print(formatter.string(from: dateMax))
@@ -194,7 +194,7 @@ final class DateNiceValueTests: XCTestCase {
         let (niceMin, step, niceMax) = Date.niceMinStepMax(min: dateMin, max: dateMax, ofSize: 10, calendar: testCal)
         XCTAssertTrue(niceMin <= dateMin)
         // print(formatter.string(from: dateMin))
-        XCTAssertEqual(formatter.string(from: niceMin), "2022-08-08T22:43:00.000Z")
+        XCTAssertEqual(formatter.string(from: niceMin), "2022-08-08T22:43:09.011Z")
         XCTAssertEqual(step, 60 * 5) // 5 minute steps
         XCTAssertEqual(formatter.string(from: niceMax), "2022-08-08T23:19:00.000Z")
         // print(formatter.string(from: dateMax))
@@ -215,14 +215,14 @@ final class DateNiceValueTests: XCTestCase {
 
         // 31.x minutes results in 8 ticks, each 5 minutes apart,
         XCTAssertEqual(resultDates.map { formatter.string(from: $0) }, [
-            "2022-08-08T22:43:00.000Z",
-            "2022-08-08T22:48:00.000Z",
-            "2022-08-08T22:53:00.000Z",
-            "2022-08-08T22:58:00.000Z",
-            "2022-08-08T23:03:00.000Z",
-            "2022-08-08T23:08:00.000Z",
-            "2022-08-08T23:13:00.000Z",
-            "2022-08-08T23:18:00.000Z",
+            "2022-08-08T22:43:09.011Z",
+            "2022-08-08T22:48:09.011Z",
+            "2022-08-08T22:53:09.011Z",
+            "2022-08-08T22:58:09.011Z",
+            "2022-08-08T23:03:09.011Z",
+            "2022-08-08T23:08:09.011Z",
+            "2022-08-08T23:13:09.011Z",
+            "2022-08-08T23:18:09.011Z",
         ])
         XCTAssertTrue(resultDates.first! <= dateMin)
         XCTAssertTrue(resultDates.last! >= dateMax)
@@ -234,18 +234,17 @@ final class DateNiceValueTests: XCTestCase {
         let dateMin = now
         let dateMax = now + 11.1 * secHour
         let resultDates = Date.rangeOfNiceValues(min: dateMin, max: dateMax, ofSize: 10, using: testCal)
-        XCTAssertEqual(resultDates.count, 8)
+        XCTAssertEqual(resultDates.count, 7)
 
-        // 31.x minutes results in 8 ticks, each 2 hours apart,
+        // 31.x minutes results in 7 ticks, each 2 hours apart,
         XCTAssertEqual(resultDates.map { formatter.string(from: $0) }, [
-            "2022-08-08T22:00:00.000Z",
-            "2022-08-09T00:00:00.000Z",
-            "2022-08-09T02:00:00.000Z",
-            "2022-08-09T04:00:00.000Z",
-            "2022-08-09T06:00:00.000Z",
-            "2022-08-09T08:00:00.000Z",
-            "2022-08-09T10:00:00.000Z",
-            "2022-08-09T12:00:00.000Z",
+            "2022-08-08T22:43:09.011Z",
+            "2022-08-09T00:43:09.011Z",
+            "2022-08-09T02:43:09.011Z",
+            "2022-08-09T04:43:09.011Z",
+            "2022-08-09T06:43:09.011Z",
+            "2022-08-09T08:43:09.011Z",
+            "2022-08-09T10:43:09.011Z",
         ])
         XCTAssertTrue(resultDates.first! <= dateMin)
         XCTAssertTrue(resultDates.last! >= dateMax)
@@ -261,11 +260,11 @@ final class DateNiceValueTests: XCTestCase {
 
         // 23.1 days results in 5 ticks, each 7 days apart,
         XCTAssertEqual(resultDates.map { formatter.string(from: $0) }, [
-            "2022-08-08T00:00:00.000Z",
-            "2022-08-15T00:00:00.000Z",
-            "2022-08-22T00:00:00.000Z",
-            "2022-08-29T00:00:00.000Z",
-            "2022-09-05T00:00:00.000Z",
+            "2022-08-08T22:43:09.011Z",
+            "2022-08-15T22:43:09.011Z",
+            "2022-08-22T22:43:09.011Z",
+            "2022-08-29T22:43:09.011Z",
+            "2022-09-05T22:43:09.011Z",
         ])
         XCTAssertTrue(resultDates.first! <= dateMin)
         XCTAssertTrue(resultDates.last! >= dateMax)
