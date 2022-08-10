@@ -277,13 +277,14 @@ public extension Date {
         assert(components.isValidDate)
         switch magnitude {
         case .subsecond:
-            let asNanoseconds = components.nanosecond!
-            components.nanosecond = Int.niceVersion(for: asNanoseconds, trendTowardsZero: true)
+            if let asNanoseconds = components.nanosecond {
+                components.nanosecond = Int.niceVersion(for: asNanoseconds, trendTowardsZero: true)
+            }
             assert(components.isValidDate)
             return components.date
         case .seconds:
             components.setValue(0, for: .nanosecond)
-            if let stepSize, let seconds = components.second {
+            if let stepSize = stepSize, let seconds = components.second {
                 let valueRoundedByStep = floor(Double(seconds) / stepSize)
                 components.setValue(Int(valueRoundedByStep), for: .second)
             }
@@ -292,7 +293,7 @@ public extension Date {
         case .minutes:
             components.setValue(0, for: .nanosecond)
             components.setValue(0, for: .second)
-            if let stepSize, let minutes = components.minute {
+            if let stepSize = stepSize, let minutes = components.minute {
                 let valueRoundedByStep = floor(Double(minutes) / stepSize * 60)
                 components.setValue(Int(valueRoundedByStep), for: .minute)
             }
