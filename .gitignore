@@ -10,6 +10,9 @@
 .scale-graphs
 Sources/SwiftVizScale/Documentation.docc/.docc-build/
 
+Package.resolved
+utils/Package.resolved
+
 # docbuild helper sets - generated from docbuild script
 all_identifiers.txt
 all_symbols.txt
