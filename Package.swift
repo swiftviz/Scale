@@ -23,7 +23,7 @@ let package = Package(
         .package(
             url: "https://github.com/apple/swift-collections.git",
             .upToNextMajor(from: "1.0.0")
-        )
+        ),
     ],
     targets: [
         .target(
@@ -46,10 +46,10 @@ let package = Package(
 )
 
 #if swift(>=5.6)
-// plugin support is only available for Swift 5.6 and later
-package.dependencies += [
-    .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.1.0"),
-]
+    // plugin support is only available for Swift 5.6 and later
+    package.dependencies += [
+        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.1.0"),
+    ]
 #endif
 
 // Checking macOS build w/ Xcode 14 beta
