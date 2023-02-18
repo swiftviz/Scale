@@ -138,7 +138,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "All bins except the last for a particular chart represent an open range, meaning that the range doesn’t include the upper bound.",
+              "text" : "The bins are expected to be used either independently as an ordered collection, or as the keys for an ordered dictionary.",
               "type" : "text"
             },
             {
@@ -146,7 +146,7 @@
               "type" : "text"
             },
             {
-              "text" : "The last range of the last bin is closed, so that it does include the upper bound.",
+              "text" : "Within the collection, all bins except the last for a particular chart represent an open range.",
               "type" : "text"
             },
             {
@@ -154,7 +154,15 @@
               "type" : "text"
             },
             {
-              "text" : "The system keeps track of the open or closed state of a particular range.",
+              "text" : "As an open range, the bin doesn’t include the threshold of the upper bound within it.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "The last bin of the collection is a closed range to include the final upper bound.",
               "type" : "text"
             }
           ],
@@ -377,7 +385,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/HistogramBinRange/description": {
   "abstract" : [
-
+    {
+      "text" : "The description of the bin.",
+      "type" : "text"
+    }
   ],
   "conformance" : {
     "availabilityPrefix" : [
@@ -451,7 +462,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/HistogramBinRange/lowerBound": {
   "abstract" : [
-
+    {
+      "text" : "The lower bound of the bin range.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -484,7 +498,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/HistogramBinRange/upperBound": {
   "abstract" : [
-
+    {
+      "text" : "The upper bound of the bin range.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

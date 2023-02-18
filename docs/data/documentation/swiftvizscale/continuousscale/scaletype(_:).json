@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "Returns a new scale with the type of scale set to the type you provide.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -143,6 +149,25 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The type of continuous scale.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "scaleType"
+        }
+      ]
     }
   ],
   "schemaVersion" : {
@@ -1103,7 +1128,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/scaleType(_:)": {
   "abstract" : [
-
+    {
+      "text" : "Returns a new scale with the type of scale set to the type you provide.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

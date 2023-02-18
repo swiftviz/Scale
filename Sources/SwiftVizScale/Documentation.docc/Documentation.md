@@ -55,4 +55,7 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 
 - ``SwiftVizScale/Scale``
 - ``SwiftVizScale/ReversibleScale``
-- <doc:ExampleArticle>
+
+### Snippets
+
+- <doc:Snippets>

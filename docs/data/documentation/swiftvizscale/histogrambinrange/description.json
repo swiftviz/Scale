@@ -1,15 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Inherited from ",
-      "type" : "text"
-    },
-    {
-      "code" : "CustomStringConvertible.description",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ".",
+      "text" : "The description of the bin.",
       "type" : "text"
     }
   ],
@@ -250,7 +242,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/HistogramBinRange/description": {
   "abstract" : [
-
+    {
+      "text" : "The description of the bin.",
+      "type" : "text"
+    }
   ],
   "conformance" : {
     "availabilityPrefix" : [
@@ -324,7 +319,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/HistogramBinRange/lowerBound": {
   "abstract" : [
-
+    {
+      "text" : "The lower bound of the bin range.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -357,7 +355,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/HistogramBinRange/upperBound": {
   "abstract" : [
-
+    {
+      "text" : "The upper bound of the bin range.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

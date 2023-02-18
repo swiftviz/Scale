@@ -1015,25 +1015,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
-      "text" : "ContinuousScale"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ">."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
-      "text" : "InputType"
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
     }
   ],
   "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domainHigher",
@@ -1069,25 +1052,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
-      "text" : "ContinuousScale"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ">."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
-      "text" : "InputType"
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
     }
   ],
   "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domainLower",
@@ -1100,7 +1066,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-4twbk": {
   "abstract" : [
     {
-      "text" : "Creates a new linear scale for the upper and lower bounds of the domain range you provide.",
+      "text" : "Creates a new scale for the upper and lower bounds of the domain range you provide.",
       "type" : "text"
     }
   ],
@@ -1249,7 +1215,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-5y3b5": {
   "abstract" : [
     {
-      "text" : "Creates a new linear scale for the upper and lower bounds of the domain range you provide.",
+      "text" : "Creates a new scale for the upper and lower bounds of the domain range you provide.",
       "type" : "text"
     }
   ],
@@ -1398,7 +1364,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-7c7g6": {
   "abstract" : [
     {
-      "text" : "Creates a new power scale for the domain of ",
+      "text" : "Creates a new scale for the domain of ",
       "type" : "text"
     },
     {
@@ -1546,7 +1512,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-7n1l8": {
   "abstract" : [
     {
-      "text" : "Creates a new power scale for the domain of ",
+      "text" : "Creates a new scale for the domain of ",
       "type" : "text"
     },
     {
@@ -1694,7 +1660,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(lower:higher:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-1dq3o": {
   "abstract" : [
     {
-      "text" : "Creates a new linear scale for the upper and lower bounds of the domain you provide.",
+      "text" : "Creates a new scale for the upper and lower bounds of the domain you provide.",
       "type" : "text"
     }
   ],
@@ -1858,7 +1824,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(lower:higher:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-6xgot": {
   "abstract" : [
     {
-      "text" : "Creates a new linear scale for the upper and lower bounds of the domain you provide.",
+      "text" : "Creates a new scale for the upper and lower bounds of the domain you provide.",
       "type" : "text"
     }
   ],
@@ -2021,7 +1987,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates a new identity scale.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -2931,7 +2900,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/rangeHigher": {
   "abstract" : [
     {
-      "text" : "The upper bound of the input domain.",
+      "text" : "The upper bound of the output range.",
       "type" : "text"
     }
   ],
@@ -2971,7 +2940,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/rangeLower": {
   "abstract" : [
     {
-      "text" : "The lower bound of the input domain.",
+      "text" : "The lower bound of the output range.",
       "type" : "text"
     }
   ],
@@ -3560,7 +3529,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/scaleType(_:)": {
   "abstract" : [
-
+    {
+      "text" : "Returns a new scale with the type of scale set to the type you provide.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

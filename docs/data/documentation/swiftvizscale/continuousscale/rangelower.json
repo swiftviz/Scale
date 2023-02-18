@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "The lower bound of the input domain.",
+      "text" : "The lower bound of the output range.",
       "type" : "text"
     }
   ],
@@ -282,25 +282,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
-      "text" : "ContinuousScale"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ">."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
-      "text" : "InputType"
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
     }
   ],
   "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domainHigher",
@@ -336,25 +319,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V",
-      "text" : "ContinuousScale"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ">."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SwiftVizScale010ContinuousC0V9InputTypea",
-      "text" : "InputType"
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
     }
   ],
   "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScale\/domainLower",
@@ -367,7 +333,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/rangeHigher": {
   "abstract" : [
     {
-      "text" : "The upper bound of the input domain.",
+      "text" : "The upper bound of the output range.",
       "type" : "text"
     }
   ],
@@ -407,7 +373,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/rangeLower": {
   "abstract" : [
     {
-      "text" : "The lower bound of the input domain.",
+      "text" : "The lower bound of the output range.",
       "type" : "text"
     }
   ],

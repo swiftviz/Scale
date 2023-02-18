@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Creates a new linear scale for the upper and lower bounds of the domain you provide.",
+      "text" : "Creates a new scale for the upper and lower bounds of the domain you provide.",
       "type" : "text"
     }
   ],
@@ -411,7 +411,21 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The transform constraint to apply when values fall outside the domain of the scale.",
+                  "text" : "The type of continuous scale.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "scaleType"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A transformation value that indicates whether the output vales are constrained to the min and max of the output range.",
                   "type" : "text"
                 }
               ],
@@ -433,6 +447,48 @@
             }
           ],
           "name" : "desiredTicks"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A Boolean value that indicates if the mapping from domain to range is inverted.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "reversed"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The lower bound of the output range.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "rangeLower"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The upper bound of the output range.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "rangeHigher"
         }
       ]
     }
@@ -524,7 +580,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-4twbk": {
   "abstract" : [
     {
-      "text" : "Creates a new linear scale for the upper and lower bounds of the domain range you provide.",
+      "text" : "Creates a new scale for the upper and lower bounds of the domain range you provide.",
       "type" : "text"
     }
   ],
@@ -673,7 +729,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-5y3b5": {
   "abstract" : [
     {
-      "text" : "Creates a new linear scale for the upper and lower bounds of the domain range you provide.",
+      "text" : "Creates a new scale for the upper and lower bounds of the domain range you provide.",
       "type" : "text"
     }
   ],
@@ -822,7 +878,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-7c7g6": {
   "abstract" : [
     {
-      "text" : "Creates a new power scale for the domain of ",
+      "text" : "Creates a new scale for the domain of ",
       "type" : "text"
     },
     {
@@ -970,7 +1026,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(_:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-7n1l8": {
   "abstract" : [
     {
-      "text" : "Creates a new power scale for the domain of ",
+      "text" : "Creates a new scale for the domain of ",
       "type" : "text"
     },
     {
@@ -1118,7 +1174,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(lower:higher:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-1dq3o": {
   "abstract" : [
     {
-      "text" : "Creates a new linear scale for the upper and lower bounds of the domain you provide.",
+      "text" : "Creates a new scale for the upper and lower bounds of the domain you provide.",
       "type" : "text"
     }
   ],
@@ -1282,7 +1338,7 @@
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(lower:higher:type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)-6xgot": {
   "abstract" : [
     {
-      "text" : "Creates a new linear scale for the upper and lower bounds of the domain you provide.",
+      "text" : "Creates a new scale for the upper and lower bounds of the domain you provide.",
       "type" : "text"
     }
   ],
@@ -1445,7 +1501,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/ContinuousScale/init(type:transform:desiredTicks:reversed:rangeLower:rangeHigher:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates a new identity scale.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
