@@ -1,0 +1,510 @@
+{
+  "abstract" : [
+    {
+      "text" : "A type that represents the magnitude of the range between two dates.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:13SwiftVizScale13DateMagnitudeO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "DateMagnitude"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SwiftVizScale"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "DateMagnitude"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "DateMagnitude"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "DateMagnitude"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/SQ",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/SH"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/days",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/hours",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/minutes",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/months",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/seconds-swift.enum.case",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/subsecond",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/years"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/seconds-swift.property"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/magnitudeOfDateRange(_:_:)"
+      ],
+      "title" : "Type Methods"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/swiftvizscale\/datemagnitude"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://com.github.swiftviz.SwiftVizScale/SH": {
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://com.github.swiftviz.SwiftVizScale/SQ": {
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of components to provide structures that support data visualization.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SwiftVizScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DateMagnitude": {
+  "abstract" : [
+    {
+      "text" : "A type that represents the magnitude of the range between two dates.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DateMagnitude"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DateMagnitude"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DateMagnitude",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/datemagnitude"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DateMagnitude/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/datemagnitude\/equatable-implementations"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DateMagnitude/days": {
+  "abstract" : [
+    {
+      "text" : "Days, up to a month.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "days"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/days",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "DateMagnitude.days",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/datemagnitude\/days"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DateMagnitude/hours": {
+  "abstract" : [
+    {
+      "text" : "Hours, up to a day.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hours"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/hours",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "DateMagnitude.hours",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/datemagnitude\/hours"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DateMagnitude/magnitudeOfDateRange(_:_:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "magnitudeOfDateRange"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SwiftVizScale13DateMagnitudeO",
+      "text" : "DateMagnitude"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/magnitudeOfDateRange(_:_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "magnitudeOfDateRange(_:_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/datemagnitude\/magnitudeofdaterange(_:_:)"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DateMagnitude/minutes": {
+  "abstract" : [
+    {
+      "text" : "Minutes, up to an hour.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "minutes"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/minutes",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "DateMagnitude.minutes",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/datemagnitude\/minutes"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DateMagnitude/months": {
+  "abstract" : [
+    {
+      "text" : "Months, up to a year.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "months"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/months",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "DateMagnitude.months",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/datemagnitude\/months"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DateMagnitude/seconds-swift.enum.case": {
+  "abstract" : [
+    {
+      "text" : "Seconds, up to a minute.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "seconds"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/seconds-swift.enum.case",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "DateMagnitude.seconds",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/datemagnitude\/seconds-swift.enum.case"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DateMagnitude/seconds-swift.property": {
+  "abstract" : [
+    {
+      "text" : "The value of the date magnitude in seconds per increment.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "seconds"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/seconds-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "seconds",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/datemagnitude\/seconds-swift.property"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DateMagnitude/subsecond": {
+  "abstract" : [
+    {
+      "text" : "Less than a second.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "subsecond"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/subsecond",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "DateMagnitude.subsecond",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/datemagnitude\/subsecond"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DateMagnitude/years": {
+  "abstract" : [
+    {
+      "text" : "Years.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "years"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude\/years",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "DateMagnitude.years",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/datemagnitude\/years"
+}
+}
+}
