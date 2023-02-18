@@ -4,566 +4,445 @@
       {
         "children" : [
           {
-            "title" : "Inspecting a Band",
+            "title" : "Continuous Scales",
             "type" : "groupMarker"
           },
           {
-            "path" : "\/documentation\/swiftvizscale\/band\/higher",
-            "title" : "let higher: RangeType",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/band\/middle",
-            "title" : "var middle: RangeType",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/band\/lower",
-            "title" : "let lower: RangeType",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/band\/value",
-            "title" : "let value: EnclosedType",
-            "type" : "property"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/band",
-        "title" : "Band",
-        "type" : "struct"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Creating a Band Scale",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/init(_:paddinginner:paddingouter:round:reversed:from:to:)",
-            "title" : "init([CategoryType], paddingInner: OutputType, paddingOuter: OutputType, round: Bool, reversed: Bool, from: OutputType?, to: OutputType?)",
-            "type" : "init"
-          },
-          {
-            "title" : "Updating Scales",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/domain(_:)",
-            "title" : "func domain([CategoryType]) -> BandScale<CategoryType, OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/round(_:)",
-            "title" : "func round(Bool) -> BandScale<CategoryType, OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/paddinginner(_:)",
-            "title" : "func paddingInner(OutputType) -> BandScale<CategoryType, OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/paddingouter(_:)",
-            "title" : "func paddingOuter(OutputType) -> BandScale<CategoryType, OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/range(_:)",
-            "title" : "func range(ClosedRange<OutputType>) -> BandScale<CategoryType, OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/range(lower:higher:)",
-            "title" : "func range(lower: OutputType, higher: OutputType) -> BandScale<CategoryType, OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/range(reversed:_:)",
-            "title" : "func range(reversed: Bool, ClosedRange<OutputType>) -> BandScale<CategoryType, OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/range(reversed:lower:higher:)",
-            "title" : "func range(reversed: Bool, lower: OutputType, higher: OutputType) -> BandScale<CategoryType, OutputType>",
-            "type" : "method"
-          },
-          {
-            "title" : "Inspecting Scales",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/domain",
-            "title" : "let domain: [CategoryType]",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/round",
-            "title" : "let round: Bool",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/paddinginner",
-            "title" : "let paddingInner: OutputType",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/paddingouter",
-            "title" : "let paddingOuter: OutputType",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/reversed",
-            "title" : "let reversed: Bool",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/rangelower",
-            "title" : "let rangeLower: OutputType?",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/rangehigher",
-            "title" : "let rangeHigher: OutputType?",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/scaletype",
-            "title" : "let scaleType: DiscreteScaleType",
-            "type" : "property"
-          },
-          {
-            "title" : "Converting Values",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/scale(_:)",
-            "title" : "func scale(CategoryType) -> Band<CategoryType, OutputType>?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/scale(_:from:to:)",
-            "title" : "func scale(CategoryType, from: OutputType, to: OutputType) -> Band<CategoryType, OutputType>?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/scale(_:reversed:from:to:)",
-            "title" : "func scale(CategoryType, reversed: Bool, from: OutputType, to: OutputType) -> Band<CategoryType, OutputType>?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/invert(_:)-63wv8",
-            "title" : "func invert(OutputType) -> CategoryType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/invert(_:)-9z1xu",
-            "title" : "func invert(Band<CategoryType, OutputType>) -> CategoryType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/invert(_:from:to:)",
-            "title" : "func invert(OutputType, from: OutputType, to: OutputType) -> CategoryType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/invert(_:reversed:from:to:)",
-            "title" : "func invert(OutputType, reversed: Bool, from: OutputType, to: OutputType) -> CategoryType?",
-            "type" : "method"
-          },
-          {
-            "title" : "Creating Ticks",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/ticks(rangelower:rangehigher:formatter:)",
-            "title" : "func ticks(rangeLower: BandScale<CategoryType, OutputType>.RangeType, rangeHigher: BandScale<CategoryType, OutputType>.RangeType, formatter: Formatter?) -> [Tick<BandScale<CategoryType, OutputType>.RangeType>]",
-            "type" : "method"
-          },
-          {
-            "title" : "Default Implementations",
-            "type" : "groupMarker"
+            "path" : "\/documentation\/swiftvizscale\/makingandusingscales",
+            "title" : "Making and Using Scales",
+            "type" : "article"
           },
           {
             "children" : [
               {
-                "title" : "Instance Properties",
+                "title" : "Creating a Continuous Scale",
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/bandscale\/description",
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/init(_:type:transform:desiredticks:reversed:rangelower:rangehigher:)-4twbk",
+                "title" : "init<T>(ClosedRange<T>, type: ContinuousScaleType, transform: DomainDataTransform, desiredTicks: Int, reversed: Bool, rangeLower: OutputType?, rangeHigher: OutputType?)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/init(_:type:transform:desiredticks:reversed:rangelower:rangehigher:)-5y3b5",
+                "title" : "init<T>(ClosedRange<T>, type: ContinuousScaleType, transform: DomainDataTransform, desiredTicks: Int, reversed: Bool, rangeLower: OutputType?, rangeHigher: OutputType?)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/init(_:type:transform:desiredticks:reversed:rangelower:rangehigher:)-7c7g6",
+                "title" : "init<T>(T, type: ContinuousScaleType, transform: DomainDataTransform, desiredTicks: Int, reversed: Bool, rangeLower: OutputType?, rangeHigher: OutputType?)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/init(_:type:transform:desiredticks:reversed:rangelower:rangehigher:)-7n1l8",
+                "title" : "init<T>(T, type: ContinuousScaleType, transform: DomainDataTransform, desiredTicks: Int, reversed: Bool, rangeLower: OutputType?, rangeHigher: OutputType?)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/init(lower:higher:type:transform:desiredticks:reversed:rangelower:rangehigher:)-1dq3o",
+                "title" : "init<T>(lower: T, higher: T, type: ContinuousScaleType, transform: DomainDataTransform, desiredTicks: Int, reversed: Bool, rangeLower: OutputType?, rangeHigher: OutputType?)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/init(lower:higher:type:transform:desiredticks:reversed:rangelower:rangehigher:)-6xgot",
+                "title" : "init<T>(lower: T, higher: T, type: ContinuousScaleType, transform: DomainDataTransform, desiredTicks: Int, reversed: Bool, rangeLower: OutputType?, rangeHigher: OutputType?)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/init(type:transform:desiredticks:reversed:rangelower:rangehigher:)",
+                "title" : "init(type: ContinuousScaleType, transform: DomainDataTransform, desiredTicks: Int, reversed: Bool, rangeLower: OutputType?, rangeHigher: OutputType?)",
+                "type" : "init"
+              },
+              {
+                "title" : "Inspecting Scales",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/domainlower",
+                "title" : "let domainLower: Double",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/domainhigher",
+                "title" : "let domainHigher: Double",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/transformtype",
+                "title" : "var transformType: DomainDataTransform",
+                "type" : "property"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Domain Transform Values",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/domaindatatransform\/none",
+                    "title" : "case none",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/domaindatatransform\/clamp",
+                    "title" : "case clamp",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/domaindatatransform\/drop",
+                    "title" : "case drop",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Comparing Transform Settings",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/domaindatatransform\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/swiftvizscale\/domaindatatransform\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/swiftvizscale\/domaindatatransform\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/domaindatatransform",
+                "title" : "DomainDataTransform",
+                "type" : "enum"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/scaletype",
+                "title" : "let scaleType: ContinuousScaleType",
+                "type" : "property"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/linear",
+                    "title" : "case linear",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/log",
+                    "title" : "case log",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/power(_:)",
+                    "title" : "case power(Double)",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/radial",
+                    "title" : "case radial",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/continuousscaletype",
+                "title" : "ContinuousScaleType",
+                "type" : "enum"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/desiredticks",
+                "title" : "let desiredTicks: Int",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/reversed",
+                "title" : "let reversed: Bool",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/rangehigher",
+                "title" : "let rangeHigher: OutputType?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/rangelower",
+                "title" : "let rangeLower: OutputType?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/description",
                 "title" : "var description: String",
                 "type" : "property"
-              }
-            ],
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/customstringconvertible-implementations",
-            "title" : "CustomStringConvertible Implementations",
-            "type" : "symbol"
-          },
-          {
-            "children" : [
+              },
               {
-                "title" : "Instance Methods",
+                "title" : "Updating Scales",
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/bandscale\/defaulttickvalues(formatter:)",
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:)-63bua",
+                "title" : "func domain<T>(ClosedRange<T>) -> ContinuousScale<OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:)-6qxk9",
+                "title" : "func domain<T>(ClosedRange<T>) -> ContinuousScale<OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:)-7oobb",
+                "title" : "func domain<T>([T]) -> ContinuousScale<OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:)-91w7x",
+                "title" : "func domain<T>([T]) -> ContinuousScale<OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:nice:)",
+                "title" : "func domain<T>([T], nice: Bool) -> ContinuousScale<OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/domain(lower:higher:)-5u2ks",
+                "title" : "func domain<T>(lower: T, higher: T) -> ContinuousScale<OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/domain(lower:higher:)-78pku",
+                "title" : "func domain<T>(lower: T, higher: T) -> ContinuousScale<OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/scaletype(_:)",
+                "title" : "func scaleType(ContinuousScaleType) -> ContinuousScale<OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/range(_:)",
+                "title" : "func range(ClosedRange<OutputType>) -> ContinuousScale<OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/range(lower:higher:)",
+                "title" : "func range(lower: OutputType, higher: OutputType) -> ContinuousScale<OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/range(reversed:_:)",
+                "title" : "func range(reversed: Bool, ClosedRange<OutputType>) -> ContinuousScale<OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/range(reversed:lower:higher:)",
+                "title" : "func range(reversed: Bool, lower: OutputType, higher: OutputType) -> ContinuousScale<OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/transform(_:)",
+                "title" : "func transform(DomainDataTransform) -> ContinuousScale<OutputType>",
+                "type" : "method"
+              },
+              {
+                "title" : "Converting Values",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/scale(_:)",
+                "title" : "func scale(ContinuousScale<OutputType>.InputType) -> OutputType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/scale(_:from:to:)",
+                "title" : "func scale(ContinuousScale<OutputType>.InputType, from: OutputType, to: OutputType) -> OutputType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/scale(_:reversed:from:to:)",
+                "title" : "func scale(ContinuousScale<OutputType>.InputType, reversed: Bool, from: OutputType, to: OutputType) -> OutputType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/scale(_:to:)",
+                "title" : "func scale(ContinuousScale<OutputType>.InputType, to: OutputType) -> OutputType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/scale(_:to:reversed:)",
+                "title" : "func scale(ContinuousScale<OutputType>.InputType, to: OutputType, reversed: Bool) -> OutputType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/invert(_:)",
+                "title" : "func invert(OutputType) -> ContinuousScale<OutputType>.InputType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/invert(_:from:to:)",
+                "title" : "func invert(OutputType, from: OutputType, to: OutputType) -> ContinuousScale<OutputType>.InputType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/invert(_:reversed:from:to:)",
+                "title" : "func invert(OutputType, reversed: Bool, from: OutputType, to: OutputType) -> ContinuousScale<OutputType>.InputType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/invert(_:to:)",
+                "title" : "func invert(OutputType, to: OutputType) -> ContinuousScale<OutputType>.InputType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/invert(_:to:reversed:)",
+                "title" : "func invert(OutputType, to: OutputType, reversed: Bool) -> ContinuousScale<OutputType>.InputType?",
+                "type" : "method"
+              },
+              {
+                "title" : "Comparing Values",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/transformagainstdomain(_:)",
+                "title" : "func transformAgainstDomain(ContinuousScale<OutputType>.InputType) -> ContinuousScale<OutputType>.InputType?",
+                "type" : "method"
+              },
+              {
+                "title" : "Creating Ticks",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/defaulttickvalues(formatter:)",
                 "title" : "func defaultTickValues(formatter: Formatter?) -> [String]",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/bandscale\/ticks(rangelower:rangehigher:formatter:)",
-                "title" : "func ticks(rangeLower: BandScale<CategoryType, OutputType>.RangeType, rangeHigher: BandScale<CategoryType, OutputType>.RangeType, formatter: Formatter?) -> [Tick<BandScale<CategoryType, OutputType>.RangeType>]",
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/ticks(rangelower:rangehigher:formatter:)",
+                "title" : "func ticks(rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter?) -> [Tick<OutputType>]",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/bandscale\/ticks(reversed:rangelower:rangehigher:formatter:)",
-                "title" : "func ticks(reversed: Bool, rangeLower: BandScale<CategoryType, OutputType>.RangeType, rangeHigher: BandScale<CategoryType, OutputType>.RangeType, formatter: Formatter?) -> [Tick<BandScale<CategoryType, OutputType>.RangeType>]",
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/ticks(reversed:rangelower:rangehigher:formatter:)",
+                "title" : "func ticks(reversed: Bool, rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter?) -> [Tick<OutputType>]",
                 "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/ticksfromvalues(_:reversed:from:to:formatter:)-3u6d8",
+                "title" : "func ticksFromValues([ContinuousScale<OutputType>.InputType], reversed: Bool, from: OutputType, to: OutputType, formatter: Formatter?) -> [Tick<OutputType>]",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/ticksfromvalues(_:reversed:from:to:formatter:)-7mb58",
+                "title" : "func ticksFromValues<T>([T], reversed: Bool, from: OutputType, to: OutputType, formatter: Formatter?) -> [Tick<OutputType>]",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/validtickvalues(_:formatter:)-9dbw",
+                "title" : "func validTickValues<T>([T], formatter: Formatter?) -> [String]",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/validtickvalues(_:formatter:)-9ytj1",
+                "title" : "func validTickValues([ContinuousScale<OutputType>.InputType], formatter: Formatter?) -> [String]",
+                "type" : "method"
+              },
+              {
+                "title" : "Type Aliases",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/continuousscale\/inputtype",
+                "title" : "ContinuousScale.InputType",
+                "type" : "typealias"
               }
             ],
-            "path" : "\/documentation\/swiftvizscale\/bandscale\/discretescale-implementations",
-            "title" : "DiscreteScale Implementations",
-            "type" : "symbol"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/bandscale",
-        "title" : "BandScale",
-        "type" : "struct"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Mapping values to colors",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/colorinterpolator\/interpolate(_:)",
-            "title" : "func interpolate(Double) -> CGColor",
-            "type" : "method"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/colorinterpolator",
-        "title" : "ColorInterpolator",
-        "type" : "protocol"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Single Hue Color Schemesw",
-            "type" : "groupMarker"
+            "path" : "\/documentation\/swiftvizscale\/continuousscale",
+            "title" : "ContinuousScale",
+            "type" : "struct"
           },
           {
             "children" : [
               {
-                "title" : "Sequential Single Hue Color Schemes",
+                "title" : "Enumeration Cases",
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/oranges",
-                "title" : "static let Oranges: IndexedColorInterpolator",
-                "type" : "property"
+                "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/linear",
+                "title" : "case linear",
+                "type" : "case"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/purples",
-                "title" : "static let Purples: IndexedColorInterpolator",
-                "type" : "property"
+                "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/log",
+                "title" : "case log",
+                "type" : "case"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/grays",
-                "title" : "static let Grays: IndexedColorInterpolator",
-                "type" : "property"
+                "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/power(_:)",
+                "title" : "case power(Double)",
+                "type" : "case"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/blues",
-                "title" : "static let Blues: IndexedColorInterpolator",
-                "type" : "property"
+                "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/radial",
+                "title" : "case radial",
+                "type" : "case"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/greens",
-                "title" : "static let Greens: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/reds",
-                "title" : "static let Reds: IndexedColorInterpolator",
-                "type" : "property"
-              }
-            ],
-            "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue",
-            "title" : "ColorScheme.SequentialSingleHue",
-            "type" : "enum"
-          },
-          {
-            "title" : "Multi Hue Color Schemes",
-            "type" : "groupMarker"
-          },
-          {
-            "children" : [
-              {
-                "title" : "Sequential Multi Hue Color Schemes",
+                "title" : "Default Implementations",
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/bugn",
-                "title" : "static let BuGn: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/bupu",
-                "title" : "static let BuPu: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/gnbu",
-                "title" : "static let GnBu: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/orrd",
-                "title" : "static let OrRd: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/pubu",
-                "title" : "static let PuBu: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/pubugn",
-                "title" : "static let PuBuGn: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/purd",
-                "title" : "static let PuRd: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/rdpu",
-                "title" : "static let RdPu: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/rdpu",
-                "title" : "static let RdPu: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/ylgn",
-                "title" : "static let YlGn: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/ylgnbu",
-                "title" : "static let YlGnBu: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/ylorbr",
-                "title" : "static let YlOrBr: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/ylorrd",
-                "title" : "static let YlOrRd: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/viridis",
-                "title" : "static let Viridis: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/inferno",
-                "title" : "static let Inferno: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/magma",
-                "title" : "static let Magma: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/plasma",
-                "title" : "static let Plasma: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/cividis",
-                "title" : "static let Cividis: ComputedRGBInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/turbo",
-                "title" : "static let Turbo: ComputedRGBInterpolator",
-                "type" : "property"
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
               }
             ],
-            "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue",
-            "title" : "ColorScheme.SequentialMultiHue",
+            "path" : "\/documentation\/swiftvizscale\/continuousscaletype",
+            "title" : "ContinuousScaleType",
             "type" : "enum"
-          },
-          {
-            "children" : [
-              {
-                "title" : "Diverging Color Schemes",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/brbg",
-                "title" : "static let BrBG: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/prgn",
-                "title" : "static let PrGN: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/piyg",
-                "title" : "static let PiYG: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/puor",
-                "title" : "static let PuOr: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/rdbu",
-                "title" : "static let RdBu: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/rdgy",
-                "title" : "static let RdGy: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/rdylbu",
-                "title" : "static let RdYlBu: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/rdylgn",
-                "title" : "static let RdYlGn: IndexedColorInterpolator",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/spectral",
-                "title" : "static let Spectral: IndexedColorInterpolator",
-                "type" : "property"
-              }
-            ],
-            "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging",
-            "title" : "ColorScheme.Diverging",
-            "type" : "enum"
-          },
-          {
-            "children" : [
-              {
-                "title" : "Cyclical Color Schemes",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/colorscheme\/cyclical\/sinebow",
-                "title" : "static let Sinebow: ComputedRGBInterpolator",
-                "type" : "property"
-              }
-            ],
-            "path" : "\/documentation\/swiftvizscale\/colorscheme\/cyclical",
-            "title" : "ColorScheme.Cyclical",
-            "type" : "enum"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/colorscheme",
-        "title" : "ColorScheme",
-        "type" : "enum"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Creating an Interpolator",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/computedrgbinterpolator\/init(name:r:g:b:)",
-            "title" : "init(name: String, r: (Double) -> Double, g: (Double) -> Double, b: (Double) -> Double)",
-            "type" : "init"
-          },
-          {
-            "title" : "Mapping values to colors",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/computedrgbinterpolator\/interpolate(_:)",
-            "title" : "func interpolate(Double) -> CGColor",
-            "type" : "method"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/computedrgbinterpolator",
-        "title" : "ComputedRGBInterpolator",
-        "type" : "struct"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Creating a Continuous Scale",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/init(_:type:transform:desiredticks:reversed:rangelower:rangehigher:)-4twbk",
-            "title" : "init<T>(ClosedRange<T>, type: ContinuousScaleType, transform: DomainDataTransform, desiredTicks: Int, reversed: Bool, rangeLower: OutputType?, rangeHigher: OutputType?)",
-            "type" : "init"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/init(_:type:transform:desiredticks:reversed:rangelower:rangehigher:)-5y3b5",
-            "title" : "init<T>(ClosedRange<T>, type: ContinuousScaleType, transform: DomainDataTransform, desiredTicks: Int, reversed: Bool, rangeLower: OutputType?, rangeHigher: OutputType?)",
-            "type" : "init"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/init(_:type:transform:desiredticks:reversed:rangelower:rangehigher:)-7c7g6",
-            "title" : "init<T>(T, type: ContinuousScaleType, transform: DomainDataTransform, desiredTicks: Int, reversed: Bool, rangeLower: OutputType?, rangeHigher: OutputType?)",
-            "type" : "init"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/init(_:type:transform:desiredticks:reversed:rangelower:rangehigher:)-7n1l8",
-            "title" : "init<T>(T, type: ContinuousScaleType, transform: DomainDataTransform, desiredTicks: Int, reversed: Bool, rangeLower: OutputType?, rangeHigher: OutputType?)",
-            "type" : "init"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/init(lower:higher:type:transform:desiredticks:reversed:rangelower:rangehigher:)-1dq3o",
-            "title" : "init<T>(lower: T, higher: T, type: ContinuousScaleType, transform: DomainDataTransform, desiredTicks: Int, reversed: Bool, rangeLower: OutputType?, rangeHigher: OutputType?)",
-            "type" : "init"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/init(lower:higher:type:transform:desiredticks:reversed:rangelower:rangehigher:)-6xgot",
-            "title" : "init<T>(lower: T, higher: T, type: ContinuousScaleType, transform: DomainDataTransform, desiredTicks: Int, reversed: Bool, rangeLower: OutputType?, rangeHigher: OutputType?)",
-            "type" : "init"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/init(type:transform:desiredticks:reversed:rangelower:rangehigher:)",
-            "title" : "init(type: ContinuousScaleType, transform: DomainDataTransform, desiredTicks: Int, reversed: Bool, rangeLower: OutputType?, rangeHigher: OutputType?)",
-            "type" : "init"
-          },
-          {
-            "title" : "Inspecting Scales",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/domainlower",
-            "title" : "let domainLower: Double",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/domainhigher",
-            "title" : "let domainHigher: Double",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/transformtype",
-            "title" : "var transformType: DomainDataTransform",
-            "type" : "property"
           },
           {
             "children" : [
@@ -621,35 +500,155 @@
             "type" : "enum"
           },
           {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/scaletype",
-            "title" : "let scaleType: ContinuousScaleType",
-            "type" : "property"
+            "title" : "Discrete Scales",
+            "type" : "groupMarker"
           },
           {
             "children" : [
               {
-                "title" : "Enumeration Cases",
+                "title" : "Creating a Band Scale",
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/linear",
-                "title" : "case linear",
-                "type" : "case"
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/init(_:paddinginner:paddingouter:round:reversed:from:to:)",
+                "title" : "init([CategoryType], paddingInner: OutputType, paddingOuter: OutputType, round: Bool, reversed: Bool, from: OutputType?, to: OutputType?)",
+                "type" : "init"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/log",
-                "title" : "case log",
-                "type" : "case"
+                "title" : "Updating Scales",
+                "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/power(_:)",
-                "title" : "case power(Double)",
-                "type" : "case"
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/domain(_:)",
+                "title" : "func domain([CategoryType]) -> BandScale<CategoryType, OutputType>",
+                "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/radial",
-                "title" : "case radial",
-                "type" : "case"
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/round(_:)",
+                "title" : "func round(Bool) -> BandScale<CategoryType, OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/paddinginner(_:)",
+                "title" : "func paddingInner(OutputType) -> BandScale<CategoryType, OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/paddingouter(_:)",
+                "title" : "func paddingOuter(OutputType) -> BandScale<CategoryType, OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/range(_:)",
+                "title" : "func range(ClosedRange<OutputType>) -> BandScale<CategoryType, OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/range(lower:higher:)",
+                "title" : "func range(lower: OutputType, higher: OutputType) -> BandScale<CategoryType, OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/range(reversed:_:)",
+                "title" : "func range(reversed: Bool, ClosedRange<OutputType>) -> BandScale<CategoryType, OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/range(reversed:lower:higher:)",
+                "title" : "func range(reversed: Bool, lower: OutputType, higher: OutputType) -> BandScale<CategoryType, OutputType>",
+                "type" : "method"
+              },
+              {
+                "title" : "Inspecting Scales",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/domain",
+                "title" : "let domain: [CategoryType]",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/round",
+                "title" : "let round: Bool",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/paddinginner",
+                "title" : "let paddingInner: OutputType",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/paddingouter",
+                "title" : "let paddingOuter: OutputType",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/reversed",
+                "title" : "let reversed: Bool",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/rangelower",
+                "title" : "let rangeLower: OutputType?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/rangehigher",
+                "title" : "let rangeHigher: OutputType?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/scaletype",
+                "title" : "let scaleType: DiscreteScaleType",
+                "type" : "property"
+              },
+              {
+                "title" : "Converting Values",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/scale(_:)",
+                "title" : "func scale(CategoryType) -> Band<CategoryType, OutputType>?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/scale(_:from:to:)",
+                "title" : "func scale(CategoryType, from: OutputType, to: OutputType) -> Band<CategoryType, OutputType>?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/scale(_:reversed:from:to:)",
+                "title" : "func scale(CategoryType, reversed: Bool, from: OutputType, to: OutputType) -> Band<CategoryType, OutputType>?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/invert(_:)-63wv8",
+                "title" : "func invert(OutputType) -> CategoryType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/invert(_:)-9z1xu",
+                "title" : "func invert(Band<CategoryType, OutputType>) -> CategoryType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/invert(_:from:to:)",
+                "title" : "func invert(OutputType, from: OutputType, to: OutputType) -> CategoryType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/invert(_:reversed:from:to:)",
+                "title" : "func invert(OutputType, reversed: Bool, from: OutputType, to: OutputType) -> CategoryType?",
+                "type" : "method"
+              },
+              {
+                "title" : "Creating Ticks",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/ticks(rangelower:rangehigher:formatter:)",
+                "title" : "func ticks(rangeLower: BandScale<CategoryType, OutputType>.RangeType, rangeHigher: BandScale<CategoryType, OutputType>.RangeType, formatter: Formatter?) -> [Tick<BandScale<CategoryType, OutputType>.RangeType>]",
+                "type" : "method"
               },
               {
                 "title" : "Default Implementations",
@@ -658,496 +657,359 @@
               {
                 "children" : [
                   {
-                    "title" : "Operators",
+                    "title" : "Instance Properties",
                     "type" : "groupMarker"
                   },
                   {
-                    "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/!=(_:_:)",
-                    "title" : "static func != (Self, Self) -> Bool",
-                    "type" : "op"
+                    "path" : "\/documentation\/swiftvizscale\/bandscale\/description",
+                    "title" : "var description: String",
+                    "type" : "property"
                   }
                 ],
-                "path" : "\/documentation\/swiftvizscale\/continuousscaletype\/equatable-implementations",
-                "title" : "Equatable Implementations",
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/customstringconvertible-implementations",
+                "title" : "CustomStringConvertible Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/bandscale\/defaulttickvalues(formatter:)",
+                    "title" : "func defaultTickValues(formatter: Formatter?) -> [String]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/bandscale\/ticks(rangelower:rangehigher:formatter:)",
+                    "title" : "func ticks(rangeLower: BandScale<CategoryType, OutputType>.RangeType, rangeHigher: BandScale<CategoryType, OutputType>.RangeType, formatter: Formatter?) -> [Tick<BandScale<CategoryType, OutputType>.RangeType>]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/bandscale\/ticks(reversed:rangelower:rangehigher:formatter:)",
+                    "title" : "func ticks(reversed: Bool, rangeLower: BandScale<CategoryType, OutputType>.RangeType, rangeHigher: BandScale<CategoryType, OutputType>.RangeType, formatter: Formatter?) -> [Tick<BandScale<CategoryType, OutputType>.RangeType>]",
+                    "type" : "method"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/bandscale\/discretescale-implementations",
+                "title" : "DiscreteScale Implementations",
                 "type" : "symbol"
               }
             ],
-            "path" : "\/documentation\/swiftvizscale\/continuousscaletype",
-            "title" : "ContinuousScaleType",
-            "type" : "enum"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/desiredticks",
-            "title" : "let desiredTicks: Int",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/reversed",
-            "title" : "let reversed: Bool",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/rangehigher",
-            "title" : "let rangeHigher: OutputType?",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/rangelower",
-            "title" : "let rangeLower: OutputType?",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/description",
-            "title" : "var description: String",
-            "type" : "property"
-          },
-          {
-            "title" : "Updating Scales",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:)-63bua",
-            "title" : "func domain<T>(ClosedRange<T>) -> ContinuousScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:)-6qxk9",
-            "title" : "func domain<T>(ClosedRange<T>) -> ContinuousScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:)-7oobb",
-            "title" : "func domain<T>([T]) -> ContinuousScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:)-91w7x",
-            "title" : "func domain<T>([T]) -> ContinuousScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/domain(_:nice:)",
-            "title" : "func domain<T>([T], nice: Bool) -> ContinuousScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/domain(lower:higher:)-5u2ks",
-            "title" : "func domain<T>(lower: T, higher: T) -> ContinuousScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/domain(lower:higher:)-78pku",
-            "title" : "func domain<T>(lower: T, higher: T) -> ContinuousScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/scaletype(_:)",
-            "title" : "func scaleType(ContinuousScaleType) -> ContinuousScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/range(_:)",
-            "title" : "func range(ClosedRange<OutputType>) -> ContinuousScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/range(lower:higher:)",
-            "title" : "func range(lower: OutputType, higher: OutputType) -> ContinuousScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/range(reversed:_:)",
-            "title" : "func range(reversed: Bool, ClosedRange<OutputType>) -> ContinuousScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/range(reversed:lower:higher:)",
-            "title" : "func range(reversed: Bool, lower: OutputType, higher: OutputType) -> ContinuousScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/transform(_:)",
-            "title" : "func transform(DomainDataTransform) -> ContinuousScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "title" : "Converting Values",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/scale(_:)",
-            "title" : "func scale(ContinuousScale<OutputType>.InputType) -> OutputType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/scale(_:from:to:)",
-            "title" : "func scale(ContinuousScale<OutputType>.InputType, from: OutputType, to: OutputType) -> OutputType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/scale(_:reversed:from:to:)",
-            "title" : "func scale(ContinuousScale<OutputType>.InputType, reversed: Bool, from: OutputType, to: OutputType) -> OutputType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/scale(_:to:)",
-            "title" : "func scale(ContinuousScale<OutputType>.InputType, to: OutputType) -> OutputType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/scale(_:to:reversed:)",
-            "title" : "func scale(ContinuousScale<OutputType>.InputType, to: OutputType, reversed: Bool) -> OutputType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/invert(_:)",
-            "title" : "func invert(OutputType) -> ContinuousScale<OutputType>.InputType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/invert(_:from:to:)",
-            "title" : "func invert(OutputType, from: OutputType, to: OutputType) -> ContinuousScale<OutputType>.InputType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/invert(_:reversed:from:to:)",
-            "title" : "func invert(OutputType, reversed: Bool, from: OutputType, to: OutputType) -> ContinuousScale<OutputType>.InputType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/invert(_:to:)",
-            "title" : "func invert(OutputType, to: OutputType) -> ContinuousScale<OutputType>.InputType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/invert(_:to:reversed:)",
-            "title" : "func invert(OutputType, to: OutputType, reversed: Bool) -> ContinuousScale<OutputType>.InputType?",
-            "type" : "method"
-          },
-          {
-            "title" : "Comparing Values",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/transformagainstdomain(_:)",
-            "title" : "func transformAgainstDomain(ContinuousScale<OutputType>.InputType) -> ContinuousScale<OutputType>.InputType?",
-            "type" : "method"
-          },
-          {
-            "title" : "Creating Ticks",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/defaulttickvalues(formatter:)",
-            "title" : "func defaultTickValues(formatter: Formatter?) -> [String]",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/ticks(rangelower:rangehigher:formatter:)",
-            "title" : "func ticks(rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter?) -> [Tick<OutputType>]",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/ticks(reversed:rangelower:rangehigher:formatter:)",
-            "title" : "func ticks(reversed: Bool, rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter?) -> [Tick<OutputType>]",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/ticksfromvalues(_:reversed:from:to:formatter:)-3u6d8",
-            "title" : "func ticksFromValues([ContinuousScale<OutputType>.InputType], reversed: Bool, from: OutputType, to: OutputType, formatter: Formatter?) -> [Tick<OutputType>]",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/ticksfromvalues(_:reversed:from:to:formatter:)-7mb58",
-            "title" : "func ticksFromValues<T>([T], reversed: Bool, from: OutputType, to: OutputType, formatter: Formatter?) -> [Tick<OutputType>]",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/validtickvalues(_:formatter:)-9dbw",
-            "title" : "func validTickValues<T>([T], formatter: Formatter?) -> [String]",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/validtickvalues(_:formatter:)-9ytj1",
-            "title" : "func validTickValues([ContinuousScale<OutputType>.InputType], formatter: Formatter?) -> [String]",
-            "type" : "method"
-          },
-          {
-            "title" : "Type Aliases",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/continuousscale\/inputtype",
-            "title" : "ContinuousScale.InputType",
-            "type" : "typealias"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/continuousscale",
-        "title" : "ContinuousScale",
-        "type" : "struct"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Enumeration Cases",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datemagnitude\/days",
-            "title" : "case days",
-            "type" : "case"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datemagnitude\/hours",
-            "title" : "case hours",
-            "type" : "case"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datemagnitude\/minutes",
-            "title" : "case minutes",
-            "type" : "case"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datemagnitude\/months",
-            "title" : "case months",
-            "type" : "case"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datemagnitude\/seconds-swift.enum.case",
-            "title" : "case seconds",
-            "type" : "case"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datemagnitude\/subsecond",
-            "title" : "case subsecond",
-            "type" : "case"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datemagnitude\/years",
-            "title" : "case years",
-            "type" : "case"
-          },
-          {
-            "title" : "Instance Properties",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datemagnitude\/seconds-swift.property",
-            "title" : "var seconds: Double",
-            "type" : "property"
-          },
-          {
-            "title" : "Type Methods",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datemagnitude\/magnitudeofdaterange(_:_:)",
-            "title" : "static func magnitudeOfDateRange(Date, Date) -> DateMagnitude",
-            "type" : "method"
-          },
-          {
-            "title" : "Default Implementations",
-            "type" : "groupMarker"
+            "path" : "\/documentation\/swiftvizscale\/bandscale",
+            "title" : "BandScale",
+            "type" : "struct"
           },
           {
             "children" : [
               {
-                "title" : "Operators",
+                "title" : "Inspecting a Band",
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/datemagnitude\/!=(_:_:)",
-                "title" : "static func != (Self, Self) -> Bool",
-                "type" : "op"
+                "path" : "\/documentation\/swiftvizscale\/band\/higher",
+                "title" : "let higher: RangeType",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/band\/middle",
+                "title" : "var middle: RangeType",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/band\/lower",
+                "title" : "let lower: RangeType",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/band\/value",
+                "title" : "let value: EnclosedType",
+                "type" : "property"
               }
             ],
-            "path" : "\/documentation\/swiftvizscale\/datemagnitude\/equatable-implementations",
-            "title" : "Equatable Implementations",
-            "type" : "symbol"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/datemagnitude",
-        "title" : "DateMagnitude",
-        "type" : "enum"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Initializers",
-            "type" : "groupMarker"
+            "path" : "\/documentation\/swiftvizscale\/band",
+            "title" : "Band",
+            "type" : "struct"
           },
           {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/init(lower:higher:type:transform:desiredticks:reversed:rangelower:rangehigher:)",
-            "title" : "init(lower: Date, higher: Date, type: ContinuousScaleType, transform: DomainDataTransform, desiredTicks: Int, reversed: Bool, rangeLower: OutputType?, rangeHigher: OutputType?)",
-            "type" : "init"
+            "children" : [
+              {
+                "title" : "Creating a Band Scale",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/init(_:padding:round:reversed:from:to:)",
+                "title" : "init([CategoryType], padding: OutputType, round: Bool, reversed: Bool, from: OutputType?, to: OutputType?)",
+                "type" : "init"
+              },
+              {
+                "title" : "Updating Scales",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/domain(_:)",
+                "title" : "func domain([CategoryType]) -> PointScale<CategoryType, OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/round(_:)",
+                "title" : "func round(Bool) -> PointScale<CategoryType, OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/padding(_:)",
+                "title" : "func padding(OutputType) -> PointScale<CategoryType, OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/range(_:)",
+                "title" : "func range(ClosedRange<OutputType>) -> PointScale<CategoryType, OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/range(lower:higher:)",
+                "title" : "func range(lower: OutputType, higher: OutputType) -> PointScale<CategoryType, OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/range(reversed:_:)",
+                "title" : "func range(reversed: Bool, ClosedRange<OutputType>) -> PointScale<CategoryType, OutputType>",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/range(reversed:lower:higher:)",
+                "title" : "func range(reversed: Bool, lower: OutputType, higher: OutputType) -> PointScale<CategoryType, OutputType>",
+                "type" : "method"
+              },
+              {
+                "title" : "Inspecting Scales",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/domain",
+                "title" : "let domain: [CategoryType]",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/round",
+                "title" : "let round: Bool",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/padding",
+                "title" : "let padding: OutputType",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/reversed",
+                "title" : "let reversed: Bool",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/rangelower",
+                "title" : "let rangeLower: OutputType?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/rangehigher",
+                "title" : "let rangeHigher: OutputType?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/scaletype",
+                "title" : "let scaleType: DiscreteScaleType",
+                "type" : "property"
+              },
+              {
+                "title" : "Converting Values",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/scale(_:)",
+                "title" : "func scale(CategoryType) -> OutputType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/scale(_:from:to:)",
+                "title" : "func scale(CategoryType, from: OutputType, to: OutputType) -> OutputType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/scale(_:reversed:from:to:)",
+                "title" : "func scale(CategoryType, reversed: Bool, from: OutputType, to: OutputType) -> OutputType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/invert(_:)",
+                "title" : "func invert(OutputType) -> CategoryType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/invert(_:from:to:)",
+                "title" : "func invert(OutputType, from: OutputType, to: OutputType) -> CategoryType?",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/invert(_:reversed:from:to:)",
+                "title" : "func invert(OutputType, reversed: Bool, from: OutputType, to: OutputType) -> CategoryType?",
+                "type" : "method"
+              },
+              {
+                "title" : "Creating Ticks",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/ticks(rangelower:rangehigher:formatter:)",
+                "title" : "func ticks(rangeLower: PointScale<CategoryType, OutputType>.RangeType, rangeHigher: PointScale<CategoryType, OutputType>.RangeType, formatter: Formatter?) -> [Tick<PointScale<CategoryType, OutputType>.RangeType>]",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/ticks(reversed:rangelower:rangehigher:formatter:)",
+                "title" : "func ticks(reversed: Bool, rangeLower: PointScale<CategoryType, OutputType>.RangeType, rangeHigher: PointScale<CategoryType, OutputType>.RangeType, formatter: Formatter?) -> [Tick<PointScale<CategoryType, OutputType>.RangeType>]",
+                "type" : "method"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/pointscale\/description",
+                    "title" : "var description: String",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/customstringconvertible-implementations",
+                "title" : "CustomStringConvertible Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/pointscale\/defaulttickvalues(formatter:)",
+                    "title" : "func defaultTickValues(formatter: Formatter?) -> [String]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/pointscale\/ticks(rangelower:rangehigher:formatter:)",
+                    "title" : "func ticks(rangeLower: PointScale<CategoryType, OutputType>.RangeType, rangeHigher: PointScale<CategoryType, OutputType>.RangeType, formatter: Formatter?) -> [Tick<PointScale<CategoryType, OutputType>.RangeType>]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/pointscale\/ticks(reversed:rangelower:rangehigher:formatter:)",
+                    "title" : "func ticks(reversed: Bool, rangeLower: PointScale<CategoryType, OutputType>.RangeType, rangeHigher: PointScale<CategoryType, OutputType>.RangeType, formatter: Formatter?) -> [Tick<PointScale<CategoryType, OutputType>.RangeType>]",
+                    "type" : "method"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/pointscale\/discretescale-implementations",
+                "title" : "DiscreteScale Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/pointscale",
+            "title" : "PointScale",
+            "type" : "struct"
           },
           {
-            "title" : "Instance Properties",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/description",
-            "title" : "var description: String",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/desiredticks",
-            "title" : "var desiredTicks: Int",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/domainhigher",
-            "title" : "let domainHigher: Date",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/domainlower",
-            "title" : "let domainLower: Date",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/rangehigher",
-            "title" : "var rangeHigher: OutputType?",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/rangelower",
-            "title" : "var rangeLower: OutputType?",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/reversed",
-            "title" : "var reversed: Bool",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/scaletype",
-            "title" : "var scaleType: ContinuousScaleType",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/transformtype",
-            "title" : "var transformType: DomainDataTransform",
-            "type" : "property"
-          },
-          {
-            "title" : "Instance Methods",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/defaulttickvalues(formatter:calendar:)",
-            "title" : "func defaultTickValues(formatter: Formatter?, calendar: Calendar) -> [String]",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/domain(_:)",
-            "title" : "func domain([Date]) -> DateScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/domain(_:nice:)",
-            "title" : "func domain([Date], nice: Bool) -> DateScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/domain(lower:higher:)",
-            "title" : "func domain(lower: Date, higher: Date) -> DateScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/invert(_:)",
-            "title" : "func invert(OutputType) -> Date?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/range(_:)",
-            "title" : "func range(ClosedRange<OutputType>) -> DateScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/range(lower:higher:)",
-            "title" : "func range(lower: OutputType, higher: OutputType) -> DateScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/range(reversed:_:)",
-            "title" : "func range(reversed: Bool, ClosedRange<OutputType>) -> DateScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/range(reversed:lower:higher:)",
-            "title" : "func range(reversed: Bool, lower: OutputType, higher: OutputType) -> DateScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/scale(_:)",
-            "title" : "func scale(Date) -> OutputType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/scaletype(_:)",
-            "title" : "func scaleType(ContinuousScaleType) -> DateScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/ticks(reversed:rangelower:rangehigher:formatter:calendar:)",
-            "title" : "func ticks(reversed: Bool, rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter?, calendar: Calendar) -> [Tick<OutputType>]",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/ticksfromvalues(_:reversed:from:to:formatter:)",
-            "title" : "func ticksFromValues([DateScale<OutputType>.InputType], reversed: Bool, from: OutputType, to: OutputType, formatter: Formatter?) -> [Tick<OutputType>]",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/transform(_:)",
-            "title" : "func transform(DomainDataTransform) -> DateScale<OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/validtickvalues(_:formatter:)",
-            "title" : "func validTickValues([DateScale<OutputType>.InputType], formatter: Formatter?) -> [String]",
-            "type" : "method"
-          },
-          {
-            "title" : "Type Aliases",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/datescale\/inputtype",
-            "title" : "DateScale.InputType",
-            "type" : "typealias"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/datescale",
-        "title" : "DateScale",
-        "type" : "struct"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Inspecting Scales",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/discretescale\/domain",
-            "title" : "var domain: [Self.InputType]",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/discretescale\/rangehigher",
-            "title" : "var rangeHigher: Self.RangeType?",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/discretescale\/rangelower",
-            "title" : "var rangeLower: Self.RangeType?",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/discretescale\/scaletype",
-            "title" : "var scaleType: DiscreteScaleType",
-            "type" : "property"
+            "children" : [
+              {
+                "title" : "Inspecting Scales",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/discretescale\/domain",
+                "title" : "var domain: [Self.InputType]",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/discretescale\/rangehigher",
+                "title" : "var rangeHigher: Self.RangeType?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/discretescale\/rangelower",
+                "title" : "var rangeLower: Self.RangeType?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/discretescale\/scaletype",
+                "title" : "var scaleType: DiscreteScaleType",
+                "type" : "property"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/discretescaletype\/band",
+                    "title" : "case band",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/discretescaletype\/point",
+                    "title" : "case point",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/swiftvizscale\/discretescaletype\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/swiftvizscale\/discretescaletype\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/discretescaletype",
+                "title" : "DiscreteScaleType",
+                "type" : "enum"
+              },
+              {
+                "title" : "Creating Ticks",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/discretescale\/ticks(rangelower:rangehigher:formatter:)",
+                "title" : "func ticks(rangeLower: Self.RangeType, rangeHigher: Self.RangeType, formatter: Formatter?) -> [Tick<Self.RangeType>]",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/discretescale\/ticks(reversed:rangelower:rangehigher:formatter:)",
+                "title" : "func ticks(reversed: Bool, rangeLower: Self.RangeType, rangeHigher: Self.RangeType, formatter: Formatter?) -> [Tick<Self.RangeType>]",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/discretescale\/defaulttickvalues(formatter:)",
+                "title" : "func defaultTickValues(formatter: Formatter?) -> [String]",
+                "type" : "method"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/discretescale",
+            "title" : "DiscreteScale",
+            "type" : "protocol"
           },
           {
             "children" : [
@@ -1191,147 +1053,42 @@
             "type" : "enum"
           },
           {
-            "title" : "Creating Ticks",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/discretescale\/ticks(rangelower:rangehigher:formatter:)",
-            "title" : "func ticks(rangeLower: Self.RangeType, rangeHigher: Self.RangeType, formatter: Formatter?) -> [Tick<Self.RangeType>]",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/discretescale\/ticks(reversed:rangelower:rangehigher:formatter:)",
-            "title" : "func ticks(reversed: Bool, rangeLower: Self.RangeType, rangeHigher: Self.RangeType, formatter: Formatter?) -> [Tick<Self.RangeType>]",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/discretescale\/defaulttickvalues(formatter:)",
-            "title" : "func defaultTickValues(formatter: Formatter?) -> [String]",
-            "type" : "method"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/discretescale",
-        "title" : "DiscreteScale",
-        "type" : "protocol"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Creating a Histogram",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/histogram\/init(data:)-4w0u8",
-            "title" : "init(data: [Value])",
-            "type" : "init"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/histogram\/init(data:)-6k9pg",
-            "title" : "init(data: [Value])",
-            "type" : "init"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/histogram\/init(data:minimumstride:bounds:desiredcount:)-1kxi5",
-            "title" : "init(data: [Value], minimumStride: Value, bounds: ClosedRange<Value>?, desiredCount: Int?)",
-            "type" : "init"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/histogram\/init(data:minimumstride:bounds:desiredcount:)-2c242",
-            "title" : "init(data: [Value], minimumStride: Value, bounds: ClosedRange<Value>?, desiredCount: Int?)",
-            "type" : "init"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/histogram\/init(data:thresholds:)",
-            "title" : "init(data: [Value], thresholds: [Value])",
-            "type" : "init"
-          },
-          {
-            "title" : "Describing Histogram",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/histogram\/description",
-            "title" : "var description: String",
-            "type" : "property"
-          },
-          {
-            "title" : "Iterating through a Histogram",
+            "title" : "Sequential Scales",
             "type" : "groupMarker"
           },
           {
             "children" : [
               {
-                "title" : "Iterating",
+                "title" : "Creating a Sequential Scale",
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/histogramiterator\/next()",
-                "title" : "func next() -> Histogram<Value>.Element?",
-                "type" : "method"
-              }
-            ],
-            "path" : "\/documentation\/swiftvizscale\/histogram\/histogramiterator",
-            "title" : "Histogram.HistogramIterator",
-            "type" : "struct"
-          },
-          {
-            "title" : "Instance Properties",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/histogram\/isempty",
-            "title" : "var isEmpty: Bool",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/histogram\/lowerbound",
-            "title" : "var lowerBound: Value",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/histogram\/upperbound",
-            "title" : "var upperBound: Value",
-            "type" : "property"
-          },
-          {
-            "title" : "Default Implementations",
-            "type" : "groupMarker"
-          },
-          {
-            "children" : [
+                "path" : "\/documentation\/swiftvizscale\/sequentialscale\/init(lower:higher:reversed:interpolator:)",
+                "title" : "init(lower: InputType, higher: InputType, reversed: Bool, interpolator: Interpolator)",
+                "type" : "init"
+              },
               {
                 "title" : "Instance Properties",
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/description",
+                "path" : "\/documentation\/swiftvizscale\/sequentialscale\/description",
                 "title" : "var description: String",
                 "type" : "property"
-              }
-            ],
-            "path" : "\/documentation\/swiftvizscale\/histogram\/customstringconvertible-implementations",
-            "title" : "CustomStringConvertible Implementations",
-            "type" : "symbol"
-          },
-          {
-            "children" : [
-              {
-                "title" : "Instance Properties",
-                "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/lazy",
-                "title" : "var lazy: LazySequence<Self>",
+                "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domainhigher",
+                "title" : "let domainHigher: InputType",
                 "type" : "property"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/publisher",
-                "title" : "var publisher: Publishers.Sequence<Self, Never>",
+                "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domainlower",
+                "title" : "let domainLower: InputType",
                 "type" : "property"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/underestimatedcount",
-                "title" : "var underestimatedCount: Int",
+                "path" : "\/documentation\/swiftvizscale\/sequentialscale\/reversed",
+                "title" : "let reversed: Bool",
                 "type" : "property"
               },
               {
@@ -1339,173 +1096,1170 @@
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/allsatisfy(_:)",
-                "title" : "func allSatisfy((Self.Element) throws -> Bool) rethrows -> Bool",
+                "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(_:)-5m2g6",
+                "title" : "func domain(ClosedRange<InputType>) -> SequentialScale<InputType, Interpolator>",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/compactmap(_:)",
-                "title" : "func compactMap<ElementOfResult>((Self.Element) throws -> ElementOfResult?) rethrows -> [ElementOfResult]",
+                "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(_:)-ct2c",
+                "title" : "func domain([InputType]) -> SequentialScale<InputType, Interpolator>",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/compare(_:_:)",
-                "title" : "func compare<Comparator>(Comparator.Compared, Comparator.Compared) -> ComparisonResult",
+                "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(_:nice:)",
+                "title" : "func domain([InputType], nice: Bool) -> SequentialScale<InputType, Interpolator>",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/contains(where:)",
-                "title" : "func contains(where: (Self.Element) throws -> Bool) rethrows -> Bool",
+                "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(lower:higher:)",
+                "title" : "func domain(lower: InputType, higher: InputType) -> SequentialScale<InputType, Interpolator>",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/drop(while:)",
-                "title" : "func drop(while: (Self.Element) throws -> Bool) rethrows -> DropWhileSequence<Self>",
+                "path" : "\/documentation\/swiftvizscale\/sequentialscale\/interpolator(_:)",
+                "title" : "func interpolator(Interpolator) -> SequentialScale<InputType, Interpolator>",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/dropfirst(_:)",
-                "title" : "func dropFirst(Int) -> DropFirstSequence<Self>",
+                "path" : "\/documentation\/swiftvizscale\/sequentialscale\/scale(_:)",
+                "title" : "func scale(InputType) -> CGColor",
+                "type" : "method"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/sequentialscale",
+            "title" : "SequentialScale",
+            "type" : "struct"
+          },
+          {
+            "title" : "Color Interpolators",
+            "type" : "groupMarker"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Mapping values to colors",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/colorinterpolator\/interpolate(_:)",
+                "title" : "func interpolate(Double) -> CGColor",
+                "type" : "method"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/colorinterpolator",
+            "title" : "ColorInterpolator",
+            "type" : "protocol"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Creating an Interpolator",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/lchcolorinterpolator\/init(_:_:)",
+                "title" : "init(CGColor, CGColor)",
+                "type" : "init"
+              },
+              {
+                "title" : "Mapping values to colors",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/lchcolorinterpolator\/interpolate(_:)",
+                "title" : "func interpolate(Double) -> CGColor",
+                "type" : "method"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/lchcolorinterpolator",
+            "title" : "LCHColorInterpolator",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Interpolating Colors",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/lch\/interpolate(_:_:t:)",
+                "title" : "static func interpolate(CGColor, CGColor, t: CGFloat) -> CGColor",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/droplast(_:)",
-                "title" : "func dropLast(Int) -> [Self.Element]",
+                "title" : "Converting Into and Out of LCH Color Space",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/lch\/color(from:)",
+                "title" : "static func color(from: [CGFloat]) -> CGColor",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/elementsequal(_:by:)",
-                "title" : "func elementsEqual<OtherSequence>(OtherSequence, by: (Self.Element, OtherSequence.Element) throws -> Bool) rethrows -> Bool",
+                "path" : "\/documentation\/swiftvizscale\/lch\/components(from:)",
+                "title" : "static func components(from: CGColor) -> [CGFloat]",
+                "type" : "method"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/lch",
+            "title" : "LCH",
+            "type" : "enum"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Creating an Interpolator",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/init(_:)-3gpbm",
+                "title" : "init(String)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/init(_:)-6i0o1",
+                "title" : "init([CGColor])",
+                "type" : "init"
+              },
+              {
+                "title" : "Mapping values to colors",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/interpolate(_:)",
+                "title" : "func interpolate(Double) -> CGColor",
+                "type" : "method"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator",
+            "title" : "IndexedColorInterpolator",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Creating an Interpolator",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/computedrgbinterpolator\/init(name:r:g:b:)",
+                "title" : "init(name: String, r: (Double) -> Double, g: (Double) -> Double, b: (Double) -> Double)",
+                "type" : "init"
+              },
+              {
+                "title" : "Mapping values to colors",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/computedrgbinterpolator\/interpolate(_:)",
+                "title" : "func interpolate(Double) -> CGColor",
+                "type" : "method"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/computedrgbinterpolator",
+            "title" : "ComputedRGBInterpolator",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Single Hue Color Schemesw",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Sequential Single Hue Color Schemes",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/oranges",
+                    "title" : "static let Oranges: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/purples",
+                    "title" : "static let Purples: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/grays",
+                    "title" : "static let Grays: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/blues",
+                    "title" : "static let Blues: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/greens",
+                    "title" : "static let Greens: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue\/reds",
+                    "title" : "static let Reds: IndexedColorInterpolator",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialsinglehue",
+                "title" : "ColorScheme.SequentialSingleHue",
+                "type" : "enum"
+              },
+              {
+                "title" : "Multi Hue Color Schemes",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Sequential Multi Hue Color Schemes",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/bugn",
+                    "title" : "static let BuGn: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/bupu",
+                    "title" : "static let BuPu: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/gnbu",
+                    "title" : "static let GnBu: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/orrd",
+                    "title" : "static let OrRd: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/pubu",
+                    "title" : "static let PuBu: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/pubugn",
+                    "title" : "static let PuBuGn: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/purd",
+                    "title" : "static let PuRd: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/rdpu",
+                    "title" : "static let RdPu: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/rdpu",
+                    "title" : "static let RdPu: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/ylgn",
+                    "title" : "static let YlGn: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/ylgnbu",
+                    "title" : "static let YlGnBu: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/ylorbr",
+                    "title" : "static let YlOrBr: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/ylorrd",
+                    "title" : "static let YlOrRd: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/viridis",
+                    "title" : "static let Viridis: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/inferno",
+                    "title" : "static let Inferno: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/magma",
+                    "title" : "static let Magma: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/plasma",
+                    "title" : "static let Plasma: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/cividis",
+                    "title" : "static let Cividis: ComputedRGBInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue\/turbo",
+                    "title" : "static let Turbo: ComputedRGBInterpolator",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/colorscheme\/sequentialmultihue",
+                "title" : "ColorScheme.SequentialMultiHue",
+                "type" : "enum"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Diverging Color Schemes",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/brbg",
+                    "title" : "static let BrBG: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/prgn",
+                    "title" : "static let PrGN: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/piyg",
+                    "title" : "static let PiYG: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/puor",
+                    "title" : "static let PuOr: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/rdbu",
+                    "title" : "static let RdBu: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/rdgy",
+                    "title" : "static let RdGy: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/rdylbu",
+                    "title" : "static let RdYlBu: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/rdylgn",
+                    "title" : "static let RdYlGn: IndexedColorInterpolator",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging\/spectral",
+                    "title" : "static let Spectral: IndexedColorInterpolator",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/colorscheme\/diverging",
+                "title" : "ColorScheme.Diverging",
+                "type" : "enum"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Cyclical Color Schemes",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/colorscheme\/cyclical\/sinebow",
+                    "title" : "static let Sinebow: ComputedRGBInterpolator",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/colorscheme\/cyclical",
+                "title" : "ColorScheme.Cyclical",
+                "type" : "enum"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/colorscheme",
+            "title" : "ColorScheme",
+            "type" : "enum"
+          },
+          {
+            "title" : "Histograms",
+            "type" : "groupMarker"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Creating a Histogram",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/histogram\/init(data:)-4w0u8",
+                "title" : "init(data: [Value])",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/histogram\/init(data:)-6k9pg",
+                "title" : "init(data: [Value])",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/histogram\/init(data:minimumstride:bounds:desiredcount:)-1kxi5",
+                "title" : "init(data: [Value], minimumStride: Value, bounds: ClosedRange<Value>?, desiredCount: Int?)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/histogram\/init(data:minimumstride:bounds:desiredcount:)-2c242",
+                "title" : "init(data: [Value], minimumStride: Value, bounds: ClosedRange<Value>?, desiredCount: Int?)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/histogram\/init(data:thresholds:)",
+                "title" : "init(data: [Value], thresholds: [Value])",
+                "type" : "init"
+              },
+              {
+                "title" : "Describing Histogram",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/histogram\/description",
+                "title" : "var description: String",
+                "type" : "property"
+              },
+              {
+                "title" : "Iterating through a Histogram",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Iterating",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/histogramiterator\/next()",
+                    "title" : "func next() -> Histogram<Value>.Element?",
+                    "type" : "method"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/histogram\/histogramiterator",
+                "title" : "Histogram.HistogramIterator",
+                "type" : "struct"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/histogram\/isempty",
+                "title" : "var isEmpty: Bool",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/histogram\/lowerbound",
+                "title" : "var lowerBound: Value",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/histogram\/upperbound",
+                "title" : "var upperBound: Value",
+                "type" : "property"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/description",
+                    "title" : "var description: String",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/histogram\/customstringconvertible-implementations",
+                "title" : "CustomStringConvertible Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/lazy",
+                    "title" : "var lazy: LazySequence<Self>",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/publisher",
+                    "title" : "var publisher: Publishers.Sequence<Self, Never>",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/underestimatedcount",
+                    "title" : "var underestimatedCount: Int",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/allsatisfy(_:)",
+                    "title" : "func allSatisfy((Self.Element) throws -> Bool) rethrows -> Bool",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/compactmap(_:)",
+                    "title" : "func compactMap<ElementOfResult>((Self.Element) throws -> ElementOfResult?) rethrows -> [ElementOfResult]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/compare(_:_:)",
+                    "title" : "func compare<Comparator>(Comparator.Compared, Comparator.Compared) -> ComparisonResult",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/contains(where:)",
+                    "title" : "func contains(where: (Self.Element) throws -> Bool) rethrows -> Bool",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/drop(while:)",
+                    "title" : "func drop(while: (Self.Element) throws -> Bool) rethrows -> DropWhileSequence<Self>",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/dropfirst(_:)",
+                    "title" : "func dropFirst(Int) -> DropFirstSequence<Self>",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/droplast(_:)",
+                    "title" : "func dropLast(Int) -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/elementsequal(_:by:)",
+                    "title" : "func elementsEqual<OtherSequence>(OtherSequence, by: (Self.Element, OtherSequence.Element) throws -> Bool) rethrows -> Bool",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/enumerated()",
+                    "title" : "func enumerated() -> EnumeratedSequence<Self>",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/filter(_:)",
+                    "title" : "func filter((Self.Element) throws -> Bool) rethrows -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/first(where:)",
+                    "title" : "func first(where: (Self.Element) throws -> Bool) rethrows -> Self.Element?",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/flatmap(_:)-84z54",
+                    "title" : "func flatMap<SegmentOfResult>((Self.Element) throws -> SegmentOfResult) rethrows -> [SegmentOfResult.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/flatmap(_:)-9hzot",
+                    "title" : "func flatMap<ElementOfResult>((Self.Element) throws -> ElementOfResult?) rethrows -> [ElementOfResult]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/foreach(_:)",
+                    "title" : "func forEach((Self.Element) throws -> Void) rethrows",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/formatted(_:)",
+                    "title" : "func formatted<S>(S) -> S.FormatOutput",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/lexicographicallyprecedes(_:by:)",
+                    "title" : "func lexicographicallyPrecedes<OtherSequence>(OtherSequence, by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Bool",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/makeiterator()",
+                    "title" : "func makeIterator() -> Histogram<Value>.HistogramIterator",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/map(_:)",
+                    "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/max(by:)",
+                    "title" : "func max(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Self.Element?",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/min(by:)",
+                    "title" : "func min(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Self.Element?",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/prefix(_:)",
+                    "title" : "func prefix(Int) -> PrefixSequence<Self>",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/prefix(while:)",
+                    "title" : "func prefix(while: (Self.Element) throws -> Bool) rethrows -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/reduce(_:_:)",
+                    "title" : "func reduce<Result>(Result, (Result, Self.Element) throws -> Result) rethrows -> Result",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/reduce(into:_:)",
+                    "title" : "func reduce<Result>(into: Result, (inout Result, Self.Element) throws -> ()) rethrows -> Result",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/reversed()",
+                    "title" : "func reversed() -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/shuffled()",
+                    "title" : "func shuffled() -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/shuffled(using:)",
+                    "title" : "func shuffled<T>(using: inout T) -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/sorted(by:)",
+                    "title" : "func sorted(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/sorted(using:)-5g2oz",
+                    "title" : "func sorted<Comparator>(using: Comparator) -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/sorted(using:)-9hgqm",
+                    "title" : "func sorted<S, Comparator>(using: S) -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/split(maxsplits:omittingemptysubsequences:whereseparator:)",
+                    "title" : "func split(maxSplits: Int, omittingEmptySubsequences: Bool, whereSeparator: (Self.Element) throws -> Bool) rethrows -> [ArraySlice<Self.Element>]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/starts(with:by:)",
+                    "title" : "func starts<PossiblePrefix>(with: PossiblePrefix, by: (Self.Element, PossiblePrefix.Element) throws -> Bool) rethrows -> Bool",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/suffix(_:)",
+                    "title" : "func suffix(Int) -> [Self.Element]",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/withcontiguousstorageifavailable(_:)",
+                    "title" : "func withContiguousStorageIfAvailable<R>((UnsafeBufferPointer<Self.Element>) throws -> R) rethrows -> R?",
+                    "type" : "method"
+                  },
+                  {
+                    "title" : "Type Aliases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/element",
+                    "title" : "Histogram.Element",
+                    "type" : "typealias"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogram\/iterator",
+                    "title" : "Histogram.Iterator",
+                    "type" : "typealias"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/histogram\/sequence-implementations",
+                "title" : "Sequence Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/histogram",
+            "title" : "Histogram",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Inspecting a HistogramBinRange",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/description",
+                "title" : "var description: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/lowerbound",
+                "title" : "let lowerBound: Bound",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/upperbound",
+                "title" : "let upperBound: Bound",
+                "type" : "property"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/'...(_:)-3wsp6",
+                    "title" : "static func ... (Self) -> PartialRangeThrough<Self>",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/'...(_:)-67v4z",
+                    "title" : "static func ... (Self) -> PartialRangeFrom<Self>",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/'...(_:_:)",
+                    "title" : "static func ... (Self, Self) -> ClosedRange<Self>",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/'.._(_:)",
+                    "title" : "static func ..< (Self) -> PartialRangeUpTo<Self>",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/'.._(_:_:)",
+                    "title" : "static func ..< (Self, Self) -> Range<Self>",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/_(_:_:)-56efr",
+                    "title" : "static func < (HistogramBinRange<Bound>, HistogramBinRange<Bound>) -> Bool",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/_(_:_:)-9kvsv",
+                    "title" : "static func > (Self, Self) -> Bool",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/_=(_:_:)-468vq",
+                    "title" : "static func >= (Self, Self) -> Bool",
+                    "type" : "op"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/_=(_:_:)-o5le",
+                    "title" : "static func <= (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/comparable-implementations",
+                "title" : "Comparable Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/description",
+                    "title" : "var description: String",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/customstringconvertible-implementations",
+                "title" : "CustomStringConvertible Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/~=(_:_:)",
+                    "title" : "static func ~= (Self, Self.Bound) -> Bool",
+                    "type" : "op"
+                  },
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/contains(_:)",
+                    "title" : "func contains(Bound) -> Bool",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/relative(to:)",
+                    "title" : "func relative<C>(to: C) -> Range<Bound>",
+                    "type" : "method"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/rangeexpression-implementations",
+                "title" : "RangeExpression Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/histogrambinrange",
+            "title" : "HistogramBinRange",
+            "type" : "struct"
+          },
+          {
+            "title" : "Ticks",
+            "type" : "groupMarker"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Creating Ticks",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/tick\/init(value:location:formatter:)",
+                "title" : "init?<T>(value: T, location: OutputType, formatter: Formatter?)",
+                "type" : "init"
+              },
+              {
+                "title" : "Inspecting Ticks",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/tick\/label",
+                "title" : "let label: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/tick\/rangelocation",
+                "title" : "let rangeLocation: OutputType",
+                "type" : "property"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/tick",
+            "title" : "Tick",
+            "type" : "struct"
+          },
+          {
+            "title" : "Supporting Types",
+            "type" : "groupMarker"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Updating Scales",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/scale\/domain(_:)",
+                "title" : "func domain([Self.InputType]) -> Self",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/enumerated()",
-                "title" : "func enumerated() -> EnumeratedSequence<Self>",
+                "title" : "Converting Values",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/scale\/scale(_:)",
+                "title" : "func scale(Self.InputType) -> Self.OutputType?",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/filter(_:)",
-                "title" : "func filter((Self.Element) throws -> Bool) rethrows -> [Self.Element]",
+                "title" : "Scale Types",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/scale\/inputtype",
+                "title" : "InputType",
+                "type" : "associatedtype"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/scale\/outputtype",
+                "title" : "OutputType",
+                "type" : "associatedtype"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/scale",
+            "title" : "Scale",
+            "type" : "protocol"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Updating Scales",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/scale\/domain(_:)",
+                "title" : "func domain([Self.InputType]) -> Self",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/first(where:)",
-                "title" : "func first(where: (Self.Element) throws -> Bool) rethrows -> Self.Element?",
+                "path" : "\/documentation\/swiftvizscale\/reversiblescale\/range(_:)",
+                "title" : "func range(ClosedRange<Self.RangeType>) -> Self",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/flatmap(_:)-84z54",
-                "title" : "func flatMap<SegmentOfResult>((Self.Element) throws -> SegmentOfResult) rethrows -> [SegmentOfResult.Element]",
+                "path" : "\/documentation\/swiftvizscale\/reversiblescale\/range(lower:higher:)",
+                "title" : "func range(lower: Self.RangeType, higher: Self.RangeType) -> Self",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/flatmap(_:)-9hzot",
-                "title" : "func flatMap<ElementOfResult>((Self.Element) throws -> ElementOfResult?) rethrows -> [ElementOfResult]",
+                "path" : "\/documentation\/swiftvizscale\/reversiblescale\/range(reversed:_:)",
+                "title" : "func range(reversed: Bool, ClosedRange<Self.RangeType>) -> Self",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/foreach(_:)",
-                "title" : "func forEach((Self.Element) throws -> Void) rethrows",
+                "path" : "\/documentation\/swiftvizscale\/reversiblescale\/range(reversed:lower:higher:)",
+                "title" : "func range(reversed: Bool, lower: Self.RangeType, higher: Self.RangeType) -> Self",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/formatted(_:)",
-                "title" : "func formatted<S>(S) -> S.FormatOutput",
+                "title" : "Converting Values",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/scale\/scale(_:)",
+                "title" : "func scale(Self.InputType) -> Self.OutputType?",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/lexicographicallyprecedes(_:by:)",
-                "title" : "func lexicographicallyPrecedes<OtherSequence>(OtherSequence, by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Bool",
+                "path" : "\/documentation\/swiftvizscale\/reversiblescale\/invert(_:)",
+                "title" : "func invert(Self.OutputType) -> Self.InputType?",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/makeiterator()",
-                "title" : "func makeIterator() -> Histogram<Value>.HistogramIterator",
+                "title" : "Scale Types",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/scale\/inputtype",
+                "title" : "InputType",
+                "type" : "associatedtype"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/scale\/outputtype",
+                "title" : "OutputType",
+                "type" : "associatedtype"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/reversiblescale\/rangetype",
+                "title" : "RangeType",
+                "type" : "associatedtype"
+              }
+            ],
+            "path" : "\/documentation\/swiftvizscale\/reversiblescale",
+            "title" : "ReversibleScale",
+            "type" : "protocol"
+          },
+          {
+            "title" : "Snippets",
+            "type" : "groupMarker"
+          },
+          {
+            "path" : "\/documentation\/swiftvizscale\/snippets",
+            "title" : "Snippets",
+            "type" : "article"
+          },
+          {
+            "title" : "Structures",
+            "type" : "groupMarker"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/datescale\/init(lower:higher:type:transform:desiredticks:reversed:rangelower:rangehigher:)",
+                "title" : "init(lower: Date, higher: Date, type: ContinuousScaleType, transform: DomainDataTransform, desiredTicks: Int, reversed: Bool, rangeLower: OutputType?, rangeHigher: OutputType?)",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/datescale\/description",
+                "title" : "var description: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/datescale\/desiredticks",
+                "title" : "var desiredTicks: Int",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/datescale\/domainhigher",
+                "title" : "let domainHigher: Date",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/datescale\/domainlower",
+                "title" : "let domainLower: Date",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/datescale\/rangehigher",
+                "title" : "var rangeHigher: OutputType?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/datescale\/rangelower",
+                "title" : "var rangeLower: OutputType?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/datescale\/reversed",
+                "title" : "var reversed: Bool",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/datescale\/scaletype",
+                "title" : "var scaleType: ContinuousScaleType",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/datescale\/transformtype",
+                "title" : "var transformType: DomainDataTransform",
+                "type" : "property"
+              },
+              {
+                "title" : "Instance Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/swiftvizscale\/datescale\/defaulttickvalues(formatter:calendar:)",
+                "title" : "func defaultTickValues(formatter: Formatter?, calendar: Calendar) -> [String]",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/map(_:)",
-                "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
+                "path" : "\/documentation\/swiftvizscale\/datescale\/domain(_:)",
+                "title" : "func domain([Date]) -> DateScale<OutputType>",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/max(by:)",
-                "title" : "func max(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Self.Element?",
+                "path" : "\/documentation\/swiftvizscale\/datescale\/domain(_:nice:)",
+                "title" : "func domain([Date], nice: Bool) -> DateScale<OutputType>",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/min(by:)",
-                "title" : "func min(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Self.Element?",
+                "path" : "\/documentation\/swiftvizscale\/datescale\/domain(lower:higher:)",
+                "title" : "func domain(lower: Date, higher: Date) -> DateScale<OutputType>",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/prefix(_:)",
-                "title" : "func prefix(Int) -> PrefixSequence<Self>",
+                "path" : "\/documentation\/swiftvizscale\/datescale\/invert(_:)",
+                "title" : "func invert(OutputType) -> Date?",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/prefix(while:)",
-                "title" : "func prefix(while: (Self.Element) throws -> Bool) rethrows -> [Self.Element]",
+                "path" : "\/documentation\/swiftvizscale\/datescale\/range(_:)",
+                "title" : "func range(ClosedRange<OutputType>) -> DateScale<OutputType>",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/reduce(_:_:)",
-                "title" : "func reduce<Result>(Result, (Result, Self.Element) throws -> Result) rethrows -> Result",
+                "path" : "\/documentation\/swiftvizscale\/datescale\/range(lower:higher:)",
+                "title" : "func range(lower: OutputType, higher: OutputType) -> DateScale<OutputType>",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/reduce(into:_:)",
-                "title" : "func reduce<Result>(into: Result, (inout Result, Self.Element) throws -> ()) rethrows -> Result",
+                "path" : "\/documentation\/swiftvizscale\/datescale\/range(reversed:_:)",
+                "title" : "func range(reversed: Bool, ClosedRange<OutputType>) -> DateScale<OutputType>",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/reversed()",
-                "title" : "func reversed() -> [Self.Element]",
+                "path" : "\/documentation\/swiftvizscale\/datescale\/range(reversed:lower:higher:)",
+                "title" : "func range(reversed: Bool, lower: OutputType, higher: OutputType) -> DateScale<OutputType>",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/shuffled()",
-                "title" : "func shuffled() -> [Self.Element]",
+                "path" : "\/documentation\/swiftvizscale\/datescale\/scale(_:)",
+                "title" : "func scale(Date) -> OutputType?",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/shuffled(using:)",
-                "title" : "func shuffled<T>(using: inout T) -> [Self.Element]",
+                "path" : "\/documentation\/swiftvizscale\/datescale\/scaletype(_:)",
+                "title" : "func scaleType(ContinuousScaleType) -> DateScale<OutputType>",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/sorted(by:)",
-                "title" : "func sorted(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> [Self.Element]",
+                "path" : "\/documentation\/swiftvizscale\/datescale\/ticks(reversed:rangelower:rangehigher:formatter:calendar:)",
+                "title" : "func ticks(reversed: Bool, rangeLower: OutputType, rangeHigher: OutputType, formatter: Formatter?, calendar: Calendar) -> [Tick<OutputType>]",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/sorted(using:)-5g2oz",
-                "title" : "func sorted<Comparator>(using: Comparator) -> [Self.Element]",
+                "path" : "\/documentation\/swiftvizscale\/datescale\/ticksfromvalues(_:reversed:from:to:formatter:)",
+                "title" : "func ticksFromValues([DateScale<OutputType>.InputType], reversed: Bool, from: OutputType, to: OutputType, formatter: Formatter?) -> [Tick<OutputType>]",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/sorted(using:)-9hgqm",
-                "title" : "func sorted<S, Comparator>(using: S) -> [Self.Element]",
+                "path" : "\/documentation\/swiftvizscale\/datescale\/transform(_:)",
+                "title" : "func transform(DomainDataTransform) -> DateScale<OutputType>",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/split(maxsplits:omittingemptysubsequences:whereseparator:)",
-                "title" : "func split(maxSplits: Int, omittingEmptySubsequences: Bool, whereSeparator: (Self.Element) throws -> Bool) rethrows -> [ArraySlice<Self.Element>]",
-                "type" : "method"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/starts(with:by:)",
-                "title" : "func starts<PossiblePrefix>(with: PossiblePrefix, by: (Self.Element, PossiblePrefix.Element) throws -> Bool) rethrows -> Bool",
-                "type" : "method"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/suffix(_:)",
-                "title" : "func suffix(Int) -> [Self.Element]",
-                "type" : "method"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/withcontiguousstorageifavailable(_:)",
-                "title" : "func withContiguousStorageIfAvailable<R>((UnsafeBufferPointer<Self.Element>) throws -> R) rethrows -> R?",
+                "path" : "\/documentation\/swiftvizscale\/datescale\/validtickvalues(_:formatter:)",
+                "title" : "func validTickValues([DateScale<OutputType>.InputType], formatter: Formatter?) -> [String]",
                 "type" : "method"
               },
               {
@@ -1513,667 +2267,107 @@
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/element",
-                "title" : "Histogram.Element",
-                "type" : "typealias"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/histogram\/iterator",
-                "title" : "Histogram.Iterator",
+                "path" : "\/documentation\/swiftvizscale\/datescale\/inputtype",
+                "title" : "DateScale.InputType",
                 "type" : "typealias"
               }
             ],
-            "path" : "\/documentation\/swiftvizscale\/histogram\/sequence-implementations",
-            "title" : "Sequence Implementations",
-            "type" : "symbol"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/histogram",
-        "title" : "Histogram",
-        "type" : "struct"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Inspecting a HistogramBinRange",
-            "type" : "groupMarker"
+            "path" : "\/documentation\/swiftvizscale\/datescale",
+            "title" : "DateScale",
+            "type" : "struct"
           },
           {
-            "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/description",
-            "title" : "var description: String",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/lowerbound",
-            "title" : "let lowerBound: Bound",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/upperbound",
-            "title" : "let upperBound: Bound",
-            "type" : "property"
-          },
-          {
-            "title" : "Default Implementations",
+            "title" : "Enumerations",
             "type" : "groupMarker"
           },
           {
             "children" : [
               {
-                "title" : "Operators",
+                "title" : "Enumeration Cases",
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/'...(_:)-3wsp6",
-                "title" : "static func ... (Self) -> PartialRangeThrough<Self>",
-                "type" : "op"
+                "path" : "\/documentation\/swiftvizscale\/datemagnitude\/days",
+                "title" : "case days",
+                "type" : "case"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/'...(_:)-67v4z",
-                "title" : "static func ... (Self) -> PartialRangeFrom<Self>",
-                "type" : "op"
+                "path" : "\/documentation\/swiftvizscale\/datemagnitude\/hours",
+                "title" : "case hours",
+                "type" : "case"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/'...(_:_:)",
-                "title" : "static func ... (Self, Self) -> ClosedRange<Self>",
-                "type" : "op"
+                "path" : "\/documentation\/swiftvizscale\/datemagnitude\/minutes",
+                "title" : "case minutes",
+                "type" : "case"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/'.._(_:)",
-                "title" : "static func ..< (Self) -> PartialRangeUpTo<Self>",
-                "type" : "op"
+                "path" : "\/documentation\/swiftvizscale\/datemagnitude\/months",
+                "title" : "case months",
+                "type" : "case"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/'.._(_:_:)",
-                "title" : "static func ..< (Self, Self) -> Range<Self>",
-                "type" : "op"
+                "path" : "\/documentation\/swiftvizscale\/datemagnitude\/seconds-swift.enum.case",
+                "title" : "case seconds",
+                "type" : "case"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/_(_:_:)-56efr",
-                "title" : "static func < (HistogramBinRange<Bound>, HistogramBinRange<Bound>) -> Bool",
-                "type" : "op"
+                "path" : "\/documentation\/swiftvizscale\/datemagnitude\/subsecond",
+                "title" : "case subsecond",
+                "type" : "case"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/_(_:_:)-9kvsv",
-                "title" : "static func > (Self, Self) -> Bool",
-                "type" : "op"
+                "path" : "\/documentation\/swiftvizscale\/datemagnitude\/years",
+                "title" : "case years",
+                "type" : "case"
               },
-              {
-                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/_=(_:_:)-468vq",
-                "title" : "static func >= (Self, Self) -> Bool",
-                "type" : "op"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/_=(_:_:)-o5le",
-                "title" : "static func <= (Self, Self) -> Bool",
-                "type" : "op"
-              }
-            ],
-            "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/comparable-implementations",
-            "title" : "Comparable Implementations",
-            "type" : "symbol"
-          },
-          {
-            "children" : [
               {
                 "title" : "Instance Properties",
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/description",
-                "title" : "var description: String",
+                "path" : "\/documentation\/swiftvizscale\/datemagnitude\/seconds-swift.property",
+                "title" : "var seconds: Double",
                 "type" : "property"
-              }
-            ],
-            "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/customstringconvertible-implementations",
-            "title" : "CustomStringConvertible Implementations",
-            "type" : "symbol"
-          },
-          {
-            "children" : [
+              },
               {
-                "title" : "Operators",
+                "title" : "Type Methods",
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/!=(_:_:)",
-                "title" : "static func != (Self, Self) -> Bool",
-                "type" : "op"
-              }
-            ],
-            "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/equatable-implementations",
-            "title" : "Equatable Implementations",
-            "type" : "symbol"
-          },
-          {
-            "children" : [
+                "path" : "\/documentation\/swiftvizscale\/datemagnitude\/magnitudeofdaterange(_:_:)",
+                "title" : "static func magnitudeOfDateRange(Date, Date) -> DateMagnitude",
+                "type" : "method"
+              },
               {
-                "title" : "Operators",
+                "title" : "Default Implementations",
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/~=(_:_:)",
-                "title" : "static func ~= (Self, Self.Bound) -> Bool",
-                "type" : "op"
-              },
-              {
-                "title" : "Instance Methods",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/contains(_:)",
-                "title" : "func contains(Bound) -> Bool",
-                "type" : "method"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/relative(to:)",
-                "title" : "func relative<C>(to: C) -> Range<Bound>",
-                "type" : "method"
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/swiftvizscale\/datemagnitude\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/swiftvizscale\/datemagnitude\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
               }
             ],
-            "path" : "\/documentation\/swiftvizscale\/histogrambinrange\/rangeexpression-implementations",
-            "title" : "RangeExpression Implementations",
-            "type" : "symbol"
+            "path" : "\/documentation\/swiftvizscale\/datemagnitude",
+            "title" : "DateMagnitude",
+            "type" : "enum"
           }
         ],
-        "path" : "\/documentation\/swiftvizscale\/histogrambinrange",
-        "title" : "HistogramBinRange",
-        "type" : "struct"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Creating an Interpolator",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/init(_:)-3gpbm",
-            "title" : "init(String)",
-            "type" : "init"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/init(_:)-6i0o1",
-            "title" : "init([CGColor])",
-            "type" : "init"
-          },
-          {
-            "title" : "Mapping values to colors",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator\/interpolate(_:)",
-            "title" : "func interpolate(Double) -> CGColor",
-            "type" : "method"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/indexedcolorinterpolator",
-        "title" : "IndexedColorInterpolator",
-        "type" : "struct"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Interpolating Colors",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/lch\/interpolate(_:_:t:)",
-            "title" : "static func interpolate(CGColor, CGColor, t: CGFloat) -> CGColor",
-            "type" : "method"
-          },
-          {
-            "title" : "Converting Into and Out of LCH Color Space",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/lch\/color(from:)",
-            "title" : "static func color(from: [CGFloat]) -> CGColor",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/lch\/components(from:)",
-            "title" : "static func components(from: CGColor) -> [CGFloat]",
-            "type" : "method"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/lch",
-        "title" : "LCH",
-        "type" : "enum"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Creating an Interpolator",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/lchcolorinterpolator\/init(_:_:)",
-            "title" : "init(CGColor, CGColor)",
-            "type" : "init"
-          },
-          {
-            "title" : "Mapping values to colors",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/lchcolorinterpolator\/interpolate(_:)",
-            "title" : "func interpolate(Double) -> CGColor",
-            "type" : "method"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/lchcolorinterpolator",
-        "title" : "LCHColorInterpolator",
-        "type" : "struct"
-      },
-      {
-        "path" : "\/documentation\/swiftvizscale\/makingandusingscales",
-        "title" : "Making and Using Scales",
-        "type" : "article"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Creating a Band Scale",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/init(_:padding:round:reversed:from:to:)",
-            "title" : "init([CategoryType], padding: OutputType, round: Bool, reversed: Bool, from: OutputType?, to: OutputType?)",
-            "type" : "init"
-          },
-          {
-            "title" : "Updating Scales",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/domain(_:)",
-            "title" : "func domain([CategoryType]) -> PointScale<CategoryType, OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/round(_:)",
-            "title" : "func round(Bool) -> PointScale<CategoryType, OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/padding(_:)",
-            "title" : "func padding(OutputType) -> PointScale<CategoryType, OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/range(_:)",
-            "title" : "func range(ClosedRange<OutputType>) -> PointScale<CategoryType, OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/range(lower:higher:)",
-            "title" : "func range(lower: OutputType, higher: OutputType) -> PointScale<CategoryType, OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/range(reversed:_:)",
-            "title" : "func range(reversed: Bool, ClosedRange<OutputType>) -> PointScale<CategoryType, OutputType>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/range(reversed:lower:higher:)",
-            "title" : "func range(reversed: Bool, lower: OutputType, higher: OutputType) -> PointScale<CategoryType, OutputType>",
-            "type" : "method"
-          },
-          {
-            "title" : "Inspecting Scales",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/domain",
-            "title" : "let domain: [CategoryType]",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/round",
-            "title" : "let round: Bool",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/padding",
-            "title" : "let padding: OutputType",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/reversed",
-            "title" : "let reversed: Bool",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/rangelower",
-            "title" : "let rangeLower: OutputType?",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/rangehigher",
-            "title" : "let rangeHigher: OutputType?",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/scaletype",
-            "title" : "let scaleType: DiscreteScaleType",
-            "type" : "property"
-          },
-          {
-            "title" : "Converting Values",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/scale(_:)",
-            "title" : "func scale(CategoryType) -> OutputType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/scale(_:from:to:)",
-            "title" : "func scale(CategoryType, from: OutputType, to: OutputType) -> OutputType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/scale(_:reversed:from:to:)",
-            "title" : "func scale(CategoryType, reversed: Bool, from: OutputType, to: OutputType) -> OutputType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/invert(_:)",
-            "title" : "func invert(OutputType) -> CategoryType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/invert(_:from:to:)",
-            "title" : "func invert(OutputType, from: OutputType, to: OutputType) -> CategoryType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/invert(_:reversed:from:to:)",
-            "title" : "func invert(OutputType, reversed: Bool, from: OutputType, to: OutputType) -> CategoryType?",
-            "type" : "method"
-          },
-          {
-            "title" : "Creating Ticks",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/ticks(rangelower:rangehigher:formatter:)",
-            "title" : "func ticks(rangeLower: PointScale<CategoryType, OutputType>.RangeType, rangeHigher: PointScale<CategoryType, OutputType>.RangeType, formatter: Formatter?) -> [Tick<PointScale<CategoryType, OutputType>.RangeType>]",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/ticks(reversed:rangelower:rangehigher:formatter:)",
-            "title" : "func ticks(reversed: Bool, rangeLower: PointScale<CategoryType, OutputType>.RangeType, rangeHigher: PointScale<CategoryType, OutputType>.RangeType, formatter: Formatter?) -> [Tick<PointScale<CategoryType, OutputType>.RangeType>]",
-            "type" : "method"
-          },
-          {
-            "title" : "Default Implementations",
-            "type" : "groupMarker"
-          },
-          {
-            "children" : [
-              {
-                "title" : "Instance Properties",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/pointscale\/description",
-                "title" : "var description: String",
-                "type" : "property"
-              }
-            ],
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/customstringconvertible-implementations",
-            "title" : "CustomStringConvertible Implementations",
-            "type" : "symbol"
-          },
-          {
-            "children" : [
-              {
-                "title" : "Instance Methods",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/pointscale\/defaulttickvalues(formatter:)",
-                "title" : "func defaultTickValues(formatter: Formatter?) -> [String]",
-                "type" : "method"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/pointscale\/ticks(rangelower:rangehigher:formatter:)",
-                "title" : "func ticks(rangeLower: PointScale<CategoryType, OutputType>.RangeType, rangeHigher: PointScale<CategoryType, OutputType>.RangeType, formatter: Formatter?) -> [Tick<PointScale<CategoryType, OutputType>.RangeType>]",
-                "type" : "method"
-              },
-              {
-                "path" : "\/documentation\/swiftvizscale\/pointscale\/ticks(reversed:rangelower:rangehigher:formatter:)",
-                "title" : "func ticks(reversed: Bool, rangeLower: PointScale<CategoryType, OutputType>.RangeType, rangeHigher: PointScale<CategoryType, OutputType>.RangeType, formatter: Formatter?) -> [Tick<PointScale<CategoryType, OutputType>.RangeType>]",
-                "type" : "method"
-              }
-            ],
-            "path" : "\/documentation\/swiftvizscale\/pointscale\/discretescale-implementations",
-            "title" : "DiscreteScale Implementations",
-            "type" : "symbol"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/pointscale",
-        "title" : "PointScale",
-        "type" : "struct"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Updating Scales",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/scale\/domain(_:)",
-            "title" : "func domain([Self.InputType]) -> Self",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/reversiblescale\/range(_:)",
-            "title" : "func range(ClosedRange<Self.RangeType>) -> Self",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/reversiblescale\/range(lower:higher:)",
-            "title" : "func range(lower: Self.RangeType, higher: Self.RangeType) -> Self",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/reversiblescale\/range(reversed:_:)",
-            "title" : "func range(reversed: Bool, ClosedRange<Self.RangeType>) -> Self",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/reversiblescale\/range(reversed:lower:higher:)",
-            "title" : "func range(reversed: Bool, lower: Self.RangeType, higher: Self.RangeType) -> Self",
-            "type" : "method"
-          },
-          {
-            "title" : "Converting Values",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/scale\/scale(_:)",
-            "title" : "func scale(Self.InputType) -> Self.OutputType?",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/reversiblescale\/invert(_:)",
-            "title" : "func invert(Self.OutputType) -> Self.InputType?",
-            "type" : "method"
-          },
-          {
-            "title" : "Scale Types",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/scale\/inputtype",
-            "title" : "InputType",
-            "type" : "associatedtype"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/scale\/outputtype",
-            "title" : "OutputType",
-            "type" : "associatedtype"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/reversiblescale\/rangetype",
-            "title" : "RangeType",
-            "type" : "associatedtype"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/reversiblescale",
-        "title" : "ReversibleScale",
-        "type" : "protocol"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Updating Scales",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/scale\/domain(_:)",
-            "title" : "func domain([Self.InputType]) -> Self",
-            "type" : "method"
-          },
-          {
-            "title" : "Converting Values",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/scale\/scale(_:)",
-            "title" : "func scale(Self.InputType) -> Self.OutputType?",
-            "type" : "method"
-          },
-          {
-            "title" : "Scale Types",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/scale\/inputtype",
-            "title" : "InputType",
-            "type" : "associatedtype"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/scale\/outputtype",
-            "title" : "OutputType",
-            "type" : "associatedtype"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/scale",
-        "title" : "Scale",
-        "type" : "protocol"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Creating a Sequential Scale",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/sequentialscale\/init(lower:higher:reversed:interpolator:)",
-            "title" : "init(lower: InputType, higher: InputType, reversed: Bool, interpolator: Interpolator)",
-            "type" : "init"
-          },
-          {
-            "title" : "Instance Properties",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/sequentialscale\/description",
-            "title" : "var description: String",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domainhigher",
-            "title" : "let domainHigher: InputType",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domainlower",
-            "title" : "let domainLower: InputType",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/sequentialscale\/reversed",
-            "title" : "let reversed: Bool",
-            "type" : "property"
-          },
-          {
-            "title" : "Instance Methods",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(_:)-5m2g6",
-            "title" : "func domain(ClosedRange<InputType>) -> SequentialScale<InputType, Interpolator>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(_:)-ct2c",
-            "title" : "func domain([InputType]) -> SequentialScale<InputType, Interpolator>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(_:nice:)",
-            "title" : "func domain([InputType], nice: Bool) -> SequentialScale<InputType, Interpolator>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/sequentialscale\/domain(lower:higher:)",
-            "title" : "func domain(lower: InputType, higher: InputType) -> SequentialScale<InputType, Interpolator>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/sequentialscale\/interpolator(_:)",
-            "title" : "func interpolator(Interpolator) -> SequentialScale<InputType, Interpolator>",
-            "type" : "method"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/sequentialscale\/scale(_:)",
-            "title" : "func scale(InputType) -> CGColor",
-            "type" : "method"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/sequentialscale",
-        "title" : "SequentialScale",
-        "type" : "struct"
-      },
-      {
-        "path" : "\/documentation\/swiftvizscale\/snippets",
-        "title" : "Snippets",
-        "type" : "article"
-      },
-      {
-        "children" : [
-          {
-            "title" : "Creating Ticks",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/tick\/init(value:location:formatter:)",
-            "title" : "init?<T>(value: T, location: OutputType, formatter: Formatter?)",
-            "type" : "init"
-          },
-          {
-            "title" : "Inspecting Ticks",
-            "type" : "groupMarker"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/tick\/label",
-            "title" : "let label: String",
-            "type" : "property"
-          },
-          {
-            "path" : "\/documentation\/swiftvizscale\/tick\/rangelocation",
-            "title" : "let rangeLocation: OutputType",
-            "type" : "property"
-          }
-        ],
-        "path" : "\/documentation\/swiftvizscale\/tick",
-        "title" : "Tick",
-        "type" : "struct"
+        "path" : "\/documentation\/swiftvizscale",
+        "title" : "SwiftVizScale",
+        "type" : "module"
       }
     ]
   },
