@@ -4,6 +4,7 @@
 
 import Foundation
 
+/// A continuous scale for transforming and mapping dates to an output range you provide.
 public struct DateScale<OutputType: BinaryFloatingPoint>: ReversibleScale, CustomStringConvertible {
     public typealias InputType = Date
 

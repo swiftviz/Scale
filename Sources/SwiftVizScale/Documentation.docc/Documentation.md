@@ -20,6 +20,8 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 - ``SwiftVizScale/ContinuousScale``
 - ``SwiftVizScale/ContinuousScaleType``
 - ``SwiftVizScale/DomainDataTransform``
+- ``SwiftVizScale/DateScale``
+- ``SwiftVizScale/DateMagnitude``
 
 ### Discrete Scales
 
