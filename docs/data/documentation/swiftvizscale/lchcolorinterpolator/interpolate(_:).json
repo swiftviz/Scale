@@ -66,6 +66,10 @@
         "unavailable" : false
       }
     ],
+    "remoteSource" : {
+      "fileName" : "LCHColorInterpolator.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Interpolators\/LCHColorInterpolator.swift#L24"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",

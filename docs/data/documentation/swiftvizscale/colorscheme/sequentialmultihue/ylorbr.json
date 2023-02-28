@@ -57,6 +57,10 @@
         "name" : "SwiftVizScale"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ColorScheme.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Interpolators\/ColorScheme.swift#L112"
+    },
     "role" : "symbol",
     "roleHeading" : "Type Property",
     "symbolKind" : "property",

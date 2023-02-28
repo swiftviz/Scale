@@ -73,6 +73,10 @@
         "name" : "SwiftVizScale"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "LCH.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Color\/LCH.swift#L39"
+    },
     "role" : "symbol",
     "roleHeading" : "Type Method",
     "symbolKind" : "method",

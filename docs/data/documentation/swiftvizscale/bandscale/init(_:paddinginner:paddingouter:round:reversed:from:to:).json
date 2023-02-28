@@ -141,6 +141,10 @@
         "name" : "SwiftVizScale"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "BandScale.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/BandScale.swift#L50"
+    },
     "role" : "symbol",
     "roleHeading" : "Initializer",
     "symbolKind" : "init",

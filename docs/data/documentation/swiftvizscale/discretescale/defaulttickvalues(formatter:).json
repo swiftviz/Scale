@@ -69,6 +69,10 @@
         "name" : "SwiftVizScale"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "DiscreteScale.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/DiscreteScale.swift#L37"
+    },
     "required" : true,
     "role" : "symbol",
     "roleHeading" : "Instance Method",

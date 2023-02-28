@@ -159,6 +159,10 @@
         "name" : "SwiftVizScale"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ContinuousScale.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/ContinuousScale.swift#L226"
+    },
     "role" : "symbol",
     "roleHeading" : "Initializer",
     "symbolKind" : "init",

@@ -66,6 +66,10 @@
         "unavailable" : false
       }
     ],
+    "remoteSource" : {
+      "fileName" : "IndexedColorInterpolator.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Interpolators\/IndexedColorInterpolator.swift#L69"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",

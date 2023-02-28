@@ -103,6 +103,10 @@
         "text" : "Iterator"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "Histogram.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Histogram\/Histogram.swift#L277"
+    },
     "role" : "symbol",
     "roleHeading" : "Type Alias",
     "symbolKind" : "typealias",

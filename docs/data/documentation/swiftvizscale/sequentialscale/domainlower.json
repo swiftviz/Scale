@@ -56,6 +56,10 @@
         "unavailable" : false
       }
     ],
+    "remoteSource" : {
+      "fileName" : "SequentialScale.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/SequentialScale.swift#L13"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Property",
     "symbolKind" : "property",

@@ -101,6 +101,10 @@
         "name" : "SwiftVizScale"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ReversibleScale.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/ReversibleScale.swift#L14"
+    },
     "required" : true,
     "role" : "symbol",
     "roleHeading" : "Instance Method",

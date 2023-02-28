@@ -44,6 +44,10 @@
         "name" : "SwiftVizScale"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "DomainDataTransform.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/DomainDataTransform.swift#L10"
+    },
     "role" : "symbol",
     "roleHeading" : "Case",
     "symbolKind" : "case",

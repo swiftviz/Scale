@@ -39,6 +39,10 @@
         "name" : "SwiftVizScale"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "NiceValue.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/NiceValue.swift#L238"
+    },
     "role" : "symbol",
     "roleHeading" : "Case",
     "symbolKind" : "case",

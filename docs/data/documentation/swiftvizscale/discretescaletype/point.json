@@ -44,6 +44,10 @@
         "name" : "SwiftVizScale"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "DiscreteScale.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/DiscreteScale.swift#L10"
+    },
     "role" : "symbol",
     "roleHeading" : "Case",
     "symbolKind" : "case",

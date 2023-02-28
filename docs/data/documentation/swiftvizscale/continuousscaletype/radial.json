@@ -44,6 +44,10 @@
         "name" : "SwiftVizScale"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ContinuousScaleType.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/ContinuousScaleType.swift#L16"
+    },
     "role" : "symbol",
     "roleHeading" : "Case",
     "symbolKind" : "case",

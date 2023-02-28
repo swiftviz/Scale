@@ -53,6 +53,10 @@
         "unavailable" : false
       }
     ],
+    "remoteSource" : {
+      "fileName" : "IndexedColorInterpolator.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Interpolators\/IndexedColorInterpolator.swift#L9"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",

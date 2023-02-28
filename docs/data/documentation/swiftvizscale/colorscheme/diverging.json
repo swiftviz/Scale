@@ -45,6 +45,10 @@
         "text" : "Diverging"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ColorScheme.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Interpolators\/ColorScheme.swift#L167"
+    },
     "role" : "symbol",
     "roleHeading" : "Enumeration",
     "symbolKind" : "enum",

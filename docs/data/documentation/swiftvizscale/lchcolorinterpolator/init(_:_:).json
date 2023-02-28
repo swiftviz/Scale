@@ -62,6 +62,10 @@
         "unavailable" : false
       }
     ],
+    "remoteSource" : {
+      "fileName" : "LCHColorInterpolator.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Interpolators\/LCHColorInterpolator.swift#L17"
+    },
     "role" : "symbol",
     "roleHeading" : "Initializer",
     "symbolKind" : "init",

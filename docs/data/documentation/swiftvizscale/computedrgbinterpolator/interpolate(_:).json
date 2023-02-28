@@ -66,6 +66,10 @@
         "unavailable" : false
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ComputedRGBInterpolator.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Interpolators\/ComputedRGBInterpolator.swift#L32"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",

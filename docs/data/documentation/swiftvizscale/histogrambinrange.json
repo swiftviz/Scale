@@ -44,6 +44,10 @@
         "text" : "HistogramBinRange"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "HistogramBinRange.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Histogram\/HistogramBinRange.swift#L13"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",

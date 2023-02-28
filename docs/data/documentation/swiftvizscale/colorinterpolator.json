@@ -44,6 +44,10 @@
         "text" : "ColorInterpolator"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ColorInterpolator.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Interpolators\/ColorInterpolator.swift#L8"
+    },
     "role" : "symbol",
     "roleHeading" : "Protocol",
     "symbolKind" : "protocol",

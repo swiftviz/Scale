@@ -60,6 +60,10 @@
         "name" : "SwiftVizScale"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "DateScale.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/DateScale.swift#L185"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",
@@ -281,7 +285,10 @@
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DateScale": {
   "abstract" : [
-
+    {
+      "text" : "A continuous scale for transforming and mapping dates to an output range you provide.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

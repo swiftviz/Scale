@@ -44,6 +44,10 @@
         "text" : "LCH"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "LCH.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Color\/LCH.swift#L17"
+    },
     "role" : "symbol",
     "roleHeading" : "Enumeration",
     "symbolKind" : "enum",

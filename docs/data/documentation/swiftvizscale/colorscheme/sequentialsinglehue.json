@@ -45,6 +45,10 @@
         "text" : "SequentialSingleHue"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ColorScheme.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Interpolators\/ColorScheme.swift#L8"
+    },
     "role" : "symbol",
     "roleHeading" : "Enumeration",
     "symbolKind" : "enum",

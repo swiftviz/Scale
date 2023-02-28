@@ -44,6 +44,10 @@
         "text" : "Tick"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "Tick.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Tick.swift#L12"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",

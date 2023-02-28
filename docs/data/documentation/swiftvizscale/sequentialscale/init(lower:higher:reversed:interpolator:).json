@@ -122,6 +122,10 @@
         "unavailable" : false
       }
     ],
+    "remoteSource" : {
+      "fileName" : "SequentialScale.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/SequentialScale.swift#L27"
+    },
     "role" : "symbol",
     "roleHeading" : "Initializer",
     "symbolKind" : "init",

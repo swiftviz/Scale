@@ -43,6 +43,10 @@
         "name" : "SwiftVizScale"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "Scale.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Scale.swift#L10"
+    },
     "required" : true,
     "role" : "symbol",
     "roleHeading" : "Associated Type",

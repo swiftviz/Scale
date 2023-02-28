@@ -57,6 +57,10 @@
         "name" : "SwiftVizScale"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ColorInterpolator.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Interpolators\/ColorInterpolator.swift#L11"
+    },
     "required" : true,
     "role" : "symbol",
     "roleHeading" : "Instance Method",

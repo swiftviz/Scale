@@ -94,6 +94,10 @@
         "text" : "HistogramIterator"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "Histogram.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/Histogram\/Histogram.swift#L281"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",

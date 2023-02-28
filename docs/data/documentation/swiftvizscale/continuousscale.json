@@ -44,6 +44,10 @@
         "text" : "ContinuousScale"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "ContinuousScale.swift",
+      "url" : "https:\/\/github.com\/swiftviz\/scale\/blob\/main\/Sources\/SwiftVizScale\/ContinuousScale.swift#L8"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",
@@ -137,7 +141,9 @@
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/MakingAndUsingScales",
         "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/ContinuousScaleType",
-        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform"
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DomainDataTransform",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateScale",
+        "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude"
       ],
       "title" : "Continuous Scales"
     }
@@ -4440,6 +4446,74 @@
   "title" : "ContinuousScaleType",
   "type" : "topic",
   "url" : "\/documentation\/swiftvizscale\/continuousscaletype"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DateMagnitude": {
+  "abstract" : [
+    {
+      "text" : "A type that represents the magnitude of the range between two dates.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DateMagnitude"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateMagnitude",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DateMagnitude"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DateMagnitude",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/datemagnitude"
+},
+"doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DateScale": {
+  "abstract" : [
+    {
+      "text" : "A continuous scale for transforming and mapping dates to an output range you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DateScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftVizScale\/documentation\/SwiftVizScale\/DateScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DateScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DateScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftvizscale\/datescale"
 },
 "doc://com.github.swiftviz.SwiftVizScale/documentation/SwiftVizScale/DomainDataTransform": {
   "abstract" : [
