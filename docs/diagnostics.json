@@ -1,14 +1,3 @@
 [
-  {
-    "notes" : [
 
-    ],
-    "severity" : 2,
-    "source" : "Snippets.md",
-    "start" : {
-      "column" : 1,
-      "line" : 5
-    },
-    "summary" : "Topic reference 'Scale\/Snippets\/ExampleSnippet' couldn't be resolved. No local documentation matches this reference."
-  }
 ]

@@ -29,6 +29,22 @@
           "level" : 2,
           "text" : "Example",
           "type" : "heading"
+        },
+        {
+          "code" : [
+            "import Foundation",
+            "import SwiftVizScale",
+            "",
+            "func doSomething() {",
+            "    let linear = ContinuousScale<CGFloat>(0.0 ... 50.0)",
+            "    let scaledValue = linear.scale(3, from: 0, to: 100)",
+            "    print(String(describing: scaledValue))",
+            "}",
+            "",
+            "doSomething()"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
         }
       ],
       "kind" : "content"

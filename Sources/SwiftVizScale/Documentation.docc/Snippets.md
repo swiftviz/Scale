@@ -2,4 +2,4 @@
 
 ## Example
 
-@Snippet(path: "Scale/Snippets/ExampleSnippet")
+@Snippet(path: "SwiftVizScale/Snippets/ExampleSnippet")
