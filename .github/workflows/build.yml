@@ -6,17 +6,53 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  CODEQL_ENABLE_EXPERIMENTAL_FEATURES_SWIFT: true
+
 jobs:
+
+  analyze:
+    name: Analyze
+    runs-on: macos-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'swift' ]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v2
+    # or
+    # - run: xcodebuild -scheme FooBar -sdk iphonesimulator build
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v2
+      with:
+        category: "/language:${{matrix.language}}"
+
   build:
 
-    runs-on: macos-12
+    runs-on: macos-latest
 
     steps:
     - name: Checkout Project
       uses: actions/checkout@v3
 
-    - name: Switch to Xcode 13.4.1
-      run: sudo xcode-select -s /Applications/Xcode_13.4.1.app
+    # - name: Switch to Xcode 13.4.1
+    #   run: sudo xcode-select -s /Applications/Xcode_13.4.1.app
 
     - name: Show Build Version
       run: xcodebuild -version
