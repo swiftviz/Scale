@@ -33,8 +33,11 @@ jobs:
       with:
         languages: ${{ matrix.language }}
 
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v2
+    #- name: Autobuild
+    #  uses: github/codeql-action/autobuild@v2
+    #  ^^ doesn't work for a purely swift package
+    - name: build
+      uses: swift build
     # or
     # - run: xcodebuild -scheme FooBar -sdk iphonesimulator build
 
