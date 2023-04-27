@@ -37,7 +37,9 @@ jobs:
     #  uses: github/codeql-action/autobuild@v2
     #  ^^ doesn't work for a purely swift package
     - name: build
-      uses: swift build
+      run: swift build
+        #- name: build and test
+        #  run: swift test --enable-code-coverage -v
     # or
     # - run: xcodebuild -scheme FooBar -sdk iphonesimulator build
 
