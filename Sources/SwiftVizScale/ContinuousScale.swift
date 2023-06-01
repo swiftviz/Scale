@@ -672,7 +672,7 @@ public struct ContinuousScale<OutputType: BinaryFloatingPoint>: ReversibleScale,
             if InputType(tickValue) > domainHigher || InputType(tickValue) < domainLower {
                 return nil
             }
-            if let tickRangeLocation = scale(InputType(tickValue), reversed: self.reversed, from: rangeLower, to: rangeHigher) {
+            if let tickRangeLocation = scale(InputType(tickValue), reversed: reversed, from: rangeLower, to: rangeHigher) {
                 return Tick(value: tickValue, location: tickRangeLocation, formatter: formatter)
             }
             return nil
