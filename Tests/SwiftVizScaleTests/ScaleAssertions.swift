@@ -12,7 +12,7 @@ func assertTick(_ tick: Tick<CGFloat>, _ label: String, _ location: CGFloat, fil
 
 func assertBand(_ band: Band<String, CGFloat>?, _ label: String, low: CGFloat, high: CGFloat, file: StaticString = #file, line: UInt = #line) {
     XCTAssertNotNil(band, file: file, line: line)
-    guard let band = band else {
+    guard let band else {
         return
     }
     XCTAssertEqual(band.value, label, file: file, line: line)

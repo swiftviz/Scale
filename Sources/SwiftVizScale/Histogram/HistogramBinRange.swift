@@ -15,9 +15,9 @@ public struct HistogramBinRange<Bound: Hashable & Comparable> {
     public let lowerBound: Bound
     /// The upper bound of the bin range.
     public let upperBound: Bound
-    internal let _final: Bool
+    let _final: Bool
 
-    internal init(lowerBound: Bound, upperBound: Bound, _final: Bool = false) {
+    init(lowerBound: Bound, upperBound: Bound, _final: Bool = false) {
         self.lowerBound = lowerBound
         self.upperBound = upperBound
         self._final = _final
@@ -49,9 +49,9 @@ extension HistogramBinRange: RangeExpression {
     /// - Returns: `true` if element is contained in the range expression; otherwise, `false`.
     public func contains(_ element: Bound) -> Bool {
         if _final {
-            return element >= lowerBound && element <= upperBound
+            element >= lowerBound && element <= upperBound
         } else {
-            return element >= lowerBound && element < upperBound
+            element >= lowerBound && element < upperBound
         }
     }
 }
@@ -60,9 +60,9 @@ extension HistogramBinRange: CustomStringConvertible {
     /// The description of the bin.
     public var description: String {
         if _final {
-            return String(describing: lowerBound ... upperBound)
+            String(describing: lowerBound ... upperBound)
         } else {
-            return String(describing: lowerBound ..< upperBound)
+            String(describing: lowerBound ..< upperBound)
         }
     }
 }

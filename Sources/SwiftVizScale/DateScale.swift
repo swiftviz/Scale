@@ -210,7 +210,7 @@ public struct DateScale<OutputType: BinaryFloatingPoint>: ReversibleScale, Custo
     public func validTickValues(_ inputValues: [InputType], formatter: Formatter? = nil) -> [String] {
         inputValues.compactMap { value in
             if domainContains(value) {
-                if let formatter = formatter {
+                if let formatter {
                     return formatter.string(for: value) ?? ""
                 } else {
                     return String("\(value)")
@@ -284,10 +284,10 @@ public struct DateScale<OutputType: BinaryFloatingPoint>: ReversibleScale, Custo
     public func defaultTickValues(formatter: Formatter? = nil, calendar: Calendar = Calendar.current) -> [String] {
         let tickValues: [InputType] = Date.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks, using: calendar)
         return tickValues.map { intValue in
-            if let formatter = formatter {
-                return formatter.string(for: intValue) ?? ""
+            if let formatter {
+                formatter.string(for: intValue) ?? ""
             } else {
-                return String("\(intValue)")
+                String("\(intValue)")
             }
         }
     }

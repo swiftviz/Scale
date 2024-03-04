@@ -14,9 +14,9 @@ public enum DiscreteScaleType: Equatable {
     var description: String {
         switch self {
         case .point:
-            return "point"
+            "point"
         case .band:
-            return "band"
+            "band"
         }
     }
 }

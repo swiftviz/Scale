@@ -21,6 +21,7 @@
 
         /// Returns the color mapped from the unit value you provide.
         /// - Parameter t: A unit value between `0` and  `1`.
+        @MainActor
         public func interpolate(_ t: Double) -> CGColor {
             LCH.interpolate(startColor, endColor, t: t)
         }

@@ -1,5 +1,5 @@
 //
-//  TickLabelTests.swift
+//  TickTests.swift
 //
 
 @testable import SwiftVizScale

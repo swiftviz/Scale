@@ -12,6 +12,7 @@
         var startColor: CGColor
         var endColor: CGColor
         var colorspace: CGColorSpace
+        @MainActor
         func color(_ stepValue: Int) -> CGColor {
             IndexedColorInterpolator.interpolate(startColor,
                                                  endColor,
@@ -39,6 +40,7 @@
         var steps: CGFloat
         var startColor: CGColor
         var endColor: CGColor
+        @MainActor
         func color(_ stepValue: Int) -> CGColor {
             LCH.interpolate(startColor,
                             endColor,

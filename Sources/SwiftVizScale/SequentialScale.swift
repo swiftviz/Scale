@@ -49,14 +49,14 @@
         ///
         /// - Parameter inputValue: The value to be scaled.
         /// - Returns: A value within the bounds of the range values you provide, or `nil` if the value was dropped.
+        @MainActor
         public func scale(_ x: InputType) -> CGColor {
-            let clampedX: InputType
-            if x < domainLower {
-                clampedX = domainLower
+            let clampedX: InputType = if x < domainLower {
+                domainLower
             } else if x > domainHigher {
-                clampedX = domainHigher
+                domainHigher
             } else {
-                clampedX = x
+                x
             }
             let t = normalize(Double(clampedX), lower: Double(domainLower), higher: Double(domainHigher))
             return interpolator.interpolate(t)

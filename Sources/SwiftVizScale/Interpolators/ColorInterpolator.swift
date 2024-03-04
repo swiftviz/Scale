@@ -8,6 +8,7 @@
     public protocol ColorInterpolator {
         /// Returns the color mapped from the unit value you provide.
         /// - Parameter t: A unit value between `0` and  `1`.
+        @MainActor
         func interpolate(_ t: Double) -> CGColor
     }
 #endif

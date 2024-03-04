@@ -20,6 +20,7 @@
             }
         }
 
+        @MainActor
         public init(color: CGColor, name: String) {
             values = LCH.components(from: color)
             self.name = name
@@ -51,6 +52,7 @@
             CGFloat(Double.pi * 2)
         }
 
+        @MainActor
         func colorFromLCHComponents(_ l: CGFloat, _ c: CGFloat, _ h: CGFloat) -> CGColor {
             LCH.color(from: [l, c, h, 1.0])
         }

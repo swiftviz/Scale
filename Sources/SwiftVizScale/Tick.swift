@@ -27,13 +27,13 @@ public struct Tick<OutputType: BinaryFloatingPoint> {
     /// - Parameters:
     ///   - value: The value at the tick's location.
     ///   - location: The location of the tick within the range for a scale.
-    public init?<T>(value: T, location: OutputType, formatter: Formatter? = nil) where OutputType: BinaryFloatingPoint {
+    public init?(value: some Any, location: OutputType, formatter: Formatter? = nil) where OutputType: BinaryFloatingPoint {
         if location.isNaN {
             return nil
         } else {
             rangeLocation = location
         }
-        if let formatter = formatter {
+        if let formatter {
             label = formatter.string(for: value) ?? ""
         } else {
             label = String("\(value)")

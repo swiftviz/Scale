@@ -12,6 +12,7 @@
         // https://bids.github.io/colormap/
         var colors: [CGColor]
 
+        @MainActor
         private static var lab = CGColorSpace(name: CGColorSpace.genericLab)!
 
         /// Returns an index and re-normalized interpolation value to be able to step-wise interpolate through an array of options.
@@ -26,11 +27,10 @@
             let step = 1.0 / Double(count - 1)
             // take the unit value (t) between 0...1 and determine the lower index
             // value from the array that it should reference.
-            let lowerIndex: Int
-            if t == 1.0 {
-                lowerIndex = count - 2
+            let lowerIndex: Int = if t == 1.0 {
+                count - 2
             } else {
-                lowerIndex = Int(floor(t / step))
+                Int(floor(t / step))
             }
             // Calculate the unit-value for the two index steps
             let lowerIndexTValue = step * Double(lowerIndex)
@@ -41,17 +41,20 @@
             return (lowerIndex, tValueBetweenSteps)
         }
 
+        @MainActor
         private static func color(from components: [CGFloat], using colorspace: CGColorSpace) -> CGColor {
             CGColor(colorSpace: colorspace, components: components)!
         }
 
+        @MainActor
         private static func components(from color: CGColor, for colorspace: CGColorSpace) -> [CGFloat] {
             let convertedColor = color.converted(to: colorspace, intent: .perceptual, options: nil)!
             let components = convertedColor.components!
             return components
         }
 
-        internal static func interpolate(_ color1: CGColor, _ color2: CGColor, t: CGFloat, using colorspace: CGColorSpace) -> CGColor {
+        @MainActor
+        static func interpolate(_ color1: CGColor, _ color2: CGColor, t: CGFloat, using colorspace: CGColorSpace) -> CGColor {
             precondition(t >= 0 && t <= 1)
             let components1 = components(from: color1, for: colorspace)
             let components2 = components(from: color2, for: colorspace)
@@ -66,6 +69,7 @@
 
         /// Returns the color mapped from the unit value you provide.
         /// - Parameter t: A unit value between `0` and  `1`.
+        @MainActor
         public func interpolate(_ t: Double) -> CGColor {
             let (colorIndex, tBetweenIndices) = Self.interpolateIntoSteps(t, colors.count)
             // For the hex color sequences from D3 - we *don't* want to interpolate through LCH space,

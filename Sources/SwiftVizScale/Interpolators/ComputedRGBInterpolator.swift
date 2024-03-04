@@ -43,7 +43,8 @@
         // Equation ported from
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-multi/cividis.js
         // Copyright 2010-2021 Mike Bostock, used under License
-        internal static let Cividis = ComputedRGBInterpolator(name: "Cividis", r: { t in
+        @MainActor
+        static let Cividis = ComputedRGBInterpolator(name: "Cividis", r: { t in
             clampAndNormalize(-4.54 - t * (35.34 - t * (2381.73 - t * (6402.7 - t * (7024.72 - t * 2710.57)))))
         }, g: { t in
             clampAndNormalize(32.49 + t * (170.73 + t * (52.82 - t * (131.46 - t * (176.58 - t * 67.37)))))
@@ -54,8 +55,8 @@
         // Equation ported from
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-multi/turbo.js
         // Copyright 2010-2021 Mike Bostock, used under License
-
-        internal static let Turbo = ComputedRGBInterpolator(name: "Turbo", r: { t in
+        @MainActor
+        static let Turbo = ComputedRGBInterpolator(name: "Turbo", r: { t in
             clampAndNormalize(34.61 + t * (1172.33 - t * (10793.56 - t * (33300.12 - t * (38394.49 - t * 14825.05)))))
         }, g: { t in
             clampAndNormalize(23.31 + t * (557.33 + t * (1225.33 - t * (3574.96 - t * (1073.77 + t * 707.56)))))
@@ -66,8 +67,8 @@
         // Equation ported from
         // https://github.com/d3/d3-scale-chromatic/blob/main/src/sequential-multi/sinebow.js
         // Copyright 2010-2021 Mike Bostock, used under License
-
-        internal static let Sinebow = ComputedRGBInterpolator(name: "Sinebow", r: { t in
+        @MainActor
+        static let Sinebow = ComputedRGBInterpolator(name: "Sinebow", r: { t in
             let tMod = (0.5 - t) * Double.pi
             return sin(tMod) * sin(tMod)
         }, g: { t in

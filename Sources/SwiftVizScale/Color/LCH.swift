@@ -32,10 +32,12 @@
         // Color interpolation discussion:
         // https://www.alanzucconi.com/2016/01/06/colour-interpolation/
 
+        @MainActor
         static var lab = CGColorSpace(name: CGColorSpace.genericLab)!
 
         /// Creates a Core Graphics color instance from individual components in the LCH color space.
         /// - Parameter components: A list of four components in the order: Luminance, Chroma, Hue, and Alpha.
+        @MainActor
         public static func color(from components: [CGFloat]) -> CGColor {
             precondition(components.count == 4)
             var newComponents = components
@@ -56,6 +58,7 @@
         /// Returns a list of four components from a Core Graphics color instance, mapped into the LCH color space.
         ///
         /// The components, in order, are Luminance, Chroma, Hue, and Alpha.
+        @MainActor
         public static func components(from color: CGColor) -> [CGFloat] {
             // from https://mina86.com/2021/srgb-lab-lchab-conversions/
             // converting L,a*,b* to L,C,Hab (polar coordinate LAB color space)
@@ -95,6 +98,7 @@
         ///   - color2: The second color.
         ///   - t: A unit value between 0 and 1 representing the position between the first and second colors to return.
         /// - Returns: A color interpolated between the two colors you provide.
+        @MainActor
         public static func interpolate(_ color1: CGColor, _ color2: CGColor, t: CGFloat) -> CGColor {
             precondition(t >= 0 && t <= 1)
             let components1 = LCH.components(from: color1)
@@ -109,22 +113,21 @@
             // by +/- 2*PI to get a shorter distance.
             let hue1 = components1[2]
             let hue2 = components2[2]
-            let targetForInterpolation: CGFloat
-            if hue1 > hue2 {
+            let targetForInterpolation: CGFloat = if hue1 > hue2 {
                 // If the value for hue2 is greater than hue1, add 2*PI to hue2 and compare, choosing
                 // the shortest path for the target to which to interpolate.
                 if abs(hue1 - hue2) > abs(hue1 - (hue2 + 2 * Double.pi)) {
-                    targetForInterpolation = hue2 + 2 * Double.pi
+                    hue2 + 2 * Double.pi
                 } else {
-                    targetForInterpolation = hue2
+                    hue2
                 }
             } else {
                 // If the value for hue2 is less than hue1, subtract 2*PI to hue2 and compare, choosing
                 // the shortest path for the target to which to interpolate.
                 if abs(hue1 - hue2) > abs(hue1 - (hue2 - 2 * Double.pi)) {
-                    targetForInterpolation = hue2 + 2 * Double.pi
+                    hue2 + 2 * Double.pi
                 } else {
-                    targetForInterpolation = hue2
+                    hue2
                 }
             }
 

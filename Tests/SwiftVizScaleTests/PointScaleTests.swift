@@ -90,14 +90,14 @@ class PointScaleTests: XCTestCase {
 
         let width = initial.step()
         XCTAssertNotNil(width)
-        if let width = width {
+        if let width {
             XCTAssertEqual(width, 50, accuracy: 0.001)
         }
         let updated = initial.padding(10)
 
         let updatedWidth = updated.step()
         XCTAssertNotNil(updatedWidth)
-        if let updatedWidth = updatedWidth {
+        if let updatedWidth {
             XCTAssertEqual(updatedWidth, 40, accuracy: 0.001)
         }
     }
@@ -117,7 +117,7 @@ class PointScaleTests: XCTestCase {
 
         let rangeLoc = initial.scale("2", from: 0, to: 50)
         XCTAssertNotNil(rangeLoc)
-        if let rangeLoc = rangeLoc {
+        if let rangeLoc {
             XCTAssertEqual(rangeLoc, 25, accuracy: 0.001)
         }
     }
@@ -164,14 +164,14 @@ class PointScaleTests: XCTestCase {
         XCTAssertFalse(initial.fullyConfigured())
         var rangeLoc = initial.scale("2", from: 0, to: 50)
         XCTAssertNotNil(rangeLoc)
-        if let rangeLoc = rangeLoc {
+        if let rangeLoc {
             XCTAssertEqual(rangeLoc, 25, accuracy: 0.001)
         }
 
         let updated = initial.round(true)
         rangeLoc = updated.scale("1", from: 0, to: 50)
         XCTAssertNotNil(rangeLoc)
-        if let rangeLoc = rangeLoc {
+        if let rangeLoc {
             XCTAssertEqual(rangeLoc, 15.0, accuracy: 0.001)
         }
     }

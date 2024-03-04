@@ -60,7 +60,7 @@ public struct BandScale<CategoryType: Comparable, OutputType: BinaryFloatingPoin
         self.paddingOuter = paddingOuter
         self.domain = domain
         self.reversed = reversed
-        if let from = from, let to = to {
+        if let from, let to {
             precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
             rangeLower = from
             rangeHigher = to
@@ -71,7 +71,7 @@ public struct BandScale<CategoryType: Comparable, OutputType: BinaryFloatingPoin
     }
 
     // testing function only - verifies the scale is fully configured
-    internal func fullyConfigured() -> Bool {
+    func fullyConfigured() -> Bool {
         rangeLower != nil && rangeHigher != nil && domain.count > 0
     }
 
@@ -139,7 +139,7 @@ public struct BandScale<CategoryType: Comparable, OutputType: BinaryFloatingPoin
 
     // attributes of the scale when fully configured
 
-    internal func width() -> Double? {
+    func width() -> Double? {
         guard let from = rangeLower, let to = rangeHigher else {
             return nil
         }
@@ -163,7 +163,7 @@ public struct BandScale<CategoryType: Comparable, OutputType: BinaryFloatingPoin
         }
     }
 
-    internal func step() -> Double? {
+    func step() -> Double? {
         guard let width = width() else {
             return nil
         }
@@ -186,11 +186,10 @@ public struct BandScale<CategoryType: Comparable, OutputType: BinaryFloatingPoin
             // the value to be scaled isn't within the domain
             return nil
         }
-        let doublePosition: Double
-        if reversed {
-            doublePosition = Double(domain.reversed().firstIndex(of: value)!)
+        let doublePosition = if reversed {
+            Double(domain.reversed().firstIndex(of: value)!)
         } else {
-            doublePosition = Double(domain.firstIndex(of: value)!)
+            Double(domain.firstIndex(of: value)!)
         }
         let startLocation = Double(paddingOuter) + (doublePosition * step)
         let stopLocation = startLocation + width
@@ -243,11 +242,10 @@ public struct BandScale<CategoryType: Comparable, OutputType: BinaryFloatingPoin
         }
         // calculate the closest index
         let rangeExtentWithoutOuterPadding = Double(upperRange) - Double(lowerRange) - 2 * Double(paddingOuter)
-        let indexedRangeValue: Double
-        if reversed {
-            indexedRangeValue = (Double(upperRange) - Double(paddingOuter) - Double(location)) / rangeExtentWithoutOuterPadding
+        let indexedRangeValue: Double = if reversed {
+            (Double(upperRange) - Double(paddingOuter) - Double(location)) / rangeExtentWithoutOuterPadding
         } else {
-            indexedRangeValue = (Double(location) - Double(paddingOuter)) / rangeExtentWithoutOuterPadding
+            (Double(location) - Double(paddingOuter)) / rangeExtentWithoutOuterPadding
         }
         let rangeValueExpandedToCountDomain = indexedRangeValue * Double(domain.count - 1)
 
@@ -307,10 +305,10 @@ public extension BandScale {
     /// - Parameter formatter: An optional formatter to convert the domain values into strings.
     func defaultTickValues(formatter: Formatter? = nil) -> [String] {
         domain.map { value in
-            if let formatter = formatter {
-                return formatter.string(for: value) ?? ""
+            if let formatter {
+                formatter.string(for: value) ?? ""
             } else {
-                return String("\(value)")
+                String("\(value)")
             }
         }
     }

@@ -48,7 +48,7 @@ public struct PointScale<CategoryType: Comparable, OutputType: BinaryFloatingPoi
         self.padding = padding
         self.domain = domain
         self.reversed = reversed
-        if let from = from, let to = to {
+        if let from, let to {
             precondition(from < to, "attempting to set an inverted or empty range: \(from) to \(to)")
             rangeLower = from
             rangeHigher = to
@@ -59,7 +59,7 @@ public struct PointScale<CategoryType: Comparable, OutputType: BinaryFloatingPoi
     }
 
     // testing function only - verifies the scale is fully configured
-    internal func fullyConfigured() -> Bool {
+    func fullyConfigured() -> Bool {
         rangeLower != nil && rangeHigher != nil && domain.count > 0
     }
 
@@ -117,7 +117,7 @@ public struct PointScale<CategoryType: Comparable, OutputType: BinaryFloatingPoi
         return type(of: self).init(domain, padding: padding, round: round, reversed: reversed, from: range.lowerBound, to: range.upperBound)
     }
 
-    internal func step() -> Double? {
+    func step() -> Double? {
         guard let from = rangeLower, let to = rangeHigher else {
             return nil
         }
@@ -169,11 +169,10 @@ public struct PointScale<CategoryType: Comparable, OutputType: BinaryFloatingPoi
             // when there's more padding than available space for the categories
             return nil
         }
-        let doublePosition: Double
-        if reversed {
-            doublePosition = Double(domain.reversed().firstIndex(of: value)!)
+        let doublePosition = if reversed {
+            Double(domain.reversed().firstIndex(of: value)!)
         } else {
-            doublePosition = Double(domain.firstIndex(of: value)!)
+            Double(domain.firstIndex(of: value)!)
         }
         let location = Double(padding) + (doublePosition * step) + (step / 2)
         if round {
@@ -225,11 +224,10 @@ public struct PointScale<CategoryType: Comparable, OutputType: BinaryFloatingPoi
         }
         // calculate the closest index
         let rangeExtentWithoutPadding = Double(upperRange) - Double(lowerRange) - 2 * Double(padding)
-        let indexedRangeValue: Double
-        if reversed {
-            indexedRangeValue = (Double(upperRange) - Double(padding) - Double(location)) / rangeExtentWithoutPadding
+        let indexedRangeValue: Double = if reversed {
+            (Double(upperRange) - Double(padding) - Double(location)) / rangeExtentWithoutPadding
         } else {
-            indexedRangeValue = (Double(location) - Double(padding)) / rangeExtentWithoutPadding
+            (Double(location) - Double(padding)) / rangeExtentWithoutPadding
         }
         let rangeValueExpandedToCountDomain = indexedRangeValue * Double(domain.count - 1)
         let closestIndex = Int(rangeValueExpandedToCountDomain.rounded())
@@ -249,10 +247,10 @@ public extension PointScale {
     /// - Parameter formatter: An optional formatter to convert the domain values into strings.
     func defaultTickValues(formatter: Formatter? = nil) -> [String] {
         domain.map { value in
-            if let formatter = formatter {
-                return formatter.string(for: value) ?? ""
+            if let formatter {
+                formatter.string(for: value) ?? ""
             } else {
-                return String("\(value)")
+                String("\(value)")
             }
         }
     }

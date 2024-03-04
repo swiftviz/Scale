@@ -83,7 +83,7 @@
         // MARK: - From CGColor to String
 
         func toHex(alpha: Bool = false) -> String? {
-            guard let components = components, components.count >= 3 else {
+            guard let components, components.count >= 3 else {
                 return nil
             }
 
