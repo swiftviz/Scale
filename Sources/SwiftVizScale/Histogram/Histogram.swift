@@ -54,11 +54,10 @@ public struct Histogram<Value: Numeric & Hashable & Comparable> {
         // Create and initialize the keys for the bins with a count of 0
         var currentStep = smallestValue
         while currentStep < largestValue {
-            let bin: HistogramBinRange<Value>
-            if currentStep + Value(niceBinSize) > largestValue {
-                bin = HistogramBinRange(lowerBound: currentStep, upperBound: largestValue, _final: true)
+            let bin: HistogramBinRange<Value> = if currentStep + Value(niceBinSize) > largestValue {
+                HistogramBinRange(lowerBound: currentStep, upperBound: largestValue, _final: true)
             } else {
-                bin = HistogramBinRange(lowerBound: currentStep, upperBound: currentStep + Value(niceBinSize))
+                HistogramBinRange(lowerBound: currentStep, upperBound: currentStep + Value(niceBinSize))
             }
             _storage[bin] = 0
             currentStep += Value(niceBinSize)
@@ -90,11 +89,10 @@ public struct Histogram<Value: Numeric & Hashable & Comparable> {
         // Create and initialize the keys for the bins with a count of 0
         var currentStep = smallestValue
         while currentStep < largestValue {
-            let bin: HistogramBinRange<Value>
-            if currentStep + Value(niceBinSize) > largestValue {
-                bin = HistogramBinRange(lowerBound: currentStep, upperBound: largestValue, _final: true)
+            let bin: HistogramBinRange<Value> = if currentStep + Value(niceBinSize) > largestValue {
+                HistogramBinRange(lowerBound: currentStep, upperBound: largestValue, _final: true)
             } else {
-                bin = HistogramBinRange(lowerBound: currentStep, upperBound: currentStep + Value(niceBinSize))
+                HistogramBinRange(lowerBound: currentStep, upperBound: currentStep + Value(niceBinSize))
             }
             _storage[bin] = 0
             currentStep += Value(niceBinSize)
@@ -133,7 +131,7 @@ public struct Histogram<Value: Numeric & Hashable & Comparable> {
 
         // default to using the provided minimum as the stride length for the histogram bins
         var stride = minimumStride
-        if let desiredCount = desiredCount {
+        if let desiredCount {
             // if a desired number of bins was provided, and a stride value evenly dividing the
             // data's range into those values is larger than the minimum, use that larger stride.
             let maybeStride = (upperBound - lowerBound) / Value(desiredCount)
@@ -145,11 +143,10 @@ public struct Histogram<Value: Numeric & Hashable & Comparable> {
         // Create and initialize the keys for the bins with a count of 0
         var currentStep = lowerBound
         while currentStep < upperBound {
-            let bin: HistogramBinRange<Value>
-            if currentStep + stride > upperBound {
-                bin = HistogramBinRange(lowerBound: currentStep, upperBound: upperBound, _final: true)
+            let bin: HistogramBinRange<Value> = if currentStep + stride > upperBound {
+                HistogramBinRange(lowerBound: currentStep, upperBound: upperBound, _final: true)
             } else {
-                bin = HistogramBinRange(lowerBound: currentStep, upperBound: currentStep + stride)
+                HistogramBinRange(lowerBound: currentStep, upperBound: currentStep + stride)
             }
             _storage[bin] = 0
             currentStep += stride
@@ -186,7 +183,7 @@ public struct Histogram<Value: Numeric & Hashable & Comparable> {
 
         // default to using the provided minimum as the stride length for the histogram bins
         var stride = minimumStride
-        if let desiredCount = desiredCount {
+        if let desiredCount {
             // if a desired number of bins was provided, and a stride value evenly dividing the
             // data's range into those values is larger than the minimum, use that larger stride.
             let maybeStride = round((Double(upperBound) - Double(lowerBound)) / Double(desiredCount))
@@ -198,11 +195,10 @@ public struct Histogram<Value: Numeric & Hashable & Comparable> {
         // Create and initialize the keys for the bins with a count of 0
         var currentStep = lowerBound
         while currentStep < upperBound {
-            let bin: HistogramBinRange<Value>
-            if currentStep + stride > upperBound {
-                bin = HistogramBinRange(lowerBound: currentStep, upperBound: upperBound, _final: true)
+            let bin: HistogramBinRange<Value> = if currentStep + stride > upperBound {
+                HistogramBinRange(lowerBound: currentStep, upperBound: upperBound, _final: true)
             } else {
-                bin = HistogramBinRange(lowerBound: currentStep, upperBound: currentStep + stride)
+                HistogramBinRange(lowerBound: currentStep, upperBound: currentStep + stride)
             }
             _storage[bin] = 0
             currentStep += stride
@@ -237,11 +233,10 @@ public struct Histogram<Value: Numeric & Hashable & Comparable> {
 
         // Create and initialize the keys for the bins with a count of 0
         for (lower, higher) in sortedThresholds.pairs() {
-            let bin: HistogramBinRange<Value>
-            if higher == lastThreshold {
-                bin = HistogramBinRange(lowerBound: lower, upperBound: higher, _final: true)
+            let bin: HistogramBinRange<Value> = if higher == lastThreshold {
+                HistogramBinRange(lowerBound: lower, upperBound: higher, _final: true)
             } else {
-                bin = HistogramBinRange(lowerBound: lower, upperBound: higher)
+                HistogramBinRange(lowerBound: lower, upperBound: higher)
             }
             _storage[bin] = 0
         }
@@ -280,14 +275,14 @@ extension Histogram: Sequence {
     @frozen
     public struct HistogramIterator: IteratorProtocol {
         @usableFromInline
-        internal let _base: Histogram<Value>
+        let _base: Histogram<Value>
 
         @usableFromInline
-        internal var _position: Int
+        var _position: Int
 
         @inlinable
         @inline(__always)
-        internal init(_base: Histogram<Value>) {
+        init(_base: Histogram<Value>) {
             self._base = _base
             _position = 0
         }

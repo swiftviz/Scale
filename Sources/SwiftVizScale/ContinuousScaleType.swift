@@ -18,35 +18,35 @@ public enum ContinuousScaleType: Equatable {
     var description: String {
         switch self {
         case .linear:
-            return "linear"
+            "linear"
         case .log:
-            return "log"
+            "log"
         case let .power(exp):
-            return "power(\(exp))"
+            "power(\(exp))"
         case .radial:
-            return "radial"
+            "radial"
         }
     }
 
     var transform: (Double) -> Double {
         switch self {
         case .log:
-            return { log10($0) }
+            { log10($0) }
         case .linear, .radial:
-            return { $0 }
+            { $0 }
         case let .power(exp):
-            return { pow($0, exp) }
+            { pow($0, exp) }
         }
     }
 
     var invertedTransform: (Double) -> Double {
         switch self {
         case .log:
-            return { pow(10, $0) }
+            { pow(10, $0) }
         case .linear, .radial:
-            return { $0 }
+            { $0 }
         case let .power(exp):
-            return { pow($0, 1.0 / exp) }
+            { pow($0, 1.0 / exp) }
         }
     }
 }

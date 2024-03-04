@@ -101,14 +101,14 @@ class BandScaleTests: XCTestCase {
 
         let width = initial.width()
         XCTAssertNotNil(width)
-        if let width = width {
+        if let width {
             XCTAssertEqual(width, 50, accuracy: 0.001)
         }
         let updated = initial.paddingOuter(10)
 
         let updatedWidth = updated.width()
         XCTAssertNotNil(updatedWidth)
-        if let updatedWidth = updatedWidth {
+        if let updatedWidth {
             XCTAssertEqual(updatedWidth, 40, accuracy: 0.001)
         }
     }
@@ -119,7 +119,7 @@ class BandScaleTests: XCTestCase {
 
         let width = initial.width()
         XCTAssertNotNil(width)
-        if let width = width {
+        if let width {
             XCTAssertEqual(initial.step(), width + initial.paddingInner)
         }
     }

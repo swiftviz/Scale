@@ -4,7 +4,6 @@
 import Foundation
 import PackageDescription
 
-
 let package = Package(
     name: "SwiftVizScale",
     platforms: [
@@ -33,7 +32,7 @@ let package = Package(
                 .product(name: "Collections", package: "swift-collections"),
             ],
             swiftSettings: [
-                .enableExperimentalFeature("StrictConcurrency")
+                .enableExperimentalFeature("StrictConcurrency"),
             ]
         ),
         .target(

@@ -13,27 +13,25 @@ public extension BinaryInteger {
 
         let exponent = floor(log10(positiveNumber))
         let fraction = Double(number) / pow(10, exponent)
-        let niceFraction: Double
-
-        if trendTowardsZero {
+        let niceFraction: Double = if trendTowardsZero {
             if fraction <= 1.5 {
-                niceFraction = 1
+                1
             } else if fraction <= 3 {
-                niceFraction = 2
+                2
             } else if fraction <= 7 {
-                niceFraction = 5
+                5
             } else {
-                niceFraction = 10
+                10
             }
         } else {
             if fraction <= 1 {
-                niceFraction = 1
+                1
             } else if fraction <= 2 {
-                niceFraction = 2
+                2
             } else if fraction <= 5 {
-                niceFraction = 5
+                5
             } else {
-                niceFraction = 10
+                10
             }
         }
         if negativeInput {
@@ -185,11 +183,10 @@ public extension BinaryFloatingPoint {
         // Safety net - make sure we're not passed '0', which explodes the math in this
         // algorithm. If they're that crazy, pick the smallest non-zero value and work up
         // from there.
-        let fixedMin: Double
-        if min == 0 {
-            fixedMin = Double.leastNonzeroMagnitude
+        let fixedMin = if min == 0 {
+            Double.leastNonzeroMagnitude
         } else {
-            fixedMin = Double(min)
+            Double(min)
         }
         let testRange = fixedMin ... Double(max)
         var result: [Self] = []
@@ -249,19 +246,19 @@ public enum DateMagnitude: Equatable {
     public var seconds: Double {
         switch self {
         case .subsecond:
-            return 0
+            0
         case .seconds:
-            return 1
+            1
         case .minutes:
-            return DateMagnitude.minutesThreshold.lowerBound
+            DateMagnitude.minutesThreshold.lowerBound
         case .hours:
-            return DateMagnitude.hoursThreshold.lowerBound
+            DateMagnitude.hoursThreshold.lowerBound
         case .days:
-            return DateMagnitude.daysThreshold.lowerBound
+            DateMagnitude.daysThreshold.lowerBound
         case .months:
-            return DateMagnitude.monthsThreshold.lowerBound
+            DateMagnitude.monthsThreshold.lowerBound
         default:
-            return DateMagnitude.yearsThreshold.lowerBound
+            DateMagnitude.yearsThreshold.lowerBound
         }
     }
 
@@ -305,7 +302,7 @@ public extension Date {
             return components.date
         case .seconds:
             components.setValue(0, for: .nanosecond)
-            if let stepSize = stepSize, let seconds = components.second {
+            if let stepSize, let seconds = components.second {
                 let valueRoundedByStep = floor(Double(seconds) / stepSize) * stepSize
                 components.setValue(Int(valueRoundedByStep), for: .second)
                 assert(components.isValidDate)
@@ -315,7 +312,7 @@ public extension Date {
         case .minutes:
             components.setValue(0, for: .nanosecond)
             components.setValue(0, for: .second)
-            if let stepSize = stepSize, let minutes = components.minute {
+            if let stepSize, let minutes = components.minute {
                 let stepSizeInMinutes = stepSize / 60
                 let valueRoundedByStep = floor(Double(minutes) / stepSizeInMinutes) * stepSizeInMinutes
                 components.setValue(Int(valueRoundedByStep), for: .minute)
@@ -327,7 +324,7 @@ public extension Date {
             components.setValue(0, for: .nanosecond)
             components.setValue(0, for: .second)
             components.setValue(0, for: .minute)
-            if let stepSize = stepSize, let hours = components.hour {
+            if let stepSize, let hours = components.hour {
                 let stepSizeInHours = stepSize / (60 * 60)
                 let valueRoundedByStep = floor(Double(hours) / stepSizeInHours) * stepSizeInHours
                 components.setValue(Int(valueRoundedByStep), for: .hour)
@@ -340,7 +337,7 @@ public extension Date {
             components.setValue(0, for: .second)
             components.setValue(0, for: .minute)
             components.setValue(0, for: .hour)
-            if let stepSize = stepSize, let days = components.day {
+            if let stepSize, let days = components.day {
                 let stepSizeInDays = stepSize / (24 * 60 * 60)
                 let valueRoundedByStep = floor(Double(days) / stepSizeInDays) * stepSizeInDays
                 if valueRoundedByStep < 1.0 {
@@ -358,7 +355,7 @@ public extension Date {
             components.setValue(0, for: .minute)
             components.setValue(0, for: .hour)
             components.setValue(1, for: .day)
-            if let stepSize = stepSize, let months = components.month {
+            if let stepSize, let months = components.month {
                 let stepSizeInMonths = stepSize / (28 * 24 * 60 * 60)
                 let valueRoundedByStep = floor(Double(months) / stepSizeInMonths) * stepSizeInMonths
                 if valueRoundedByStep < 1.0 {
@@ -388,11 +385,10 @@ public extension Date {
     ///   - calendar: The calendar to use to compute the next lower value.
     ///   - stepSize: The nice step size, in seconds, for the date increments.
     func roundUp(magnitude: DateMagnitude, calendar: Calendar, stepSize: Double? = nil) -> Self? {
-        let incDate: Date
-        if let stepSize = stepSize, stepSize >= magnitude.seconds {
-            incDate = self + stepSize
+        let incDate: Date = if let stepSize, stepSize >= magnitude.seconds {
+            self + stepSize
         } else {
-            incDate = self + magnitude.seconds
+            self + magnitude.seconds
         }
         return incDate.round(magnitude: magnitude, calendar: calendar, stepSize: stepSize)
     }

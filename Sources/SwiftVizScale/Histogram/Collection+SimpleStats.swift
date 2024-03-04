@@ -1,5 +1,5 @@
 //
-//  RandomAccessCollection+SimpleStats.swift
+//  Collection+SimpleStats.swift
 //
 
 import Foundation

@@ -12,6 +12,7 @@
         var steps: CGFloat
         var interpolator: any ColorInterpolator
 
+        @MainActor
         func color(_ stepValue: Int) -> CGColor {
             let t = normalize(Double(stepValue),
                               lower: 0.0,

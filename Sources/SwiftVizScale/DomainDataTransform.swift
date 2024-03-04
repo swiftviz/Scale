@@ -14,11 +14,11 @@ public enum DomainDataTransform {
     var description: String {
         switch self {
         case .none:
-            return "none"
+            "none"
         case .drop:
-            return "drop"
+            "drop"
         case .clamp:
-            return "clamp"
+            "clamp"
         }
     }
 }
