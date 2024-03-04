@@ -8,7 +8,6 @@
     import XCTest
 
     final class LCHTests: XCTestCase {
-
         @MainActor
         func testLCHWhiteInterpolation() throws {
             // There's not really much to be able to pin down in terms of color space tests, but
