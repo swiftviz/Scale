@@ -1,8 +1,9 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.8
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import Foundation
 import PackageDescription
+
 
 let package = Package(
     name: "SwiftVizScale",
@@ -30,6 +31,9 @@ let package = Package(
             name: "SwiftVizScale",
             dependencies: [
                 .product(name: "Collections", package: "swift-collections"),
+            ],
+            swiftSettings: [
+                .enableExperimentalFeature("StrictConcurrency")
             ]
         ),
         .target(
